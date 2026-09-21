@@ -1,0 +1,8 @@
+* text=auto
+*.js text eol=lf
+*.mjs text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf
+# Preserve upstream snapshot bytes so recorded SHA256 hashes remain valid.
+tools/curate/sources/** -text -whitespace

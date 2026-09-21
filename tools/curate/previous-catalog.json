@@ -1,0 +1,544 @@
+{
+  "styles": [
+    {
+      "id": "cyber-night-market",
+      "name": "赛博夜市",
+      "category": "image"
+    },
+    {
+      "id": "morning-film",
+      "name": "晨间胶片",
+      "category": "image"
+    },
+    {
+      "id": "hard-edge-minimal",
+      "name": "硬边极简",
+      "category": "image"
+    },
+    {
+      "id": "plush-toy",
+      "name": "毛绒玩具",
+      "category": "image"
+    },
+    {
+      "id": "copper-etching",
+      "name": "铜版蚀刻",
+      "category": "image"
+    },
+    {
+      "id": "candy-pop",
+      "name": "高饱和糖果",
+      "category": "image"
+    },
+    {
+      "id": "mist-ink",
+      "name": "山雾水墨",
+      "category": "image"
+    },
+    {
+      "id": "glass-morphism",
+      "name": "玻璃拟态",
+      "category": "image"
+    },
+    {
+      "id": "risograph",
+      "name": "孔版印刷",
+      "category": "image"
+    },
+    {
+      "id": "miniature-diorama",
+      "name": "微缩景观",
+      "category": "image"
+    },
+    {
+      "id": "darkroom-red",
+      "name": "暗房红调",
+      "category": "image"
+    },
+    {
+      "id": "line-art-sketch",
+      "name": "线稿手绘",
+      "category": "image"
+    },
+    {
+      "id": "liquid-chrome",
+      "name": "液态金属",
+      "category": "image"
+    },
+    {
+      "id": "pixel-quest",
+      "name": "像素冒险",
+      "category": "image"
+    },
+    {
+      "id": "soft-portrait",
+      "name": "柔光人像",
+      "category": "image"
+    },
+    {
+      "id": "wireframe-arch",
+      "name": "建筑线框",
+      "category": "image"
+    },
+    {
+      "id": "tropic-saturated",
+      "name": "热带饱和",
+      "category": "image"
+    },
+    {
+      "id": "midnight-blues",
+      "name": "深夜蓝调",
+      "category": "image"
+    },
+    {
+      "id": "book-summarizer",
+      "name": "拆书人",
+      "category": "write"
+    },
+    {
+      "id": "childrens-book-creator",
+      "name": "童书作者",
+      "category": "write"
+    },
+    {
+      "id": "chinese-english-translator",
+      "name": "中英互译",
+      "category": "write"
+    },
+    {
+      "id": "clarity-rewriter",
+      "name": "改写润色器",
+      "category": "write"
+    },
+    {
+      "id": "essay-writer",
+      "name": "论说文写手",
+      "category": "write"
+    },
+    {
+      "id": "faq-generator",
+      "name": "常见问题生成器",
+      "category": "write"
+    },
+    {
+      "id": "journalist",
+      "name": "记者",
+      "category": "write"
+    },
+    {
+      "id": "linkedin-ghostwriter",
+      "name": "领英代笔",
+      "category": "write"
+    },
+    {
+      "id": "novelist",
+      "name": "小说家",
+      "category": "write"
+    },
+    {
+      "id": "poet",
+      "name": "诗人",
+      "category": "write"
+    },
+    {
+      "id": "proofreader",
+      "name": "校对",
+      "category": "write"
+    },
+    {
+      "id": "screenwriter",
+      "name": "编剧",
+      "category": "write"
+    },
+    {
+      "id": "storyteller",
+      "name": "故事讲述者",
+      "category": "write"
+    },
+    {
+      "id": "tech-writer",
+      "name": "技术文档写手",
+      "category": "write"
+    },
+    {
+      "id": "title-generator",
+      "name": "标题生成",
+      "category": "write"
+    },
+    {
+      "id": "a11y-auditor",
+      "name": "无障碍审计",
+      "category": "code"
+    },
+    {
+      "id": "code-reviewer",
+      "name": "代码评审",
+      "category": "code"
+    },
+    {
+      "id": "commit-message",
+      "name": "提交信息",
+      "category": "code"
+    },
+    {
+      "id": "devops-engineer",
+      "name": "运维工程师",
+      "category": "code"
+    },
+    {
+      "id": "fullstack-dev",
+      "name": "全栈开发",
+      "category": "code"
+    },
+    {
+      "id": "github-expert",
+      "name": "GitHub 老手",
+      "category": "code"
+    },
+    {
+      "id": "it-architect",
+      "name": "IT 架构师",
+      "category": "code"
+    },
+    {
+      "id": "linux-terminal",
+      "name": "Linux 终端",
+      "category": "code"
+    },
+    {
+      "id": "ml-engineer",
+      "name": "机器学习工程师",
+      "category": "code"
+    },
+    {
+      "id": "regex-generator",
+      "name": "正则生成器",
+      "category": "code"
+    },
+    {
+      "id": "security-specialist",
+      "name": "安全工程师",
+      "category": "code"
+    },
+    {
+      "id": "sentry-fixer",
+      "name": "线上排错",
+      "category": "code"
+    },
+    {
+      "id": "sql-terminal",
+      "name": "SQL 终端",
+      "category": "code"
+    },
+    {
+      "id": "stackoverflow-post",
+      "name": "提问帖写手",
+      "category": "code"
+    },
+    {
+      "id": "unit-tester",
+      "name": "单元测试",
+      "category": "code"
+    },
+    {
+      "id": "academician",
+      "name": "学术研究",
+      "category": "analyze"
+    },
+    {
+      "id": "bank-transaction-analyst",
+      "name": "账单分析师",
+      "category": "analyze"
+    },
+    {
+      "id": "data-analyst",
+      "name": "数据分析",
+      "category": "analyze"
+    },
+    {
+      "id": "data-visualizer",
+      "name": "数据可视化师",
+      "category": "analyze"
+    },
+    {
+      "id": "debater",
+      "name": "辩论对手",
+      "category": "analyze"
+    },
+    {
+      "id": "decision-filter",
+      "name": "决策过滤",
+      "category": "analyze"
+    },
+    {
+      "id": "fallacy-finder",
+      "name": "逻辑审查",
+      "category": "analyze"
+    },
+    {
+      "id": "financial-analyst",
+      "name": "财务分析师",
+      "category": "analyze"
+    },
+    {
+      "id": "historian",
+      "name": "历史学者",
+      "category": "analyze"
+    },
+    {
+      "id": "journal-reviewer",
+      "name": "期刊审稿人",
+      "category": "analyze"
+    },
+    {
+      "id": "literary-critic",
+      "name": "文学评论",
+      "category": "analyze"
+    },
+    {
+      "id": "movie-critic",
+      "name": "影评人",
+      "category": "analyze"
+    },
+    {
+      "id": "philosopher",
+      "name": "哲学顾问",
+      "category": "analyze"
+    },
+    {
+      "id": "plagiarism-checker",
+      "name": "查重审稿",
+      "category": "analyze"
+    },
+    {
+      "id": "statistician",
+      "name": "统计学家",
+      "category": "analyze"
+    },
+    {
+      "id": "algorithm-guide",
+      "name": "算法讲解",
+      "category": "learn"
+    },
+    {
+      "id": "analogy-explainer",
+      "name": "类比讲解",
+      "category": "learn"
+    },
+    {
+      "id": "assignment-grader",
+      "name": "作业批改",
+      "category": "learn"
+    },
+    {
+      "id": "business-english",
+      "name": "商务英语精进",
+      "category": "learn"
+    },
+    {
+      "id": "chess-rival",
+      "name": "国际象棋对手",
+      "category": "learn"
+    },
+    {
+      "id": "etymologist",
+      "name": "词源考据",
+      "category": "learn"
+    },
+    {
+      "id": "job-interviewer",
+      "name": "面试官",
+      "category": "learn"
+    },
+    {
+      "id": "math-teacher",
+      "name": "数学老师",
+      "category": "learn"
+    },
+    {
+      "id": "philosophy-teacher",
+      "name": "哲学老师",
+      "category": "learn"
+    },
+    {
+      "id": "socratic-method",
+      "name": "苏格拉底式提问",
+      "category": "learn"
+    },
+    {
+      "id": "speaking-coach",
+      "name": "演讲教练",
+      "category": "learn"
+    },
+    {
+      "id": "spoken-english",
+      "name": "口语教练",
+      "category": "learn"
+    },
+    {
+      "id": "study-companion",
+      "name": "复习陪练",
+      "category": "learn"
+    },
+    {
+      "id": "study-planner",
+      "name": "学习计划",
+      "category": "learn"
+    },
+    {
+      "id": "writing-tutor",
+      "name": "写作导师",
+      "category": "learn"
+    },
+    {
+      "id": "accountant",
+      "name": "会计",
+      "category": "business"
+    },
+    {
+      "id": "advertiser",
+      "name": "广告策划",
+      "category": "business"
+    },
+    {
+      "id": "branding-strategist",
+      "name": "品牌策略",
+      "category": "business"
+    },
+    {
+      "id": "career-counselor",
+      "name": "职业规划",
+      "category": "business"
+    },
+    {
+      "id": "cv-writer",
+      "name": "简历写手",
+      "category": "business"
+    },
+    {
+      "id": "investment-manager",
+      "name": "投资经理",
+      "category": "business"
+    },
+    {
+      "id": "legal-advisor",
+      "name": "法务顾问",
+      "category": "business"
+    },
+    {
+      "id": "product-manager",
+      "name": "产品经理",
+      "category": "business"
+    },
+    {
+      "id": "product-promoter",
+      "name": "产品推广",
+      "category": "business"
+    },
+    {
+      "id": "real-estate-agent",
+      "name": "房产经纪",
+      "category": "business"
+    },
+    {
+      "id": "recruiter",
+      "name": "招聘官",
+      "category": "business"
+    },
+    {
+      "id": "salesperson",
+      "name": "销售",
+      "category": "business"
+    },
+    {
+      "id": "seo-specialist",
+      "name": "SEO 优化",
+      "category": "business"
+    },
+    {
+      "id": "social-media-manager",
+      "name": "社媒运营",
+      "category": "business"
+    },
+    {
+      "id": "startup-idea",
+      "name": "创业点子",
+      "category": "business"
+    },
+    {
+      "id": "babysitter",
+      "name": "育儿帮手",
+      "category": "life"
+    },
+    {
+      "id": "car-advisor",
+      "name": "汽车顾问",
+      "category": "life"
+    },
+    {
+      "id": "chef",
+      "name": "私厨",
+      "category": "life"
+    },
+    {
+      "id": "diy-expert",
+      "name": "家修师傅",
+      "category": "life"
+    },
+    {
+      "id": "florist",
+      "name": "花艺师",
+      "category": "life"
+    },
+    {
+      "id": "food-critic",
+      "name": "美食评论",
+      "category": "life"
+    },
+    {
+      "id": "interior-decorator",
+      "name": "家居布置",
+      "category": "life"
+    },
+    {
+      "id": "mental-health",
+      "name": "情绪顾问",
+      "category": "life"
+    },
+    {
+      "id": "nutritionist",
+      "name": "营养师",
+      "category": "life"
+    },
+    {
+      "id": "personal-stylist",
+      "name": "穿搭顾问",
+      "category": "life"
+    },
+    {
+      "id": "personal-trainer",
+      "name": "私教",
+      "category": "life"
+    },
+    {
+      "id": "pet-behaviorist",
+      "name": "宠物行为",
+      "category": "life"
+    },
+    {
+      "id": "relationship-coach",
+      "name": "关系顾问",
+      "category": "life"
+    },
+    {
+      "id": "ticket-advisor",
+      "name": "机票顾问",
+      "category": "life"
+    },
+    {
+      "id": "travel-guide",
+      "name": "旅行向导",
+      "category": "life"
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://shutong.example/schema/prompt-card.schema.json",
+  "title": "书桐 · 提示词卡 (Prompt Card)",
+  "description": "一条提示词。图片风格给两条轨道（本地部署给工作流级参数，云端模型给自然语言模板），其余分类给原文照录的单条提示词。规则与 assets/js/rules.js 保持一致，二者由回归测试断言。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "latin",
+    "tagline",
+    "category",
+    "uses",
+    "moods",
+    "track",
+    "version",
+    "author",
+    "license",
+    "art"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 60,
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "URL 与文件名的唯一标识。小写字母、数字、连字符。"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 20,
+      "description": "中文名。这是用户搜索时看到的第一行。"
+    },
+    "latin": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 40,
+      "description": "拉丁名，用于国际化与英文搜索命中。"
+    },
+    "tagline": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 60,
+      "description": "一句话说明它解决什么问题。图片风格必须包含颜色 / 光线 / 质感 / 构图类的可描述词，不得写「某某人的风格」。"
+    },
+    "category": {
+      "enum": [
+        "image",
+        "write",
+        "code",
+        "analyze",
+        "learn",
+        "business",
+        "life"
+      ],
+      "description": "顶层分类。决定这张卡走双轨（image）还是单条提示词（其余），取值必须来自 TAXONOMY.categories。"
+    },
+    "uses": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "社交封面",
+          "电商主图",
+          "PPT 配图",
+          "头像",
+          "海报",
+          "壁纸",
+          "文章插图",
+          "长文写作",
+          "邮件与通知",
+          "代码评审",
+          "数据分析",
+          "学习辅导",
+          "面试与招聘",
+          "营销文案",
+          "产品规划",
+          "日常决策",
+          "旅行规划",
+          "健康管理"
+        ]
+      },
+      "description": "用途轴。取值必须来自 TAXONOMY.uses。"
+    },
+    "moods": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "清冷",
+          "治愈",
+          "赛博",
+          "复古",
+          "胶片",
+          "极简",
+          "荒诞",
+          "秩序",
+          "严谨",
+          "亲和",
+          "犀利",
+          "结构化",
+          "幽默",
+          "沉稳"
+        ]
+      },
+      "description": "情绪轴。取值必须来自 TAXONOMY.moods。"
+    },
+    "track": {
+      "enum": [
+        "both",
+        "text",
+        "edit"
+      ],
+      "description": "图片风格固定为 both（必须有本地与云端两条轨道）；其余分类固定为 text。由 allOf 强制校验。"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "主版本.次版本。迭代时必须升版本号——用户收藏的是具体版本，改版不能让已收藏的东西变味。"
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "authorUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "创作者主页，用于署名与分成绑定。"
+    },
+    "license": {
+      "enum": [
+        "CC-BY-4.0",
+        "CC0-1.0",
+        "ALL-RIGHTS-RESERVED",
+        "CUSTOM",
+        "MIT"
+      ],
+      "description": "授权协议。未声明协议的卡不予上架。"
+    },
+    "licenseNote": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "license 为 CUSTOM 时必填。"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "saves": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "平台统计，投稿时不填。"
+    },
+    "runs": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "平台统计，投稿时不填。"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 500,
+      "description": "给审核员的说明，不对外展示。"
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 4000,
+      "description": "提示词正文。非图片分类必填，且必须与原始出处逐字一致；图片风格**不填**（提示词的唯一出处是两条轨道，顶层再放一份会让导出文件里出现两遍）。"
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "提示词里需要用户替换的槽位，例如 {主题}。从原文自动提取。"
+    },
+    "cover": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/cover"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "guide": {
+      "type": "array",
+      "description": "作者说明，按顺序渲染成详情页正文流。这是这个站最重要的部分——提示词只占一半价值，怎么用占另一半。",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "t",
+          "v"
+        ],
+        "properties": {
+          "t": {
+            "enum": [
+              "h",
+              "p",
+              "list",
+              "warn",
+              "quote",
+              "code",
+              "img"
+            ]
+          },
+          "v": {
+            "oneOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              {
+                "$ref": "#/$defs/guideImg"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "采集来源。有这一项说明内容来自开源仓库，不是平台原创。",
+      "required": [
+        "repo",
+        "contributor"
+      ],
+      "properties": {
+        "repo": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string"
+        },
+        "act": {
+          "type": "string"
+        },
+        "contributor": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "art": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "g",
+        "p",
+        "seed"
+      ],
+      "description": "程序化预览图配置。没有封面图时用它兜底；seed 决定复现。",
+      "properties": {
+        "g": {
+          "enum": [
+            "neon",
+            "film",
+            "hardedge",
+            "plush",
+            "etch",
+            "candy",
+            "ink",
+            "glass",
+            "riso",
+            "mini",
+            "darkroom",
+            "sketch",
+            "chrome",
+            "pixel",
+            "soft",
+            "wire",
+            "tropic",
+            "blues"
+          ],
+          "description": "生成器。取值必须存在于 assets/js/art.js 的 G 表。"
+        },
+        "p": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "description": "[底色, 深色, 中间色, 强调色]"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "local": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/localTrack"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "cloud": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/cloudTrack"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "curation": {
+      "type": "object"
+    },
+    "licenseText": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "description": "图片风格：两条轨道缺一不可，且顶层不放 prompt（提示词的唯一出处是轨道）",
+      "if": {
+        "properties": {
+          "category": {
+            "const": "image"
+          }
+        },
+        "required": [
+          "category"
+        ]
+      },
+      "then": {
+        "if": {
+          "properties": {
+            "track": {
+              "const": "edit"
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "prompt"
+          ],
+          "properties": {
+            "prompt": {
+              "type": "string",
+              "minLength": 40,
+              "maxLength": 4000
+            },
+            "local": {
+              "type": "null"
+            },
+            "cloud": {
+              "type": "null"
+            }
+          }
+        },
+        "else": {
+          "required": [
+            "local",
+            "cloud"
+          ],
+          "properties": {
+            "local": {
+              "type": "object"
+            },
+            "cloud": {
+              "type": "object"
+            },
+            "track": {
+              "const": "both"
+            },
+            "prompt": {
+              "type": "null"
+            }
+          }
+        }
+      },
+      "else": {
+        "required": [
+          "prompt"
+        ],
+        "properties": {
+          "prompt": {
+            "type": "string",
+            "minLength": 40,
+            "maxLength": 4000
+          },
+          "track": {
+            "const": "text"
+          },
+          "local": {
+            "type": "null"
+          },
+          "cloud": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "description": "track = both 时两条轨道都必须存在",
+      "if": {
+        "properties": {
+          "track": {
+            "const": "both"
+          }
+        },
+        "required": [
+          "track"
+        ]
+      },
+      "then": {
+        "required": [
+          "local",
+          "cloud"
+        ],
+        "properties": {
+          "local": {
+            "type": "object"
+          },
+          "cloud": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "description": "license = CUSTOM 时必须写明说明",
+      "if": {
+        "properties": {
+          "license": {
+            "const": "CUSTOM"
+          }
+        },
+        "required": [
+          "license"
+        ]
+      },
+      "then": {
+        "required": [
+          "licenseNote"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "cover": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "src",
+        "w",
+        "h"
+      ],
+      "description": "封面图与署名。图片必须可商用，且必须留下作者与协议——没有署名的素材一律不上架。",
+      "properties": {
+        "src": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(https?://|//|assets/|\\./|\\.\\./)"
+        },
+        "w": {
+          "type": "integer",
+          "minimum": 200
+        },
+        "h": {
+          "type": "integer",
+          "minimum": 200
+        },
+        "title": {
+          "type": "string"
+        },
+        "creator": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        },
+        "licenseUrl": {
+          "type": "string"
+        },
+        "sourceUrl": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        }
+      }
+    },
+    "guideImg": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "src",
+        "cap"
+      ],
+      "properties": {
+        "src": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cap": {
+          "type": "string"
+        },
+        "credit": {
+          "type": "string"
+        },
+        "license": {
+          "type": "string"
+        }
+      }
+    },
+    "localTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "base",
+        "loras",
+        "workflow",
+        "sampler",
+        "steps",
+        "cfg",
+        "seed",
+        "neg",
+        "prompt"
+      ],
+      "description": "本地部署轨道。给的是参数而不是描述——光有提示词，本地模型复现不出同一个风格。",
+      "properties": {
+        "base": {
+          "type": "string",
+          "minLength": 1,
+          "description": "底模名称与版本，例如 Flux.1-dev"
+        },
+        "loras": {
+          "type": "array",
+          "maxItems": 6,
+          "description": "LoRA 列表。权重必须可机器读取——后面训练技能、复现风格都依赖它。",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "weight"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+              },
+              "weight": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1.5
+              }
+            }
+          }
+        },
+        "workflow": {
+          "type": "string",
+          "minLength": 1,
+          "description": "可直接导入的工作流文件名，例如 flux_cyber_night.json"
+        },
+        "sampler": {
+          "type": "string",
+          "minLength": 1
+        },
+        "steps": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 150
+        },
+        "cfg": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295,
+          "description": "固定种子。不固定就无法复现。"
+        },
+        "neg": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "description": "负向提示词，逗号分隔。锁死不该出现的东西。"
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 40,
+          "maxLength": 4000
+        }
+      }
+    },
+    "cloudTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "models",
+        "refs",
+        "banned",
+        "prompt"
+      ],
+      "description": "云端模型轨道。给不了工作流，只能用结构化模板 + 参考图去逼近同一个视觉结果。",
+      "properties": {
+        "models": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "已验证过的云端模型，例如 GPT-Image"
+        },
+        "refs": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300,
+          "description": "需要什么参考图，例如「3 张夜间街景参考图」"
+        },
+        "banned": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "description": "禁用词表。云端模型会自由发挥，必须显式禁止。"
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 40,
+          "maxLength": 4000,
+          "description": "结构化自然语言模板，建议用【风格】【光线】【色彩】【禁止】【主体】分节，并保留 {主体} 槽位。"
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "id": "cyber-night-market",
+      "name": "赛博夜市",
+      "latin": "Cyber Night Market",
+      "tagline": "雨后湿沥青、双色霓虹、压暗的靛蓝暗部",
+      "category": "image",
+      "uses": [
+        "社交封面",
+        "海报"
+      ],
+      "moods": [
+        "赛博",
+        "清冷"
+      ],
+      "track": "both",
+      "version": "1.4",
+      "author": "阿墨",
+      "license": "CC-BY-4.0",
+      "art": {
+        "g": "neon",
+        "p": [
+          "#0A0E1F",
+          "#1E1B4B",
+          "#FF3D7F",
+          "#2BE7D0"
+        ],
+        "seed": 17
+      },
+      "cover": {
+        "src": "assets/img/cover/cyber-night-market.jpg",
+        "w": 1024,
+        "h": 768,
+        "title": "Neon",
+        "creator": "Diego3336",
+        "license": "BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "sourceUrl": "https://www.flickr.com/photos/…",
+        "provider": "flickr"
+      },
+      "guide": [
+        {
+          "t": "p",
+          "v": "这条配方锁死三件事：湿地面、双色霓虹、被压暗的暗部。"
+        },
+        {
+          "t": "h",
+          "v": "怎么用"
+        },
+        {
+          "t": "list",
+          "v": [
+            "先换主体再调参数。",
+            "固定种子跑第一版。",
+            "云端轨道要带禁用词。"
+          ]
+        },
+        {
+          "t": "img",
+          "v": {
+            "src": "assets/img/cover/cyber-night-market.jpg",
+            "cap": "参考图",
+            "credit": "Diego3336",
+            "license": "BY 2.0"
+          }
+        },
+        {
+          "t": "warn",
+          "v": "最常见的失败是霓虹颜色失控。"
+        }
+      ],
+      "local": {
+        "base": "Flux.1-dev",
+        "loras": [
+          {
+            "name": "cyber-night-v3",
+            "weight": 0.7
+          }
+        ],
+        "workflow": "flux_cyber_night.json",
+        "sampler": "DPM++ 2M Karras",
+        "steps": 28,
+        "cfg": 3.5,
+        "seed": 884213,
+        "neg": "daylight, dry ground, pastel",
+        "prompt": "wet asphalt street at night, dense neon signage reflected in puddles, low-saturation indigo shadows, cinematic still"
+      },
+      "cloud": {
+        "models": [
+          "GPT-Image"
+        ],
+        "refs": "3 张夜间街景参考图",
+        "banned": [
+          "白天",
+          "干燥地面",
+          "马卡龙色"
+        ],
+        "prompt": "【风格】赛博朋克夜市摄影\n【光线】双色霓虹\n【禁止】白天、干燥地面\n【主体】{在此填入你要的内容}"
+      }
+    },
+    {
+      "id": "linux-terminal",
+      "name": "Linux 终端",
+      "latin": "Linux Terminal",
+      "tagline": "只回终端输出，不解释不寒暄，像真的在敲命令行",
+      "category": "code",
+      "uses": [
+        "代码评审",
+        "学习辅导"
+      ],
+      "moods": [
+        "极简",
+        "严谨"
+      ],
+      "track": "text",
+      "version": "1.0",
+      "author": "f",
+      "license": "CC0-1.0",
+      "art": {
+        "g": "wire",
+        "p": [
+          "#F4F0E6",
+          "#D9D3C6",
+          "#8A8478",
+          "#8E2F1C"
+        ],
+        "seed": 1
+      },
+      "prompt": "I want you to act as a linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations.",
+      "slots": [],
+      "source": {
+        "repo": "f/awesome-chatgpt-prompts",
+        "url": "https://github.com/f/awesome-chatgpt-prompts",
+        "act": "Linux Terminal",
+        "contributor": "f"
+      },
+      "local": null,
+      "cloud": null
+    }
+  ]
+}

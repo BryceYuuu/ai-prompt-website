@@ -1,0 +1,34 @@
+[
+  {
+    "repo": "danielmiessler/fabric",
+    "url": "https://github.com/danielmiessler/fabric",
+    "stars": 44030,
+    "checkedAt": "2026-09-21",
+    "pageSha256": "a6e1f548c686abaf352a49fc06b7841dc158db6fc6fec25c7629011041c02863",
+    "evidenceField": "stargazerCount"
+  },
+  {
+    "repo": "f/prompts.chat",
+    "url": "https://github.com/f/prompts.chat",
+    "stars": 170862,
+    "checkedAt": "2026-09-21",
+    "pageSha256": "bbac9e8a69e92c6bb95e4dacb44483ec3bf3474662e350b460df82964cdc8fbb",
+    "evidenceField": "stargazerCount"
+  },
+  {
+    "repo": "PicoTrex/Awesome-Nano-Banana-images",
+    "url": "https://github.com/PicoTrex/Awesome-Nano-Banana-images",
+    "stars": 23762,
+    "checkedAt": "2026-09-21",
+    "pageSha256": "3ea4fe7dbb2f89d86784e8ac0f9e1514efaa6df272fbc293ced08ea31b359d25",
+    "evidenceField": "stargazerCount"
+  },
+  {
+    "repo": "jamez-bondos/awesome-gpt4o-images",
+    "url": "https://github.com/jamez-bondos/awesome-gpt4o-images",
+    "stars": 8151,
+    "checkedAt": "2026-09-21",
+    "pageSha256": "32a91f35cc5ed528e3af85b1eade923daf2b2bd0cef3217880fdf6369ec5b40a",
+    "evidenceField": "stargazerCount"
+  }
+]

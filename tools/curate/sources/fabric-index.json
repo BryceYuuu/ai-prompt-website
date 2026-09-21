@@ -1,0 +1,182 @@
+[
+  {
+    "pattern": "improve_writing",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/improve_writing/system.md",
+    "sha256": "98288d12a0aa175b91582dc7d750378a3a219330a0ee7b2719556dd3263c87e8"
+  },
+  {
+    "pattern": "create_formal_email",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_formal_email/system.md",
+    "sha256": "38730e9f08b369bc67b98af38563e8ef7e0dc994ad63da4abd9763c0adaea7db"
+  },
+  {
+    "pattern": "translate",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/translate/system.md",
+    "sha256": "90f6553ad8c870629a5300db760155becd49ff6b69016f6dada745fcb5233916"
+  },
+  {
+    "pattern": "fix_typos",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/fix_typos/system.md",
+    "sha256": "ecb2c15caea4649e0fb6ceca8883cd62cd45ac4644924fb4604383616dafad74"
+  },
+  {
+    "pattern": "create_newsletter_entry",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_newsletter_entry/system.md",
+    "sha256": "96b19e124e2a3bb8f4ae3d7c0aaf0720410b62abc4f668859c9dfdf095191e2a"
+  },
+  {
+    "pattern": "summarize",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/summarize/system.md",
+    "sha256": "29d393bf16f9a89464ef1f734cfd523e5949c01e5e580039540fd65823bc4a06"
+  },
+  {
+    "pattern": "review_code",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/review_code/system.md",
+    "sha256": "3bd9a9928f7898c7e694b50b61933e1bca2689c8d4fad45f2db94b75c71f9852"
+  },
+  {
+    "pattern": "create_git_diff_commit",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_git_diff_commit/system.md",
+    "sha256": "8002a38688601ca011d7b508b92fbd24a0ac472e4159e6b17734f241a0801e80"
+  },
+  {
+    "pattern": "explain_code",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/explain_code/system.md",
+    "sha256": "fe381e0b31b2e3d9b057635fe2fe87361c7fce364da65d9514f77e9c349c17a3"
+  },
+  {
+    "pattern": "create_command",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_command/system.md",
+    "sha256": "2f9d6a3800a06c9043947babc32d69816b66391ecad63eb01a8e6293b94d2163"
+  },
+  {
+    "pattern": "analyze_logs",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/analyze_logs/system.md",
+    "sha256": "886723b15c3f68b9867f5439bffcd0f8bcfd82699a8b728034e7aef9db64bbeb"
+  },
+  {
+    "pattern": "create_design_document",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_design_document/system.md",
+    "sha256": "23ef7ffda48444bc1b176125393ef750c8ba1781f0da085e391cbbfe1dee14e8"
+  },
+  {
+    "pattern": "analyze_claims",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/analyze_claims/system.md",
+    "sha256": "5650bdfcad97f1404cac5515a268a98d801199655225aaf6994b0b5d2f1d093c"
+  },
+  {
+    "pattern": "analyze_paper",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/analyze_paper/system.md",
+    "sha256": "95bb5d707959e40641eb0626f7d4e9ff21cfdc2a918f0196de32215730241ed2"
+  },
+  {
+    "pattern": "compare_and_contrast",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/compare_and_contrast/system.md",
+    "sha256": "c130f06e041da7321e79aa827f4408db301bdac9368e5693f32fd6656adb0e03"
+  },
+  {
+    "pattern": "analyze_risk",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/analyze_risk/system.md",
+    "sha256": "7971f26716f699a0bd662ae228b52a8af7444ea0c158f1cf6e2550e6bfc4eb03"
+  },
+  {
+    "pattern": "find_logical_fallacies",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/find_logical_fallacies/system.md",
+    "sha256": "ef4e0afe46f4bbed5dae823380f87e50f9771311a1355788ed020bf5f599aa26"
+  },
+  {
+    "pattern": "export_data_as_csv",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/export_data_as_csv/system.md",
+    "sha256": "1f4192f9d395897ccf222d3f6608238fcf628876a6b7101dbd425a490788de63"
+  },
+  {
+    "pattern": "create_quiz",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_quiz/system.md",
+    "sha256": "fdbd849782c1ded41f6835162efe3488132ad997ec1036908e774f94144cbf05"
+  },
+  {
+    "pattern": "create_flash_cards",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_flash_cards/system.md",
+    "sha256": "1649562432f696ba239e290f1de4e10b37c73e7625e359b0eba64cf174b8377e"
+  },
+  {
+    "pattern": "explain_math",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/explain_math/system.md",
+    "sha256": "a0147a01ebd041fda71b0278fc86c915e4d9f93e3da9e903918a06cef465100a"
+  },
+  {
+    "pattern": "explain_terms",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/explain_terms/system.md",
+    "sha256": "1bbb0b65cd7b9ad53eb3944af470e248a1a5abc25b5e65ef056f0ae3414a78eb"
+  },
+  {
+    "pattern": "summarize_lecture",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/summarize_lecture/system.md",
+    "sha256": "86fb4902e76662ea93b1df1e25306d07f308c2e9d5eceb569558c333d2f0235d"
+  },
+  {
+    "pattern": "create_reading_plan",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_reading_plan/system.md",
+    "sha256": "05f1d2bd83a7344b2ca1dddc66e85697ed84433383711b1aa74e196178b5b919"
+  },
+  {
+    "pattern": "create_prd",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_prd/system.md",
+    "sha256": "d907303016f5c9d88f0c0fd96128c0c76d04716914a74f7f25503d817e8b4aeb"
+  },
+  {
+    "pattern": "create_user_story",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_user_story/system.md",
+    "sha256": "ae8aa41e298318fa95a255cc1e86561338e04726bb1006d6fbf8e094b5283b84"
+  },
+  {
+    "pattern": "analyze_product_feedback",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/analyze_product_feedback/system.md",
+    "sha256": "fb95247f1e7776d1fd9727206c5c90e9257c5ef610a0ecef1f261234a5c89575"
+  },
+  {
+    "pattern": "analyze_sales_call",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/analyze_sales_call/system.md",
+    "sha256": "7d0f906f45880790e0c4afd44a7b371930d61de9bbbc1da73706471f374e690e"
+  },
+  {
+    "pattern": "summarize_meeting",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/summarize_meeting/system.md",
+    "sha256": "2a255ab3ac6ab7e537e2e0fef81e9dfb33e8e2a2c40ef345e0e90886f8daa7e5"
+  },
+  {
+    "pattern": "create_hormozi_offer",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_hormozi_offer/system.md",
+    "sha256": "3bfa7686b606ce6f42ac4ad83745c4a2c6bc16d4449230b1295d14ce0bd4a51f"
+  },
+  {
+    "pattern": "extract_recipe",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/extract_recipe/system.md",
+    "sha256": "21957bf3e9c72def50551361cad96a2c77b5ee29546080c93b339e92a0ee269d"
+  },
+  {
+    "pattern": "analyze_bill",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/analyze_bill/system.md",
+    "sha256": "f582242bf64f4091daa0c0c7524d698a1afa75efa9745f3522562b32c8db1c1e"
+  },
+  {
+    "pattern": "explain_terms_and_conditions",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/explain_terms_and_conditions/system.md",
+    "sha256": "6921e30d1418fac509e66163fcf7de31756baa94fb775183b06ccfa1513f3d88"
+  },
+  {
+    "pattern": "create_diy",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/create_diy/system.md",
+    "sha256": "81161fa76f781c30d756e9ea1454298d54e7fbea4148bbf28ed976759865b3a0"
+  },
+  {
+    "pattern": "t_threat_model_plans",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/t_threat_model_plans/system.md",
+    "sha256": "f7e54c42de9c04fcbe827462d199bac66400e3044b6b4f9cfdd88e65f7c0a577"
+  },
+  {
+    "pattern": "t_year_in_review",
+    "url": "https://raw.githubusercontent.com/danielmiessler/fabric/main/data/patterns/t_year_in_review/system.md",
+    "sha256": "9d004d7ffe317f3b7ea7aef0e318832403c61c17a0fc70458cb078ae9666bffa"
+  }
+]

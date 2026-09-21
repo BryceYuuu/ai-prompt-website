@@ -1,0 +1,18 @@
+name: Check
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run test:mutations
+      - run: python3 tools/curate/build.py
+      - run: git diff --exit-code -- assets/js/data-curated.js tools/curate/audit.json

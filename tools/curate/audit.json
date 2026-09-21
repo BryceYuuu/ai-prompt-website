@@ -1,0 +1,680 @@
+{
+  "date": "2026-09-21",
+  "previousCount": 108,
+  "activeCount": 48,
+  "images": 12,
+  "text": 36,
+  "review": [
+    {
+      "id": "cyber-night-market",
+      "previousName": "赛博夜市",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "morning-film",
+      "previousName": "晨间胶片",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "hard-edge-minimal",
+      "previousName": "硬边极简",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "plush-toy",
+      "previousName": "毛绒玩具",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "copper-etching",
+      "previousName": "铜版蚀刻",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "candy-pop",
+      "previousName": "高饱和糖果",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "mist-ink",
+      "previousName": "山雾水墨",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "glass-morphism",
+      "previousName": "玻璃拟态",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "risograph",
+      "previousName": "孔版印刷",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "miniature-diorama",
+      "previousName": "微缩景观",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "darkroom-red",
+      "previousName": "暗房红调",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "line-art-sketch",
+      "previousName": "线稿手绘",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "liquid-chrome",
+      "previousName": "液态金属",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "pixel-quest",
+      "previousName": "像素冒险",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "soft-portrait",
+      "previousName": "柔光人像",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "wireframe-arch",
+      "previousName": "建筑线框",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "tropic-saturated",
+      "previousName": "热带饱和",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "midnight-blues",
+      "previousName": "深夜蓝调",
+      "decision": "retired",
+      "reason": "旧图片配方缺少实际工作流或图生图保真约束"
+    },
+    {
+      "id": "book-summarizer",
+      "previousName": "拆书人",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "childrens-book-creator",
+      "previousName": "童书作者",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "chinese-english-translator",
+      "previousName": "中英互译",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "clarity-rewriter",
+      "previousName": "改写润色器",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "essay-writer",
+      "previousName": "论说文写手",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "faq-generator",
+      "previousName": "常见问题生成器",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "journalist",
+      "previousName": "记者",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "linkedin-ghostwriter",
+      "previousName": "领英代笔",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "novelist",
+      "previousName": "小说家",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "poet",
+      "previousName": "诗人",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "proofreader",
+      "previousName": "校对",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "screenwriter",
+      "previousName": "编剧",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "storyteller",
+      "previousName": "故事讲述者",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "tech-writer",
+      "previousName": "技术文档写手",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "title-generator",
+      "previousName": "标题生成",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "a11y-auditor",
+      "previousName": "无障碍审计",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "code-reviewer",
+      "previousName": "代码评审",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "commit-message",
+      "previousName": "提交信息",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "devops-engineer",
+      "previousName": "运维工程师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "fullstack-dev",
+      "previousName": "全栈开发",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "github-expert",
+      "previousName": "GitHub 老手",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "it-architect",
+      "previousName": "IT 架构师",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "linux-terminal",
+      "previousName": "Linux 终端",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "ml-engineer",
+      "previousName": "机器学习工程师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "regex-generator",
+      "previousName": "正则生成器",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "security-specialist",
+      "previousName": "安全工程师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "sentry-fixer",
+      "previousName": "线上排错",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "sql-terminal",
+      "previousName": "SQL 终端",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "stackoverflow-post",
+      "previousName": "提问帖写手",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "unit-tester",
+      "previousName": "单元测试",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "academician",
+      "previousName": "学术研究",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "bank-transaction-analyst",
+      "previousName": "账单分析师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "data-analyst",
+      "previousName": "数据分析",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "data-visualizer",
+      "previousName": "数据可视化师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "debater",
+      "previousName": "辩论对手",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "decision-filter",
+      "previousName": "决策过滤",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "fallacy-finder",
+      "previousName": "逻辑审查",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "financial-analyst",
+      "previousName": "财务分析师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "historian",
+      "previousName": "历史学者",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "journal-reviewer",
+      "previousName": "期刊审稿人",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "literary-critic",
+      "previousName": "文学评论",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "movie-critic",
+      "previousName": "影评人",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "philosopher",
+      "previousName": "哲学顾问",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "plagiarism-checker",
+      "previousName": "查重审稿",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "statistician",
+      "previousName": "统计学家",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "algorithm-guide",
+      "previousName": "算法讲解",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "analogy-explainer",
+      "previousName": "类比讲解",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "assignment-grader",
+      "previousName": "作业批改",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "business-english",
+      "previousName": "商务英语精进",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "chess-rival",
+      "previousName": "国际象棋对手",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "etymologist",
+      "previousName": "词源考据",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "job-interviewer",
+      "previousName": "面试官",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "math-teacher",
+      "previousName": "数学老师",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "philosophy-teacher",
+      "previousName": "哲学老师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "socratic-method",
+      "previousName": "苏格拉底式提问",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "speaking-coach",
+      "previousName": "演讲教练",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "spoken-english",
+      "previousName": "口语教练",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "study-companion",
+      "previousName": "复习陪练",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "study-planner",
+      "previousName": "学习计划",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "writing-tutor",
+      "previousName": "写作导师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "accountant",
+      "previousName": "会计",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "advertiser",
+      "previousName": "广告策划",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "branding-strategist",
+      "previousName": "品牌策略",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "career-counselor",
+      "previousName": "职业规划",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "cv-writer",
+      "previousName": "简历写手",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "investment-manager",
+      "previousName": "投资经理",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "legal-advisor",
+      "previousName": "法务顾问",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "product-manager",
+      "previousName": "产品经理",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "product-promoter",
+      "previousName": "产品推广",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "real-estate-agent",
+      "previousName": "房产经纪",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "recruiter",
+      "previousName": "招聘官",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "salesperson",
+      "previousName": "销售",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "seo-specialist",
+      "previousName": "SEO 优化",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "social-media-manager",
+      "previousName": "社媒运营",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "startup-idea",
+      "previousName": "创业点子",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "babysitter",
+      "previousName": "育儿帮手",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "car-advisor",
+      "previousName": "汽车顾问",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "chef",
+      "previousName": "私厨",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "diy-expert",
+      "previousName": "家修师傅",
+      "decision": "replaced",
+      "reason": "换为有出处、明确输入输出的新版任务"
+    },
+    {
+      "id": "florist",
+      "previousName": "花艺师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "food-critic",
+      "previousName": "美食评论",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "interior-decorator",
+      "previousName": "家居布置",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "mental-health",
+      "previousName": "情绪顾问",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "nutritionist",
+      "previousName": "营养师",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "personal-stylist",
+      "previousName": "穿搭顾问",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "personal-trainer",
+      "previousName": "私教",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "pet-behaviorist",
+      "previousName": "宠物行为",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "relationship-coach",
+      "previousName": "关系顾问",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "ticket-advisor",
+      "previousName": "机票顾问",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    },
+    {
+      "id": "travel-guide",
+      "previousName": "旅行向导",
+      "decision": "retired",
+      "reason": "旧角色式提示词过泛、重叠，或缺少可验收产物"
+    }
+  ],
+  "newIds": [
+    "anime-figurine",
+    "bobblehead",
+    "chibi-keychain",
+    "vector-poster",
+    "voxel-object",
+    "formal-email",
+    "newsletter-editor",
+    "code-explainer",
+    "claims-auditor",
+    "vendor-risk",
+    "flashcard-maker",
+    "glossary-builder",
+    "lecture-notes",
+    "user-story",
+    "feedback-triage",
+    "meeting-minutes",
+    "offer-designer",
+    "terms-reader",
+    "plan-premortem",
+    "year-review",
+    "purchase-comparison"
+  ]
+}
