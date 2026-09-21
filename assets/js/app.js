@@ -78,15 +78,12 @@
     return Math.round(r * 1000) / 1000 + ' / 1';
   }
 
-  /* 搜索索引：用户会直接搜模型名（flux / sdxl / gpt-image），必须命中。
-     提示词正文要**从两条轨道里取**：图片卡没有顶层 prompt（那是已删除的
-     列表页复制功能留下的影子字段，见 data.js 的 assemble），
-     只取 local 的参数名会让「湿沥青」「霓虹」这类词搜不到。 */
+  /* 页面搜索与快捷搜索共用索引，包含常用中文别名和英文任务名。 */
   function searchHay(s) {
     var cat = catOf(s.category);
     return (s.name + ' ' + s.latin + ' ' + s.tagline + ' ' + s.uses.join(' ') + ' ' +
       s.moods.join(' ') + ' ' + s.author + ' ' + cat.name + ' ' + cat.key + ' ' +
-      (s.prompt || '') + ' ' +
+      (s.prompt || '') + ' ' + (s.keywords || []).join(' ') + ' ' +
       (s.local ? s.local.prompt : '') + ' ' + (s.cloud ? s.cloud.prompt : '') + ' ' +
       (s.source ? s.source.repo + ' ' + s.source.act + ' ' + s.source.contributor : '') + ' ' +
       (s.local ? s.local.base + ' ' + s.local.sampler + ' ' + s.local.loras.map(function (x) { return x.name; }).join(' ') + ' ' + s.local.workflow : '') + ' ' +

@@ -53,7 +53,10 @@ for id,cat,pattern,name,inputs,steps,outputs,limits in specs:
  use={'write':'长文写作','code':'代码评审','analyze':'数据分析','learn':'学习辅导','business':'产品规划','life':'日常决策'}[cat]
  curated[id]={'id':id,'name':name,'latin':pattern.replace('_',' ').title(),'tagline':outputs.replace('；','、')[:59],'category':cat,'uses':[use],'moods':['结构化','严谨'],'track':'text','version':'2.0','author':'书桐编辑整理','license':'MIT','licenseNote':'基于 Fabric MIT 授权的 pattern 中文改编；保留上游版权与许可，见 tools/curate/sources/fabric-license.txt。','createdAt':DATE,'updated':DATE,'art':{'g':'soft','p':['#FFFFFF','#E5E5EA','#172333','#0071E3'],'seed':len(curated)},'prompt':prompt,'slots':slots,'cover':None,'local':None,'cloud':None,'source':source,'curation':{'input':inputs,'output':outputs,'status':'editor-reviewed-not-model-tested','method':'按任务方法中文改编；非逐字翻译，非模型实测','reviewedAt':DATE}}
  samples[id]='交付清单\n'+'\n'.join('• '+x for x in outputs.split('；'))+'\n\n需要你提供：'+inputs
+keywords=json.loads((BASE/'keywords.json').read_text())
+assert set(keywords) == set(curated), 'Keywords must cover exactly the active catalog'
 for c in curated.values():
+ c['keywords']=keywords[c['id']]
  meta=c['curation'];img=c['category']=='image'
  if not img: c['licenseText']=(SRC/'fabric-license.txt').read_text()
  c['guide']=[{'t':'p','v':'这条模板解决：'+c['name']+'。'},{'t':'h','v':'需要准备什么'},{'t':'p','v':meta['input']},{'t':'h','v':'怎么用'},{'t':'list','v':(['在支持图像编辑的工具中上传原图。','复制提示词，与原图一起提交；按需填写背景和画幅。','检查主体是否保真，再小步调整风格强度。'] if img else ['准备上述材料，删除不相关的敏感信息。','复制提示词，填好花括号中的输入项，再提交给AI工具。','逐项核对交付清单；证据不充分的部分继续补材料。'])},{'t':'h','v':'完成后检查'},{'t':'p','v':meta['output']},{'t':'warn','v':'来源项目提供了任务方法或案例，但本站尚未逐条运行验证；请按实际结果迭代。'}]

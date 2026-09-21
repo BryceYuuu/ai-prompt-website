@@ -2,7 +2,7 @@
 // Covers the current reviewed catalog; legacy dual-track features are not distributed.
 const {spawnSync}=require('child_process');
 const path=require('path');
-const cases=['text','disclosure','about','runtime','count','source','image','prompt','license','catalog','copy','export','detail','hero','search','sourceUI'];
+const cases=['keywords','text','disclosure','about','runtime','count','source','image','prompt','license','catalog','copy','export','detail','hero','search','sourceUI'];
 const selected=process.argv[2]?cases.filter(x=>x===process.argv[2]):cases;
 if(!selected.length)throw Error('Unknown mutation');
 let missed=0;

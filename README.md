@@ -1,4 +1,4 @@
-# 书桐 · SHUTONG
+# 书桐 SHUTONG · 中文 AI 提示词库 / AI Prompt Library
 
 一个简洁、无需登录的中文提示词网站。首页专注图片转换，文字任务通过独立分类入口浏览。纯静态 HTML / CSS / JavaScript，无后端、无运行时依赖、无需构建。
 
@@ -12,6 +12,24 @@
 图片模板使用方式：在支持图片编辑的 AI 工具中上传原图，再粘贴模板。本站提供提示词，不直接调用模型生成图片。文字模板需要填写输入材料后再提交给 AI 工具。
 
 **效果说明：** 本站做了编辑筛选和功能测试，但尚未逐条运行验证模型输出。图片为上游公开案例，不是本站中文改编版的实测结果。GitHub 星数是仓库级历史快照，不是单条模板热度或质量评分。
+
+## 按任务查找提示词
+
+搜索日常说法或英文任务名，都可以定位模板：
+
+| 场景 | 常用搜索词 |
+|---|---|
+| 图片风格转换 / Image-to-image | 照片转手办、毛绒玩具、像素画、线稿、微缩模型、style transfer、pixel art、amigurumi |
+| 写作与翻译 / Writing & translation | 文案润色、商务邮件、中英翻译、语法纠错、长文总结、proofreading、email reply |
+| 编程开发 / Coding | 代码审查、找 bug、日志分析、命令行、Git 提交说明、code review、debugging、system design |
+| 分析与决策 / Analysis | 事实核查、论文精读、方案对比、数据提取、fact checking、decision matrix、text to CSV |
+| 学习教育 / Learning | 闪卡、Anki 卡片、练习题、课堂笔记、学习计划、flashcards、quiz generator |
+| 商业职场 / Business | PRD、产品需求文档、用户反馈、销售复盘、会议纪要、meeting minutes、action items |
+| 生活日常 / Everyday tasks | 菜谱整理、服务条款、年度总结、购物对比、recipe extraction、buying guide |
+
+### English overview
+
+Shutong is an open-source **Chinese AI prompt library** with 48 curated **prompt templates**: 12 **image-to-image style transfer** prompts and 36 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
 ## 本地预览
 
@@ -54,6 +72,7 @@ assets/css/                   页面样式
 assets/img/curated/            来源案例图
 schema/                       数据规范与校验
 tools/curate/text-specs.json  文字任务编辑清单
+tools/curate/keywords.json    每条模板的中英文搜索别名
 tools/curate/build.py         图片模板与离线生成器
 tools/curate/sources/         来源快照、署名与许可证
 ```

@@ -4,6 +4,7 @@ const {JSDOM,VirtualConsole}=require('jsdom');
 const root=path.resolve(process.argv[2]||path.join(__dirname,'../..'));
 const mutant=process.argv[3]||'';
 const mutations={
+ keywords:['app.js',"(s.keywords || []).join(' ')","''"],
  text:['data-curated.js','【交付内容】','【空泛建议】'],
  disclosure:['app.js','<details class="detail-fold detail-guide">','<details open class="detail-fold detail-guide">'],
  about:['app.js','尚未由本站逐条运行验证','已由本站逐条运行验证'],
@@ -38,6 +39,17 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  await check('text-deliverables-and-retirement-audit',()=>{for(const s of cards.filter(s=>s.category!=='image')){assert.equal(s.track,'text');assert(!s.cover&&!s.local&&!s.cloud);assert(s.prompt.length>300);for(const label of ['【输入材料】','【处理步骤】','【交付内容】','【信息不足】'])assert(s.prompt.includes(label));assert(s.slots.length>0);}const a=JSON.parse(fs.readFileSync(path.join(root,'tools/curate/audit.json')));assert.equal(a.review.length,108);assert.equal(a.activeCount,cards.length);});
  await check('homepage-image-only-and-manual-carousel',async()=>{await nav('#/');assert(all('.card__link').length>0);for(const a of all('.card__link'))assert(images.some(s=>a.hash.endsWith(s.id)));const hero=q('.hero__plate');const first=hero.getAttribute('href');q('[data-action="hero-next"]').click();assert.notEqual(q('.hero__plate').getAttribute('href'),first);q('[data-action="hero-prev"]').click();assert.equal(q('.hero__plate').getAttribute('href'),first);});
  await check('scene-and-category-filters',async()=>{await nav('#/library?track=text&limit=100');assert.equal(all('.gallery .card').length,36);for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat+'&limit=100');assert.equal(all('.gallery .card').length,cat==='image'?12:6);}});
+ await check('keyword-aliases-in-library-and-palette',async()=>{
+   const cases=[['照片转手办','anime-figurine'],['amigurumi','plush-toy'],['会议纪要','meeting-minutes'],['Anki卡片','flashcard-maker'],['CODE REVIEW','code-reviewer']];
+   for(const [term,id] of cases){
+     await nav('#/library?q='+encodeURIComponent(term));
+     assert(all('.gallery .card__link').some(a=>a.getAttribute('href')==='#/style/'+id),term+' missing in library');
+     q('[data-action="palette-open"]').click();
+     const input=q('#palette-input');input.value=term;input.dispatchEvent(new w.Event('input',{bubbles:true}));await wait(30);
+     assert(all('#palette-list a').some(a=>a.getAttribute('href')==='#/style/'+id),term+' missing in palette');
+     d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+   }
+ });
  await check('search-and-empty-state',async()=>{await nav('#/library?q='+encodeURIComponent('PRD'));assert(all('.gallery .card').length>0);await nav('#/library?q=zzzzNoSuchPrompt');assert.equal(all('.gallery .card').length,0);assert(q('.empty a'));});
  await check('all-48-details-copy-and-export',async()=>{for(const s of cards){await nav('#/style/'+s.id);assert.equal(q('.gh__title').textContent.trim(),s.name);assert.equal(q('.prompt__body').textContent.trim(),s.prompt);assert.equal(all('.prompt-tabs .seg__item').length,0);assert(q('.srcbox').textContent.includes(s.source.repo));copied='';q('.gh__actions [data-action="copy-prompt"]').click();await wait(1);assert.equal(copied,s.prompt);const ex=all('.takeaway a[download]');assert.equal(ex.length,2);const j=JSON.parse(blobs.get(ex.find(a=>a.download.endsWith('.json')).href));assert.equal(j.prompt,s.prompt);assert.equal(j.source.url,s.source.url);assert.equal(j.validation,s.curation.status);const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.prompt));assert(md.includes('尚未逐条模型实测'));assert(md.includes(s.source.license));}});
  await check('disclosures-and-filtered-backlink',async()=>{await nav('#/library?cat=code');await nav('#/style/code-reviewer');assert.equal(q('.backlink').getAttribute('href'),'#/library?cat=code');for(const el of all('.detail-guide,.detail-source')){assert(!el.open);el.querySelector('summary').click();assert(el.open);el.querySelector('summary').click();assert(!el.open);}});

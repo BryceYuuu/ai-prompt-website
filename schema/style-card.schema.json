@@ -339,6 +339,17 @@
     },
     "licenseText": {
       "type": "string"
+    },
+    "keywords": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 60
+      }
     }
   },
   "allOf": [

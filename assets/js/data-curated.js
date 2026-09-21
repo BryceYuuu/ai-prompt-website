@@ -65,6 +65,15 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "赛博朋克",
+      "照片转微缩",
+      "微缩城市",
+      "赛博夜景",
+      "移轴摄影",
+      "cyberpunk",
+      "tilt shift"
+    ],
     "guide": [
       {
         "t": "p",
@@ -178,6 +187,15 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "照片转手办",
+      "真人转手办",
+      "动漫模型",
+      "公仔",
+      "3D手办",
+      "photo to figurine",
+      "action figure"
+    ],
     "guide": [
       {
         "t": "p",
@@ -291,6 +309,15 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "照片转毛绒玩具",
+      "钩织玩偶",
+      "毛线娃娃",
+      "宠物玩偶",
+      "针织公仔",
+      "amigurumi",
+      "crochet doll"
+    ],
     "guide": [
       {
         "t": "p",
@@ -404,6 +431,13 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "大头娃娃",
+      "摇头公仔",
+      "自拍手办",
+      "定制玩偶",
+      "bobblehead doll"
+    ],
     "guide": [
       {
         "t": "p",
@@ -517,6 +551,14 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "玻璃拟态",
+      "透明玻璃",
+      "水晶雕塑",
+      "材质替换",
+      "glassmorphism",
+      "glass retexture"
+    ],
     "guide": [
       {
         "t": "p",
@@ -630,6 +672,15 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "照片转线稿",
+      "黑白线条",
+      "儿童涂色",
+      "涂色书",
+      "轮廓提取",
+      "coloring book",
+      "line drawing"
+    ],
     "guide": [
       {
         "t": "p",
@@ -743,6 +794,14 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "照片转钥匙扣",
+      "人物公仔",
+      "树脂挂件",
+      "卡通挂件",
+      "chibi",
+      "keyring"
+    ],
     "guide": [
       {
         "t": "p",
@@ -856,6 +915,14 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "照片转插画",
+      "扁平插画",
+      "矢量风格",
+      "几何海报",
+      "vector illustration",
+      "flat design"
+    ],
     "guide": [
       {
         "t": "p",
@@ -969,6 +1036,14 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "照片转像素画",
+      "像素头像",
+      "8bit",
+      "像素艺术",
+      "pixel art",
+      "8 bit"
+    ],
     "guide": [
       {
         "t": "p",
@@ -1082,6 +1157,14 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "微缩建筑",
+      "建筑模型",
+      "等距建筑",
+      "迷你场景",
+      "isometric",
+      "diorama"
+    ],
     "guide": [
       {
         "t": "p",
@@ -1195,6 +1278,14 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "折纸艺术",
+      "纸雕",
+      "纸艺模型",
+      "图标重绘",
+      "origami",
+      "papercraft"
+    ],
     "guide": [
       {
         "t": "p",
@@ -1308,6 +1399,14 @@ const HF_CURATED = {
       "method": "根据来源案例整理，补充输入、保真和迭代约束",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "体素风格",
+      "方块模型",
+      "积木风格",
+      "像素立方体",
+      "voxel art",
+      "voxel icon"
+    ],
     "guide": [
       {
         "t": "p",
@@ -1414,6 +1513,15 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "文案润色",
+      "文章改写",
+      "精简文章",
+      "去套话",
+      "文本优化",
+      "copy editing",
+      "rewrite"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -1513,6 +1621,15 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "商务邮件",
+      "邮件回复",
+      "英文邮件",
+      "客户沟通",
+      "邮件模板",
+      "email reply",
+      "business email"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -1611,6 +1728,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "中英翻译",
+      "英文翻译",
+      "技术文档翻译",
+      "术语翻译",
+      "translation",
+      "localization"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -1708,6 +1833,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "错别字检查",
+      "语法纠错",
+      "标点检查",
+      "文本校对",
+      "proofreading",
+      "grammar check"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -1806,6 +1939,13 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "新闻简报",
+      "资讯摘要",
+      "newsletter",
+      "文章摘要",
+      "邮件简报"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -1904,6 +2044,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "长文总结",
+      "文档摘要",
+      "读书总结",
+      "内容提炼",
+      "document summary",
+      "executive summary"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2002,6 +2150,15 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "代码审查",
+      "代码评审",
+      "找bug",
+      "排查bug",
+      "漏洞检查",
+      "code review",
+      "bug review"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2099,6 +2256,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "提交信息",
+      "提交记录",
+      "git提交",
+      "git commit",
+      "commit message",
+      "conventional commits"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2196,6 +2361,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "代码解释",
+      "读懂代码",
+      "代码阅读",
+      "调用链",
+      "code walkthrough",
+      "explain code"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2294,6 +2467,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "命令行生成",
+      "shell命令",
+      "bash命令",
+      "终端命令",
+      "linux command",
+      "cli command"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2393,6 +2574,15 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "日志分析",
+      "故障排查",
+      "报错排查",
+      "根因分析",
+      "debugging",
+      "log analysis",
+      "root cause"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2492,6 +2682,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "技术设计",
+      "系统设计",
+      "架构设计",
+      "接口设计",
+      "system design",
+      "architecture"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2589,6 +2787,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "事实核查",
+      "证据核验",
+      "信息验证",
+      "真假辨别",
+      "fact checking",
+      "claim verification"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2686,6 +2892,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "论文精读",
+      "论文解读",
+      "研究方法",
+      "学术分析",
+      "paper review",
+      "research analysis"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2784,6 +2998,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "方案对比",
+      "决策矩阵",
+      "选型分析",
+      "加权评分",
+      "decision matrix",
+      "trade off"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2882,6 +3104,13 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "供应商评估",
+      "风险分析",
+      "供应商尽调",
+      "vendor assessment",
+      "risk assessment"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -2979,6 +3208,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "逻辑谬误",
+      "逻辑漏洞",
+      "反驳论点",
+      "论证分析",
+      "logical fallacies",
+      "argument analysis"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3077,6 +3314,15 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "数据提取",
+      "表格整理",
+      "文本转表格",
+      "CSV导出",
+      "数据清洗",
+      "data extraction",
+      "text to csv"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3176,6 +3422,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "自动出题",
+      "知识测验",
+      "考试复习",
+      "练习题",
+      "quiz generator",
+      "practice questions"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3273,6 +3527,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "闪卡",
+      "记忆卡",
+      "Anki卡片",
+      "单词卡",
+      "flashcards",
+      "anki"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3371,6 +3633,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "数学解题",
+      "数学辅导",
+      "分步解题",
+      "数学公式",
+      "math tutor",
+      "step by step math"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3468,6 +3738,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "术语解释",
+      "专业词汇",
+      "术语词典",
+      "名词解释",
+      "glossary",
+      "terminology"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3565,6 +3843,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "课堂笔记",
+      "课程总结",
+      "视频笔记",
+      "学习笔记",
+      "lecture notes",
+      "course summary"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3663,6 +3949,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "学习计划",
+      "阅读计划",
+      "自学路线",
+      "读书计划",
+      "study plan",
+      "learning roadmap"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3761,6 +4055,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "产品需求文档",
+      "需求分析",
+      "产品经理",
+      "需求说明书",
+      "PRD",
+      "product requirements"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3859,6 +4161,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "用户故事",
+      "验收条件",
+      "敏捷需求",
+      "验收用例",
+      "user stories",
+      "acceptance criteria"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -3957,6 +4267,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "用户反馈分析",
+      "需求归类",
+      "反馈整理",
+      "产品优先级",
+      "feedback analysis",
+      "feature prioritization"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4055,6 +4373,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "销售复盘",
+      "销售话术",
+      "客户跟进",
+      "销售通话",
+      "sales call",
+      "sales coaching"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4153,6 +4479,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "会议纪要",
+      "会议总结",
+      "会议待办",
+      "行动清单",
+      "meeting minutes",
+      "action items"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4252,6 +4586,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "产品定价",
+      "套餐设计",
+      "报价方案",
+      "服务套餐",
+      "pricing strategy",
+      "offer design"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4350,6 +4692,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "菜谱整理",
+      "食谱提取",
+      "做饭步骤",
+      "烹饪计划",
+      "recipe extraction",
+      "cooking instructions"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4448,6 +4798,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "用户协议",
+      "服务条款",
+      "自动续费",
+      "退款条款",
+      "terms and conditions",
+      "subscription terms"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4547,6 +4905,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "手工教程",
+      "DIY教程",
+      "制作步骤",
+      "材料清单",
+      "do it yourself",
+      "diy instructions"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4646,6 +5012,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "计划风险",
+      "失败预演",
+      "风险预判",
+      "备选方案",
+      "premortem",
+      "contingency plan"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4744,6 +5118,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "年度总结",
+      "年终复盘",
+      "年度回顾",
+      "个人复盘",
+      "year in review",
+      "annual review"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
@@ -4842,6 +5224,14 @@ const HF_CURATED = {
       "method": "按任务方法中文改编；非逐字翻译，非模型实测",
       "reviewedAt": "2026-09-21"
     },
+    "keywords": [
+      "购买建议",
+      "购物对比",
+      "选购指南",
+      "产品对比",
+      "buying guide",
+      "purchase comparison"
+    ],
     "licenseText": "MIT License\n\nCopyright (c) 2012-2024 Scott Chacon and others\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
     "guide": [
       {
