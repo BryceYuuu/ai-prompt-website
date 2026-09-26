@@ -139,8 +139,11 @@ button:focus-visible,a:focus-visible,select:focus-visible { outline:3px solid #4
 .filters__mini input { font-size:13px; }
 .filters__label { color:var(--ink-3); font-size:11px; }
 .chip { font-size:11px; background:transparent; color:var(--ink-3); border-color:transparent; padding:6px 10px; }
-.chip.is-on { color:#3934aa; background:#eeedfb; border-color:transparent; }
+/* Match the legacy filter selector so selected labels keep their intended contrast. */
+.chip.is-on,.filters .chip.is-on { color:#3934aa; background:#eeedfb; border-color:transparent; }
+.chip.is-on:hover,.filters .chip.is-on:hover { background:#dedcf5; color:#37329c; }
 .chip__count { font-size:9px; }
+.chip.is-on .chip__count { color:inherit; }
 .seg { background:#f1f2e9; }
 .seg__item { font-size:11px; padding:7px 12px; }
 .seg__item.is-on { background:#fff; color:var(--ink); box-shadow:0 1px 4px #0001; }
@@ -402,7 +405,6 @@ button:focus-visible,a:focus-visible,select:focus-visible { outline:3px solid #4
 .catalogue__side { flex-direction:row; align-items:center; }
 .catalogue__side .btn { padding:11px 17px; }
 .searchbox:focus-within { border-color:#4541c4; box-shadow:0 0 0 3px #4541c414; }
-.chip.is-on:hover { background:#dedcf5; color:#37329c; }
 .cattab::after { display:none; }
 @media(max-width:900px) { :root { --nav-h:74px; } }
 @media(max-width:720px) {
