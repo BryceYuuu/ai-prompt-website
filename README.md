@@ -6,6 +6,10 @@
 
 [打开提示词网站 · 书桐 SHUTONG](https://bryceyuuu.github.io/ai-prompt-website/)
 
+[![提示词网站首页：图片风格轮播、搜索与风格卡片](docs/images/homepage.png)](https://bryceyuuu.github.io/ai-prompt-website/)
+
+点击首页截图即可在线体验。截图中的案例图署名与许可见 [第三方内容说明](THIRD_PARTY_NOTICES.md)。
+
 通过 GitHub Pages 从 `main` 分支发布，仓库更新后会自动部署。
 
 ## 当前内容
