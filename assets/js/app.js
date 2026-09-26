@@ -465,7 +465,7 @@
     var c = s.cover || COVERS[s.id];
     if (!c) return Art.art(s);
     var credit = c.creator && c.creator !== 'None' ? c.creator : (c.provider || '');
-    return '<span class="cover">' +
+    return '<span class="cover" data-style="' + esc(s.id) + '">' +
       '<img src="' + esc(c.src) + '" alt="' + esc(s.name + ' 封面图') + '"' +
         ' width="' + (c.w || 1000) + '" height="' + (c.h || 750) + '"' +
         ' loading="lazy" decoding="async">' +
@@ -937,7 +937,7 @@
         fig++;
         var cov = s.cover || COVERS[s.id] || {};
         out += (s.category !== 'image' ? '<details class="reference-fold"><summary data-action="reference-toggle">查看参考配图与署名</summary>' : '') + '<figure>' +
-          '<span class="cover" style="aspect-ratio:' + ar(cov) + '">' +
+          '<span class="cover" data-style="' + esc(s.id) + '" style="aspect-ratio:' + ar(cov) + '">' +
             '<img src="' + esc(b.v.src) + '" alt="' + esc(b.v.cap || '') + '"' +
               ' width="' + (cov.w || 1000) + '" height="' + (cov.h || 750) + '" loading="lazy">' +
           '</span>' +
