@@ -78,7 +78,7 @@ function run() {
        图片风格补全双轨之后，库页的 local / cloud 两档与「双轨」返回同一集合，
        已经删掉 —— 留着的话这张表会替一个筛不动的档位背书。 */
     var LIB_PARAMS = { cat: cats, use: uses, mood: moods, track: { all: 1, both: 1, text: 1 },
-                       q: null, sort: { hot: 1, new: 1 }, limit: null };
+                       q: null, sort: { hot: 1, new: 1 }, limit: null, saved: { 1: 1 } };
 
     /* 详情页也要扫，而且每个分类各挑一张 —— 文本卡和图片卡的详情页结构不同 */
     var detailRoutes = [];

@@ -1,7 +1,7 @@
 /* ==========================================================================
    书桐 SHUTONG — app
    hash 路由 / 视图渲染 / 交互 / 动效
-   零依赖、零构建。数据来自 data-collected.js（真实素材）与 data.js（规范层）。
+   零依赖、零构建。数据来自 data-curated.js（有来源的整理模板）与 data.js（分类层）。
    ========================================================================== */
 
 (function () {
@@ -370,7 +370,7 @@
 
   /* ------------------------------------------------------------ state -- */
   var state = {
-    filters: { cat: '', use: '', mood: '', track: 'all', q: '', sort: 'hot' },
+    filters: { cat: '', use: '', mood: '', track: 'all', q: '', sort: 'hot', saved: '' },
     limit: 12,
     detailTrack: 'local',
     /* 窄屏上筛选条默认收起 —— 不收的话第一张卡要滚过一整屏才出现，
@@ -381,6 +381,49 @@
     heroPlateId: ''
   };
 
+  // Only saved IDs persist. Task materials stay in memory and never leave this page.
+  var savedIds = [];
+  var drafts = Object.create(null);
+  try {
+    var stored = JSON.parse(localStorage.getItem('shutong:saved') || '[]');
+    if (Array.isArray(stored)) savedIds = stored.filter(function (id, i) {
+      return typeof id === 'string' && !!byId(id) && stored.indexOf(id) === i;
+    });
+  } catch (e) { /* Restricted storage still permits an in-session collection. */ }
+
+  function isSaved(id) { return savedIds.indexOf(id) >= 0; }
+  function saveButton(s, cls) {
+    return '<button type="button" class="save-button ' + (cls || '') + (isSaved(s.id) ? ' is-saved' : '') +
+      '" data-action="save-toggle" data-id="' + esc(s.id) + '" aria-pressed="' + isSaved(s.id) +
+      '" aria-label="' + (isSaved(s.id) ? '取消收藏 ' : '收藏 ') + esc(s.name) + '">' +
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4V4Z"/></svg>' +
+      '<span>' + (isSaved(s.id) ? '已收藏' : '收藏') + '</span></button>';
+  }
+  function preparedPrompt(s) {
+    var values = drafts[s.id] || {};
+    return (s.prompt || '').replace(/\{([^{}]+)\}/g, function (token, slot) {
+      return values[slot] && values[slot].trim() ? values[slot].trim() : token;
+    });
+  }
+  function builderHTML(s) {
+    var values = drafts[s.id] || {};
+    return '<section class="builder" aria-labelledby="builder-title"><div class="builder__head"><div><span class="step-label">01 / PERSONALIZE</span><h2 id="builder-title">填入你的需求</h2></div>' +
+      '<button type="button" class="text-button" data-action="reset-slots" data-id="' + esc(s.id) + '">重置</button></div>' +
+      (s.category === 'image' ? '<p class="builder__hint">原图请上传到支持图像编辑的 AI 工具。这里先准备好提示词。</p>' : '<p class="builder__hint">填入材料后，下方提示词会实时更新。也可以直接复制空白模板。</p>') +
+      '<div class="builder__fields">' + (s.slots || []).map(function (slot, i) {
+        return '<label class="builder__field" for="slot-' + i + '"><span>' + esc(slot.split('，')[0]) + '</span>' +
+          '<textarea id="slot-' + i + '" rows="' + (s.category === 'image' ? 2 : 3) + '" maxlength="20000" data-action="slot-input" data-id="' + esc(s.id) + '" data-slot="' + esc(slot) + '" placeholder="' +
+          esc(s.category === 'image' ? (i === 0 ? '例如：浅米色摄影棚，柔和自然光' : '例如：1:1 正方形') : '输入或粘贴' + slot) + '">' + esc(values[slot] || '') + '</textarea></label>';
+      }).join('') + '</div><div class="builder__foot"><span class="builder__status" aria-live="polite">' +
+      Object.keys(values).filter(function (k) { return values[k].trim(); }).length + ' / ' + (s.slots || []).length + ' 项已填写</span><span>材料仅在当前页面内存中，刷新清空</span></div></section>';
+  }
+  function updatePrepared(s) {
+    var body = $('.prompt__body');
+    if (body) body.textContent = preparedPrompt(s);
+    var status = $('.builder__status');
+    var values = drafts[s.id] || {};
+    if (status) status.textContent = (s.slots || []).filter(function (k) { return values[k] && values[k].trim(); }).length + ' / ' + (s.slots || []).length + ' 项已填写';
+  }
   /* ================================================================ nav == */
 
   function navHTML(route) {
@@ -395,16 +438,17 @@
             '<img src="assets/img/brand/mark-128.png" alt="" width="128" height="128">' +
           '</span>' +
           '<span class="brand__text">' +
-            '<span class="brand__word"><img src="assets/img/brand/wordmark.png" alt="书桐 SHUTONG" width="1024" height="575"></span>' +
+            '<span class="brand__word">书桐<span>SHUTONG</span></span>' +
           '</span>' +
         '</a>' +
         '<nav class="nav__links">' +
-          link('/', '图片风格', p === '/' || (p === '/library' && route.params.cat === 'image')) +
-          link('/library?track=text', '场景提示词', p === '/library' && route.params.cat !== 'image') +
+          link('/', '图片风格', p === '/' || (p === '/library' && route.params.cat === 'image' && route.params.saved !== '1')) +
+          link('/library?track=text', '场景提示词', p === '/library' && route.params.cat !== 'image' && route.params.saved !== '1') +
+          link('/library?saved=1', '我的收藏', p === '/library' && route.params.saved === '1') +
           link('/about', '使用说明', p === '/about') +
         '</nav>' +
         '<div class="nav__spacer"></div>' +
-        '<button class="navsearch" data-action="palette-open">' +
+        '<button class="navsearch" data-action="palette-open" aria-label="搜索提示词">' +
           ICON.search + '<span>搜索提示词</span>' +
           '<span class="navsearch__kbd">⌘K</span>' +
         '</button>' +
@@ -523,16 +567,17 @@
            在列表上就能复制，别人看不到生成效果和使用说明，
            等于把「图录」做成了「剪贴板」。 */
         '<a class="card__link" href="' + href + '" aria-label="查看 ' + esc(s.name) + ' 的详情"></a>' +
+        saveButton(s, 'save-button--card') +
         (s.category === 'image'
           ? '<div' + artAttrs + '>' + coverHTML(s, { plate: '№ ' + plateNo(s) }) +
             '<span class="card__badges"><span class="tag tag--outline">来源案例</span></span>' +
             '<span class="card__hint">' + ICON.arrowRight + '查看提示词</span></div>'
           : '<div class="card__excerpt"><div class="card__excerpt-head"><span>交付清单</span><span>№ ' + plateNo(s) + '</span></div>' +
-            '<p>' + esc((SAMPLES[s.id] || s.tagline).slice(0, 180)) + '</p></div>') +
+            '<ul>' + (s.curation.output || s.tagline).split('；').slice(0, 3).map(function (x) { return '<li>' + ICON.check + esc(x) + '</li>'; }).join('') + '</ul></div>') +
         '<div class="card__body">' +
           '<div class="row row--between gap-8 card__catrow">' +
             '<span class="catpill catpill--' + esc(s.category) + '"><i></i>' + esc(cat.name) + '</span>' +
-            '<span class="card__ver">v' + esc(s.version) + '</span>' +
+            '<span class="card__ver">' + (s.slots || []).length + ' 项输入</span>' +
           '</div>' +
           '<div class="card__title">' +
             '<span class="card__name">' + esc(s.name) + '</span>' +
@@ -541,7 +586,7 @@
           '<p class="card__desc">' + esc(s.tagline) + '</p>' +
           '<div class="card__foot">' +
             '<span class="card__author">' +
-              '<span class="card__avatar">' + esc(initials(s.author)) + '</span>' + esc(s.author) +
+              esc(s.category === 'image' ? '图生图 · 风格转换' : 'Fabric · 中文整理') +
             '</span>' +
             '<span class="card__open">查看用法 ' + ICON.arrowRight + '</span>' +
           '</div>' +
@@ -552,15 +597,18 @@
   /* ======================================================== 分类导航条 == */
 
   function catbarHTML(activeKey) {
+    var f = state.filters;
+    var pool = STYLES.filter(function (s) { return (f.saved !== '1' || isSaved(s.id)) && (f.track !== 'text' || s.category !== 'image'); });
     var tab = function (key, name, n) {
-      return '<a class="cattab' + (activeKey === key ? ' is-on' : '') + '" href="#/library' +
-        (key ? '?cat=' + encodeURIComponent(key) : '') + '">' +
+      return '<a class="cattab' + (activeKey === key ? ' is-on' : '') + '" href="' +
+        esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', use: '', mood: '', limit: '' })) + '">' +
         esc(name) + '<span class="cattab__n">' + pad2(n) + '</span></a>';
     };
     return '<div class="catbar"><div class="wrap catbar__in">' +
-      tab('', '全部', STYLES.length) +
-      CATS.map(function (c) { return tab(c.key, c.name, catCount(c.key)); }).join('') +
-    '</div></div>';
+      tab('', f.track === 'text' ? '全部任务' : '全部', pool.length) +
+      CATS.filter(function (c) { return f.track !== 'text' || c.key !== 'image'; }).map(function (c) {
+        return tab(c.key, c.name, pool.filter(function (s) { return s.category === c.key; }).length);
+      }).join('') + '</div></div>';
   }
 
   /* ============================================================== home == */
@@ -634,40 +682,32 @@
   function heroHTML() {
     var plate = byId(state.heroPlateId) || firstOf('image');
     if (plate.category !== 'image') plate = firstOf('image');
-    return '<section class="hero">' +
-      '<div class="wrap hero__grid">' +
-        '<div class="hero__intro">' +
-          '<p class="hero__eyebrow reveal">书桐 · 图片风格灵感库</p>' +
-          '<h1 class="hero__title reveal">让想象，<br><span>有自己的风格。</span></h1>' +
-          '<p class="lead hero__sub reveal">上传你的照片，换一种画风。<br class="desktop-break">从手办、针织玩偶到像素图标，保留属于你的细节。</p>' +
-          '<form class="hero__search reveal" data-action="search-submit">' +
-            '<div class="searchbox">' + ICON.search +
-              '<input type="search" name="q" placeholder="搜索转换效果，如手办、针织、像素" aria-label="搜索图片风格">' +
-              '<button class="btn btn--primary" type="submit">探索</button>' +
-            '</div>' +
-          '</form>' +
-          '<p class="hero__caption reveal">' + imageStyles().length + ' 种图片风格 · 打开即用 · 自由探索</p>' +
-        '</div>' +
-        '<div class="hero__visual reveal reveal--scale">' +
-            '<a class="hero__plate" href="#/style/' + esc(plate.id) + '">' +
-              heroPlateInner(plate) +
-            '</a>' +
-            '<div class="hero__controls"><button type="button" class="hero__arrow" data-action="hero-prev" aria-label="上一张风格">' + ICON.arrowLeft + '</button>' +
-              '<button type="button" class="hero__autoplay" data-action="hero-autoplay">暂停轮播</button>' +
-              '<button type="button" class="hero__arrow" data-action="hero-next" aria-label="下一张风格">' + ICON.arrowRight + '</button></div>' +
-            heroIndexHTML(plate) +
-        '</div>' +
-      '</div>' +
-    '</section>';
+    return '<section class="hero"><div class="wrap hero__grid">' +
+      '<div class="hero__intro"><p class="hero__eyebrow"><i></i> A SMALL STUDIO FOR BIG IDEAS</p>' +
+      '<h1 class="hero__title">好想法，<br>换个<span>新模样。</span></h1>' +
+      '<p class="hero__sub">把照片变成手办，把日常变成灵感。<br>挑一种风格，带着提示词开始创作。</p>' +
+      '<form class="hero__search" data-action="search-submit"><div class="searchbox">' + ICON.search +
+        '<input type="search" name="q" placeholder="想把照片变成什么？" aria-label="搜索图片风格"><button class="btn btn--primary" type="submit">寻找灵感' + ICON.arrowRight + '</button></div></form>' +
+      '<div class="hero__quick"><span>试试看</span>' + ['手办','针织','像素','海报'].map(function(q){return '<a href="#/library?cat=image&q=' + encodeURIComponent(q) + '">' + q + '</a>';}).join('') + '</div>' +
+      '<div class="hero__caption"><span><b>' + imageStyles().length + '</b> 种图片风格</span><span>免登录 · 可填写 · 可收藏</span></div></div>' +
+      '<div class="hero__visual"><div class="hero__visual-label"><span>STYLE SPOTLIGHT / 风格放映室</span><span>拖动探索 ↔</span></div>' +
+      '<a class="hero__plate" href="#/style/' + esc(plate.id) + '">' + heroPlateInner(plate) + '</a>' +
+      '<div class="hero__playbar">' + heroIndexHTML(plate) + '<div class="hero__controls"><button type="button" class="hero__arrow" data-action="hero-prev" aria-label="上一张风格">' + ICON.arrowLeft + '</button>' +
+      '<button type="button" class="hero__autoplay" data-action="hero-autoplay">暂停轮播</button><button type="button" class="hero__arrow" data-action="hero-next" aria-label="下一张风格">' + ICON.arrowRight + '</button></div></div></div></div></section>';
+  }
+
+  function studioBannerHTML() {
+    return '<section class="studio-banner wrap"><div class="studio-banner__art"><img src="assets/img/studio/studio-cover.png" width="1536" height="1024" loading="lazy" alt="橘色绒毛花、钴蓝玻璃雕塑与奶白折纸鸟的原创视觉示意"><span>原创视觉示意 · 非模板实测</span></div>' +
+      '<div class="studio-banner__copy"><span class="eyebrow">ONE IDEA. MANY POSSIBILITIES.</span><h2>同一个主角，<br>不止一种可能。</h2><p>从柔软的针织到通透的玻璃，换一种材质，重新发现熟悉的东西。</p><div class="studio-banner__links"><a href="#/style/plush-toy">试试针织 ' + ICON.arrowRight + '</a><a href="#/style/glass-morphism">试试玻璃 ' + ICON.arrowRight + '</a><a href="#/style/hard-edge-minimal">试试折纸 ' + ICON.arrowRight + '</a></div></div></section>';
   }
 
   function catalogueHTML() {
     var list = imageStyles();
-    return '<section class="catalogue">' +
+    return '<section class="catalogue" id="collection">' +
       '<div class="wrap">' +
         '<div class="catalogue__head reveal">' +
-          '<div class="catalogue__title"><span class="eyebrow">THE STYLE COLLECTION</span><h2>每一种风格，<br>都是新的可能。</h2></div>' +
-          '<div class="catalogue__side"><p>找到让你心动的画面。<br>打开卡片，探索它的提示词与用法。</p>' +
+          '<div class="catalogue__title"><span class="eyebrow">THE STYLE COLLECTION</span><h2>灵感，触手可及。</h2></div>' +
+          '<div class="catalogue__side"><p>先看效果，再选风格。<br>把喜欢的收藏起来，随时开始创作。</p>' +
           '<a class="btn btn--ghost btn--sm" href="#/library?cat=image">筛选图片风格' + ICON.arrowRight + '</a></div>' +
         '</div>' +
         '<div class="gallery">' + list.map(styleCard).join('') + '</div>' +
@@ -677,7 +717,7 @@
   }
 
   function homeView() {
-    return heroHTML() + catalogueHTML();
+    return heroHTML() + catalogueHTML() + studioBannerHTML();
   }
 
   /* =========================================================== library == */
@@ -685,6 +725,7 @@
   function filtered() {
     var f = state.filters;
     var list = STYLES.filter(function (s) {
+      if (f.saved === '1' && !isSaved(s.id)) return false;
       if (f.cat && s.category !== f.cat) return false;
       if (f.use && s.uses.indexOf(f.use) < 0) return false;
       if (f.mood && s.moods.indexOf(f.mood) < 0) return false;
@@ -702,7 +743,7 @@
 
     if (f.sort === 'new') list.sort(function (a, b) { return a.updated === b.updated ? 0 : (a.updated < b.updated ? 1 : -1); });
     if (f.sort === 'hot' && f.cat === '' && !f.q && !f.use && !f.mood && f.track === 'all') {
-      list = interleave(STYLES);
+      list = interleave(list);
     }
     return list;
   }
@@ -744,18 +785,19 @@
     function available(field, key) {
       var f = state.filters;
       return STYLES.filter(function(s) {
-        return (!f.cat || s.category === f.cat) && (f.track !== 'text' || s.category !== 'image') && (f.track !== 'both' || s.category === 'image') && s[field].indexOf(key) >= 0;
+        return (f.saved !== '1' || isSaved(s.id)) && (!f.cat || s.category === f.cat) && (f.track !== 'text' || s.category !== 'image') && (f.track !== 'both' || s.category === 'image') && s[field].indexOf(key) >= 0;
       }).length;
     }
 
     var list = filtered();
     var shown = list.slice(0, state.limit);
     var f = state.filters;
+    var resetHref = f.saved === '1' ? '#/library?saved=1' : (f.track === 'text' ? '#/library?track=text' : '#/library');
     /* 标题必须与筛选结果一致：只有 f.track 真的是 both / text 时才写「双轨 / 单条」，
        否则退回「全部提示词」。原先写的是 f.track !== 'all' ? '图片转换' : …，
        那个写法在 track=local（老链接）时会给出一页 78 张卡的「图片转换」。 */
     var trackName = f.track === 'both' ? '图片转换' : (f.track === 'text' ? '场景任务' : '');
-    var head = f.cat ? catOf(f.cat).name : (f.use || f.mood || trackName || '全部提示词');
+    var head = f.saved === '1' ? '把好灵感，留在手边。' : (f.cat ? catOf(f.cat).name : (f.use || f.mood || (f.track === 'text' ? '少些重复，多些创造。' : trackName) || '全部提示词'));
     /* 有几个条件真的在生效 —— 决定「清空筛选」要不要出现、筛选按钮上挂几 */
     var activeN = [f.cat, f.use, f.mood, f.q].filter(Boolean).length + (f.track !== 'all' ? 1 : 0);
 
@@ -765,8 +807,7 @@
           '<div class="crumbs"><a href="#/">首页</a><span>/</span><span>提示词库</span></div>' +
           '<h1 class="lib-head__title">' + esc(head) + '</h1>' +
           '<p class="lead lib-head__sub">' +
-            '图片、写作、编程、分析、学习、商业、生活——同一套卡片，同一个复制方式。' +
-            '点开任意一张，先给你提示词，再给用法说明。</p>' +
+            (f.saved === '1' ? '你的私人灵感夹。收藏保存在当前浏览器，无需登录；清理浏览器数据会清空。' : '从明确的任务出发，拿到真正可用的结果。选择模板，填入材料，一键带到你的 AI 工具。') + '</p>' +
         '</div>' +
       '</section>' +
       catbarHTML(f.cat) +
@@ -817,7 +858,7 @@
               (f.q ? ' · 关键词「' + esc(f.q) + '」' : '') + '</span>' +
             '<div class="row gap-10 lib-bar__actions">' +
               /* 没有任何条件生效时不摆这个按钮 —— 点了也没用的按钮不该存在 */
-              (activeN ? '<a class="btn btn--ghost btn--sm" href="#/library">清空筛选</a>' : '') +
+              (activeN ? '<a class="btn btn--ghost btn--sm" href="' + resetHref + '">清空筛选</a>' : '') +
               '<select class="select" data-action="sort">' +
                 TAXONOMY.sorts.map(function (s) {
                   return '<option value="' + s.key + '"' + (f.sort === s.key ? ' selected' : '') + '>' +
@@ -831,9 +872,9 @@
             : '<div class="empty">' + glassHTML('empty__glass') +
               /* h2 不是 h3：上面那个 h1「全部提示词」还在页面上，
                  筛空了不等于标题也没了。写 h3 就是 h1 → h3 跳级。 */
-              '<h2>这个组合下还没有提示词</h2>' +
-              '<p>试试更短的关键词，或清空筛选重新浏览。</p>' +
-              '<a class="btn btn--primary" href="#/library">清空筛选</a></div>') +
+              '<h2>' + (f.saved === '1' && !savedIds.length ? '还没有收藏，先去发现一个好想法。' : '这个组合下还没有提示词') + '</h2>' +
+              '<p>' + (f.saved === '1' && !savedIds.length ? '点击卡片右上角的书签，就能保存在这里。' : '试试更短的关键词，或清空筛选重新浏览。') + '</p>' +
+              '<a class="btn btn--primary" href="' + (f.saved === '1' && !savedIds.length ? '#/' : resetHref) + '">' + (f.saved === '1' && !savedIds.length ? '发现图片风格' : '清空筛选') + '</a></div>') +
           (list.length > shown.length
             ? '<div class="loadmore"><a class="btn btn--ghost btn--lg" href="' +
               esc(libHref({ limit: String(state.limit * 2) })) + '">加载更多（还有 ' +
@@ -919,14 +960,11 @@
       '<span class="eyebrow">复制即用</span></div>';
 
     if (!isImage || s.track === 'edit') {
-      return '<div class="promptzone">' + zonehead +
-        promptBlock(s.track === 'edit' ? '先上传原图，再粘贴提示词' : '填入材料，获得可核对的交付结果', s.prompt, s.id + ':text') +
-        (s.slots && s.slots.length
-          ? '<div class="block-title">提示词里的槽位</div><div class="slots">' +
-            s.slots.map(function (x) { return '<span class="slot">{' + esc(x) + '}</span>'; }).join('') +
-            '</div>'
-          : '') +
-      '</div>';
+      return '<div class="promptzone">' + builderHTML(s) +
+        '<div class="prepared-heading"><span class="step-label">02 / READY TO GO</span><h2>你的专属提示词</h2></div>' +
+        promptBlock(s.track === 'edit' ? '先上传原图，再粘贴提示词' : '填入材料，获得可核对的交付结果', preparedPrompt(s), s.id + ':text') +
+        '<p class="prepared-note">未填写的项目会保留花括号。复制后，在 AI 工具中补充也可以。</p>' +
+        '<button type="button" class="text-button prepared-download" data-action="download-prepared" data-id="' + esc(s.id) + '">' + ICON.download + '下载填写后的提示词</button></div>';
     }
 
     /* 图片风格**必定**有两条轨道（rules.js 强制），所以这里不再有
@@ -1166,7 +1204,7 @@
               '<div class="gh__latin">' + esc(s.latin) + '</div>' +
               '<p class="gh__tagline">' + esc(s.tagline) + '</p>' +
             '</div>' +
-            '<div class="gh__actions">' +
+            '<div class="gh__actions">' + saveButton(s) +
               /* 详情页是唯一的复制入口 —— 进来先看到生成效果和使用说明，再复制。 */
               '<button class="btn btn--primary btn--lg" data-action="copy-prompt" data-id="' +
                 esc(s.category === 'image' && s.track !== 'edit' ? s.id + ':' + state.detailTrack : s.id + ':text') + '">' +
@@ -1179,8 +1217,8 @@
               '<div class="detail-workspace' + (s.category === 'image' ? ' detail-workspace--image' : '') + '">' +
                 promptZoneHTML(s) +
                 (s.category === 'image'
-                  ? '<div class="detail-preview prose">' + notesHTML(s, true) + '</div>'
-                  : '<div class="detail-start"><span class="detail-kicker">从这里开始</span><h2>把它变成<br>你的专属助手。</h2><ol><li><b>01</b><span>复制完整提示词</span></li><li><b>02</b><span>粘贴到你常用的 AI 对话工具</span></li><li><b>03</b><span>补充任务背景与期望结果</span></li></ol><p>需要示例？展开下方使用指南。</p></div>') +
+                  ? '<div class="detail-preview prose">' + notesHTML(s, true) + '<button type="button" class="preview-zoom" data-action="image-expand" data-id="' + esc(s.id) + '">查看完整大图 ↗</button><div class="preview-brief"><span class="step-label">你的创作起点</span><h2>' + esc(s.curation.input) + '</h2><p>上传原图 → 填写偏好 → 复制使用</p><span>支持图像编辑的 AI 工具适用</span></div></div>'
+                  : '<div class="detail-start detail-start--' + esc(s.category) + '"><span class="detail-kicker">THE DELIVERABLE / 你将得到</span><h2>让每一次提问，<br>都有明确的产出。</h2><ol>' + s.curation.output.split('；').map(function (x, i) { return '<li><b>' + pad2(i + 1) + '</b><span>' + esc(x) + '</span></li>'; }).join('') + '</ol><p>根据 Fabric 开源方法整理。AI 输出请结合交付清单核对。</p></div>') +
               '</div>' +
               takeawayHTML(s) +
               '<details class="detail-fold detail-guide"><summary data-action="reference-toggle"><span>使用指南与交付清单</span><span class="detail-fold__hint">步骤、参考与注意事项</span></summary>' +
@@ -1209,7 +1247,11 @@
   /* ============================================================= about == */
 
   function aboutView() {
-    return '<section class="section"><div class="wrap" style="max-width:860px"><span class="eyebrow">HOW TO USE</span><h1>好提示词，解决具体问题。</h1><p class="lead">12 个照片转换模板，36 个实用任务。选好任务，复制即可使用。</p><h2>图片：先上传，再转换</h2><p>在支持图像编辑的 AI 工具中上传原图，再粘贴模板。检查人物身份、姿态和主体轮廓，逐步调整风格。本站提供提示词，不直接生成图片。</p><h2>文字：给材料，看交付</h2><p>选择场景任务，填好输入项，提交后按交付清单检查。涉及事实、代码和决策的结果需要核对依据。</p><h2>来源公开，效果如实说明</h2><p>文字模板改编自 <a href="https://github.com/danielmiessler/fabric" target="_blank" rel="noopener noreferrer">Fabric</a>（MIT，44,030 stars）；图片案例来自 <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank" rel="noopener noreferrer">awesome-gpt4o-images</a>（逐项 CC BY 4.0）。热度为 2026-09-21 仓库快照，不代表每条模板效果。详情页保留原始出处与署名。</p><p>这些模板经过编辑筛选和结构整理，尚未由本站逐条运行验证。案例图是来源项目展示的效果，中文改编版不承诺复现同样结果。</p></div></section>';
+    return '<section class="about-studio wrap"><div class="about-studio__intro"><span class="eyebrow">LESS GUESSWORK. MORE MAKING.</span><h1>好提示词，<br>解决具体问题。</h1><p>' + imageStyles().length + ' 个照片转换模板，' + (STYLES.length - imageStyles().length) + ' 个实用任务。<br>把模糊的想法，变成有输入、有步骤、有交付的任务。</p></div>' +
+      '<div class="about-steps"><article><span>01 / DISCOVER</span><h2>找到你的起点</h2><p>图片首页选画风，场景提示词选任务。可以按分类浏览，也可以搜索「会议纪要」「像素画」这样的日常说法。</p></article><article><span>02 / PERSONALIZE</span><h2>填入真实需求</h2><p>详情页填写自己的材料，提示词实时更新。用右侧交付清单检查任务是否清楚，未填写的项目会保留花括号。</p></article><article><span>03 / MAKE IT YOURS</span><h2>带到 AI 工具使用</h2><p>复制完整提示词，粘贴到你常用的 AI 工具。图片任务还需要上传原图；逐项核对结果，再小步调整。</p></article></div>' +
+      '<div class="about-facts"><article><span class="eyebrow">YOUR OWN SPACE</span><h2>轻装开始，无需登录。</h2><p>点击书签，把模板放进「我的收藏」。收藏只保存在当前浏览器，清理浏览器数据会清空；填写的材料只在页面内存中使用，刷新即清空。本站提供提示词，不直接生成图片，也不把填写的材料发送到服务器。</p></article>' +
+      '<article><span class="eyebrow">OPEN SOURCES, CLEAR EXPECTATIONS</span><h2>出处透明，效果如实说明。</h2><p>文字任务依据 <a href="https://github.com/danielmiessler/fabric" target="_blank" rel="noopener noreferrer">Fabric ↗</a>（MIT）的方法中文整理；风格案例来自 <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank" rel="noopener noreferrer">awesome-gpt4o-images ↗</a>，所选案例逐项保留 CC BY 4.0 署名。仓库星数只作为选材参考，不代表每条模板效果。</p><p>这些模板经过编辑筛选和结构整理，尚未由本站逐条运行验证。案例图是来源项目展示的效果，中文改编版不承诺复现同样结果。首页材质专题是原创视觉示意。</p></article></div>' +
+      '<div class="about-studio__end"><p>一个好想法，就值得开始。</p><a class="btn btn--primary" href="#/">发现图片风格 ' + ICON.arrowRight + '</a><a class="btn btn--ghost" href="#/library?track=text">选择实用任务 ' + ICON.arrowRight + '</a></div></section>';
   }
 
   function retiredView() {
@@ -1293,6 +1335,8 @@
 
   function render() {
     var route = parseHash();
+    var viewer = $('.image-viewer');
+    if (viewer) { viewer.remove(); document.body.style.overflow = ''; }
 
     /* 换页之前先把上一页那两个导出链接的 object URL 放掉，否则每进一次
        详情页就多攒两个，一直不释放。延迟回收，别掐断正在进行的下载。 */
@@ -1313,7 +1357,8 @@
            不如退回全部。白名单同时保证标题不会说谎。 */
         track: (['all', 'both', 'text'].indexOf(route.params.track) >= 0 ? route.params.track : 'all'),
         q: route.params.q || '',
-        sort: route.params.sort === 'new' ? 'new' : 'hot'
+        sort: route.params.sort === 'new' ? 'new' : 'hot',
+        saved: route.params.saved === '1' ? '1' : ''
       };
       /* 已展示条数也进地址 —— 「加载更多」才能是一个真链接 */
       var lim = parseInt(route.params.limit, 10);
@@ -1349,7 +1394,7 @@
     document.title = (heading ? heading.textContent.trim() + ' · ' : '') + '书桐 SHUTONG';
 
     $$('.mobilenav a').forEach(function (a) {
-      var activeHref = route.path === '/library' ? (route.params.cat === 'image' ? '#/' : '#/library?track=text') : '#' + route.path;
+      var activeHref = route.path === '/library' ? (route.params.saved === '1' ? '#/library?saved=1' : (route.params.cat === 'image' ? '#/' : '#/library?track=text')) : '#' + route.path;
       a.classList.toggle('is-active', a.getAttribute('href') === activeHref);
     });
     $('#mobilenav').classList.remove('is-open');
@@ -1512,7 +1557,7 @@
     var parts = String(key).split(':');
     var s = byId(parts[0]);
     if (!s) return '';
-    if (parts[1] === 'text') return s.prompt || '';
+    if (parts[1] === 'text') return preparedPrompt(s);
     if (parts[1] === 'cloud') return s.cloud ? s.cloud.prompt : '';
     if (parts[1] === 'local') return s.local ? s.local.prompt : '';
     return s.prompt || (s.local ? s.local.prompt : (s.cloud ? s.cloud.prompt : ''));
@@ -1666,6 +1711,60 @@
     }
 
     /* 窄屏的筛选开关。桌面端按钮被 CSS 藏起来，这个状态不影响布局。 */
+    if (action === 'save-toggle') {
+      e.preventDefault();
+      var saved = byId(t.getAttribute('data-id'));
+      if (!saved) return;
+      var at = savedIds.indexOf(saved.id);
+      if (at < 0) savedIds.push(saved.id); else savedIds.splice(at, 1);
+      var persisted = true;
+      try { localStorage.setItem('shutong:saved', JSON.stringify(savedIds)); } catch (err) { persisted = false; }
+      $$('[data-action="save-toggle"]').filter(function (b) { return b.getAttribute('data-id') === saved.id; }).forEach(function (b) {
+        b.classList.toggle('is-saved', isSaved(saved.id));
+        b.setAttribute('aria-pressed', String(isSaved(saved.id)));
+        b.setAttribute('aria-label', (isSaved(saved.id) ? '取消收藏 ' : '收藏 ') + saved.name);
+        $('span', b).textContent = isSaved(saved.id) ? '已收藏' : '收藏';
+      });
+      if (parseHash().params.saved === '1') render();
+      toast(isSaved(saved.id) ? (persisted ? '已收藏到当前浏览器' : '已暂存；当前浏览器禁止持久保存') : '已取消收藏');
+      return;
+    }
+    if (action === 'reset-slots') {
+      e.preventDefault();
+      var reset = byId(t.getAttribute('data-id'));
+      if (!reset) return;
+      delete drafts[reset.id];
+      $$('[data-action="slot-input"]').forEach(function (input) { input.value = ''; });
+      updatePrepared(reset);
+      toast('已恢复空白模板');
+      return;
+    }
+    if (action === 'download-prepared') {
+      e.preventDefault();
+      var ready = byId(t.getAttribute('data-id'));
+      if (ready) downloadText(ready.id + '-my-prompt.md', '# ' + ready.name + '\n\n' + preparedPrompt(ready) + '\n\n来源：' + ready.source.url + '\n作者：' + ready.source.contributor + '\n授权：' + ready.license + (ready.license === 'CC-BY-4.0' ? ' https://creativecommons.org/licenses/by/4.0/' : '') + '\n中文整理及用户填写已改编。\n' + (ready.licenseText || '') + '\n本站整理版尚未逐条模型实测。', 'text/markdown');
+      return;
+    }
+    if (action === 'image-expand') {
+      e.preventDefault();
+      var visual = byId(t.getAttribute('data-id'));
+      if (!visual || !visual.cover) return;
+      var viewer = document.createElement('dialog');
+      viewer.className = 'image-viewer';
+      viewer.setAttribute('aria-label', visual.name + '完整案例图');
+      viewer.innerHTML = '<button type="button" class="image-viewer__close" aria-label="关闭大图">关闭 ×</button><img src="' + esc(visual.cover.src) + '" alt="' + esc(visual.name) + '"><p>来源案例 · 非本站实测 · ' + esc(visual.cover.creator) + ' · ' + esc(visual.cover.license) + '</p>';
+      document.body.appendChild(viewer);
+      var opener = t;
+      function closeViewer() { viewer.remove(); document.body.style.overflow = ''; opener.focus(); }
+      $('button', viewer).addEventListener('click', closeViewer);
+      viewer.addEventListener('cancel', function (ev) { ev.preventDefault(); closeViewer(); });
+      viewer.addEventListener('click', function (ev) { if (ev.target === viewer) closeViewer(); });
+      if (viewer.showModal) viewer.showModal(); else viewer.setAttribute('open', '');
+      document.body.style.overflow = 'hidden';
+      $('button', viewer).focus();
+      return;
+    }
+
     if (action === 'filters-toggle') {
       e.preventDefault();
       state.filtersOpen = !state.filtersOpen;
@@ -1745,6 +1844,15 @@
 
   function onInput(e) {
     var t = e.target;
+    if (t.getAttribute && t.getAttribute('data-action') === 'slot-input') {
+      var card = byId(t.getAttribute('data-id'));
+      var slot = t.getAttribute('data-slot');
+      if (!card || (card.slots || []).indexOf(slot) < 0) return;
+      if (!drafts[card.id]) drafts[card.id] = Object.create(null);
+      drafts[card.id][slot] = t.value;
+      updatePrepared(card);
+      return;
+    }
     if (t.getAttribute && t.getAttribute('data-action') === 'filter-search') {
       var v = t.value;
       clearTimeout(onInput._timer);

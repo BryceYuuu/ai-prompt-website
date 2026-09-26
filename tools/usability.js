@@ -262,6 +262,7 @@ function clickThrough(el) {
 }
 
 (async function run() {
+  if (document.readyState === 'loading') await new Promise(function (resolve) { document.addEventListener('DOMContentLoaded', resolve, { once: true }); });
   await sleep(300);
 
   /* 0. 内部溢出 —— **必须放在所有交互之前**。
@@ -303,8 +304,8 @@ function clickThrough(el) {
   var ticks = document.querySelectorAll('.hero__index .tick');
   var tick7 = ticks[6];
   var tickHit = tick7 ? clickTarget(tick7) : null;
-  rec('首页图版台：刻度尺 12 格，指针落得到',
-      ticks.length === 12 && !!tickHit,
+  rec('首页图版台：刻度尺 18 格，指针落得到',
+      ticks.length === 18 && !!tickHit,
       '格数=' + ticks.length + (tickHit ? ' 命中=' + cn(tickHit.el) : ' ✗ 找不到落点'));
 
   var wantId = tick7 ? tick7.getAttribute('data-id') : '';
@@ -363,6 +364,25 @@ function clickThrough(el) {
 
   rec('详情页提供上传原图的转换提示词',
       !!document.querySelector('.prompt__body') && document.querySelector('.prompt__body').textContent.includes('上传'), '图生图任务');
+
+  /* Real hit testing for the new working controls, beyond DOM-only contracts. */
+  var field = document.querySelector('[data-action="slot-input"]');
+  var rf = realClick(field);
+  if (field) { field.value = 'QA 柔和自然光'; field.dispatchEvent(new Event('input', { bubbles: true })); }
+  rec('详情工作台：字段可点且实时更新提示词', rf.ok && document.querySelector('.prompt__body').textContent.indexOf('QA 柔和自然光') >= 0,
+      rf.ok ? '填写内容已进入预览' : rf.why);
+  var rr = realClick(document.querySelector('[data-action="reset-slots"]'));
+  rec('详情工作台：重置可点且清空输入', rr.ok && field && !field.value && document.querySelector('.prompt__body').textContent.indexOf('QA 柔和自然光') < 0,
+      rr.ok ? '恢复模板占位符' : rr.why);
+  var save = document.querySelector('.gh__actions [data-action="save-toggle"]');
+  var rs = realClick(save);
+  rec('详情工作台：收藏可点且状态更新', rs.ok && save.getAttribute('aria-pressed') === 'true', rs.ok ? '已收藏' : rs.why);
+  realClick(save);
+  var zoom = document.querySelector('[data-action="image-expand"]');
+  var rz = realClick(zoom), viewer = document.querySelector('dialog.image-viewer');
+  rec('详情工作台：大图可打开', rz.ok && !!viewer && viewer.open && !!viewer.querySelector('img'), rz.ok ? '完整图片' : rz.why);
+  var rc = realClick(document.querySelector('.image-viewer__close'));
+  rec('详情工作台：大图可关闭并回到入口', rc.ok && !document.querySelector('dialog.image-viewer') && document.activeElement === zoom, rc.ok ? '焦点已返回' : rc.why);
 
   /* 3. 复制按钮 */
   var copy = document.querySelector('.gh__actions [data-action="copy-prompt"]');
@@ -448,17 +468,17 @@ function clickThrough(el) {
   /* 9. 列表卡片上不该有任何复制入口 —— 复制只能在详情页 */
   var cardCopy = document.querySelector(
     '.gallery .card [data-action="quick-copy"], .gallery .card [data-action="copy-prompt"]');
-  var cardBtn = document.querySelector('.gallery .card button');
+  var cardBtn = document.querySelector('.gallery .card button:not([data-action="save-toggle"])');
   rec('列表卡片上没有复制按钮', !cardCopy && !cardBtn,
       cardCopy ? '卡片上出现了复制按钮'
         : (cardBtn ? '卡片上还有按钮：' + cardBtn.textContent.trim() : '复制入口只在详情页'));
 
   /* 10. 清空筛选 */
-  var clear = document.querySelector('.lib-bar a[href="#/library"]');
+  var clear = document.querySelector('.lib-bar__actions a[href^="#/library"]');
   if (clear) {
     realClick(clear);
     await sleep(300);
-    rec('清空筛选回到全部', location.hash === '#/library' || location.hash === '',
+    rec('清空筛选保留场景提示词范围', location.hash === '#/library?track=text' && !!document.querySelector('.gallery .card'),
         'hash=' + location.hash + ' 卡片=' + document.querySelectorAll('.gallery .card').length);
   }
 
@@ -470,7 +490,7 @@ function clickThrough(el) {
   /* 12. 投稿页 */
   realClick(document.querySelector('.nav a[href="#/about"]'));
   await sleep(300);
-  rec('导航 → 使用说明', location.hash === '#/about' && !!document.querySelector('.section h1'), 'hash=' + location.hash);
+  rec('导航 → 使用说明', location.hash === '#/about' && !!document.querySelector('#view h1'), 'hash=' + location.hash);
 
   /* 13. 整卡可点：指针停在「著录区」文字上（不是图像），也必须进详情页。
      这条专门验证链接层覆盖的是整卡而不只是图像区。 */
@@ -657,6 +677,7 @@ function firstCardTop() {
 }
 
 (async function run() {
+  if (document.readyState === 'loading') await new Promise(function (resolve) { document.addEventListener('DOMContentLoaded', resolve, { once: true }); });
   await sleep(400);
   /* 探针默认落在首页（没有 hash），而筛选条只在库页 —— 先跳过去 */
   if (location.hash.indexOf('#/library') !== 0) {
@@ -826,9 +847,10 @@ function rec(label, pass, detail) {
 }
 
 /* 抽屉里必须有的主栏目。少一个就有人点不到那一整页。 */
-var SECTIONS = { '#/': '图片风格', '#/library?track=text': '场景提示词', '#/about': '使用说明' };
+var SECTIONS = { '#/': '图片风格', '#/library?track=text': '场景提示词', '#/about': '使用说明', '#/library?saved=1': '我的收藏' };
 
 (async function run() {
+  if (document.readyState === 'loading') await new Promise(function (resolve) { document.addEventListener('DOMContentLoaded', resolve, { once: true }); });
   await sleep(500);
 
   var toggle = document.querySelector('.nav__toggle');
@@ -843,12 +865,12 @@ var SECTIONS = { '#/': '图片风格', '#/library?track=text': '场景提示词'
     var got = [].map.call(nav.querySelectorAll('a[href]'), function (a) { return a.getAttribute('href'); });
     var missing = Object.keys(SECTIONS).filter(function (h) { return got.indexOf(h) < 0; });
     var extra = got.filter(function (h) { return !(h in SECTIONS); });
-    rec('900px：抽屉里是主栏目，且三个都在',
+    rec('900px：抽屉里是主栏目，且四个都在',
         missing.length === 0 && extra.length === 0,
         '缺=' + (missing.map(function (h) { return SECTIONS[h] + '(' + h + ')'; }).join('、') || '无') +
         ' 多=' + (extra.join('、') || '无'));
   } else {
-    rec('900px：抽屉里是主栏目，且三个都在', false, '没有 #mobilenav');
+    rec('900px：抽屉里是主栏目，且四个都在', false, '没有 #mobilenav');
   }
 
   /* 点开 */
@@ -866,7 +888,7 @@ var SECTIONS = { '#/': '图片风格', '#/library?track=text': '场景提示词'
   await sleep(360);
   nav = document.getElementById('mobilenav');
   rec('900px：点抽屉里的「使用说明」真的进得去且抽屉收起',
-      location.hash === '#/about' && !!document.querySelector('.section h1') &&
+      location.hash === '#/about' && !!document.querySelector('#view h1') &&
       !!nav && !nav.classList.contains('is-open'),
       'hash=' + location.hash + ' 抽屉 is-open=' + (nav ? nav.classList.contains('is-open') : 'n/a') +
       (r2.ok ? '' : ' ⚠ ' + r2.why));

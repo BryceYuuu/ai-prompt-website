@@ -388,5 +388,149 @@
     "产品对比",
     "buying guide",
     "purchase comparison"
+  ],
+  "video-chapters": [
+    "视频章节",
+    "时间戳",
+    "B站章节",
+    "播客时间轴",
+    "YouTube chapters",
+    "短视频切片"
+  ],
+  "article-outline": [
+    "文章大纲",
+    "写作提纲",
+    "资料整理",
+    "论文框架",
+    "内容结构",
+    "outline"
+  ],
+  "pull-request-writer": [
+    "PR描述",
+    "Pull Request",
+    "合并请求",
+    "MR说明",
+    "代码变更说明",
+    "diff"
+  ],
+  "terraform-plan-review": [
+    "Terraform",
+    "IaC",
+    "基础设施即代码",
+    "plan审查",
+    "云资源变更",
+    "资源替换"
+  ],
+  "hypothesis-test": [
+    "验证假设",
+    "可证伪",
+    "实验设计",
+    "MVP验证",
+    "A/B测试",
+    "falsifiability"
+  ],
+  "research-patterns": [
+    "主题分析",
+    "访谈编码",
+    "定性研究",
+    "多源对比",
+    "共性归纳",
+    "研究洞察"
+  ],
+  "concept-map": [
+    "概念图",
+    "知识图谱",
+    "思维导图",
+    "Mermaid",
+    "知识结构",
+    "关系图"
+  ],
+  "answer-diagnosis": [
+    "错题本",
+    "错题分析",
+    "答案批改",
+    "学习诊断",
+    "订正",
+    "评分标准"
+  ],
+  "effort-estimate": [
+    "工时估算",
+    "工作量",
+    "项目排期",
+    "LOE",
+    "资源估算",
+    "研发排期"
+  ],
+  "presentation-builder": [
+    "PPT",
+    "演示文稿",
+    "汇报材料",
+    "路演",
+    "slides",
+    "HTML幻灯片"
+  ],
+  "weekly-goal-review": [
+    "周复盘",
+    "时间管理",
+    "目标回顾",
+    "日程安排",
+    "优先级",
+    "weekly review"
+  ],
+  "instruction-extractor": [
+    "说明书",
+    "操作手册",
+    "教程总结",
+    "步骤提取",
+    "SOP",
+    "使用指南"
+  ],
+  "chibi-sticker-pack": [
+    "表情包",
+    "九宫格贴纸",
+    "Q版表情",
+    "sticker pack",
+    "照片转贴纸",
+    "聊天表情"
+  ],
+  "fluffy-icon": [
+    "毛绒图标",
+    "毛茸茸",
+    "fluffy",
+    "毛绒3D",
+    "图标立体化",
+    "柔软材质"
+  ],
+  "tufted-rug": [
+    "簇绒地毯",
+    "手工地毯",
+    "tufted rug",
+    "图标转地毯",
+    "家居设计",
+    "毛线地毯"
+  ],
+  "steampunk-creature": [
+    "蒸汽朋克",
+    "机械动物",
+    "黄铜机械",
+    "steampunk",
+    "复古机械",
+    "齿轮"
+  ],
+  "double-exposure": [
+    "双重曝光",
+    "人像叠影",
+    "double exposure",
+    "剪影合成",
+    "风景人像",
+    "电影海报"
+  ],
+  "frosted-silhouette": [
+    "磨砂玻璃",
+    "剪影摄影",
+    "frosted glass",
+    "黑白艺术",
+    "虚实对比",
+    "朦胧人像"
   ]
 }

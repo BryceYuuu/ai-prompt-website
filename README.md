@@ -4,14 +4,23 @@
 
 ## 当前内容
 
-- **12 个图片转换模板**：动漫手办、针织玩偶、摇头娃娃、玻璃雕塑、线稿、Q版钥匙扣、矢量海报、像素图标、微缩建筑、折纸、体素、赛博微缩。
-- **36 个文字任务**：写作、编程、分析、学习、商业、生活各 6 条。提供输入项、处理步骤、交付格式和信息不足时的处理方式。
-- 搜索与分类、自动/手动轮播、复制提示词、JSON / Markdown 导出、移动端布局、键盘导航和减少动态效果支持。
+- **18 个图片转换模板**：动漫手办、针织玩偶、摇头娃娃、玻璃雕塑、线稿、Q版钥匙扣、矢量海报、像素图标、微缩建筑、折纸、体素、赛博微缩，以及表情包、毛绒图标、簇绒地毯、蒸汽机械、双重曝光与磨砂剪影。
+- **48 个文字任务**：写作、编程、分析、学习、商业、生活各 8 条。提供输入项、处理步骤、交付格式和信息不足时的处理方式。
+- 实时填写与预览、当前浏览器收藏、来源图全屏预览、搜索与分类、自动/手动轮播、复制与 Markdown / JSON 导出、移动端布局、键盘导航和减少动态效果支持。
 - 每条保留来源、整理方式、许可和核验状态。
 
 图片模板使用方式：在支持图片编辑的 AI 工具中上传原图，再粘贴模板。本站提供提示词，不直接调用模型生成图片。文字模板需要填写输入材料后再提交给 AI 工具。
 
-**效果说明：** 本站做了编辑筛选和功能测试，但尚未逐条运行验证模型输出。图片为上游公开案例，不是本站中文改编版的实测结果。GitHub 星数是仓库级历史快照，不是单条模板热度或质量评分。
+**效果说明：** 本站做了编辑筛选和功能测试，但尚未逐条运行验证模型输出。风格卡图片为上游公开案例，不是本站中文改编版的实测结果。首页材质专题使用原创 AI 展示图并明确标注为视觉示意。GitHub 星数是仓库级历史快照，不是单条模板热度或质量评分。
+
+## 从发现到使用
+
+1. 首页看图片风格，或进入「场景提示词」选具体任务。
+2. 打开模板，在「填入你的需求」中填写材料，提示词实时组装。
+3. 复制或下载填写后的提示词，到你的 AI 工具中运行；图片任务还要上传原图。
+4. 点击书签保存在「我的收藏」。仅收藏 ID 存入本地浏览器；材料只在页面内存中，刷新即清空，不发送到服务器。禁用存储时收藏降级为当前会话。
+
+视觉规范见 [DESIGN.md](DESIGN.md)，本次变化见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## 按任务查找提示词
 
@@ -29,7 +38,7 @@
 
 ### English overview
 
-Shutong is an open-source **Chinese AI prompt library** with 48 curated **prompt templates**: 12 **image-to-image style transfer** prompts and 36 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
+Shutong is an open-source **Chinese AI prompt library** with 66 curated **prompt templates**: 18 **image-to-image style transfer** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
 ## 本地预览
 
@@ -67,7 +76,7 @@ npm run test:browser
 index.html                     页面入口
 assets/js/app.js               路由、交互和渲染
 assets/js/data.js              分类与数据组装
-assets/js/data-curated.js      生成的 48 条内容
+assets/js/data-curated.js      生成的 66 条内容
 assets/css/                   页面样式
 assets/img/curated/            来源案例图
 schema/                       数据规范与校验

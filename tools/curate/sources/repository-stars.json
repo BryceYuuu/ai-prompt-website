@@ -2,10 +2,12 @@
   {
     "repo": "danielmiessler/fabric",
     "url": "https://github.com/danielmiessler/fabric",
-    "stars": 44030,
-    "checkedAt": "2026-09-21",
-    "pageSha256": "a6e1f548c686abaf352a49fc06b7841dc158db6fc6fec25c7629011041c02863",
-    "evidenceField": "stargazerCount"
+    "stars": 44076,
+    "checkedAt": "2026-09-26",
+    "evidenceField": "stargazers_count",
+    "evidenceUrl": "https://api.github.com/repos/danielmiessler/fabric",
+    "evidenceFile": "fabric-repository-2026-09-26.json",
+    "evidenceSha256": "d2ce706d10c58a15e6f2c477124798761736e1bd3b2e6a99b89e211c644ab804"
   },
   {
     "repo": "f/prompts.chat",
@@ -26,9 +28,11 @@
   {
     "repo": "jamez-bondos/awesome-gpt4o-images",
     "url": "https://github.com/jamez-bondos/awesome-gpt4o-images",
-    "stars": 8151,
-    "checkedAt": "2026-09-21",
-    "pageSha256": "32a91f35cc5ed528e3af85b1eade923daf2b2bd0cef3217880fdf6369ec5b40a",
-    "evidenceField": "stargazerCount"
+    "stars": 8154,
+    "checkedAt": "2026-09-26",
+    "evidenceField": "stargazers_count",
+    "evidenceUrl": "https://api.github.com/repos/jamez-bondos/awesome-gpt4o-images",
+    "evidenceFile": "gpt4o-repository-2026-09-26.json",
+    "evidenceSha256": "59440c92ce8ea3d1558c6ec4bf13a7afc996c950579aaf540ccf068c9311ebbb"
   }
 ]

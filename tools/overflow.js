@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 
-const ROOT = process.argv[2];
+const ROOT = process.argv[2] ? path.resolve(process.argv[2]) : '';
 if (!ROOT) { console.error('usage: node overflow.js <shutong dir>'); process.exit(1); }
 
 const CH = process.env.CHROME_BIN || (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : 'google-chrome');
@@ -20,7 +20,8 @@ const TMP = path.join(ROOT, '__ovf.html');
 
 const PROBE = `
 <script>
-setTimeout(function () {
+setTimeout(function measureOverflow() {
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', measureOverflow, { once: true }); return; }
   var doc = document.documentElement;
   var vw = doc.clientWidth;
   var out = [];
@@ -66,7 +67,7 @@ const HASHES = [
   ['detail-image', '#/style/cyber-night-market'],
   ['detail-text', '#/style/linux-terminal'],
   ['about', '#/about'],
-  ['submit', '#/submit']
+  ['saved', '#/library?saved=1']
 ];
 const WIDTHS = [390, 480, 560, 720, 900, 1100, 1240, 1440];
 
@@ -74,7 +75,7 @@ let html = fs.readFileSync(path.join(ROOT, 'index.html'), 'utf8');
 html = html.replace(/<head\b[^>]*>/i, function (m) { return m + '\n' + PROBE; });
 fs.writeFileSync(TMP, html);
 
-let bad = 0;
+let bad = 0, unjudged = 0;
 try {
   for (const w of WIDTHS) {
     for (const [name, hash] of HASHES) {
@@ -86,10 +87,10 @@ try {
           '--window-size=' + w + ',1200', '--dump-dom',
           'file://' + TMP + hash
         ], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
-      } catch (e) { console.log('  !! chrome failed', w, name); continue; }
+      } catch (e) { console.log('  !! chrome failed', w, name); unjudged++; continue; }
 
       const m = dom.match(/<div id="OVF">([\s\S]*?)<\/div>/);
-      if (!m) { console.log('  ?? no probe output', w, name); continue; }
+      if (!m) { console.log('  ?? no probe output', w, name); unjudged++; continue; }
       const d = JSON.parse(m[1].replace(/&quot;/g, '"').replace(/&amp;/g, '&'));
       const flag = d.docOverflow > 1 ? 'OVERFLOW' : 'ok';
       if (d.docOverflow > 1) bad++;
@@ -111,5 +112,6 @@ try {
   }
 }
 
-console.log(bad ? '\n' + bad + ' 个组合有横向溢出' : '\n全部 ' + (WIDTHS.length * HASHES.length) + ' 个组合都没有横向溢出');
-process.exit(bad ? 1 : 0);
+console.log(bad ? '\n' + bad + ' 个组合有横向溢出' : '\n已检查 ' + (WIDTHS.length * HASHES.length - unjudged) + ' 个组合均没有横向溢出');
+if (unjudged) console.log('⚠ ' + unjudged + ' 个组合未能完成测量，本轮不可判定');
+process.exit(bad || unjudged ? 1 : 0);

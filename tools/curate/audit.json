@@ -1,9 +1,9 @@
 {
-  "date": "2026-09-21",
+  "date": "2026-09-26",
   "previousCount": 108,
-  "activeCount": 48,
-  "images": 12,
-  "text": 36,
+  "activeCount": 66,
+  "images": 18,
+  "text": 48,
   "review": [
     {
       "id": "cyber-night-market",
@@ -660,6 +660,12 @@
     "chibi-keychain",
     "vector-poster",
     "voxel-object",
+    "chibi-sticker-pack",
+    "fluffy-icon",
+    "tufted-rug",
+    "steampunk-creature",
+    "double-exposure",
+    "frosted-silhouette",
     "formal-email",
     "newsletter-editor",
     "code-explainer",
@@ -675,6 +681,18 @@
     "terms-reader",
     "plan-premortem",
     "year-review",
-    "purchase-comparison"
+    "purchase-comparison",
+    "video-chapters",
+    "article-outline",
+    "pull-request-writer",
+    "terraform-plan-review",
+    "hypothesis-test",
+    "research-patterns",
+    "concept-map",
+    "answer-diagnosis",
+    "effort-estimate",
+    "presentation-builder",
+    "weekly-goal-review",
+    "instruction-extractor"
   ]
 }
