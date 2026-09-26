@@ -1391,7 +1391,7 @@
     $('#nav').innerHTML = navHTML(route);
     $('#view').innerHTML = html;
     var heading = $('#view h1');
-    document.title = (heading ? heading.textContent.trim() + ' · ' : '') + '书桐 SHUTONG';
+    document.title = (route.path !== '/' && heading ? heading.textContent.trim() + ' · ' : '') + '提示词网站 · 书桐 SHUTONG';
 
     $$('.mobilenav a').forEach(function (a) {
       var activeHref = route.path === '/library' ? (route.params.saved === '1' ? '#/library?saved=1' : (route.params.cat === 'image' ? '#/' : '#/library?track=text')) : '#' + route.path;

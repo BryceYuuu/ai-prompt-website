@@ -1,10 +1,10 @@
-# 书桐 SHUTONG · 中文 AI 提示词库 / AI Prompt Library
+# 提示词网站 · AI Prompt Website
 
-一个简洁、无需登录的中文提示词网站。首页专注图片转换，文字任务通过独立分类入口浏览。纯静态 HTML / CSS / JavaScript，无后端、无运行时依赖、无需构建。
+书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 66 条可填写、复制与导出的提示词模板：18 种图片风格转换，以及 48 个写作、编程、分析、学习、商业与生活任务。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
 
 ## 在线预览
 
-[打开书桐 SHUTONG](https://bryceyuuu.github.io/shutong/)
+[打开提示词网站 · 书桐 SHUTONG](https://bryceyuuu.github.io/ai-prompt-website/)
 
 通过 GitHub Pages 从 `main` 分支发布，仓库更新后会自动部署。
 
@@ -44,7 +44,7 @@
 
 ### English overview
 
-Shutong is an open-source **Chinese AI prompt library** with 66 curated **prompt templates**: 18 **image-to-image style transfer** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
+Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 66 curated **prompt templates**: 18 **image-to-image style transfer** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
 ## 本地预览
 
