@@ -1,0 +1,23 @@
+Create one independent premium travel reinterpretation poster for each uploaded photo. Process each photo separately and never combine multiple photos. Use a strict 3:4 vertical composition divided into two equal 50/50 sections. The top half is a Minimal Needle Felt Picture Book Illustration and the bottom half is the original photograph.
+
+Style Priority (Highest Priority): Picture-book abstraction is more important than needle felt realism. First reinterpret the uploaded photo as a minimal picture-book composition, then render it as handcrafted needle felt. Do not recreate the entire photograph.
+
+Before creating the illustration, analyze the uploaded photo and extract only the most memorable subjects and essential storytelling elements. Reduce approximately 60–70% of background details, repetitive objects and visual clutter while preserving the recognizable environmental context. The illustration should communicate the memory rather than document the photograph. Keep the primary subject visually dominant while surrounding elements remain simplified supporting shapes.
+
+The illustration should occupy approximately 20–25% of the upper half, centered within generous warm cream-colored negative space. Never fill the page. Everything should feel quiet, balanced and elegant.
+
+Everything must appear handcrafted from premium compressed needle felt with ultra-short velvety wool fibers, dense soft felt texture, subtle microfiber bloom, soft fuzzy edges, matte finish and gentle handmade imperfections. Every visible object should clearly appear made of real needle felt rather than paint or digital brushstrokes.
+
+Maintain a flat 2.5D Needle Felt Picture Book Illustration aesthetic. Avoid realistic three-dimensional reconstruction, deep perspective, heavy sculptural volume, realistic terrain, thick bases, floating islands or miniature landscape models. The illustration should gently rest on the paper with only minimal ground beneath the subjects.
+
+Simplify trees, flowers, grass, clouds, buildings, mountains, water and other environmental elements into soft symbolic felt shapes while preserving the original composition, proportions, relationships and emotional atmosphere. Replace realistic textures with simple rounded forms and subtle handcrafted felt details instead of faithfully reproducing every object.
+
+Use soft diffused natural daylight, delicate ambient shadows, warm handmade paper texture and muted natural wool colors inspired by the original photograph. Maintain the original color harmony with slightly reduced saturation.
+
+Place one tiny handwritten travel quote beneath the illustration using warm gray handwriting.
+
+The bottom half must faithfully preserve the uploaded photograph, including all people, animals, architecture, landscape, objects, perspective, proportions, lighting, colors and spatial relationships. Do not redraw, repaint, replace, distort or stylize the original photo. Apply only subtle premium editorial travel color grading, soft film contrast and extremely fine film grain.
+
+Style Keywords: Minimal Needle Felt Picture Book Illustration, Korean healing illustration, Japanese picture book, handcrafted needle felt, compressed wool, ultra-short wool fibers, velvety felt texture, soft fuzzy edges, handmade paper, warm cream background, flat 2.5D felt illustration, symbolic simplification, large negative space, quiet editorial design, poetic travel memory.
+
+Negative Prompt: miniature diorama, museum miniature, sculpted landscape, realistic miniature model, realistic terrain, thick base, floating island, circular platform, deep perspective, excessive vegetation, realistic botanical details, long wool fibers, coarse wool, loose felt, messy fuzz, crochet, knitting, fabric collage, clay, plastic, resin, glossy materials, oil painting, watercolor, colored pencil, anime, comic, CGI, hyper-realistic 3D, toy rendering, excessive detail, visual clutter.

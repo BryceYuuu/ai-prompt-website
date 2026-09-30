@@ -175,7 +175,7 @@
     "prompt": {
       "type": "string",
       "minLength": 40,
-      "maxLength": 4000,
+      "maxLength": 8000,
       "description": "提示词正文。非图片分类必填，且必须与原始出处逐字一致；图片风格**不填**（提示词的唯一出处是两条轨道，顶层再放一份会让导出文件里出现两遍）。"
     },
     "slots": {
@@ -381,7 +381,7 @@
             "prompt": {
               "type": "string",
               "minLength": 40,
-              "maxLength": 4000
+              "maxLength": 8000
             },
             "local": {
               "type": "null"
@@ -420,7 +420,7 @@
           "prompt": {
             "type": "string",
             "minLength": 40,
-            "maxLength": 4000
+            "maxLength": 8000
           },
           "track": {
             "const": "text"
@@ -627,7 +627,7 @@
         "prompt": {
           "type": "string",
           "minLength": 40,
-          "maxLength": 4000
+          "maxLength": 8000
         }
       }
     },
@@ -671,7 +671,7 @@
         "prompt": {
           "type": "string",
           "minLength": 40,
-          "maxLength": 4000,
+          "maxLength": 8000,
           "description": "结构化自然语言模板，建议用【风格】【光线】【色彩】【禁止】【主体】分节，并保留 {主体} 槽位。"
         }
       }

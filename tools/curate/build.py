@@ -68,18 +68,20 @@ for id,cat,pattern,name,inputs,steps,outputs,limits in specs:
  use={'write':'长文写作','code':'代码评审','analyze':'数据分析','learn':'学习辅导','business':'产品规划','life':'日常决策'}[cat]
  curated[id]={'id':id,'name':name,'latin':pattern.replace('_',' ').title(),'tagline':outputs.replace('；','、')[:59],'category':cat,'uses':[use],'moods':['结构化','严谨'],'track':'text','version':'2.0','author':'书桐编辑整理','license':'MIT','licenseNote':'基于 Fabric MIT 授权的 pattern 中文改编；保留上游版权与许可，见 tools/curate/sources/fabric-license.txt。','createdAt':date,'updated':date,'art':{'g':'soft','p':['#FFFFFF','#E5E5EA','#172333','#0071E3'],'seed':len(curated)},'prompt':prompt,'slots':slots,'cover':None,'local':None,'cloud':None,'source':source,'curation':{'input':inputs,'output':outputs,'status':'editor-reviewed-not-model-tested','method':'按任务方法中文改编；非逐字翻译，非模型实测','reviewedAt':date}}
  samples[id]='交付清单\n'+'\n'.join('• '+x for x in outputs.split('；'))+'\n\n需要你提供：'+inputs
-threads=json.loads((SRC/'threads-lch1776244.json').read_text())
-thread_cards={}
-for item in threads['cases']:
- id=item['id'];date=threads['collectedAt'];raw=(SRC/item['promptFile']).read_bytes()
- assert hashlib.sha256(raw).hexdigest()==item['promptSha256'], f'Changed Threads prompt: {id}'
- for picture in item['images']:
-  assert hashlib.sha256((ROOT/picture['src']).read_bytes()).hexdigest()==picture['sha256'], f'Changed Threads image: {picture["src"]}'
- original=raw.decode().strip()
- prompt='【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n'+original+'\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。'
- cover={k:v for k,v in item['images'][0].items() if k!='sha256'}
- cover.update({'title':item['name']+' · 作者案例','creator':threads['creator'],'license':'经授权收录','licenseUrl':'https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--chloe_lai','sourceUrl':item['postUrl'],'provider':'threads'})
- thread_cards[id]={'id':id,'name':item['name'],'latin':item['latin'],'tagline':item['tagline'],'category':'image','uses':['海报','社交封面'],'moods':item['moods'],'track':'edit','version':'1.0','author':threads['creator'],'license':'CUSTOM','licenseNote':threads['licenseNote'],'licenseText':threads['licenseNote'],'createdAt':date,'updated':date,'art':{'g':'soft','p':['#F8F8F3','#DDD9CB','#374D46','#4541C4'],'seed':100+len(thread_cards)},'prompt':prompt,'slots':['补充要求，可留空'],'cover':cover,'local':None,'cloud':None,'source':{'provider':'threads','repo':'Threads · @lch1776244','url':item['postUrl'],'promptUrl':item['promptUrl'],'act':item['name'],'contributor':threads['creator'],'license':'经授权收录；原作者保留权利','checkedAt':date,'mode':'保留作者中文原文，仅补充上传检查及可选需求；排版换行整理','sha256':item['promptSha256'],'snapshot':item['promptFile']},'curation':{'input':item['input'],'output':'一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果','status':'source-example-not-site-tested','method':'作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测','reviewedAt':date}}
+thread_collections=[json.loads(p.read_text()) for p in sorted(SRC.glob('threads-*.json'))]
+thread_cards={};thread_items={}
+for threads in thread_collections:
+ for item in threads['cases']:
+  thread_items[item['id']]=item
+  id=item['id'];date=threads['collectedAt'];raw=(SRC/item['promptFile']).read_bytes()
+  assert hashlib.sha256(raw).hexdigest()==item['promptSha256'], f'Changed Threads prompt: {id}'
+  for picture in item['images']:
+   assert hashlib.sha256((ROOT/picture['src']).read_bytes()).hexdigest()==picture['sha256'], f'Changed Threads image: {picture["src"]}'
+  original=raw.decode().strip()
+  prompt='【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n'+original+'\n\n【保持不变】'+item.get('preserve','按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。')+'\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。'
+  cover={k:v for k,v in item['images'][0].items() if k!='sha256'}
+  cover.update({'title':item['name']+' · 作者案例','creator':threads['creator'],'license':'经授权收录','licenseUrl':'https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#'+threads.get('noticeAnchor','threads--chloe_lai'),'sourceUrl':item['postUrl'],'provider':'threads'})
+  thread_cards[id]={'id':id,'name':item['name'],'latin':item['latin'],'tagline':item['tagline'],'category':'image','uses':['海报','社交封面'],'moods':item['moods'],'track':'edit','version':'1.0','author':threads['creator'],'license':'CUSTOM','licenseNote':threads['licenseNote'],'licenseText':threads['licenseNote'],'createdAt':date,'updated':date,'art':{'g':'soft','p':['#F8F8F3','#DDD9CB','#374D46','#4541C4'],'seed':100+len(thread_cards)},'prompt':prompt,'slots':['补充要求，可留空'],'cover':cover,'local':None,'cloud':None,'source':{'provider':'threads','repo':'Threads · @'+threads['profileUrl'].rsplit('@',1)[1],'url':item['postUrl'],'promptUrl':item['promptUrl'],'act':item['name'],'contributor':threads['creator'],'license':'经授权收录；原作者保留权利','checkedAt':date,'mode':'保留作者原文，仅补充上传检查及可选需求；排版换行整理','sha256':item['promptSha256'],'snapshot':item['promptFile']},'curation':{'input':item['input'],'output':item.get('output','一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果'),'status':'source-example-not-site-tested','method':'作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测','reviewedAt':date}}
 # Newly reviewed styles lead the image-only homepage; existing IDs remain stable.
 curated={**thread_cards,**curated}
 keywords=json.loads((BASE/'keywords.json').read_text())
@@ -98,7 +100,7 @@ for c in curated.values():
   if c['source'].get('provider')=='threads':
    c['guide'][4]['v']=['在支持图像编辑的工具中上传自己的原照片。','作者原文已保留；按需填写补充要求，再复制整段提示词。','检查上下对照布局和主体一致性；示例仅展示作者原帖效果。']
    c['guide'][-1]['v']='图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。'
-   item=next(x for x in threads['cases'] if x['id']==c['id'])
+   item=thread_items[c['id']]
    for i,picture in enumerate(item['images'],1):
     c['guide'].append({'t':'img','v':{'src':picture['src'],'cap':f'作者示例 {i} / {len(item["images"])}','credit':cov['creator'],'license':cov['license']}})
   else:
@@ -109,5 +111,5 @@ js='/* Generated by tools/curate/build.py. Source snapshots and licenses are com
 audit=[]
 for c in old['styles']:
  audit.append({'id':c['id'],'previousName':c['name'],'decision':'replaced' if c['id'] in curated else 'retired','reason':'换为有出处、明确输入输出的新版任务' if c['id'] in curated else ('旧图片配方缺少实际工作流或图生图保真约束' if c['category']=='image' else '旧角色式提示词过泛、重叠，或缺少可验收产物')})
-(BASE/'audit.json').write_text(json.dumps({'date':threads['collectedAt'],'previousCount':len(old['styles']),'activeCount':len(curated),'images':len(image_specs)+len(thread_cards),'text':len(specs),'review':audit,'newIds':[x for x in curated if x not in byid]},ensure_ascii=False,indent=2))
+(BASE/'audit.json').write_text(json.dumps({'date':max(t['collectedAt'] for t in thread_collections),'previousCount':len(old['styles']),'activeCount':len(curated),'images':len(image_specs)+len(thread_cards),'text':len(specs),'review':audit,'newIds':[x for x in curated if x not in byid]},ensure_ascii=False,indent=2))
 print('Built',len(curated),'reviewed cards')

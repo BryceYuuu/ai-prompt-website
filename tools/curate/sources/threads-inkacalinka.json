@@ -1,0 +1,679 @@
+{
+  "creator": "michelle (@inkacalinka)",
+  "profileUrl": "https://www.threads.com/@inkacalinka",
+  "collectedAt": "2026-10-01",
+  "noticeAnchor": "threads--inkacalinka",
+  "scope": "10 distinct publicly readable source posts and their author-authored prompt replies; 61 original images. One near-overlapping narrative variant excluded. Login-gated history and third-party replies excluded; not a complete account archive.",
+  "license": "CUSTOM",
+  "licenseNote": "网站维护者于 2026-10-01 确认拥有 @inkacalinka 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+  "cases": [
+    {
+      "id": "threads-inka-minimal-paper",
+      "name": "照片转极简纸感插画",
+      "latin": "Minimal Paper Illustration",
+      "tagline": "细线与少量丙烯色块重述原照，保留纸张肌理和大片留白",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果",
+      "moods": [
+        "极简",
+        "治愈"
+      ],
+      "keywords": [
+        "极简插画",
+        "纸感海报",
+        "丙烯色块",
+        "杂志封面",
+        "minimal paper",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/Dc7fl2ulBQ5",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/Dc7fmZ_FBlJ",
+      "promptFile": "threads-inka-minimal-paper.txt",
+      "promptSha256": "68e34ed0b6d4f778692c1f2003487a8d44e154f095f77a5c5d65d972f9220d9e",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-minimal-paper/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "7ef65b6fd32fa09bd1707035a2dc7f669fd9631847d73844484f37a5c353178f"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-minimal-paper/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "dbf4c9f963f2410558569d61d5b78548407779c8da999746ff5f62ad9df819bc"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-minimal-paper/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "49e4a9a2f096e12c52443b5d163ce039c2f27af49a68c207ee2e29167f3290b6"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-minimal-paper/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "f3e8c3b81d4feb592853d7bd45060fe74fb13d90335302ed91455724d3b81a85"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-minimal-paper/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "275bc36958cda575aa7dc4585b769baf4a800bff43930e95bdc07910a5af4965"
+        }
+      ]
+    },
+    {
+      "id": "threads-inka-charcoal-doodle",
+      "name": "照片转黑白潦草手绘",
+      "latin": "Black and White Charcoal Doodle",
+      "tagline": "用黑白炭笔、断续线条和夸张表情，把日常照片变成幽默手绘",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果",
+      "moods": [
+        "幽默",
+        "极简"
+      ],
+      "keywords": [
+        "黑白手绘",
+        "潦草画",
+        "炭笔",
+        "表情涂鸦",
+        "charcoal doodle",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/Dd5Xq3OFOvc",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/Dd5XrlDlByC",
+      "promptFile": "threads-inka-charcoal-doodle.txt",
+      "promptSha256": "5cafc9e21007a7838f35234af1fda5031ab1553e13c6207dca86c1656f84ecf2",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-charcoal-doodle/1.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "13e943578295b868e454e6858348790c7610322aec37e1bd756a981a9bd1cac4"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-charcoal-doodle/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "e39a11a8e2c955397c97a254348e2e588d1082a2b1eed41d64bbc3bd227e50f9"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-charcoal-doodle/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "239fb122f2b5a39b36fedcc109ceefb21528a26d3d7fb13aae87d60d5928c6eb"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-charcoal-doodle/4.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "fa1653e6e18c2f8e4298f3f408ada5268047c06aa57d088db4309a900de37e50"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-charcoal-doodle/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4b1db7576abb93c3fbea4de41c833bddbbb5eef9aefc04fad4e2e021503cb509"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-charcoal-doodle/6.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "a90f2dc813381946a8f56860faca53033b0e59a72e9146b7352b5ebcf39c7dde"
+        }
+      ]
+    },
+    {
+      "id": "threads-inka-abstract-memory",
+      "name": "照片转抽象记忆图卡",
+      "latin": "Abstract Memory Card",
+      "tagline": "把风景收进一小块低饱和色卡，主体清晰，背景化作柔和色团",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果",
+      "moods": [
+        "治愈",
+        "极简"
+      ],
+      "keywords": [
+        "抽象记忆",
+        "色块图卡",
+        "空气感",
+        "旅行记忆",
+        "abstract memory",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/Dd0vYrLG38u",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/Dd0vZczm0J1",
+      "promptFile": "threads-inka-abstract-memory.txt",
+      "promptSha256": "6f6870ea0b0188c177beacb9aa6d66862fb9f30affc5bb6f1772b42b896449d8",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-abstract-memory/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "9373614cdc68958a730b6ac0319b70bc51238e9791494b6aee05873eca07958a"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-abstract-memory/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "ad3b57a1c9f2d431e62cd1f38c27df043da79bc75b0e2f49a90c5b269d12210d"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-abstract-memory/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "1e18d37a3916585add45e7b4b7e484e095589bbcb4df49681e7b1bff6dd6eeed"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-abstract-memory/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "a2d8711e1510d176d96007eeb69cc1d45ee54d2023fcdcb454b25b7d9b5f1480"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-abstract-memory/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "05a37b969a2402950843466f1ffae72efbee7d76670e7a5a0e58d62bcd8d93ca"
+        }
+      ]
+    },
+    {
+      "id": "threads-inka-pastel-crayon",
+      "name": "照片转粉彩蜡笔手绘",
+      "latin": "Pastel Crayon Illustration",
+      "tagline": "用粗糙蜡笔轮廓、少量粉彩色块和打字机小字留下生活片段",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果",
+      "moods": [
+        "治愈",
+        "亲和"
+      ],
+      "keywords": [
+        "粉彩蜡笔",
+        "蜡笔插画",
+        "手绘涂鸦",
+        "pastel crayon",
+        "柔和色彩",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/Ddv0IURG8bW",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/Ddv0JCEG7p2",
+      "promptFile": "threads-inka-pastel-crayon.txt",
+      "promptSha256": "6859ad0cdece4e595173c4baeca06889141d688a13997befe838098e2c41c83e",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-pastel-crayon/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "094088f0240d155a89d4288e07ac77c882db44c6c069b508813d777ea2e4e30b"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-pastel-crayon/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "43123bef831b2b505c03232417f2db96e23c33d8f879211d0e1274f6fc8fcd88"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-pastel-crayon/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "911fc9ef0a4355437554178c042b98718996ab961d06fe04473be6f7549837ad"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-pastel-crayon/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "d4644f4761ab3d5f4f54392fbf18ca793b35835149ed46999e4fbd401744458b"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-pastel-crayon/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "5f42b3ddcdb66ffab151ad67961c981aca0d7911bbe96735284ea663590e0458"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-pastel-crayon/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "5190a99d24994d9ac26dacff72f10ea913c756f3d1eab15a68f0e2782801daed"
+        }
+      ]
+    },
+    {
+      "id": "threads-inka-needle-felt",
+      "name": "照片转羊毛毡绘本",
+      "latin": "Needle Felt Picture Book",
+      "tagline": "把照片提炼成扁平羊毛毡绘本小景，绒面纤维与柔软边缘清晰可见",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方呈现羊毛毡绘本，下方保留原照片",
+      "moods": [
+        "治愈",
+        "极简"
+      ],
+      "keywords": [
+        "羊毛毡",
+        "针毡",
+        "毛毡绘本",
+        "needle felt",
+        "旅行绘本",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/DdAvdhJlMR1",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/DdAveBylMcC",
+      "promptFile": "threads-inka-needle-felt.txt",
+      "promptSha256": "3e5adb33be852cbc74d49e656f6008b3dbe00464b3f34147a75609ce84b1dec3",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-needle-felt/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "3ed96a4dc7bb6dc679433d9590f8eb946b802abc8605a4eac7642f2fd780d7ac"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-needle-felt/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "0f1a0173bb65ab974dd0beb4dff87cd9931fd6153cc46c283d3776915d2fd6d3"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-needle-felt/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "2b44564c1a66f8cf8ffe8b99df2243e793fc09494389bfdd6a9a5d1325d72226"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-needle-felt/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "526d7c5f2b961d9a45a7e2956d18c1144c7dcf929fc1623cdb6e2fb2870116b4"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-needle-felt/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "b9303113fa73b5c769e5c8776eba14261b9b87e2759d00cd8f74ddde2a867804"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-needle-felt/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "f49e151d1d6e3b8599fffbaff72ee224ea20aa1f7ba6d05a53fac3e385ce9a81"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-needle-felt/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "6ef2aef1c3e1313c1660d1dc855ed024a903833ebdade8b0f5168602cf34d26d"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-needle-felt/8.jpg",
+          "w": 1024,
+          "h": 1376,
+          "sha256": "28915c5827e265cd46ee422b57e0d911b5acf9974bcb4fe26bdd32dfd8901364"
+        }
+      ]
+    },
+    {
+      "id": "threads-inka-second-world",
+      "name": "照片转第二世界拼贴",
+      "latin": "Second World Photo Reinterpretation",
+      "tagline": "让照片里的道路、水波与光影延伸成可互动的微小世界",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果",
+      "moods": [
+        "幽默",
+        "极简"
+      ],
+      "keywords": [
+        "第二世界",
+        "创意拼贴",
+        "黑线小人",
+        "摄影隐喻",
+        "second world",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/Ddqm8Alm9e1",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/Ddqm8pImyDu",
+      "promptFile": "threads-inka-second-world.txt",
+      "promptSha256": "8db485e0cb70a0e8607bfa90a5dfe03d2b73bc8f6fd2792dad5a9348c9bc4efb",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-second-world/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4788638c8fb0f2fbb764b925ecc6edc6c75af86325184588d049aa5fbbaa03ef"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-second-world/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "da4a3aa579b1f9995ef4719799ed4b17f3900d863a8e08f0a358b0e6cace43a2"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-second-world/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4fbe312c8e281fe5123050e71f32da112b16e54f8fd5131becd10032b9775f92"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-second-world/4.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "fc45c62069a28225e5c8c0f32631173e2360cedeb27b7849f472220c96f6c429"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-second-world/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "16f90c51cb845345ed2b17fd0521fab20baafe6c1d8c5f781006d09c62b194ec"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-second-world/6.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "82822c6744ef5ba3f7c8db1747d999c74f6bb0fb3edc5a6eff3c7e774afda1ff"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-second-world/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "30cfc6cb5ebe47cdbea7530e06135756c36ea0cadbc4165dc19350cc06ea717f"
+        }
+      ]
+    },
+    {
+      "id": "threads-inka-travel-magnet",
+      "name": "照片转珐琅旅行磁贴",
+      "latin": "Enamel Travel Magnet",
+      "tagline": "从原照提取人物或地标，做成带细边框、柔和投影的珐琅纪念磁贴",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方呈现珐琅旅行磁贴，下方保留原照片",
+      "moods": [
+        "治愈",
+        "秩序"
+      ],
+      "keywords": [
+        "冰箱贴",
+        "旅行磁贴",
+        "珐琅",
+        "博物馆纪念品",
+        "enamel magnet",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/Dc2Joyimp-7",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/Dc2JpguGv-R",
+      "promptFile": "threads-inka-travel-magnet.txt",
+      "promptSha256": "de3605a16708c1765f91a6103a8244e1de7a832518636ab2e2ef650e02521353",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-travel-magnet/1.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "179642eaaac7fe8437fd0792b2a58da02716b98c7a08ea0b6562302c9af9c2a5"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-travel-magnet/2.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "4092a7b0c0906a9c3a1e49995d56c911c9d65f1371ea20219aaa49f0039101fd"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-travel-magnet/3.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "543a158f60b9aae7abab7f2ec944f7fd684bae6ca2ac3b5d4068727958871c1e"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-travel-magnet/4.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "365a2b58b7d6804069c07f54b40bc57c59d4d71732bf36fe4d173f31367fe70c"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-travel-magnet/5.jpg",
+          "w": 1246,
+          "h": 1593,
+          "sha256": "5b399d289c0b06b0184a4bb56fe4b3cc2b40b512a5547ed05f4d8218fe905d59"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-travel-magnet/6.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "2c98aa1a7eb11ae1bcaad1a8323279a9b859022d5153fdea6fcee69b75381e53"
+        }
+      ]
+    },
+    {
+      "id": "threads-inka-flat-editorial",
+      "name": "照片转彩色扁平插画",
+      "latin": "Colorful Flat Editorial",
+      "tagline": "用明亮纯色色块、不规则黑色轮廓和轻松排版重绘旅行场景",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果",
+      "moods": [
+        "亲和",
+        "幽默"
+      ],
+      "keywords": [
+        "韩系插画",
+        "扁平插画",
+        "旅行日记",
+        "高饱和色块",
+        "flat editorial",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/DdX1xAwFACG",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/DdX1xnBlF6-",
+      "promptFile": "threads-inka-flat-editorial.txt",
+      "promptSha256": "5f7492d652c6c74693235a83c8157223a822067d6bdb26645916ff7effafb7dd",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-flat-editorial/1.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "50c2bc6ead4727db79f27208063db64e7dd4bec4fdd524665bc3a3aeaf35349c"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-flat-editorial/2.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "d7fb36068acd26341852d544a8e4e6861c5537e619de55b78242b22f4f4896d1"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-flat-editorial/3.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "8f681639b221052485a46b509f7f311b5e9807474df25b218a487fd14d4818f7"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-flat-editorial/4.jpg",
+          "w": 1536,
+          "h": 2048,
+          "sha256": "90a959e8deec331779a3934b42b9e63569093ec31d2cc59118e2e7e2ccb6e3a4"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-flat-editorial/5.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "d2ce8def2aa6e1030ee854f297dc92b5a4d6996462892e0fafc63731de077663"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-flat-editorial/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "8efda9df40176250b154331e028b776c06de4b220c5ce13d61bdb0fc2fffb7f3"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-flat-editorial/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "91194a0eb8a58ae27458fefd211fa7f46bb0b03b9cea031890332c53ec52d7a0"
+        }
+      ]
+    },
+    {
+      "id": "threads-inka-impasto-world",
+      "name": "照片转厚涂油画微景",
+      "latin": "Impasto Miniature World",
+      "tagline": "把照片变成白纸上的厚涂小景，刮刀笔触和凸起颜料带来浮雕质感",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果",
+      "moods": [
+        "治愈",
+        "复古"
+      ],
+      "keywords": [
+        "厚涂油画",
+        "刮刀画",
+        "油画微景",
+        "浮雕颜料",
+        "impasto",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/Dcpku09lDiY",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/DcpkvTblDBE",
+      "promptFile": "threads-inka-impasto-world.txt",
+      "promptSha256": "0001ea02211ff16f44cd79ac8f89a56d74fb96e4314a0e839a41ad0289e42d2d",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-impasto-world/1.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "71c96b72f5aafdaa3d89eb10c4e3345fdaf15818f257b69dc63086c6d8b579fe"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-impasto-world/2.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "3b754397f22e35ca3e9252984fd44c57907e35c83673fe1c761c381a7859b3d8"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-impasto-world/3.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "db053150b76b5c24185836002dc4ce13f2d771ad1309b866fb1a570d45ae9379"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-impasto-world/4.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "2c8ef2e76684a67f904e043028c0f38dc0dc4a50d9ed858b82339709a8402602"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-impasto-world/5.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "146e29e62b6642f4c34e01b727ca95853793181a7169029ea84385e6db5d3cf5"
+        }
+      ],
+      "preserve": "原照区保留主体身份、姿态与构图；创作区按作者原文允许的范围重构微景，不把创作区误当成原照。"
+    },
+    {
+      "id": "threads-inka-paper-scrapbook",
+      "name": "照片转手帐剪纸拼贴",
+      "latin": "Paper Scrapbook Collage",
+      "tagline": "保留真实人物与宠物，搭配奶油色剪纸描边、色纸舞台和手写便笺",
+      "input": "一张主体清楚的人物、动物、物品或风景照片",
+      "output": "一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果",
+      "moods": [
+        "治愈",
+        "亲和"
+      ],
+      "keywords": [
+        "手帐拼贴",
+        "剪纸海报",
+        "照片抠图",
+        "手账",
+        "paper scrapbook",
+        "michelle",
+        "inkacalinka",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@inkacalinka/post/DdTeQxvm6F7",
+      "promptUrl": "https://www.threads.com/@inkacalinka/post/DdTeRcBm-_E",
+      "promptFile": "threads-inka-paper-scrapbook.txt",
+      "promptSha256": "3a62a7c023e4354ec8f60a4d2063158cd909b3aa0f59742672a1df7e3552d330",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-inka-paper-scrapbook/1.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "56beab8eb5f4323c8dd8fb836367b1743d8c5c36f306a77f1577ff34b2f4c618"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-paper-scrapbook/2.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "ec5f4046858fd88d928e786c33ecd9df5f15eed3eaad72e0bb5d872937c68515"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-paper-scrapbook/3.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "2d9954c2fcaa7ac2939139b1007334e6e9f07a692685e17481b0444fc24a1c5a"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-paper-scrapbook/4.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "23e3c6f8d7dc0ded3949b8110afbce034b33a76d416e593ad17217107944d5e7"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-paper-scrapbook/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "61b3ea7577a29707953abd514ad8978da5a7d0991530ea769ea66c27f48ec4d7"
+        },
+        {
+          "src": "assets/img/threads/threads-inka-paper-scrapbook/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "e7b004979a6bf1c86f6e462c3f1cf9fbdad584d6dbb55ea17ce26e94ca405b8e"
+        }
+      ]
+    }
+  ],
+  "review": {
+    "excluded": [
+      {
+        "postUrl": "https://www.threads.com/@inkacalinka/post/DcxSrhHlMQY",
+        "promptUrl": "https://www.threads.com/@inkacalinka/post/DcxSsAwlKFl",
+        "reason": "与第二世界拼贴同属真实摄影与黑线小人互动叙事，功能近似；保留强调一个视觉结构、一个隐喻和一个动作的版本。非逐字重复。",
+        "preferredId": "threads-inka-second-world"
+      }
+    ],
+    "policy": "Normalize text for exact-match detection; compare visual material, output layout and task semantics manually. Same source prompt with several examples becomes one card. Original-photo overlap across distinct transformations is not itself a duplicate.",
+    "verification": {
+      "reviewedSourcePosts": 11,
+      "acceptedDistinctPrompts": 10,
+      "excludedNearVariants": 1,
+      "acceptedImages": 61,
+      "existingAndNewImagesCompared": 103,
+      "exactImageDuplicates": 0,
+      "perceptualHashCandidatesWithin3Bits": 0,
+      "method": "SHA256 against all local image files; 64-bit difference hash screen at distance <=3; human contact-sheet review of all 61 examples. Matching source photos with different transformations are retained."
+    }
+  }
+}

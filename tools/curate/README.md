@@ -1,6 +1,6 @@
 # 内容维护
 
-本目录离线生成当前 70 条内容。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-lch1776244.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
+本目录离线生成当前 80 条内容。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-*.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
 
 来源快照、SHA256、原始署名和授权位于 sources/。audit.json 记录对旧 108 条目录的退役/替换处理；previous-catalog.json 仅保留旧目录的 id、名称和分类，用于复现审查记录。GitHub stars 以 sources/repository-stars.json 的逐仓库日期为准；当前采用的两个来源已于 2026-09-26 重新核验，是仓库级快照，不代表单条模板热度。
 
@@ -11,3 +11,7 @@
 keywords.json 维护每条模板的中英文搜索别名；添加后重新运行生成器。关键词须对应实际任务，不标注未验证的模型兼容性。
 
 2026-10-01 新增 Threads 公开收录：4 组提示词、18 张原始图片，作者回复和原帖分别记录。manifest 固定原文和图片 SHA256，构建时校验；同组去重为一张风格卡，多图保留到详情图库。该批采用 CUSTOM 转载授权说明，不适用原有案例的 CC BY 4.0；未采集登录墙内内容或其他评论者素材。
+
+同日新增 @inkacalinka：10 组、61 张图；按账号保留独立授权与来源清单。筛选记录在该账号 manifest 的 review 中。生成器遍历 Threads 清单，保留作者原文、输出方向及素材校验；英文来源不伪称中文原文。羊毛毡与旅行磁贴为上方创作、下方原照，与其他案例区分。
+
+提示词长度上限统一为 8000 字符，以容纳完整英文原文；Schema 与浏览器校验保持一致，超限仍拒绝。不会为了通过旧 4000 字符限制而截断作者内容。

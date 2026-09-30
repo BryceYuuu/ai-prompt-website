@@ -35,6 +35,11 @@ const mutations={
  preparedDownload:['app.js',"+ preparedPrompt(ready) +","+ ready.prompt +"],
  imageViewer:['app.js',"document.body.appendChild(viewer);","void 0;"],
  threadsLicense:['data-curated.js','"license": "CUSTOM"','"license": "CC-BY-4.0"'],
+ longPromptLimit:['rules.js','prompt:  { min: 40, max: 8000 }','prompt:  { min: 40, max: 4000 }'],
+ longPromptGuard:['rules.js',"else if (card.prompt.length > LIMITS.prompt.max) E('prompt', '图片转换提示词过长');",''],
+ useFilter:['app.js',"if (f.use && s.uses.indexOf(f.use) < 0) return false;","if (false) return false;"],
+ threadsOwner:['data-curated.js','https://www.threads.com/@inkacalinka/post/Dc7fl2ulBQ5','https://www.threads.com/@lch1776244/post/Dc7fl2ulBQ5'],
+ threadsOrientation:['data-curated.js','上方呈现羊毛毡绘本，下方保留原照片','上方保留原照片，下方呈现羊毛毡绘本'],
  exampleSelection:['app.js','picture = pictures[imageIndex].v;','picture = pictures[0].v;']
 };
 let applied=false;
@@ -58,6 +63,8 @@ function session(options={}) {
  }});
  return out;
 }
+const threadManifests=['threads-lch1776244.json','threads-inkacalinka.json'].map(f=>JSON.parse(fs.readFileSync(path.join(root,'tools/curate/sources',f))));
+const threadRecords=new Map(threadManifests.flatMap(m=>m.cases.map(item=>[item.id,{manifest:m,item}])));
 const primary=session(),dom=primary.dom,errors=primary.errors,blobs=primary.blobs;
 const w=dom.window,d=w.document,wait=ms=>new Promise(r=>setTimeout(r,ms));let passed=0,failed=0;
 async function check(name,fn){try{await fn();passed++;console.log('PASS '+name);}catch(e){failed++;console.log('FAIL '+name+': '+e.message);}}
@@ -65,10 +72,12 @@ async function nav(hash){w.location.hash=hash;w.dispatchEvent(new w.Event('hashc
 const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
 (async()=>{
  await wait(120);const cards=w.eval('STYLES'),images=cards.filter(s=>s.category==='image');
- await check('catalog-count-and-classification',()=>{assert.equal(cards.length,70);assert.equal(images.length,22);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,70);});
+ await check('catalog-count-and-classification',()=>{assert.equal(cards.length,80);assert.equal(images.length,32);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,80);});
  await check('source-evidence-and-license',()=>{for(const s of cards){if(s.source.provider==='threads'){
- assert(s.source.url.startsWith('https://www.threads.com/@lch1776244/post/'));
- assert(s.source.promptUrl.startsWith('https://www.threads.com/@lch1776244/post/'));
+ const {manifest,item}=threadRecords.get(s.id);
+ assert.equal(s.source.url,item.postUrl);assert.equal(s.cover.sourceUrl,item.postUrl);assert.equal(s.source.promptUrl,item.promptUrl);
+ assert(s.source.url.startsWith(manifest.profileUrl+'/post/'));assert(s.source.promptUrl.startsWith(manifest.profileUrl+'/post/'));
+ assert.equal(s.author,manifest.creator);assert.equal(s.source.contributor,manifest.creator);
  assert.equal(s.license,'CUSTOM');assert.equal(s.cover.license,'经授权收录');
  assert(s.licenseNote.includes('原作者保留权利'));assert(!('stars' in s.source));
  const raw=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.snapshot));
@@ -77,8 +86,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  continue;
  }assert(s.source.url.startsWith('https://github.com/'));assert(s.source.stars>=8000);assert(/^2026-09-(21|26)$/.test(s.source.checkedAt),'source verification date: '+s.id);assert(s.source.mode.includes('中文'));assert(s.curation.status.includes('not-'));if(s.category!=='image'){assert.equal(s.source.license,'MIT');assert.equal(s.license,'MIT');assert(s.licenseText.includes('Permission is hereby granted'));const raw=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.act+'.md'));assert.equal(require('crypto').createHash('sha256').update(raw).digest('hex'),s.source.sha256);}}});
  await check('image-input-preservation-and-credits',()=>{for(const s of images){assert.equal(s.track,'edit');assert(!s.local&&!s.cloud);assert(s.prompt.includes('上传图片'));assert(s.prompt.includes('【保持不变】'));assert(s.prompt.includes('不具备图像编辑能力'));assert(fs.existsSync(path.join(root,s.cover.src)));assert(s.cover.creator&&s.cover.licenseUrl);if(s.source.provider==='threads'){
- const manifest=JSON.parse(fs.readFileSync(path.join(root,'tools/curate/sources/threads-lch1776244.json')));
- const item=manifest.cases.find(c=>c.id===s.id);assert(item);assert(s.cover.creator.includes('@lch1776244'));
+ const {manifest,item}=threadRecords.get(s.id);assert(item);assert.equal(s.cover.creator,manifest.creator);
  assert.deepEqual(s.guide.filter(b=>b.t==='img').map(b=>b.v.src),item.images.map(i=>i.src));
  for(const img of item.images)assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync(path.join(root,img.src))).digest('hex'),img.sha256);
  continue;
@@ -87,7 +95,10 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  await check('homepage-image-only-and-manual-carousel',async()=>{await nav('#/');assert(all('.card__link').length>0);for(const a of all('.card__link'))assert(images.some(s=>a.hash.endsWith(s.id)));const hero=q('.hero__plate');const first=hero.getAttribute('href');q('[data-action="hero-next"]').click();assert.notEqual(q('.hero__plate').getAttribute('href'),first);q('[data-action="hero-prev"]').click();assert.equal(q('.hero__plate').getAttribute('href'),first);});
  await check('scene-and-category-filters',async()=>{
    await nav('#/library?track=text&limit=100');assert.equal(all('.gallery .card').length,48);
-   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat+'&limit=100');assert.equal(all('.gallery .card').length,cat==='image'?22:8);}
+   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat+'&limit=100');assert.equal(all('.gallery .card').length,cat==='image'?32:8);}
+   const social=cards.filter(s=>s.uses.includes('社交封面'));await nav('#/library?use='+encodeURIComponent('社交封面'));
+   assert.equal(Number(q('.lib-count b').textContent),social.length);assert.equal(all('.gallery .card').length,Math.min(12,social.length));
+   assert(all('.gallery .card__link').every(a=>social.some(s=>a.hash==='#/style/'+s.id)));
    await nav('#/library?track=both');
    const codeTab=all('.catbar a').find(a=>new URLSearchParams(a.hash.split('?')[1]).get('cat')==='code');assert(codeTab);codeTab.click();await wait(12);
    assert.equal(all('.gallery .card').length,8,'changing from image filter to code clears conflicting track');
@@ -186,8 +197,8 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    viewer.querySelector('button').click();assert(!q('dialog.image-viewer'));assert.equal(d.activeElement,opener,'focus returns to the opening control');assert.notEqual(d.body.style.overflow,'hidden');
  });
  await check('threads-gallery-source-and-search',async()=>{
-   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,4);
-   await nav('#/library?cat=image&q=Chloe_Lai&limit=100');assert.equal(all('.gallery .card').length,4);
+   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,14);
+   for(const [term,count] of [['Chloe_Lai',4],['inkacalinka',10]]){await nav('#/library?cat=image&q='+term+'&limit=100');assert.equal(all('.gallery .card').length,count);}
    for(const s of imported){
      await nav('#/style/'+s.id);const pictures=s.guide.filter(b=>b.t==='img');
      assert.equal(all('.detail-preview figure').length,1,'one large preview, not a stacked image wall');
@@ -199,6 +210,27 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
        assert(dialog.textContent.includes('经授权收录'));dialog.querySelector('button').click();assert.equal(d.activeElement,thumbs[i]);
      }
      const ex=all('.takeaway a[download]');const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.licenseNote));
+   }
+ });
+ await check('complete-long-prompts-with-bounded-size',()=>{
+   const sample=cards.find(s=>s.id==='threads-inka-pastel-crayon');assert(sample.prompt.length>4000);
+   const opts={taxonomy:w.eval('TAXONOMY')};
+   assert(!w.HFRules.checkCard(sample,opts).errors.some(e=>e.path==='prompt'),'full source accepted');
+   const oversized={...sample,prompt:'A'.repeat(8001)};
+   assert(w.HFRules.checkCard(oversized,opts).errors.some(e=>e.path==='prompt'),'oversized edit prompt rejected');
+   const schema=JSON.parse(fs.readFileSync(path.join(root,'schema/style-card.schema.json')));let count=0;
+   function walk(v){if(!v||typeof v!=='object')return;if(v.properties&&v.properties.prompt&&v.properties.prompt.maxLength){count++;assert.equal(v.properties.prompt.maxLength,w.HFRules.LIMITS.prompt.max);}Object.values(v).forEach(walk);}
+   walk(schema);assert(count>=4,'schema prompt branches checked');
+ });
+ await check('threads-distinct-content-and-layout',async()=>{
+   const imported=cards.filter(s=>s.source.provider==='threads');
+   const prompts=imported.map(s=>fs.readFileSync(path.join(root,'tools/curate/sources',s.source.snapshot),'utf8').replace(/\s/g,'').toLowerCase());
+   assert.equal(new Set(prompts).size,prompts.length,'no repeated original prompts');
+   const hashes=[...threadRecords.values()].flatMap(r=>r.item.images.map(i=>i.sha256));assert.equal(new Set(hashes).size,hashes.length,'no repeated source images');
+   for(const id of ['threads-inka-needle-felt','threads-inka-travel-magnet']){
+     const s=cards.find(c=>c.id===id);assert(s);await nav('#/style/'+id);
+     assert(s.curation.output.includes('下方保留原照片'),'retain reversed source layout');
+     assert(q('.detail-guide').textContent.includes(s.curation.output));
    }
  });
  await check('disclosures-and-filtered-backlink',async()=>{await nav('#/library?cat=code');await nav('#/style/code-reviewer');assert.equal(q('.backlink').getAttribute('href'),'#/library?cat=code');for(const el of all('.detail-guide,.detail-source')){assert(!el.open);el.querySelector('summary').click();assert(el.open);el.querySelector('summary').click();assert(!el.open);}});

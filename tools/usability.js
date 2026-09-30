@@ -719,14 +719,18 @@ function firstCardTop() {
       'is-open=' + (filters ? filters.classList.contains('is-open') : 'n/a') +
       (r1.ok ? '' : ' ⚠ ' + r1.why));
 
-  /* 5. 展开后点一个 chip 要真的筛掉东西 */
+  /* 5. 校验筛选总数与卡片归属；分页前后都可能显示 12 张，不能只比可见数量。 */
   var chip = document.querySelector('.filters .chip[href*="use="]');
   var before = document.querySelectorAll('.gallery .card').length;
+  var selectedUse = chip ? new URLSearchParams(chip.hash.split('?')[1]).get('use') : '';
+  var expectedIds = STYLES.filter(function(s){return s.uses.indexOf(selectedUse) >= 0;}).map(function(s){return s.id;});
   var r2 = realClick(chip);
   await sleep(400);
   var after = document.querySelectorAll('.gallery .card').length;
   var badge = document.querySelector('.filterstoggle__n');
-  rec('展开后点 chip 能筛选', location.hash.indexOf('use=') > 0 && after > 0 && after < before,
+  var total = document.querySelector('.lib-count b');
+  var matchingCards = Array.from(document.querySelectorAll('.gallery .card__link')).every(function(a){return expectedIds.indexOf(a.hash.split('/').pop()) >= 0;});
+  rec('展开后点 chip 能筛选', r2.ok && new URLSearchParams(location.hash.split('?')[1]).get('use') === selectedUse && expectedIds.length > 0 && total && Number(total.textContent) === expectedIds.length && after === Math.min(12, expectedIds.length) && matchingCards,
       '「' + (chip ? chip.textContent.trim() : '无') + '」 ' + before + ' → ' + after +
       ' 条 · 按钮计数=' + (badge ? badge.textContent.trim() : '无') +
       (r2.ok ? '' : ' ⚠ ' + r2.why));

@@ -50,7 +50,7 @@ var HFRules = (function () {
     tagline: { min: 8, max: 60 },
     version: { re: /^\d+\.\d+$/ },
     author:  { min: 1, max: 30 },
-    prompt:  { min: 40, max: 4000 },
+    prompt:  { min: 40, max: 8000 },
     neg:     { min: 1, max: 500 },
     refs:    { min: 1, max: 300 },
     steps:   { min: 1, max: 150 },
@@ -162,6 +162,7 @@ var HFRules = (function () {
     var hasLocal = !!card.local, hasCloud = !!card.cloud;
     if (isImage && card.track === 'edit') {
       if (!filled(card.prompt) || card.prompt.length < LIMITS.prompt.min) E('prompt', '图片转换必须提供完整提示词');
+      else if (card.prompt.length > LIMITS.prompt.max) E('prompt', '图片转换提示词过长');
       if (hasLocal || hasCloud) E('track', '图片转换不应包含未经验证的模型参数');
     } else if (isImage) {
       /* 两条轨道缺一不可。

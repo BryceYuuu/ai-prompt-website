@@ -1,6 +1,6 @@
 # 提示词网站 · AI Prompt Website
 
-书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 70 条可填写、复制与导出的提示词模板：22 种图片风格转换，以及 48 个写作、编程、分析、学习、商业与生活任务。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
+书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 80 条可填写、复制与导出的提示词模板：32 种图片风格转换，以及 48 个写作、编程、分析、学习、商业与生活任务。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
 
 ## 在线预览
 
@@ -12,15 +12,17 @@
 
 通过 GitHub Pages 从 `main` 分支发布，仓库更新后会自动部署。
 
-## 本次收录：Chloe_Lai 的公开图片提示词
+## Threads 公开图片提示词
 
 收录 [@lch1776244](https://www.threads.com/@lch1776244) 的 4 组公开帖子、作者回复中的提示词和 18 张示例图。每组一张风格卡，详情页可逐张放大。搜索 `Chloe_Lai`、`Threads` 或 `lch1776244` 即可找到。原帖与作者回复分开链接，未收录登录后才能访问的历史内容；本次不是全量账号归档。
 
 经网站维护者确认转载授权收录，原作者保留权利；不将这些素材重新许可为 MIT / CC。具体范围见 [第三方内容说明](THIRD_PARTY_NOTICES.md#threads--chloe_lai)。
 
+新增 [@inkacalinka](https://www.threads.com/@inkacalinka) 的 **10 组提示词与 61 张原始示例图**：极简纸感、黑白炭笔、抽象记忆、粉彩蜡笔、羊毛毡绘本、第二世界拼贴、珐琅旅行磁贴、彩色扁平插画、厚涂油画、手帐剪纸。搜索 `inkacalinka` 或 `michelle` 可找到。排除一组与“第二世界”用途近似的旧版黑线小人叙事；图片和原文校验去重，授权按账号分别记录。来源及筛选记录见 [素材清单](tools/curate/sources/threads-inkacalinka.json)。仅覆盖本次公开可读内容，不代表账号完整历史。
+
 ## 当前内容
 
-- **22 个图片转换模板**：动漫手办、针织玩偶、摇头娃娃、玻璃雕塑、线稿、Q版钥匙扣、矢量海报、像素图标、微缩建筑、折纸、体素、赛博微缩，以及表情包、毛绒图标、簇绒地毯、蒸汽机械、双重曝光与磨砂剪影；新增复古图解、宠物涂鸦、等距纸上微缩、水彩方格拼贴四种上下对照海报。
+- **32 个图片转换模板**：动漫手办、针织玩偶、摇头娃娃、玻璃雕塑、线稿、Q版钥匙扣、矢量海报、像素图标、微缩建筑、折纸、体素、赛博微缩，以及表情包、毛绒图标、簇绒地毯、蒸汽机械、双重曝光与磨砂剪影；新增复古图解、宠物涂鸦、等距纸上微缩、水彩方格拼贴四种上下对照海报，以及 michelle 的十种图像编辑海报。
 - **48 个文字任务**：写作、编程、分析、学习、商业、生活各 8 条。提供输入项、处理步骤、交付格式和信息不足时的处理方式。
 - 实时填写与预览、当前浏览器收藏、来源图全屏预览、搜索与分类、自动/手动轮播、复制与 Markdown / JSON 导出、移动端布局、键盘导航和减少动态效果支持。
 - 每条保留来源、整理方式、许可和核验状态。
@@ -54,7 +56,7 @@
 
 ### English overview
 
-Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 70 curated **prompt templates**: 22 **image-to-image style transfer** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
+Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 80 curated **prompt templates**: 32 **image-to-image style transfer** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
 ## 本地预览
 
@@ -92,7 +94,7 @@ npm run test:browser
 index.html                     页面入口
 assets/js/app.js               路由、交互和渲染
 assets/js/data.js              分类与数据组装
-assets/js/data-curated.js      生成的 70 条内容
+assets/js/data-curated.js      生成的 80 条内容
 assets/css/                   页面样式
 assets/img/curated/            来源案例图
 schema/                       数据规范与校验

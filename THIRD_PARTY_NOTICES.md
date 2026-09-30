@@ -55,3 +55,22 @@ The six added image cases (21, 35, 60, 64, 86, 98) retain their original image b
 ## Original Studio artwork
 
 `assets/img/studio/studio-cover.png` was generated for this project using the built-in image generation tool. It is labeled as original visual illustration, not a tested prompt result. Its generation prompt and provenance are documented in [studio-art.md](tools/curate/studio-art.md).
+
+## Threads — inkacalinka
+
+On October 1, 2026, the site maintainer separately confirmed account ownership or permission to republish images and complete prompts from [michelle (@inkacalinka)](https://www.threads.com/@inkacalinka) on this website and its public GitHub repository. This batch uses **CUSTOM / 经授权收录**, based on that confirmation, not a publicly verified open license. The author retains all rights; the root MIT license and unrelated CC licenses do not apply, and this notice grants no downstream redistribution license.
+
+This batch includes 10 distinct publicly readable posts, their author-authored prompt replies, and 61 original images. One earlier black-line narrative variant was excluded as functionally similar to Second World; this is an editorial near-duplicate decision, not a claim of identical wording. No login-gated history or other commenters’ material is included. English and Chinese author text is preserved in full; site-added checks are clearly separated. Images retain downloaded bytes, and examples are not site-run model tests. [Manifest, SHA256 and review decisions](tools/curate/sources/threads-inkacalinka.json).
+
+| Style | Source post | Author prompt reply | Images |
+| --- | --- | --- | ---: |
+| 照片转极简纸感插画 | [Post](https://www.threads.com/@inkacalinka/post/Dc7fl2ulBQ5) | [Reply](https://www.threads.com/@inkacalinka/post/Dc7fmZ_FBlJ) | 5 |
+| 照片转黑白潦草手绘 | [Post](https://www.threads.com/@inkacalinka/post/Dd5Xq3OFOvc) | [Reply](https://www.threads.com/@inkacalinka/post/Dd5XrlDlByC) | 6 |
+| 照片转抽象记忆图卡 | [Post](https://www.threads.com/@inkacalinka/post/Dd0vYrLG38u) | [Reply](https://www.threads.com/@inkacalinka/post/Dd0vZczm0J1) | 5 |
+| 照片转粉彩蜡笔手绘 | [Post](https://www.threads.com/@inkacalinka/post/Ddv0IURG8bW) | [Reply](https://www.threads.com/@inkacalinka/post/Ddv0JCEG7p2) | 6 |
+| 照片转羊毛毡绘本 | [Post](https://www.threads.com/@inkacalinka/post/DdAvdhJlMR1) | [Reply](https://www.threads.com/@inkacalinka/post/DdAveBylMcC) | 8 |
+| 照片转第二世界拼贴 | [Post](https://www.threads.com/@inkacalinka/post/Ddqm8Alm9e1) | [Reply](https://www.threads.com/@inkacalinka/post/Ddqm8pImyDu) | 7 |
+| 照片转珐琅旅行磁贴 | [Post](https://www.threads.com/@inkacalinka/post/Dc2Joyimp-7) | [Reply](https://www.threads.com/@inkacalinka/post/Dc2JpguGv-R) | 6 |
+| 照片转彩色扁平插画 | [Post](https://www.threads.com/@inkacalinka/post/DdX1xAwFACG) | [Reply](https://www.threads.com/@inkacalinka/post/DdX1xnBlF6-) | 7 |
+| 照片转厚涂油画微景 | [Post](https://www.threads.com/@inkacalinka/post/Dcpku09lDiY) | [Reply](https://www.threads.com/@inkacalinka/post/DcpkvTblDBE) | 5 |
+| 照片转手帐剪纸拼贴 | [Post](https://www.threads.com/@inkacalinka/post/DdTeQxvm6F7) | [Reply](https://www.threads.com/@inkacalinka/post/DdTeRcBm-_E) | 6 |

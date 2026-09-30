@@ -1,0 +1,30 @@
+Create a high-end editorial art poster in a strict 3:4 vertical format. Divide the canvas horizontally into two exactly equal halves (1:1 height ratio), each occupying precisely 50%. A thin, clean horizontal line may separate the two halves, or they may meet edge-to-edge with no border.
+TOP HALF — Original Photograph (50%):
+Present the original photograph with all subjects fully preserved — identity, facial features, clothing, body proportions, poses, expressions, and the original spatial relationship between subjects. Apply only a refined warm film-like color grading: soft contrast, gently lifted shadows, warm highlights, slightly enhanced but natural saturation, and a subtle grain texture that evokes fine art photography in an editorial magazine or gallery exhibition.
+You may naturally extend the sky, ground, or background environment to fill the frame, but never stretch, distort, warp, or alter the subjects. The subjects may sit small within the frame to leave generous sky or environmental space — this is intentional and desirable.
+BOTTOM HALF — Impasto Oil Painting Miniature World (50%):
+Reconstruct the scene from the top photograph as an extreme thick-impasto oil painting miniature world on a pure white textured paper background. This is NOT a mechanical copy — translate the subjects, their poses, and the narrative into a self-contained, poetic, three-dimensional tiny landscape.
+Layout:
+The painted miniature world occupies roughly 60–75% of the bottom half, centered or slightly off-center (left or right depending on visual balance).
+The remaining area is clean white negative space with visible paper grain texture.
+The painting's outer edges are organic, irregular, feathered, and blob-like — thick paint strokes that softly dissolve into the white paper, like a raised paint island. Never use a hard rectangular border or frame.
+The Miniature World:
+Subjects are reduced in scale to feel like tiny figurines in a diorama, while retaining their core identity, clothing colors, poses, and key features. Moderately optimize angles and proportions for the miniature format.
+Sky / Background: Fluffy, billowing impasto clouds built from thick palette-knife strokes in fresh sky blue, cream white, and hints of warm pale yellow. Clouds have sculptural, raised volume.
+Ground / Surface: A reflective shallow water surface, puddle, or winding path/road beneath the subjects, rendered with thick horizontal or curving strokes. Water shows soft distorted reflections of subjects and sky, with ripples and light speckles. A path may be sandy, stony, or coastal — choose what fits the scene's narrative.
+Foreground details: Small wildflowers, grass tufts, foliage, tiny rocks, or low plants scattered naturally around the base, in vivid greens, coral orange, peach pink, and warm yellow.
+Atmospheric accents: Add small birds in the sky, distant hills, sea horizon, sunlight rays, or mist — whatever poetically extends the original scene's mood. Transform the original environment into something more idyllic and dreamlike (e.g., a city street may become a coastal road; a playground may become a watery garden island).
+Painting Technique — Critical:
+Extreme impasto thickness: visible palette knife marks, raised paint ridges, sculptural relief, and tactile pigment texture on every surface. The paint should look physically thick enough to cast tiny shadows.
+Thick coatings on clouds, water, clothing, skin highlights, and foliage create physical volume.
+Semi-transparent glazes in select areas (water, sky edges, light passages) allow light to pass through, creating luminosity and glow.
+Visible brushstroke direction and paint drag marks at the edges.
+The white paper grain is clearly visible in negative space and at the painting's periphery.
+Typography — Integrated into the white space: Place elegant text in the negative space (top-left, bottom-left, or right side — choose for best balance):
+A large handwritten calligraphy script title (e.g., "Run to The Wind", "Coastal Joyride", "Sunny Reversal") in a refined olive-green, warm gray, or soft blue-gray tone.
+A short poetic subtitle below or beside the title, in a clean small serif or sans-serif font (e.g., "Let the heart follow the light.", "Live in the sunshine, ride in the moment.", "A little world turned upside down.").
+A small reference number in a corner (e.g., "No. 2024-05", "No. 27", "No. 2024-0518").
+Optionally, a tiny credit line (e.g., "Oil Painting × Miniature", "Painted by Mango") in a bottom corner.
+All text is understated, refined, and does not compete with the painting.
+Color Palette: Extract the brightest, most vivid, most alive colors from the top photograph and remix them — never average, mute, or desaturate. Use fresh sky blue, lake blue, grass green, warm yellow, coral orange, cherry red, peach pink, and cream. Generous pure warm white serves as breathing room. Main colors are vivid but not harsh or fluorescent. Local accents of golden yellow and warm orange suggest sunlight. The overall mood is sunny, fresh, warm, relaxed, healing, and full of life.
+Strictly Avoid: Murky dirty tones, faded desaturated looks, Morandi-style muted palettes, dark brown filters, sepia, fluorescent colors, cheap candy colors, flat digital illustration, smooth airbrush texture, hard rectangular borders around the painting, generic fonts, text overlapping the painted subjects, stretched or distorted figures, plastic-looking 3D render texture.
