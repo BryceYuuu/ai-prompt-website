@@ -379,9 +379,17 @@ function clickThrough(el) {
   var rs = realClick(save);
   rec('详情工作台：收藏可点且状态更新', rs.ok && save.getAttribute('aria-pressed') === 'true', rs.ok ? '已收藏' : rs.why);
   realClick(save);
+  var exampleImage = document.querySelector('.example-carousel .cover img');
+  var beforeExample = exampleImage && exampleImage.getAttribute('src');
+  var en = realClick(document.querySelector('.example-carousel .example-arrow--next'));
+  rec('多图预览：下一张箭头可点且切图', en.ok && exampleImage && exampleImage.getAttribute('src') !== beforeExample && document.querySelector('.example-counter').textContent.indexOf('2 /') === 0, en.ok ? '主图与计数已更新' : en.why);
+  var ep = realClick(document.querySelector('.example-carousel .example-arrow--prev'));
+  rec('多图预览：上一张可返回', ep.ok && exampleImage.getAttribute('src') === beforeExample, ep.ok ? '已返回首张' : ep.why);
   var zoom = document.querySelector('[data-action="image-expand"]');
   var rz = realClick(zoom), viewer = document.querySelector('dialog.image-viewer');
   rec('详情工作台：大图可打开', rz.ok && !!viewer && viewer.open && !!viewer.querySelector('img'), rz.ok ? '完整图片' : rz.why);
+  var vn = realClick(document.querySelector('.image-viewer .example-arrow--next'));
+  rec('大图查看：箭头可点且与主图同步', vn.ok && viewer.querySelector('img').getAttribute('src') !== beforeExample && exampleImage.getAttribute('src') === viewer.querySelector('img').getAttribute('src'), vn.ok ? '同步到第二张' : vn.why);
   var rc = realClick(document.querySelector('.image-viewer__close'));
   rec('详情工作台：大图可关闭并回到入口', rc.ok && !document.querySelector('dialog.image-viewer') && document.activeElement === zoom, rc.ok ? '焦点已返回' : rc.why);
 

@@ -944,6 +944,7 @@
        这里给 <pre> 加 .sample：它和 t:'code' 的块长得一样，但行为要不同 ——
        代码块保持 overflow-x:auto（不许在 token 中间断行），
        示例是正文快照，必须换行（理由见 components.css 里 .prose pre.sample）。 */
+    var pictureCount = preview ? (s.guide || []).filter(function (b) { return b.t === 'img'; }).length : 0;
     var sample = preview ? null : SAMPLES[s.id];
     var sampleHTML = sample
       ? '<h2>交付清单</h2>' +
@@ -965,10 +966,11 @@
         if (s.category === 'image' && !preview) return;
         fig++;
         var cov = s.cover || COVERS[s.id] || {};
-        out += (s.category !== 'image' ? '<details class="reference-fold"><summary data-action="reference-toggle">查看参考配图与署名</summary>' : '') + '<figure>' +
+        out += (s.category !== 'image' ? '<details class="reference-fold"><summary data-action="reference-toggle">查看参考配图与署名</summary>' : '') + '<figure' + (pictureCount > 1 ? ' class="example-carousel" data-id="' + esc(s.id) + '" data-image-index="0" role="region" aria-label="作者示例，可左右切换" tabindex="0"' : '') + '>' +
           '<span class="cover" data-style="' + esc(s.id) + '" style="aspect-ratio:' + ar(cov) + '">' +
             '<img src="' + esc(b.v.src) + '" alt="' + esc(b.v.cap || '') + '"' +
               ' width="' + (cov.w || 1000) + '" height="' + (cov.h || 750) + '" loading="lazy">' +
+          (pictureCount > 1 ? exampleArrowsHTML('example-step', s.id, pictureCount) : '') +
           '</span>' +
           '<figcaption>' +
             '<span class="fig-n">Fig. ' + pad2(fig) + '</span>' +
@@ -985,9 +987,83 @@
   function exampleGalleryHTML(s) {
     var pictures = (s.guide || []).filter(function (b) { return b.t === 'img'; });
     if (pictures.length < 2) return '';
-    return '<div class="example-gallery"><p>作者示例 · ' + pictures.length + ' 张 <span>点击查看完整对照图</span></p><div class="example-gallery__items">' + pictures.map(function (b, i) {
-      return '<button type="button" data-action="image-expand" data-id="' + esc(s.id) + '" data-image-index="' + i + '" aria-label="查看' + esc(s.name) + '示例 ' + (i + 1) + '"><img src="' + esc(b.v.src) + '" alt="' + esc(b.v.cap) + '" width="' + s.cover.w + '" height="' + s.cover.h + '" loading="lazy"><span>' + pad2(i + 1) + '</span></button>';
+    return '<div class="example-gallery"><p>作者示例 · ' + pictures.length + ' 张 <span>左右滑动或点选缩略图</span></p><div class="example-gallery__items">' + pictures.map(function (b, i) {
+      return '<button type="button" data-action="image-select" aria-pressed="' + (i === 0 ? 'true' : 'false') + '" data-id="' + esc(s.id) + '" data-image-index="' + i + '" aria-label="查看' + esc(s.name) + '示例 ' + (i + 1) + '"><img src="' + esc(b.v.src) + '" alt="' + esc(b.v.cap) + '" width="' + s.cover.w + '" height="' + s.cover.h + '" loading="lazy"><span>' + pad2(i + 1) + '</span></button>';
     }).join('') + '</div></div>';
+  }
+
+  function exampleArrowsHTML(action, id, total) {
+    return '<button type="button" class="example-arrow example-arrow--prev" data-action="' + action + '" data-id="' + esc(id) + '" data-direction="-1" aria-label="上一张示例">' + ICON.arrowLeft + '</button>' +
+      '<span class="example-counter" aria-live="polite" aria-atomic="true">1 / ' + total + '</span>' +
+      '<button type="button" class="example-arrow example-arrow--next" data-action="' + action + '" data-id="' + esc(id) + '" data-direction="1" aria-label="下一张示例">' + ICON.arrowRight + '</button>';
+  }
+
+  function animateExample(img, direction) {
+    if (!reduce && img.animate) img.animate([
+      { opacity: 0.65, transform: 'translateX(' + (direction < 0 ? '-24px' : '24px') + ')' },
+      { opacity: 1, transform: 'translateX(0)' }
+    ], { duration: 220, easing: 'ease-out' });
+  }
+
+  function selectExample(s, index, direction) {
+    var pictures = (s.guide || []).filter(function (b) { return b.t === 'img'; });
+    var host = $('.example-carousel');
+    if (!host || host.getAttribute('data-id') !== s.id || !pictures.length) return;
+    index = (index + pictures.length) % pictures.length;
+    var picture = pictures[index].v;
+    host.setAttribute('data-image-index', String(index));
+    var img = $('.cover img', host);
+    img.src = picture.src; img.alt = picture.cap || s.name;
+    if (direction) animateExample(img, direction);
+    $('.example-counter', host).textContent = (index + 1) + ' / ' + pictures.length;
+    $('figcaption', host).textContent = '来源案例 · 非本站实测 · ' + (picture.cap || '') + ' · © ' + (picture.credit || '') + ' · ' + (picture.license || '');
+    $('.preview-zoom').setAttribute('data-image-index', String(index));
+    $$('.example-gallery [data-image-index]').forEach(function (button) {
+      var selected = Number(button.getAttribute('data-image-index')) === index;
+      button.setAttribute('aria-pressed', selected ? 'true' : 'false');
+      if (selected) {
+        var strip = button.parentElement;
+        if (strip.scrollTo) strip.scrollTo({ left: Math.max(0, button.offsetLeft - strip.offsetLeft - (strip.clientWidth - button.offsetWidth) / 2), behavior: 'auto' });
+      }
+    });
+  }
+
+  // Vertical scrolling and pinch zoom remain native; only horizontal gestures flip images.
+  function bindImageSwipe(surface, step) {
+    var pointer = null, wheelAt = 0;
+    surface.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    surface.addEventListener('pointerdown', function (e) {
+      if (e.button !== 0 || e.isPrimary === false || e.target.closest('button')) return;
+      pointer = { id: e.pointerId, x: e.clientX, y: e.clientY };
+      try { surface.setPointerCapture(e.pointerId); } catch (err) { /* optional */ }
+    });
+    surface.addEventListener('pointerup', function (e) {
+      if (!pointer || pointer.id !== e.pointerId) return;
+      var dx = e.clientX - pointer.x, dy = e.clientY - pointer.y;
+      pointer = null;
+      if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.2) step(dx < 0 ? 1 : -1);
+    });
+    surface.addEventListener('pointercancel', function () { pointer = null; });
+    surface.addEventListener('lostpointercapture', function () { pointer = null; });
+    surface.addEventListener('wheel', function (e) {
+      if (Math.abs(e.deltaX) < 12 || Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      if (Date.now() - wheelAt < 650) return;
+      wheelAt = Date.now(); step(e.deltaX > 0 ? 1 : -1);
+    }, { passive: false });
+  }
+
+  function detailCarouselInit() {
+    var host = $('.example-carousel');
+    if (!host) return;
+    var s = byId(host.getAttribute('data-id'));
+    function step(direction) { selectExample(s, Number(host.getAttribute('data-image-index')) + direction, direction); }
+    bindImageSwipe($('.cover', host), step);
+    host.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault(); step(e.key === 'ArrowRight' ? 1 : -1);
+    });
+    selectExample(s, 0);
   }
 
   /* 顶部提示词区：图片风格给双轨页签，其余分类给场景任务 */
@@ -1441,6 +1517,7 @@
 
     observeReveal();
     heroCarouselInit();
+    detailCarouselInit();
 
     if (keepFocus) {
       var again = $('[data-action="filter-search"]');
@@ -1792,14 +1869,26 @@
       if (ready) downloadText(ready.id + '-my-prompt.md', '# ' + ready.name + '\n\n' + preparedPrompt(ready) + '\n\n来源：' + ready.source.url + '\n作者：' + ready.source.contributor + '\n授权：' + ready.license + (ready.licenseNote ? ' · ' + ready.licenseNote : '') + (ready.license === 'CC-BY-4.0' ? ' https://creativecommons.org/licenses/by/4.0/' : '') + '\n中文整理及用户填写已改编。\n' + (ready.licenseText || '') + '\n本站整理版尚未逐条模型实测。', 'text/markdown');
       return;
     }
+    if (action === 'image-select' || action === 'example-step') {
+      e.preventDefault();
+      var example = byId(t.getAttribute('data-id'));
+      var carousel = $('.example-carousel');
+      if (!example || !carousel) return;
+      var current = Number(carousel.getAttribute('data-image-index'));
+      var direction = Number(t.getAttribute('data-direction'));
+      var next = action === 'image-select' ? Number(t.getAttribute('data-image-index')) : current + direction;
+      selectExample(example, next, next < current ? -1 : 1);
+      return;
+    }
     if (action === 'image-expand') {
       e.preventDefault();
       var visual = byId(t.getAttribute('data-id'));
       if (!visual || !visual.cover) return;
       var picture = { src: visual.cover.src, cap: visual.name, credit: visual.cover.creator, license: visual.cover.license };
+      var pictures = (visual.guide || []).filter(function (b) { return b.t === 'img'; });
+      var imageIndex = 0;
       if (t.hasAttribute('data-image-index')) {
-        var imageIndex = Number(t.getAttribute('data-image-index'));
-        var pictures = (visual.guide || []).filter(function (b) { return b.t === 'img'; });
+        imageIndex = Number(t.getAttribute('data-image-index'));
         if (!Number.isInteger(imageIndex) || !pictures[imageIndex]) return;
         picture = pictures[imageIndex].v;
       }
@@ -1807,7 +1896,27 @@
       viewer.className = 'image-viewer';
       viewer.setAttribute('aria-label', visual.name + '完整案例图');
       viewer.innerHTML = '<button type="button" class="image-viewer__close" aria-label="关闭大图">关闭 ×</button><img src="' + esc(picture.src) + '" alt="' + esc(picture.cap) + '"><p>来源案例 · 非本站实测 · ' + esc(picture.credit) + ' · ' + esc(picture.license) + '</p>';
+      if (pictures.length > 1) viewer.insertAdjacentHTML('beforeend', exampleArrowsHTML('viewer-step', visual.id, pictures.length));
       document.body.appendChild(viewer);
+      if (pictures.length > 1) {
+        $('.example-counter', viewer).textContent = (imageIndex + 1) + ' / ' + pictures.length;
+        function viewerStep(direction) {
+          imageIndex = (imageIndex + direction + pictures.length) % pictures.length;
+          picture = pictures[imageIndex].v;
+          var img = $('img', viewer);
+          img.src = picture.src; img.alt = picture.cap || visual.name;
+          animateExample(img, direction);
+          $('p', viewer).textContent = '来源案例 · 非本站实测 · ' + (picture.cap || '') + ' · ' + picture.credit + ' · ' + picture.license;
+          $('.example-counter', viewer).textContent = (imageIndex + 1) + ' / ' + pictures.length;
+          selectExample(visual, imageIndex);
+        }
+        $$('.example-arrow', viewer).forEach(function (button) { button.addEventListener('click', function () { viewerStep(Number(button.getAttribute('data-direction'))); }); });
+        bindImageSwipe($('img', viewer), viewerStep);
+        viewer.addEventListener('keydown', function (ev) {
+          if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+          ev.preventDefault(); viewerStep(ev.key === 'ArrowRight' ? 1 : -1);
+        });
+      }
       var opener = t;
       function closeViewer() { viewer.remove(); document.body.style.overflow = ''; opener.focus(); }
       $('button', viewer).addEventListener('click', closeViewer);

@@ -65,6 +65,7 @@ const HASHES = [
   ['library', '#/library'],
   ['library-last', '#/library?page=7'],
   ['library-code', '#/library?cat=code'],
+  ['detail-examples', '#/style/threads-inka-minimal-paper'],
   ['detail-image', '#/style/cyber-night-market'],
   ['detail-text', '#/style/linux-terminal'],
   ['about', '#/about'],

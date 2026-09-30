@@ -37,6 +37,9 @@ const mutations={
  threadsLicense:['data-curated.js','"license": "CUSTOM"','"license": "CC-BY-4.0"'],
  longPromptLimit:['rules.js','prompt:  { min: 40, max: 8000 }','prompt:  { min: 40, max: 4000 }'],
  longPromptGuard:['rules.js',"else if (card.prompt.length > LIMITS.prompt.max) E('prompt', '图片转换提示词过长');",''],
+ exampleMain:['app.js','var picture = pictures[index].v;','var picture = pictures[0].v;'],
+ exampleSwipe:['app.js','Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.2) step','false) step'],
+ exampleViewerStep:['app.js','imageIndex = (imageIndex + direction + pictures.length) % pictures.length;','imageIndex = imageIndex;'],
  paginationOffset:['app.js','var start = (state.page - 1) * 12;','var start = 0;'],
  paginationContext:['app.js','libHref({ page: String(page) })',"('#/library?page=' + page)"],
  paginationHome:['app.js','list.slice((state.page - 1) * 12, state.page * 12)','list.slice(0, 12)'],
@@ -239,15 +242,41 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    for(const s of imported){
      await nav('#/style/'+s.id);const pictures=s.guide.filter(b=>b.t==='img');
      assert.equal(all('.detail-preview figure').length,1,'one large preview, not a stacked image wall');
-     const thumbs=all('.example-gallery [data-action="image-expand"]');assert.equal(thumbs.length,pictures.length);
+     const thumbs=all('.example-gallery [data-action="image-select"]');assert.equal(thumbs.length,pictures.length);
      const source=q('.srcbox');assert(!source.textContent.includes('仓库热度'));assert(source.querySelector('a[href="'+s.source.promptUrl+'"]'));
      for(let i=0;i<thumbs.length;i++){
-       thumbs[i].click();const dialog=q('dialog.image-viewer');assert(dialog&&dialog.open);
+       thumbs[i].click();assert.equal(q('.example-carousel .cover img').getAttribute('src'),pictures[i].v.src);assert.equal(thumbs[i].getAttribute('aria-pressed'),'true');
+       const zoom=q('.preview-zoom');zoom.click();const dialog=q('dialog.image-viewer');assert(dialog&&dialog.open);
        assert.equal(dialog.querySelector('img').getAttribute('src'),pictures[i].v.src);
-       assert(dialog.textContent.includes('经授权收录'));dialog.querySelector('button').click();assert.equal(d.activeElement,thumbs[i]);
+       assert(dialog.textContent.includes('经授权收录'));dialog.querySelector('button').click();assert.equal(d.activeElement,zoom);
      }
      const ex=all('.takeaway a[download]');const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.licenseNote));
    }
+ });
+ await check('example-carousel-arrows-swipe-and-viewer',async()=>{
+   const s=cards.find(s=>s.id==='threads-inka-minimal-paper');const pictures=s.guide.filter(b=>b.t==='img');
+   await nav('#/style/'+s.id);
+   const src=()=>q('.example-carousel .cover img').getAttribute('src');
+   const step=dir=>q('.example-carousel [data-direction="'+dir+'"]').click();
+   step(1);assert.equal(src(),pictures[1].v.src);
+   step(-1);assert.equal(src(),pictures[0].v.src);
+   step(-1);assert.equal(src(),pictures[pictures.length-1].v.src,'previous wraps to last');
+   step(1);assert.equal(src(),pictures[0].v.src);
+   const surface=q('.example-carousel .cover');
+   function pointer(type,x,y){const e=new w.MouseEvent(type,{bubbles:true,button:0,clientX:x,clientY:y});Object.defineProperty(e,'pointerId',{value:1});surface.dispatchEvent(e);}
+   pointer('pointerdown',200,100);pointer('pointerup',60,110);assert.equal(src(),pictures[1].v.src,'left swipe advances');
+   pointer('pointerdown',60,100);pointer('pointerup',200,110);assert.equal(src(),pictures[0].v.src,'right swipe returns');
+   pointer('pointerdown',200,100);pointer('pointerup',180,230);assert.equal(src(),pictures[0].v.src,'vertical gesture does not change image');
+   pointer('pointerdown',200,100);pointer('pointercancel',60,110);pointer('pointerup',60,110);assert.equal(src(),pictures[0].v.src,'cancelled gesture ignored');
+   const vertical=new w.WheelEvent('wheel',{deltaY:100,cancelable:true});surface.dispatchEvent(vertical);assert(!vertical.defaultPrevented);
+   surface.dispatchEvent(new w.WheelEvent('wheel',{deltaX:80,cancelable:true}));assert.equal(src(),pictures[1].v.src);
+   q('.example-carousel').dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));assert.equal(src(),pictures[2].v.src);
+   assert.equal(q('.example-counter').textContent,'3 / '+pictures.length);
+   q('.preview-zoom').click();const viewer=q('.image-viewer');assert.equal(viewer.querySelector('img').getAttribute('src'),pictures[2].v.src);
+   viewer.querySelector('[data-direction="1"]').click();assert.equal(viewer.querySelector('img').getAttribute('src'),pictures[3].v.src);assert.equal(src(),pictures[3].v.src);
+   viewer.dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowLeft',bubbles:true}));assert.equal(viewer.querySelector('img').getAttribute('src'),pictures[2].v.src);
+   viewer.querySelector('.image-viewer__close').click();assert(!q('.image-viewer'));assert.equal(q('.example-gallery [aria-pressed="true"]').getAttribute('data-image-index'),'2');
+   await nav('#/style/cyber-night-market');assert(!q('.example-carousel'));assert(!q('.example-arrow'));q('.preview-zoom').click();assert(!q('.image-viewer .example-arrow'));q('.image-viewer__close').click();
  });
  await check('complete-long-prompts-with-bounded-size',()=>{
    const sample=cards.find(s=>s.id==='threads-inka-pastel-crayon');assert(sample.prompt.length>4000);
