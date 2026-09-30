@@ -1897,7 +1897,14 @@
       viewer.className = 'image-viewer';
       viewer.setAttribute('aria-label', visual.name + '完整案例图');
       viewer.innerHTML = '<button type="button" class="image-viewer__close" aria-label="关闭大图">关闭 ×</button><img src="' + esc(picture.src) + '" alt="' + esc(picture.cap) + '"><p>来源案例 · 非本站实测 · ' + esc(picture.credit) + ' · ' + esc(picture.license) + '</p>';
-      if (pictures.length > 1) viewer.insertAdjacentHTML('beforeend', exampleArrowsHTML('viewer-step', visual.id, pictures.length));
+      if (pictures.length > 1) {
+        var stage = document.createElement('div');
+        stage.className = 'image-viewer__stage';
+        var largeImage = $('img', viewer);
+        viewer.insertBefore(stage, largeImage);
+        stage.appendChild(largeImage);
+        stage.insertAdjacentHTML('beforeend', exampleArrowsHTML('viewer-step', visual.id, pictures.length));
+      }
       document.body.appendChild(viewer);
       if (pictures.length > 1) {
         $('.example-counter', viewer).textContent = (imageIndex + 1) + ' / ' + pictures.length;
