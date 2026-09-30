@@ -358,8 +358,8 @@ function clickThrough(el) {
       (back ? '文案="' + back.textContent.trim() + '" ' +
         Math.round(backRect.width) + 'x' + Math.round(backRect.height) : '找不到 .gh__nav a.backlink') +
       (backHit ? ' 命中=' + cn(backHit.el) : ' ✗ 找不到落点'));
-  rec('详情页返回键指向提示词库且没挂 data-action',
-      !!back && (back.getAttribute('href') || '').indexOf('#/library') === 0 &&
+  rec('首页详情返回键保留首页位置且没挂 data-action',
+      !!back && back.getAttribute('href') === '#/' &&
       !back.hasAttribute('data-action'),
       back ? 'href=' + back.getAttribute('href') : 'n/a');
 
@@ -439,15 +439,16 @@ function clickThrough(el) {
   await sleep(300);
   rec('导航 → 提示词库', location.hash === '#/library?track=text' && !!document.querySelector('.filters'), 'hash=' + location.hash);
 
-  /* 6. 加载更多（要在还没筛选、列表满 78 条时测） */
-  var more = document.querySelector('.loadmore a');
+  /* 6. 下一页保持每页数量，展示另一组内容。 */
+  var more = document.querySelector('.pagination a[rel="next"]');
   if (more) {
-    var n0 = document.querySelectorAll('.gallery .card').length;
+    var oldIds = Array.from(document.querySelectorAll('.gallery .card__link'), function(a) { return a.hash; });
     realClick(more);
     await sleep(300);
-    rec('加载更多真的加了卡片', document.querySelectorAll('.gallery .card').length > n0,
-        n0 + ' → ' + document.querySelectorAll('.gallery .card').length);
-  } else { rec('加载更多真的加了卡片', false, '没找到按钮'); }
+    var newIds = Array.from(document.querySelectorAll('.gallery .card__link'), function(a) { return a.hash; });
+    rec('列表下一页', newIds.length === 12 && newIds.every(function(id) { return oldIds.indexOf(id) < 0; }) &&
+      document.querySelector('.pagination [aria-current="page"]').textContent === '2', 'hash=' + location.hash);
+  } else { rec('列表下一页', false, '没找到下一页'); }
 
   /* 7. 分类栏标签 */
   var catTab = document.querySelectorAll('.cattab')[2];

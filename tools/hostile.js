@@ -301,15 +301,16 @@ function run() {
       note: n0 + ' → ' + n1 + '  hash=' + location.hash + (r.ok ? '' : ' —— ' + r.why) };
   });
 
-  /* 6. 加载更多（真链接） */
-  step('加载更多', function () {
+  /* 6. 分页仍使用真链接。 */
+  step('列表下一页', function () {
     goNav('#/library');
-    var n0 = document.querySelectorAll('.gallery .card').length;
-    var more = document.querySelector('.loadmore a');
-    if (!more) return { ok: false, note: '没有 load-more（首屏 ' + n0 + ' 张）' };
-    var r = clickMaybeDefault(more);
-    var n1 = document.querySelectorAll('.gallery .card').length;
-    return { ok: n1 > n0, note: n0 + ' → ' + n1 + (r.ok ? '' : ' —— ' + r.why) };
+    var first = document.querySelector('.gallery .card__link').hash;
+    var next = document.querySelector('.pagination a[rel="next"]');
+    if (!next) return { ok: false, note: '没有下一页' };
+    var r = clickMaybeDefault(next);
+    return { ok: document.querySelectorAll('.gallery .card').length === 12 &&
+      document.querySelector('.gallery .card__link').hash !== first &&
+      document.querySelector('.pagination [aria-current="page"]').textContent === '2', note: location.hash + (r.ok ? '' : ' —— ' + r.why) };
   });
 
   /* 7. 参考图折叠（<details>，零 JS） */
@@ -621,7 +622,7 @@ const MODES = ['top', 'plain', 'sandbox', 'no-io', 'no-raf', 'io-dead', 'io-dead
    它曾经是纯 JS 按钮，正是在这条走查里暴露出「宿主吃点击就死」，
    才改成真链接的 —— 别改回去。 */
 const JS_ONLY = ['详情页复制按钮', '详情页复制'];
-const NEEDS_LINK = ['首页点卡片', '详情页转换提示词', '导航→提示词库', '点用途 chip 筛选', '加载更多', '参考图折叠', '详情页导出'];
+const NEEDS_LINK = ['首页点卡片', '详情页转换提示词', '导航→提示词库', '点用途 chip 筛选', '列表下一页', '参考图折叠', '详情页导出'];
 
 function startServer() {
   const children = {}, parents = {};

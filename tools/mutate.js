@@ -2,10 +2,11 @@
 // Covers the current reviewed catalog; legacy dual-track features are not distributed.
 const {spawnSync}=require('child_process');
 const path=require('path');
-const cases=['keywords','text','disclosure','about','runtime','count','source','image','prompt','license','catalog','copy','export','detail','hero','search','sourceUI','savedPersist','savedLoad','savedFilter','savedScope','categoryTrack','savedUnavailable','slotValue','slotCopy','slotReset','slotHTML','slotPrivacy','preparedDownload','imageViewer','threadsLicense','exampleSelection','threadsOwner','threadsOrientation','longPromptLimit','longPromptGuard','useFilter'];
+const cases=['paginationOffset','paginationContext','paginationHome','keywords','text','disclosure','about','runtime','count','source','image','prompt','license','catalog','copy','export','detail','hero','search','sourceUI','savedPersist','savedLoad','savedFilter','savedScope','categoryTrack','savedUnavailable','slotValue','slotCopy','slotReset','slotHTML','slotPrivacy','preparedDownload','imageViewer','threadsLicense','exampleSelection','threadsOwner','threadsOrientation','longPromptLimit','longPromptGuard','useFilter'];
 const selected=process.argv[2]?cases.filter(x=>x===process.argv[2]):cases;
 if(!selected.length)throw Error('Unknown mutation');
 const expected = {
+ paginationOffset:'pagination-pages-context-and-boundaries', paginationContext:'pagination-pages-context-and-boundaries', paginationHome:'pagination-pages-context-and-boundaries',
  useFilter:'scene-and-category-filters',
  longPromptLimit:'complete-long-prompts-with-bounded-size', longPromptGuard:'complete-long-prompts-with-bounded-size',
  threadsOwner:'source-evidence-and-license', threadsOrientation:'threads-distinct-content-and-layout',

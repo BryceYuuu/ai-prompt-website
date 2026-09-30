@@ -24,7 +24,7 @@ const mutations={
  savedPersist:['app.js',"localStorage.setItem('shutong:saved', JSON.stringify(savedIds));","void 0;"],
  savedLoad:['app.js',"localStorage.getItem('shutong:saved')","'[]'"],
  savedFilter:['app.js',"if (f.saved === '1' && !isSaved(s.id)) return false;","if (false) return false;"],
- savedScope:['app.js',"esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', use: '', mood: '', limit: '' }))","esc('#/library?cat=' + key)"],
+ savedScope:['app.js',"esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', use: '', mood: '', page: '' }))","esc('#/library?cat=' + key)"],
  categoryTrack:['app.js',"track: f.track === 'text' ? 'text' : 'all', use: ''","track: f.track, use: ''"],
  savedUnavailable:['app.js',"catch (e) { /* Restricted storage still permits an in-session collection. */ }","catch (e) { throw e; }"],
  slotValue:['app.js',"return values[slot] && values[slot].trim() ? values[slot].trim() : token;","return token;"],
@@ -37,6 +37,9 @@ const mutations={
  threadsLicense:['data-curated.js','"license": "CUSTOM"','"license": "CC-BY-4.0"'],
  longPromptLimit:['rules.js','prompt:  { min: 40, max: 8000 }','prompt:  { min: 40, max: 4000 }'],
  longPromptGuard:['rules.js',"else if (card.prompt.length > LIMITS.prompt.max) E('prompt', '图片转换提示词过长');",''],
+ paginationOffset:['app.js','var start = (state.page - 1) * 12;','var start = 0;'],
+ paginationContext:['app.js','libHref({ page: String(page) })',"('#/library?page=' + page)"],
+ paginationHome:['app.js','list.slice((state.page - 1) * 12, state.page * 12)','list.slice(0, 12)'],
  useFilter:['app.js',"if (f.use && s.uses.indexOf(f.use) < 0) return false;","if (false) return false;"],
  threadsOwner:['data-curated.js','https://www.threads.com/@inkacalinka/post/Dc7fl2ulBQ5','https://www.threads.com/@lch1776244/post/Dc7fl2ulBQ5'],
  threadsOrientation:['data-curated.js','上方呈现羊毛毡绘本，下方保留原照片','上方保留原照片，下方呈现羊毛毡绘本'],
@@ -94,8 +97,8 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  await check('text-deliverables-and-retirement-audit',()=>{for(const s of cards.filter(s=>s.category!=='image')){assert.equal(s.track,'text');assert(!s.cover&&!s.local&&!s.cloud);assert(s.prompt.length>300);for(const label of ['【输入材料】','【处理步骤】','【交付内容】','【信息不足】'])assert(s.prompt.includes(label));assert(s.slots.length>0);}const a=JSON.parse(fs.readFileSync(path.join(root,'tools/curate/audit.json')));assert.equal(a.review.length,108);assert.equal(a.activeCount,cards.length);});
  await check('homepage-image-only-and-manual-carousel',async()=>{await nav('#/');assert(all('.card__link').length>0);for(const a of all('.card__link'))assert(images.some(s=>a.hash.endsWith(s.id)));const hero=q('.hero__plate');const first=hero.getAttribute('href');q('[data-action="hero-next"]').click();assert.notEqual(q('.hero__plate').getAttribute('href'),first);q('[data-action="hero-prev"]').click();assert.equal(q('.hero__plate').getAttribute('href'),first);});
  await check('scene-and-category-filters',async()=>{
-   await nav('#/library?track=text&limit=100');assert.equal(all('.gallery .card').length,48);
-   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat+'&limit=100');assert.equal(all('.gallery .card').length,cat==='image'?32:8);}
+   await nav('#/library?track=text');assert.equal(Number(q('.lib-count b').textContent),48);assert.equal(all('.gallery .card').length,12);
+   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat);assert.equal(Number(q('.lib-count b').textContent),cat==='image'?32:8);assert.equal(all('.gallery .card').length,cat==='image'?12:8);}
    const social=cards.filter(s=>s.uses.includes('社交封面'));await nav('#/library?use='+encodeURIComponent('社交封面'));
    assert.equal(Number(q('.lib-count b').textContent),social.length);assert.equal(all('.gallery .card').length,Math.min(12,social.length));
    assert(all('.gallery .card__link').every(a=>social.some(s=>a.hash==='#/style/'+s.id)));
@@ -103,6 +106,40 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    const codeTab=all('.catbar a').find(a=>new URLSearchParams(a.hash.split('?')[1]).get('cat')==='code');assert(codeTab);codeTab.click();await wait(12);
    assert.equal(all('.gallery .card').length,8,'changing from image filter to code clears conflicting track');
    assert.notEqual(new URLSearchParams(w.location.hash.split('?')[1]).get('track'),'both');
+ });
+ await check('pagination-pages-context-and-boundaries',async()=>{
+   const ids=()=>all('.gallery .card__link').map(a=>a.hash);
+   for(const [base,total] of [['#/',32],['#/library',80],['#/library?track=text',48]]) {
+     const seen=[];await nav(base);
+     assert(q('.pagination [aria-disabled="true"]'));assert(!q('.pagination [rel="prev"]'));
+     for(let page=1;page<=Math.ceil(total/12);page++) {
+       assert.equal(q('.pagination [aria-current="page"]').textContent,String(page));
+       assert.equal(ids().length,Math.min(12,total-seen.length));seen.push(...ids());
+       const next=q('.pagination [rel="next"]');
+       if(page<Math.ceil(total/12)){assert(next);next.click();await wait(20);}else assert(!next);
+     }
+     assert.equal(new Set(seen).size,total,'no missing or duplicate cards across pages');
+     q('.pagination [rel="prev"]').click();await wait(20);
+     assert.equal(q('.pagination [aria-current="page"]').textContent,String(Math.ceil(total/12)-1));
+   }
+   await nav('#/library?cat=image&sort=new&q=照片&page=2');
+   const pageLink=q('.pagination [rel="prev"]');assert(pageLink);
+   const params=new URLSearchParams(pageLink.hash.split('?')[1]);
+   for(const [k,v] of [['cat','image'],['sort','new'],['q','照片']])assert.equal(params.get(k),v);
+   const back=w.location.hash;const first=q('.gallery .card__link');first.click();await wait(20);
+   assert(all('a').some(a=>a.getAttribute('href')===back),'detail back link retains page');
+   await nav(back);q('[data-action="sort"]').value='hot';q('[data-action="sort"]').dispatchEvent(new w.Event('change',{bubbles:true}));await wait(20);
+   assert.equal(q('.pagination [aria-current="page"]').textContent,'1');
+   await nav('#/library?page=2');q('[data-action="filter-search"]').value='inkacalinka';q('[data-action="filter-search"]').dispatchEvent(new w.Event('input',{bubbles:true}));await wait(360);
+   assert.equal(q('.pagination [aria-current="page"]').textContent,'1');assert.equal(ids().length,10);
+   for(const value of ['-1','0','NaN','1.5','Infinity']) {await nav('#/library?page='+value);assert.equal(q('.pagination [aria-current="page"]').textContent,'1');}
+   await nav('#/library?page=999');assert.equal(q('.pagination [aria-current="page"]').textContent,'7');assert.equal(ids().length,8);
+   await nav('#/library?q=zzzzNoSuchPrompt&page=4');assert(!q('.pagination'));assert(q('.empty'));
+   await nav('#/library?cat=code&page=4');assert.equal(q('.pagination [aria-current="page"]').textContent,'1');assert(!q('.pagination [rel="next"]'));
+   const fresh=session({savedRaw:JSON.stringify(cards.slice(0,15).map(s=>s.id))});
+   try {await wait(80);const fw=fresh.dom.window,fd=fw.document;fw.location.hash='#/library?saved=1&page=2';fw.dispatchEvent(new fw.Event('hashchange'));await wait(20);
+     assert.equal(fd.querySelectorAll('.gallery .card').length,3);assert(fd.querySelector('.pagination [rel="prev"]').hash.includes('saved=1'));assert.deepEqual(fresh.errors,[]);
+   }finally{fresh.dom.window.close();}
  });
  await check('keyword-aliases-in-library-and-palette',async()=>{
    const cases=[['照片转手办','anime-figurine'],['amigurumi','plush-toy'],['会议纪要','meeting-minutes'],['Anki卡片','flashcard-maker'],['CODE REVIEW','code-reviewer']];

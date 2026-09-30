@@ -63,6 +63,7 @@ setTimeout(function measureOverflow() {
 const HASHES = [
   ['home', '#/'],
   ['library', '#/library'],
+  ['library-last', '#/library?page=7'],
   ['library-code', '#/library?cat=code'],
   ['detail-image', '#/style/cyber-night-market'],
   ['detail-text', '#/style/linux-terminal'],

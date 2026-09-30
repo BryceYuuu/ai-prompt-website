@@ -371,7 +371,7 @@
   /* ------------------------------------------------------------ state -- */
   var state = {
     filters: { cat: '', use: '', mood: '', track: 'all', q: '', sort: 'hot', saved: '' },
-    limit: 12,
+    page: 1,
     detailTrack: 'local',
     /* 窄屏上筛选条默认收起 —— 不收的话第一张卡要滚过一整屏才出现，
        而「先看到东西」才是这个站点存在的理由。桌面端由 CSS 忽略这个状态。 */
@@ -601,7 +601,7 @@
     var pool = STYLES.filter(function (s) { return (f.saved !== '1' || isSaved(s.id)) && (f.track !== 'text' || s.category !== 'image'); });
     var tab = function (key, name, n) {
       return '<a class="cattab' + (activeKey === key ? ' is-on' : '') + '" href="' +
-        esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', use: '', mood: '', limit: '' })) + '">' +
+        esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', use: '', mood: '', page: '' })) + '">' +
         esc(name) + '<span class="cattab__n">' + pad2(n) + '</span></a>';
     };
     return '<div class="catbar"><div class="wrap catbar__in">' +
@@ -703,6 +703,8 @@
 
   function catalogueHTML() {
     var list = imageStyles();
+    var pages = Math.max(1, Math.ceil(list.length / 12));
+    state.page = Math.min(state.page, pages);
     return '<section class="catalogue" id="collection">' +
       '<div class="wrap">' +
         '<div class="catalogue__head reveal">' +
@@ -710,7 +712,8 @@
           '<div class="catalogue__side"><p>先看效果，再选风格。<br>把喜欢的收藏起来，随时开始创作。</p>' +
           '<a class="btn btn--ghost btn--sm" href="#/library?cat=image">筛选图片风格' + ICON.arrowRight + '</a></div>' +
         '</div>' +
-        '<div class="gallery">' + list.map(styleCard).join('') + '</div>' +
+        '<div class="gallery">' + list.slice((state.page - 1) * 12, state.page * 12).map(styleCard).join('') + '</div>' +
+        paginationHTML(list.length, pages, true) +
         '<p class="collection-note">图片为来源项目公开案例，已保留署名；本站中文整理版尚未逐条实测。</p>' +
       '</div>' +
     '</section>';
@@ -753,7 +756,7 @@
      可以是真 <a href>，浏览器的默认锚点跳转成为一条**不依赖 JS 的通路**。
      宿主若在捕获阶段吃掉 click，我们的监听器收不到，但 hash 照改，
      hashchange 照旧兜住渲染。
-     传 limit:'' 表示把这个条件重置掉（新筛选回到第一页）。 */
+     传 page:'' 表示把这个条件重置掉（新筛选回到第一页）。 */
   function libHref(overrides) {
     var next = {};
     Object.keys(state.filters).forEach(function (k) { next[k] = state.filters[k]; });
@@ -765,9 +768,9 @@
     return '#/library' + (parts.length ? '?' + parts.join('&') : '');
   }
 
-  /* 改一个筛选条件 —— 同时把 limit 重置回第一页 */
+  /* 改一个筛选条件 —— 同时把页码重置回第一页 */
   function filterHref(param, value) {
-    var ov = { limit: '' };
+    var ov = { page: '' };
     ov[param] = value;
     return libHref(ov);
   }
@@ -781,6 +784,33 @@
     }).join('');
   }
 
+  function paginationHTML(total, pages, home) {
+    if (!total) return '';
+    var current = state.page;
+    function link(page, label, extra) {
+      return '<a class="pagination__link" href="' + esc(home ? "#/?page=" + page : libHref({ page: String(page) })) + '"' +
+        (page === current ? ' aria-current="page"' : '') + (extra || '') + '>' + label + '</a>';
+    }
+    var numbers = [];
+    for (var page = 1; page <= pages; page++) {
+      // Five positions keep touch controls readable on small screens.
+      if (pages <= 5 || page === 1 || page === pages ||
+          (current <= 3 ? page <= 3 : (current >= pages - 2 ? page >= pages - 2 : page === current))) {
+        if (numbers.length && page - numbers[numbers.length - 1] > 1) numbers.push(0);
+        numbers.push(page);
+      }
+    }
+    return '<nav class="pagination" aria-label="提示词列表分页">' +
+      '<p class="pagination__status">第 ' + current + ' / ' + pages + ' 页 · 显示 ' + ((current - 1) * 12 + 1) + '–' + Math.min(current * 12, total) + ' 条，共 ' + total + ' 条</p>' +
+      '<div class="pagination__controls">' +
+      (current > 1 ? link(current - 1, '← 上一页', ' rel="prev"') : '<span class="pagination__link" aria-disabled="true">← 上一页</span>') +
+      '<div class="pagination__pages">' + numbers.map(function (n) {
+        return n ? link(n, String(n), ' aria-label="第 ' + n + ' 页"') : '<span class="pagination__ellipsis" aria-hidden="true">…</span>';
+      }).join('') + '</div>' +
+      (current < pages ? link(current + 1, '下一页 →', ' rel="next"') : '<span class="pagination__link" aria-disabled="true">下一页 →</span>') +
+      '</div></nav>';
+  }
+
   function libraryView() {
     function available(field, key) {
       var f = state.filters;
@@ -790,7 +820,10 @@
     }
 
     var list = filtered();
-    var shown = list.slice(0, state.limit);
+    var pageCount = Math.max(1, Math.ceil(list.length / 12));
+    state.page = Math.min(state.page, pageCount);
+    var start = (state.page - 1) * 12;
+    var shown = list.slice(start, start + 12);
     var f = state.filters;
     var resetHref = f.saved === '1' ? '#/library?saved=1' : (f.track === 'text' ? '#/library?track=text' : '#/library');
     /* 标题必须与筛选结果一致：只有 f.track 真的是 both / text 时才写「双轨 / 单条」，
@@ -875,11 +908,7 @@
               '<h2>' + (f.saved === '1' && !savedIds.length ? '还没有收藏，先去发现一个好想法。' : '这个组合下还没有提示词') + '</h2>' +
               '<p>' + (f.saved === '1' && !savedIds.length ? '点击卡片右上角的书签，就能保存在这里。' : '试试更短的关键词，或清空筛选重新浏览。') + '</p>' +
               '<a class="btn btn--primary" href="' + (f.saved === '1' && !savedIds.length ? '#/' : resetHref) + '">' + (f.saved === '1' && !savedIds.length ? '发现图片风格' : '清空筛选') + '</a></div>') +
-          (list.length > shown.length
-            ? '<div class="loadmore"><a class="btn btn--ghost btn--lg" href="' +
-              esc(libHref({ limit: String(state.limit * 2) })) + '">加载更多（还有 ' +
-              (list.length - shown.length) + ' 条）</a></div>'
-            : '') +
+          paginationHTML(list.length, pageCount) +
         '</div>' +
       '</section>';
   }
@@ -1192,7 +1221,7 @@
           '<div class="gh__nav">' +
             '<a class="backlink" href="' +
               esc(lastLibraryHash || ('#/library?cat=' + encodeURIComponent(s.category))) + '">' +
-              ICON.arrowLeft + '<span>返回提示词库</span>' +
+              ICON.arrowLeft + '<span>' + (lastLibraryHash && /^#\/(?:\?|$)/.test(lastLibraryHash) ? '返回图片风格' : '返回提示词库') + '</span>' +
             '</a>' +
             '<div class="crumbs">' +
               '<a href="#/">首页</a><span>/</span>' +
@@ -1344,6 +1373,7 @@
 
   function render() {
     var route = parseHash();
+    var previousPage = state.page;
     var viewer = $('.image-viewer');
     if (viewer) { viewer.remove(); document.body.style.overflow = ''; }
 
@@ -1356,6 +1386,11 @@
       document.activeElement.getAttribute('data-action') === 'filter-search';
     var caret = keepFocus ? document.activeElement.selectionStart : null;
 
+    if (route.path === '/' || route.path === '/library') {
+      var requestedPage = Number(route.params.page);
+      state.page = Number.isSafeInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+      if (route.path === '/') lastLibraryHash = routeKey || readHash() || '#/';
+    }
     if (route.path === '/library') {
       state.filters = {
         cat: route.params.cat || '',
@@ -1369,10 +1404,6 @@
         sort: route.params.sort === 'new' ? 'new' : 'hot',
         saved: route.params.saved === '1' ? '1' : ''
       };
-      /* 已展示条数也进地址 —— 「加载更多」才能是一个真链接 */
-      var lim = parseInt(route.params.limit, 10);
-      state.limit = (lim > 12) ? lim : 12;
-
       /* 记住这个地址（含筛选），详情页的返回键靠它回到读者刚才那一屏。
          放在这里而不是 navigate() 里，是因为 hashchange（前进/后退）
          也要更新它 —— 从详情页按浏览器后退回到列表，返回键不该再指向别处。 */
@@ -1419,7 +1450,14 @@
       }
     }
 
-    if (route.path !== '/library') window.scrollTo({ top: 0, behavior: 'auto' });
+    if ((route.path === '/' || route.path === '/library') && !keepFocus && previousPage !== state.page) {
+      var results = $(route.path === '/' ? '.catalogue__head' : '.lib-bar');
+      if (results) {
+        results.setAttribute('tabindex', '-1');
+        results.focus({ preventScroll: true });
+        window.scrollTo({ top: Math.max(0, results.getBoundingClientRect().top + window.scrollY - 110), behavior: 'auto' });
+      }
+    } else if (route.path !== '/library') window.scrollTo({ top: 0, behavior: 'auto' });
   }
 
   /* ============================================================= motion = */
@@ -1841,7 +1879,7 @@
       return;
     }
 
-    /* filter / load-more / detail-track 原先都是按钮 + JS。
+    /* filter / pagination / detail-track 原先都是按钮 + JS。
        现在它们都是真 <a href="#/library?...">：条件进地址，可分享、可收藏，
        而且浏览器的默认锚点跳转让它们在「宿主吃掉 click」的环境里依然可用。
        对应分支已删除 —— 留着一个永远不会被触发的分支，
@@ -1854,7 +1892,7 @@
     if (!form) return;
     e.preventDefault();
     var q = form.querySelector('input[name="q"]').value.trim();
-    state.limit = 12;
+    state.page = 1;
     go('/library', { cat: 'image', q: q });
   }
 
@@ -1876,7 +1914,7 @@
         var next = {};
         Object.keys(state.filters).forEach(function (k) { next[k] = state.filters[k]; });
         next.q = v;
-        state.limit = 12;
+        state.page = 1;
         go('/library', next);
       }, 320);
     }
@@ -1896,7 +1934,7 @@
       var next = {};
       Object.keys(state.filters).forEach(function (k) { next[k] = state.filters[k]; });
       next.sort = t.value;
-      state.limit = 12;
+      state.page = 1;
       go('/library', next);
       return;
     }
