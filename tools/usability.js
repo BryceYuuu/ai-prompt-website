@@ -304,9 +304,10 @@ function clickThrough(el) {
   var ticks = document.querySelectorAll('.hero__index .tick');
   var tick7 = ticks[6];
   var tickHit = tick7 ? clickTarget(tick7) : null;
-  rec('首页图版台：刻度尺 18 格，指针落得到',
-      ticks.length === 18 && !!tickHit,
-      '格数=' + ticks.length + (tickHit ? ' 命中=' + cn(tickHit.el) : ' ✗ 找不到落点'));
+  var imageTotal = STYLES.filter(function (s) { return s.category === 'image'; }).length;
+  rec('首页图版台：刻度尺覆盖所有图片风格，指针落得到',
+      ticks.length === imageTotal && imageTotal > 0 && !!tickHit,
+      '格数=' + ticks.length + ' / ' + imageTotal + (tickHit ? ' 命中=' + cn(tickHit.el) : ' ✗ 找不到落点'));
 
   var wantId = tick7 ? tick7.getAttribute('data-id') : '';
   var srcBefore = (document.querySelector('.hero__plate .cover img') || {}).src || '';

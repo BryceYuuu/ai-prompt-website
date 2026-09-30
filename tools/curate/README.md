@@ -1,11 +1,13 @@
 # 内容维护
 
-本目录离线生成当前 66 条内容。编辑 text-specs.json（文字）或 build.py 的 image_specs（图片），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
+本目录离线生成当前 70 条内容。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-lch1776244.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
 
 来源快照、SHA256、原始署名和授权位于 sources/。audit.json 记录对旧 108 条目录的退役/替换处理；previous-catalog.json 仅保留旧目录的 id、名称和分类，用于复现审查记录。GitHub stars 以 sources/repository-stars.json 的逐仓库日期为准；当前采用的两个来源已于 2026-09-26 重新核验，是仓库级快照，不代表单条模板热度。
 
-本站中文内容经过整理而非逐字翻译，尚未逐条模型实测。图片来自明确标注 CC BY 4.0 的来源案例，没有使用授权说明不一致的候选图库。
+原有 GitHub 中文模板经过整理而非逐字翻译；新增 Threads 模板保留作者原文，单独补充使用检查。所有模板尚未逐条模型实测。原有图片按来源 CC BY 4.0 收录，Threads 图片按维护者确认的转载授权收录，授权分别记录。
 
 完整开源范围与署名见根目录 THIRD_PARTY_NOTICES.md。所有内容更新目前需人工审核；此脚本不联网采集，也不自动发布。
 
 keywords.json 维护每条模板的中英文搜索别名；添加后重新运行生成器。关键词须对应实际任务，不标注未验证的模型兼容性。
+
+2026-10-01 新增 Threads 公开收录：4 组提示词、18 张原始图片，作者回复和原帖分别记录。manifest 固定原文和图片 SHA256，构建时校验；同组去重为一张风格卡，多图保留到详情图库。该批采用 CUSTOM 转载授权说明，不适用原有案例的 CC BY 4.0；未采集登录墙内内容或其他评论者素材。

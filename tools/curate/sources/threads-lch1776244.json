@@ -1,0 +1,231 @@
+{
+  "creator": "Chloe_Lai (@lch1776244)",
+  "profileUrl": "https://www.threads.com/@lch1776244",
+  "collectedAt": "2026-10-01",
+  "scope": "4 public posts and their author-authored prompt replies; 18 source images. Login-gated history and third-party replies excluded. Not a full account archive.",
+  "license": "CUSTOM",
+  "licenseNote": "网站维护者于 2026-10-01 确认拥有账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+  "cases": [
+    {
+      "id": "threads-retro-diagram",
+      "name": "照片转复古图解海报",
+      "latin": "Retro Diagram Poster",
+      "tagline": "原照与双色图解上下对照，把复杂场景变成有故事的复古印刷品",
+      "input": "人物、动物、物品或风景照片",
+      "moods": [
+        "复古",
+        "秩序"
+      ],
+      "keywords": [
+        "复古海报",
+        "图解插画",
+        "双画面对照",
+        "双拼海报",
+        "双色综合印刷",
+        "retro diagram",
+        "Chloe_Lai",
+        "lch1776244",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@lch1776244/post/Dd5TeHwG-Bj",
+      "promptUrl": "https://www.threads.com/@lch1776244/post/Dd5Te0TG4mM",
+      "promptFile": "threads-retro-diagram.txt",
+      "promptSha256": "3c4704d1f73ac5a8c8b5125471c45a2d7b318a66a09d90d050f10b006fdf34ca",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-retro-diagram/1.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "630474b5856da5784567b5ab4694c90064674351bc55b8e4ac68e1359e74fd72"
+        },
+        {
+          "src": "assets/img/threads/threads-retro-diagram/2.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "17ace3cbefeabc9d661faa05a5ca681e675c007447870abaeb2457083e13e52c"
+        },
+        {
+          "src": "assets/img/threads/threads-retro-diagram/3.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "6ab1bc3ce233fb3d7363ed976e7f09adcd238c1c65c594e0fa8bd67dff7912d0"
+        },
+        {
+          "src": "assets/img/threads/threads-retro-diagram/4.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "eab128eb7b11df4997e4fe9b34baeb4fde4f6f9ff9575a5a8e11c8ee14885b21"
+        }
+      ]
+    },
+    {
+      "id": "threads-pet-doodle",
+      "name": "宠物照片转呆萌涂鸦",
+      "latin": "Pet Doodle Diptych",
+      "tagline": "保留宠物最有梗的表情和姿势，下半幅变成随手画般的可爱涂鸦",
+      "input": "一张猫、狗或其他动物照片",
+      "moods": [
+        "幽默",
+        "亲和"
+      ],
+      "keywords": [
+        "宠物涂鸦",
+        "猫咪",
+        "狗狗",
+        "丑照变插画",
+        "手绘蜡笔",
+        "宠物表情",
+        "pet doodle",
+        "Chloe_Lai",
+        "lch1776244",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@lch1776244/post/Dd5TB4EG01L",
+      "promptUrl": "https://www.threads.com/@lch1776244/post/Dd5TCujmzs3",
+      "promptFile": "threads-pet-doodle.txt",
+      "promptSha256": "ef11cb1bdb16b62c2ce0b3a9c4cd4497d4b39a87d0e3dd56d273ebccf5f9e095",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-pet-doodle/1.jpg",
+          "w": 960,
+          "h": 1280,
+          "sha256": "441d15d59caab114758f5080614e1a9cfa0eab53aef25fe0dde1f6d527d45e66"
+        },
+        {
+          "src": "assets/img/threads/threads-pet-doodle/2.jpg",
+          "w": 960,
+          "h": 1280,
+          "sha256": "0983ae93a5ca5580517e45ebffeeccae9b4888ae7126d1bad14d4f72ecf71548"
+        },
+        {
+          "src": "assets/img/threads/threads-pet-doodle/3.jpg",
+          "w": 960,
+          "h": 1280,
+          "sha256": "a3b532fe0effb3ff3f5c8de70863e2e78d59e23cbabc24b5611f87791904c521"
+        },
+        {
+          "src": "assets/img/threads/threads-pet-doodle/4.jpg",
+          "w": 960,
+          "h": 1280,
+          "sha256": "8feb1a878169a811e8fa74bec3c2b438bbe44c23e7eaa1ce765efe8ef4dc591c"
+        }
+      ]
+    },
+    {
+      "id": "threads-isometric-poster",
+      "name": "照片转等距纸上微缩",
+      "latin": "Isometric Paper Poster",
+      "tagline": "上半幅留下真实风景，下半幅重构为安静精致的等距纸上模型",
+      "input": "一张建筑、风景、物品或人物照片",
+      "moods": [
+        "极简",
+        "沉稳"
+      ],
+      "keywords": [
+        "等距插画",
+        "纸上微缩",
+        "建筑沙盘",
+        "双拼海报",
+        "纸上景观",
+        "isometric poster",
+        "Chloe_Lai",
+        "lch1776244",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@lch1776244/post/Dd3Rlylm1bL",
+      "promptUrl": "https://www.threads.com/@lch1776244/post/Dd3Rmm1G6iz",
+      "promptFile": "threads-isometric-poster.txt",
+      "promptSha256": "6b5da161939a078c5dbcd89a8b4a9af85529411e5e8804a5bfd9d4f4e7596198",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-isometric-poster/1.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "58fe91675548cb6a2ea3346037f19b0ac2743d10fc2ec5a508a084b6cca641f8"
+        },
+        {
+          "src": "assets/img/threads/threads-isometric-poster/2.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "cc5803733de2c24c71a8885113c9adc3bddac93d1b1056092e5c9bed42381cb5"
+        },
+        {
+          "src": "assets/img/threads/threads-isometric-poster/3.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "6c7abf86d898155b550b2b124b542c6edd1ec2219d2ef8957202a8f575402d56"
+        },
+        {
+          "src": "assets/img/threads/threads-isometric-poster/4.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "f311c102431e68ad2e6010de2db79e1c085736c5a7acc5104214a519c00809b7"
+        },
+        {
+          "src": "assets/img/threads/threads-isometric-poster/5.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "300e375f175ae791eb7c47ab1444350e7348f98bd0b8ade737ae474e00cc6eff"
+        }
+      ]
+    },
+    {
+      "id": "threads-watercolor-mosaic",
+      "name": "照片转水彩方格拼贴",
+      "latin": "Watercolor Mosaic Poster",
+      "tagline": "把照片的颜色拆成柔软水彩纸片，让主体在细小方格中渐渐浮现",
+      "input": "一张人物、物品或风景照片",
+      "moods": [
+        "治愈",
+        "秩序"
+      ],
+      "keywords": [
+        "水彩拼贴",
+        "水彩方格",
+        "纸片马赛克",
+        "摄影拼贴",
+        "艺术海报",
+        "watercolor mosaic",
+        "Chloe_Lai",
+        "lch1776244",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@lch1776244/post/Dd3RTLCmzQJ",
+      "promptUrl": "https://www.threads.com/@lch1776244/post/Dd3RT3bm-o0",
+      "promptFile": "threads-watercolor-mosaic.txt",
+      "promptSha256": "171cda3552449151f10cf13a4cd5f6b805794d6e9a56792f2992f305ac7be07a",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-watercolor-mosaic/1.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "043910b613d5e4d637c9b3d4dd51d6d64597a40531a93794d86837763f06ecd0"
+        },
+        {
+          "src": "assets/img/threads/threads-watercolor-mosaic/2.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "6fe658c09559abd5e8448ebf4045ecccede45ad102325f5083eebfc736321f24"
+        },
+        {
+          "src": "assets/img/threads/threads-watercolor-mosaic/3.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "f9bcdbd81416e2c690ccd04ed8e31770b2ed88e079d5f02a3b03979186d6a99f"
+        },
+        {
+          "src": "assets/img/threads/threads-watercolor-mosaic/4.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "b31a84efb75d0390b32f90463c83cecb054dba1dc1e0896fe168addd7ff1a498"
+        },
+        {
+          "src": "assets/img/threads/threads-watercolor-mosaic/5.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "325787bf9af0b962949b71b40fbcc08524c153092add223b62d9b59a17387dd2"
+        }
+      ]
+    }
+  ]
+}

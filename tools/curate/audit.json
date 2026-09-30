@@ -1,8 +1,8 @@
 {
-  "date": "2026-09-26",
+  "date": "2026-10-01",
   "previousCount": 108,
-  "activeCount": 66,
-  "images": 18,
+  "activeCount": 70,
+  "images": 22,
   "text": 48,
   "review": [
     {
@@ -655,6 +655,10 @@
     }
   ],
   "newIds": [
+    "threads-retro-diagram",
+    "threads-pet-doodle",
+    "threads-isometric-poster",
+    "threads-watercolor-mosaic",
     "anime-figurine",
     "bobblehead",
     "chibi-keychain",

@@ -6,6 +6,19 @@ The root MIT LICENSE applies to original application code and project-owned tool
 
 Text patterns in `tools/curate/sources/*.md` and the corresponding Chinese task adaptations originate from [danielmiessler/fabric](https://github.com/danielmiessler/fabric). See the [unaltered upstream MIT notice](tools/curate/sources/fabric-license.txt). Individual cards preserve the upstream URL, source-file SHA256, adaptation description and full license text. Chinese adaptations add input fields, deliverables and evidence/verification boundaries; they are not verbatim copies or model-verified outputs.
 
+## Threads — Chloe_Lai
+
+On October 1, 2026, the site maintainer confirmed account ownership or permission to republish the images and complete prompts from [Chloe_Lai (@lch1776244)](https://www.threads.com/@lch1776244) on this website and its public GitHub repository. This is recorded as **CUSTOM / 经授权收录**, based on that confirmation, not a publicly verified open license. The author retains their rights; neither the root MIT license nor the CC BY licenses of unrelated cases apply. This notice does not grant downstream users unrestricted redistribution rights.
+
+This batch contains four publicly accessible source posts, their author-authored prompt replies, and 18 images. It excludes login-gated history and other commenters' images or replies. Images retain their downloaded bytes. Prompt text is preserved with line-break normalization, with clearly separated site-added upload checks and optional requirements. The source examples are not site-run model tests. Per-file SHA256 and post/reply mappings are recorded in [the source manifest](tools/curate/sources/threads-lch1776244.json).
+
+| Style | Source post | Author's prompt | Images |
+|---|---|---|---|
+| 复古图解海报 | [Post](https://www.threads.com/@lch1776244/post/Dd5TeHwG-Bj) | [Reply](https://www.threads.com/@lch1776244/post/Dd5Te0TG4mM) | 4 |
+| 宠物呆萌涂鸦 | [Post](https://www.threads.com/@lch1776244/post/Dd5TB4EG01L) | [Reply](https://www.threads.com/@lch1776244/post/Dd5TCujmzs3) | 4 |
+| 等距纸上微缩 | [Post](https://www.threads.com/@lch1776244/post/Dd3Rlylm1bL) | [Reply](https://www.threads.com/@lch1776244/post/Dd3Rmm1G6iz) | 5 |
+| 水彩方格拼贴 | [Post](https://www.threads.com/@lch1776244/post/Dd3RTLCmzQJ) | [Reply](https://www.threads.com/@lch1776244/post/Dd3RT3bm-o0) | 5 |
+
 ## Image cases — CC BY 4.0
 
 Selected cases originate from [awesome-gpt4o-images](https://github.com/jamez-bondos/awesome-gpt4o-images). The [upstream license notice and full text](tools/curate/sources/gptlicense.txt) and per-case attribution snapshots are included. Images are copied unchanged; Chinese templates add image-input, subject-preservation and iteration constraints. Some originally descriptive cases have been adapted to image editing. The source examples do not validate the adapted prompts.

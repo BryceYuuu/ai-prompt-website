@@ -243,7 +243,7 @@
     "source": {
       "type": "object",
       "additionalProperties": true,
-      "description": "采集来源。有这一项说明内容来自开源仓库，不是平台原创。",
+      "description": "内容来源。有这一项说明内容来自外部开源仓库或经授权转载的作者，不是平台原创。",
       "required": [
         "repo",
         "contributor"
@@ -489,7 +489,7 @@
         "w",
         "h"
       ],
-      "description": "封面图与署名。图片必须可商用，且必须留下作者与协议——没有署名的素材一律不上架。",
+      "description": "封面图与署名。图片必须有与当前展示范围相符的许可，且必须留下作者与授权说明；不得把转载许可标为开放许可证。",
       "properties": {
         "src": {
           "type": "string",

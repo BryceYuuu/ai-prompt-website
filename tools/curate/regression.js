@@ -33,7 +33,9 @@ const mutations={
  slotHTML:['app.js',"if (body) body.textContent = preparedPrompt(s);","if (body) body.innerHTML = preparedPrompt(s);"],
  slotPrivacy:['app.js',"drafts[card.id][slot] = t.value;","drafts[card.id][slot] = t.value; localStorage.setItem('leaked-input',t.value);"],
  preparedDownload:['app.js',"+ preparedPrompt(ready) +","+ ready.prompt +"],
- imageViewer:['app.js',"document.body.appendChild(viewer);","void 0;"]
+ imageViewer:['app.js',"document.body.appendChild(viewer);","void 0;"],
+ threadsLicense:['data-curated.js','"license": "CUSTOM"','"license": "CC-BY-4.0"'],
+ exampleSelection:['app.js','picture = pictures[imageIndex].v;','picture = pictures[0].v;']
 };
 let applied=false;
 function code(src){let s=fs.readFileSync(path.join(root,src),'utf8');if(mutant&&mutations[mutant][0]===path.basename(src)){let [,a,b]=mutations[mutant];assert(s.includes(a),'missing mutation anchor '+mutant);s=s.replace(a,b);applied=true;}return s;}
@@ -63,14 +65,29 @@ async function nav(hash){w.location.hash=hash;w.dispatchEvent(new w.Event('hashc
 const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
 (async()=>{
  await wait(120);const cards=w.eval('STYLES'),images=cards.filter(s=>s.category==='image');
- await check('catalog-count-and-classification',()=>{assert.equal(cards.length,66);assert.equal(images.length,18);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,66);});
- await check('source-evidence-and-license',()=>{for(const s of cards){assert(s.source.url.startsWith('https://github.com/'));assert(s.source.stars>=8000);assert(/^2026-09-(21|26)$/.test(s.source.checkedAt),'source verification date: '+s.id);assert(s.source.mode.includes('中文'));assert(s.curation.status.includes('not-'));if(s.category!=='image'){assert.equal(s.source.license,'MIT');assert.equal(s.license,'MIT');assert(s.licenseText.includes('Permission is hereby granted'));const raw=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.act+'.md'));assert.equal(require('crypto').createHash('sha256').update(raw).digest('hex'),s.source.sha256);}}});
- await check('image-input-preservation-and-credits',()=>{for(const s of images){assert.equal(s.track,'edit');assert(!s.local&&!s.cloud);assert(s.prompt.includes('上传图片'));assert(s.prompt.includes('【保持不变】'));assert(s.prompt.includes('不具备图像编辑能力'));assert(fs.existsSync(path.join(root,s.cover.src)));assert(s.cover.creator&&s.cover.licenseUrl);assert.equal(s.cover.license,'CC BY 4.0');const a=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.act.replace('案例 ','case-')+'-ATTRIBUTION.txt'),'utf8');assert(a.includes(s.cover.creator));}});
+ await check('catalog-count-and-classification',()=>{assert.equal(cards.length,70);assert.equal(images.length,22);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,70);});
+ await check('source-evidence-and-license',()=>{for(const s of cards){if(s.source.provider==='threads'){
+ assert(s.source.url.startsWith('https://www.threads.com/@lch1776244/post/'));
+ assert(s.source.promptUrl.startsWith('https://www.threads.com/@lch1776244/post/'));
+ assert.equal(s.license,'CUSTOM');assert.equal(s.cover.license,'经授权收录');
+ assert(s.licenseNote.includes('原作者保留权利'));assert(!('stars' in s.source));
+ const raw=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.snapshot));
+ assert.equal(require('crypto').createHash('sha256').update(raw).digest('hex'),s.source.sha256);
+ assert(s.prompt.includes(raw.toString().trim()),'author prompt retained in full');
+ continue;
+ }assert(s.source.url.startsWith('https://github.com/'));assert(s.source.stars>=8000);assert(/^2026-09-(21|26)$/.test(s.source.checkedAt),'source verification date: '+s.id);assert(s.source.mode.includes('中文'));assert(s.curation.status.includes('not-'));if(s.category!=='image'){assert.equal(s.source.license,'MIT');assert.equal(s.license,'MIT');assert(s.licenseText.includes('Permission is hereby granted'));const raw=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.act+'.md'));assert.equal(require('crypto').createHash('sha256').update(raw).digest('hex'),s.source.sha256);}}});
+ await check('image-input-preservation-and-credits',()=>{for(const s of images){assert.equal(s.track,'edit');assert(!s.local&&!s.cloud);assert(s.prompt.includes('上传图片'));assert(s.prompt.includes('【保持不变】'));assert(s.prompt.includes('不具备图像编辑能力'));assert(fs.existsSync(path.join(root,s.cover.src)));assert(s.cover.creator&&s.cover.licenseUrl);if(s.source.provider==='threads'){
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,'tools/curate/sources/threads-lch1776244.json')));
+ const item=manifest.cases.find(c=>c.id===s.id);assert(item);assert(s.cover.creator.includes('@lch1776244'));
+ assert.deepEqual(s.guide.filter(b=>b.t==='img').map(b=>b.v.src),item.images.map(i=>i.src));
+ for(const img of item.images)assert.equal(require('crypto').createHash('sha256').update(fs.readFileSync(path.join(root,img.src))).digest('hex'),img.sha256);
+ continue;
+ }assert.equal(s.cover.license,'CC BY 4.0');const a=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.act.replace('案例 ','case-')+'-ATTRIBUTION.txt'),'utf8');assert(a.includes(s.cover.creator));}});
  await check('text-deliverables-and-retirement-audit',()=>{for(const s of cards.filter(s=>s.category!=='image')){assert.equal(s.track,'text');assert(!s.cover&&!s.local&&!s.cloud);assert(s.prompt.length>300);for(const label of ['【输入材料】','【处理步骤】','【交付内容】','【信息不足】'])assert(s.prompt.includes(label));assert(s.slots.length>0);}const a=JSON.parse(fs.readFileSync(path.join(root,'tools/curate/audit.json')));assert.equal(a.review.length,108);assert.equal(a.activeCount,cards.length);});
  await check('homepage-image-only-and-manual-carousel',async()=>{await nav('#/');assert(all('.card__link').length>0);for(const a of all('.card__link'))assert(images.some(s=>a.hash.endsWith(s.id)));const hero=q('.hero__plate');const first=hero.getAttribute('href');q('[data-action="hero-next"]').click();assert.notEqual(q('.hero__plate').getAttribute('href'),first);q('[data-action="hero-prev"]').click();assert.equal(q('.hero__plate').getAttribute('href'),first);});
  await check('scene-and-category-filters',async()=>{
    await nav('#/library?track=text&limit=100');assert.equal(all('.gallery .card').length,48);
-   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat+'&limit=100');assert.equal(all('.gallery .card').length,cat==='image'?18:8);}
+   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat+'&limit=100');assert.equal(all('.gallery .card').length,cat==='image'?22:8);}
    await nav('#/library?track=both');
    const codeTab=all('.catbar a').find(a=>new URLSearchParams(a.hash.split('?')[1]).get('cat')==='code');assert(codeTab);codeTab.click();await wait(12);
    assert.equal(all('.gallery .card').length,8,'changing from image filter to code clears conflicting track');
@@ -88,7 +105,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    }
  });
  await check('search-and-empty-state',async()=>{await nav('#/library?q='+encodeURIComponent('PRD'));assert(all('.gallery .card').length>0);await nav('#/library?q=zzzzNoSuchPrompt');assert.equal(all('.gallery .card').length,0);assert(q('.empty a'));});
- await check('all-66-details-copy-and-export',async()=>{for(const s of cards){await nav('#/style/'+s.id);assert.equal(q('.gh__title').textContent.trim(),s.name);assert.equal(q('.prompt__body').textContent.trim(),s.prompt);assert.equal(all('.prompt-tabs .seg__item').length,0);assert(q('.srcbox').textContent.includes(s.source.repo));primary.copied='';q('.gh__actions [data-action="copy-prompt"]').click();await wait(1);assert.equal(primary.copied,s.prompt);const ex=all('.takeaway a[download]');assert.equal(ex.length,2);const j=JSON.parse(blobs.get(ex.find(a=>a.download.endsWith('.json')).href));assert.equal(j.prompt,s.prompt);assert.equal(j.source.url,s.source.url);assert.equal(j.validation,s.curation.status);const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.prompt));assert(md.includes('尚未逐条模型实测'));assert(md.includes(s.source.license));}});
+ await check('all-card-details-copy-and-export',async()=>{for(const s of cards){await nav('#/style/'+s.id);assert.equal(q('.gh__title').textContent.trim(),s.name);assert.equal(q('.prompt__body').textContent.trim(),s.prompt);assert.equal(all('.prompt-tabs .seg__item').length,0);assert(q('.srcbox').textContent.includes(s.source.repo));primary.copied='';q('.gh__actions [data-action="copy-prompt"]').click();await wait(1);assert.equal(primary.copied,s.prompt);const ex=all('.takeaway a[download]');assert.equal(ex.length,2);const j=JSON.parse(blobs.get(ex.find(a=>a.download.endsWith('.json')).href));assert.equal(j.prompt,s.prompt);assert.equal(j.source.url,s.source.url);assert.equal(j.validation,s.curation.status);const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.prompt));assert(md.includes('尚未逐条模型实测'));assert(md.includes(s.source.license));}});
  await check('saved-collection-toggle-filter-and-reload',async()=>{
    await nav('#/style/code-reviewer');
    const save=q('[data-action="save-toggle"][data-id="code-reviewer"]');
@@ -167,6 +184,22 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    assert.equal(viewer.querySelector('img').getAttribute('src'),s.cover.src);
    assert(viewer.textContent.includes(s.cover.creator)&&viewer.textContent.includes('非本站实测'),'source case disclosure retained');
    viewer.querySelector('button').click();assert(!q('dialog.image-viewer'));assert.equal(d.activeElement,opener,'focus returns to the opening control');assert.notEqual(d.body.style.overflow,'hidden');
+ });
+ await check('threads-gallery-source-and-search',async()=>{
+   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,4);
+   await nav('#/library?cat=image&q=Chloe_Lai&limit=100');assert.equal(all('.gallery .card').length,4);
+   for(const s of imported){
+     await nav('#/style/'+s.id);const pictures=s.guide.filter(b=>b.t==='img');
+     assert.equal(all('.detail-preview figure').length,1,'one large preview, not a stacked image wall');
+     const thumbs=all('.example-gallery [data-action="image-expand"]');assert.equal(thumbs.length,pictures.length);
+     const source=q('.srcbox');assert(!source.textContent.includes('仓库热度'));assert(source.querySelector('a[href="'+s.source.promptUrl+'"]'));
+     for(let i=0;i<thumbs.length;i++){
+       thumbs[i].click();const dialog=q('dialog.image-viewer');assert(dialog&&dialog.open);
+       assert.equal(dialog.querySelector('img').getAttribute('src'),pictures[i].v.src);
+       assert(dialog.textContent.includes('经授权收录'));dialog.querySelector('button').click();assert.equal(d.activeElement,thumbs[i]);
+     }
+     const ex=all('.takeaway a[download]');const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.licenseNote));
+   }
  });
  await check('disclosures-and-filtered-backlink',async()=>{await nav('#/library?cat=code');await nav('#/style/code-reviewer');assert.equal(q('.backlink').getAttribute('href'),'#/library?cat=code');for(const el of all('.detail-guide,.detail-source')){assert(!el.open);el.querySelector('summary').click();assert(el.open);el.querySelector('summary').click();assert(!el.open);}});
  await check('about-and-retired-route-exits',async()=>{await nav('#/about');assert(q('#view').textContent.includes('尚未由本站逐条运行验证'));assert(q('#view').textContent.includes('Fabric'));for(const h of ['#/style/novelist','#/creators','#/submit','#/missing']){await nav(h);assert(q('#view h1'));assert(q('#view a[href^="#/"]'));}});
