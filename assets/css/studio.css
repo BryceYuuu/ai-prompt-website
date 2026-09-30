@@ -491,22 +491,19 @@ button:focus-visible,a:focus-visible,select:focus-visible { outline:3px solid #4
 .example-carousel .cover { display:block; position:relative; touch-action:pan-y pinch-zoom; cursor:grab; user-select:none; }
 .example-carousel .cover:active { cursor:grabbing; }
 .example-carousel:focus-visible { outline:2px solid #4541c4; outline-offset:5px; border-radius:24px; }
-.example-arrow { position:absolute; z-index:3; top:50%; transform:translateY(-50%); display:flex; align-items:center; justify-content:center; width:44px; height:44px; padding:0; border:1px solid #ffffffb3; border-radius:50%; background:#fffffff2; color:#22251f; box-shadow:0 3px 18px #0002; cursor:pointer; }
-.example-arrow--prev { left:12px; }
-.example-arrow--next { right:12px; }
+.example-controls { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-top:12px; }
+.example-arrow { position:static; flex-shrink:0; display:flex; align-items:center; justify-content:center; width:44px; height:44px; padding:0; border:1px solid #ffffffb3; border-radius:50%; background:#fffffff2; color:#22251f; box-shadow:0 3px 18px #0002; cursor:pointer; }
 .example-arrow svg { width:19px; height:19px; }
 .example-arrow:hover { background:#d9ef8c; color:#22251f; }
 .example-arrow:focus-visible { outline:3px solid #4541c4; outline-offset:3px; }
-.example-counter { position:absolute; z-index:3; top:14px; right:14px; border-radius:999px; padding:6px 11px; background:#22251fe8; color:#fff; font:12px/1.4 var(--font-sans); font-variant-numeric:tabular-nums; pointer-events:none; }
+.example-counter { position:static; border-radius:999px; padding:6px 11px; background:#22251fe8; color:#fff; font:12px/1.4 var(--font-sans); font-variant-numeric:tabular-nums; pointer-events:none; }
 .example-gallery__items { display:flex; position:relative; gap:10px; overflow-x:auto; padding:4px 3px 10px; scroll-snap-type:x proximity; scrollbar-width:thin; scrollbar-color:#b0b0a4 transparent; }
 .example-gallery__items button { flex:0 0 88px; scroll-snap-align:center; cursor:pointer; }
 .example-gallery__items button[aria-pressed="true"] { border-color:#4541c4; outline:2px solid #4541c4; outline-offset:1px; }
 .example-gallery__items button:focus-visible { outline:3px solid #4541c4; outline-offset:1px; }
 .image-viewer > img { touch-action:pan-y pinch-zoom; user-select:none; }
-.image-viewer .example-arrow { position:fixed; }
-.image-viewer .example-counter { position:fixed; top:24px; left:25px; right:auto; }
+.image-viewer .example-controls { flex-shrink:0; width:min(100%,360px); margin-top:0; }
+.image-viewer:has(.example-controls) > img { max-height:calc(100dvh - 210px); }
 @media(max-width:560px) {
-  .example-arrow--prev { left:8px; }
-  .example-arrow--next { right:8px; }
   .example-gallery__items button { flex-basis:76px; }
 }

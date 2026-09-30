@@ -970,8 +970,8 @@
           '<span class="cover" data-style="' + esc(s.id) + '" style="aspect-ratio:' + ar(cov) + '">' +
             '<img src="' + esc(b.v.src) + '" alt="' + esc(b.v.cap || '') + '"' +
               ' width="' + (cov.w || 1000) + '" height="' + (cov.h || 750) + '" loading="lazy">' +
-          (pictureCount > 1 ? exampleArrowsHTML('example-step', s.id, pictureCount) : '') +
           '</span>' +
+          (pictureCount > 1 ? exampleArrowsHTML('example-step', s.id, pictureCount) : '') +
           '<figcaption>' +
             '<span class="fig-n">Fig. ' + pad2(fig) + '</span>' +
             '<span>来源案例 · 非本站实测 · ' + esc(b.v.cap || '') + '</span>' +
@@ -993,9 +993,10 @@
   }
 
   function exampleArrowsHTML(action, id, total) {
-    return '<button type="button" class="example-arrow example-arrow--prev" data-action="' + action + '" data-id="' + esc(id) + '" data-direction="-1" aria-label="上一张示例">' + ICON.arrowLeft + '</button>' +
+    return '<div class="example-controls">' +
+      '<button type="button" class="example-arrow example-arrow--prev" data-action="' + action + '" data-id="' + esc(id) + '" data-direction="-1" aria-label="上一张示例">' + ICON.arrowLeft + '</button>' +
       '<span class="example-counter" aria-live="polite" aria-atomic="true">1 / ' + total + '</span>' +
-      '<button type="button" class="example-arrow example-arrow--next" data-action="' + action + '" data-id="' + esc(id) + '" data-direction="1" aria-label="下一张示例">' + ICON.arrowRight + '</button>';
+      '<button type="button" class="example-arrow example-arrow--next" data-action="' + action + '" data-id="' + esc(id) + '" data-direction="1" aria-label="下一张示例">' + ICON.arrowRight + '</button></div>';
   }
 
   function animateExample(img, direction) {
