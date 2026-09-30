@@ -34,6 +34,9 @@ const mutations={
  slotPrivacy:['app.js',"drafts[card.id][slot] = t.value;","drafts[card.id][slot] = t.value; localStorage.setItem('leaked-input',t.value);"],
  preparedDownload:['app.js',"+ preparedPrompt(ready) +","+ ready.prompt +"],
  imageViewer:['app.js',"document.body.appendChild(viewer);","void 0;"],
+ imageTapEntry:['app.js',"var zoomable = preview && s.category === 'image';","var zoomable = false;"],
+ imageTapCurrent:['app.js',"$('.preview-image').setAttribute('data-image-index', String(index));","$('.preview-image').setAttribute('data-image-index', '0');"],
+ imageTapDrag:['app.js',"t._suppressImageClick && e.detail !== 0","false && e.detail !== 0"],
  threadsLicense:['data-curated.js','"license": "CUSTOM"','"license": "CC-BY-4.0"'],
  longPromptLimit:['rules.js','prompt:  { min: 40, max: 8000 }','prompt:  { min: 40, max: 4000 }'],
  longPromptGuard:['rules.js',"else if (card.prompt.length > LIMITS.prompt.max) E('prompt', '图片转换提示词过长');",''],
@@ -235,6 +238,48 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    assert.equal(viewer.querySelector('img').getAttribute('src'),s.cover.src);
    assert(viewer.textContent.includes(s.cover.creator)&&viewer.textContent.includes('非本站实测'),'source case disclosure retained');
    viewer.querySelector('button').click();assert(!q('dialog.image-viewer'));assert.equal(d.activeElement,opener,'focus returns to the opening control');assert.notEqual(d.body.style.overflow,'hidden');
+ });
+ await check('image-tap-zoom-and-drag-suppression',async()=>{
+   function pointer(surface,type,x,y){
+     const event=new w.MouseEvent(type,{bubbles:true,button:0,clientX:x,clientY:y});
+     Object.defineProperty(event,'pointerId',{value:31});Object.defineProperty(event,'isPrimary',{value:true});surface.dispatchEvent(event);
+   }
+   function clickImage(surface,detail=1){surface.querySelector('img').dispatchEvent(new w.MouseEvent('click',{bubbles:true,cancelable:true,button:0,detail}));}
+   function tap(surface){pointer(surface,'pointerdown',100,100);pointer(surface,'pointerup',101,100);clickImage(surface);}
+   function assertOpenAndClose(surface,expected){
+     const viewer=q('dialog.image-viewer');assert(viewer&&viewer.open,'clicking the image itself opens the viewer');
+     assert.equal(viewer.querySelector('img').getAttribute('src'),expected,'viewer opens the currently displayed image');
+     viewer.querySelector('.image-viewer__close').click();assert(!q('dialog.image-viewer'));
+     assert.equal(d.activeElement,surface,'closing restores focus to the image control');assert.notEqual(d.body.style.overflow,'hidden');
+   }
+   const single=images.find(s=>s.guide.filter(b=>b.t==='img').length===1);assert(single);
+   await nav('#/style/'+single.id);let surface=q('.preview-image');assert(surface,'single image exposes a clickable preview');
+   assert.equal(surface.tagName,'BUTTON','image control has native keyboard activation');assert.equal(surface.type,'button');
+   tap(surface);assertOpenAndClose(surface,surface.querySelector('img').getAttribute('src'));
+   const s=cards.find(s=>s.id==='threads-inka-minimal-paper'),pictures=s.guide.filter(b=>b.t==='img');
+   await nav('#/style/'+s.id);surface=q('.preview-image');assert(surface);
+   q('.example-carousel [data-direction="1"]').click();tap(surface);assertOpenAndClose(surface,pictures[1].v.src);
+   q('.example-gallery [data-image-index="2"]').click();tap(surface);assertOpenAndClose(surface,pictures[2].v.src);
+   // A short drag must not open the viewer; nor may returning to the start erase a drag.
+   for(const [label,moves] of [
+     ['short horizontal drag',[[120,100]]],
+     ['vertical scroll gesture',[[100,130]]],
+     ['out-and-back drag',[[180,100],[100,100]]]
+   ]){
+     pointer(surface,'pointerdown',100,100);for(const [x,y] of moves)pointer(surface,'pointermove',x,y);
+     const [x,y]=moves.at(-1);pointer(surface,'pointerup',x,y);clickImage(surface);
+     assert(!q('dialog.image-viewer'),label+' does not accidentally enlarge');
+     assert.equal(surface.querySelector('img').getAttribute('src'),pictures[2].v.src,label+' does not turn a page');
+   }
+   pointer(surface,'pointerdown',200,100);pointer(surface,'pointermove',60,105);pointer(surface,'pointerup',60,105);clickImage(surface);
+   assert(!q('dialog.image-viewer'),'completed swipe does not also open the viewer');
+   assert.equal(surface.querySelector('img').getAttribute('src'),pictures[3].v.src,'image button retains horizontal swipe navigation');
+   tap(surface);assertOpenAndClose(surface,pictures[3].v.src);
+   pointer(surface,'pointerdown',100,100);pointer(surface,'pointermove',125,100);pointer(surface,'pointercancel',125,100);clickImage(surface);
+   assert(!q('dialog.image-viewer'),'cancelled drag does not accidentally enlarge');
+   tap(surface);assertOpenAndClose(surface,pictures[3].v.src);
+   pointer(surface,'pointerdown',100,100);pointer(surface,'pointermove',120,100);pointer(surface,'pointerup',120,100);
+   clickImage(surface,0);assertOpenAndClose(surface,pictures[3].v.src);
  });
  await check('threads-gallery-source-and-search',async()=>{
    const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,14);

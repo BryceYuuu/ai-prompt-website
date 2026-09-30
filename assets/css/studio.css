@@ -515,3 +515,8 @@ button:focus-visible,a:focus-visible,select:focus-visible { outline:3px solid #4
   .image-viewer__stage > img { max-width:calc(100vw - 154px); }
   .example-gallery__items button { flex-basis:76px; }
 }
+
+/* The image itself is a keyboard-accessible zoom control. */
+.detail-preview .cover.preview-image { display:block; width:100%; padding:0; border:0; cursor:zoom-in; }
+.detail-preview .cover.preview-image:active { cursor:grabbing; }
+.detail-preview .preview-image:focus-visible { outline:3px solid #4541c4; outline-offset:4px; }

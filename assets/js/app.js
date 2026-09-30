@@ -966,11 +966,14 @@
         if (s.category === 'image' && !preview) return;
         fig++;
         var cov = s.cover || COVERS[s.id] || {};
+        var zoomable = preview && s.category === 'image';
+        var coverTag = zoomable ? 'button' : 'span';
         out += (s.category !== 'image' ? '<details class="reference-fold"><summary data-action="reference-toggle">查看参考配图与署名</summary>' : '') + '<figure' + (pictureCount > 1 ? ' class="example-carousel" data-id="' + esc(s.id) + '" data-image-index="0" role="region" aria-label="作者示例，可左右切换" tabindex="0"' : '') + '>' +
-          '<span class="cover" data-style="' + esc(s.id) + '" style="aspect-ratio:' + ar(cov) + '">' +
+          '<' + coverTag + ' class="cover' + (zoomable ? ' preview-image' : '') + '" data-style="' + esc(s.id) + '" style="aspect-ratio:' + ar(cov) + '"' +
+            (zoomable ? ' type="button" data-action="image-expand" data-id="' + esc(s.id) + '"' + (pictureCount ? ' data-image-index="0"' : '') + ' aria-label="放大查看' + esc(s.name) + '"' : '') + '>' +
             '<img src="' + esc(b.v.src) + '" alt="' + esc(b.v.cap || '') + '"' +
               ' width="' + (cov.w || 1000) + '" height="' + (cov.h || 750) + '" loading="lazy">' +
-          '</span>' +
+          '</' + coverTag + '>' +
           (pictureCount > 1 ? exampleArrowsHTML('example-step', s.id, pictureCount) : '') +
           '<figcaption>' +
             '<span class="fig-n">Fig. ' + pad2(fig) + '</span>' +
@@ -1019,6 +1022,7 @@
     $('.example-counter', host).textContent = (index + 1) + ' / ' + pictures.length;
     $('figcaption', host).textContent = '来源案例 · 非本站实测 · ' + (picture.cap || '') + ' · © ' + (picture.credit || '') + ' · ' + (picture.license || '');
     $('.preview-zoom').setAttribute('data-image-index', String(index));
+    $('.preview-image').setAttribute('data-image-index', String(index));
     $$('.example-gallery [data-image-index]').forEach(function (button) {
       var selected = Number(button.getAttribute('data-image-index')) === index;
       button.setAttribute('aria-pressed', selected ? 'true' : 'false');
@@ -1034,17 +1038,23 @@
     var pointer = null, wheelAt = 0;
     surface.addEventListener('dragstart', function (e) { e.preventDefault(); });
     surface.addEventListener('pointerdown', function (e) {
-      if (e.button !== 0 || e.isPrimary === false || e.target.closest('button')) return;
+      if (e.button !== 0 || e.isPrimary === false || (e.target.closest('button') && e.target.closest('button') !== surface)) return;
+      surface._suppressImageClick = false;
       pointer = { id: e.pointerId, x: e.clientX, y: e.clientY };
       try { surface.setPointerCapture(e.pointerId); } catch (err) { /* optional */ }
+    });
+    surface.addEventListener('pointermove', function (e) {
+      if (!pointer || pointer.id !== e.pointerId) return;
+      if (Math.abs(e.clientX - pointer.x) >= 10 || Math.abs(e.clientY - pointer.y) >= 10) surface._suppressImageClick = true;
     });
     surface.addEventListener('pointerup', function (e) {
       if (!pointer || pointer.id !== e.pointerId) return;
       var dx = e.clientX - pointer.x, dy = e.clientY - pointer.y;
+      if (Math.abs(dx) >= 10 || Math.abs(dy) >= 10) surface._suppressImageClick = true;
       pointer = null;
       if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(dy) * 1.2) step(dx < 0 ? 1 : -1);
     });
-    surface.addEventListener('pointercancel', function () { pointer = null; });
+    surface.addEventListener('pointercancel', function () { pointer = null; surface._suppressImageClick = true; });
     surface.addEventListener('lostpointercapture', function () { pointer = null; });
     surface.addEventListener('wheel', function (e) {
       if (Math.abs(e.deltaX) < 12 || Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
@@ -1055,11 +1065,13 @@
   }
 
   function detailCarouselInit() {
+    var surface = $('.preview-image');
+    if (!surface) return;
     var host = $('.example-carousel');
-    if (!host) return;
+    if (!host) { bindImageSwipe(surface, function () {}); return; }
     var s = byId(host.getAttribute('data-id'));
     function step(direction) { selectExample(s, Number(host.getAttribute('data-image-index')) + direction, direction); }
-    bindImageSwipe($('.cover', host), step);
+    bindImageSwipe(surface, step);
     host.addEventListener('keydown', function (e) {
       if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
       e.preventDefault(); step(e.key === 'ArrowRight' ? 1 : -1);
@@ -1883,6 +1895,8 @@
     }
     if (action === 'image-expand') {
       e.preventDefault();
+      if (t._suppressImageClick && e.detail !== 0) { t._suppressImageClick = false; return; }
+      t._suppressImageClick = false;
       var visual = byId(t.getAttribute('data-id'));
       if (!visual || !visual.cover) return;
       var picture = { src: visual.cover.src, cap: visual.name, credit: visual.cover.creator, license: visual.cover.license };
