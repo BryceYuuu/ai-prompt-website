@@ -2,10 +2,11 @@
 // Covers the current reviewed catalog; legacy dual-track features are not distributed.
 const {spawnSync}=require('child_process');
 const path=require('path');
-const cases=['imageTapEntry','imageTapCurrent','imageTapDrag','exampleMain','exampleSwipe','exampleViewerStep','paginationOffset','paginationContext','paginationHome','keywords','text','disclosure','about','runtime','count','source','image','prompt','license','catalog','copy','export','detail','hero','search','sourceUI','savedPersist','savedLoad','savedFilter','savedScope','categoryTrack','savedUnavailable','slotValue','slotCopy','slotReset','slotHTML','slotPrivacy','preparedDownload','imageViewer','threadsLicense','exampleSelection','threadsOwner','threadsOrientation','longPromptLimit','longPromptGuard','useFilter'];
+const cases=['heroFeatured','heroResult','imageTapEntry','imageTapCurrent','imageTapDrag','exampleMain','exampleSwipe','exampleViewerStep','paginationOffset','paginationContext','paginationHome','keywords','text','disclosure','about','runtime','count','source','image','prompt','license','catalog','copy','export','detail','hero','search','sourceUI','savedPersist','savedLoad','savedFilter','savedScope','categoryTrack','savedUnavailable','slotValue','slotCopy','slotReset','slotHTML','slotPrivacy','preparedDownload','imageViewer','threadsLicense','exampleSelection','threadsOwner','threadsOrientation','longPromptLimit','longPromptGuard','useFilter'];
 const selected=process.argv[2]?cases.filter(x=>x===process.argv[2]):cases;
 if(!selected.length)throw Error('Unknown mutation');
 const expected = {
+ heroFeatured:'homepage-image-only-and-manual-carousel', heroResult:'homepage-image-only-and-manual-carousel',
  imageTapEntry:'image-tap-zoom-and-drag-suppression', imageTapCurrent:'image-tap-zoom-and-drag-suppression', imageTapDrag:'image-tap-zoom-and-drag-suppression',
  exampleMain:'example-carousel-arrows-swipe-and-viewer', exampleSwipe:'example-carousel-arrows-swipe-and-viewer', exampleViewerStep:'example-carousel-arrows-swipe-and-viewer',
  paginationOffset:'pagination-pages-context-and-boundaries', paginationContext:'pagination-pages-context-and-boundaries', paginationHome:'pagination-pages-context-and-boundaries',

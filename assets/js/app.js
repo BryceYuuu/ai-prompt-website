@@ -465,8 +465,9 @@
     var c = s.cover || COVERS[s.id];
     if (!c) return Art.art(s);
     var credit = c.creator && c.creator !== 'None' ? c.creator : (c.provider || '');
-    return '<span class="cover" data-style="' + esc(s.id) + '">' +
-      '<img src="' + esc(c.src) + '" alt="' + esc(s.name + ' 封面图') + '"' +
+    return '<span class="cover' + (opts.resultStart ? ' cover--result' : '') + '" data-style="' + esc(s.id) + '"' +
+      (opts.resultStart ? ' style="--hero-result-height:' + (100 / (1 - opts.resultStart)).toFixed(4) + '%"' : '') + '>' +
+      '<img src="' + esc(c.src) + '" alt="' + esc(s.name + (opts.hero ? ' 生成效果预览' : ' 封面图')) + '"' +
         ' width="' + (c.w || 1000) + '" height="' + (c.h || 750) + '"' +
         ' loading="lazy" decoding="async">' +
       (opts.plate ? '<span class="cover__plate">' + esc(opts.plate) + '</span>' : '') +
@@ -526,15 +527,28 @@
     return padTo(i + 1, widthOf(STYLES.length));
   }
 
-  /* 图片风格卡，顺序固定 —— 首页图版台的刻度尺与它一一对应。
-     固定顺序很重要：刻度是「尺子」不是「榜单」，跟着热度重排会让人找不到刚才那格。 */
+  /* 完整图片库与首页精选独立维护。resultStart 标记对比图中生成效果的起点。 */
   function imageStyles() {
     return STYLES.filter(function (s) { return s.category === 'image'; });
   }
 
-  /* 图片风格在「18 式」里的序号，从 1 起。 */
-  function imgNo(s) {
-    var list = imageStyles();
+  var HERO_FEATURES = [
+    { id: 'threads-inka-minimal-paper', resultStart: .5 },
+    { id: 'anime-figurine' },
+    { id: 'plush-toy' },
+    { id: 'threads-inka-charcoal-doodle', resultStart: .5 },
+    { id: 'cyber-night-market' },
+    { id: 'threads-inka-pastel-crayon', resultStart: .52 },
+    { id: 'chibi-keychain' },
+    { id: 'threads-inka-impasto-world', resultStart: .5 }
+  ];
+
+  function heroStyles() {
+    return HERO_FEATURES.map(function (item) { return byId(item.id); }).filter(function (s) { return s && s.category === 'image'; });
+  }
+
+  function heroNo(s) {
+    var list = heroStyles();
     for (var i = 0; i < list.length; i++) { if (list[i].id === s.id) return i + 1; }
     return 0;
   }
@@ -640,26 +654,24 @@
      不能整页重渲染，那会把瀑布流 78 张卡重画一遍，
      滚动位置和悬停状态全丢，而这里要改的只有巴掌大一块。 */
   function heroPlateInner(s) {
-    var w = widthOf(imageStyles().length);
+    var list = heroStyles(), w = Math.max(2, widthOf(list.length));
+    var feature = HERO_FEATURES.find(function (item) { return item.id === s.id; });
     return '' +
          '<span class="hero__plate-head">' +
-           '<span class="plate">№ ' + padTo(imgNo(s), w) + ' / ' + padTo(imageStyles().length, w) + '</span>' +
+           '<span class="plate">№ ' + padTo(heroNo(s), w) + ' / ' + padTo(list.length, w) + '</span>' +
            /* 拉丁名单独一行（plate--latin）。一行两端对齐会溢出 ——
               见 views.css 里 .hero__plate-head 的说明。 */
            '<span class="plate plate--latin">' + esc(s.latin) + '</span>' +
          '</span>' +
-      coverHTML(s) +
+      coverHTML(s, { hero: true, resultStart: feature && feature.resultStart }) +
       '<span class="hero__plate-cap">' + esc(s.name) + '</span>' +
       '<span class="hero__plate-go">探索这个风格' + ICON.arrowRight + '</span>';
   }
 
-  /* 刻度尺：一格一张图片风格，点哪格上面那块图版就换成哪张。
-     这是首页唯一「能上手玩」的东西 —— 读者不用滚到瀑布流就能看见
-     「这里有 18 种风格」，而且立刻明白它们是**可以互相替换的配方**。
-     刻度顺序固定，不跟着热度重排：它是尺子，不是榜单。 */
+  /* 首页刻度只对应这八个精选风格。 */
   function heroIndexHTML(cur) {
-    var list = imageStyles();
-    var w = widthOf(list.length);
+    var list = heroStyles();
+    var w = Math.max(2, widthOf(list.length));
     return '<div class="hero__index">' +
       '<div class="hero__index-rule">' +
         list.map(function (s) {
@@ -667,7 +679,7 @@
           return '<button type="button" class="tick' + (on ? ' is-on' : '') + '"' +
             ' data-action="hero-plate" data-id="' + esc(s.id) + '"' +
             (on ? ' aria-current="true"' : '') +
-            ' title="' + esc(padTo(imgNo(s), w) + ' ' + s.name) + '">' +
+            ' title="' + esc(padTo(heroNo(s), w) + ' ' + s.name) + '">' +
             '<span class="tick__bar"></span>' +
           '</button>';
         }).join('') +
@@ -680,8 +692,8 @@
   }
 
   function heroHTML() {
-    var plate = byId(state.heroPlateId) || firstOf('image');
-    if (plate.category !== 'image') plate = firstOf('image');
+    var list = heroStyles();
+    var plate = list.find(function (s) { return s.id === state.heroPlateId; }) || list[0];
     return '<section class="hero"><div class="wrap hero__grid">' +
       '<div class="hero__intro"><p class="hero__eyebrow"><i></i> A SMALL STUDIO FOR BIG IDEAS</p>' +
       '<h1 class="hero__title">好想法，<br>换个<span>新模样。</span></h1>' +
@@ -690,7 +702,7 @@
         '<input type="search" name="q" placeholder="想把照片变成什么？" aria-label="搜索图片风格"><button class="btn btn--primary" type="submit">寻找灵感' + ICON.arrowRight + '</button></div></form>' +
       '<div class="hero__quick"><span>试试看</span>' + ['手办','针织','像素','海报'].map(function(q){return '<a href="#/library?cat=image&q=' + encodeURIComponent(q) + '">' + q + '</a>';}).join('') + '</div>' +
       '<div class="hero__caption"><span><b>' + imageStyles().length + '</b> 种图片风格</span><span>免登录 · 可填写 · 可收藏</span></div></div>' +
-      '<div class="hero__visual"><div class="hero__visual-label"><span>STYLE SPOTLIGHT / 风格放映室</span><span>拖动探索 ↔</span></div>' +
+      '<div class="hero__visual"><div class="hero__visual-label"><span>STYLE SPOTLIGHT / ' + list.length + '款精选</span><span>拖动探索 ↔</span></div>' +
       '<a class="hero__plate" href="#/style/' + esc(plate.id) + '">' + heroPlateInner(plate) + '</a>' +
       '<div class="hero__playbar">' + heroIndexHTML(plate) + '<div class="hero__controls"><button type="button" class="hero__arrow" data-action="hero-prev" aria-label="上一张风格">' + ICON.arrowLeft + '</button>' +
       '<button type="button" class="hero__autoplay" data-action="hero-autoplay">暂停轮播</button><button type="button" class="hero__arrow" data-action="hero-next" aria-label="下一张风格">' + ICON.arrowRight + '</button></div></div></div></div></section>';
@@ -1737,7 +1749,7 @@
   }
 
   function heroStep(direction) {
-    var list = imageStyles();
+    var list = heroStyles();
     var current = $('.hero__index .tick.is-on');
     var id = current ? current.getAttribute('data-id') : state.heroPlateId;
     var at = list.findIndex(function (s) { return s.id === id; });
@@ -1804,8 +1816,8 @@
   }
 
   function heroPlateSet(id) {
-    var s = byId(id);
-    if (!s || s.category !== 'image') return;
+    var s = heroStyles().find(function (item) { return item.id === id; });
+    if (!s) return;
     var host = $('.hero__visual .hero__plate');
     if (!host) return;
 

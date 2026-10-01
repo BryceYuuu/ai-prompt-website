@@ -305,9 +305,9 @@ function clickThrough(el) {
   var tick7 = ticks[6];
   var tickHit = tick7 ? clickTarget(tick7) : null;
   var imageTotal = STYLES.filter(function (s) { return s.category === 'image'; }).length;
-  rec('首页图版台：刻度尺覆盖所有图片风格，指针落得到',
-      ticks.length === imageTotal && imageTotal > 0 && !!tickHit,
-      '格数=' + ticks.length + ' / ' + imageTotal + (tickHit ? ' 命中=' + cn(tickHit.el) : ' ✗ 找不到落点'));
+  rec('首页图版台：八款精选刻度，指针落得到',
+      ticks.length === 8 && imageTotal > ticks.length && !!tickHit,
+      '精选=' + ticks.length + ' 全库=' + imageTotal + (tickHit ? ' 命中=' + cn(tickHit.el) : ' ✗ 找不到落点'));
 
   var wantId = tick7 ? tick7.getAttribute('data-id') : '';
   var srcBefore = (document.querySelector('.hero__plate .cover img') || {}).src || '';

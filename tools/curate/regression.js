@@ -19,6 +19,8 @@ const mutations={
  export:['app.js','if (s.prompt) out.prompt = s.prompt;','if (s.prompt) out.prompt = "BROKEN";'],
  detail:['app.js',"if (!isImage || s.track === 'edit') {", "if (!isImage) {"],
  hero:['app.js',"heroStep(1); return;", "return;"],
+ heroFeatured:['app.js','return HERO_FEATURES.map(function (item) { return byId(item.id); }).filter(function (s) { return s && s.category === \'image\'; });','return imageStyles();'],
+ heroResult:['app.js','resultStart: feature && feature.resultStart','resultStart: 0'],
  search:['app.js',"if (f.q &&", "if (false &&"],
  sourceUI:['app.js',"esc(s.source.repo)","esc('MISSING')"],
  savedPersist:['app.js',"localStorage.setItem('shutong:saved', JSON.stringify(savedIds));","void 0;"],
@@ -101,7 +103,30 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  continue;
  }assert.equal(s.cover.license,'CC BY 4.0');const a=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.act.replace('案例 ','case-')+'-ATTRIBUTION.txt'),'utf8');assert(a.includes(s.cover.creator));}});
  await check('text-deliverables-and-retirement-audit',()=>{for(const s of cards.filter(s=>s.category!=='image')){assert.equal(s.track,'text');assert(!s.cover&&!s.local&&!s.cloud);assert(s.prompt.length>300);for(const label of ['【输入材料】','【处理步骤】','【交付内容】','【信息不足】'])assert(s.prompt.includes(label));assert(s.slots.length>0);}const a=JSON.parse(fs.readFileSync(path.join(root,'tools/curate/audit.json')));assert.equal(a.review.length,108);assert.equal(a.activeCount,cards.length);});
- await check('homepage-image-only-and-manual-carousel',async()=>{await nav('#/');assert(all('.card__link').length>0);for(const a of all('.card__link'))assert(images.some(s=>a.hash.endsWith(s.id)));const hero=q('.hero__plate');const first=hero.getAttribute('href');q('[data-action="hero-next"]').click();assert.notEqual(q('.hero__plate').getAttribute('href'),first);q('[data-action="hero-prev"]').click();assert.equal(q('.hero__plate').getAttribute('href'),first);});
+ await check('homepage-image-only-and-manual-carousel',async()=>{
+   await nav('#/');assert(all('.card__link').length>0);
+   for(const a of all('.card__link'))assert(images.some(s=>a.hash.endsWith(s.id)));
+   const featured=all('.hero__index .tick').map(el=>el.getAttribute('data-id'));
+   assert.equal(featured.length,8,'homepage has eight selected styles');assert.equal(new Set(featured).size,8);
+   const first=q('.hero__plate').getAttribute('href');
+   for(let i=0;i<8;i++){
+     const hero=q('.hero__plate'),card=cards.find(s=>hero.hash.endsWith(s.id)),cover=hero.querySelector('.cover');
+     assert.equal(card.id,featured[i]);assert.equal(card.category,'image');
+     assert.equal(hero.querySelector('.plate').textContent,'№ '+String(i+1).padStart(2,'0')+' / 08');
+     assert(cover.querySelector('.cover__credit').textContent.includes(card.cover.creator),'featured result retains attribution');
+     if(card.source.provider==='threads'){
+       assert(cover.classList.contains('cover--result'),'comparison preview shows generated result only');
+       assert(parseFloat(cover.style.getPropertyValue('--hero-result-height'))>=200,'source photo is outside preview');
+     }else assert(!cover.classList.contains('cover--result'),'standalone output is shown normally');
+     q('[data-action="hero-next"]').click();
+   }
+   assert.equal(q('.hero__plate').getAttribute('href'),first,'eighth slide wraps to the first');
+   q('[data-action="hero-prev"]').click();assert(q('.hero__plate').hash.endsWith(featured[7]));
+   q('[data-action="hero-next"]').click();assert.equal(q('.hero__plate').getAttribute('href'),first);
+   const original=cards.find(s=>s.id===featured[0]);await nav('#/style/'+original.id);
+   assert.equal(q('.preview-image img').getAttribute('src'),original.cover.src,'detail retains the complete comparison');
+   assert(!q('.preview-image').classList.contains('cover--result'));
+ });
  await check('scene-and-category-filters',async()=>{
    await nav('#/library?track=text');assert.equal(Number(q('.lib-count b').textContent),48);assert.equal(all('.gallery .card').length,12);
    for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat);assert.equal(Number(q('.lib-count b').textContent),cat==='image'?32:8);assert.equal(all('.gallery .card').length,cat==='image'?12:8);}
