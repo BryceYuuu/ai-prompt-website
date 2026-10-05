@@ -1,8 +1,11 @@
 """Build the reviewed catalog from committed specifications and source snapshots. No network."""
 from pathlib import Path
-import json,hashlib,re
+import json,hashlib,re,unicodedata
+from urllib.parse import urlsplit
 ROOT=Path(__file__).resolve().parents[2]
 BASE=ROOT/'tools/curate'; SRC=BASE/'sources'
+def require(condition,message):
+ if not condition: raise ValueError(message)
 old=json.loads((BASE/'previous-catalog.json').read_text())
 byid={x['id']:x for x in old['styles']}
 images={x['case']:x for x in json.loads((SRC/'image-cases.json').read_text())}
@@ -36,7 +39,7 @@ for num,id,name,latin,input_,style,use in image_specs:
  src=images[num]
  attribution=(SRC/f'case-{num}-ATTRIBUTION.txt').read_text()
  creator=re.search(r'image_author: *[\"\']?([^\n\"\']+)',attribution).group(1)
- assert re.search(r'license: *CC-BY-4.0',attribution), f'License requires review: {num}'
+ require(re.search(r'license: *CC-BY-4.0',attribution), f'License requires review: {num}')
  cover={'src':src['image'],'w':src['w'],'h':src['h'],'title':name+' · 来源案例','creator':creator,'license':'CC BY 4.0','licenseUrl':'https://creativecommons.org/licenses/by/4.0/','sourceUrl':src['caseUrl'],'provider':'github'}
  prompt=f'''【任务】根据我上传的原图生成「{name}」的图像编辑结果。必须使用上传图片，不要凭空换成另一个主体。
 【输入】一张{input_}。如果没有收到图片，请先要求我上传，暂不生成。
@@ -68,16 +71,55 @@ for id,cat,pattern,name,inputs,steps,outputs,limits in specs:
  use={'write':'长文写作','code':'代码评审','analyze':'数据分析','learn':'学习辅导','business':'产品规划','life':'日常决策'}[cat]
  curated[id]={'id':id,'name':name,'latin':pattern.replace('_',' ').title(),'tagline':outputs.replace('；','、')[:59],'category':cat,'uses':[use],'moods':['结构化','严谨'],'track':'text','version':'2.0','author':'书桐编辑整理','license':'MIT','licenseNote':'基于 Fabric MIT 授权的 pattern 中文改编；保留上游版权与许可，见 tools/curate/sources/fabric-license.txt。','createdAt':date,'updated':date,'art':{'g':'soft','p':['#FFFFFF','#E5E5EA','#172333','#0071E3'],'seed':len(curated)},'prompt':prompt,'slots':slots,'cover':None,'local':None,'cloud':None,'source':source,'curation':{'input':inputs,'output':outputs,'status':'editor-reviewed-not-model-tested','method':'按任务方法中文改编；非逐字翻译，非模型实测','reviewedAt':date}}
  samples[id]='交付清单\n'+'\n'.join('• '+x for x in outputs.split('；'))+'\n\n需要你提供：'+inputs
-thread_collections=[json.loads(p.read_text()) for p in sorted(SRC.glob('threads-*.json'))]
+# These exact snapshots already carry the maintainer's recorded permission.
+# Changing one, or adding an account, requires a new explicit editorial record.
+LEGACY_AUTHORIZED_MANIFESTS = {'threads-inkacalinka.json': 'c7aaf2848a186a972c6dfc93593709f96c7fb44987e112187abd1de5f86c5baf', 'threads-lch1776244.json': 'b2594dfe6ea4b889e0c103ec58eb36e3c1f39c5bfd899f7cd188c28b333bcd19'}
+def load_thread_manifest(path):
+ raw=path.read_bytes();manifest=json.loads(raw)
+ require(manifest.get('license')=='CUSTOM' and bool(manifest.get('licenseNote')), f'Threads license requires review: {path.name}')
+ if LEGACY_AUTHORIZED_MANIFESTS.get(path.name)!=hashlib.sha256(raw).hexdigest():
+  rights=manifest.get('rights') or {};review=manifest.get('review') or {}
+  require(rights.get('status') in {'authorized','open-license'}, f'Threads republication rights unconfirmed: {path.name}')
+  require({'prompt','images','public-site','public-repository'}<=set(rights.get('scope',[])), f'Threads rights scope incomplete: {path.name}')
+  license_value=rights.get('license')
+  require(isinstance(license_value,str) and bool(license_value.strip()) and license_value.strip().casefold() not in {'unknown','missing','unconfirmed','pending','none','null','未知','待确认','未确认'}, f'Threads rights license unconfirmed: {path.name}')
+  require(bool(rights.get('evidence')), f'Threads rights evidence missing: {path.name}')
+  fingerprint=hashlib.sha256(json.dumps({k:v for k,v in manifest.items() if k!='review'},ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+  require(all(review.get(k) is True for k in ['sourceVerified','rightsVerified','coreDedupeApproved']), f'Threads editorial approval missing: {path.name}')
+  require(bool(review.get('reviewer')) and bool(review.get('reviewedAt')), f'Threads reviewer/date missing: {path.name}')
+  require(review.get('contentSha256')==fingerprint, f'Threads manifest changed since review: {path.name}')
+ return manifest
+thread_collections=[load_thread_manifest(p) for p in sorted(SRC.glob('threads-*.json'))]
 thread_cards={};thread_items={}
+# Fail before assembling data instead of silently replacing a card from another
+# account. Editorial semantic review remains required for translated/rephrased
+# versions; these guards only catch exact identity/content collisions.
+thread_post_owners={};thread_prompt_owners={}
+def thread_post_key(url):
+ parsed=urlsplit(url)
+ require(parsed.scheme=='https' and parsed.hostname in {'www.threads.com','threads.com','www.threads.net','threads.net'}, f'Invalid Threads source: {url}')
+ match=re.fullmatch(r'/@[^/]+/post/([A-Za-z0-9_-]+)/?',parsed.path)
+ require(match, f'Invalid Threads post URL: {url}')
+ return match.group(1)
+def normalized_core(text):
+ return ''.join(c for c in unicodedata.normalize('NFKC',text).casefold() if c.isalnum())
 for threads in thread_collections:
  for item in threads['cases']:
-  thread_items[item['id']]=item
-  id=item['id'];date=threads['collectedAt'];raw=(SRC/item['promptFile']).read_bytes()
-  assert hashlib.sha256(raw).hexdigest()==item['promptSha256'], f'Changed Threads prompt: {id}'
+  id=item['id']
+  require(id not in curated and id not in thread_cards, f'Duplicate catalog ID: {id}')
+  for url in {item['postUrl'],item['promptUrl']}:
+   key=thread_post_key(url)
+   require(key not in thread_post_owners or thread_post_owners[key]==id, f'Duplicate Threads source: {id} / {thread_post_owners.get(key)}')
+   thread_post_owners[key]=id
+  thread_items[id]=item
+  date=threads['collectedAt'];raw=(SRC/item['promptFile']).read_bytes()
+  require(hashlib.sha256(raw).hexdigest()==item['promptSha256'], f'Changed Threads prompt: {id}')
   for picture in item['images']:
-   assert hashlib.sha256((ROOT/picture['src']).read_bytes()).hexdigest()==picture['sha256'], f'Changed Threads image: {picture["src"]}'
+   require(hashlib.sha256((ROOT/picture['src']).read_bytes()).hexdigest()==picture['sha256'], f'Changed Threads image: {picture["src"]}')
   original=raw.decode().strip()
+  core=normalized_core(original)
+  require(core and core not in thread_prompt_owners, f'Duplicate Threads core prompt: {id} / {thread_prompt_owners.get(core)}')
+  thread_prompt_owners[core]=id
   prompt='【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n'+original+'\n\n【保持不变】'+item.get('preserve','按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。')+'\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。'
   cover={k:v for k,v in item['images'][0].items() if k!='sha256'}
   cover.update({'title':item['name']+' · 作者案例','creator':threads['creator'],'license':'经授权收录','licenseUrl':'https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#'+threads.get('noticeAnchor','threads--chloe_lai'),'sourceUrl':item['postUrl'],'provider':'threads'})
@@ -87,7 +129,7 @@ for threads in thread_collections:
 # Newly reviewed styles lead the image-only homepage; existing IDs remain stable.
 curated={**thread_cards,**curated}
 keywords=json.loads((BASE/'keywords.json').read_text())
-assert set(keywords) == set(curated), 'Keywords must cover exactly the active catalog'
+require(set(keywords) == set(curated), 'Keywords must cover exactly the active catalog')
 for c in curated.values():
  c['keywords']=keywords[c['id']]
  meta=c['curation'];img=c['category']=='image'

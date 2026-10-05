@@ -2,10 +2,11 @@
 // Covers the current reviewed catalog; legacy dual-track features are not distributed.
 const {spawnSync}=require('child_process');
 const path=require('path');
-const cases=['nalaInterfaceText','nalaContinuation','nalaUsageNote','heroFeatured','heroResult','imageTapEntry','imageTapCurrent','imageTapDrag','exampleMain','exampleSwipe','exampleViewerStep','paginationOffset','paginationContext','paginationHome','keywords','text','disclosure','about','runtime','count','source','image','prompt','license','catalog','copy','export','detail','hero','search','sourceUI','savedPersist','savedLoad','savedFilter','savedScope','categoryTrack','savedUnavailable','slotValue','slotCopy','slotReset','slotHTML','slotPrivacy','preparedDownload','imageViewer','threadsLicense','exampleSelection','threadsOwner','threadsOrientation','longPromptLimit','longPromptGuard','useFilter'];
+const cases=['browseGroup','browseSource','browseQuery','browseInterrupted','nalaInterfaceText','nalaContinuation','nalaUsageNote','heroFeatured','heroResult','imageTapEntry','imageTapCurrent','imageTapDrag','exampleMain','exampleSwipe','exampleViewerStep','paginationOffset','paginationContext','paginationHome','keywords','text','disclosure','about','runtime','count','source','image','prompt','license','catalog','copy','export','detail','hero','search','sourceUI','savedPersist','savedLoad','savedFilter','savedScope','categoryTrack','savedUnavailable','slotValue','slotCopy','slotReset','slotHTML','slotPrivacy','preparedDownload','imageViewer','threadsLicense','exampleSelection','threadsOwner','threadsOrientation','longPromptLimit','longPromptGuard','useFilter'];
 const selected=process.argv[2]?cases.filter(x=>x===process.argv[2]):cases;
 if(!selected.length)throw Error('Unknown mutation');
 const expected = {
+ browseGroup:'browse-groups-and-card-hierarchy', browseSource:'browse-source-filter-context-and-reset', browseQuery:'browse-multiword-and-safe-navigation', browseInterrupted:'browse-multiword-and-safe-navigation',
  nalaInterfaceText:'nala-source-specific-layout-notes',
  nalaContinuation:'threads-gallery-source-and-search', nalaUsageNote:'nala-source-specific-layout-notes',
  heroFeatured:'homepage-image-only-and-manual-carousel', heroResult:'homepage-image-only-and-manual-carousel',

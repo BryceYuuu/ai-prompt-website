@@ -9,3 +9,6 @@ preview/
 coverage/
 __pycache__/
 *.pyc
+
+# Unpublished intake records stay local until reviewed.
+tools/curate/intake/*.json

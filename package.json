@@ -12,7 +12,8 @@
     "validate": "node schema/validate.mjs",
     "test": "npm run validate && node tools/hf-test.js .",
     "test:mutations": "node tools/mutate.js",
-    "test:browser": "node tools/usability.js . && node tools/hostile.js . && node tools/links.js . && node tools/overflow.js ."
+    "test:browser": "node tools/usability.js . && node tools/hostile.js . && node tools/links.js . && node tools/overflow.js .",
+    "test:intake": "python3 -m unittest discover -s tools/curate -p 'test_*.py' -v"
   },
   "devDependencies": {
     "jsdom": "30.0.1"

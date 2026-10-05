@@ -81,13 +81,20 @@
   /* 页面搜索与快捷搜索共用索引，包含常用中文别名和英文任务名。 */
   function searchHay(s) {
     var cat = catOf(s.category);
+    var group = HF_BROWSE.imageGroup(s), source = HF_BROWSE.source(s);
     return (s.name + ' ' + s.latin + ' ' + s.tagline + ' ' + s.uses.join(' ') + ' ' +
       s.moods.join(' ') + ' ' + s.author + ' ' + cat.name + ' ' + cat.key + ' ' +
+      (group ? group.name + ' ' + group.desc : '') + ' ' + source.name + ' ' + source.platform + ' ' +
       (s.prompt || '') + ' ' + (s.keywords || []).join(' ') + ' ' +
       (s.local ? s.local.prompt : '') + ' ' + (s.cloud ? s.cloud.prompt : '') + ' ' +
       (s.source ? s.source.repo + ' ' + s.source.act + ' ' + s.source.contributor : '') + ' ' +
       (s.local ? s.local.base + ' ' + s.local.sampler + ' ' + s.local.loras.map(function (x) { return x.name; }).join(' ') + ' ' + s.local.workflow : '') + ' ' +
       (s.cloud ? s.cloud.models.join(' ') : '')).toLowerCase();
+  }
+
+  function matchesQuery(s, query) {
+    var hay = searchHay(s);
+    return String(query || '').toLowerCase().trim().split(/\s+/).every(function (term) { return hay.indexOf(term) >= 0; });
   }
 
   /* ------------------------------------------------------------ toast -- */
@@ -307,8 +314,12 @@
     qs.split('&').forEach(function (kv) {
       if (!kv) return;
       var i = kv.indexOf('=');
-      var k = decodeURIComponent(i >= 0 ? kv.slice(0, i) : kv);
-      var v = i >= 0 ? decodeURIComponent(kv.slice(i + 1)) : '';
+      var k, v;
+      // A truncated/shared URL must not take the whole catalog down.
+      try {
+        k = decodeURIComponent(i >= 0 ? kv.slice(0, i) : kv);
+        v = i >= 0 ? decodeURIComponent(kv.slice(i + 1)) : '';
+      } catch (e) { return; }
       if (k) params[k] = v;
     });
     if (path.length > 1) path = path.replace(/\/+$/, '');
@@ -370,7 +381,7 @@
 
   /* ------------------------------------------------------------ state -- */
   var state = {
-    filters: { cat: '', use: '', mood: '', track: 'all', q: '', sort: 'hot', saved: '' },
+    filters: { cat: '', group: '', source: '', use: '', mood: '', track: 'all', q: '', sort: 'hot', saved: '' },
     page: 1,
     detailTrack: 'local',
     /* 窄屏上筛选条默认收起 —— 不收的话第一张卡要滚过一整屏才出现，
@@ -428,6 +439,7 @@
 
   function navHTML(route) {
     var p = route.path;
+    var imageLibrary = state.filters.cat === 'image' || state.filters.track === 'both' || !!state.filters.group;
     var link = function (href, label, match) {
       return '<a class="nav__link' + (match ? ' is-active' : '') + '" href="#' + href + '">' + label + '</a>';
     };
@@ -442,8 +454,8 @@
           '</span>' +
         '</a>' +
         '<nav class="nav__links">' +
-          link('/', '图片风格', p === '/' || (p === '/library' && route.params.cat === 'image' && route.params.saved !== '1')) +
-          link('/library?track=text', '场景提示词', p === '/library' && route.params.cat !== 'image' && route.params.saved !== '1') +
+          link('/', '图片风格', p === '/' || (p === '/library' && imageLibrary && route.params.saved !== '1')) +
+          link('/library?track=text', '场景提示词', p === '/library' && !imageLibrary && route.params.saved !== '1') +
           link('/library?saved=1', '我的收藏', p === '/library' && route.params.saved === '1') +
           link('/about', '使用说明', p === '/about') +
         '</nav>' +
@@ -569,6 +581,8 @@
     var href = '#/style/' + esc(s.id);
     var cat = catOf(s.category);
     var cov = s.cover || COVERS[s.id];
+    var group = HF_BROWSE.imageGroup(s), source = HF_BROWSE.source(s);
+    var examples = (s.guide || []).filter(function (block) { return block.t === 'img'; }).length;
     var artAttrs = cov
       ? ' class="card__art card__art--cover" style="aspect-ratio:' + ar(cov) + '"'
       : ' class="card__art"';
@@ -590,17 +604,17 @@
             '<ul>' + (s.curation.output || s.tagline).split('；').slice(0, 3).map(function (x) { return '<li>' + ICON.check + esc(x) + '</li>'; }).join('') + '</ul></div>') +
         '<div class="card__body">' +
           '<div class="row row--between gap-8 card__catrow">' +
-            '<span class="catpill catpill--' + esc(s.category) + '"><i></i>' + esc(cat.name) + '</span>' +
-            '<span class="card__ver">' + (s.slots || []).length + ' 项输入</span>' +
+            '<span class="catpill catpill--' + esc(s.category) + '"><i></i>' + esc(group ? group.name : cat.name) + '</span>' +
+            '<span class="card__meta">' + (group ? examples + ' 张案例' : (s.slots || []).length + ' 项输入') + '</span>' +
           '</div>' +
-          '<div class="card__title">' +
+          '<h3 class="card__title">' +
             '<span class="card__name">' + esc(s.name) + '</span>' +
             '<span class="card__latin">' + esc(s.latin) + '</span>' +
-          '</div>' +
+          '</h3>' +
           '<p class="card__desc">' + esc(s.tagline) + '</p>' +
           '<div class="card__foot">' +
-            '<span class="card__author">' +
-              esc(s.category === 'image' ? '图生图 · 风格转换' : 'Fabric · 中文整理') +
+              '<span class="card__author" title="' + esc(source.platform ? source.platform + ' · ' + source.name : source.name) + '">' +
+              esc(source.platform ? source.platform + ' · ' + source.name : source.name) +
             '</span>' +
             '<span class="card__open">查看用法 ' + ICON.arrowRight + '</span>' +
           '</div>' +
@@ -615,7 +629,8 @@
     var pool = STYLES.filter(function (s) { return (f.saved !== '1' || isSaved(s.id)) && (f.track !== 'text' || s.category !== 'image'); });
     var tab = function (key, name, n) {
       return '<a class="cattab' + (activeKey === key ? ' is-on' : '') + '" href="' +
-        esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', use: '', mood: '', page: '' })) + '">' +
+        esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', group: '', source: '', use: '', mood: '', page: '' })) + '"' +
+        (activeKey === key ? ' aria-current="page"' : '') + '>' +
         esc(name) + '<span class="cattab__n">' + pad2(n) + '</span></a>';
     };
     return '<div class="catbar"><div class="wrap catbar__in">' +
@@ -724,6 +739,7 @@
           '<div class="catalogue__side"><p>先看效果，再选风格。<br>把喜欢的收藏起来，随时开始创作。</p>' +
           '<a class="btn btn--ghost btn--sm" href="#/library?cat=image">筛选图片风格' + ICON.arrowRight + '</a></div>' +
         '</div>' +
+        imageGroupsHTML(true) +
         '<div class="gallery">' + list.slice((state.page - 1) * 12, state.page * 12).map(styleCard).join('') + '</div>' +
         paginationHTML(list.length, pages, true) +
         '<p class="collection-note">图片为来源项目公开案例，已保留署名；本站中文整理版尚未逐条实测。</p>' +
@@ -737,13 +753,13 @@
 
   /* =========================================================== library == */
 
-  function filtered() {
-    var f = state.filters;
-    var list = STYLES.filter(function (s) {
+  function matchesFilters(s, f, except) {
       if (f.saved === '1' && !isSaved(s.id)) return false;
       if (f.cat && s.category !== f.cat) return false;
-      if (f.use && s.uses.indexOf(f.use) < 0) return false;
-      if (f.mood && s.moods.indexOf(f.mood) < 0) return false;
+      if (f.group && except !== 'group' && (!HF_BROWSE.imageGroup(s) || HF_BROWSE.imageGroup(s).key !== f.group)) return false;
+      if (f.source && except !== 'source' && HF_BROWSE.source(s).key !== f.source) return false;
+      if (f.use && except !== 'use' && s.uses.indexOf(f.use) < 0) return false;
+      if (f.mood && except !== 'mood' && s.moods.indexOf(f.mood) < 0) return false;
       /* 轨道筛选只有两个**互不重叠**的取值：双轨（图片风格）/ 单条（其余分类）。
          原先还有 local / cloud 两项，那时目录里确实有「仅本地」「仅云端」的卡。
          补全之后 18 张图片卡全是双轨，于是 双轨 / 本地 / 云端 三项会返回
@@ -752,12 +768,16 @@
          要守的性质：任意两个选项的结果集不能相同。 */
       if (f.track === 'both' && s.category !== 'image') return false;
       if (f.track === 'text' && s.category === 'image') return false;
-      if (f.q && searchHay(s).indexOf(f.q.toLowerCase()) < 0) return false;
+      if (f.q && !matchesQuery(s, f.q)) return false;
       return true;
-    });
+  }
+
+  function filtered() {
+    var f = state.filters;
+    var list = STYLES.filter(function (s) { return matchesFilters(s, f); });
 
     if (f.sort === 'new') list.sort(function (a, b) { return a.updated === b.updated ? 0 : (a.updated < b.updated ? 1 : -1); });
-    if (f.sort === 'hot' && f.cat === '' && !f.q && !f.use && !f.mood && f.track === 'all') {
+    if (f.sort === 'hot' && f.cat === '' && !f.q && !f.group && !f.source && !f.use && !f.mood && f.track === 'all') {
       list = interleave(list);
     }
     return list;
@@ -784,7 +804,44 @@
   function filterHref(param, value) {
     var ov = { page: '' };
     ov[param] = value;
+    // Type switches must clear only incompatible image/task constraints.
+    if (param === 'track') {
+      if (value === 'text') ov.group = '';
+      if ((value === 'text' && state.filters.cat === 'image') || (value === 'both' && state.filters.cat !== 'image')) ov.cat = '';
+      ov.source = ''; ov.use = ''; ov.mood = '';
+    }
     return libHref(ov);
+  }
+
+  function imageGroupsHTML(home) {
+    var f = state.filters;
+    var pool = home ? imageStyles() : STYLES.filter(function (s) { return matchesFilters(s, f, 'group'); });
+    var groups = TAXONOMY.imageGroups.filter(function (group) {
+      return (!home && group.key === f.group) || pool.some(function (s) { return HF_BROWSE.imageGroup(s) && HF_BROWSE.imageGroup(s).key === group.key; });
+    });
+    function groupLink(group) {
+      var n = group ? pool.filter(function (s) { return HF_BROWSE.imageGroup(s) && HF_BROWSE.imageGroup(s).key === group.key; }).length : pool.length;
+      var key = group ? group.key : '', on = !home && f.group === key;
+      var href = home ? '#/library?cat=image' + (key ? '&group=' + key : '') : filterHref('group', key);
+      return '<a class="browse-group' + (on ? ' is-on' : '') + '" href="' + esc(href) + '"' +
+        (on ? ' aria-current="page"' : '') + (group ? ' title="' + esc(group.desc) + '"' : '') + '>' +
+        esc(group ? group.name : '全部风格') + '<span>' + n + '</span></a>';
+    }
+    return '<nav class="browse-groups' + (home ? ' browse-groups--home' : ' wrap') + '" aria-label="按图片风格浏览">' +
+      groupLink(null) + groups.map(groupLink).join('') + '</nav>';
+  }
+
+  function activeFiltersHTML() {
+    var f = state.filters;
+    var group = TAXONOMY.imageGroups.find(function (item) { return item.key === f.group; });
+    var source = HF_BROWSE.sources.find(function (item) { return item.key === f.source; });
+    var labels = [['group', group && group.name], ['source', source && source.name], ['use', f.use], ['mood', f.mood], ['q', f.q && '搜索：' + f.q]];
+    var active = labels.filter(function (entry) { return entry[1]; });
+    if (!active.length) return '';
+    return '<div class="active-filters" aria-label="当前筛选条件"><span>已选</span>' + active.map(function (entry) {
+      return '<a href="' + esc(filterHref(entry[0], '')) + '" aria-label="移除筛选：' + esc(entry[1]) + '">' +
+        '<span>' + esc(entry[1]) + '</span><b aria-hidden="true">×</b></a>';
+    }).join('') + '</div>';
   }
 
   function chips(items, activeKey, param, counts) {
@@ -825,9 +882,8 @@
 
   function libraryView() {
     function available(field, key) {
-      var f = state.filters;
       return STYLES.filter(function(s) {
-        return (f.saved !== '1' || isSaved(s.id)) && (!f.cat || s.category === f.cat) && (f.track !== 'text' || s.category !== 'image') && (f.track !== 'both' || s.category === 'image') && s[field].indexOf(key) >= 0;
+        return matchesFilters(s, state.filters, field === 'uses' ? 'use' : 'mood') && s[field].indexOf(key) >= 0;
       }).length;
     }
 
@@ -837,14 +893,18 @@
     var start = (state.page - 1) * 12;
     var shown = list.slice(start, start + 12);
     var f = state.filters;
-    var resetHref = f.saved === '1' ? '#/library?saved=1' : (f.track === 'text' ? '#/library?track=text' : '#/library');
+    var isImages = f.cat === 'image' || f.track === 'both' || !!f.group;
+    var resetHref = f.saved === '1' ? '#/library?saved=1' : (f.track === 'text' ? '#/library?track=text' : (isImages ? '#/library?cat=image' : '#/library'));
     /* 标题必须与筛选结果一致：只有 f.track 真的是 both / text 时才写「双轨 / 单条」，
        否则退回「全部提示词」。原先写的是 f.track !== 'all' ? '图片转换' : …，
        那个写法在 track=local（老链接）时会给出一页 78 张卡的「图片转换」。 */
-    var trackName = f.track === 'both' ? '图片转换' : (f.track === 'text' ? '场景任务' : '');
-    var head = f.saved === '1' ? '把好灵感，留在手边。' : (f.cat ? catOf(f.cat).name : (f.use || f.mood || (f.track === 'text' ? '少些重复，多些创造。' : trackName) || '全部提示词'));
+    var trackName = f.track === 'both' ? '图片风格' : (f.track === 'text' ? '场景提示词' : '');
+    var head = f.saved === '1' ? '我的收藏' : (isImages ? '图片风格' : (f.cat ? catOf(f.cat).name : trackName || '全部提示词'));
+    var sub = isImages ? '先选画面方向，再按用途或来源查找。每组提示词只占一张卡，多张案例在详情中浏览。' : (f.cat ? catOf(f.cat).desc + '。选择任务，填写材料，带走明确的交付结果。' : '从写作、编程到日常决策，按任务找模板。填写材料，一键带到你的 AI 工具。');
     /* 有几个条件真的在生效 —— 决定「清空筛选」要不要出现、筛选按钮上挂几 */
-    var activeN = [f.cat, f.use, f.mood, f.q].filter(Boolean).length + (f.track !== 'all' ? 1 : 0);
+    var activeN = [(f.cat !== 'image' || f.saved === '1') ? f.cat : '', f.group, f.source, f.use, f.mood, f.q].filter(Boolean).length + (f.saved === '1' && f.track !== 'all' ? 1 : 0);
+    var sourcePool = STYLES.filter(function (s) { return matchesFilters(s, f, 'source'); });
+    function sourceCount(key) { return sourcePool.filter(function (s) { return HF_BROWSE.source(s).key === key; }).length; }
 
     return '' +
       '<section class="lib-head">' +
@@ -852,31 +912,40 @@
           '<div class="crumbs"><a href="#/">首页</a><span>/</span><span>提示词库</span></div>' +
           '<h1 class="lib-head__title">' + esc(head) + '</h1>' +
           '<p class="lead lib-head__sub">' +
-            (f.saved === '1' ? '你的私人灵感夹。收藏保存在当前浏览器，无需登录；清理浏览器数据会清空。' : '从明确的任务出发，拿到真正可用的结果。选择模板，填入材料，一键带到你的 AI 工具。') + '</p>' +
+            (f.saved === '1' ? '你的私人灵感夹。收藏保存在当前浏览器，无需登录；清理浏览器数据会清空。' : sub) + '</p>' +
         '</div>' +
       '</section>' +
       catbarHTML(f.cat) +
+      (isImages ? imageGroupsHTML(false) : '') +
       /* 窄屏收起的部分打上 filters__hide-sm；搜索框不在其中，始终可见。
          桌面端这些类名不起作用，布局与改动前完全一致。 */
       '<div class="filters' + (state.filtersOpen ? ' is-open' : '') + '" id="filters">' +
         '<div class="wrap">' +
-          '<div class="filters__row">' +
+          '<div class="filters__row filters__row--search">' +
+            '<div class="filters__mini">' + ICON.search +
+              '<input type="search" data-action="filter-search" placeholder="搜索标题、关键词或作者…" aria-label="在当前分类中搜索提示词" value="' + esc(f.q) + '">' +
+            '</div>' +
+            '<label class="source-filter"><span>内容来源</span><select class="select" data-action="source" aria-label="按内容来源筛选">' +
+              '<option value="">全部来源 · ' + sourcePool.length + '</option>' +
+              HF_BROWSE.sources.filter(function (source) { return source.key === f.source || sourceCount(source.key); }).map(function (source) {
+                return '<option value="' + esc(source.key) + '"' + (source.key === f.source ? ' selected' : '') + '>' +
+                  esc(source.platform + ' · ' + source.name) + ' · ' + sourceCount(source.key) + '</option>';
+              }).join('') + '</select></label>' +
+          '</div>' +
+          '<div class="filters__row filters__hide-sm">' +
             '<span class="filters__label filters__hide-sm">用途</span>' +
             '<div class="filters__chips filters__hide-sm">' +
               '<a class="chip chip--sm' + (!f.use ? ' is-on' : '') +
                 '" href="' + esc(filterHref('use', '')) + '">全部</a>' +
-              chips(TAXONOMY.uses.filter(function(x){return available('uses',x.key)>0;}), f.use, 'use', function (k) { return available('uses', k); }) +
-            '</div>' +
-            '<div class="filters__mini">' + ICON.search +
-              '<input type="search" data-action="filter-search" placeholder="在结果中搜索…" value="' + esc(f.q) + '">' +
+              chips(TAXONOMY.uses.filter(function(x){return x.key === f.use || available('uses',x.key)>0;}), f.use, 'use', function (k) { return available('uses', k); }) +
             '</div>' +
           '</div>' +
           '<div class="filters__row filters__hide-sm">' +
-            '<span class="filters__label">情绪</span>' +
+            '<span class="filters__label">' + (isImages ? '画面气质' : '表达方式') + '</span>' +
             '<div class="filters__chips">' +
               '<a class="chip chip--sm' + (!f.mood ? ' is-on' : '') +
                 '" href="' + esc(filterHref('mood', '')) + '">全部</a>' +
-              chips(TAXONOMY.moods.filter(function(x){return available('moods',x.key)>0;}), f.mood, 'mood', function (k) { return available('moods', k); }) +
+              chips(TAXONOMY.moods.filter(function(x){return x.key === f.mood || available('moods',x.key)>0;}), f.mood, 'mood', function (k) { return available('moods', k); }) +
             '</div>' +
             '<span class="filters__label filters__label--end">类型</span>' +
             '<div class="seg" role="group" aria-label="按内容类型筛选">' +
@@ -904,7 +973,7 @@
             '<div class="row gap-10 lib-bar__actions">' +
               /* 没有任何条件生效时不摆这个按钮 —— 点了也没用的按钮不该存在 */
               (activeN ? '<a class="btn btn--ghost btn--sm" href="' + resetHref + '">清空筛选</a>' : '') +
-              '<select class="select" data-action="sort">' +
+              '<select class="select" data-action="sort" aria-label="提示词排序">' +
                 TAXONOMY.sorts.map(function (s) {
                   return '<option value="' + s.key + '"' + (f.sort === s.key ? ' selected' : '') + '>' +
                     esc(s.label) + '</option>';
@@ -912,6 +981,8 @@
               '</select>' +
             '</div>' +
           '</div>' +
+          activeFiltersHTML() +
+          '<h2 class="sr-only">浏览结果</h2>' +
           (shown.length
             ? '<div class="gallery">' + shown.map(styleCard).join('') + '</div>'
             : '<div class="empty">' + glassHTML('empty__glass') +
@@ -1424,7 +1495,7 @@
     q = (q || '').trim().toLowerCase();
     var base = STYLES.filter(function (s) {
       if (!q) return true;
-      return searchHay(s).indexOf(q) >= 0;
+      return matchesQuery(s, q);
     }).slice(0, 7);
 
     paletteResults = base;
@@ -1473,6 +1544,8 @@
   /* ============================================================ render == */
 
   function render() {
+    // A pending typed search must never pull the reader back after newer navigation.
+    clearTimeout(onInput._timer);
     var route = parseHash();
     var previousPage = state.page;
     var viewer = $('.image-viewer');
@@ -1494,7 +1567,9 @@
     }
     if (route.path === '/library') {
       state.filters = {
-        cat: route.params.cat || '',
+        cat: CATS.some(function (cat) { return cat.key === route.params.cat; }) ? route.params.cat : '',
+        group: TAXONOMY.imageGroups.some(function (group) { return group.key === route.params.group; }) ? route.params.group : '',
+        source: HF_BROWSE.sources.some(function (source) { return source.key === route.params.source; }) ? route.params.source : '',
         use: route.params.use || '',
         mood: route.params.mood || '',
         /* 轨道只认这三个取值。老链接里的 track=local / track=cloud 落到 'all' ——
@@ -1505,6 +1580,8 @@
         sort: route.params.sort === 'new' ? 'new' : 'hot',
         saved: route.params.saved === '1' ? '1' : ''
       };
+      if (state.filters.cat && ((state.filters.track === 'text' && state.filters.cat === 'image') || (state.filters.track === 'both' && state.filters.cat !== 'image'))) state.filters.track = 'all';
+      if ((state.filters.cat && state.filters.cat !== 'image') || state.filters.track === 'text') state.filters.group = '';
       /* 记住这个地址（含筛选），详情页的返回键靠它回到读者刚才那一屏。
          放在这里而不是 navigate() 里，是因为 hashchange（前进/后退）
          也要更新它 —— 从详情页按浏览器后退回到列表，返回键不该再指向别处。 */
@@ -1535,7 +1612,7 @@
     document.title = (route.path !== '/' && heading ? heading.textContent.trim() + ' · ' : '') + '提示词网站 · 书桐 SHUTONG';
 
     $$('.mobilenav a').forEach(function (a) {
-      var activeHref = route.path === '/library' ? (route.params.saved === '1' ? '#/library?saved=1' : (route.params.cat === 'image' ? '#/' : '#/library?track=text')) : '#' + route.path;
+      var activeHref = route.path === '/library' ? (state.filters.saved === '1' ? '#/library?saved=1' : ((state.filters.cat === 'image' || state.filters.track === 'both' || state.filters.group) ? '#/' : '#/library?track=text')) : '#' + route.path;
       a.classList.toggle('is-active', a.getAttribute('href') === activeHref);
     });
     $('#mobilenav').classList.remove('is-open');
@@ -1966,6 +2043,8 @@
       e.preventDefault();
       state.filtersOpen = !state.filtersOpen;
       render();
+      var filterToggle = $('[data-action="filters-toggle"]');
+      if (filterToggle) filterToggle.focus();
       return;
     }
 
@@ -2073,6 +2152,12 @@
   function onChange(e) {
     var t = e.target;
     var da = t.getAttribute && t.getAttribute('data-action');
+    if (da === 'source') {
+      navigate(filterHref('source', t.value));
+      var sourceSelect = $('[data-action="source"]');
+      if (sourceSelect) sourceSelect.focus();
+      return;
+    }
     if (da === 'sort') {
       var next = {};
       Object.keys(state.filters).forEach(function (k) { next[k] = state.filters[k]; });

@@ -476,16 +476,35 @@
       "preserve": "保持人物或宠物的身份辨识及关键配色；九个贴纸可以有不同表情和姿态，不强制沿用原照片的动作。"
     }
   ],
-  "review": [
-    {
-      "postUrl": "https://www.threads.com/@blissful_nala/post/DdoKt4KGwMU",
-      "promptUrl": "https://www.threads.com/@blissful_nala/post/DdoKtb_m9Un",
-      "decision": "excluded",
-      "reason": "原帖配文和示例为毛毡风，作者附上的提示词却是3D厚涂油画，与9月22日提示词相同；没有找到作者提供的毛毡纠正版本，避免错误配对。"
-    },
-    {
-      "decision": "deduplication",
-      "reason": "逐组比较原文、图像SHA256和48×64视觉缩略图；未发现与站内现有Threads图片完全相同的案例。两组厚涂分别约束连续场景与暖白色带，保留不同构图；未将风格相近误判成完全重复。"
-    }
-  ]
+  "review": {
+    "sourceVerified": true,
+    "rightsVerified": true,
+    "coreDedupeApproved": true,
+    "reviewer": "Codex editorial review for BryceYuuu",
+    "reviewedAt": "2026-10-05",
+    "decisions": [
+      {
+        "postUrl": "https://www.threads.com/@blissful_nala/post/DdoKt4KGwMU",
+        "promptUrl": "https://www.threads.com/@blissful_nala/post/DdoKtb_m9Un",
+        "decision": "excluded",
+        "reason": "原帖配文和示例为毛毡风，作者附上的提示词却是3D厚涂油画，与9月22日提示词相同；没有找到作者提供的毛毡纠正版本，避免错误配对。"
+      },
+      {
+        "decision": "deduplication",
+        "reason": "逐组比较原文、图像SHA256和48×64视觉缩略图；未发现与站内现有Threads图片完全相同的案例。两组厚涂分别约束连续场景与暖白色带，保留不同构图；未将风格相近误判成完全重复。"
+      }
+    ],
+    "contentSha256": "fb10c1da13918f0a8b54ce04cbfc1d657d1d99fe0c1d0f1e1c442c75fb32d1f8"
+  },
+  "rights": {
+    "status": "authorized",
+    "license": "CUSTOM",
+    "scope": [
+      "prompt",
+      "images",
+      "public-site",
+      "public-repository"
+    ],
+    "evidence": "2026-10-05 本会话中，维护者针对 @blissful_nala 回复“是我的账号，或已获得转载授权”；问题明确覆盖图片和完整提示词转载到公开网站及 GitHub 仓库。此确认不授予第三方再许可。"
+  }
 }

@@ -10,6 +10,17 @@ const TAXONOMY = {
     { key: 'business', name: '商业职场', latin: 'Business', desc: '需求、反馈、销售复盘与会议行动项' },
     { key: 'life',     name: '生活日常', latin: 'Life',     desc: '菜谱、条款解读、计划复盘与购买决策' }
   ],
+  /* 浏览分组只描述画面方向，不改变模板内容、作者或许可。每个图片一组。
+     新内容应补入对应 ids；未编组的内容仍会出现在「其他风格」和全部列表。 */
+  imageGroups: [
+    { key: 'objects', name: '手办玩具', desc: '手办、玩偶与随身小物', ids: ['anime-figurine', 'plush-toy', 'bobblehead', 'chibi-keychain', 'voxel-object'] },
+    { key: 'craft', name: '材质工艺', desc: '纸艺、玻璃、绒毛与手工质感', ids: ['glass-morphism', 'hard-edge-minimal', 'fluffy-icon', 'tufted-rug', 'steampunk-creature', 'threads-inka-needle-felt', 'threads-inka-travel-magnet', 'threads-nala-shell-mosaic', 'threads-nala-layered-paper'] },
+    { key: 'drawing', name: '插画绘画', desc: '线稿、蜡笔、水彩与油画', ids: ['line-art-sketch', 'threads-inka-minimal-paper', 'threads-inka-charcoal-doodle', 'threads-inka-pastel-crayon', 'threads-inka-flat-editorial', 'threads-inka-impasto-world', 'threads-pet-doodle', 'threads-nala-character-turnaround', 'threads-nala-marker-doodle', 'threads-nala-impressionist-scene', 'threads-nala-impasto-ribbon'] },
+    { key: 'graphic', name: '平面拼贴', desc: '海报、像素、贴纸与图卡', ids: ['vector-poster', 'pixel-quest', 'chibi-sticker-pack', 'threads-inka-abstract-memory', 'threads-inka-second-world', 'threads-inka-paper-scrapbook', 'threads-retro-diagram', 'threads-watercolor-mosaic', 'threads-nala-clay-stickers'] },
+    { key: 'miniature', name: '微缩场景', desc: '建筑、等距模型与小世界', ids: ['cyber-night-market', 'miniature-diorama', 'threads-isometric-poster', 'threads-nala-vintage-stamp'] },
+    { key: 'photo', name: '摄影光影', desc: '曝光、剪影与摄影氛围', ids: ['double-exposure', 'frosted-silhouette', 'threads-nala-dreamcore', 'threads-nala-surreal-color'] },
+    { key: 'other', name: '其他风格', desc: '更多图片创作方向', ids: [] }
+  ],
   uses: [
     { key: '社交封面', desc: '小红书 / 公众号头图' },
     { key: '电商主图', desc: '商品与场景渲染' },
@@ -59,6 +70,30 @@ const TAXONOMY = {
 };
 
 const STYLES = Object.values(HF_CURATED);
+/* Derive source facets from catalog evidence, never from a manually maintained count.
+   A Threads account is a source collection; a GitHub repository is a collection,
+   not an attribution claim. Exact creators and licenses remain on every detail. */
+const HF_BROWSE = (function () {
+  var groups = Object.create(null), sources = Object.create(null);
+  TAXONOMY.imageGroups.forEach(function (group) {
+    group.ids.forEach(function (id) { groups[id] = group; });
+  });
+  function imageGroup(s) {
+    return s.category === 'image' ? (groups[s.id] || TAXONOMY.imageGroups[TAXONOMY.imageGroups.length - 1]) : null;
+  }
+  function source(s) {
+    var evidence = s.source || {}, match;
+    if (evidence.provider === 'threads' && (match = String(evidence.url || '').match(/^https:\/\/(?:www\.)?threads\.(?:com|net)\/@([^/]+)/i))) {
+      return { key: 'threads:' + match[1].toLowerCase(), name: evidence.contributor || '@' + match[1], platform: 'Threads' };
+    }
+    if ((match = String(evidence.url || '').match(/^https:\/\/github\.com\/([^/]+\/[^/#?]+)/i))) {
+      return { key: 'github:' + match[1].toLowerCase(), name: match[1].split('/')[1], platform: 'GitHub' };
+    }
+    return { key: 'source:' + (evidence.repo || s.author || 'unknown'), name: evidence.repo || s.author || '其他来源', platform: '' };
+  }
+  STYLES.forEach(function (s) { var item = source(s); sources[item.key] = item; });
+  return { imageGroup: imageGroup, source: source, sources: Object.values(sources) };
+})();
 const HF_COVERS = {}, HF_NOTES = {}, HF_SAMPLES = {};
 STYLES.forEach(function(s) {
   if (s.cover) HF_COVERS[s.id] = s.cover;

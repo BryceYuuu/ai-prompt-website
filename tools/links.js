@@ -68,6 +68,8 @@ function run() {
     var cats = {}; TAXONOMY.categories.forEach(function (c) { cats[c.key] = c; });
     var uses = {}; TAXONOMY.uses.forEach(function (u) { uses[u.key] = u; });
     var moods = {}; TAXONOMY.moods.forEach(function (m) { moods[m.key] = m; });
+    var groups = {}; TAXONOMY.imageGroups.forEach(function (g) { groups[g.key] = g; });
+    var sources = {}; HF_BROWSE.sources.forEach(function (s) { sources[s.key] = s; });
     L.stats.cards = STYLES.length;
     __flush();
 
@@ -77,7 +79,7 @@ function run() {
        那边仍是 local / cloud（选看哪一条轨道），这边是「哪种卡」。
        图片风格补全双轨之后，库页的 local / cloud 两档与「双轨」返回同一集合，
        已经删掉 —— 留着的话这张表会替一个筛不动的档位背书。 */
-    var LIB_PARAMS = { cat: cats, use: uses, mood: moods, track: { all: 1, both: 1, text: 1 },
+    var LIB_PARAMS = { cat: cats, group: groups, source: sources, use: uses, mood: moods, track: { all: 1, both: 1, text: 1 },
                        q: null, sort: { hot: 1, new: 1 }, page: null, saved: { 1: 1 } };
 
     /* 详情页也要扫，而且每个分类各挑一张 —— 文本卡和图片卡的详情页结构不同 */
