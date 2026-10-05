@@ -26,8 +26,8 @@ const mutations={
  savedPersist:['app.js',"localStorage.setItem('shutong:saved', JSON.stringify(savedIds));","void 0;"],
  savedLoad:['app.js',"localStorage.getItem('shutong:saved')","'[]'"],
  savedFilter:['app.js',"if (f.saved === '1' && !isSaved(s.id)) return false;","if (false) return false;"],
- savedScope:['app.js',"esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', use: '', mood: '', page: '' }))","esc('#/library?cat=' + key)"],
- categoryTrack:['app.js',"track: f.track === 'text' ? 'text' : 'all', use: ''","track: f.track, use: ''"],
+ savedScope:['app.js',"esc(libHref({ cat: key, track: f.track === 'text' ? 'text' : 'all', group: '', source: '', use: '', mood: '', page: '' }))","esc('#/library?cat=' + key)"],
+ categoryTrack:['app.js',"track: f.track === 'text' ? 'text' : 'all', group: ''","track: f.track, group: ''"],
  savedUnavailable:['app.js',"catch (e) { /* Restricted storage still permits an in-session collection. */ }","catch (e) { throw e; }"],
  slotValue:['app.js',"return values[slot] && values[slot].trim() ? values[slot].trim() : token;","return token;"],
  slotCopy:['app.js',"if (parts[1] === 'text') return preparedPrompt(s);","if (parts[1] === 'text') return s.prompt || '';"],
@@ -48,7 +48,11 @@ const mutations={
  paginationOffset:['app.js','var start = (state.page - 1) * 12;','var start = 0;'],
  paginationContext:['app.js','libHref({ page: String(page) })',"('#/library?page=' + page)"],
  paginationHome:['app.js','list.slice((state.page - 1) * 12, state.page * 12)','list.slice(0, 12)'],
- useFilter:['app.js',"if (f.use && s.uses.indexOf(f.use) < 0) return false;","if (false) return false;"],
+ useFilter:['app.js',"if (f.use && except !== 'use' && s.uses.indexOf(f.use) < 0) return false;","if (false) return false;"],
+ browseGroup:['app.js',"if (f.group && except !== 'group'", "if (false && except !== 'group'"],
+ browseSource:['app.js',"if (f.source && except !== 'source'", "if (false && except !== 'source'"],
+ browseQuery:['app.js',".trim().split(/\\s+/).every(",".trim().split(/\\s+/).some("],
+ browseInterrupted:['app.js','clearTimeout(onInput._timer);\n    var route', 'void 0;\n    var route'],
  threadsOwner:['data-curated.js','https://www.threads.com/@inkacalinka/post/Dc7fl2ulBQ5','https://www.threads.com/@lch1776244/post/Dc7fl2ulBQ5'],
  threadsOrientation:['data-curated.js','上方呈现羊毛毡绘本，下方保留原照片','上方保留原照片，下方呈现羊毛毡绘本'],
  exampleSelection:['app.js','picture = pictures[imageIndex].v;','picture = pictures[0].v;']
@@ -182,6 +186,87 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
      assert(all('#palette-list a').some(a=>a.getAttribute('href')==='#/style/'+id),term+' missing in palette');
      d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
    }
+ });
+ await check('browse-groups-and-card-hierarchy',async()=>{
+   const taxonomy=w.eval('TAXONOMY'),browse=w.eval('HF_BROWSE');
+   const assigned=taxonomy.imageGroups.flatMap(g=>g.ids);
+   assert.equal(new Set(assigned).size,assigned.length,'each reviewed image belongs to one browse group');
+   assert(images.every(s=>browse.imageGroup(s).key!=='other'),'all existing images are organized');
+   assert.equal(browse.imageGroup({id:'future-style',category:'image'}).key,'other','future content remains discoverable');
+   assert.equal(browse.source({source:{provider:'threads',url:'https://www.threads.com/@new_creator/post/123',contributor:'New creator'}}).key,'threads:new_creator');
+   assert.equal(browse.source({source:{url:'https://github.com/new/repository#item'}}).key,'github:new/repository');
+   await nav('#/');assert.equal(all('.browse-group').length,7,'homepage links to all six populated groups');
+   for(const group of taxonomy.imageGroups.filter(g=>g.key!=='other')){
+     await nav('#/library?cat=image&group='+group.key);
+     const expected=images.filter(s=>browse.imageGroup(s).key===group.key);
+     assert.equal(Number(q('.lib-count b').textContent),expected.length,group.name);
+     assert(all('.gallery .card').every(el=>expected.some(s=>s.id===el.dataset.id)));
+     assert.equal(q('.browse-group[aria-current="page"]').textContent,group.name+expected.length);
+     assert(all('.gallery .card__title').every(el=>el.tagName==='H3'));
+     assert(all('.gallery .card__meta').every(el=>/\d+ 张案例/.test(el.textContent)));
+     assert(all('.gallery .catpill').every(el=>el.textContent===group.name));
+   }
+   await nav('#/library?cat=code');assert(!q('.browse-groups'));
+   assert(all('.card__meta').every(el=>/\d+ 项输入/.test(el.textContent)));
+   await nav('#/library?group=craft');assert.equal(q('.nav__link.is-active').textContent,'图片风格');assert.equal(q('.mobilenav a.is-active').hash,'#/');
+   await nav('#/library?group=other');await nav('#/');assert.equal(all('.browse-group').length,7,'homepage never inherits an empty selected group');
+ });
+ await check('browse-source-filter-context-and-reset',async()=>{
+   const browse=w.eval('HF_BROWSE');
+   const key='threads:inkacalinka';await nav('#/library?cat=image&source='+encodeURIComponent(key)+'&group=drawing&sort=new');
+   const expected=images.filter(s=>browse.source(s).key===key&&browse.imageGroup(s).key==='drawing');
+   assert.equal(Number(q('.lib-count b').textContent),expected.length);
+   assert(all('.gallery .card').every(el=>expected.some(s=>s.id===el.dataset.id)));
+   assert.equal(q('[data-action="source"]').value,key);
+   assert(q('.active-filters').textContent.includes('michelle'));
+   const selectedGroup=q('.browse-group[aria-current="page"]');selectedGroup.click();await wait(20);
+   assert.equal(Number(q('.lib-count b').textContent),expected.length,'repeated selected filter is stable');
+   const removeSource=all('.active-filters a').find(a=>a.getAttribute('aria-label').includes('michelle'));
+   removeSource.click();await wait(20);
+   assert.equal(new URLSearchParams(w.location.hash.split('?')[1]).get('group'),'drawing');
+   assert.equal(q('[data-action="source"]').value,'');
+   await nav('#/library?cat=image&source='+encodeURIComponent('github:jamez-bondos/awesome-gpt4o-images')+'&sort=new&page=2');
+   const back=w.location.hash,ids=all('.gallery .card').map(el=>el.dataset.id);
+   assert.equal(ids.length,6);assert(q('.pagination [rel="prev"]').hash.includes('source='));
+   q('.gallery .card__link').click();await wait(20);assert.equal(q('.backlink').hash,back);
+   w.history.back();await wait(50);assert.equal(w.location.hash,back);assert.deepEqual(all('.gallery .card').map(el=>el.dataset.id),ids,'browser Back restores the source-filtered page');
+   w.history.forward();await wait(50);assert(q('.gh__title'));assert.equal(q('.backlink').hash,back,'browser Forward retains the return destination');
+   q('.backlink').click();await wait(20);assert.deepEqual(all('.gallery .card').map(el=>el.dataset.id),ids);
+   const select=q('[data-action="source"]');select.value=key;select.dispatchEvent(new w.Event('change',{bubbles:true}));await wait(20);
+   assert.equal(q('.pagination [aria-current="page"]').textContent,'1');assert.equal(Number(q('.lib-count b').textContent),10);
+   assert.equal(d.activeElement,q('[data-action="source"]'),'select retains keyboard focus');
+   await nav('#/library?cat=image&group=objects&source='+encodeURIComponent(key));
+   assert(q('.empty'));assert(q('.active-filters').textContent.includes('手办玩具'));
+   assert.equal(q('.empty a').hash,'#/library?cat=image','reset stays in image collection');
+   q('.empty a').click();await wait(20);assert.equal(Number(q('.lib-count b').textContent),images.length);
+   await nav('#/library?cat=image&group=drawing&source='+encodeURIComponent(key));
+   const code=all('.catbar a').find(a=>new URLSearchParams(a.hash.split('?')[1]).get('cat')==='code');code.click();await wait(20);
+   assert.equal(Number(q('.lib-count b').textContent),8,'new category clears image/source constraints');
+   const fresh=session({savedRaw:JSON.stringify(['threads-inka-minimal-paper','threads-pet-doodle','code-reviewer'])});
+   try {
+     await wait(80);const fw=fresh.dom.window,fd=fw.document;
+     fw.location.hash='#/library?saved=1&source='+encodeURIComponent(key);fw.dispatchEvent(new fw.Event('hashchange'));await wait(20);
+     assert.deepEqual(Array.from(fd.querySelectorAll('.gallery .card'),el=>el.dataset.id),['threads-inka-minimal-paper'],'source filter remains inside saved collection');
+     const reset=fd.querySelector('.lib-bar a[href="#/library?saved=1"]');assert(reset);reset.click();await wait(20);
+     assert.equal(fd.querySelectorAll('.gallery .card').length,3,'reset retains all saved content');assert.deepEqual(fresh.errors,[]);
+     fw.location.hash='#/library?saved=1&cat=image';fw.dispatchEvent(new fw.Event('hashchange'));await wait(20);
+     assert(fd.querySelector('.lib-bar a[href="#/library?saved=1"]'),'image category can be cleared within favorites');
+   } finally {fresh.dom.window.close();}
+ });
+ await check('browse-multiword-and-safe-navigation',async()=>{
+   await nav('#/library?q='+encodeURIComponent('插画 michelle'));
+   assert(all('.gallery .card').length>0);assert(all('.gallery .card').every(el=>el.dataset.id.startsWith('threads-inka-')));
+   q('[data-action="palette-open"]').click();const input=q('#palette-input');input.value='插画 michelle';input.dispatchEvent(new w.Event('input',{bubbles:true}));await wait(20);
+   assert(all('#palette-list a').length>0);assert(all('#palette-list a').every(a=>a.hash.startsWith('#/style/threads-inka-')));
+   d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+   await nav('#/library?cat=image&group=unrecognized&source=unrecognized&q=%E0%A4%A');
+   assert.equal(Number(q('.lib-count b').textContent),images.length,'malformed encoding and retired facet values do not break browsing');
+   await nav('#/library?track=text&cat=code&group=drawing');assert.equal(Number(q('.lib-count b').textContent),8);
+   const search=q('[data-action="filter-search"]');search.value='inkacalinka';search.dispatchEvent(new w.Event('input',{bubbles:true}));
+   q('.gallery .card__link').click();await wait(400);
+   assert(q('.gh__title'),'newer navigation cancels a pending search');assert(w.location.hash.startsWith('#/style/'));
+   await nav('#/library?cat=image&q='+encodeURIComponent('<img src=x onerror=alert(1)>'));
+   assert(q('.empty'));assert(!q('.active-filters img'),'search chips escape untrusted input');
  });
  await check('search-and-empty-state',async()=>{await nav('#/library?q='+encodeURIComponent('PRD'));assert(all('.gallery .card').length>0);await nav('#/library?q=zzzzNoSuchPrompt');assert.equal(all('.gallery .card').length,0);assert(q('.empty a'));});
  await check('all-card-details-copy-and-export',async()=>{for(const s of cards){await nav('#/style/'+s.id);assert.equal(q('.gh__title').textContent.trim(),s.name);assert.equal(q('.prompt__body').textContent.trim(),s.prompt);assert.equal(all('.prompt-tabs .seg__item').length,0);assert(q('.srcbox').textContent.includes(s.source.repo));primary.copied='';q('.gh__actions [data-action="copy-prompt"]').click();await wait(1);assert.equal(primary.copied,s.prompt);const ex=all('.takeaway a[download]');assert.equal(ex.length,2);const j=JSON.parse(blobs.get(ex.find(a=>a.download.endsWith('.json')).href));assert.equal(j.prompt,s.prompt);assert.equal(j.source.url,s.source.url);assert.equal(j.validation,s.curation.status);const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.prompt));assert(md.includes('尚未逐条模型实测'));assert(md.includes(s.source.license));}});

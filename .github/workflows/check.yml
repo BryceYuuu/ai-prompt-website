@@ -13,6 +13,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm test
+      - run: npm run test:intake
       - run: npm run test:mutations
       - run: python3 tools/curate/build.py
       - run: git diff --exit-code -- assets/js/data-curated.js tools/curate/audit.json
