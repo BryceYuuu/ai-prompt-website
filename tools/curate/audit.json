@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-01",
+  "date": "2026-10-05",
   "previousCount": 108,
-  "activeCount": 80,
-  "images": 32,
+  "activeCount": 90,
+  "images": 42,
   "text": 48,
   "review": [
     {
@@ -655,6 +655,16 @@
     }
   ],
   "newIds": [
+    "threads-nala-character-turnaround",
+    "threads-nala-marker-doodle",
+    "threads-nala-vintage-stamp",
+    "threads-nala-impressionist-scene",
+    "threads-nala-impasto-ribbon",
+    "threads-nala-shell-mosaic",
+    "threads-nala-dreamcore",
+    "threads-nala-layered-paper",
+    "threads-nala-surreal-color",
+    "threads-nala-clay-stickers",
     "threads-inka-minimal-paper",
     "threads-inka-charcoal-doodle",
     "threads-inka-abstract-memory",

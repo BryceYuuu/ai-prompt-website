@@ -74,3 +74,25 @@ This batch includes 10 distinct publicly readable posts, their author-authored p
 | 照片转彩色扁平插画 | [Post](https://www.threads.com/@inkacalinka/post/DdX1xAwFACG) | [Reply](https://www.threads.com/@inkacalinka/post/DdX1xnBlF6-) | 7 |
 | 照片转厚涂油画微景 | [Post](https://www.threads.com/@inkacalinka/post/Dcpku09lDiY) | [Reply](https://www.threads.com/@inkacalinka/post/DcpkvTblDBE) | 5 |
 | 照片转手帐剪纸拼贴 | [Post](https://www.threads.com/@inkacalinka/post/DdTeQxvm6F7) | [Reply](https://www.threads.com/@inkacalinka/post/DdTeRcBm-_E) | 6 |
+
+
+## Threads — blissful_nala
+
+On October 5, 2026, the site maintainer separately confirmed account ownership or permission to republish images and prompts from [Lykke (@blissful_nala)](https://www.threads.com/@blissful_nala) on this website and its public GitHub repository. This is **CUSTOM / 经授权收录** based on that confirmation, not a public MIT or CC license. The author retains their rights; this notice grants no downstream redistribution license.
+
+This snapshot includes 10 prompt groups and 27 images from publicly displayed September 10–October 2 posts, their author-authored comments and long-text attachments. It excludes personal posts and other commenters’ material. One felt-style post was excluded because its attached oil-painting prompt does not match the examples and repeats another post’s prompt. This is not a claim of a complete account archive.
+
+Downloaded full-resolution JPEG bytes are preserved. Author wording, including spelling errors, is preserved after removal of interface labels and reaction counts; site-added upload/reference checks are separated. The paper-sculpture prompt joins two author replies; its final sentence is unfinished in the source and is explicitly disclosed rather than silently completed. Dreamcore, surreal color and character-sheet keywords are adapted to use an uploaded reference image; this adaptation has not been individually model-tested. The clay-sticker examples include one author workflow screenshot, and the JPEG previews do not have transparent channels. Full mappings, hashes and editorial decisions are recorded in [the manifest](tools/curate/sources/threads-blissful_nala.json).
+
+| Style | Source post | Author prompt | Images |
+| --- | --- | --- | ---: |
+| 人物转国风角色三视图 | [Post](https://www.threads.com/@blissful_nala/post/Dd_v2HxG1sh) | [Reply 1](https://www.threads.com/@blissful_nala/post/Dd_v2Fzm79G) | 1 |
+| 照片转马克笔生活涂鸦 | [Post](https://www.threads.com/@blissful_nala/post/Dd6nvDsG4zD) | [Reply 1](https://www.threads.com/@blissful_nala/post/Dd6nu8Qmwsx) | 2 |
+| 旅行照转复古邮票微景 | [Post](https://www.threads.com/@blissful_nala/post/Dd4Gl8im5NM) | [Reply 1](https://www.threads.com/@blissful_nala/post/Dd4Glfnm39v) | 3 |
+| 照片转印象派厚涂场景 | [Post](https://www.threads.com/@blissful_nala/post/DdqwdAGmzsn) | [Reply 1](https://www.threads.com/@blissful_nala/post/Ddqwcjrm5rA) | 3 |
+| 照片转色带厚涂微景 | [Post](https://www.threads.com/@blissful_nala/post/DdlnDLwGxFx) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdlnDFHm2T7) | 3 |
+| 照片转贝壳像素拼贴 | [Post](https://www.threads.com/@blissful_nala/post/DdjCyfSmu9V) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdjCx_DGiqO) | 3 |
+| 照片转梦核氛围 | [Post](https://www.threads.com/@blissful_nala/post/DdX1DFvlNVR) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdX1DGIlHPf) | 1 |
+| 照片转层叠纸雕海报 | [Post](https://www.threads.com/@blissful_nala/post/DdWDJ59G8dX) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdWDJzzmy4Y) · [Reply 2](https://www.threads.com/@blissful_nala/post/DdWDJ2rG9e6) | 3 |
+| 风景转超现实撞色海报 | [Post](https://www.threads.com/@blissful_nala/post/DdQyP2eG2kX) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdQyPvum2NF) | 4 |
+| 照片转黏土九宫格贴纸 | [Post](https://www.threads.com/@blissful_nala/post/DdHEdNfG9dE) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdHEirMm1pl) | 4 |

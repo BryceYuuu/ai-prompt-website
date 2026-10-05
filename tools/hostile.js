@@ -556,11 +556,12 @@ function childHTML(mode) {
      守卫和敌意注入一起消失，而走查照样跑、照样报绿（导出那一步的
      「默认行为被取消 N 个」变成 0，读起来像站点坏了）。
      这是本项目反复踩的「静默退化」，所以宁可在构建期炸掉。 */
-  const ANCHOR = '<script src="assets/js/data-curated.js"></script>';
-  if (html.indexOf(ANCHOR) < 0) {
-    throw new Error('hostile: index.html 里找不到 ' + ANCHOR +
-      ' —— 注入锚点变了，childHTML() 的 replace 会静默失效');
+  const anchors = html.match(/<script src="assets\/js\/data-curated\.js(?:\?[^\"]*)?"><\/script>/g) || [];
+  if (anchors.length !== 1) {
+    throw new Error('hostile: index.html 必须恰好有一个 data-curated.js 标签，实际 ' + anchors.length +
+      ' —— 不允许注入守卫静默失效');
   }
+  const ANCHOR = anchors[0]; // 保留用于缓存更新的查询参数。
   html = html.replace(ANCHOR, DOWNLOAD_GUARD + pre + '\n' + ANCHOR);
   /* 探针必须在 app.js 之后 */
   const at = html.lastIndexOf('</body>');

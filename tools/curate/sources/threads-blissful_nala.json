@@ -1,0 +1,491 @@
+{
+  "creator": "Lykke (@blissful_nala)",
+  "profileUrl": "https://www.threads.com/@blissful_nala",
+  "collectedAt": "2026-10-05",
+  "noticeAnchor": "threads--blissful_nala",
+  "scope": "10 reviewed prompt groups and 27 original images from the publicly displayed Sept 10–Oct 2 posts, including author long-text attachments and the two-part paper-sculpture reply. One mismatched felt/prompt pair excluded. No other commenters’ materials. A public-content snapshot, not a claim of a complete account archive.",
+  "license": "CUSTOM",
+  "licenseNote": "网站维护者于 2026-10-05 确认拥有 @blissful_nala 账号或已取得图片及提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+  "cases": [
+    {
+      "id": "threads-nala-character-turnaround",
+      "name": "人物转国风角色三视图",
+      "latin": "Chinese Fantasy Character Sheet",
+      "tagline": "半写实3D角色，白底三视图与面部特写一次呈现",
+      "input": "一张清晰的人物全身照片；补充角色服装或设定",
+      "output": "一张16:9角色设定图，左侧面部特写，右侧正面、侧面和背面视图",
+      "moods": [
+        "沉稳",
+        "清冷"
+      ],
+      "keywords": [
+        "角色三视图",
+        "虚拟形象",
+        "国风角色",
+        "中国奇幻",
+        "3D动漫",
+        "character sheet",
+        "turnaround",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/Dd_v2HxG1sh",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/Dd_v2Fzm79G",
+      "promptFile": "threads-nala-character-turnaround.txt",
+      "promptSha256": "9d25f878220719275a02285af5f248e249769591abc4e18ebcaa6ff8f513faa4",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-character-turnaround/1.jpg",
+          "w": 1282,
+          "h": 709,
+          "sha256": "5e5bf7993403fe2e477a93711bab974c8139c2071cd985588837feb49f8361eb"
+        }
+      ],
+      "usageNote": "作者原文是一组风格或构图关键词；本站补充“上传自己的照片作为参考”的使用方式，示例不代表本站已验证转换效果。",
+      "preserve": "保持人物身份、面部辨识、发型和服装特征；依照三视图要求分别展示正面、侧面与背面，不锁死原照片的单一视角。"
+    },
+    {
+      "id": "threads-nala-marker-doodle",
+      "name": "照片转马克笔生活涂鸦",
+      "latin": "Marker Lifestyle Doodle",
+      "tagline": "用松弛手绘线条、马克笔色块和留白重排生活瞬间",
+      "input": "一张人物或日常生活照片",
+      "output": "一张3:4上下对照海报，上方原照，下方马克笔手绘",
+      "moods": [
+        "亲和",
+        "极简"
+      ],
+      "keywords": [
+        "马克笔",
+        "生活涂鸦",
+        "手绘漫画",
+        "蜡笔",
+        "marker drawing",
+        "naive illustration",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/Dd6nvDsG4zD",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/Dd6nu8Qmwsx",
+      "promptFile": "threads-nala-marker-doodle.txt",
+      "promptSha256": "f0e7a596158aa3697d44650b2d4fe3efb372cee4fcc2e94859c8870ab9f396e6",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-marker-doodle/1.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "4e40bbfa934e43d1baf83065a2bdc5272d40bb61bb2ce91fcdd9822c5c828629"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-marker-doodle/2.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "2a5fd45d76797066764b1ddd32ec1b2f04db0305c7e3051d28d3964e968be137"
+        }
+      ]
+    },
+    {
+      "id": "threads-nala-vintage-stamp",
+      "name": "旅行照转复古邮票微景",
+      "latin": "Vintage Stamp Diorama",
+      "tagline": "齿孔邮票化成连续立体微景，地标从纸面延伸到前景",
+      "input": "一张有清晰地标的旅行照片；可补充真实地点",
+      "output": "一张3:4复古邮票微景，左上角放原照缩略图",
+      "moods": [
+        "复古",
+        "治愈"
+      ],
+      "keywords": [
+        "复古邮票",
+        "邮戳",
+        "旅行纪念",
+        "立体邮票",
+        "stamp",
+        "travel diorama",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/Dd4Gl8im5NM",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/Dd4Glfnm39v",
+      "promptFile": "threads-nala-vintage-stamp.txt",
+      "promptSha256": "0fd27a87f2fd9332f34073d815fa7a948c84ebbc986c1de1e742f08f9c3f9ec8",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-vintage-stamp/1.jpg",
+          "w": 1031,
+          "h": 1374,
+          "sha256": "de55dc819f1cb0af3e3afbaac70a5a2a1e48f299612db1e1280bd1e43777ec22"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-vintage-stamp/2.jpg",
+          "w": 1058,
+          "h": 1411,
+          "sha256": "6a7ec8350a593a42e485720c14a34dfb1f9e1777ecf1545d1ae113f1629a3934"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-vintage-stamp/3.jpg",
+          "w": 1041,
+          "h": 1388,
+          "sha256": "d6943663d7eda82a62758cc9003bc4e869f9d222e1f5a1f22c118d0b54f33189"
+        }
+      ],
+      "preserve": "保持地标结构及邮票内外的连续透视；同一地标或车辆只出现一次。若无法确定真实地点，先询问我，不虚构城市或地标名称。"
+    },
+    {
+      "id": "threads-nala-impressionist-scene",
+      "name": "照片转印象派厚涂场景",
+      "latin": "Impressionist Scene Poster",
+      "tagline": "厚涂笔触与米白纸感，把整幅实景变成明亮艺术小卡",
+      "input": "一张人物、花草或日常场景照片",
+      "output": "一张3:4上下对照海报，下方连续重绘原场景，保留厚涂笔触与手写字",
+      "moods": [
+        "治愈",
+        "亲和"
+      ],
+      "keywords": [
+        "印象派",
+        "厚涂场景",
+        "艺术小卡",
+        "油画海报",
+        "impressionist",
+        "impasto scene",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/DdqwdAGmzsn",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/Ddqwcjrm5rA",
+      "promptFile": "threads-nala-impressionist-scene.txt",
+      "promptSha256": "866357b367d6de5147fbc5acf2de6553aacc277a7ba99c8c5cc4dd70a239198c",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-impressionist-scene/1.jpg",
+          "w": 959,
+          "h": 1440,
+          "sha256": "0f92f3fd3aa2dc9fec6c38f9866856b14b6c686aed769ce2661c01665ea2bf9c"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-impressionist-scene/2.jpg",
+          "w": 959,
+          "h": 1440,
+          "sha256": "4e2b2e0460737dae9ebf783cd5a230109baff2357689e4fca36c7ffa79a8b862"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-impressionist-scene/3.jpg",
+          "w": 959,
+          "h": 1440,
+          "sha256": "c89293d56648d2810565aea670565daadc6877697b7f4a64517d1c6e7c65100a"
+        }
+      ]
+    },
+    {
+      "id": "threads-nala-impasto-ribbon",
+      "name": "照片转色带厚涂微景",
+      "latin": "Impasto Color Ribbon",
+      "tagline": "暖白留白与倾斜色带，厚重颜料塑造微型景观的体积",
+      "input": "一张主体清楚的人物、宠物或场景照片",
+      "output": "一张3:4上下对照海报，下方以暖白留白与居中或倾斜色带呈现3D厚涂微景",
+      "moods": [
+        "治愈",
+        "极简"
+      ],
+      "keywords": [
+        "色带构图",
+        "3D厚涂",
+        "调色刀",
+        "油画微景",
+        "color ribbon",
+        "paint miniature",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/DdlnDLwGxFx",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/DdlnDFHm2T7",
+      "promptFile": "threads-nala-impasto-ribbon.txt",
+      "promptSha256": "f2848febc0de46e76821741d6c1b2908b5dc441caf2b30aff15fa813a37d69ab",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-impasto-ribbon/1.jpg",
+          "w": 1043,
+          "h": 1391,
+          "sha256": "3c2027250bfa6142fa595a9c53b8554ca21766ee693a07e67532a6224ba59b0e"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-impasto-ribbon/2.jpg",
+          "w": 1031,
+          "h": 1374,
+          "sha256": "80098d7d9eeeaa2d735bff34af8ca04b1b027a148603e6f2407519f8933a0cd8"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-impasto-ribbon/3.jpg",
+          "w": 1036,
+          "h": 1381,
+          "sha256": "33272b6a46201e8e8a698b7640a321e526e432d57b7f50f1fd8355e8877956db"
+        }
+      ]
+    },
+    {
+      "id": "threads-nala-shell-mosaic",
+      "name": "照片转贝壳像素拼贴",
+      "latin": "Seashell Pixel Collage",
+      "tagline": "少于200块粗切贝壳方片，以颗粒与哑光肌理重组主体",
+      "input": "一张主体清楚的人物、宠物、物品或风景照片",
+      "output": "一张3:4上下对照海报，下方贝壳像素拼贴，主体占30%至45%",
+      "moods": [
+        "极简",
+        "治愈"
+      ],
+      "keywords": [
+        "贝壳拼贴",
+        "贝壳像素",
+        "矿物肌理",
+        "马赛克",
+        "seashell mosaic",
+        "shell flakes",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/DdjCyfSmu9V",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/DdjCx_DGiqO",
+      "promptFile": "threads-nala-shell-mosaic.txt",
+      "promptSha256": "1d5a73ddfc7c4f1010191e73001069a5471b967054f81b99117632107b887912",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-shell-mosaic/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "270b8758756ee140ae3dc9afe86b64e447c29241ed6bed8a63748a396daad8c7"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-shell-mosaic/2.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "457514ada9424d03a05bb1a97fab250ba269192a667367aa0d82acfd8754991b"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-shell-mosaic/3.jpg",
+          "w": 1080,
+          "h": 1440,
+          "sha256": "8db3c99ad37e283cd08730e5351928b3767a5a67ce856c81a49c266e50fe5037"
+        }
+      ]
+    },
+    {
+      "id": "threads-nala-dreamcore",
+      "name": "照片转梦核氛围",
+      "latin": "Dreamcore Mood Reference",
+      "tagline": "柔焦、胶片颗粒与低饱和色彩，探索怀旧梦境空间",
+      "input": "一张空间、街景或建筑照片作参考；补充希望出现的场景",
+      "output": "参考作者的梦核关键词生成或重绘场景；原帖展示图为多图风格参考",
+      "moods": [
+        "胶片",
+        "复古"
+      ],
+      "keywords": [
+        "梦核",
+        "柔焦",
+        "怀旧",
+        "VHS",
+        "dreamcore",
+        "nostalgic",
+        "surreal CGI",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/DdX1DFvlNVR",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/DdX1DGIlHPf",
+      "promptFile": "threads-nala-dreamcore.txt",
+      "promptSha256": "9a1942018b3a8a7fc7f4f95c73bcae3a6fff2881e8a33d7c84199828e9eb359c",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-dreamcore/1.jpg",
+          "w": 960,
+          "h": 1440,
+          "sha256": "8b188384b7eff5f33fdc968252423bb5a06317dd1a9eebaf512b26edd316a68a"
+        }
+      ],
+      "usageNote": "作者原文是一组风格或构图关键词；本站补充“上传自己的照片作为参考”的使用方式，示例不代表本站已验证转换效果。",
+      "preserve": "以原照片的建筑、空间或场景主题作为参考。柔焦胶片与风格化CG属于不同参考方向，按我的补充要求选择，不强行叠加互相矛盾的材质。"
+    },
+    {
+      "id": "threads-nala-layered-paper",
+      "name": "照片转层叠纸雕海报",
+      "latin": "Layered Paper Sculpture",
+      "tagline": "哑光卡纸层叠、纸纤维与接触阴影，建立前中后景层次",
+      "input": "一张人物、建筑或景物照片",
+      "output": "一张3:4上下对照海报，下方层叠剪纸与纸雕拼贴",
+      "moods": [
+        "极简",
+        "复古"
+      ],
+      "keywords": [
+        "纸雕海报",
+        "层叠剪纸",
+        "卡纸",
+        "纸纤维",
+        "layered paper",
+        "paper sculpture",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/DdWDJ59G8dX",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/DdWDJzzmy4Y",
+      "promptFile": "threads-nala-layered-paper.txt",
+      "promptSha256": "8acc4b475460ee533759b4a19162a6140847a339aa7fbfa8c3a7d5a8ecf41bd6",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-layered-paper/1.jpg",
+          "w": 1061,
+          "h": 1415,
+          "sha256": "5f1782aa98385a04f028d1dba5c369ee160940b85fec73508461e8916d773bd2"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-layered-paper/2.jpg",
+          "w": 1055,
+          "h": 1424,
+          "sha256": "b2b42652b96c196a1e78219775f7b8c8a501ea9926f24df800d4b09fba831521"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-layered-paper/3.jpg",
+          "w": 1058,
+          "h": 1407,
+          "sha256": "f31ff3fefe4e0a89f5c65142f5d15cf88b4dd85e4c501e361a1bf6db789a8d45"
+        }
+      ],
+      "promptUrls": [
+        "https://www.threads.com/@blissful_nala/post/DdWDJzzmy4Y",
+        "https://www.threads.com/@blissful_nala/post/DdWDJ2rG9e6"
+      ],
+      "usageNote": "作者提示词分为两段，均已保留。原帖末句停在“确保**纸艺处理视觉”，未补写缺失内容；使用时请自行明确排版要求。"
+    },
+    {
+      "id": "threads-nala-surreal-color",
+      "name": "风景转超现实撞色海报",
+      "latin": "Surreal Color Landscape",
+      "tagline": "红蓝绿纯色与巨物尺度反差，营造安静荒诞的风景",
+      "input": "一张风景照片作参考；补充巨物、人物剪影或地点意象",
+      "output": "一张高饱和红蓝绿撞色的超现实风景海报",
+      "moods": [
+        "清冷",
+        "极简"
+      ],
+      "keywords": [
+        "超现实风景",
+        "撞色",
+        "巨物",
+        "马蒂斯色彩",
+        "surreal landscape",
+        "color blocking",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/DdQyP2eG2kX",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/DdQyPvum2NF",
+      "promptFile": "threads-nala-surreal-color.txt",
+      "promptSha256": "d59d5b1990d42cb9604355216a1df9a57084ebf2aa85336da6f5b4fe98781e5a",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-surreal-color/1.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "896bd60bd2fbf9616843ace34a6a3a7290de9b805772f5673717f0596cd571e5"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-surreal-color/2.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "dd587c869994da57663685e6dd0d8bbd44876c12266bbeb56f8c08386105af92"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-surreal-color/3.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "f38b7ac34b5fff06a3b7a7011bfc0faa3ebba906fc1f2d97cce4be4ad0eaa1a7"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-surreal-color/4.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "317454d1b882269f3fb4525657402dd303fa9c8b0c142e0a3fede5a1cdae39e1"
+        }
+      ],
+      "usageNote": "作者原文是一组风格或构图关键词；本站补充“上传自己的照片作为参考”的使用方式，示例不代表本站已验证转换效果。",
+      "preserve": "以原照片的主体轮廓和场景关系作为参考；颜色与巨物尺度按作者关键词重新组织，不要求沿用原图配色。"
+    },
+    {
+      "id": "threads-nala-clay-stickers",
+      "name": "照片转黏土九宫格贴纸",
+      "latin": "Clay Sticker Sheet",
+      "tagline": "圆润黏土与手工指纹，制作九种表情的透明贴纸页",
+      "input": "一张人物或宠物照片；可替换原文中的蛋糕、太阳、庆祝元素",
+      "output": "一张1:1透明PNG贴纸页，3×3九宫格，每个主体完整且间隔透明",
+      "moods": [
+        "亲和",
+        "治愈"
+      ],
+      "keywords": [
+        "黏土贴纸",
+        "透明贴纸",
+        "九宫格",
+        "表情包",
+        "clay sticker",
+        "transparent PNG",
+        "Lykke",
+        "blissful_nala",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@blissful_nala/post/DdHEdNfG9dE",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/DdHEirMm1pl",
+      "promptFile": "threads-nala-clay-stickers.txt",
+      "promptSha256": "7e8c5af60c7004ab37a07c66731ae62c6ffd4302b78424a86f079614231e8391",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-nala-clay-stickers/1.jpg",
+          "w": 621,
+          "h": 825,
+          "sha256": "b58a381c1684a85bbbbf5ab8c6d26f8aa4de7d9797cf5ad0d758cefd2f4d0bc2"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-clay-stickers/2.jpg",
+          "w": 1254,
+          "h": 1254,
+          "sha256": "d514872b3da4b53091adabf8036b81393cb2434d78d24642c1c6fbb3a3ae57a2"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-clay-stickers/3.jpg",
+          "w": 672,
+          "h": 666,
+          "sha256": "90aa2db1dbe62e4af807234d08b0eaeab28fefd49a2a0edb9f6668039806e40f"
+        },
+        {
+          "src": "assets/img/threads/threads-nala-clay-stickers/4.jpg",
+          "w": 669,
+          "h": 669,
+          "sha256": "f38293dc56aafed7e7c317271f4a857760eba438ea0b811b34f44047f4b16e32"
+        }
+      ],
+      "usageNote": "作者示例中含一张操作截图。预览为原帖JPEG，不具有透明通道；生成时请选择支持透明PNG输出的工具，并检查格间是否真正透明。原文的拼写已保留。",
+      "preserve": "保持人物或宠物的身份辨识及关键配色；九个贴纸可以有不同表情和姿态，不强制沿用原照片的动作。"
+    }
+  ],
+  "review": [
+    {
+      "postUrl": "https://www.threads.com/@blissful_nala/post/DdoKt4KGwMU",
+      "promptUrl": "https://www.threads.com/@blissful_nala/post/DdoKtb_m9Un",
+      "decision": "excluded",
+      "reason": "原帖配文和示例为毛毡风，作者附上的提示词却是3D厚涂油画，与9月22日提示词相同；没有找到作者提供的毛毡纠正版本，避免错误配对。"
+    },
+    {
+      "decision": "deduplication",
+      "reason": "逐组比较原文、图像SHA256和48×64视觉缩略图；未发现与站内现有Threads图片完全相同的案例。两组厚涂分别约束连续场景与暖白色带，保留不同构图；未将风格相近误判成完全重复。"
+    }
+  ]
+}

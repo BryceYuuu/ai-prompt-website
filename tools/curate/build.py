@@ -82,6 +82,8 @@ for threads in thread_collections:
   cover={k:v for k,v in item['images'][0].items() if k!='sha256'}
   cover.update({'title':item['name']+' · 作者案例','creator':threads['creator'],'license':'经授权收录','licenseUrl':'https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#'+threads.get('noticeAnchor','threads--chloe_lai'),'sourceUrl':item['postUrl'],'provider':'threads'})
   thread_cards[id]={'id':id,'name':item['name'],'latin':item['latin'],'tagline':item['tagline'],'category':'image','uses':['海报','社交封面'],'moods':item['moods'],'track':'edit','version':'1.0','author':threads['creator'],'license':'CUSTOM','licenseNote':threads['licenseNote'],'licenseText':threads['licenseNote'],'createdAt':date,'updated':date,'art':{'g':'soft','p':['#F8F8F3','#DDD9CB','#374D46','#4541C4'],'seed':100+len(thread_cards)},'prompt':prompt,'slots':['补充要求，可留空'],'cover':cover,'local':None,'cloud':None,'source':{'provider':'threads','repo':'Threads · @'+threads['profileUrl'].rsplit('@',1)[1],'url':item['postUrl'],'promptUrl':item['promptUrl'],'act':item['name'],'contributor':threads['creator'],'license':'经授权收录；原作者保留权利','checkedAt':date,'mode':'保留作者原文，仅补充上传检查及可选需求；排版换行整理','sha256':item['promptSha256'],'snapshot':item['promptFile']},'curation':{'input':item['input'],'output':item.get('output','一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果'),'status':'source-example-not-site-tested','method':'作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测','reviewedAt':date}}
+  if item.get('promptUrls'):
+   thread_cards[id]['source']['promptUrls']=item['promptUrls']
 # Newly reviewed styles lead the image-only homepage; existing IDs remain stable.
 curated={**thread_cards,**curated}
 keywords=json.loads((BASE/'keywords.json').read_text())
@@ -101,6 +103,9 @@ for c in curated.values():
    c['guide'][4]['v']=['在支持图像编辑的工具中上传自己的原照片。','作者原文已保留；按需填写补充要求，再复制整段提示词。','检查上下对照布局和主体一致性；示例仅展示作者原帖效果。']
    c['guide'][-1]['v']='图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。'
    item=thread_items[c['id']]
+   c['guide'][4]['v'][2]=item.get('guideCheck','按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。')
+   if item.get('usageNote'):
+    c['guide'].append({'t':'warn','v':item['usageNote']})
    for i,picture in enumerate(item['images'],1):
     c['guide'].append({'t':'img','v':{'src':picture['src'],'cap':f'作者示例 {i} / {len(item["images"])}','credit':cov['creator'],'license':cov['license']}})
   else:

@@ -1,0 +1,9 @@
+梦核风格常用prompt🪄：
+梦幻般的柔焦效果
+带有一种温暖的、略带绿色的黄色调
+日落时分火车站站台的广角照片
+柔粉色、奶油黄、低饱和马卡龙色
+老式 CRT 电视、VHS 录像机、复古健身录像带
+画面自带轻微过曝、柔焦光晕、胶片颗粒感
+cinematic film still，warm nostalgic lighting，soft film grain，shallow depth of field，subtle motion blur，golden hour / soft pink tone，
+cinematic 3D render, Blender style, Octane render look, soft studio lighting, global illumination, clean smooth glossy surfaces, surreal minimal environment, pastel color palette, gentle bloom, no photographic texture, no realism noise, highly stylized CGI, film still composition, dreamy atmosphere --ar 16:9 --stylize 250

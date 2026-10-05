@@ -1,6 +1,6 @@
 # 提示词网站 · AI Prompt Website
 
-书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 80 条可填写、复制与导出的提示词模板：32 种图片风格转换，以及 48 个写作、编程、分析、学习、商业与生活任务。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
+书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 90 条可填写、复制与导出的提示词模板：42 种图片风格转换，以及 48 个写作、编程、分析、学习、商业与生活任务。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
 
 ## 在线预览
 
@@ -22,7 +22,9 @@
 
 ## 当前内容
 
-- **32 个图片转换模板**：动漫手办、针织玩偶、摇头娃娃、玻璃雕塑、线稿、Q版钥匙扣、矢量海报、像素图标、微缩建筑、折纸、体素、赛博微缩，以及表情包、毛绒图标、簇绒地毯、蒸汽机械、双重曝光与磨砂剪影；新增复古图解、宠物涂鸦、等距纸上微缩、水彩方格拼贴四种上下对照海报，以及 michelle 的十种图像编辑海报。
+新增 [@blissful_nala](https://www.threads.com/@blissful_nala) 的 **10 组提示词与 27 张原始示例图**：角色三视图、马克笔生活涂鸦、复古邮票、印象派场景、色带厚涂微景、贝壳像素、梦核、层叠纸雕、超现实撞色和黏土贴纸。搜索 `blissful_nala`、`Lykke` 或对应中文风格即可找到。作者的长文附件和纸雕两段评论均已保存；毛毡帖子配错厚涂提示词的一组暂不收录。纸雕末句在原帖中未写完，页面已说明；梦核等关键词以参考照片的用法整理；透明贴纸的 JPEG 示例不代表具备透明通道。详见 [本次素材及筛选记录](tools/curate/sources/threads-blissful_nala.json)。首页轮播仍是 8 种精选效果，全量图片风格在分页列表中浏览。
+
+- **42 个图片转换模板**：动漫手办、针织玩偶、摇头娃娃、玻璃雕塑、线稿、Q版钥匙扣、矢量海报、像素图标、微缩建筑、折纸、体素、赛博微缩，以及表情包、毛绒图标、簇绒地毯、蒸汽机械、双重曝光与磨砂剪影；新增复古图解、宠物涂鸦、等距纸上微缩、水彩方格拼贴四种上下对照海报，以及 michelle 的十种图像编辑海报。
 - **48 个文字任务**：写作、编程、分析、学习、商业、生活各 8 条。提供输入项、处理步骤、交付格式和信息不足时的处理方式。
 - 多图案例支持左右箭头、手势滑动、横向缩略图及大图连续浏览，图片序号与署名同步更新。
 - 首页、分类及收藏支持每页 12 条的页码导航；翻页保留筛选与排序，详情返回保留页码。
@@ -58,7 +60,7 @@
 
 ### English overview
 
-Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 80 curated **prompt templates**: 32 **image-to-image style transfer** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
+Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 90 curated **prompt templates**: 42 **image-to-image style transfer** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
 ## 本地预览
 
@@ -96,7 +98,7 @@ npm run test:browser
 index.html                     页面入口
 assets/js/app.js               路由、交互和渲染
 assets/js/data.js              分类与数据组装
-assets/js/data-curated.js      生成的 80 条内容
+assets/js/data-curated.js      生成的 90 条内容
 assets/css/                   页面样式
 assets/img/curated/            来源案例图
 schema/                       数据规范与校验

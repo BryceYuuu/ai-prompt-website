@@ -51,6 +51,9 @@ const mutations={
  useFilter:['app.js',"if (f.use && s.uses.indexOf(f.use) < 0) return false;","if (false) return false;"],
  threadsOwner:['data-curated.js','https://www.threads.com/@inkacalinka/post/Dc7fl2ulBQ5','https://www.threads.com/@lch1776244/post/Dc7fl2ulBQ5'],
  threadsOrientation:['data-curated.js','上方呈现羊毛毡绘本，下方保留原照片','上方保留原照片，下方呈现羊毛毡绘本'],
+ nalaContinuation:['app.js','(s.source.promptUrls || [])','([])'],
+ nalaInterfaceText:['data-curated.js','确保**纸艺处理视觉','确保**纸艺处理视觉\\n查看另外 1 条'],
+ nalaUsageNote:['data-curated.js','原帖末句停在','原帖已完整结束于'],
  exampleSelection:['app.js','picture = pictures[imageIndex].v;','picture = pictures[0].v;']
 };
 let applied=false;
@@ -74,7 +77,7 @@ function session(options={}) {
  }});
  return out;
 }
-const threadManifests=['threads-lch1776244.json','threads-inkacalinka.json'].map(f=>JSON.parse(fs.readFileSync(path.join(root,'tools/curate/sources',f))));
+const threadManifests=fs.readdirSync(path.join(root,'tools/curate/sources')).filter(f=>/^threads-.*\.json$/.test(f)).sort().map(f=>JSON.parse(fs.readFileSync(path.join(root,'tools/curate/sources',f))));
 const threadRecords=new Map(threadManifests.flatMap(m=>m.cases.map(item=>[item.id,{manifest:m,item}])));
 const primary=session(),dom=primary.dom,errors=primary.errors,blobs=primary.blobs;
 const w=dom.window,d=w.document,wait=ms=>new Promise(r=>setTimeout(r,ms));let passed=0,failed=0;
@@ -83,7 +86,7 @@ async function nav(hash){w.location.hash=hash;w.dispatchEvent(new w.Event('hashc
 const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
 (async()=>{
  await wait(120);const cards=w.eval('STYLES'),images=cards.filter(s=>s.category==='image');
- await check('catalog-count-and-classification',()=>{assert.equal(cards.length,80);assert.equal(images.length,32);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,80);});
+ await check('catalog-count-and-classification',()=>{assert.equal(cards.length,90);assert.equal(images.length,42);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,90);});
  await check('source-evidence-and-license',()=>{for(const s of cards){if(s.source.provider==='threads'){
  const {manifest,item}=threadRecords.get(s.id);
  assert.equal(s.source.url,item.postUrl);assert.equal(s.cover.sourceUrl,item.postUrl);assert.equal(s.source.promptUrl,item.promptUrl);
@@ -129,7 +132,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  });
  await check('scene-and-category-filters',async()=>{
    await nav('#/library?track=text');assert.equal(Number(q('.lib-count b').textContent),48);assert.equal(all('.gallery .card').length,12);
-   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat);assert.equal(Number(q('.lib-count b').textContent),cat==='image'?32:8);assert.equal(all('.gallery .card').length,cat==='image'?12:8);}
+   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat);assert.equal(Number(q('.lib-count b').textContent),cat==='image'?42:8);assert.equal(all('.gallery .card').length,cat==='image'?12:8);}
    const social=cards.filter(s=>s.uses.includes('社交封面'));await nav('#/library?use='+encodeURIComponent('社交封面'));
    assert.equal(Number(q('.lib-count b').textContent),social.length);assert.equal(all('.gallery .card').length,Math.min(12,social.length));
    assert(all('.gallery .card__link').every(a=>social.some(s=>a.hash==='#/style/'+s.id)));
@@ -140,7 +143,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  });
  await check('pagination-pages-context-and-boundaries',async()=>{
    const ids=()=>all('.gallery .card__link').map(a=>a.hash);
-   for(const [base,total] of [['#/',32],['#/library',80],['#/library?track=text',48]]) {
+   for(const [base,total] of [['#/',42],['#/library',90],['#/library?track=text',48]]) {
      const seen=[];await nav(base);
      assert(q('.pagination [aria-disabled="true"]'));assert(!q('.pagination [rel="prev"]'));
      for(let page=1;page<=Math.ceil(total/12);page++) {
@@ -164,7 +167,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    await nav('#/library?page=2');q('[data-action="filter-search"]').value='inkacalinka';q('[data-action="filter-search"]').dispatchEvent(new w.Event('input',{bubbles:true}));await wait(360);
    assert.equal(q('.pagination [aria-current="page"]').textContent,'1');assert.equal(ids().length,10);
    for(const value of ['-1','0','NaN','1.5','Infinity']) {await nav('#/library?page='+value);assert.equal(q('.pagination [aria-current="page"]').textContent,'1');}
-   await nav('#/library?page=999');assert.equal(q('.pagination [aria-current="page"]').textContent,'7');assert.equal(ids().length,8);
+   await nav('#/library?page=999');assert.equal(q('.pagination [aria-current="page"]').textContent,'8');assert.equal(ids().length,6);
    await nav('#/library?q=zzzzNoSuchPrompt&page=4');assert(!q('.pagination'));assert(q('.empty'));
    await nav('#/library?cat=code&page=4');assert.equal(q('.pagination [aria-current="page"]').textContent,'1');assert(!q('.pagination [rel="next"]'));
    const fresh=session({savedRaw:JSON.stringify(cards.slice(0,15).map(s=>s.id))});
@@ -307,21 +310,32 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    clickImage(surface,0);assertOpenAndClose(surface,pictures[3].v.src);
  });
  await check('threads-gallery-source-and-search',async()=>{
-   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,14);
-   for(const [term,count] of [['Chloe_Lai',4],['inkacalinka',10]]){await nav('#/library?cat=image&q='+term+'&limit=100');assert.equal(all('.gallery .card').length,count);}
+   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,24);
+   for(const [term,count] of [['Chloe_Lai',4],['inkacalinka',10],['blissful_nala',10]]){await nav('#/library?cat=image&q='+term+'&limit=100');assert.equal(all('.gallery .card').length,count);}
    for(const s of imported){
      await nav('#/style/'+s.id);const pictures=s.guide.filter(b=>b.t==='img');
      assert.equal(all('.detail-preview figure').length,1,'one large preview, not a stacked image wall');
-     const thumbs=all('.example-gallery [data-action="image-select"]');assert.equal(thumbs.length,pictures.length);
+     const thumbs=all('.example-gallery [data-action="image-select"]');assert.equal(thumbs.length,pictures.length>1?pictures.length:0);
      const source=q('.srcbox');assert(!source.textContent.includes('仓库热度'));assert(source.querySelector('a[href="'+s.source.promptUrl+'"]'));
-     for(let i=0;i<thumbs.length;i++){
-       thumbs[i].click();assert.equal(q('.example-carousel .cover img').getAttribute('src'),pictures[i].v.src);assert.equal(thumbs[i].getAttribute('aria-pressed'),'true');
+     for(const url of s.source.promptUrls || [])assert(source.querySelector('a[href="'+url+'"]'),'all author continuation sources are linked');
+     for(let i=0;i<pictures.length;i++){
+       if(thumbs.length)thumbs[i].click();assert.equal(q('.detail-preview .cover img').getAttribute('src'),pictures[i].v.src);if(thumbs.length)assert.equal(thumbs[i].getAttribute('aria-pressed'),'true');
        const zoom=q('.preview-zoom');zoom.click();const dialog=q('dialog.image-viewer');assert(dialog&&dialog.open);
        assert.equal(dialog.querySelector('img').getAttribute('src'),pictures[i].v.src);
        assert(dialog.textContent.includes('经授权收录'));dialog.querySelector('button').click();assert.equal(d.activeElement,zoom);
      }
      const ex=all('.takeaway a[download]');const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.licenseNote));
    }
+ });
+ await check('nala-source-specific-layout-notes',async()=>{
+   for(const s of cards.filter(s=>s.id.startsWith('threads-nala-')))assert(!/查看另外|了解更多/.test(s.prompt),'interface labels are excluded from the author prompt');
+   const paper=cards.find(s=>s.id==='threads-nala-layered-paper');
+   assert(paper.guide.some(b=>b.t==='warn'&&b.v.includes('原帖末句停在')),'unfinished source sentence is disclosed');
+   assert(paper.prompt.includes('使用细腻哑光卡纸'),'second author reply is preserved');
+   const clay=cards.find(s=>s.id==='threads-nala-clay-stickers');
+   assert(clay.guide.some(b=>b.t==='warn'&&b.v.includes('不具有透明通道')),'JPEG previews do not imply PNG alpha');
+   for(const id of ['dreamcore','surreal-color','character-turnaround'])assert(cards.find(s=>s.id==='threads-nala-'+id).guide.some(b=>b.t==='warn'&&b.v.includes('关键词')),'reference adaptation is disclosed');
+   const stamp=cards.find(s=>s.id==='threads-nala-vintage-stamp');assert(stamp.curation.output.includes('原照缩略图'));
  });
  await check('example-carousel-arrows-swipe-and-viewer',async()=>{
    const s=cards.find(s=>s.id==='threads-inka-minimal-paper');const pictures=s.guide.filter(b=>b.t==='img');

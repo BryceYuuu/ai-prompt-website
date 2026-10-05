@@ -1,6 +1,6 @@
 # 内容维护
 
-本目录离线生成当前 80 条内容。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-*.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
+本目录离线生成当前 90 条内容。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-*.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
 
 来源快照、SHA256、原始署名和授权位于 sources/。audit.json 记录对旧 108 条目录的退役/替换处理；previous-catalog.json 仅保留旧目录的 id、名称和分类，用于复现审查记录。GitHub stars 以 sources/repository-stars.json 的逐仓库日期为准；当前采用的两个来源已于 2026-09-26 重新核验，是仓库级快照，不代表单条模板热度。
 

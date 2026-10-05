@@ -335,8 +335,13 @@ function clickThrough(el) {
       ('已扫 ' + spillSwapped.scanned + ' 个元素，当前图版「' +
         ((document.querySelector('.hero__plate-head .plate--latin') || {}).textContent || '?').trim() + '」'));
 
-  /* 1. 首页点卡片 */
-  var r1 = realClick(document.querySelector('.card__link'));
+  /* 1. 点首页实际可见的多图卡片，后续才能验证左右切图。
+     单图角色设定也能排在首位，不能把“第一张卡”当成多图保证。 */
+  var previewLink = Array.from(document.querySelectorAll('.card__link')).find(function (a) {
+    var card = STYLES.find(function (s) { return a.hash === '#/style/' + s.id; });
+    return card && card.guide.filter(function (b) { return b.t === 'img'; }).length > 1;
+  });
+  var r1 = realClick(previewLink);
   await sleep(250);
   rec('首页点卡片 → 进详情页',
       location.hash.indexOf('#/style/') === 0 && !!document.querySelector('.gh__title'),
