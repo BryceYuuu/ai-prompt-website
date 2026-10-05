@@ -13,12 +13,12 @@ const TAXONOMY = {
   /* 浏览分组只描述画面方向，不改变模板内容、作者或许可。每个图片一组。
      新内容应补入对应 ids；未编组的内容仍会出现在「其他风格」和全部列表。 */
   imageGroups: [
-    { key: 'objects', name: '手办玩具', desc: '手办、玩偶与随身小物', ids: ['anime-figurine', 'plush-toy', 'bobblehead', 'chibi-keychain', 'voxel-object'] },
-    { key: 'craft', name: '材质工艺', desc: '纸艺、玻璃、绒毛与手工质感', ids: ['glass-morphism', 'hard-edge-minimal', 'fluffy-icon', 'tufted-rug', 'steampunk-creature', 'threads-inka-needle-felt', 'threads-inka-travel-magnet', 'threads-nala-shell-mosaic', 'threads-nala-layered-paper'] },
-    { key: 'drawing', name: '插画绘画', desc: '线稿、蜡笔、水彩与油画', ids: ['line-art-sketch', 'threads-inka-minimal-paper', 'threads-inka-charcoal-doodle', 'threads-inka-pastel-crayon', 'threads-inka-flat-editorial', 'threads-inka-impasto-world', 'threads-pet-doodle', 'threads-nala-character-turnaround', 'threads-nala-marker-doodle', 'threads-nala-impressionist-scene', 'threads-nala-impasto-ribbon'] },
-    { key: 'graphic', name: '平面拼贴', desc: '海报、像素、贴纸与图卡', ids: ['vector-poster', 'pixel-quest', 'chibi-sticker-pack', 'threads-inka-abstract-memory', 'threads-inka-second-world', 'threads-inka-paper-scrapbook', 'threads-retro-diagram', 'threads-watercolor-mosaic', 'threads-nala-clay-stickers'] },
-    { key: 'miniature', name: '微缩场景', desc: '建筑、等距模型与小世界', ids: ['cyber-night-market', 'miniature-diorama', 'threads-isometric-poster', 'threads-nala-vintage-stamp'] },
-    { key: 'photo', name: '摄影光影', desc: '曝光、剪影与摄影氛围', ids: ['double-exposure', 'frosted-silhouette', 'threads-nala-dreamcore', 'threads-nala-surreal-color'] },
+    { key: 'objects', name: '创意物件', desc: '手办、玩偶、包装与随身小物', ids: ['anime-figurine', 'plush-toy', 'bobblehead', 'chibi-keychain', 'voxel-object', 'threads-emerson-konbini-bento'] },
+    { key: 'craft', name: '材质工艺', desc: '纸艺、玻璃、绒毛与手工质感', ids: ['glass-morphism', 'hard-edge-minimal', 'fluffy-icon', 'tufted-rug', 'steampunk-creature', 'threads-inka-needle-felt', 'threads-inka-travel-magnet', 'threads-nala-shell-mosaic', 'threads-nala-layered-paper', 'threads-emerson-stitched-patchwork', 'threads-emerson-perler-bead'] },
+    { key: 'drawing', name: '插画绘画', desc: '线稿、蜡笔、水彩与油画', ids: ['line-art-sketch', 'threads-inka-minimal-paper', 'threads-inka-charcoal-doodle', 'threads-inka-pastel-crayon', 'threads-inka-flat-editorial', 'threads-inka-impasto-world', 'threads-pet-doodle', 'threads-nala-character-turnaround', 'threads-nala-marker-doodle', 'threads-nala-impressionist-scene', 'threads-nala-impasto-ribbon', 'threads-emerson-minimal-emotion-line', 'threads-emerson-artifact-ink-rubbing'] },
+    { key: 'graphic', name: '平面拼贴', desc: '海报、像素、贴纸与图卡', ids: ['vector-poster', 'pixel-quest', 'chibi-sticker-pack', 'threads-inka-abstract-memory', 'threads-inka-second-world', 'threads-inka-paper-scrapbook', 'threads-retro-diagram', 'threads-watercolor-mosaic', 'threads-nala-clay-stickers', 'threads-emerson-geometric-story', 'threads-emerson-atmospheric-pixel', 'threads-emerson-mixed-media-paper', 'threads-emerson-two-ink-risograph', 'threads-emerson-travel-keepsake-ticket', 'threads-emerson-break-frame-color-field'] },
+    { key: 'miniature', name: '微缩场景', desc: '建筑、等距模型与小世界', ids: ['cyber-night-market', 'miniature-diorama', 'threads-isometric-poster', 'threads-nala-vintage-stamp', 'threads-emerson-white-concept-model'] },
+    { key: 'photo', name: '摄影光影', desc: '曝光、剪影与摄影氛围', ids: ['double-exposure', 'frosted-silhouette', 'threads-nala-dreamcore', 'threads-nala-surreal-color', 'threads-emerson-soft-light-memory'] },
     { key: 'other', name: '其他风格', desc: '更多图片创作方向', ids: [] }
   ],
   uses: [

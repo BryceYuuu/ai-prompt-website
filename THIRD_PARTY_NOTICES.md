@@ -96,3 +96,27 @@ Downloaded full-resolution JPEG bytes are preserved. Author wording, including s
 | 照片转层叠纸雕海报 | [Post](https://www.threads.com/@blissful_nala/post/DdWDJ59G8dX) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdWDJzzmy4Y) · [Reply 2](https://www.threads.com/@blissful_nala/post/DdWDJ2rG9e6) | 3 |
 | 风景转超现实撞色海报 | [Post](https://www.threads.com/@blissful_nala/post/DdQyP2eG2kX) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdQyPvum2NF) | 4 |
 | 照片转黏土九宫格贴纸 | [Post](https://www.threads.com/@blissful_nala/post/DdHEdNfG9dE) | [Reply 1](https://www.threads.com/@blissful_nala/post/DdHEirMm1pl) | 4 |
+
+## Threads — emersonigpost
+
+On October 5, 2026, the site maintainer separately confirmed account ownership or permission to republish images and complete prompts from [Emerson (@emersonigpost)](https://www.threads.com/@emersonigpost) on this website and its public GitHub repository. This batch uses **CUSTOM / 经授权收录**, based on that confirmation rather than a publicly verified open license. The author retains their rights. The root MIT license and unrelated CC licenses do not apply to this material, and this notice grants no downstream redistribution license.
+
+This snapshot reviews publicly displayed September 11–October 5, 2026 posts: 21 author prompt texts were compared against the existing catalog and each other, and 13 distinct transformation groups with 118 original-resolution example images were selected. Exact duplicates, translated duplicates and materially similar variants were excluded; a common before/after layout alone was not treated as a duplicate. Two additional post groups without complete publicly available author prompts were left out. This is a snapshot of the reviewed public content, not a claim of a complete account archive. It includes no other commenters’ material.
+
+Downloaded original image bytes are preserved. English and Traditional Chinese prompt wording is retained; social introductions are separated at explicit prompt boundaries, and site-added upload checks and requirements are labeled separately. The examples are author-provided source results, not site-run model tests. The Perler Bead prompt uses a left/right split rather than the usual top/bottom layout. The travel-ticket prompt does not specify an overall aspect ratio, and real locations and dates require confirmation; the result is a keepsake design, not a usable travel document. Generated product labels in the bento case are visual concepts rather than verified product information. Per-file hashes, mappings and editorial decisions are recorded in [the source manifest](tools/curate/sources/threads-emersonigpost.json).
+
+| Case | Main post | Author prompt | Original language |
+|---|---|---|---|
+| 照片转极细线条情绪海报 | [Post](https://www.threads.com/@emersonigpost/post/DeGrnlzieCI) | [Prompt](https://www.threads.com/@emersonigpost/post/DeGroaQCTwh) | English |
+| 照片转几何故事海报 | [Post](https://www.threads.com/@emersonigpost/post/DeBXyPwiVdB) | [Prompt](https://www.threads.com/@emersonigpost/post/DeBXzYoCdWd) | English |
+| 照片转氛围像素记忆 | [Post](https://www.threads.com/@emersonigpost/post/Dd-75BTiWVM) | [Prompt](https://www.threads.com/@emersonigpost/post/Dd-7503iWA1) | English |
+| 照片转拼布手缝海报 | [Post](https://www.threads.com/@emersonigpost/post/Dd8UpEEiXSS) | [Prompt](https://www.threads.com/@emersonigpost/post/Dd8UpyYibbD) | English |
+| 照片转古器物拓印 | [Post](https://www.threads.com/@emersonigpost/post/Dd6nvITiZAv) | [Prompt](https://www.threads.com/@emersonigpost/post/Dd6nv-HidX2) | English |
+| 照片转日式便当包装 | [Post](https://www.threads.com/@emersonigpost/post/Dd3Y-UuCdgz) | [Prompt](https://www.threads.com/@emersonigpost/post/Dd3Y_Ngibq_) | 繁體中文 |
+| 照片转纸张混合拼贴 | [Post](https://www.threads.com/@emersonigpost/post/Dd278yLibQv) | [Prompt](https://www.threads.com/@emersonigpost/post/Dd279s5CdO_) | English |
+| 照片转白色概念模型 | [Post](https://www.threads.com/@emersonigpost/post/Dd0PjCECbYR) | [Prompt](https://www.threads.com/@emersonigpost/post/Dd0Pj5HiTbG) | 繁體中文 |
+| 照片转拼豆色彩研究 | [Post](https://www.threads.com/@emersonigpost/post/DdvY-3sCZL3) | [Prompt](https://www.threads.com/@emersonigpost/post/DdvY_myCdNA) | 繁體中文 |
+| 照片转柔焦光影记忆 | [Post](https://www.threads.com/@emersonigpost/post/DdtOzuVifjP) | [Prompt](https://www.threads.com/@emersonigpost/post/DdtO0mJCZb6) | 繁體中文 |
+| 照片转双专色孔版印刷 | [Post](https://www.threads.com/@emersonigpost/post/DdlhHsyiR9K) | [Prompt](https://www.threads.com/@emersonigpost/post/DdlhIm2Cb4G) | 繁體中文 |
+| 旅行照转复古纪念票券 | [Post](https://www.threads.com/@emersonigpost/post/DdbUOANienr) | [Prompt](https://www.threads.com/@emersonigpost/post/DdbUOtXCTO8) | 繁體中文 |
+| 照片转越界色场海报 | [Post](https://www.threads.com/@emersonigpost/post/DdQDAsBCT0H) | [Prompt](https://www.threads.com/@emersonigpost/post/DdQhaYoieDi) | 繁體中文 |

@@ -1,0 +1,1432 @@
+{
+  "creator": "Emerson (@emersonigpost)",
+  "profileUrl": "https://www.threads.com/@emersonigpost",
+  "collectedAt": "2026-10-05",
+  "noticeAnchor": "threads--emersonigpost",
+  "scope": "13 reviewed distinct prompt groups and 118 original images, selected from 21 complete author text attachments in the publicly displayed Sept 11–Oct 5 posts. Eight exact, translated or near-duplicate prompt variants excluded; two other groups without a complete publicly readable author prompt left pending. A public-content snapshot, not a claim of a complete account archive. No other commenters’ content imported.",
+  "license": "CUSTOM",
+  "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+  "cases": [
+    {
+      "id": "threads-emerson-minimal-emotion-line",
+      "name": "照片转极细线条情绪海报",
+      "latin": "Minimal Emotional Line Poster",
+      "tagline": "用极细线条和一个视觉焦点，留下照片里的情绪与关系",
+      "input": "一张人物、生活场景或风景照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方极细线条情绪符号",
+      "moods": [
+        "极简",
+        "清冷"
+      ],
+      "keywords": [
+        "极细线条",
+        "情绪符号",
+        "单线手绘",
+        "极简海报",
+        "single line",
+        "negative space",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/DeGrnlzieCI",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DeGroaQCTwh",
+      "preserve": "保留上方照片的主体结构与自然氛围；下方只保留能辨认原图的轮廓、方向和关系，允许省略、缩小与偏心构图。",
+      "promptFile": "threads-emerson-minimal-emotion-line.txt",
+      "promptSha256": "cdb4af0e38b2d3425e924a4bf750adf00c476abb79810feac8e6a832841c0123",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "dffc113b65794419c141de1479ace668d596e3110401d698e924f223c186e236"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "fd57fdf15ee7c626aa1c231278ea5c04a491e1dc6e510acd2f17368d008a24b1"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "7be4904ac32f4ee466d41c7ca91e34dadb2802e609150a239551783c88de37b9"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "67ff78da95cb8a374986d719e27d1a4f29ddcc4ec5bcaaaef6662a8ffde74238"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "10ff22ccb975c488a916223e95b60c6e9574347065b824f869b24a1e31ceb685"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "1dc830baf4a8391b4197d6c4b556dce88b0e10c06539abc92b74fefcf6b232b3"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "00741b9dd1d1de02f1512f94b65010a2c20b6d3eb5e15336626a860e17ac0305"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "fc5aea9fa749118208a4a26603d6a89ceaf6b862dff86d34e975f9eba5864135"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/9.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "dfcaeac2a83a5411ed9ba613f647780e1f8eed85c2a84e5c58078cc0577edd7a"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/10.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "7a2b40e57b26908765f40f5ccd02f6d9769eed4ba48d1aec277257acf0e203a6"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/11.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "320c43c80d1a50271fa12397223d656d2f39d41ca454310819d8b4bb465469fb"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-geometric-story",
+      "name": "照片转几何故事海报",
+      "latin": "Geometric Memory Poster",
+      "tagline": "用建筑轮廓、明快色块和留白，重新组织生活记忆",
+      "input": "一张有主体关系或生活记忆的照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方几何拼贴与建筑抽象风插画",
+      "moods": [
+        "极简",
+        "治愈"
+      ],
+      "keywords": [
+        "几何故事",
+        "建筑抽象",
+        "视觉隐喻",
+        "现代主义",
+        "geometric collage",
+        "editorial poster",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/DeBXyPwiVdB",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DeBXzYoCdWd",
+      "preserve": "上方保留原照结构与光色；下方保留最关键的主体与关系，允许抽象、裁切和重新排布，色彩从原照提炼后提亮。",
+      "promptFile": "threads-emerson-geometric-story.txt",
+      "promptSha256": "51345825719299a0bceb56069f21f0468ed208905f191c3dfb797d43e2772cfe",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "0c09f7955ef4085e8381a43cc5c6703e008ff6fbc095f59aecff30944508e43a"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "c163420d7cf1deff408c0b621a8161cd9388bff496d6426ce7354a2a0d860060"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "df6e2cd2a6503c4331d4da8ae45184b465be38db0a8f6fc3a253a684a100d515"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "db89aaef4d207c1b0b77db0fe8f61f9c5321cfb35d8e2cb284493217f2f3ab7f"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "018e3961342782bff717175399d9a5af38b660e2c6f5bb5be835f93dcd824f4a"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "3c6f58e8fc13995899607f4001a234bd3db9048255a6dae1b56727bc2bc9ca0e"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "11fffdf130939a66525b40cea4e0dc22a7234f44b6ab187c3b3593b3de0a6a17"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4f0cd111860b298a359f81fcd2de729a2f2ab9479229f8e841f3a760c0637ca8"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-geometric-story/9.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "98da36d046f1cd8aa6b7c0957181d5e4be88941534588318774cb52838a79b2b"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Author long-text attachment; original wording retained; social introduction removed only before prompt starts",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 115
+      }
+    },
+    {
+      "id": "threads-emerson-atmospheric-pixel",
+      "name": "照片转氛围像素记忆",
+      "latin": "Atmospheric Pixel Memory",
+      "tagline": "低分辨率轮廓、粉彩色盘与大留白，凝成安静的游戏记忆",
+      "input": "一张旅行、街景、人物、宠物或日常照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方柔和粉彩的氛围像素插画",
+      "moods": [
+        "复古",
+        "治愈"
+      ],
+      "keywords": [
+        "氛围像素",
+        "像素风景",
+        "复古游戏",
+        "粉彩像素",
+        "atmospheric pixel art",
+        "pixel dithering",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/Dd-75BTiWVM",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd-7503iWA1",
+      "preserve": "上方保留原照主体；下方以关键轮廓和关系保持辨识，允许删减背景与缩小主体，以有限粉彩像素重构而非直接加像素滤镜。",
+      "promptFile": "threads-emerson-atmospheric-pixel.txt",
+      "promptSha256": "cb3641703b4e7677f243568c369ff784e178ca41d418f9050a6893b74f57477e",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "bc9e2087d8a3abe0a6294aa944ac258bee8882b3373bdde0d8473ca352c2aab6"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "93f2d6f437796f1f8c3789f90deeccc001373468360d9718e2acda00efc84b3e"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "46b86fdf18fb734ea43419b54c578b42e2362f35148e3adaa72f604cf0bd5c30"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4b05b6252dacd7e72130e4af6c4b0be9db70f10f9cc7eb1380097773883cfc27"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "e54bb4e6d5206b9bd5a1e888e1ea0e9c89af582889287a52769d61099865b605"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "7598a7c8bad350973562c54a71f2141a5dc79147005dc34a22321bdd55c68d19"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "3830017ccd38ac5152eb23a2fc20689a5b7f0e96ce00c8c862ea7cf313792c10"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "a464470688143447ce3fd98f8f0c1911c976305bb8c8c6221fe31ff33d949706"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/9.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "8ea15b19e69c965dc8eb3ffba32256de518482d8f66edeb2afd0c0094889ccff"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Author long-text attachment; original wording retained; social introduction removed only before prompt starts",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 120
+      }
+    },
+    {
+      "id": "threads-emerson-stitched-patchwork",
+      "name": "照片转拼布手缝海报",
+      "latin": "Stitched Patchwork Poster",
+      "tagline": "让布片、毛边和清晰针脚组成小幅手工画面",
+      "input": "一张人物、宠物或日常生活照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方拼布与手缝刺绣质感画面",
+      "moods": [
+        "治愈",
+        "复古"
+      ],
+      "keywords": [
+        "拼布",
+        "手缝刺绣",
+        "布贴画",
+        "针脚",
+        "patchwork",
+        "embroidery collage",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/Dd8UpEEiXSS",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd8UpyYibbD",
+      "preserve": "上方保持原照身份与姿态；下方提取轮廓、发型、服装和关系，用布片与明显针脚重构，只保留2至3种主要颜色。",
+      "promptFile": "threads-emerson-stitched-patchwork.txt",
+      "promptSha256": "5017c45f2e8076b24b701defd7879289e59226556098897843b6bd8c75a3b4c8",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "3c1dc7f700e9d2792143e20562bac939876cf3df511f529f3b30469b4e218ec8"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "0bd47fad83bc3c0d195edfb60477f63d7c2818e33c5ac61e5234c7357dc2d6ad"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "14ed65eb30905f6b40bcac81c5e2733521d1cd393832b7ee407f59835803985c"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "ab859887d96e764c49178b900d6a4f678341af4f86b9823dff66be5f09281d96"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "028f60be7cf37f1e6a2ffbd2846eb628f5cc276125ce6ec0f6eda41b41b48958"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "f5427b08cbc0de1786f270419cbd00329de7fa7d9441763ff1f86ae2b13ae942"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4b85bdd0a75154f6f7bb1f578e55bf2649372e60f3d9c91664d4f263b686533e"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "e841f881678d2f3da3668f958efa4fad9aa60ec419f1363329d0f54b4d8a0787"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/9.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "73369969f0c3e7fead1ecb9914f19dd4d2fec40301f299cecf3811e17cd6d420"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Author long-text attachment; original wording retained; social introduction removed only before prompt starts",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 75
+      }
+    },
+    {
+      "id": "threads-emerson-artifact-ink-rubbing",
+      "name": "照片转古器物拓印",
+      "latin": "Artifact Ink Rubbing",
+      "tagline": "把核心轮廓化成残缺墨痕、风化纹理与纸上拓印",
+      "input": "一张人物、器物、建筑或风景照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方黑白墨拓与古器物纹样风画面",
+      "moods": [
+        "复古",
+        "沉稳"
+      ],
+      "keywords": [
+        "古器物拓印",
+        "墨拓",
+        "碑拓",
+        "考古图录",
+        "ink rubbing",
+        "artifact rubbing",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/Dd6nvITiZAv",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd6nv-HidX2",
+      "preserve": "上方保留原照身份、结构与姿态；下方保留关键结构，允许断边、缺墨、删减背景和黑白化，以拓印痕迹重构而非完整描线。",
+      "promptFile": "threads-emerson-artifact-ink-rubbing.txt",
+      "promptSha256": "57362207973800f8a29dbfc50d267a9796eeb28ee1e8f7407179eef8186e21fa",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "8e05a35c3a68a0c4c3adac2ab9887a366ddcb4984c91ba332714492450a94a67"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "c6579a1157bfd8745ab72a8cd38bfa8b1a7bbb3da5b49307bc85e7c553f138b9"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "9297dd5830eb5b517f7761adc35e8516541992d9be10615b9da3987c3b2b63a9"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4479d184bf04887c17138ec44f7f45e971a4ea6a2128ee94dd9ec9add358ab2f"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "78d5be2ed96ef425f93f85afa4006e5ffd59bc18e24d54a8ad5a30e21ed71331"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "187b9ecbe1abadf8ec6f61ff3ded2a09f6455604f57eb85f7c40d53ca51b1124"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "075b5d44141a77294240fdb21b4c31453f20301eb30830a895b870ecd2e21765"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "870591ca0c55e0b16f7d46c1035f7e94eae8dcd58e3621bca08e3ca1a8813066"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-konbini-bento",
+      "name": "照片转日式便当包装",
+      "latin": "Konbini Bento Reinterpretation",
+      "tagline": "透明餐盒俯拍，用食材的颜色与质感重组标志、人物或场景",
+      "input": "一张标志、人物、物件或场景图片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方透明餐盒内的食材重构与包装视觉",
+      "moods": [
+        "荒诞",
+        "亲和"
+      ],
+      "keywords": [
+        "便当化",
+        "标志变便当",
+        "日式便当",
+        "便利店包装",
+        "bento-fication",
+        "food substitution",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/Dd3Y-UuCdgz",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd3Y_Ngibq_",
+      "preserve": "上方保留原图身份与主要结构；下方保留最能辨认原图的轮廓和层级，允许把材质及颜色映射为合理食材，并按餐盒分区调整位置。",
+      "promptFile": "threads-emerson-konbini-bento.txt",
+      "promptSha256": "8d4bbdf3c94e8b9ee6a40cf6655a4194f595e1e473e551d772c30e52df56501f",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "b2ad9410ff6ffd820c9fd8e578865317ce62ccf2f200dc58bcda3da19bdc0eeb"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "63404b265f67948271018a2a7f1177f18c7826a98145ed9b6270f441fc33b36f"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "39fa77926141710d42c13f643db8a73f54734275098ee57cc8527851f8ca5feb"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "ac3d6bc91397a2c4570459d7e017ceb5dc242a59006648721c776b1969bcf3bc"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "f0f8b3a26251f893bd4275168b4bfcb54ad3fd2db6da0b1965ffe661da9f5b0d"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "a9bde826d3828fb66d28032493c7c10a6d92f593e8a77f1678f63288f9134493"
+        }
+      ],
+      "usageNote": "示例采用公司标志，原文也适用于人物或场景；生成的价格、重量和保存说明属于画面设计，实际商品信息须另行填写。",
+      "sourceExtraction": {
+        "language": "zh-Hant",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-mixed-media-paper",
+      "name": "照片转纸张混合拼贴",
+      "latin": "Mixed Media Paper Collage",
+      "tagline": "撕纸、印刷碎片与松弛手绘线条重组一段日常",
+      "input": "一张人物、街景、器物或旅行照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方纸张拼贴与手绘混合媒材插画",
+      "moods": [
+        "亲和",
+        "极简"
+      ],
+      "keywords": [
+        "混合媒材",
+        "纸张拼贴",
+        "手绘拼贴",
+        "报纸拼贴",
+        "mixed media",
+        "paper collage",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/Dd278yLibQv",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd279s5CdO_",
+      "preserve": "上方保留原照身份与姿态；下方保留关键结构与叙事关系，允许删减、裁切和重排，以纸片、线条和2至4种提炼色组成单一焦点。",
+      "promptFile": "threads-emerson-mixed-media-paper.txt",
+      "promptSha256": "f3df28127c245211d4037d6d347270f7ed6c9aebf2e12936d6c5c1045dc831b0",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "189220efb7a6c83cc9f6023cdc04cfb4fc89db870403b9edd51bba0def5ab452"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/2.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "19360c6f8c0d805cdf81e72da7bfce4ab1cf57e77c0619be64ec5cf00a0fcd5b"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "0622fb8aa8295502c147a4848b06918537d023b6e777808e552865fc21d03567"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "91fe7cd9e993f9a727a35e5e03cd4ec077dd9f9fe91661d1df0d2bfd8eddd1e7"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "7332a632f3f5ea8c4942100394b4fb99a8415e869063e38d9aad6177c1cde9cf"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/6.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "7792e2470be292488179573cf7437119d36e0bd706c8906d19b01455279190b5"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/7.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "113519efdd0060ec17032e97c95115eac689a6c710d216007d214de076133ad6"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "71585c7f22bda93978785d59e7e56e52dcea3b10fcd0c5df934b702cc8eaf998"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/9.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4d9546d4a3c7df910baf938c0dcfdb73a70bdb18a412208235b4f898ed7b35a9"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/10.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "bd274ca815a34bb62cd940e78a0dc21dbfe6ad441520d2543c540a92597d646c"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-white-concept-model",
+      "name": "照片转白色概念模型",
+      "latin": "White Conceptual Form Study",
+      "tagline": "删去材质与杂色，用切割、叠合和留空研究主体形体",
+      "input": "一张人物、建筑、物件或自然景观照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方近单色白模与雕塑式形体研究",
+      "moods": [
+        "极简",
+        "秩序"
+      ],
+      "keywords": [
+        "白色模型",
+        "概念模型",
+        "雕塑形体",
+        "建筑体量",
+        "massing study",
+        "conceptual form",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/Dd0PjCECbYR",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd0Pj5HiTbG",
+      "preserve": "上方保留原照；下方保持最有辨识度的轮廓、比例和空间关系，允许切割、叠合及抽象，主要改为白色模型，仅必要时保留极小原色点缀。",
+      "promptFile": "threads-emerson-white-concept-model.txt",
+      "promptSha256": "94f28423d2ff3108812697173dc90c93ec251829c7ac031afe0b279f505e2363",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "25c2b7414977cfdc3e33046acd642b024c2490e7fc5f3296dbb91b157f69d364"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "d604829abb14833c4e0971abed6c575d33f1e9c9f0b6a1a28916fffbd66f341c"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "dbf782038c6d5a1f3df90ace6f904cbee95720797d07c31bbadbf469f0518b8e"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "64a3d45a1f9129064da32019fd8110953dde1727a7415624a339b401def15d10"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "6a674345447a02a854717a36455084d791fc41ccc618455229c74961502d8aeb"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "be11680f68638d8b9fb0e74950e5f325da1d1abda5a9d948445610393a7b104f"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "8d570a148b8f8b2c64560938195020f8f9d64c9c6e13d82cfb793b9701bea9e4"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "3d2f005fdfaacc222abf51a5ca888e1113151ef59c4b6ad1afa22cfed28455a8"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/9.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "3b9ab00d40c1355000f3bcd4994e1731e54516882bd8556188e78cfdbfd22768"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/10.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "eac263ce50e876bb354441ad078393e615e8a0bde8fc5552362a8d70fc047020"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/11.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "ff4d2a0218ae376ae0f6394971dcdcbef2d96ef213f15d96cdaf83f223d743f1"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/12.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "dfdfac2973b0bdf08095c35f9a69e1f9c8cff01408030b2f6de958d7a5641459"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "zh-Hant",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-perler-bead",
+      "name": "照片转拼豆色彩研究",
+      "latin": "Perler Bead Color Study",
+      "tagline": "真实圆孔拼豆、主题色卡与中文短标题组成左右对照",
+      "input": "一张主体清晰的照片",
+      "output": "一张左右等宽对照图：左侧原照，右侧拼豆作品、3至5色卡与中文标题",
+      "moods": [
+        "秩序",
+        "亲和"
+      ],
+      "keywords": [
+        "拼豆",
+        "熔珠",
+        "色卡",
+        "左右对照",
+        "Perler Bead",
+        "Fuse Bead",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/DdvY-3sCZL3",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdvY_myCdNA",
+      "preserve": "左侧原照只允许等比缩放和自然留白，不重绘或扩图；右侧保留主体姿态、方向、比例、轮廓和核心配色，只将细节简化成规则圆孔拼豆。",
+      "promptFile": "threads-emerson-perler-bead.txt",
+      "promptSha256": "71fec6dbd1b3f5876c02d4ff81bfbb5eca186b48113e9630b17ad1c745aa89d0",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/1.jpg",
+          "w": 1586,
+          "h": 992,
+          "sha256": "b52d88d6e64795c28b8d2db1f3c88c27ec1f2679ed1409b69b1141415003e484"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/2.jpg",
+          "w": 1402,
+          "h": 1122,
+          "sha256": "b30be07b0dca864905b39fb3bf89c0fd0fed40a0b79c293983a31af724b265bf"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/3.jpg",
+          "w": 1402,
+          "h": 1122,
+          "sha256": "98e78105a02aaf7c1df31c991cbcd602efaaa50d4288ed839ee635f44f59775b"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/4.jpg",
+          "w": 1484,
+          "h": 1060,
+          "sha256": "c19df80d7d26e37436dff5e009635aa9c08265f0ecf10eb37f105dd1dff4321d"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/5.jpg",
+          "w": 1448,
+          "h": 1086,
+          "sha256": "6f3bde7bf1a120e7d93e7b589d7c9ff75dced32809043f7776072aba7f61c7ec"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/6.jpg",
+          "w": 1448,
+          "h": 1086,
+          "sha256": "09c77ceb4eda33f3b2b174f8d8b8376a3321bd782d1e8f97d9b93b348298ef09"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/7.jpg",
+          "w": 1448,
+          "h": 1086,
+          "sha256": "56b4e228c7c920860584fdf6dd09327f473d5523dd18747c4793b57240744da1"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/8.jpg",
+          "w": 1443,
+          "h": 1090,
+          "sha256": "b3c3cce72d87f31bf4cb50a0a889dc1f4cb2963fe054b73eedfbe51b7b10504e"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/9.jpg",
+          "w": 1402,
+          "h": 1122,
+          "sha256": "58f27840d63cb5607a0f3769b24dc12b34623c47069dc092cd742e297d89d139"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/10.jpg",
+          "w": 1402,
+          "h": 1122,
+          "sha256": "ac78997350afb5fcae0b4c1f42397ec5513d10732e6a49339db818f4ec773426"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-perler-bead/11.jpg",
+          "w": 1402,
+          "h": 1122,
+          "sha256": "d456b135b9f5afd3916e14df58521a3e248c389599be3872d50e58c342ca3d95"
+        }
+      ],
+      "usageNote": "作者原文要求左右对照，未规定整张图的固定宽高比；左侧只做等比缩放与留白。生成模型未必能像素级保留原照，需要精确对照时可在生成后使用原图拼版。",
+      "guideCheck": "检查左右等宽布局：左侧原照、右侧拼豆和色卡；原照不应被改绘，示例仅展示作者原帖效果。",
+      "sourceExtraction": {
+        "language": "zh-Hant",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-soft-light-memory",
+      "name": "照片转柔焦光影记忆",
+      "latin": "Soft Light Memory Poster",
+      "tagline": "用透光色块、朦胧剪影和局部残影留下记忆的轮廓",
+      "input": "一张人物、城市、景物或日常照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方小幅柔焦光影图形与大面积留白",
+      "moods": [
+        "治愈",
+        "清冷"
+      ],
+      "keywords": [
+        "柔焦",
+        "光晕",
+        "朦胧剪影",
+        "光影记忆",
+        "soft diffusion",
+        "halation",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/DdtOzuVifjP",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdtO0mJCZb6",
+      "preserve": "上方保留原照身份与结构；下方保留可辨识的关键方向、动作和空间关系，允许局部模糊、散失及裁切，颜色由原图提炼而不固定为蓝调。",
+      "promptFile": "threads-emerson-soft-light-memory.txt",
+      "promptSha256": "e44a1089c08a8499596b71faad432860c80c060b8b2ecc63d2ac6cd8850c69d1",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "a78b09e76d65dd149c1a128d82ee80d0bc4fcc7d6269aeca64e3125d0f4c9ae9"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "9cb3f27a34f2cf2a3a65adf3dfd013a2b8f985d1eda9fddc8bb133705c8da3dd"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "1ae4fad92ee9eaa4e63d147dfaca09b2c3c2df6968c2683fe3094fc1a742f0ea"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "edc44817240d38d4b11ae60463188d00b35d94c999f70f6dd20ce07cb2ef632d"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "6fed725c52443175f7fa8e4e0d17180c89a16370cc864a720018706644b4ad52"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "499eb47d8fe82359a9fd1bac29a40f99af68a1385bbdd317c7b225f5f3952933"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "e3c59499802d00b251bf819f63cf2be5ff2bf9956e27eb5b2a9290afd9dcbeb7"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "930d259171aae2ec53db5b232bfefc0eeeaf0f0a06b4c4c1201828822faa0981"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/9.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "1b760a86b23aba547c60ffccde104ab4b67281cde909fa09359f403a366a8679"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "zh-Hant",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-two-ink-risograph",
+      "name": "照片转双专色孔版印刷",
+      "latin": "Two Ink Risograph Poster",
+      "tagline": "线面分离、轻微错版与纸张吸墨，形成手工印刷感",
+      "input": "一张人物、街景、建筑、宠物或静物照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方双专色Risograph风手绘插画",
+      "moods": [
+        "复古",
+        "极简"
+      ],
+      "keywords": [
+        "孔版印刷",
+        "双色版画",
+        "错位套印",
+        "独立杂志",
+        "Risograph",
+        "screen print",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/DdlhHsyiR9K",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdlhIm2Cb4G",
+      "preserve": "上方保留原照身份与姿态；下方保留结构走向及辨识特征，允许独立重排与裁切；从原图选取两种色彩分担色面和轮廓，不按所有物件原色上色。",
+      "promptFile": "threads-emerson-two-ink-risograph.txt",
+      "promptSha256": "4eb16c3d4c279cfc6aa05e151a6114a33b673cdf8f00a524e51848f96c809b1b",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "263975a822a2956edf6138ded2057c65b36068b527e37dabe552005d053fa3f3"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "a6356159f5f085fbaf6015bc60174895e7e8c935a196cafb1949ab8aca2f82d3"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "8ae1035b4c13b946faf97754c5343433747706adf8928d0148b72173698dd5af"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "3243c93bdc18436c40190d0dc2e788c958b3f151c8c0f69f4c79e1be031da7f5"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "d24f01638a818a1eb3c824f2c6d9522a2f0ec8de7159d467de4853f6ee72077f"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "2aaea579e541e0128636ed5dbf77e4ccaad2f4d95e8528e639346a12c51ac63f"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/7.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "9a3df5b2733443dbd16fc6f707be1eb5c6326034f86d70ccde03bf8262977446"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "81f2f27e6e2282edacb1c8f714a7eb48ec1c43671630ccd8ed70839b28466965"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/9.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "1793626e306defb97999c40a50d8d8962d9bd57b2e4d689f87b6318c84efd507"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/10.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "44c7eda3ac11e46d2dafe3ec3981a5c928b8ddb1ff21833d985ffe3d3123e4cb"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "zh-Hant",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-travel-keepsake-ticket",
+      "name": "旅行照转复古纪念票券",
+      "latin": "Vintage Travel Keepsake Ticket",
+      "tagline": "地标小插画、纸张纹理与护照印章，排成复古旅行票券",
+      "input": "一张旅行照片；补充真实地点和希望标注的日期",
+      "output": "一张上下等高对照图：上方原照，下方复古旅行纪念票券",
+      "moods": [
+        "复古",
+        "治愈"
+      ],
+      "keywords": [
+        "旅行纪念票",
+        "登机牌风格",
+        "护照印章",
+        "旅行手账",
+        "travel keepsake",
+        "boarding pass",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/DdbUOANienr",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdbUOtXCTO8",
+      "preserve": "上方完整保留原图，仅下方重新设计；下方保留地标及文化视觉线索，地点与日期由用户确认，不把模型推测当成真实记录。",
+      "promptFile": "threads-emerson-travel-keepsake-ticket.txt",
+      "promptSha256": "c9ca29cf0703b3401f6ee05c1e26913cbb64c18416c8742857cef6b783cbeeb8",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "cfa5aa21e5d8d426e2d3a2d1a0c8ec8ef383cf2e474ed678caafb25483f838b4"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/2.jpg",
+          "w": 1199,
+          "h": 1312,
+          "sha256": "26da7d13ebc27715c8ea715d0cf951448a4ca0cea4a4aa192529d62e1f832008"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "b43d4053b5338084c5cee8ae39699769f18feeb56c1613fde3b45c69acbe392f"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "ea1dcbcb47e6e9b31d3197cdaebf0096ab3cac9d3547a284fc2e99cffca2243d"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "4d7bfe3d5e557a27f37b6d40819eeede8ea0cb49a4d231249df460fef641a860"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "bc92e48a4f02b812e247e6d0d0f1da64851b27136278d3ecd067d3529a8ebedd"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/7.jpg",
+          "w": 1024,
+          "h": 1536,
+          "sha256": "9f51f34b5052023441a47ccf36268ac8850872b92b63c2717dcb3ab01826baf5"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/8.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "30fe604c91175f8c1791cc208a2d4559dfa9dc8528ab04c3680bc36ef4a7e866"
+        }
+      ],
+      "usageNote": "原文未指定整张图的固定宽高比。地点、日期和国家信息请自行确认；这是旅行纪念设计，不是可使用的证件或登机凭证。生成模型未必能像素级保留上方原照。",
+      "sourceExtraction": {
+        "language": "zh-Hant",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    },
+    {
+      "id": "threads-emerson-break-frame-color-field",
+      "name": "照片转越界色场海报",
+      "latin": "Break the Frame Color Field",
+      "tagline": "手刷色场承载小幅插画，让少量轮廓越出纸上边界",
+      "input": "一张人物、静物、街景或风景照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方不规则手刷色场中的越界构图插画",
+      "moods": [
+        "极简",
+        "亲和"
+      ],
+      "keywords": [
+        "越界构图",
+        "手刷色场",
+        "框景",
+        "手绘海报",
+        "break the frame",
+        "color field",
+        "Emerson",
+        "emersonigpost",
+        "Threads"
+      ],
+      "postUrl": "https://www.threads.com/@emersonigpost/post/DdQDAsBCT0H",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdQhaYoieDi",
+      "preserve": "上方保留原照身份与自然光色；下方保留关键结构和叙事关系，可删减、裁切及重排，使少量轮廓自然越出色场，颜色从原图提炼2至4种。",
+      "promptFile": "threads-emerson-break-frame-color-field.txt",
+      "promptSha256": "3d584bd699443076b5771a27034f9234fec80643d3317119ea9c6d1fcd8130af",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/1.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "31e6c30eaacfcd96261e7d0d12c4593a3a20c70ce8a0e000b59569b1bccef3c2"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/2.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "92cc4416722ec6692d812f796f678866205d719425a4b1d954cea02aa62be0bf"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/3.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "44ad054038df71df38d28ceffa58df31b10bcf8a51ba5bb09fa216f54b7eadd6"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/4.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "b84defc33b1a9d1d25834eaaee3b623237e6458b13b104a12387f377edfc025d"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/5.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "fda70680837e32c0e00f4aac15b5776f0fff0eee60c2261bbe5c47793a5dd09a"
+        },
+        {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/6.jpg",
+          "w": 1086,
+          "h": 1448,
+          "sha256": "f17dfb6dd51532ce2ec0c6f5bce4b0e5be433c6513e4aa09f3f44665fbb2b8db"
+        }
+      ],
+      "sourceExtraction": {
+        "language": "zh-Hant",
+        "mode": "Author long-text attachment; original wording retained",
+        "attachmentTextIndex": 0,
+        "promptStartOffset": 0
+      }
+    }
+  ],
+  "rights": {
+    "status": "authorized",
+    "license": "CUSTOM",
+    "scope": [
+      "prompt",
+      "images",
+      "public-site",
+      "public-repository"
+    ],
+    "evidence": "2026-10-05 本会话中，维护者针对 @emersonigpost 回复“是我的账号，或已获得转载授权”；问题明确覆盖图片和完整提示词转载到公开网站及 GitHub 仓库。此确认不授予第三方再许可。"
+  },
+  "review": {
+    "sourceVerified": true,
+    "rightsVerified": true,
+    "coreDedupeApproved": true,
+    "reviewer": "Codex editorial review for BryceYuuu",
+    "reviewedAt": "2026-10-05",
+    "decisions": [
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DeGrnlzieCI",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DeGroaQCTwh",
+        "decision": "retain",
+        "reason": "保留极细、断续单线与情绪符号，明确排除卡通、icon与粗线。不同于现有纸感插画的丙烯色块、炭笔粗干笔触、涂色页完整闭合轮廓。与本批暖底单冷色观念插画同任务，保留较新版本即可。",
+        "closestExistingIds": [
+          "threads-inka-minimal-paper",
+          "threads-inka-charcoal-doodle",
+          "line-art-sketch"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DeD80F3CXgk",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DeD805iiWEk",
+        "decision": "exclude-translated-duplicate",
+        "reason": "英文按段对应现有中文原文：Mid-century vernacular graphic illustration + schematic line drawing + two-color spot printing，连 economy of line、矩形圆菱形、图解透视、叙事辅助线与结尾去装饰规则均相同。属于翻译重复，不是新风格。",
+        "closestExistingIds": [
+          "threads-retro-diagram"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DeBXyPwiVdB",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DeBXzYoCdWd",
+        "decision": "retain",
+        "reason": "将现实场景压缩为建筑轮廓、现代主义几何拼贴、情绪隐喻与象征性空间，允许重新组织记忆关系。不同于原矢量海报保形分面、inka卡通式粗黑轮廓或固定小图卡。",
+        "closestExistingIds": [
+          "vector-poster",
+          "threads-inka-flat-editorial",
+          "threads-inka-abstract-memory"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/Dd-75BTiWVM",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd-7503iWA1",
+        "decision": "retain",
+        "reason": "明确非像素滤镜/8-bit图标；以低分辨率、dithering、小主体、大空气空间、柔和彩色怀旧RPG环境构建场景。与站内严格网格图标和写实/CG梦核材质不同。",
+        "closestExistingIds": [
+          "pixel-quest",
+          "threads-nala-dreamcore"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/Dd8UpEEiXSS",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd8UpyYibbD",
+        "decision": "retain",
+        "reason": "核心为大布片拼接、疏粗可见针脚、毛边、松线和2–3色布料，成品为平面拼布海报。不是羊毛毡体积、针织玩偶或簇绒地毯。",
+        "closestExistingIds": [
+          "threads-inka-needle-felt",
+          "plush-toy",
+          "tufted-rug"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/Dd6nvITiZAv",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd6nv-HidX2",
+        "decision": "retain",
+        "reason": "以石刻/浅浮雕转印的破墨、缺损、风化、裂隙和纸纤维构形，避完整现代轮廓。与炭笔手绘和涂色线稿的形成方式、纹理均不同。",
+        "closestExistingIds": [
+          "threads-inka-charcoal-doodle",
+          "line-art-sketch"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/Dd5t33GCU-B",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd5t33GCU-B",
+        "decision": "exclude-exact-duplicate",
+        "reason": "与 Dd6nv-HidX2 附件原文逐字相同；只建一张卡。可以核验去重图片后保留另一帖独有示例。",
+        "closestExistingIds": [
+          "threads-inka-charcoal-doodle"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/Dd3Y-UuCdgz",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd3Y_Ngibq_",
+        "decision": "retain",
+        "reason": "食材语义映射+透明便利店餐盒+俯拍商品摄影，食物替换主体而保留识别关系，是全库缺少的实际转换操作。",
+        "closestExistingIds": [
+          "miniature-diorama",
+          "threads-isometric-poster"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/Dd278yLibQv",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd279s5CdO_",
+        "decision": "retain",
+        "reason": "撕书页/报纸/印字纸片直接参与构形，结合铅笔/石墨/炭线和薄水彩，主体压缩而可不完整。区别于inka保留85–95%照片脸的剪影贴纸舞台，也不同于层叠立体纸雕。",
+        "closestExistingIds": [
+          "threads-inka-paper-scrapbook",
+          "threads-nala-layered-paper"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/Dd0PjCECbYR",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd0Pj5HiTbG",
+        "decision": "retain",
+        "reason": "以近单色实体切割、悬挑、虚实关系提炼雕塑体量，关注空间研究而非逼真建筑微缩/纸张折痕/玻璃质感；可适用于所有主体。",
+        "closestExistingIds": [
+          "miniature-diorama",
+          "hard-edge-minimal",
+          "glass-morphism"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/Ddx9wgcCdZq",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/Ddx9xTbCccs",
+        "decision": "exclude-near-duplicate",
+        "reason": "与Nala层叠纸雕同为上原照、下单主体多层剪纸、精确切边、镂空/遮挡/接触阴影、原照鲜色与巨大留白。建筑编辑微排版/现代东方描述和更少文字不足以形成新的转换功能。",
+        "closestExistingIds": [
+          "threads-nala-layered-paper",
+          "hard-edge-minimal"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdvY-3sCZL3",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdvY_myCdNA",
+        "decision": "retain",
+        "reason": "真正带圆孔的统一塑料短圆柱拼豆、规则颗粒网格、摄影棚物体阴影，且明确左右50/50与下方3–5色色卡。区别于数码8-bit和贝壳像素材料。",
+        "closestExistingIds": [
+          "pixel-quest",
+          "threads-nala-shell-mosaic"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdtOzuVifjP",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdtO0mJCZb6",
+        "decision": "retain",
+        "reason": "小尺度彩色投影、透光色块、残影与非均匀虚实散失，弱主体强氛围；不是站内黑白磨砂玻璃的保形剪影，也不同于inka图卡内必须清晰的主体。",
+        "closestExistingIds": [
+          "frosted-silhouette",
+          "threads-inka-abstract-memory"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdqkCMqCUkq",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdqkC8ECdZc",
+        "decision": "exclude-near-duplicate",
+        "reason": "核心仍是将原照片保姿态/轮廓压缩成硬边多边形和有限纯色色块，无黑描边、无渐层与立体阴影；现有vector-poster已覆盖这个转换。上下对照、NO.023、5–6色和少量印刷颗粒主要是版式/参数变化。",
+        "closestExistingIds": [
+          "vector-poster",
+          "threads-inka-flat-editorial"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdnuneZiX_0",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdnuoYhCVTO",
+        "decision": "exclude-near-duplicate",
+        "reason": "同批DeGroaQCTwh同样以细线、断续轮廓、小主体、巨大负空间和情绪隐喻构成视觉小品；暖纸底+低饱和靛蓝/蓝紫只是限定配色。保留较新版本。",
+        "closestExistingIds": [
+          "threads-inka-minimal-paper",
+          "threads-inka-charcoal-doodle"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdlhHsyiR9K",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdlhIm2Cb4G",
+        "decision": "retain",
+        "reason": "关键操作为严格两专色、线与色面分别承担结构、彼此分离错位套印、破墨吸墨颗粒。不同于复古图解的技术示意几何与普通扁平黑轮廓，保留。",
+        "closestExistingIds": [
+          "threads-retro-diagram",
+          "threads-inka-flat-editorial"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DddK0KViWXu",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DddK05iCWEN",
+        "decision": "exclude-near-duplicate",
+        "reason": "本批DdSu-KVicq5的简短同功能版本：中心小图形、黑线贴纸感、米白黑+极少冰蓝、边缘小字，没有新增操作。",
+        "closestExistingIds": [
+          "threads-inka-minimal-paper"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdbUOANienr",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdbUOtXCTO8",
+        "decision": "retain",
+        "reason": "生成平面复古护照/登机票/旅行纪念券的系统化印章、代码、微型地标插图与票券边框；不是带原照角标的邮票立体微景，也不是珐琅磁贴。",
+        "closestExistingIds": [
+          "threads-nala-vintage-stamp",
+          "threads-inka-travel-magnet"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdVB442CSVU",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdVB5tZicxP",
+        "decision": "exclude-near-duplicate",
+        "reason": "与已有炭笔涂鸦核心均为小主体巨留白、粗糙蜡笔/石墨/干性笔触、断线露白和暖白纸底。铁锈红点色与更自由的偏心裁切不足以新建一个核心任务。",
+        "closestExistingIds": [
+          "threads-inka-charcoal-doodle"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdSu80qCURu",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdSu-KVicq5",
+        "decision": "exclude-near-duplicate",
+        "reason": "与既有极简纸感插画同为50/50对照、辨识主体缩小、手绘细线+少量平面形、纸白负空间和小标题。将4色/丙烯块收窄为黑白+一个浅色、描述为贴纸感，是近似画风参数；未输出真实贴纸白边或透明贴纸包等新任务。",
+        "closestExistingIds": [
+          "threads-inka-minimal-paper"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdQDAsBCT0H",
+        "promptUrl": "https://www.threads.com/@emersonigpost/post/DdQhaYoieDi",
+        "decision": "retain",
+        "reason": "不规则刷痕矩形色场承载主体，并要求部分轮廓/枝叶/线条越过色场边界。现有抽象记忆图卡反而禁止主体溢出且边界完整，核心构图操作相反。",
+        "closestExistingIds": [
+          "threads-inka-abstract-memory",
+          "threads-inka-minimal-paper"
+        ]
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdYvH3ciV_y",
+        "decision": "pending-complete-prompt",
+        "reason": "公开详情未显示完整作者提示词；不将配文推断或其他评论者内容作为作者原文。"
+      },
+      {
+        "postUrl": "https://www.threads.com/@emersonigpost/post/DdIW2U8GbLD",
+        "decision": "pending-complete-prompt",
+        "reason": "公开详情未显示完整作者提示词；不将配文推断或其他评论者内容作为作者原文。"
+      }
+    ],
+    "mediaReview": "118 original files decoded and matched to their source groups; SHA256 and perceptual comparison against 106 existing Threads images found no duplicate results. Generated artwork and source-photo reuse are distinguished.",
+    "contentSha256": "bd3958b7d5c2c2aebf42a0126a94cbd7e6817690505b8f71af2fbfb1e8c695af"
+  }
+}

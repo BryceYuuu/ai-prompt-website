@@ -55,6 +55,10 @@ const mutations={
  browseInterrupted:['app.js','clearTimeout(onInput._timer);\n    var route', 'void 0;\n    var route'],
  threadsOwner:['data-curated.js','https://www.threads.com/@inkacalinka/post/Dc7fl2ulBQ5','https://www.threads.com/@lch1776244/post/Dc7fl2ulBQ5'],
  threadsOrientation:['data-curated.js','上方呈现羊毛毡绘本，下方保留原照片','上方保留原照片，下方呈现羊毛毡绘本'],
+ negativeListContext:['rules.js',"return DENYLIST.indexOf(item.trim().toLowerCase()) >= 0 ? '' : item;",'return item;'],
+ emersonOrientation:['data-curated.js','const HF_CURATED_SAMPLES =',"Object.values(HF_CURATED).filter(s=>s.source.promptUrl==='https://www.threads.com/@emersonigpost/post/DdvY_myCdNA').forEach(s=>{s.curation.output='一张上下对照海报，上方原照片，下方拼豆作品';});\nconst HF_CURATED_SAMPLES ="],
+ emersonPromptComplete:['data-curated.js','const HF_CURATED_SAMPLES =',"Object.values(HF_CURATED).filter(s=>s.source.promptUrl==='https://www.threads.com/@emersonigpost/post/DeBXzYoCdWd').forEach(s=>{s.prompt=s.prompt.slice(0,1500);});\nconst HF_CURATED_SAMPLES ="],
+ emersonSourcePage:['app.js','libHref({ page: String(page) })',"libHref({ page: String(page), source: '' })"],
  nalaContinuation:['app.js','(s.source.promptUrls || [])','([])'],
  nalaInterfaceText:['data-curated.js','确保**纸艺处理视觉','确保**纸艺处理视觉\\n查看另外 1 条'],
  nalaUsageNote:['data-curated.js','原帖末句停在','原帖已完整结束于'],
@@ -90,7 +94,7 @@ async function nav(hash){w.location.hash=hash;w.dispatchEvent(new w.Event('hashc
 const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
 (async()=>{
  await wait(120);const cards=w.eval('STYLES'),images=cards.filter(s=>s.category==='image');
- await check('catalog-count-and-classification',()=>{assert.equal(cards.length,90);assert.equal(images.length,42);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,90);});
+ await check('catalog-count-and-classification',()=>{assert.equal(cards.length,103);assert.equal(images.length,55);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,103);});
  await check('source-evidence-and-license',()=>{for(const s of cards){if(s.source.provider==='threads'){
  const {manifest,item}=threadRecords.get(s.id);
  assert.equal(s.source.url,item.postUrl);assert.equal(s.cover.sourceUrl,item.postUrl);assert.equal(s.source.promptUrl,item.promptUrl);
@@ -136,7 +140,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  });
  await check('scene-and-category-filters',async()=>{
    await nav('#/library?track=text');assert.equal(Number(q('.lib-count b').textContent),48);assert.equal(all('.gallery .card').length,12);
-   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat);assert.equal(Number(q('.lib-count b').textContent),cat==='image'?42:8);assert.equal(all('.gallery .card').length,cat==='image'?12:8);}
+   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat);assert.equal(Number(q('.lib-count b').textContent),cat==='image'?55:8);assert.equal(all('.gallery .card').length,cat==='image'?12:8);}
    const social=cards.filter(s=>s.uses.includes('社交封面'));await nav('#/library?use='+encodeURIComponent('社交封面'));
    assert.equal(Number(q('.lib-count b').textContent),social.length);assert.equal(all('.gallery .card').length,Math.min(12,social.length));
    assert(all('.gallery .card__link').every(a=>social.some(s=>a.hash==='#/style/'+s.id)));
@@ -147,7 +151,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  });
  await check('pagination-pages-context-and-boundaries',async()=>{
    const ids=()=>all('.gallery .card__link').map(a=>a.hash);
-   for(const [base,total] of [['#/',42],['#/library',90],['#/library?track=text',48]]) {
+   for(const [base,total] of [['#/',55],['#/library',103],['#/library?track=text',48]]) {
      const seen=[];await nav(base);
      assert(q('.pagination [aria-disabled="true"]'));assert(!q('.pagination [rel="prev"]'));
      for(let page=1;page<=Math.ceil(total/12);page++) {
@@ -171,7 +175,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    await nav('#/library?page=2');q('[data-action="filter-search"]').value='inkacalinka';q('[data-action="filter-search"]').dispatchEvent(new w.Event('input',{bubbles:true}));await wait(360);
    assert.equal(q('.pagination [aria-current="page"]').textContent,'1');assert.equal(ids().length,10);
    for(const value of ['-1','0','NaN','1.5','Infinity']) {await nav('#/library?page='+value);assert.equal(q('.pagination [aria-current="page"]').textContent,'1');}
-   await nav('#/library?page=999');assert.equal(q('.pagination [aria-current="page"]').textContent,'8');assert.equal(ids().length,6);
+   await nav('#/library?page=999');assert.equal(q('.pagination [aria-current="page"]').textContent,'9');assert.equal(ids().length,7);
    await nav('#/library?q=zzzzNoSuchPrompt&page=4');assert(!q('.pagination'));assert(q('.empty'));
    await nav('#/library?cat=code&page=4');assert.equal(q('.pagination [aria-current="page"]').textContent,'1');assert(!q('.pagination [rel="next"]'));
    const fresh=session({savedRaw:JSON.stringify(cards.slice(0,15).map(s=>s.id))});
@@ -239,7 +243,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    assert.equal(q('.pagination [aria-current="page"]').textContent,'1');assert.equal(Number(q('.lib-count b').textContent),10);
    assert.equal(d.activeElement,q('[data-action="source"]'),'select retains keyboard focus');
    await nav('#/library?cat=image&group=objects&source='+encodeURIComponent(key));
-   assert(q('.empty'));assert(q('.active-filters').textContent.includes('手办玩具'));
+   assert(q('.empty'));assert(q('.active-filters').textContent.includes('创意物件'));
    assert.equal(q('.empty a').hash,'#/library?cat=image','reset stays in image collection');
    q('.empty a').click();await wait(20);assert.equal(Number(q('.lib-count b').textContent),images.length);
    await nav('#/library?cat=image&group=drawing&source='+encodeURIComponent(key));
@@ -395,8 +399,8 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    clickImage(surface,0);assertOpenAndClose(surface,pictures[3].v.src);
  });
  await check('threads-gallery-source-and-search',async()=>{
-   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,24);
-   for(const [term,count] of [['Chloe_Lai',4],['inkacalinka',10],['blissful_nala',10]]){await nav('#/library?cat=image&q='+term+'&limit=100');assert.equal(all('.gallery .card').length,count);}
+   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,37);
+   for(const [term,count] of [['Chloe_Lai',4],['inkacalinka',10],['blissful_nala',10],['emersonigpost',13]]){await nav('#/library?cat=image&q='+term);assert.equal(Number(q('.lib-count b').textContent),count);assert.equal(all('.gallery .card').length,Math.min(12,count));}
    for(const s of imported){
      await nav('#/style/'+s.id);const pictures=s.guide.filter(b=>b.t==='img');
      assert.equal(all('.detail-preview figure').length,1,'one large preview, not a stacked image wall');
@@ -411,6 +415,70 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
      }
      const ex=all('.takeaway a[download]');const md=blobs.get(ex.find(a=>a.download.endsWith('.md')).href);assert(md.includes(s.licenseNote));
    }
+ });
+ await check('emerson-original-prompts-complete-in-copy',async()=>{
+   const imported=cards.filter(s=>s.source.provider==='threads'&&s.source.url.startsWith('https://www.threads.com/@emersonigpost/post/'));
+   assert.equal(imported.length,13,'thirteen distinct Emerson prompts are published');
+   for(const s of imported){
+     const raw=fs.readFileSync(path.join(root,'tools/curate/sources',s.source.snapshot),'utf8').trim();
+     assert(raw.length>500,'the source snapshot contains the full author instruction: '+s.id);
+     const start='【作者原始提示词】\n',end='\n\n【保持不变】';
+     assert(s.prompt.includes(start)&&s.prompt.includes(end),'source and site-added checks have explicit boundaries');
+     const original=s.prompt.slice(s.prompt.indexOf(start)+start.length,s.prompt.indexOf(end));
+     assert.equal(original,raw,'author text is complete and unchanged: '+s.id);
+     assert(!/查看另外 \d+ 条|了解更多|完整 Prompt 放這裡/.test(original),'interface labels and social introductions are outside the prompt');
+     await nav('#/style/'+s.id);
+     assert(q('.prompt__body').textContent.includes(raw),'detail contains the entire author instruction');
+     primary.copied='';q('.gh__actions [data-action="copy-prompt"]').click();await wait(1);
+     assert(primary.copied.includes(raw),'copy includes the final source paragraph: '+s.id);
+   }
+ });
+ await check('explicit-negative-list-keeps-positive-policy-checks',()=>{
+   const perler=cards.find(s=>s.source.promptUrl==='https://www.threads.com/@emersonigpost/post/DdvY_myCdNA');assert(perler);
+   const original=perler.prompt,opts={taxonomy:w.eval('TAXONOMY')};
+   function policyFor(prompt,change){
+     const card=JSON.parse(JSON.stringify(perler));card.prompt=prompt;if(change)change(card);
+     return w.HFRules.checkCard(card,opts).policy.filter(p=>p.msg.includes('IP 风险词'));
+   }
+   assert.equal(policyFor(original).length,0,'the complete author prompt excludes LEGO rather than requests it');
+   assert.equal(perler.prompt,original,'validation never rewrites the source prompt');
+   for(const text of ['严格避免：LEGO、卡通。','請使用拼豆。嚴格避免：LEGO、卡通。','前文！严格避免: lego 、卡通。','前文\n严格避免：LEGO、卡通。','严格避免：LEGO、卡通。嚴格避免：Disney、卡通。']){
+     assert.equal(policyFor(text).length,0,'closed sentence-start negative enumeration accepted: '+text);
+   }
+   for(const text of ['请生成 LEGO 造型。','严格避免：LEGO、卡通','严格避免 LEGO、卡通。','严格避免：LEGO。','请按严格避免：LEGO、卡通。','严格避免：LEGO风格、卡通。','严格避免：LEGO、卡通！','严格避免：LEGO、卡通。使用 LEGO 造型。']){
+     assert(policyFor(text).length>0,'positive, ambiguous or unclosed use remains blocked: '+text);
+   }
+   assert(policyFor(original+'\n请生成 LEGO 造型。').length>0,'a valid negative list cannot hide a separate positive request');
+   assert(policyFor(original,c=>{c.name='LEGO 拼豆';}).length>0,'name remains scanned');
+   assert(policyFor(original,c=>{c.guide.push({t:'p',v:'使用 LEGO 造型'});}).length>0,'guide remains scanned');
+   assert(policyFor(original,c=>{c.guide.push({t:'p',v:'严格避免：LEGO、卡通。'});}).length>0,'the prompt-only exception does not expand to guide fields');
+ });
+ await check('emerson-perler-horizontal-output',async()=>{
+   const s=cards.find(s=>s.source.promptUrl==='https://www.threads.com/@emersonigpost/post/DdvY_myCdNA');assert(s,'Perler source exists');
+   assert(s.curation.output.includes('左')&&s.curation.output.includes('右'),'deliverable describes left/right panels');
+   assert(!/上下对照|上下分割|上方(?:保留)?原照|上半(?:部|部分)/.test(s.curation.output),'deliverable must not replace horizontal comparison with vertical panels');
+   assert(/左右兩個等寬面板/.test(s.prompt)&&/不得上下分割/.test(s.prompt),'horizontal source instructions remain intact');
+   await nav('#/style/'+s.id);
+   assert(q('.detail-guide').textContent.includes(s.curation.output),'the same horizontal deliverable appears in the guide');
+ });
+ await check('emerson-source-pagination-and-return',async()=>{
+   const key='threads:emersonigpost',browse=w.eval('HF_BROWSE');
+   const expected=images.filter(s=>browse.source(s).key===key).map(s=>s.id).sort();assert.equal(expected.length,13);
+   await nav('#/library?cat=image&source='+encodeURIComponent(key)+'&sort=new');
+   const ids=()=>all('.gallery .card').map(el=>el.dataset.id),first=ids();
+   assert.equal(first.length,12);assert.equal(Number(q('.lib-count b').textContent),13);
+   const next=q('.pagination [rel="next"]');assert(next);
+   assert.equal(new URLSearchParams(next.hash.split('?')[1]).get('source'),key,'next page retains the account filter');
+   next.click();await wait(20);
+   assert.equal(q('[data-action="source"]').value,key);assert.equal(q('.pagination [aria-current="page"]').textContent,'2');
+   assert.equal(Number(q('.lib-count b').textContent),13);assert.equal(ids().length,1);assert(!q('.pagination [rel="next"]'));
+   assert.deepEqual(first.concat(ids()).sort(),expected,'the two pages show every account card exactly once');
+   const pageTwo=w.location.hash,lastId=ids()[0];
+   q('.gallery .card__link').click();await wait(20);assert.equal(q('.backlink').hash,pageTwo);
+   q('.backlink').click();await wait(20);assert.deepEqual(ids(),[lastId],'detail return restores the account second page');
+   const prev=q('.pagination [rel="prev"]');assert(prev);
+   assert.equal(new URLSearchParams(prev.hash.split('?')[1]).get('source'),key,'previous page retains the account filter');
+   prev.click();await wait(20);assert.deepEqual(ids(),first);assert.equal(q('.pagination [aria-current="page"]').textContent,'1');
  });
  await check('nala-source-specific-layout-notes',async()=>{
    for(const s of cards.filter(s=>s.id.startsWith('threads-nala-')))assert(!/查看另外|了解更多/.test(s.prompt),'interface labels are excluded from the author prompt');

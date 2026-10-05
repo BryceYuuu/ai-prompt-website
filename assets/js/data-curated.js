@@ -1479,6 +1479,2627 @@ const HF_CURATED = {
       }
     ]
   },
+  "threads-emerson-minimal-emotion-line": {
+    "id": "threads-emerson-minimal-emotion-line",
+    "name": "照片转极细线条情绪海报",
+    "latin": "Minimal Emotional Line Poster",
+    "tagline": "用极细线条和一个视觉焦点，留下照片里的情绪与关系",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "极简",
+      "清冷"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 110
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nTurn each photo I upload into a separate premium minimalist design poster. Do not combine multiple photos; output each photo independently. Use an overall 3:4 portrait composition, strictly divided into two equal-height sections, with the upper and lower halves each occupying exactly 50% of the canvas. In the upper half, preserve the original photograph, maintaining the subject's structure, realistic textures, natural light and shadow, and original color atmosphere. Apply only subtle, refined photographic color grading to give it the visual quality of fine-art photography and exhibition imagery. To adapt the image to the required format, naturally extend the sky, ground, or surrounding environment when necessary, but never stretch, distort, or alter the main subject. In the lower half, extract the photograph's most recognizable subjects, contours, structures, poses, and narrative relationships. Do not reproduce the complete scene. Instead, compress these elements into a single minimalist emotional symbol. Remove all unnecessary information and preserve only the fewest visual clues needed to retain the spirit of the original subject. Reinterpret them through a minimal number of lines, negative space, and abstract forms so that the image does not simply depict the subject, but evokes the emotion associated with it. Use extremely fine, restrained, slightly irregular single-line drawing to describe only the most essential contours, directions, and relationships. The linework should feel like a quiet hand-drawn record, with subtle pauses, breathing room, and natural imperfections rather than a complete illustrated outline. Preserve large areas of clean negative space, allowing emptiness to represent air, distance, time, and inner space. The main subject may appear very small, off-center, suspended, partially visible, or reduced to only part of its contour; do not fill the composition. Keep only one central visual anchor. A very limited number of supporting lines may be added, such as a horizon, water ripples, plant contours, mountain ridges, or traces of movement, but do not construct a complex scene. Keep the color palette quiet and low-contrast. Extract the most emotionally resonant colors from the original image and reinterpret them as natural tones such as ink green, deep gray, warm white, mist blue, or pale cyan. Avoid vivid colors and excessive decoration. Introduce text only minimally by generating one extremely short phrase inspired by the hidden emotion of the photograph. Use small, elegant typography resembling a private handwritten note. The text should not explain the image, but function as part of the emotional pause. The final result should not simply simplify the photograph, but distill the single moment most worth remembering. Even an ordinary photograph should be transformed through line, negative space, and symbolism into a quiet, beautiful moment that can stand independently. Avoid complex illustration, complete backgrounds, excessive elements, decorative layering, heavy linework, commercial minimalist templates, cartoon aesthetics, icon-like graphics, and realistic rendering.\n\n【保持不变】保留上方照片的主体结构与自然氛围；下方只保留能辨认原图的轮廓、方向和关系，允许省略、缩小与偏心构图。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-minimal-emotion-line/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转极细线条情绪海报 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/DeGrnlzieCI",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/DeGrnlzieCI",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DeGroaQCTwh",
+      "act": "照片转极细线条情绪海报",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "cdb4af0e38b2d3425e924a4bf750adf00c476abb79810feac8e6a832841c0123",
+      "snapshot": "threads-emerson-minimal-emotion-line.txt"
+    },
+    "curation": {
+      "input": "一张人物、生活场景或风景照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方极细线条情绪符号",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "极细线条",
+      "情绪符号",
+      "单线手绘",
+      "极简海报",
+      "single line",
+      "negative space",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转极细线条情绪海报。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物、生活场景或风景照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方极细线条情绪符号"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/1.jpg",
+          "cap": "作者示例 1 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/2.jpg",
+          "cap": "作者示例 2 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/3.jpg",
+          "cap": "作者示例 3 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/4.jpg",
+          "cap": "作者示例 4 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/5.jpg",
+          "cap": "作者示例 5 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/6.jpg",
+          "cap": "作者示例 6 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/7.jpg",
+          "cap": "作者示例 7 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/8.jpg",
+          "cap": "作者示例 8 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/9.jpg",
+          "cap": "作者示例 9 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/10.jpg",
+          "cap": "作者示例 10 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-minimal-emotion-line/11.jpg",
+          "cap": "作者示例 11 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-geometric-story": {
+    "id": "threads-emerson-geometric-story",
+    "name": "照片转几何故事海报",
+    "latin": "Geometric Memory Poster",
+    "tagline": "用建筑轮廓、明快色块和留白，重新组织生活记忆",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "极简",
+      "治愈"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 111
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate a separate, independent premium minimalist design poster from each photo I upload. Do not combine multiple photos; output each photo separately. Use an overall 3:4 vertical composition, with the upper and lower sections strictly divided 1:1, each occupying exactly 50% of the image height. In the upper half, preserve the original photograph, maintaining the subject's structure, realistic texture, natural lighting and shadows, and original color atmosphere. Apply only subtle, sophisticated color grading to give it the exhibition quality of art photography and independent publishing. To adapt the image to the format, naturally extend the sky, ground, or surrounding environment when necessary, but never stretch, distort, or alter the subject. In the lower half, do not copy the photograph or retain every object. Extract only the most recognizable subjects, silhouettes, structures, poses, and narrative relationships, then reconstruct them around the original image's meaning, emotion, symbolism, cultural associations, psychological tension, and deeper metaphors. Remove irrelevant details and compress the real scene into a memorable visual symbol so that the result does not merely retell the photograph but becomes an independent moment derived from it. Use the visual language of abstract architectural illustration, geometric collage, playful modernism, and contemporary editorial illustration. Build the composition from abstract architectural silhouettes, geometric forms, flat structures, a small number of color modules, and symbolic elements. Do not pursue a complete realistic scene; instead emphasize silhouette, proportion, structural relationships, and spatial suggestion. Reinterpret architecture, people, animals, plants, objects, or natural landscapes as recognizable visual symbols, creating a quiet and poetic space between reality and imagination. Emphasize Gestalt-based reduction, negative-space design, and editorial order. Retain only one core visual anchor and deliberately remove the remaining information. The subject may be off-center, aligned to an edge, suspended, or partially cropped according to the original image's direction, proportions, and visual center of gravity. Preserve generous negative space, allowing emptiness to represent air, distance, time, and imagination, giving a small number of forms greater emotional density and visual tension. Combine modern design language with a subtle handmade quality. Use clean geometric shapes, soft flat planes, fine lines, and slightly irregular edges to balance organic geometry with playful minimalism. Avoid excessive detail and make the forms feel like an art-directed system of symbols rather than a traced or redrawn photograph. For the color palette, extract and reinterpret the brightest, freshest, and most lively colors from the upper photograph rather than averaging all colors. Increase overall brightness and color clarity, using naturally derived hues such as clear sky blue, aqua, fresh green, warm yellow, coral orange, and peach pink. Create a refreshing warm-cool relationship with a gentle, uplifting feeling. Use abundant clean warm white as breathing space. Keep the main colors vivid but never harsh, with touches of warm orange, golden yellow, or pink functioning like small accents of sunlight. The overall color spirit should feel bright, lively, warm, light, and full of life. Avoid muddy gray tones, aged or faded palettes, overly subdued Morandi colors, dark brown filters, fluorescent colors, and cheap candy-like palettes. Keep the overall background extremely light, clean, and transparent, intelligently matching warm white, ivory, or a subtly tinted background to the original photograph. Make the subject feel like a visual symbol within premium branding, an architectural poster, or an art publication. Keep the composition quiet and restrained, without meaningless decoration. Introduce typography sparingly, generating a short title, number, or micro-annotation based on the subject, location, emotion, cultural meaning, or symbolism. Use small, restrained typography with a contemporary editorial character, similar to information labels in premium brand identities, architecture magazines, or art exhibitions. Integrate the text naturally with the negative space and main subject without allowing it to dominate. Reference the visual sophistication of international design studios, architectural posters, contemporary brand identity systems, and art publications, combining architectural abstraction, geometric poetry, quiet playfulness, modern order, and imaginative space. Final goal: even an ordinary or imperfect original photograph should be transformed into a beautiful, restrained, and enduring visual moment. Avoid photorealistic rendering in the lower half, complete replication of the photograph, complicated backgrounds, information overload, cartoon aesthetics, excessive decoration, template-like poster design, cheap children's design aesthetics, and generic flat illustration.\n\n【保持不变】上方保留原照结构与光色；下方保留最关键的主体与关系，允许抽象、裁切和重新排布，色彩从原照提炼后提亮。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-geometric-story/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转几何故事海报 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/DeBXyPwiVdB",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/DeBXyPwiVdB",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DeBXzYoCdWd",
+      "act": "照片转几何故事海报",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "51345825719299a0bceb56069f21f0468ed208905f191c3dfb797d43e2772cfe",
+      "snapshot": "threads-emerson-geometric-story.txt"
+    },
+    "curation": {
+      "input": "一张有主体关系或生活记忆的照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方几何拼贴与建筑抽象风插画",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "几何故事",
+      "建筑抽象",
+      "视觉隐喻",
+      "现代主义",
+      "geometric collage",
+      "editorial poster",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转几何故事海报。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张有主体关系或生活记忆的照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方几何拼贴与建筑抽象风插画"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/1.jpg",
+          "cap": "作者示例 1 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/2.jpg",
+          "cap": "作者示例 2 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/3.jpg",
+          "cap": "作者示例 3 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/4.jpg",
+          "cap": "作者示例 4 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/5.jpg",
+          "cap": "作者示例 5 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/6.jpg",
+          "cap": "作者示例 6 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/7.jpg",
+          "cap": "作者示例 7 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/8.jpg",
+          "cap": "作者示例 8 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-geometric-story/9.jpg",
+          "cap": "作者示例 9 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-atmospheric-pixel": {
+    "id": "threads-emerson-atmospheric-pixel",
+    "name": "照片转氛围像素记忆",
+    "latin": "Atmospheric Pixel Memory",
+    "tagline": "低分辨率轮廓、粉彩色盘与大留白，凝成安静的游戏记忆",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "复古",
+      "治愈"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 112
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nTurn each photograph I upload into its own independent premium minimalist design poster. Do not combine multiple photographs; output each photograph separately. Use an overall 3:4 portrait composition divided into two regions of exactly equal height, each occupying 50% of the canvas. Keep the original photograph in the upper half, preserving the subject structure, authentic textures, natural light and shadow, and original colour atmosphere. Apply only subtle refined colour grading to create the visual quality of fine-art photography and exhibition imagery. If necessary, naturally extend the sky, ground, or surrounding environment to fit the composition, but never stretch, distort, or alter the subject. In the lower half, extract only the photograph's most recognizable subjects, silhouettes, structures, poses, and narrative relationships. Do not preserve every object or detail. Instead, reinterpret the image around its meaning, emotion, symbolism, cultural associations, and psychological tension. Use minimal information to preserve the strongest visual memory, compressing the real scene into an emotionally resonant pixel-based visual symbol. Reconstruct it in an Atmospheric Pixel Art style. This must not look like a standard pixel filter; instead, create a “pixel world of memory” using low-resolution pixel language, a limited colour palette, soft colour blocks, silhouette structures, pixel dithering, and subtle grain, transforming the subject into a quiet moment from a nostalgic game world. Reduce information while increasing imagination; soften boundaries while preserving the spirit of the original moment. Emphasize High Negative Space Composition, keeping the subject relatively small and surrounded by generous negative space so that sky, air, mist, water, or empty areas become essential emotional elements. The subject may be off-centre, distant, partially cropped, or suspended within the space. Do not pursue complete storytelling; instead create a visual pause that feels solitary, peaceful, warm, and gently nostalgic. Extract and remix only the most vivid and emotionally meaningful colours from the upper photograph rather than reproducing all colours evenly. Transform them into a soft Pastel Retro Palette using misty blue, pale cyan, mint green, creamy yellow, warm beige, soft pink, and similarly light tones to build a low-contrast dreamlike colour field. Keep the colours clear, warm, gentle, and comforting rather than dark, muddy, or distressed, using subtle warm-cool relationships to evoke nostalgic digital memory. Introduce only minimal typography, freely generating short text based on the subject, location, emotion, or symbolic meaning of the photograph. Use small, restrained pixel typography or fine annotation-style type with a subtle retro-digital and editorial quality, naturally integrated into the negative space. Overall visual references include Atmospheric Pixel Art, Dreamlike Pixel Landscape, Cozy Nostalgic Pixel World, and Retro RPG Environment Design. The final result should not feel like a “pixelated photograph,” but like a single moment from the photograph distilled into an independent, quiet, beautiful fragment of memory. Avoid complete photographic reproduction, excessive detail, complicated backgrounds, generic game-screenshot aesthetics, mechanical 8-bit filters, photorealistic 3D, cartoon styling, information overload, and template-like results.\n\n【保持不变】上方保留原照主体；下方以关键轮廓和关系保持辨识，允许删减背景与缩小主体，以有限粉彩像素重构而非直接加像素滤镜。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-atmospheric-pixel/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转氛围像素记忆 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/Dd-75BTiWVM",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/Dd-75BTiWVM",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd-7503iWA1",
+      "act": "照片转氛围像素记忆",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "cb3641703b4e7677f243568c369ff784e178ca41d418f9050a6893b74f57477e",
+      "snapshot": "threads-emerson-atmospheric-pixel.txt"
+    },
+    "curation": {
+      "input": "一张旅行、街景、人物、宠物或日常照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方柔和粉彩的氛围像素插画",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "氛围像素",
+      "像素风景",
+      "复古游戏",
+      "粉彩像素",
+      "atmospheric pixel art",
+      "pixel dithering",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转氛围像素记忆。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张旅行、街景、人物、宠物或日常照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方柔和粉彩的氛围像素插画"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/1.jpg",
+          "cap": "作者示例 1 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/2.jpg",
+          "cap": "作者示例 2 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/3.jpg",
+          "cap": "作者示例 3 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/4.jpg",
+          "cap": "作者示例 4 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/5.jpg",
+          "cap": "作者示例 5 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/6.jpg",
+          "cap": "作者示例 6 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/7.jpg",
+          "cap": "作者示例 7 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/8.jpg",
+          "cap": "作者示例 8 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-atmospheric-pixel/9.jpg",
+          "cap": "作者示例 9 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-stitched-patchwork": {
+    "id": "threads-emerson-stitched-patchwork",
+    "name": "照片转拼布手缝海报",
+    "latin": "Stitched Patchwork Poster",
+    "tagline": "让布片、毛边和清晰针脚组成小幅手工画面",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "治愈",
+      "复古"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 113
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nTurn each photograph I upload into its own independent premium design poster. Output one poster per image and never combine multiple photographs. Use an overall 3:4 portrait composition divided into two regions of exactly equal height, with the upper and lower sections each occupying 50% of the canvas. In the upper half, preserve the original photograph, maintaining the subject’s identity, structure, pose, authentic textures, natural light and shadow, and original colour atmosphere. Apply only subtle refined colour grading to create the feeling of an art magazine, independent publication, or exhibition image. The surrounding environment may be naturally extended when necessary to fit the composition, but never stretch, distort, or alter the subject. In the lower half, extract only the most recognisable subject contours, pose, hairstyle, clothing, props, and narrative relationships, then reconstruct them as a clearly visible stitched embroidery collage / Embroidery Collage / Hand-stitched Poster. Do not reproduce the complete original scene or retain every background element, object, and detail. Actively remove most unnecessary information and preserve only the key visual memory points that best represent the photograph. The lower image must immediately and unmistakably look as though it has been constructed from fabric and thread rather than rendered as a refined illustration or digital painting. Build the subject from large fabric patches joined with bold visible stitching, clearly showing appliqué embroidery, patchwork construction, frayed fabric edges, exposed loose threads, uneven cloth borders, stitched seams, and visible stitch paths. Use enlarged backstitch, chain stitch, running stitch, and cross-stitch language. Stitches must be thick, relatively sparse, and clearly spaced so that the fabric-and-thread construction remains obvious even when viewed from a distance. Small buttons, miniature fabric labels, or stitched tag details may be added sparingly, but they must never compete with the main subject. The lower half should be dominated by generous negative space on a warm white, ivory, cream, or pale linen fabric ground. Keep the reconstructed subject relatively small and allow it to sit off-centre, touch an edge, or be partially cropped. Prefer removing elements rather than filling the composition. Retain only the minimum background information required to understand the original image and never create a secondary focal point. Keep the palette strictly restrained to 2–3 main colours plus dark grey or black stitching and the warm neutral fabric background. If the original photograph contains many colours, deliberately discard most of them and retain only the most important colour memory. Maintain a low-saturation, cohesive, clean palette with a warm handmade feeling. Small fabric-label typography, dates, numbers, or brief handwritten phrases may appear lightly within the negative space, but typography must remain subtle and restrained. The overall mood should feel rustic, handmade, vintage, comforting, quiet, and collectible. Negative prompt: refined beautiful illustration, highly detailed digital painting, dreamy storybook style, smooth gradients, polished vector graphics, excessive lace aesthetics, excessive detail, invisible stitches, invisible fabric texture, overly thin stitching, weak embroidery appearance, complete reproduction of the original scene, full-frame composition, oversized subject, highly saturated multicolour palette, 3D rendering, commercial template design, artificial AI plastic texture.\n\n【保持不变】上方保持原照身份与姿态；下方提取轮廓、发型、服装和关系，用布片与明显针脚重构，只保留2至3种主要颜色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-stitched-patchwork/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转拼布手缝海报 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/Dd8UpEEiXSS",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/Dd8UpEEiXSS",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd8UpyYibbD",
+      "act": "照片转拼布手缝海报",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "5017c45f2e8076b24b701defd7879289e59226556098897843b6bd8c75a3b4c8",
+      "snapshot": "threads-emerson-stitched-patchwork.txt"
+    },
+    "curation": {
+      "input": "一张人物、宠物或日常生活照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方拼布与手缝刺绣质感画面",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "拼布",
+      "手缝刺绣",
+      "布贴画",
+      "针脚",
+      "patchwork",
+      "embroidery collage",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转拼布手缝海报。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物、宠物或日常生活照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方拼布与手缝刺绣质感画面"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/1.jpg",
+          "cap": "作者示例 1 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/2.jpg",
+          "cap": "作者示例 2 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/3.jpg",
+          "cap": "作者示例 3 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/4.jpg",
+          "cap": "作者示例 4 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/5.jpg",
+          "cap": "作者示例 5 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/6.jpg",
+          "cap": "作者示例 6 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/7.jpg",
+          "cap": "作者示例 7 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/8.jpg",
+          "cap": "作者示例 8 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-stitched-patchwork/9.jpg",
+          "cap": "作者示例 9 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-artifact-ink-rubbing": {
+    "id": "threads-emerson-artifact-ink-rubbing",
+    "name": "照片转古器物拓印",
+    "latin": "Artifact Ink Rubbing",
+    "tagline": "把核心轮廓化成残缺墨痕、风化纹理与纸上拓印",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "复古",
+      "沉稳"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 114
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nTurn each photograph I upload into its own independent high-end design poster. Do not combine photographs; output each separately. Use an overall 3:4 portrait composition with two regions of exactly equal height, each occupying 50% of the canvas. Keep the original photograph in the upper half, preserving the subject’s identity, structure, pose, real textures, natural light and shadow, and original colour atmosphere. Apply only subtle refined grading for the feeling of an art magazine, independent publication or exhibition image. Naturally extend the environmental background if needed to fit, but never stretch, distort or change the subject. In the lower half, extract only the photograph’s most recognisable subject, contours, structure, pose and narrative relationships, reconstructing them as an ancient Chinese artifact ink rubbing / archaeological rubbing. Do not copy the whole photograph, retain every object, or apply an ordinary black-and-white filter or traced line drawing. Actively remove irrelevant details, keeping only the structure, directional flow and visual memory points that best represent the original. Compress them into core forms resembling stone carvings, shallow reliefs or ancient ornament, then reinterpret them through the logic of rubbing transfer so the connection to the upper photograph is immediately recognisable. Make new artistic judgments in the lower half and genuinely give the model the authority to redirect the composition. Even if the original composition is poor, the background messy or the subject small, rescue it as a convincing work through subtraction, rearrangement, cropping, scale changes and whitespace. The subject need not be complete: it may sit off-centre, touch an edge, float or be partly missing. Keep only the most powerful visual portion. Maintain a small subject against an exceptionally large expanse of whitespace. Whitespace must be deliberate compositional language, not empty background. Together with the subject, ink marks, broken edges and a few auxiliary traces, it creates positive and negative shapes, breathing room, space and pauses. Prefer less to fullness, and subtraction to excessive explanation. Let the subject resemble an ancient trace placed on a vast sheet of paper: quiet, restrained and resonant. Build the image through ink marks, blank areas and losses rather than complete outlines. Contours may break, disappear or vary in thickness. Black areas should show missing ink, dry-brush white gaps, grain, erosion, fissures and weathering, as if transferred from an artifact’s time-worn surface. The subject’s key structure must remain accurate, but many secondary details may deliberately vanish, making the image feel like a surviving trace rather than a modern illustration. Base the palette on warm white, off-white or natural paper colour plus deep ink black / grey-black. Use almost no conventional painted colour or gradients. Keep moderate paper fibres, old rubbing-paper grain and natural unevenness, while avoiding excessive yellowing and cheap artificial aging. Focus on the mottled tonal layers of ink transfer, not a noise filter. Let text intervene only minimally as an editorial element, with no restriction on language. Freely derive a few titles, notes or archival-style words from the subject, location, cultural meaning or mood. Place them quietly in whitespace or beside the rubbing’s edges, creating a refined archaeological-catalog relationship between typography and image. Use the visual language of Chinese archaeological ink rubbing / artifact rubbing / ancient relief rubbing / ink-on-paper rubbing. Combine selective extraction, incomplete ink marks, weathered traces, paper fibres, exceptional whitespace and editorial typography for a refined, ancient, restrained, mysterious and collectible effect. Avoid copying the whole photograph, retaining too much background, ordinary black-and-white line art, vector outlines, noise filters, filling the frame and template-based artificial aging.\n\n【保持不变】上方保留原照身份、结构与姿态；下方保留关键结构，允许断边、缺墨、删减背景和黑白化，以拓印痕迹重构而非完整描线。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转古器物拓印 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/Dd6nvITiZAv",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/Dd6nvITiZAv",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd6nv-HidX2",
+      "act": "照片转古器物拓印",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "57362207973800f8a29dbfc50d267a9796eeb28ee1e8f7407179eef8186e21fa",
+      "snapshot": "threads-emerson-artifact-ink-rubbing.txt"
+    },
+    "curation": {
+      "input": "一张人物、器物、建筑或风景照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方黑白墨拓与古器物纹样风画面",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "古器物拓印",
+      "墨拓",
+      "碑拓",
+      "考古图录",
+      "ink rubbing",
+      "artifact rubbing",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转古器物拓印。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物、器物、建筑或风景照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方黑白墨拓与古器物纹样风画面"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/1.jpg",
+          "cap": "作者示例 1 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/2.jpg",
+          "cap": "作者示例 2 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/3.jpg",
+          "cap": "作者示例 3 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/4.jpg",
+          "cap": "作者示例 4 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/5.jpg",
+          "cap": "作者示例 5 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/6.jpg",
+          "cap": "作者示例 6 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/7.jpg",
+          "cap": "作者示例 7 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-artifact-ink-rubbing/8.jpg",
+          "cap": "作者示例 8 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-konbini-bento": {
+    "id": "threads-emerson-konbini-bento",
+    "name": "照片转日式便当包装",
+    "latin": "Konbini Bento Reinterpretation",
+    "tagline": "透明餐盒俯拍，用食材的颜色与质感重组标志、人物或场景",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "荒诞",
+      "亲和"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 115
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n請將我上傳的每一張照片分別製作成一張獨立的高級設計海報，不進行多圖拼接，每張照片需單獨輸出。整體採用 3:4 直式構圖，上下兩個區域的高度必須嚴格 1:1，各佔畫面 50%。\n\n上半部分保留原始照片，保持主體身份、結構、姿態、真實質感、自然光影和原有色彩氛圍，僅進行輕微的高級調色，使其具有藝術雜誌、獨立出版物與展覽圖像的質感。為了適配畫幅，可自然延展環境背景，但不得拉伸、扭曲或改變主體。\n\n下半部分提取照片中最具辨識性的主體、輪廓、結構、姿態與敘事關係，重構為 Bento-fication／飯盒化 的便利商店熟食包裝視覺。不要逐一複製原圖中的物件，而是要理解原畫面的核心視覺關係，將人物、建築、植物、天空、水面、器物或其他元素，進行食材語義映射與材質替換，用米飯、蔬菜、雞蛋、水果、海苔、起司、醬汁、果凍、魚卵、香草等食材重新組織，使人第一眼仍能辨認出原畫面的靈魂，第二眼才發現所有內容其實都是食物。\n\n所有視覺資訊最終都要收納進一個明確的透明便利商店熟食盒、便當托盤或分格食品容器中。保留原圖最重要的構圖層級，但允許重新導演：透過刪減無關背景、裁切、比例調整、位置重組、食材模組化與容器分區，讓原本複雜或普通的畫面重新變成一件成立的商品視覺。不要為了還原而把食材塞滿，只保留真正決定身份的元素。\n\n下半部分以 俯拍產品攝影／top-view packaged-food photography 為主要視角，強調真實的透明盒材質、食材顆粒、切面、濕潤感、新鮮感與自然光感，使其看起來像真正可以擺放在精品便利商店貨架上的商品。構圖需保持主體包裝清晰，四周有充足留白，整體乾淨、精緻、有呼吸感，不做擁擠的食物拼盤。\n\n配色從上方照片中提取最有辨識度、最鮮活的顏色，再轉換為自然食材色彩。顏色應明亮、清爽、誘人且有生活感，例如：綠色可轉化為蔬菜與香草，黃色轉化為雞蛋、玉米或水果，暖紅色轉化為番茄、魚卵或醬汁，冷色則可透過果凍、包裝、餐盒底紙或其他合理的食材關係來表現。避免灰暗、油膩、髒色，以及廉價食品廣告感。\n\n包裝可加入少量商品標籤系統，可根據原圖主題自由生成品名、短句、價格、重量、條碼、保存資訊或微型說明，不限制語言，也不要求固定欄位。標籤應像真實的日系便利商店或精品食品包裝，層級清楚、尺寸克制，並與透明盒和食材構圖自然結合。\n\n整體呈現\n\nJapanese konbini deli packaging aesthetic / packaged-food reinterpretation / semantic food substitution / containerized composition / retail product visualization\n\n的視覺語言。\n\n核心原則是：不是把照片畫成食物，而是保留原畫面的視覺靈魂，用食材、容器和商品包裝重新導演一次。\n\n【保持不变】上方保留原图身份与主要结构；下方保留最能辨认原图的轮廓和层级，允许把材质及颜色映射为合理食材，并按餐盒分区调整位置。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-konbini-bento/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转日式便当包装 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/Dd3Y-UuCdgz",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/Dd3Y-UuCdgz",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd3Y_Ngibq_",
+      "act": "照片转日式便当包装",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "8d4bbdf3c94e8b9ee6a40cf6655a4194f595e1e473e551d772c30e52df56501f",
+      "snapshot": "threads-emerson-konbini-bento.txt"
+    },
+    "curation": {
+      "input": "一张标志、人物、物件或场景图片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方透明餐盒内的食材重构与包装视觉",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "便当化",
+      "标志变便当",
+      "日式便当",
+      "便利店包装",
+      "bento-fication",
+      "food substitution",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转日式便当包装。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张标志、人物、物件或场景图片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方透明餐盒内的食材重构与包装视觉"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "示例采用公司标志，原文也适用于人物或场景；生成的价格、重量和保存说明属于画面设计，实际商品信息须另行填写。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/1.jpg",
+          "cap": "作者示例 1 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/2.jpg",
+          "cap": "作者示例 2 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/3.jpg",
+          "cap": "作者示例 3 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/4.jpg",
+          "cap": "作者示例 4 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/5.jpg",
+          "cap": "作者示例 5 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-konbini-bento/6.jpg",
+          "cap": "作者示例 6 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-mixed-media-paper": {
+    "id": "threads-emerson-mixed-media-paper",
+    "name": "照片转纸张混合拼贴",
+    "latin": "Mixed Media Paper Collage",
+    "tagline": "撕纸、印刷碎片与松弛手绘线条重组一段日常",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "亲和",
+      "极简"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 116
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nTurn each uploaded photograph into its own independent high-end design poster, and do not combine photographs; output each separately. Use a 3:4 vertical composition with two regions of exactly equal height, each occupying 50% of the canvas. Keep the original photograph in the upper half, preserving the subject’s identity, structure, pose, real textures, natural light and shadow, and original colour atmosphere, applying only subtle refined grading for the feeling of an art magazine or exhibition image. Naturally extend the environmental background if needed to fit, but never stretch, distort or change the subject. In the lower half, extract only the photograph’s most recognisable subject, contours, structure, pose and narrative relationships, reconstructing them as mixed-media collage on paper. Do not copy objects one by one, retain every object or reproduce the original scene. Actively remove most irrelevant background and detail, retaining only the structure, directional flow and visual memory points that best represent the original, then reinterpret them through paper collage, hand-drawn linework, a few colour blocks, printed-text fragments and whitespace, so the connection to the upper photograph is immediately recognisable. Make new artistic judgments in the lower half: even if the original composition is poor, the background messy or the subject small, rescue it as a convincing work through subtraction, rearrangement, cropping, scale changes and whitespace, genuinely giving the model authority to redirect the composition. The subject need not be complete or centred; it may sit off-centre, touch an edge, float or be partially cropped. Maintain a small-subject and large-whitespace relationship, compressing the subject into a relatively small yet clear visual focus while leaving much of the remaining space open. Whitespace must be deliberate compositional language, not empty background; together with the subject, pasted paper, lines, text fragments and a few colour blocks, it should create breathing room, spatial depth, pauses and refined layout order. Prefer less to filling the frame. Use collage, mixed materials and hand-drawn lines. Torn and pasted book pages, newspaper, printed text or paper pieces may combine with pencil, graphite, charcoal, ink lines, light colour or thin watercolour. Lines may be loose, broken, repeated, doodle-like and visibly handmade. Rather than academic precision, emphasise observation, rhythm and a naive aesthetic. Collage is not decoration; it helps construct both form and composition together with lines and colour blocks. Extract 2 to 4 of the most identifiable colours that best express the subject’s character from the upper photograph, moderately brighten and purify them, reduce muddiness, then use them with restraint. Colour may appear as thin washes, local blocks or coloured collage paper. Keep the overall impression fresh, natural and connected to everyday life; avoid dark muddiness, dullness, cheap nostalgia and excessive saturation. Let text intervene only minimally as an editorial element, with no restriction on language. A few titles, short phrases, numbers, printed-text fragments or annotations may fit naturally into the composition, forming a refined relationship with subject and whitespace rather than a menu-like stack of headings. The final high-end effect should combine selective extraction, mixed-media paper collage, hand-drawn linework, fragmented construction, exceptional artistic whitespace and editorial typography. Avoid object-by-object redrawing, too much retained background, information pile-up, filling the frame, smooth vectors, a 3D appearance, commercial templates, cheap scrapbook styling and childish cartoons.\n\n【保持不变】上方保留原照身份与姿态；下方保留关键结构与叙事关系，允许删减、裁切和重排，以纸片、线条和2至4种提炼色组成单一焦点。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-mixed-media-paper/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转纸张混合拼贴 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/Dd278yLibQv",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/Dd278yLibQv",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd279s5CdO_",
+      "act": "照片转纸张混合拼贴",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "f3df28127c245211d4037d6d347270f7ed6c9aebf2e12936d6c5c1045dc831b0",
+      "snapshot": "threads-emerson-mixed-media-paper.txt"
+    },
+    "curation": {
+      "input": "一张人物、街景、器物或旅行照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方纸张拼贴与手绘混合媒材插画",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "混合媒材",
+      "纸张拼贴",
+      "手绘拼贴",
+      "报纸拼贴",
+      "mixed media",
+      "paper collage",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转纸张混合拼贴。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物、街景、器物或旅行照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方纸张拼贴与手绘混合媒材插画"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/1.jpg",
+          "cap": "作者示例 1 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/2.jpg",
+          "cap": "作者示例 2 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/3.jpg",
+          "cap": "作者示例 3 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/4.jpg",
+          "cap": "作者示例 4 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/5.jpg",
+          "cap": "作者示例 5 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/6.jpg",
+          "cap": "作者示例 6 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/7.jpg",
+          "cap": "作者示例 7 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/8.jpg",
+          "cap": "作者示例 8 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/9.jpg",
+          "cap": "作者示例 9 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-mixed-media-paper/10.jpg",
+          "cap": "作者示例 10 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-white-concept-model": {
+    "id": "threads-emerson-white-concept-model",
+    "name": "照片转白色概念模型",
+    "latin": "White Conceptual Form Study",
+    "tagline": "删去材质与杂色，用切割、叠合和留空研究主体形体",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "极简",
+      "秩序"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 117
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n請將我上傳的每一張照片分別製作成一張獨立的高級設計海報，不進行多圖拼接，每張照片皆需單獨輸出。整體採用 3:4 直式構圖，上下兩個區域的高度必須嚴格維持 1:1，各佔畫面 50%。上半部分保留原始照片，維持主體身分、結構、姿態、真實質感、自然光影與原有色彩氛圍，僅進行輕微且高級的調色，使其具有藝術雜誌、獨立出版物與展覽影像的質感。為了適應畫幅，可以自然延伸環境背景，但不得拉伸、扭曲或改變主體。下半部分先理解原照片最值得被記住的主體身分、結構走勢、比例關係、空間特徵與視覺隱喻，刪除無關細節，只保留最核心的形體關係，重構為一件小尺度概念模型／雕塑式形體研究。不要逐物複製照片，而是透過體塊歸納、切割、疊合、懸挑、凹凸與虛實關係重新解釋原始主題，使其更加純粹、凝練，同時仍能一眼辨識與上方照片之間的對應關係。構圖採用小主體＋極大負空間的極簡圖版邏輯。模型僅佔畫面較小比例，依據主體自身的方向、比例與視覺重心自由安排，可置中、偏心、貼邊、懸置或局部裁切。其餘區域大膽留空，讓負空間本身參與構圖，透過尺度反差、正負形、不對稱平衡與視覺距離強化主體的雕塑感、孤立感與研究性。寧可進一步縮小主體，也不要填滿版面。主體以高明度白模／近單色概念模型呈現，可依照片類型轉化為建築體量、人物剪影、動物形體、植物結構、器物模型、交通工具或自然地貌的概念化雕塑。人物與環境細節只保留必要的尺度線索，不追求寫實材質與複雜表面，讓閱讀重點落在輪廓、體量、空間切割與形體秩序上。配色以白、暖白、淺灰白、米白與深黑構成近單色體系，以明度關係而非豐富色相建立畫面。主體保持純淨高明度，背景可依原圖氣質選擇大面積純黑、深炭灰或極淺近白色負空間，形成強烈而克制的視覺隔離。僅當原照片存在具有關鍵意義的標誌性色彩時，允許保留一處極小、低權重的原圖色作為尺度或生命感點綴。光影克制但準確，透過柔和明暗、凹凸關係與局部陰影表現模型的切面、層次與空間深度，不追求戲劇化照明。整體更接近建築作品集中的 Massing Study／Spatial Composition／Conceptual Form Study，而不是寫實 3D 展示或商品模型渲染。文字只作極少量編輯性介入，不限制語種，也不預設固定標題。可從主體、空間、狀態或概念中自由提煉少量字詞或短句，以小字號、細字重與寬鬆字距置於大面積負空間中，與模型形成精確的尺度與位置關係，如同作品集章節頁或藝術研究圖版中的安靜註記。整體呈現小尺度概念模型、巨大負空間、近單色明度關係、雕塑式體量與極簡編輯排版共同構成的高級視覺效果。避免場景填滿、逐物復刻、複雜裝飾、豐富多色、卡通感、遊戲 3D 感、塑膠質感、商業模型展示與模板化排版。\n\n【保持不变】上方保留原照；下方保持最有辨识度的轮廓、比例和空间关系，允许切割、叠合及抽象，主要改为白色模型，仅必要时保留极小原色点缀。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-white-concept-model/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转白色概念模型 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/Dd0PjCECbYR",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/Dd0PjCECbYR",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/Dd0Pj5HiTbG",
+      "act": "照片转白色概念模型",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "94f28423d2ff3108812697173dc90c93ec251829c7ac031afe0b279f505e2363",
+      "snapshot": "threads-emerson-white-concept-model.txt"
+    },
+    "curation": {
+      "input": "一张人物、建筑、物件或自然景观照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方近单色白模与雕塑式形体研究",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "白色模型",
+      "概念模型",
+      "雕塑形体",
+      "建筑体量",
+      "massing study",
+      "conceptual form",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转白色概念模型。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物、建筑、物件或自然景观照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方近单色白模与雕塑式形体研究"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/1.jpg",
+          "cap": "作者示例 1 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/2.jpg",
+          "cap": "作者示例 2 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/3.jpg",
+          "cap": "作者示例 3 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/4.jpg",
+          "cap": "作者示例 4 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/5.jpg",
+          "cap": "作者示例 5 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/6.jpg",
+          "cap": "作者示例 6 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/7.jpg",
+          "cap": "作者示例 7 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/8.jpg",
+          "cap": "作者示例 8 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/9.jpg",
+          "cap": "作者示例 9 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/10.jpg",
+          "cap": "作者示例 10 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/11.jpg",
+          "cap": "作者示例 11 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-white-concept-model/12.jpg",
+          "cap": "作者示例 12 / 12",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-perler-bead": {
+    "id": "threads-emerson-perler-bead",
+    "name": "照片转拼豆色彩研究",
+    "latin": "Perler Bead Color Study",
+    "tagline": "真实圆孔拼豆、主题色卡与中文短标题组成左右对照",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "秩序",
+      "亲和"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 118
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n使用單一上傳圖像作為唯一視覺來源，建立一張完整的「左右前後對照」設計圖。最終畫面只能由左右兩個等寬面板水平排列組成，左半部與右半部寬度必須嚴格維持 1:1，各佔最終畫面總寬度的 50%，不得上下分割、上下堆疊或增加第三區域。左側 50% 必須完整保留使用者上傳的原始照片，作為不可修改的來源影像，不得重新生成、重繪、修飾、美化、濾鏡化、重新著色、銳化、模糊、移除、增加、替換或遮蓋任何人物、物件、背景與文字，不得改變人物身份、臉部、表情、姿態、比例、服裝、物件造型、場景結構、光線、色彩或背景內容，也不得拉伸或壓縮原圖；若原始照片比例與左側面板不同，優先完整保留原始照片內容，可使用等比例縮放與自然留白方式置入，不得裁掉重要主體，也不得使用 AI 延伸、生成或補畫原圖內容。右側 50% 將同一張照片重新設計為 Fuse Bead / Perler Bead 拼豆藝術極簡編輯海報，但不是單純套用 Pixel Art、像素濾鏡或馬賽克；先分析原始照片中最重要的核心主體、輪廓、比例、姿態、視角、方向、主要結構、空間關係、情緒、時間感、代表性色彩與最具辨識度的視覺記憶點，再將最重要的主體重新建構為真實手工 Fuse Bead / Perler Bead 拼豆作品。嚴格保留原始主體最具辨識度的輪廓、比例、姿態、視角、方向、主要結構、標誌性特徵與核心配色，僅將過度細碎、無法以拼豆合理呈現的小細節適度像素化與幾何化簡化，不得任意改變姿勢、方向、比例或重新設計成另一個角色；若原圖包含人物，優先保留人物姿態、髮型、服裝色塊、身體比例與辨識特徵，不得變成普通卡通人物；若包含物件、建築、動物或食物，保留最具代表性的外輪廓與結構特徵，使轉換後仍能一眼辨識原始主體。拼豆主體必須真正由數百顆大小一致、規則排列的圓柱形塑膠拼豆逐顆構成，每顆拼豆清楚呈現中央圓孔、短圓柱結構、一致尺寸、規律網格排列與顆粒之間極細微的實體間隙；表面使用細膩、低反光、微霧面的塑膠材質，不要玻璃感、金屬感、陶瓷感或過度透明；使用有限且經整理的配色，以不同顏色拼豆建立明暗、輪廓、結構與層次，必要時可沿主體外輪廓加入一圈米白色、暖白色或非常淺色拼豆作為乾淨描邊，但不可過粗或破壞原始輪廓。右側背景統一使用乾淨、溫暖、低飽和的奶油白或象牙白霧面表面，不保留原照片場景，不要木紋、紙纖維、布料、牆面裂紋、石材、桌面紋理或粗糙顆粒，只保留均勻、細緻、精品產品攝影等級的啞光質感與大量留白。右側畫面應像真正完成拼豆作品後在攝影棚進行高級靜物攝影，使用柔和自然光從左上方照射，使拼豆表面產生細緻克制的塑膠反光，作品與背景之間形成輕微、柔軟、自然的懸浮陰影，呈現真實厚度與物理存在感，不要戲劇性硬陰影、強烈聚光燈或過度 3D 渲染。分析原始照片與最終拼豆主體，自動提取實際使用且最具代表性的 3–5 個顏色作為主題色卡，包括主色、次要色、深色陰影、淺色高光或具有辨識度的局部強調色，依實際配色自動決定 3、4 或 5 色，不為湊數新增無意義顏色；色卡放在拼豆主體下方、文字標題上方，所有色塊水平置中、尺寸一致、間距規律、比例小巧，使用純色平面色塊，不要漸層、立體、描邊、陰影或特殊效果，整體寬度明顯小於拼豆主體。根據原始照片內容，自動生成一個非常簡潔、自然、有意境但不過度文青的中文主標題與一句極短中文副標題；主標題 2–6 個中文字，副標題 6–14 個中文字，內容呼應照片主題、情境或記憶感，不解釋拼豆製作方式，也不使用廣告口號；主標題使用現代高對比宋體／明朝體風格，細字重、纖細銳利襯線、字形舒展、略增字距並水平置中；副標題明顯更小、更細且字距更寬，整體呈現高級中文雜誌、獨立出版物、精品品牌視覺檔案與藝術展覽型錄的編輯感，避免粗黑體、卡通字、手寫字、書法字、霓虹字、立體字或複雜文字效果。右側版式固定為：上方大面積留白 → 拼豆主體 → 3–5 個主題色塊 → 中文主標題 → 極短中文副標題 → 底部大面積留白；拼豆主體位於右側中央偏上，是唯一主要視覺焦點，約佔右側面板高度 35%–50%，依主體本身比例自動調整，完整呈現、不拉伸、不壓縮、不裁切；色卡、主標題、副標題全部沿右側面板中央軸線對齊，所有元素保留充分呼吸空間，不靠近中央分界或外側邊緣，也不得突破中線或延伸到左側。左右兩側必須在畫面中央垂直方向直接銜接，不加入間隙、邊框、分隔線、陰影、標籤、Before / After 文字、箭頭、Logo、浮水印或其他裝飾，使觀看者第一眼即可理解「原始照片 → 拼豆藝術轉譯」的直接比較。整體風格：Fuse Bead Craft × Perler Bead × Pixel Art × Color Palette × Minimal Editorial Poster × Premium Product Photography；整體氣質克制、安靜、精緻、乾淨、低飽和、具有設計收藏感，像獨立設計雜誌中的色彩研究頁、精品品牌視覺檔案或藝術出版物，而不是兒童手作教材。嚴格避免：上下對照、兩張獨立圖片、修改左側原圖、普通 Pixel Art、直接像素濾鏡、馬賽克、LEGO、玻璃珠、串珠首飾、十字繡、刺繡、針織、毛氈、紙雕、大量複雜背景、右側保留原照片背景、巨大色塊、彩虹配色、任意新增主體不存在的顏色、漸層色卡、過度 3D、卡通化、可愛 Q 版、改變人物身份、改變主體姿態、粗黑字、卡通字體、書法字體、複雜文字特效、額外 Logo、浮水印、邊框、箭頭、Before / After 標籤或其他裝飾。\n\n【保持不变】左侧原照只允许等比缩放和自然留白，不重绘或扩图；右侧保留主体姿态、方向、比例、轮廓和核心配色，只将细节简化成规则圆孔拼豆。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-perler-bead/1.jpg",
+      "w": 1586,
+      "h": 992,
+      "title": "照片转拼豆色彩研究 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/DdvY-3sCZL3",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/DdvY-3sCZL3",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdvY_myCdNA",
+      "act": "照片转拼豆色彩研究",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "71fec6dbd1b3f5876c02d4ff81bfbb5eca186b48113e9630b17ad1c745aa89d0",
+      "snapshot": "threads-emerson-perler-bead.txt"
+    },
+    "curation": {
+      "input": "一张主体清晰的照片",
+      "output": "一张左右等宽对照图：左侧原照，右侧拼豆作品、3至5色卡与中文标题",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "拼豆",
+      "熔珠",
+      "色卡",
+      "左右对照",
+      "Perler Bead",
+      "Fuse Bead",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转拼豆色彩研究。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张主体清晰的照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "检查左右等宽布局：左侧原照、右侧拼豆和色卡；原照不应被改绘，示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张左右等宽对照图：左侧原照，右侧拼豆作品、3至5色卡与中文标题"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "作者原文要求左右对照，未规定整张图的固定宽高比；左侧只做等比缩放与留白。生成模型未必能像素级保留原照，需要精确对照时可在生成后使用原图拼版。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/1.jpg",
+          "cap": "作者示例 1 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/2.jpg",
+          "cap": "作者示例 2 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/3.jpg",
+          "cap": "作者示例 3 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/4.jpg",
+          "cap": "作者示例 4 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/5.jpg",
+          "cap": "作者示例 5 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/6.jpg",
+          "cap": "作者示例 6 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/7.jpg",
+          "cap": "作者示例 7 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/8.jpg",
+          "cap": "作者示例 8 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/9.jpg",
+          "cap": "作者示例 9 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/10.jpg",
+          "cap": "作者示例 10 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-perler-bead/11.jpg",
+          "cap": "作者示例 11 / 11",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-soft-light-memory": {
+    "id": "threads-emerson-soft-light-memory",
+    "name": "照片转柔焦光影记忆",
+    "latin": "Soft Light Memory Poster",
+    "tagline": "用透光色块、朦胧剪影和局部残影留下记忆的轮廓",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "治愈",
+      "清冷"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 119
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n請將我上傳的每一張照片分別製作成一張獨立的高級設計海報，不做多圖拼接，每張照片單獨輸出。整體採用 3:4 直式構圖，上下兩個區域高度嚴格 1:1，各佔畫面 50%。上半部分保留原始照片，保持主體身份、結構、姿態、真實質感、自然光影與原有色彩氛圍，只進行輕微高級調色，使其具有藝術雜誌、獨立出版物與展覽影像質感。為適配畫幅，可自然延伸環境背景，但不得拉伸、扭曲或改變主體。下半部分提取照片中最具識別性的主體、輪廓、姿態與敘事關係，不再完整描繪原物，而是將其轉譯成一個小尺度的抽象光影圖形。只保留最有記憶價值的輪廓、方向、動作或空間關係，透過柔焦投影、模糊剪影、透光色塊與局部殘影重新表達，使人仍能感受到它與上方照片的對應關係，但更像一段被光留下的記憶，而不是對物件本身的轉繪。構圖強調極小主體與極大留白，視覺焦點只佔畫面較小比例，可偏心、貼邊、懸置或局部裁切，並依主體走勢決定位置，其餘空間主動維持低資訊與安靜感，讓負空間成為真正的構圖元素。透過大小反差、遠近關係、模糊邊緣與不對稱平衡建立空氣感、距離感與詩意，使畫面呈現「弱主體、強氛圍」的高級編輯秩序，而不是把下半部分填滿。光影形態需保持朦朧、輕柔與不完全確定，可使用 soft diffusion、bloom、halation、blurred edge transition 形成不同程度的虛實層次。部分輪廓可相對清楚，部分區域逐漸散失、漂白或融入背景，讓主體像透過磨砂玻璃、薄霧、窗簾或強光留下的投影。避免所有區域平均模糊，也避免清晰寫實描邊。配色需從上方照片中提取最具情緒價值的 2–4 種色彩關係重新調製，不機械複製色值，整體提高明度、降低刺激感並保留輕微粉霧質感，以一個大面積柔和综合色作為空氣底色，再讓另一組冷色或暖色像光一樣輕輕滲入。可形成粉霧藍與奶油暖白、淺青綠與杏黃、柔粉與淡紫、淺沙色與霧藍等由原圖自然推導的冷暖關係；顏色需像被陽光漂洗過一樣通透、柔軟、安靜。避免固定藍調、灰髒、暗褐、強撞色、螢光色和廉價漸變感。文字僅作極少量編輯性介入，不限制語種，也不預設固定標題或編號。可從照片的主體、地點、動作、情緒、記憶或隱喻中自由提煉少量字詞或短句，使用小型、纖細、疏字距、近乎註解性的現代編輯字體，安靜地落在大面積留白、光影邊緣或視覺軸線上，與圖形形成克制而精緻的圖文關係，不壓過主體。整體呈現小尺度光影焦點、大面積負空間、柔焦暈光、粉霧冷暖關係與極簡編輯排版共同構成的高級視覺效果，像藝術雜誌、文化品牌或展覽視覺中的情緒化極簡海報。無論主體是人物、建築、動物、植物、器物、交通工具或自然景觀，都應保留其最核心的視覺靈魂，而不是完整復刻。避免寫實插畫、背景填滿、複雜細節、硬邊漸變、商業宣傳感、模板化海報感與廉價濾鏡。\n\n【保持不变】上方保留原照身份与结构；下方保留可辨识的关键方向、动作和空间关系，允许局部模糊、散失及裁切，颜色由原图提炼而不固定为蓝调。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-soft-light-memory/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转柔焦光影记忆 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/DdtOzuVifjP",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/DdtOzuVifjP",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdtO0mJCZb6",
+      "act": "照片转柔焦光影记忆",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "e44a1089c08a8499596b71faad432860c80c060b8b2ecc63d2ac6cd8850c69d1",
+      "snapshot": "threads-emerson-soft-light-memory.txt"
+    },
+    "curation": {
+      "input": "一张人物、城市、景物或日常照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方小幅柔焦光影图形与大面积留白",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "柔焦",
+      "光晕",
+      "朦胧剪影",
+      "光影记忆",
+      "soft diffusion",
+      "halation",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转柔焦光影记忆。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物、城市、景物或日常照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方小幅柔焦光影图形与大面积留白"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/1.jpg",
+          "cap": "作者示例 1 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/2.jpg",
+          "cap": "作者示例 2 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/3.jpg",
+          "cap": "作者示例 3 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/4.jpg",
+          "cap": "作者示例 4 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/5.jpg",
+          "cap": "作者示例 5 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/6.jpg",
+          "cap": "作者示例 6 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/7.jpg",
+          "cap": "作者示例 7 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/8.jpg",
+          "cap": "作者示例 8 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-soft-light-memory/9.jpg",
+          "cap": "作者示例 9 / 9",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-two-ink-risograph": {
+    "id": "threads-emerson-two-ink-risograph",
+    "name": "照片转双专色孔版印刷",
+    "latin": "Two Ink Risograph Poster",
+    "tagline": "线面分离、轻微错版与纸张吸墨，形成手工印刷感",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "复古",
+      "极简"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 120
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n請將我上傳的每一張照片分別製作成一張獨立的高級設計海報，不要拼接照片，每張照片單獨輸出。整體使用 3:4 直式構圖，上下兩個區域高度必須完全相等，各佔畫面 50%。上半部保留原始照片，維持主體身份、結構、姿態、真實質感、自然光影與原有色彩氛圍，只做細膩克制的高級調色，使其帶有藝術雜誌、獨立出版物或展覽影像的質感；如需適應畫幅，可自然延伸環境背景，但不可拉伸、扭曲或改變主體。下半部只提取照片中最具辨識度的主體、輪廓、結構、姿態與敘事關係，重構為雙專色、帶有錯位套印感的手繪插畫／Risograph 風社論插畫；不要重畫整張照片，也不要把每個物件都描出來，而要主動刪除大部分背景與次要資訊，只保留最能代表原圖的結構走勢與視覺記憶點，並用局部平塗、開放式輪廓、負空間與少量線條重新詮釋，使觀者能一眼看出它與上半部照片的關聯。下半部請獨立進行美術指導與構圖決策，即使原圖構圖普通、背景雜亂或主體太小，也不要照抄原構圖，而要透過刪減、重排、裁切、縮放、位置調整與留白建立全新構圖；主體可以偏心、碰邊、漂浮或局部被裁切，不必完整出現，只保留一個清楚的視覺焦點，優先大膽刪除，而不是為了解釋原場景而把版面填滿。維持小而像郵票般的主體，置於極大量留白之中；留白不是空背景，而是與主體同等重要的構圖元素，請運用正負形、疏密、方向性與非對稱平衡，創造呼吸感、距離感與空間張力，讓主體與少量其他元素彼此讓出空間，使整個下半部安靜、開闊且有餘韻。使用嚴格的雙專色系統：其中一色負責色面、量體與局部陰影，另一色負責輪廓、結構與視覺強調；請從上半部照片中挑選並重組最有表現力的兩種色彩關係，而不是機械地按物件真實顏色上色。色塊可以不完整，輪廓與色面可以彼此脫開；保留輕微套印偏移、油墨濃淡不均、破墨、顆粒、紙張吸墨與纖維質感，營造真實的紙本 Risograph／絲網印刷效果。文字只作為極少量的編輯元素介入，語言不限，可從主體、地點、動作、情緒或隱喻中自由提煉少量詞語或短句，安靜地放在大片留白中，形成細緻的圖文節奏，不需要固定標題模板，也不要堆砌資訊。整體高級感來自選擇性提取、雙專色、線面分離、錯位套印、小主體、大留白與編輯式字體介入。核心原則：不要再畫一次照片，而是先理解它、刪掉大部分內容，再把它導向成更有說服力的作品。\n\n【保持不变】上方保留原照身份与姿态；下方保留结构走向及辨识特征，允许独立重排与裁切；从原图选取两种色彩分担色面和轮廓，不按所有物件原色上色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-two-ink-risograph/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转双专色孔版印刷 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/DdlhHsyiR9K",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/DdlhHsyiR9K",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdlhIm2Cb4G",
+      "act": "照片转双专色孔版印刷",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "4eb16c3d4c279cfc6aa05e151a6114a33b673cdf8f00a524e51848f96c809b1b",
+      "snapshot": "threads-emerson-two-ink-risograph.txt"
+    },
+    "curation": {
+      "input": "一张人物、街景、建筑、宠物或静物照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方双专色Risograph风手绘插画",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "孔版印刷",
+      "双色版画",
+      "错位套印",
+      "独立杂志",
+      "Risograph",
+      "screen print",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转双专色孔版印刷。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物、街景、建筑、宠物或静物照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方双专色Risograph风手绘插画"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/1.jpg",
+          "cap": "作者示例 1 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/2.jpg",
+          "cap": "作者示例 2 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/3.jpg",
+          "cap": "作者示例 3 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/4.jpg",
+          "cap": "作者示例 4 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/5.jpg",
+          "cap": "作者示例 5 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/6.jpg",
+          "cap": "作者示例 6 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/7.jpg",
+          "cap": "作者示例 7 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/8.jpg",
+          "cap": "作者示例 8 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/9.jpg",
+          "cap": "作者示例 9 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-two-ink-risograph/10.jpg",
+          "cap": "作者示例 10 / 10",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-travel-keepsake-ticket": {
+    "id": "threads-emerson-travel-keepsake-ticket",
+    "name": "旅行照转复古纪念票券",
+    "latin": "Vintage Travel Keepsake Ticket",
+    "tagline": "地标小插画、纸张纹理与护照印章，排成复古旅行票券",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "复古",
+      "治愈"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 121
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n使用單一上傳圖像作為唯一視覺來源，創建一張完整的垂直前後對比設計圖，由上下兩個等高面板垂直堆疊組成，上下必須嚴格各佔最終畫面的 50%。上方面板必須完整保留上傳的原始圖像，盡可能維持像素忠實，不得重繪、修飾、重新著色、銳化、模糊、移除、添加、遮蓋、改變人物、改變物件或扭曲內容；不得為了適應版面而裁掉原圖的重要內容。僅生成下方面板。上下兩個面板必須在畫面精確中點直接銜接，不加入間隙、邊框、分隔線、標籤、陰影、重疊或額外裝飾；最終觀看時必須能清楚形成「上方原始照片／下方設計轉譯」的直接前後對照。下方面板請先理解原始照片所呈現的國家、城市、地點、文化背景、代表性活動、人物服飾、建築、自然景觀與最具辨識度的視覺記憶點，再將這些資訊重新設計成一張可收藏的「極簡復古護照 × 登機證 × 旅行紀念票券」。不要把原始照片完整重畫，也不要逐物複製照片；只提取最具有代表性的主體、地標、文化符號或場景記憶點，濃縮成一個微小、精緻、具有手繪感的標誌性插圖，作為下方面板的主要視覺焦點。整體採用溫暖象牙白、奶油色或自然舊紙色作為紙張基底，加入細微紙張纖維、輕微印刷顆粒、略微褪色的油墨與柔和歲月感；色彩優先從原始照片提取並重新降低飽和度，轉化為安靜、柔和、復古的粉彩色調。版面使用細薄復古票券邊框、精緻的小型襯線字、打字機字體、郵戳字體與大量乾淨留白，保持平面、正視、整齊、平衡、優雅且具有高級編輯設計感，避免雜亂、拼貼感、過度裝飾、3D效果與寫實照片風格。根據原始照片內容，自動判斷並加入適合的國家名稱、著名城市或拍攝地點、國家代碼、迷你國旗、當地代表花卉、文化符號、代表性地標或活動元素；可加入 DESTINATION、CITY、GATE 01、SEAT A12、CLASS EXPLORER、DATE 2026 等微型登機證資訊，以及國家名稱、PASSPORT、目的地代碼與年份等復古護照印章元素。護照印章可融合該地最具代表性的建築、山景、文化圖騰或旅行符號，但保持簡潔、小巧、略微磨損的蓋章質感。下方面板的核心不是製作真實可使用的登機證或護照，而是創作一件受到護照、登機證與旅行紀念票券啟發的收藏型旅行平面設計。整體視覺必須呈現「微小、優雅、懷舊、俏皮、安靜、高級、值得收藏」的感覺，像是一趟旅程結束後留下來的紙本旅行紀念品，同時讓觀者可以一眼看出下方設計是由上方原始照片的地點、文化與故事轉譯而來。\n\n【保持不变】上方完整保留原图，仅下方重新设计；下方保留地标及文化视觉线索，地点与日期由用户确认，不把模型推测当成真实记录。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "旅行照转复古纪念票券 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/DdbUOANienr",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/DdbUOANienr",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdbUOtXCTO8",
+      "act": "旅行照转复古纪念票券",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "c9ca29cf0703b3401f6ee05c1e26913cbb64c18416c8742857cef6b783cbeeb8",
+      "snapshot": "threads-emerson-travel-keepsake-ticket.txt"
+    },
+    "curation": {
+      "input": "一张旅行照片；补充真实地点和希望标注的日期",
+      "output": "一张上下等高对照图：上方原照，下方复古旅行纪念票券",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "旅行纪念票",
+      "登机牌风格",
+      "护照印章",
+      "旅行手账",
+      "travel keepsake",
+      "boarding pass",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：旅行照转复古纪念票券。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张旅行照片；补充真实地点和希望标注的日期"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张上下等高对照图：上方原照，下方复古旅行纪念票券"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "原文未指定整张图的固定宽高比。地点、日期和国家信息请自行确认；这是旅行纪念设计，不是可使用的证件或登机凭证。生成模型未必能像素级保留上方原照。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/1.jpg",
+          "cap": "作者示例 1 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/2.jpg",
+          "cap": "作者示例 2 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/3.jpg",
+          "cap": "作者示例 3 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/4.jpg",
+          "cap": "作者示例 4 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/5.jpg",
+          "cap": "作者示例 5 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/6.jpg",
+          "cap": "作者示例 6 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/7.jpg",
+          "cap": "作者示例 7 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-travel-keepsake-ticket/8.jpg",
+          "cap": "作者示例 8 / 8",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-emerson-break-frame-color-field": {
+    "id": "threads-emerson-break-frame-color-field",
+    "name": "照片转越界色场海报",
+    "latin": "Break the Frame Color Field",
+    "tagline": "手刷色场承载小幅插画，让少量轮廓越出纸上边界",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "极简",
+      "亲和"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "Emerson (@emersonigpost)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-05 确认拥有 @emersonigpost 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-05",
+    "updated": "2026-10-05",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 122
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n請將我上傳的每一張照片分別製作成一張獨立的高級設計海報，每張照片單獨輸出，不要進行多圖拼接。整體採用 3:4 直式構圖，上下兩個區域高度嚴格維持 1:1，各占畫面 50%。上半部分保留原始照片，維持主體身份、結構、姿態、真實質感、自然光影與原有色彩氛圍，只進行輕微且高級的調色，使畫面具有藝術雜誌與展覽影像的質感。為適應畫幅，可以自然延伸環境背景，但不得拉伸、扭曲或改變主體。下半部分只提取照片中最具識別性的主體、輪廓、結構、姿態與敘事關係，重新進行美術判斷。不要複製原場景，不要保留所有物件，不要逐一轉繪原圖內容；主動刪除絕大多數背景與無關細節，只保留最能代表原物的結構、走勢與視覺記憶點，並透過理解、概括與重組，使人一眼就能辨識它與上方照片的對應關係。真正賦予模型重新導演畫面的權力，即使原圖構圖不佳、背景雜亂或主體很小，也要透過刪減、重組、裁切、尺度變化與留白，把它重新整理成一張成立的作品。下半部分採用框景式色場邏輯，在大面積紙張留白中建立一個不規則矩形的手工色場承載區，如同白紙上的第二塊畫布。色場不可滿版鋪底，四周必須保留大量白邊，邊緣帶有輕微刷水痕、暈染、斷邊與不規則刷痕。主體大部分組織在色場之中，同時允許少量關鍵輪廓、枝葉、線條、碎點或局部元素自然越出色場邊界，形成 break the frame 的越界構圖。構圖維持小尺度主體與超大量留白的關係，依照主體自身方向、比例與視覺重心自由安排位置，可以偏心、貼邊、懸置或局部裁切。留白不是空背景，而是畫面本身的重要組成部分，要與主體、色場及少量輔助元素共同形成呼吸感、空間感與停頓感。寧可更少，也不要填滿；遠看先讀到留白、色場與圖形之間的關係，近看再辨識主體身份。風格採用概括性的手繪重構，以簡潔色塊、少量描線、輕微刻畫與適度抽象化重新表達主題，不追求寫實轉繪。配色從上方照片中提取 2 至 4 種最有生命力、最具記憶點的顏色重新調製，適度提亮、提純、去灰，使色場與主體形成統一、鮮活、明快但克制的色彩系統；背景紙面維持米白、暖白或淺紙色。文字只做極少量的編輯性介入，不限制語言，可根據主體、地點、動作、情緒或隱喻，自由生成少量字詞或短句，安靜地放置在留白區域或色場邊緣，與圖形形成精緻的圖文關係。整體呈現由超大量藝術留白、框景式色場、越界構圖、概括性重構與編輯式排版共同構成的高級視覺效果。避免逐物複製、保留過多背景、畫面填滿、構圖僵硬、資訊堆積、邊緣過硬以及模板化處理。\n\n【保持不变】上方保留原照身份与自然光色；下方保留关键结构和叙事关系，可删减、裁切及重排，使少量轮廓自然越出色场，颜色从原图提炼2至4种。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-emerson-break-frame-color-field/1.jpg",
+      "w": 1086,
+      "h": 1448,
+      "title": "照片转越界色场海报 · 作者案例",
+      "creator": "Emerson (@emersonigpost)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--emersonigpost",
+      "sourceUrl": "https://www.threads.com/@emersonigpost/post/DdQDAsBCT0H",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @emersonigpost",
+      "url": "https://www.threads.com/@emersonigpost/post/DdQDAsBCT0H",
+      "promptUrl": "https://www.threads.com/@emersonigpost/post/DdQhaYoieDi",
+      "act": "照片转越界色场海报",
+      "contributor": "Emerson (@emersonigpost)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-05",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "3d584bd699443076b5771a27034f9234fec80643d3317119ea9c6d1fcd8130af",
+      "snapshot": "threads-emerson-break-frame-color-field.txt"
+    },
+    "curation": {
+      "input": "一张人物、静物、街景或风景照片",
+      "output": "一张3:4上下等高对照海报，上方原照，下方不规则手刷色场中的越界构图插画",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-05"
+    },
+    "keywords": [
+      "越界构图",
+      "手刷色场",
+      "框景",
+      "手绘海报",
+      "break the frame",
+      "color field",
+      "Emerson",
+      "emersonigpost",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：照片转越界色场海报。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物、静物、街景或风景照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张3:4上下等高对照海报，上方原照，下方不规则手刷色场中的越界构图插画"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/1.jpg",
+          "cap": "作者示例 1 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/2.jpg",
+          "cap": "作者示例 2 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/3.jpg",
+          "cap": "作者示例 3 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/4.jpg",
+          "cap": "作者示例 4 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/5.jpg",
+          "cap": "作者示例 5 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-emerson-break-frame-color-field/6.jpg",
+          "cap": "作者示例 6 / 6",
+          "credit": "Emerson (@emersonigpost)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
   "threads-inka-minimal-paper": {
     "id": "threads-inka-minimal-paper",
     "name": "照片转极简纸感插画",
@@ -1509,7 +4130,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 110
+      "seed": 123
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate one independent high-end editorial poster for each uploaded photo. Do not combine multiple photos into a collage. Each photo must be processed and output as a separate poster. OVERALL FORMAT Strict 3:4 vertical composition. Divide the canvas horizontally into two exactly equal sections, with a precise 1:1 height ratio. The top half occupies exactly 50% of the canvas. The bottom half occupies exactly 50% of the canvas. The two sections should feel visually connected as one refined art publication cover. TOP HALF — ORIGINAL PHOTOGRAPH Preserve the original photograph as faithfully as possible. Keep the main composition, subjects, identity, facial features, body proportions, poses, expressions, clothing, objects, and spatial relationships unchanged. Preserve the realistic photographic texture, natural lighting, shadows, atmosphere, and original color mood. Apply only subtle, sophisticated editorial color grading, creating the feeling of a premium magazine photograph, contemporary art book, or high-end independent publication. The image should remain photorealistic and authentic, never overly retouched or artificially stylized. If necessary to fit the 3:4 composition naturally, extend the sky, ground, walls, or surrounding environmental background. Background extension must feel seamless and photographic. Never stretch, distort, reshape, replace, or alter the main subject. BOTTOM HALF — MINIMAL HAND-DRAWN PAPER ILLUSTRATION Extract the most recognizable visual elements from the original photograph and reinterpret them as a minimalist hand-drawn paper-cover illustration. Preserve: The most recognizable subject Essential silhouette and proportions Key pose or gesture Important objects The core narrative relationship between people and objects Highly simplify the image. Remove unnecessary details and retain only the visual information needed for immediate recognition. Use: Delicate, slightly imperfect hand-drawn lines A small number of bold, clearly defined acrylic-style flat color shapes Rough paper texture Visible handmade brush marks Slightly irregular, organic edges Subtle imperfections that make it feel genuinely handmade The main illustrated subject should be small, centered, and carefully composed, occupying approximately 10–20% of the bottom half. Leave a large amount of negative space around the illustration. The background should primarily resemble: Rough white paper Warm off-white paper Pale natural paper Minimal editorial book-cover stock Use only a few lines or small color shapes to suggest the surrounding environment. COLOR PALETTE Extract the dominant colors directly from the original photograph. Compress the palette into no more than 4 main colors. Keep the colors restrained, sophisticated, and harmonious. Use bold but controlled flat color blocks. Avoid excessive color variation. Preserve subtle paper grain and handmade brush texture. The illustration should visually feel like a simplified color interpretation of the photograph. TYPOGRAPHY A small amount of simple typography may be included when appropriate. Possible elements: A short title Keyword Object name Location Year Number Short phrase Text should be minimal, understated, and editorial. Typography should naturally interact with the large areas of negative space and the small illustration, evoking: Art book covers Independent publishing Contemporary editorial design Thoughtful children's picture books Do not force text into the composition if it does not naturally fit the photograph. VISUAL LANGUAGE The final poster should feel: Quiet · Poetic · Refined · Minimal · Innocent · Relaxed · Artistic · Thoughtful · High-recognition · Premium The visual concept should be: “A small subject surrounded by a large amount of empty space.” The result should resemble a carefully designed independent art publication cover, rather than a commercial advertisement. AVOID Do not use: Colored-pencil aesthetics Crayon textures Bleeding watercolor Pure line-art illustration Complex realistic illustration Heavy oil-painting effects Smooth polished digital illustration 3D rendering Glossy 3D textures Commercial cartoon aesthetics Cute commercial character design E-commerce advertising aesthetics Generic poster templates Excessive decorative elements Busy compositions Excessive typography FINAL ART DIRECTION The top half should feel like a beautiful, authentic editorial photograph. The bottom half should feel like a small, handmade visual poem derived from that photograph. The two halves should clearly belong to the same visual story, while maintaining a strong contrast between photographic realism above and minimal handmade illustration below. Prioritize recognition, restraint, negative space, material texture, subtle imperfection, editorial sophistication, and artistic storytelling over decorative complexity.\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -1674,7 +4295,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 111
+      "seed": 124
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate one independent 3:4 vertical split-screen editorial poster based on the uploaded photo, divided horizontally into two exactly equal 50/50 sections. The top half must preserve the original photo’s subject identity, appearance, pose, perspective, composition, background, and authentic photographic texture, with only subtle lighting and color enhancement; do not redesign, reshape, replace, or stylize the main subject. The bottom half should reinterpret the same subject as a minimalist black-and-white hand-drawn illustration using rough crayon, charcoal, and dry-brush marks on warm off-white paper, focusing on the most recognizable facial expression, hairstyle or silhouette, gesture, and pose; slight exaggeration of the eyes, mouth, or head is allowed, but avoid realistic depiction. Use only black and off-white, with abundant negative space, rough strokes, broken lines, exposed paper, visible paper grain, and irregular edges. The illustration should be small, centered, and restrained, with only minimal environmental marks. Add subtle English editorial typography in the empty space: “No. 1–10” + a short 2–4 word title + one very short English line, kept small and understated without overlapping the subject. Overall style: old black-and-white children’s picture book × independent art magazine, playful, humorous, quiet, restrained, poetic, and artistic. Avoid color, gradients, smooth vector graphics, 3D rendering, polished digital illustration, detailed line art, commercial cartoon style, excessive decoration, or busy composition.\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -1848,7 +4469,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 112
+      "seed": 125
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n请将上传的每张照片分别制成一张独立的高级编辑设计海报，逐张单独输出。采用 3:4 竖版构图，上下两区高度严格 1:1，各占 50%\n上区 · 原片 保留主体、结构、真实质感、自然光影与原有色彩，仅轻做高级调色，呈艺术杂志与独立出版质感；画面明快通透、锐利清晰。适配画幅可自然扩展背景，但不得拉伸、扭曲或改变主体\n下区 · 抽象记忆面板（居中图卡式） 将下区主体约束为 一张居中偏下、边界清晰的小色块图卡 ，四周预留大面积纸白作呼吸，绝不顶到边缘：\n- 图卡范围 ：色块主体收拢在一张约占总面板宽 32–40%、高 30–36% 的居中或中偏下区域内，四边与面板边缘保持明显外距（上下左右各留 25–35% 留白），横向长景可放宽宽度并压低高度，但四周照样板空。\n- 主体可一眼认出 ：图卡内保留一个清晰主体锚点（人/塔/建筑），用较完整、边缘较实的识别剪影呈现（省细节但保留轮廓与体量），是第一焦点；抽象化只作用于背景氛围，不让主体一起模糊。\n- 背景抽象陪衬 ：光晕、人群、树冠、雾霭等用柔和色团与疏密层序铺陈在图卡内，作为衬托主体的氛围层，不抢焦点；主体色块比背景略实略饱和，形成\"主体实 / 氛围虚\"。\n- 剔除纹理、杂物等无效信息；第一眼先见主体、细看见氛围。\\\n符号纪律 沿用：1 类主符号至多配 2 类辅符号，全部对应原图、禁止凭空装饰；排布避等距、留细微大小与位置偏差。主体符号清晰成块，辅符号（细轴/小点/人影/短条）作点缀。\n版式基准 象牙色无杂底、无渐变纹理。图卡居中偏下、四周大面积留白（整体仍约 60–75%），主体不顶边、不溢出。\n文字 · 诗意英文标题 仅一句细无衬线/纤细手写体英文小字，可落在图卡边缘对应留白处或角落，低对比、凝练原图情绪，作氛围补白，不压主体。\n色彩 · 低饱和空气感 取上区照片主色，降饱和提明度成干净透气调；主体可比背景略饱和略实，形成层级；保留一处呼应强调色贯穿。避免高饱和荧光与塑料感。\n构图 · 图卡内的留白 主体收在以图卡为界的空间内，图卡四周纸白空出、大量留白仍在；像一帧主从分明、被框住的记忆定格。\n最终气质 上区摄影写实 → 下区\"图卡式抽象记忆\"：主体可辨认、氛围可回味、四周通透。拒绝把主体模糊掉、顶边撑满、卡通脸、3D、塑料\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -2013,7 +4634,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 113
+      "seed": 126
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nPlease turn each photo I upload into one separate, high-end design poster. Do not create multi-image collages; output each photo as an individual poster. Use a 3:4 vertical composition with two horizontal sections of strictly equal height, each occupying exactly 50% of the canvas. The upper half must preserve the original photograph as faithfully as possible, maintaining the subject’s identity, structure, pose, realistic texture, natural lighting, and original color atmosphere. Apply only subtle, refined color grading so the image feels suitable for an art magazine, independent publication, or gallery exhibition. To adapt the photo to the vertical format, the surrounding environment may be naturally extended, but the subject must never be stretched, distorted, resized disproportionately, or structurally altered. In the lower half, first analyze and understand the most memorable core theme, subject relationships, directional structure, emotional tone, and visual metaphor of the original photograph, then reinterpret these elements as a pastel crayon doodle illustration on lightly textured vintage-style paper. Do not literally redraw every object and do not reproduce the entire photograph in illustrated form. Keep only the most representative silhouettes, poses, directions, relationships, and visual memory points, using reduction, simplification, mild exaggeration, and recomposition so that viewers can immediately sense a clear correspondence with the photograph above. Render the main subject with coarse chalk or crayon-style hand-drawn outlines: slightly thick, relaxed, dry, imperfect lines with visible powdery grain, intermittent fading, slight hand tremor, partially open contours, and naturally blunt rounded stroke endings. Inside the subject, add only minimal pastel color blocks, simple grids, stripes, dots, or casual scribbled fills, using the least amount of information necessary to suggest structure. Do not create realistic volume, detailed rendering, or complete internal detail. Small surrounding elements must use the same visual language as the main subject, but be further simplified into doodle-like symbols recognizable with only one or a few strokes. Stars, flowers, plants, objects, environmental cues, or abstract symbols should remain simple, naive, open, loosely drawn, and often incomplete, primarily using single-line contours with very little fill. Do not turn them into polished icons, stickers, or separate miniature illustrations. Maintain a composition based on the relationship between a small stamp-like visual cluster and a large amount of negative space. Arrange the subject freely according to its direction, proportions, and visual center of gravity; it may be off-center, close to an edge, suspended in space, or partially cropped. The subject and only a few doodle elements should form a loose but clearly related visual group, while the remaining space should intentionally stay empty. Negative space itself must function as a primary compositional element, creating breathing room, distance, pauses, and visual rhythm through contrasts between empty and occupied areas, clustered and dispersed elements, large and small forms, and asymmetric balance. It is better to draw too little than to fill the composition. The background must use a very pale, bright, clean paper tone such as cream white, ivory, light beige-white, pale apricot-white, very light gray-white, or another near-white paper color intelligently matched to the overall temperature of the original photograph. The paper texture should contain only extremely subtle fibers and grain. It must not look brown, yellowed, gray, dirty, aged, or antique. The background brightness must be clearly higher than the subject outlines and color blocks so that all crayon contours, small doodles, and text remain clearly visible and never blend into the background. Extract 2–4 of the most vivid, approachable, and characteristic colors from the upper photograph, then reinterpret them as bright, soft pastel-crayon tones. These may naturally become peach pink, apricot orange, creamy yellow, mint teal, sky blue, pale violet, or similarly light and friendly colors. For the main outlines, prioritize clearer pastel tones such as coral pink, soft blue, teal, warm orange, pale purple, or slightly deeper creamy hues that remain distinct from the paper background. Small elements should repeat these colors only sparingly to create subtle visual echoes. Maintain a visual relationship of pale background + clearly readable colored lines + a small amount of soft pastel fill. The overall mood should feel bright, comforting, relaxed, warm, and full of everyday life. Avoid dull grayness, dirty brown, muddy tones, overly muted Morandi palettes, low contrast, fluorescent colors, or cheap candy-like saturation. Use text only sparingly, with no restriction on language. Short phrases or fragments may be freely derived from the subject, action, mood, memory, or metaphor of the image. Use a light, airy typewriter-style font with subtle irregular letter spacing and slight old mechanical printing imperfections. Text colors should be clearly readable but never harsh, such as gray-brown, soft black, dark blue-gray, or a deeper tone that echoes the main subject. Ensure sufficient contrast against the pale paper background. Place text naturally within the negative space so that it forms an editorial composition together with the subject and doodles, rather than following a fixed title template. The final image should combine an extremely pale paper surface, coarse grainy crayon outlines, minimal pastel fills, very simple doodle symbols, a small-scale illustrated subject, and extensive artistic negative space to create a refined, comforting, editorial visual language. The main priority is to make the subject and small elements appear clearly and delicately against the light paper while retaining a relaxed, naive, gentle, and mature sense of editorial composition. Avoid dark kraft paper, dark brown backgrounds, low-contrast lines, muddy blending between background and subject, overly precise outlines, realistic painted redraws, complex miniature icons, fully filled backgrounds, smooth vector graphics, 3D effects, and generic commercial template aesthetics.\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -2187,7 +4808,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 114
+      "seed": 127
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate one independent premium travel reinterpretation poster for each uploaded photo. Process each photo separately and never combine multiple photos. Use a strict 3:4 vertical composition divided into two equal 50/50 sections. The top half is a Minimal Needle Felt Picture Book Illustration and the bottom half is the original photograph.\n\nStyle Priority (Highest Priority): Picture-book abstraction is more important than needle felt realism. First reinterpret the uploaded photo as a minimal picture-book composition, then render it as handcrafted needle felt. Do not recreate the entire photograph.\n\nBefore creating the illustration, analyze the uploaded photo and extract only the most memorable subjects and essential storytelling elements. Reduce approximately 60–70% of background details, repetitive objects and visual clutter while preserving the recognizable environmental context. The illustration should communicate the memory rather than document the photograph. Keep the primary subject visually dominant while surrounding elements remain simplified supporting shapes.\n\nThe illustration should occupy approximately 20–25% of the upper half, centered within generous warm cream-colored negative space. Never fill the page. Everything should feel quiet, balanced and elegant.\n\nEverything must appear handcrafted from premium compressed needle felt with ultra-short velvety wool fibers, dense soft felt texture, subtle microfiber bloom, soft fuzzy edges, matte finish and gentle handmade imperfections. Every visible object should clearly appear made of real needle felt rather than paint or digital brushstrokes.\n\nMaintain a flat 2.5D Needle Felt Picture Book Illustration aesthetic. Avoid realistic three-dimensional reconstruction, deep perspective, heavy sculptural volume, realistic terrain, thick bases, floating islands or miniature landscape models. The illustration should gently rest on the paper with only minimal ground beneath the subjects.\n\nSimplify trees, flowers, grass, clouds, buildings, mountains, water and other environmental elements into soft symbolic felt shapes while preserving the original composition, proportions, relationships and emotional atmosphere. Replace realistic textures with simple rounded forms and subtle handcrafted felt details instead of faithfully reproducing every object.\n\nUse soft diffused natural daylight, delicate ambient shadows, warm handmade paper texture and muted natural wool colors inspired by the original photograph. Maintain the original color harmony with slightly reduced saturation.\n\nPlace one tiny handwritten travel quote beneath the illustration using warm gray handwriting.\n\nThe bottom half must faithfully preserve the uploaded photograph, including all people, animals, architecture, landscape, objects, perspective, proportions, lighting, colors and spatial relationships. Do not redraw, repaint, replace, distort or stylize the original photo. Apply only subtle premium editorial travel color grading, soft film contrast and extremely fine film grain.\n\nStyle Keywords: Minimal Needle Felt Picture Book Illustration, Korean healing illustration, Japanese picture book, handcrafted needle felt, compressed wool, ultra-short wool fibers, velvety felt texture, soft fuzzy edges, handmade paper, warm cream background, flat 2.5D felt illustration, symbolic simplification, large negative space, quiet editorial design, poetic travel memory.\n\nNegative Prompt: miniature diorama, museum miniature, sculpted landscape, realistic miniature model, realistic terrain, thick base, floating island, circular platform, deep perspective, excessive vegetation, realistic botanical details, long wool fibers, coarse wool, loose felt, messy fuzz, crochet, knitting, fabric collage, clay, plastic, resin, glossy materials, oil painting, watercolor, colored pencil, anime, comic, CGI, hyper-realistic 3D, toy rendering, excessive detail, visual clutter.\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -2379,7 +5000,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 115
+      "seed": 128
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nUse the uploaded photograph as the source image and create a 3:4 vertical “Second World” photographic reinterpretation poster, split approximately 1:1 horizontally. Preserve the original photograph as faithfully as possible in the upper half, keeping the original subjects, actions, spatial relationships, colors, natural lighting, shadows, composition, and photographic texture, allowing only minimal proportional cropping or natural extension of simple background areas when necessary. The lower half should use a clean, natural warm off-white paper background with generous negative space. Do not apply a fixed “torn-paper + tiny figure” template. Before designing the lower half, carefully analyze the specific photograph and identify its most distinctive visual structure rather than merely its subject matter, such as water ripples, roads, reflections, clouds, branches, light, shadows, architectural edges, gestures, mountain ridges, object boundaries, or directional relationships. Then ask: “If this structure could actually be touched, used, moved, entered, borrowed, changed, or interacted with, what would it most naturally become?” Use that answer to create one unique “Second World” that could only come from this photograph. Use only one core visual structure, one visual metaphor, and one main physical action; do not stack multiple concepts or mechanically reuse the same action across different images. The shape and boundary of the photographic area should also participate in the idea rather than defaulting to a generic torn edge; water may become a usable body of water, light may become something that can be borrowed, a road may continue into another space, or a branch, shadow, reflection, cloud, shoreline, or object contour may create a new spatial relationship. The lower half must not simply redraw the upper photograph; include only the minimum elements needed to express the concept. You may add 0–3 very small minimalist black hand-drawn line-art figures only when they help explain the idea. They are not decorations but users of the Second World, and they must physically interact with a structure derived from the photograph rather than merely standing nearby. If the original photograph already contains strong human, animal, or object action, do not add unnecessary figures. Use thin, loose, slightly irregular black pen lines, with no complex faces, heavy outlines, dense sketching, anime, cartoon, or full-scene illustration. Add one short handwritten English caption based on what is specifically happening in the image; the tone should feel natural, quiet, lightly humorous, observational, or like an off-screen comment, not inspirational or philosophical, and avoid repetitive formulas such as “Same..., different...”. Place the caption according to the negative space, movement, and visual balance of the composition rather than in a fixed corner. Overall style: real photography + warm off-white paper + minimal black line art, clean, restrained, poetic, intelligent, slightly handmade, and reminiscent of an independent art magazine or photography book. Avoid commercial advertising aesthetics, complex illustration, crowded figures, repeated actions, decorative stars, flowers, leaves, icons, frames, stamps, interfaces, large typography, yellowed paper, unnecessary objects, major changes to the original photograph, or any design that feels added merely for decoration. Most important: do not decorate the photograph; understand it first, then reveal another world that already seems latent inside it, so the final image creates a small moment of recognition: “Of course — this photograph could have been understood this way all along.”\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -2562,7 +5183,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 116
+      "seed": 129
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate a premium editorial travel poster based entirely on the uploaded real travel photograph. The uploaded photograph is the single source of truth. Every design decision must originate from the uploaded image. Never invent new compositions, redesign subjects, replace objects, improve the scene, or add visual elements that do not exist in the original photograph. Only extract and simplify the original subject into a premium travel souvenir magnet while preserving its visual identity. Analyze the photograph before generating the design. Identify the single most memorable visual subject and classify it as either Person, Landmark/Architecture, or Landscape. Choose only one category and never combine multiple unrelated subjects into the magnet. Extract the chosen subject directly from the uploaded photograph instead of recreating it. Automatically sample the dominant memorable color from the photograph and use it as the background color for the upper section. Preserve the original photograph in the lower section and place elegant handwritten English text beneath the magnet. Use a strict vertical 3:4 layout divided into two equal horizontal sections. The upper half is a minimal editorial display. The lower half is the authentic travel photograph. The overall design should resemble a luxury travel postcard, museum souvenir print, or premium editorial poster with generous negative space. The upper section must use one clean solid color extracted from the original photograph. Preferred colors include sky blue, ocean blue, turquoise, warm yellow, terracotta, sand beige, ivory, olive green or stone white. A barely visible premium paper texture is acceptable, but no gradients, patterns, illustrations, decorative graphics or photographic backgrounds are allowed. Create one small premium enamel souvenir magnet positioned slightly above the center of the upper section, occupying approximately 20–30% of its width. The magnet must look like a real die-cut enamel souvenir sold in museum gift shops, featuring a thin white or cream border, subtle thickness, soft natural shadow, crisp edges and refined craftsmanship. It must preserve the original silhouette, viewpoint, composition, proportions, recognizable details and colors while simplifying only unnecessary details required for souvenir production. The goal is to extract the original subject, not redesign it. If the subject is a person, preserve the exact identity, facial features, hairstyle, clothing, accessories, pose, gesture, body proportions and expression. Small travel-related objects naturally associated with the person, such as cameras, flowers, luggage or bicycles, may remain. The person must remain immediately recognizable as the same individual from the uploaded photograph. If the subject is architecture or a landmark, preserve the complete iconic view instead of isolating a single building. Maintain the original viewpoint and composition, including important architectural relationships such as roofs, facades, balconies, arches, windows, statues and surrounding structures. Simplify only secondary details. If the subject is a landscape, preserve the original framing instead of selecting a random object. Do not reduce the scene to a single umbrella, boat or tree unless it is clearly the primary subject. Compress the memorable composition into a miniature souvenir magnet while preserving the original viewpoint, horizon, spatial relationships, balance and recognizable scenery. The magnet should feel like a miniature travel postcard rather than an icon. Place one line of elegant handwritten English text beneath the magnet. Use user-provided text whenever available. Otherwise use a reliably identifiable location from the photograph. If the location cannot be confidently identified, omit it instead of inventing one. Use refined handwritten typography with thin strokes, centered alignment and proper spacing. Do not include subtitles, coordinates, decorative text or meaningless characters. The lower section must remain the original uploaded photograph, not an AI recreation, repainting or illustration. Only natural cropping is allowed to fit the composition. Preserve the original people, faces, identities, clothing, buildings, landscapes, lighting, shadows, colors and photographic texture. Never repaint, regenerate, stylize, replace, remove or alter important subjects. Respect the original aspect ratio and never stretch, compress or distort the photograph. The relationship between the upper and lower sections is essential: the lower half represents authentic travel memory, while the upper magnet is a collectible souvenir extracted directly from that same photograph. The viewer should immediately understand that the magnet originates from the original image. Visual Style: luxury editorial, premium travel souvenir, museum enamel magnet, minimal graphic design, clean negative space, authentic photography, timeless, refined, elegant, collectible, modern, fresh, printable. Negative Prompt: multiple magnets, collage, photo grid, oversized magnet, cartoon illustration, fantasy elements, invented scenery, incorrect subject selection, identity change, face replacement, body deformation, architecture deformation, regenerated lower photo, excessive stylization, fake text, gibberish, watermark, logo, captions, decorative graphics, gradient backgrounds.\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -2736,7 +5357,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 117
+      "seed": 130
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate one independent high-end editorial poster for each uploaded photo. Process each photo separately. Never combine photos into a collage, grid, split-screen, or multi-photo composition.\n\nFORMAT\nStrict 3:4 vertical composition, horizontally divided into two exactly equal 50/50 sections. Top 50% = original photography; bottom 50% = flat editorial illustration. Keep the overall design premium, clean, art-directed, visually balanced, and rich in negative space.\n\nTOP 50% — ORIGINAL PHOTO\nTreat the uploaded photo as the single source of truth. Preserve the original subject, identity, facial features, body proportions, pose, expression, clothing, objects, environment, composition, colors, spatial relationships, lighting, shadows, depth, and photographic texture. Do not redesign, replace, beautify, distort, stretch, duplicate, or reinterpret the subject. Only subtle professional color grading is allowed, with the feel of an independent art magazine, premium travel editorial, or exhibition photograph. If more space is needed, naturally extend the existing background without altering the subject.\n\nBOTTOM 50% — FLAT EDITORIAL ILLUSTRATION\nReinterpret the same photograph as a playful, slightly awkward Korean-inspired flat editorial illustration. Identify and preserve the most recognizable subject, silhouette, pose, action, key relationships, and narrative of the original scene. Simplify them into rounded, slightly exaggerated geometric shapes with clean solid fills and rough, imperfect black hand-drawn outlines featuring subtle wobble, uneven thickness, broken edges, and imperfect contours. Remove photorealistic lighting, shadows, perspective, and material textures. Avoid conventional cartoon or photorealistic styles. Aim for a contemporary Korean children's book, independent magazine graphic, or playful editorial artwork.\n\nCOMPOSITION\nKeep one dominant focal point with secondary objects used only as accents. Create relaxed visual rhythm through varied scale, slight misalignment, overlaps, partial cropping, irregular spacing, and subtle asymmetry. Allow some shapes to extend beyond or overlap the composition. Use bold color blocks and generous negative space. Preserve key visual relationships without reproducing every detail. The illustration should feel designed, relaxed, and intentionally imperfect, never mechanically traced or cluttered.\n\nCOLOR\nExtract the photograph's most distinctive colors and reinterpret them as a limited palette of high-purity, high-saturation flat colors. Use bold, clean color blocks and bright youthful contrasts. No gradients, realistic shadows, muddy gray tones, glossy effects, complex blending, or excessive texture. The palette should feel cheerful, energetic, childlike, warm, and visually confident.\n\nTYPOGRAPHY & EDITORIAL TEXT\nGenerate English text inspired by the photo's theme, action, emotion, atmosphere, or story. Integrate typography naturally into the illustration.\n\nMAIN TITLE: 2–4 English words, placed near the upper illustration area. Use playful, slightly handwritten, imperfect lettering; irregular alignment or capitalization is allowed.\n\nSUBTAGLINE: One short, restrained English phrase below the title.\n\nLOCATION / YEAR: Small editorial line in the lower-middle area. Use a verified location/year when known; otherwise use the subject, activity, event, or travel theme. Never invent a location.\n\nPOETIC MICRO-CAPTION: A short 1–2 line poetic or playful phrase, placed naturally within negative space, beside a color block, along an edge, or on the visual axis.\n\nSERIES NUMBER: Small, subtle editorial numbering such as “No.01” in a corner.\n\nTypography may follow subject contours, align with color blocks, occupy negative space, overlap shapes slightly, rotate subtly, or use irregular spacing/cropping. Readability must remain strong. Title can be expressive; supporting text should stay clean and restrained.\n\nART DIRECTION\nCombine real travel photography × playful flat illustration × premium editorial design × Korean graphic sensibility × travel diary aesthetics. The result should feel bright, youthful, cheerful, warm, playful, slightly quirky, sophisticated, and collectible—like a limited-edition travel art print or contemporary illustrated travel diary, not a generic tourist poster.\n\nSTRICT RESTRICTIONS\nOne photo = one independent poster. Never combine photos. Never invent a different scene, replace the subject, alter identity or pose, or introduce unrelated objects. Keep the bottom illustration clearly derived from the same photo shown above. No photorealistic illustration, excessive gradients, shadows, 3D/glossy effects, visual clutter, or overcrowding. The top and bottom must feel like two connected interpretations of the same travel moment.\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -2919,7 +5540,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 118
+      "seed": 131
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate a high-end editorial art poster in a strict 3:4 vertical format. Divide the canvas horizontally into two exactly equal halves (1:1 height ratio), each occupying precisely 50%. A thin, clean horizontal line may separate the two halves, or they may meet edge-to-edge with no border.\nTOP HALF — Original Photograph (50%):\nPresent the original photograph with all subjects fully preserved — identity, facial features, clothing, body proportions, poses, expressions, and the original spatial relationship between subjects. Apply only a refined warm film-like color grading: soft contrast, gently lifted shadows, warm highlights, slightly enhanced but natural saturation, and a subtle grain texture that evokes fine art photography in an editorial magazine or gallery exhibition.\nYou may naturally extend the sky, ground, or background environment to fill the frame, but never stretch, distort, warp, or alter the subjects. The subjects may sit small within the frame to leave generous sky or environmental space — this is intentional and desirable.\nBOTTOM HALF — Impasto Oil Painting Miniature World (50%):\nReconstruct the scene from the top photograph as an extreme thick-impasto oil painting miniature world on a pure white textured paper background. This is NOT a mechanical copy — translate the subjects, their poses, and the narrative into a self-contained, poetic, three-dimensional tiny landscape.\nLayout:\nThe painted miniature world occupies roughly 60–75% of the bottom half, centered or slightly off-center (left or right depending on visual balance).\nThe remaining area is clean white negative space with visible paper grain texture.\nThe painting's outer edges are organic, irregular, feathered, and blob-like — thick paint strokes that softly dissolve into the white paper, like a raised paint island. Never use a hard rectangular border or frame.\nThe Miniature World:\nSubjects are reduced in scale to feel like tiny figurines in a diorama, while retaining their core identity, clothing colors, poses, and key features. Moderately optimize angles and proportions for the miniature format.\nSky / Background: Fluffy, billowing impasto clouds built from thick palette-knife strokes in fresh sky blue, cream white, and hints of warm pale yellow. Clouds have sculptural, raised volume.\nGround / Surface: A reflective shallow water surface, puddle, or winding path/road beneath the subjects, rendered with thick horizontal or curving strokes. Water shows soft distorted reflections of subjects and sky, with ripples and light speckles. A path may be sandy, stony, or coastal — choose what fits the scene's narrative.\nForeground details: Small wildflowers, grass tufts, foliage, tiny rocks, or low plants scattered naturally around the base, in vivid greens, coral orange, peach pink, and warm yellow.\nAtmospheric accents: Add small birds in the sky, distant hills, sea horizon, sunlight rays, or mist — whatever poetically extends the original scene's mood. Transform the original environment into something more idyllic and dreamlike (e.g., a city street may become a coastal road; a playground may become a watery garden island).\nPainting Technique — Critical:\nExtreme impasto thickness: visible palette knife marks, raised paint ridges, sculptural relief, and tactile pigment texture on every surface. The paint should look physically thick enough to cast tiny shadows.\nThick coatings on clouds, water, clothing, skin highlights, and foliage create physical volume.\nSemi-transparent glazes in select areas (water, sky edges, light passages) allow light to pass through, creating luminosity and glow.\nVisible brushstroke direction and paint drag marks at the edges.\nThe white paper grain is clearly visible in negative space and at the painting's periphery.\nTypography — Integrated into the white space: Place elegant text in the negative space (top-left, bottom-left, or right side — choose for best balance):\nA large handwritten calligraphy script title (e.g., \"Run to The Wind\", \"Coastal Joyride\", \"Sunny Reversal\") in a refined olive-green, warm gray, or soft blue-gray tone.\nA short poetic subtitle below or beside the title, in a clean small serif or sans-serif font (e.g., \"Let the heart follow the light.\", \"Live in the sunshine, ride in the moment.\", \"A little world turned upside down.\").\nA small reference number in a corner (e.g., \"No. 2024-05\", \"No. 27\", \"No. 2024-0518\").\nOptionally, a tiny credit line (e.g., \"Oil Painting × Miniature\", \"Painted by Mango\") in a bottom corner.\nAll text is understated, refined, and does not compete with the painting.\nColor Palette: Extract the brightest, most vivid, most alive colors from the top photograph and remix them — never average, mute, or desaturate. Use fresh sky blue, lake blue, grass green, warm yellow, coral orange, cherry red, peach pink, and cream. Generous pure warm white serves as breathing room. Main colors are vivid but not harsh or fluorescent. Local accents of golden yellow and warm orange suggest sunlight. The overall mood is sunny, fresh, warm, relaxed, healing, and full of life.\nStrictly Avoid: Murky dirty tones, faded desaturated looks, Morandi-style muted palettes, dark brown filters, sepia, fluorescent colors, cheap candy colors, flat digital illustration, smooth airbrush texture, hard rectangular borders around the painting, generic fonts, text overlapping the painted subjects, stretched or distorted figures, plastic-looking 3D render texture.\n\n【保持不变】原照区保留主体身份、姿态与构图；创作区按作者原文允许的范围重构微景，不把创作区误当成原照。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -3084,7 +5705,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 119
+      "seed": 132
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n3:4 vertical poster, split into two exactly equal halves by a clean horizontal line. One source photo = one poster; never mix photos.\n\nTOP 50% — the original photo, untouched apart from subtle editorial grading.\n\nBOTTOM 50% — the same photo rebuilt as a photo cut-out on a handmade paper-collage stage.\n1. Subject: cut the main figure or animal out along its silhouette, together with what they hold or wear. Keep facial likeness, pose, hair and clothing true to the original (85–95%), but treat it as a photo printed onto art paper — lightly softened skin, fine watercolour and coloured-pencil strokes, visible paper grain. Photographic at a glance, handmade up close. Never a hard photo copy, never an illustration.\n2. Outline: a thin cream/ivory border following the silhouette (0.5–1% of canvas width) — precision die-cut sticker, slightly torn deckled edge.\n3. Scenery: 1–2 large colour-block paper panels behind the head and shoulders, plus 2–4 clusters of cut-paper fragments (foliage, flowers, stairs, props), either photo-textured paper cropped from the original or hand-painted shapes. Drop about 70% of the background; never rebuild the full scene.\n4. Base: a full-width flat solid-colour band sealing the bottom edge. The subject stands on it and stays front-most.\n5. Notes: 1–2 torn paper cards with a short handwritten English phrase, plus 2–3 tiny doodles, kept in the negative space. No text if nothing fits.\n\nThe subject fills 55–70% of the lower half. Warm ivory paper base, generous negative space, asymmetric balance, better too few elements than too many. 4–5 colours taken from the photo, keeping signature saturated clothing colours; bright, clean, print-like paper tones.\n\nAvoid: redrawn or illustrated face, hard 100% photo duplicate, missing or too-thick outline, full scene reconstruction, filled background, sticker clutter, cartoon, vector, 3D, gradients, heavy shadows, neon, muddy colours.\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -3258,7 +5879,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 120
+      "seed": 133
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n请将我上传的每一张照片分别制作成一张独立的高级设计海报，不多图拼接，每张照片单独输出。整体采用3:4竖版构图，上下两个区域高度严格1:1，各占画面50%。\n上半部分保留原始照片，保持主体身份、结构、姿态、真实质感、自然光影和原有色彩氛围，仅进行轻微高级调色，使其具有艺术杂志、独立出版物与展览图像质感。为适配画幅，可自然扩展环境背景，但不得拉伸、扭曲或改变主体。\n下半部分提取照片中最具识别性的**主体、轮廓、结构、姿态与叙事关系**，重构为 **Mid-century vernacular graphic illustration + schematic line drawing + two-color spot printing** 风格的复古民间商业插画。不要完整描摹照片，而是通过 **diagrammatic abstraction** 将复杂对象压缩成少量清晰几何形、功能性轮廓和必要结构，使主体像旧说明书、广告卡、技术标签或民间印刷品中的图解，一眼可辨，却比真实对象更加直接、幽默和符号化。\n造型强调 **economy of line**：能用一根线说明的结构，不使用多余笔触。以直接的黑色钢笔轮廓、矩形、圆形、菱形、直线和简单切面概括对象；人物、动物和器物可适度夸张比例，机器、建筑与复杂结构则压缩成清楚的方盒、孔洞、面板和轮廓关系。透视采用平面化、示意性的 diagrammatic perspective，不追求真实光影和严谨写实空间，让画面保持“插画与技术图解之间”的特殊状态。\n构图根据原图最重要的叙事关系重新整理，保持一个明确主体，并利用少量辅助对象、指示线、方向关系或结构符号强化故事。重视**视觉重心、几何秩序、尺度反差、正负形与留白**，画面可以略显笨拙和民间，但不能杂乱；所有信息都应像为了“解释这件事”而存在，而不是为了装饰而存在。\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -3413,7 +6034,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 121
+      "seed": 134
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n请基于我上传的这张动物照片，生成一张3:4竖版双画面海报。画面上下严格1:1，各占50%，不要多图拼贴。上半部分保留原照片主体，动物的毛色、五官、表情、姿势、构图与背景尽量不变，仅做轻微干净调色。下半部分将同一动物重绘为松弛童趣的极简手绘涂鸦，使用粗细不均的黑色蜡笔/铅笔线条与少量平涂色块，保留原图最有梗的姿势和表情。整体呆萌、抽象、随手画感，背景保持纯白或暖白，不增加复杂场景与多余装饰，高清输出。\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -3569,7 +6190,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 122
+      "seed": 135
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n将上传的每张照片分别制成一张独立的高级设计海报。\n整体采用 3:4 竖版构图，画面上下分为两个区域，高度严格按 1:1 对半，各占 50%。\n上区 · 原始照片\n保留照片原始画面，主体结构、真实质感、自然光影与原有色彩氛围均保持不变。\n仅做轻微的高级摄影级调色，使其呈现出艺术杂志、独立出版物与展览摄影的气质。\n为适配画幅，可自然延伸天空、地面或环境背景，但严禁拉伸、扭曲或改动主体。\n下区 · 极简等距插画\n从照片中提取最具识别度的主体、轮廓、姿态与叙事关系，重构为精致的极简等距视角插画，如同一件陈列于纸面的微缩立体模型，或一座建筑沙盘。\n不做细节的机械复刻，而是以概括的体块、清晰的边缘、简洁的层级与微型场景关系来重新表达主体。\n要求保留一眼可辨的身份特征，同时具备安静、克制、诗意的编辑插画气质。\n构图逻辑 · 等距微缩 · 纸上模型感\n主体如同被切割后安放于一小块纸面或微型基座之上，四周保留大面积留白。\n通过体量对比、边缘裁切、轻微投影与少量微小细节，建立尺度感与孤独感。\n可加入极少量辅助元素托举主体，但不得构成第二个视觉中心。\n配色\n完全取自上方原照片，优先保留最具辨识度、最能代表主体气质的颜色。\n将复杂色彩归纳、提纯、柔化并统一为有限色盘，保留原图的冷暖关系与色彩性格，同时降低杂色与视觉噪声。\n使颜色趋于平静、克制、柔和，带纸上编辑插画感；以同色深浅、邻近色关系与少量色差区分体块，绝不凭空加入与原图无关的固定色系。\n以精细墨线、扁平色面、轻微阴影与纸张颗粒来表现结构与层次。\n文字\n文字作为构图的一部分巧妙介入，从照片的主题、地点、动作、状态或情绪中提炼一个简短英文标题，并搭配极少量编号、短句或微型注释。\n采用细瘦、克制、具现代编辑感的字体。\n可沿留白边缘、主体基座、水平轴线或等距结构排列，与图形共同构成安静而精致的版式节奏。\n最终气质\n整体参考极简等距插画、微缩立体模型、纸上景观与高级编辑设计。\n呈现安静、诗意、克制、精致、有收藏感的视觉气质。\n避免卡通感、高饱和撞色、与原图无关的固定配色、塑料 3D 感、复杂场景堆积、电商感与模板感。\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [
@@ -3733,7 +6354,7 @@ const HF_CURATED = {
         "#374D46",
         "#4541C4"
       ],
-      "seed": 123
+      "seed": 136
     },
     "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n根据[输入照片]制作3:4竖版\"摄影×水彩方格拼贴\"艺术海报，整体清新、明亮，有细腻的手工纸张质感。\n\n【版式】\n上方占画面50%，原照片满宽铺至顶部和左右边缘，保留主体、构图、色彩与真实摄影质感，仅作必要裁切。下方占50%，使用暖白色水彩纸背景，纸纹细微、干净。上下以平直横线分隔。下方拼贴主体居中或稍偏右，占下方宽度约70%—80%，周围保留空白，左侧可安排短句。\n\n【方格重构】\n将照片中的主要内容重新绘制成数百枚小型方形色片组成的图像。色片沿统一的水平、垂直网格排列，主体横向约由30—45格构成，方块大小基本一致，局部允许轻微尺寸与位置偏差。方块之间露出纤细、不完全均匀的纸白缝隙，边角略柔软、不规则。\n\n每格承接原图对应位置的颜色与明暗，多个方格共同形成可辨识的主体。保留人物姿态、服装主色、物体比例、关键轮廓与空间方向。细节适度概括，避免将原照片直接覆盖网格。人物与单体物品优先提取主体，仅保留少量环境色；风景保留天空、地平线、水面和地形的大关系。\n\n【水彩纸片质感】\n每枚方格像独立染色、轻微压皱的薄水彩纸片，内部带透明水彩浓淡、颜料沉积、细小晕染、纸纤维和轻微折痕。同一色区有自然色差，亮处透出纸白，深处保留颜料颗粒。纸片几乎贴平底纸，仅有极轻微边缘阴影，不呈现厚重瓷砖、玻璃或塑料质感。整体色彩鲜明通透，保留原图关键色相，不统一泛黄。\n\n【边缘消散】\n核心主体区域方格密集、连续，靠近轮廓逐渐出现缺格与空隙，外围散落少量独立方块。散落方块延续附近主体颜色，并大致遵循原网格位置。消散疏密有变化，不能均匀撒满背景，不形成完整矩形边框。重要识别部位保持连贯。\n\n【文字】\n文案：[指定短句／自动生成简短英文短句／无]。使用灰蓝色细线手写体，分2—4行置于侧面留白；可配一处极小的疏排衬线英文和细短横线。原物体上的关键文字忠实保留，可跨越方格连续呈现，不编造字符。无大标题和水印。\n\n避免：数码打码、8位游戏像素、纯色硬方块、瓷砖填缝、玻璃反光、厚重浮雕、整图网格滤镜、过量碎屑、主体无法辨认、密集文字。\n\n【保持不变】按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
     "slots": [

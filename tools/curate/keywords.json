@@ -829,5 +829,148 @@
     "Threads",
     "图片转换",
     "图生图"
+  ],
+  "threads-emerson-minimal-emotion-line": [
+    "极细线条",
+    "情绪符号",
+    "单线手绘",
+    "极简海报",
+    "single line",
+    "negative space",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-geometric-story": [
+    "几何故事",
+    "建筑抽象",
+    "视觉隐喻",
+    "现代主义",
+    "geometric collage",
+    "editorial poster",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-atmospheric-pixel": [
+    "氛围像素",
+    "像素风景",
+    "复古游戏",
+    "粉彩像素",
+    "atmospheric pixel art",
+    "pixel dithering",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-stitched-patchwork": [
+    "拼布",
+    "手缝刺绣",
+    "布贴画",
+    "针脚",
+    "patchwork",
+    "embroidery collage",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-artifact-ink-rubbing": [
+    "古器物拓印",
+    "墨拓",
+    "碑拓",
+    "考古图录",
+    "ink rubbing",
+    "artifact rubbing",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-konbini-bento": [
+    "便当化",
+    "标志变便当",
+    "日式便当",
+    "便利店包装",
+    "bento-fication",
+    "food substitution",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-mixed-media-paper": [
+    "混合媒材",
+    "纸张拼贴",
+    "手绘拼贴",
+    "报纸拼贴",
+    "mixed media",
+    "paper collage",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-white-concept-model": [
+    "白色模型",
+    "概念模型",
+    "雕塑形体",
+    "建筑体量",
+    "massing study",
+    "conceptual form",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-perler-bead": [
+    "拼豆",
+    "熔珠",
+    "色卡",
+    "左右对照",
+    "Perler Bead",
+    "Fuse Bead",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-soft-light-memory": [
+    "柔焦",
+    "光晕",
+    "朦胧剪影",
+    "光影记忆",
+    "soft diffusion",
+    "halation",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-two-ink-risograph": [
+    "孔版印刷",
+    "双色版画",
+    "错位套印",
+    "独立杂志",
+    "Risograph",
+    "screen print",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-travel-keepsake-ticket": [
+    "旅行纪念票",
+    "登机牌风格",
+    "护照印章",
+    "旅行手账",
+    "travel keepsake",
+    "boarding pass",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
+  ],
+  "threads-emerson-break-frame-color-field": [
+    "越界构图",
+    "手刷色场",
+    "框景",
+    "手绘海报",
+    "break the frame",
+    "color field",
+    "Emerson",
+    "emersonigpost",
+    "Threads"
   ]
 }

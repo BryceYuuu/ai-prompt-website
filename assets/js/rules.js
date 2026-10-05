@@ -32,7 +32,7 @@ var HFRules = (function () {
     { key: 'CUSTOM', label: '自定义（需在说明中写明）' }
   ];
 
-  /* 已知的 IP 风险词。命中即拦截（policy），不是警告。
+  /* 已知的 IP 风险词。正向命中即拦截（policy），不是警告。
      正式运营时必须持续维护，尤其要补上「在世艺术家姓名」名单。
      下面只放商标 / 作品集类示例，中英双语。 */
   var DENYLIST = [
@@ -80,8 +80,25 @@ var HFRules = (function () {
 
   function hexOk(c) { return isStr(c) && /^#[0-9a-fA-F]{6}$/.test(c); }
 
-  function textOf(card) {
-    var parts = [card.name, card.latin, card.tagline, card.author, card.prompt];
+  /* Only discount exact DENYLIST items in a closed, explicitly negative list.
+     This is a scan-only copy: author text is never changed. Requiring a sentence
+     boundary, colon, enumeration and final period avoids treating a loose
+     "avoid" phrase as permission. Other fields and positive uses stay scanned. */
+  function withoutExplicitNegativeItems(prompt) {
+    if (!isStr(prompt)) return prompt;
+    return prompt.replace(/(^|[。！？\r\n])([ \t\u3000]*)(严格避免|嚴格避免)([：:])([^。！？\r\n]+)(?=。)/g,
+      function (whole, boundary, space, label, colon, body) {
+        var items = body.split('、');
+        if (items.length < 2 || items.some(function (item) { return !item.trim(); })) return whole;
+        return boundary + space + label + colon + items.map(function (item) {
+          return DENYLIST.indexOf(item.trim().toLowerCase()) >= 0 ? '' : item;
+        }).join('、');
+      });
+  }
+
+  function textOf(card, forDenylist) {
+    var parts = [card.name, card.latin, card.tagline, card.author,
+      forDenylist ? withoutExplicitNegativeItems(card.prompt) : card.prompt];
     if (card.local) parts.push(card.local.prompt, card.local.neg, card.local.base,
       (card.local.loras || []).map(function (l) { return l && l.name; }).join(' '));
     if (card.cloud) parts.push(card.cloud.prompt, card.cloud.refs, (card.cloud.models || []).join(' '));
@@ -281,7 +298,8 @@ var HFRules = (function () {
     /* --- 内容红线：命中即拦截 --- */
     var all = textOf(card);
     if (IP_PATTERN.test(all)) P('$', '出现「模仿某位创作者」的表述。必须改成可描述的视觉特征');
-    var hits = DENYLIST.filter(function (w) { return all.indexOf(w) >= 0; });
+    var denyText = textOf(card, true);
+    var hits = DENYLIST.filter(function (w) { return denyText.indexOf(w) >= 0; });
     if (hits.length) P('$', '命中 IP 风险词：' + hits.join('、') + '。涉及他人商标或作品，不予上架');
 
     /* --- 复现性 --- */
