@@ -126,9 +126,9 @@ async function run(root, mutant, onlyGroup) {
   const groups = {};
   groups['catalog-evidence-and-assets'] = async s => {
     const entries = s.w.HF_VIDEO_STYLES;
-    assert.strictEqual(entries.length, 14, 'Fourteen reviewed video styles are shipped');
-    assert.strictEqual(new Set(entries.map(i => i.id)).size, 14);
-    assert.strictEqual(manifest.entries.length, 14);
+    assert.strictEqual(entries.length, 23, 'Twenty-three reviewed video styles are shipped');
+    assert.strictEqual(new Set(entries.map(i => i.id)).size, 23);
+    assert.strictEqual(manifest.entries.length, 23);
     assert(/^\d{4}-\d{2}-\d{2}$/.test(manifest.checkedAt));
     for (const item of entries) {
       assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id));
@@ -162,7 +162,7 @@ async function run(root, mutant, onlyGroup) {
     }
   };
   groups['independent-routes-and-navigation'] = async s => {
-    assert.strictEqual(s.all('.video-card').length, 14);
+    assert.strictEqual(s.all('.video-card').length, 23);
     assert.strictEqual(s.q('.nav__link.is-active').textContent, '视频风格');
     const videoIds = s.w.HF_VIDEO_STYLES.map(i => i.id);
     const oldIds = s.w.eval('STYLES.map(function (item) { return item.id; })');
@@ -175,7 +175,7 @@ async function run(root, mutant, onlyGroup) {
     }
     await s.nav('#/'); assert(!s.q('[data-video-page]'));
     await s.nav('#/library?track=text'); assert(!s.q('[data-video-page]'));
-    await s.nav('#/video'); assert.strictEqual(s.all('.video-card').length, 14);
+    await s.nav('#/video'); assert.strictEqual(s.all('.video-card').length, 23);
   };
   groups['search-tag-and-return-context'] = async s => {
     const data = s.w.HF_VIDEO_STYLES;

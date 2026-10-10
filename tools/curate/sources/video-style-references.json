@@ -1,7 +1,691 @@
 {
   "checkedAt": "2026-10-11",
-  "scope": "14 original reusable video-style prompts; 28 limited source reference images, not a popularity ranking",
+  "scope": "23 original reusable video-style prompts; 46 limited source reference images; recognized AI works selected by official broadcast, creator showcase or festival evidence, not a popularity ranking",
   "entries": [
+    {
+      "id": "video-xuan-ink-poetry",
+      "reference": {
+        "title": "When AI Meets Ancient Chinese Poetry ·《墨梅》",
+        "creator": "CGTN / 中央广播电视总台",
+        "url": "https://news.cgtn.com/news/2024-02-06/A-fresh-take-on-Mume-Blossoms-Painted-in-Ink--1qYDwOk3lCg/p.html",
+        "type": "ai",
+        "note": "CGTN 于 2024 年 2 月 6 日发布，页面明确说明属于其 AIGC 古诗动画系列，并使用生成式 AI 重新演绎诗意。这里提炼宣纸水墨段落的通用视觉规则，不复制原诗、画面或作者提示词。",
+        "recognition": "CGTN 官方发布的 AIGC 古诗系列代表例；依据公开出处与视觉辨识度选入，不声称全网热度排名。"
+      },
+      "sources": [
+        {
+          "title": "CGTN 官方作品及 AIGC 说明",
+          "url": "https://news.cgtn.com/news/2024-02-06/A-fresh-take-on-Mume-Blossoms-Painted-in-Ink--1qYDwOk3lCg/p.html"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-xuan-ink-poetry/01.jpg",
+          "time": "00:01.5",
+          "caption": "暖白底保留大面积空域；枝干以浓墨定形，湿润灰墨形成石体和远景，少量浅红提供色彩节拍。",
+          "credit": "CGTN /《墨梅》",
+          "mediaUrl": "https://video.cgtn.com/news/2024-02-06/A-fresh-take-on-Mume-Blossoms-Painted-in-Ink--1qYDwOk3lCg/video/1e3679800c3243798ff25834aabfdf85/1e3679800c3243798ff25834aabfdf85.m3u8",
+          "captureKind": "video-frame",
+          "seconds": 1.5,
+          "sha256": "746bec4743fb49b5718b22d98f43481dcbf7ac8d4ae64509678851521cc0fe80",
+          "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
+          "captureMethod": "ffmpeg 从公开 HLS 视频精确取帧，仅缩小尺寸，未去除台标与字幕。"
+        },
+        {
+          "src": "assets/img/video/video-xuan-ink-poetry/02.jpg",
+          "time": "00:15.0",
+          "caption": "前景枝干、淡雾建筑与微小人物用浓淡分层；这一帧说明水墨空间依赖留白和遮挡，而非密集的写实纹理。",
+          "credit": "CGTN /《墨梅》",
+          "mediaUrl": "https://video.cgtn.com/news/2024-02-06/A-fresh-take-on-Mume-Blossoms-Painted-in-Ink--1qYDwOk3lCg/video/1e3679800c3243798ff25834aabfdf85/1e3679800c3243798ff25834aabfdf85.m3u8",
+          "captureKind": "video-frame",
+          "seconds": 15,
+          "sha256": "e343c0adfe13b86b36cf9f9525e353e197abd3e3f533938f47bc72bad55cd458",
+          "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
+          "captureMethod": "ffmpeg 从公开 HLS 视频精确取帧，仅缩小尺寸，未去除台标与字幕。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保存每部作品两张小尺寸参考截帧，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站 MIT。分析及提示词为本站原创风格练习，非作者原始提示词或制作参数，尚未逐条生成验证。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "对已取得的公开 HLS 视频进行连续取帧比较，结合 CGTN 官方 AIGC 说明；未声称在浏览器完整播放。",
+        "ranges": [
+          "00:01–00:05（每 0.5 秒取样）",
+          "00:14–00:18（每 0.5 秒取样）"
+        ],
+        "observations": [
+          "墨树与远景保持可识别结构，局部淡彩颗粒随时间改变位置，景层有缓慢位移。",
+          "00:04 前后清晰度逐渐下降，转入花朵近景；00:14–00:18 主枝与小人物保持位置关系，雾层及飘散细节轻微变化。"
+        ],
+        "limits": "运动规则中关于受力、附属动作与跨帧稳定的要求为原创生成建议，不作为原片技术流程事实。"
+      },
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-light-color-guofeng",
+      "reference": {
+        "title": "《千秋诗颂》· 黄鹤楼送孟浩然之广陵",
+        "creator": "中央广播电视总台 / CCTV-1",
+        "url": "https://tv.cctv.com/2024/02/28/VIDEkEjz4lr9QX8ZkoQFJNiK240228.shtml",
+        "type": "ai",
+        "note": "央视于 2024 年 2 月推出的文生视频 AI 动画系列，制作说明列明可控图像生成、人物动态生成、文生视频等技术环节。图像截自华语动漫公开发布的对应节目片段，保留 CCTV-1 台标。",
+        "recognition": "央视综合频道播出的 AIGC 古诗动画系列；以可核实的官方播出与制作说明为依据，不采用虚构的热度排行。"
+      },
+      "sources": [
+        {
+          "title": "央视对应节目页",
+          "url": "https://tv.cctv.com/2024/02/28/VIDEkEjz4lr9QX8ZkoQFJNiK240228.shtml"
+        },
+        {
+          "title": "央视首播与 AI 制作说明",
+          "url": "https://news.cctv.com/2024/02/26/ARTIxQBqr2yFDGQ0jJkm1ygK240226.shtml"
+        },
+        {
+          "title": "华语动漫公开节目视频",
+          "url": "https://www.youtube.com/watch?v=m8ZGafD_Z9s"
+        },
+        {
+          "title": "CGTN Europe 英文公开发布与 AI 归类",
+          "url": "https://www.dailymotion.com/video/x9a31bg"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-light-color-guofeng/01.jpg",
+          "time": "05:50.9",
+          "caption": "浅色人物以细线勾出轮廓，暖金天空和灰青水面形成大色层；建筑、船与人物共同建立叙事空间。",
+          "credit": "中央广播电视总台 / CCTV-1《千秋诗颂》",
+          "mediaUrl": "https://www.youtube.com/watch?v=m8ZGafD_Z9s",
+          "captureKind": "video-frame",
+          "seconds": 350.902156,
+          "sha256": "cfe7a67376fbdc172908a6bd8eb5ddc26171237e83755ef99e0633d77ef7d570",
+          "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
+          "captureMethod": "浏览器公开播放器暂停截帧；截取完整视频矩形，等比例缩小，不去除台标或字幕。"
+        },
+        {
+          "src": "assets/img/video/video-light-color-guofeng/02.jpg",
+          "time": "05:05.9",
+          "caption": "人物手势和衣褶由简洁线条说明，赭色桌面、灰蓝衣料与豆绿器物形成有限色板；无需满画面微纹理也能让动作清楚。",
+          "credit": "中央广播电视总台 / CCTV-1《千秋诗颂》",
+          "mediaUrl": "https://www.youtube.com/watch?v=m8ZGafD_Z9s",
+          "captureKind": "video-frame",
+          "seconds": 305.911577,
+          "sha256": "880b29e4778a96accab7f4e279a6d63f78aad392baf3303b2e498b6cfdeeb5a4",
+          "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
+          "captureMethod": "浏览器公开播放器暂停截帧；截取完整视频矩形，等比例缩小，不去除台标或字幕。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保存每部作品两张小尺寸参考截帧，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站 MIT。分析及提示词为本站原创风格练习，非作者原始提示词或制作参数，尚未逐条生成验证。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "浏览器观看并比较公开节目中的局部连续片段，截帧位置由 HTML 视频元素 currentTime 读取。",
+        "ranges": [
+          "04:54–05:08",
+          "05:35–05:51"
+        ],
+        "observations": [
+          "对白场景以有限手势、嘴部变化和姿态保持组织人物表演。",
+          "船只缓行，水面和远近景持续变化；人物轮廓更清楚，背景明暗较柔和。"
+        ],
+        "limits": "未声称看完整集；提示词中的连续性和受力要求是对所见风格的原创泛化。"
+      },
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-eastern-myth-cinema",
+      "reference": {
+        "title": "《中国神话》第一集 ·《补天》",
+        "creator": "央视频 / 总台人工智能工作室 / 清华大学新闻与传播学院元宇宙文化实验室",
+        "url": "https://5gai.cctv.com/2024/04/30/VIDEMFg2fMYhgfIbT5AXqKKM240430.shtml",
+        "type": "ai",
+        "note": "央视 2024 年 3 月 22 日发布说明明确列出该系列美术、分镜、视频、配音和配乐的 AI 参与。这里仅参考《补天》的神话视觉段落，不把后续现实议题段落概括为同一画风。",
+        "recognition": "总台央视频 AI 频道启动时推出的《中国神话》系列；作为官方公开 AIGC 代表作品收录，不声称获奖或排名。"
+      },
+      "sources": [
+        {
+          "title": "央视对应节目页",
+          "url": "https://5gai.cctv.com/2024/04/30/VIDEMFg2fMYhgfIbT5AXqKKM240430.shtml"
+        },
+        {
+          "title": "央视发布与 AI 全流程制作说明",
+          "url": "https://www.cctv.com/2024/03/22/ARTImxwnEZa0LYYPusv8E57A240322.shtml"
+        },
+        {
+          "title": "华语动漫公开节目视频",
+          "url": "https://www.youtube.com/watch?v=3V1dmLDRyuo"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-eastern-myth-cinema/01.jpg",
+          "time": "01:16.0",
+          "caption": "薄纱有叠层透光，细发丝与金色粒子处于青灰环境光中；轻材质的边缘响应为这一风格提供触感。",
+          "credit": "央视频 /《中国神话·补天》",
+          "mediaUrl": "https://www.youtube.com/watch?v=3V1dmLDRyuo",
+          "captureKind": "video-frame",
+          "seconds": 76.019659,
+          "sha256": "30768b195526e40f45cf5c4ad5b1790df85d97db97e4e6401563701188cdabd1",
+          "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
+          "captureMethod": "浏览器公开播放器暂停截帧；截取完整视频矩形并等比例缩小，保留原片字幕。"
+        },
+        {
+          "src": "assets/img/video/video-eastern-myth-cinema/02.jpg",
+          "time": "01:23.2",
+          "caption": "橙红发光区域在青蓝环境中形成体积与反射，云火、岩面和水面具有不同边缘；用来说明能量需要影响周围空间。",
+          "credit": "央视频 /《中国神话·补天》",
+          "mediaUrl": "https://www.youtube.com/watch?v=3V1dmLDRyuo",
+          "captureKind": "video-frame",
+          "seconds": 83.201215,
+          "sha256": "c244d4d39fa0ef4b172b10e687a5e698229de06e3772df7d3c0f654a6a83e400",
+          "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
+          "captureMethod": "浏览器公开播放器暂停截帧；截取完整视频矩形并等比例缩小。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保存每部作品两张小尺寸参考截帧，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站 MIT。分析及提示词为本站原创风格练习，非作者原始提示词或制作参数，尚未逐条生成验证。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "浏览器观看并比较公开节目中的局部连续片段，截帧位置由 HTML 视频元素 currentTime 读取。",
+        "ranges": [
+          "00:55–01:16",
+          "01:15–01:39"
+        ],
+        "observations": [
+          "神话段落可见火光或粒子沿空间运动，衣料和发丝有细部漂动。",
+          "近景人物与较大尺度火云场景相继出现，材质轻重、环境光色和景别有明显变化。"
+        ],
+        "limits": "未声称观看整集；重量、气流传播和连续性规则为原创生成建议，不声称知道作者内部模型参数。"
+      },
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-surreal-everyday-cinema",
+      "reference": {
+        "title": "Air Head",
+        "creator": "shy kids（Walter Woodman / Sidney Leeder / Patrick Cederberg）",
+        "url": "https://www.shy-kids.com/film",
+        "type": "hybrid",
+        "note": "影像由 Sora 生成，并经人工剪辑、调色、稳定、修补与时间调整；此处按 AI 与人工后期混合制作标注，不是实拍纪录。提示词是对摄影气质的原创归纳。",
+        "recognition": "2024 年 OpenAI 首批创作者公开展示作品之一；不作热度排名。"
+      },
+      "sources": [
+        {
+          "title": "shy kids 作者作品页",
+          "url": "https://www.shy-kids.com/film",
+          "note": "Air Head 作品入口与作者署名，链接至作者的公开视频。"
+        },
+        {
+          "title": "OpenAI · Sora: first impressions",
+          "url": "https://openai.com/index/sora-first-impressions/",
+          "note": "2024-03-25 官方首批创作者展示，含 shy kids 的 Air Head 与作者制作花絮；说明展示视频由艺术家编辑。"
+        },
+        {
+          "title": "Air Head · 作者公开完整作品",
+          "url": "https://www.youtube.com/watch?v=G4wJ4WeJrz4",
+          "note": "观察 00:15–00:32 连续片段并检查 00:48.799 场景，仅引用两张帧图。"
+        },
+        {
+          "title": "fxguide 对 Patrick Cederberg 的原始制作访谈",
+          "url": "https://www.fxguide.com/fxfeatured/actually-using-sora/",
+          "note": "后期负责人介绍 Sora 素材、人工修补、纪录式素材选择、调色和速度调整。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-surreal-everyday-cinema/01.jpg",
+          "time": "00:32.146",
+          "caption": "柔和车窗光落在蓝衬衫、皮革和亮黄气球上；异常造型与普通驾驶姿态共享同一空间，荒诞感来自平静的日常关系。",
+          "credit": "© shy kids · Air Head",
+          "mediaUrl": "https://www.youtube.com/watch?v=G4wJ4WeJrz4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "a4faf9078c3c97b4d593da7a1a5e251f9ee354d4c3f6e3a9369600a89af35f69",
+          "seconds": 32.14598,
+          "captureMethod": "作者公开视频暂停帧，按视频区域截图后缩至 960 像素宽；保留片内作者角标。"
+        },
+        {
+          "src": "assets/img/video/video-surreal-everyday-cinema/02.jpg",
+          "time": "00:48.799",
+          "caption": "高处观察商场的多层栏杆与人群，亮黄主体通过冷灰环境被识别；真实尺度、空间视差和普通背景使超现实元素仍有生活感。",
+          "credit": "© shy kids · Air Head",
+          "mediaUrl": "https://www.youtube.com/watch?v=G4wJ4WeJrz4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "42c58439eb6086aecaef2850bf52e31147ff9eafbb49bd8860e5e2fa8c9681c0",
+          "seconds": 48.79875,
+          "captureMethod": "作者公开视频暂停帧，按视频区域截图后缩至 960 像素宽；保留片内作者角标。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "basis": "每项仅引用两张缩小参考画面，配合具体风格评论并链接作者或制作方原页；不分发整片。引用图版权保留，不纳入本站 MIT 许可。",
+        "promptOwnership": "提示词与风格分析为本站原创归纳，不是作者原始提示词，未进行模型生成实测。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "作者公开影片连续片段与制作负责人访谈交叉参考。",
+        "observedRanges": [
+          "Air Head 00:15–00:32"
+        ],
+        "observations": [
+          "连续片段以生活姿态、局部行为与不同观察距离组织人物，气球造型与正常衣物和空间并置。",
+          "原始制作访谈明确许多生成片段偏慢，团队在后期调整至更接近日常速度；因此提示词不把慢动作当作此风格的必要条件。"
+        ],
+        "sourceUrls": [
+          "https://www.youtube.com/watch?v=G4wJ4WeJrz4",
+          "https://www.fxguide.com/fxfeatured/actually-using-sora/"
+        ],
+        "boundary": "对运动与摄影的描述为本站观察和创作建议，不等于作者原始提示词或模型能力保证。"
+      },
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-organic-macro-cinema",
+      "reference": {
+        "title": "ANCESTRA · 有机微观视觉与制作拆解",
+        "creator": "Eliza McNitt / Primordial Soup / Google DeepMind",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/",
+        "type": "hybrid",
+        "note": "作品结合真人拍摄、Imagen 与 Veo 生成素材，以及传统 VFX 合成和调色。此条只分析有机微观视觉方向；图中为官方制作拆解的生成与合成结果，不代表全片均由 AI 制作。",
+        "recognition": "2025 年 6 月 13 日在 Tribeca Festival 首映；依据 Google DeepMind 制作说明收录，不作获奖或热度排名。"
+      },
+      "sources": [
+        {
+          "title": "Google DeepMind · Behind ANCESTRA",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/",
+          "note": "官方制作说明记录 Tribeca 首映、真人与生成素材混合、运动匹配及传统合成；页面直接公开下列视频。"
+        },
+        {
+          "title": "ANCESTRA · 官方运动参考与 Veo 结果对照",
+          "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM__COMBINED_Output_v_003.mp4",
+          "note": "顺序检查 00:00–00:12，右侧为运动匹配的生成结果；引用 00:09 的右侧画面，裁切有记录。"
+        },
+        {
+          "title": "ANCESTRA · 官方蛋壳视点合成拆解",
+          "url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM_RNDR_Breakdown_crodocile_003_1k.mp4",
+          "note": "顺序检查 00:00–00:10.54，从分层元素到完成合成；引用 00:09.5 完成效果阶段。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-organic-macro-cinema/01.jpg",
+          "time": "00:09.000 · 官方运动匹配拆解",
+          "caption": "绿色半透明包覆结构围出深色孔洞，边缘厚度与反光说明微观体积。取自官方运动匹配示例右侧 Veo 结果，裁去左侧输入参考及版式边缘；不是作者原始提示词演示。",
+          "credit": "© Primordial Soup / Google DeepMind · ANCESTRA",
+          "mediaUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM__COMBINED_Output_v_003.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "ba129b176336088dc424daaf930a9f2dd6b4ac33edcd5c0ef1fead8d1c58971d",
+          "seconds": 9,
+          "sourceKind": "official-production-breakdown",
+          "crop": {
+            "x": 976,
+            "y": 292,
+            "width": 888,
+            "height": 496,
+            "sourceWidth": 1920,
+            "sourceHeight": 1080
+          },
+          "captureMethod": "官方公开 MP4 于 00:09 抽帧，裁取生成结果区域，缩放至 960 像素宽。"
+        },
+        {
+          "src": "assets/img/video/video-organic-macro-cinema/02.jpg",
+          "time": "00:09.500 · 官方合成拆解",
+          "caption": "从破裂蛋壳内部观察暖色日光，孔壁的暗面、透光接缝与远处水面形成尺度层次；取自官方拆解末尾的完成合成阶段。",
+          "credit": "© Primordial Soup / Google DeepMind · ANCESTRA",
+          "mediaUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM_RNDR_Breakdown_crodocile_003_1k.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "f738f25cadbf8be90567010a92a2f49764149221264fea23124695d7b83e41b7",
+          "seconds": 9.5,
+          "sourceKind": "official-production-breakdown",
+          "captureMethod": "官方公开 MP4 于 00:09.5 抽帧，保留完整效果区域并缩至 960 像素宽。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "basis": "每项仅引用两张缩小参考画面，配合具体风格评论并链接作者或制作方原页；不分发整片。引用图版权保留，不纳入本站 MIT 许可。",
+        "promptOwnership": "提示词与风格分析为本站原创归纳，不是作者原始提示词，未进行模型生成实测。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "检查官方公开制作拆解的连续帧，并阅读同页制作团队对运动控制的解释。",
+        "observedRanges": [
+          "运动匹配拆解 00:00–00:12",
+          "蛋壳合成拆解 00:00–00:10.54"
+        ],
+        "observations": [
+          "运动匹配片中自然孔洞开合对应到不同材料的生成结果，主要变化是边界和连接区域的连续移动。",
+          "合成拆解将孔壁、日光、水面与前景生物元素分层组合，最终效果通过遮挡与透光维持内部视点。",
+          "官方明确精确路线使用三维预演和运动参考；不能把结果归因于一段文本提示词。"
+        ],
+        "sourceUrls": [
+          "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/",
+          "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM__COMBINED_Output_v_003.mp4",
+          "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM_RNDR_Breakdown_crodocile_003_1k.mp4"
+        ],
+        "boundary": "观察对象为官方制作拆解；未把它冒充独立 AI 电影或作者原始提示词。"
+      },
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-frosted-archive-scifi",
+      "reference": {
+        "title": "The Frost · 第一章",
+        "creator": "Josh Rubin / Waymark Creative Labs / Latent Cinema",
+        "url": "https://www.thefrost.ai/",
+        "type": "hybrid",
+        "note": "本条依据第一章：DALL·E 2 生成图像并经人工动画与剪辑；制作方后来说明第二章才引入 Runway Gen-2。图中为官方第一章 Press Stills，不宣称是真人拍摄。",
+        "recognition": "Waymark 2023 年公开的早期 AI 叙事短片案例；制作方的续篇公告列出 MIT Technology Review 对该项目的报道。"
+      },
+      "sources": [
+        {
+          "title": "The Frost 官方影片与 Press Stills",
+          "url": "https://www.thefrost.ai/",
+          "note": "第一章官方剧照和制作团队署名。引用图片文件为 2A_G101_LD 与 4A_G7，不使用第二章 The_Frost_C2 文件。"
+        },
+        {
+          "title": "Waymark · The Frost: Part Two — Trailer Reveal",
+          "url": "https://waymark.com/post/the-frost-part-two-trailer-reveal",
+          "note": "制作方对照第一章 DALL·E 2 图像加人工动画与第二章 Runway Gen-2 流程，并链接 MIT Technology Review 项目报道。"
+        },
+        {
+          "title": "Waymark · The Frost: Behind the scenes",
+          "url": "https://www.youtube.com/watch?v=p31COxNbTWs",
+          "note": "官方制作访谈；公开字幕 00:19–00:42 解释登山段的迟缓运动与环境压力，描述构思动机而非模型原生能力。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-frosted-archive-scifi/01.jpg",
+          "time": "官方剧照",
+          "caption": "旧色帐篷与灰蓝地面在低角度暖光下形成层次，近处布料和远处山线都保持安静的大形；环境尺度比人物活动更醒目。",
+          "credit": "© Waymark Creative Labs / Latent Cinema · The Frost",
+          "mediaUrl": "https://cdn.prod.website-files.com/67576eef386242535e4d4f97/67578475a5e01a23de09ac87_2A_G101_LD.jpg",
+          "captureKind": "official-still",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "b1f05d573381357c6e1b690ac13e013c7de016cf96f5461fbd4d7c5ba9f63b3c",
+          "sourceKind": "official-press-still",
+          "captureMethod": "制作方网站 Press Stills 第一章图片，缩至 960 像素宽，无内容重绘。"
+        },
+        {
+          "src": "assets/img/video/video-frosted-archive-scifi/02.jpg",
+          "time": "官方剧照",
+          "caption": "近景将粗粝肤质、厚衣领和不同深度的雪粒并置，眼神与面部紧张维持重点；低饱和画面仍区分皮肤、布料与空气。",
+          "credit": "© Waymark Creative Labs / Latent Cinema · The Frost",
+          "mediaUrl": "https://cdn.prod.website-files.com/67576eef386242535e4d4f97/675784d6e873b6cca6db2e17_4A_G7.jpg",
+          "captureKind": "official-still",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "9318c80a64a0e8cc48cd879644df98dcfa12895800c0161fe688c761bc231fff",
+          "sourceKind": "official-press-still",
+          "captureMethod": "制作方网站 Press Stills 第一章图片，缩至 960 像素宽，无内容重绘。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "basis": "每项仅引用两张缩小参考画面，配合具体风格评论并链接作者或制作方原页；不分发整片。引用图版权保留，不纳入本站 MIT 许可。",
+        "promptOwnership": "提示词与风格分析为本站原创归纳，不是作者原始提示词，未进行模型生成实测。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "官方幕后影片可见字幕及制作方文字说明；参考图使用官方剧照，未伪造截帧时码。",
+        "observedRanges": [
+          "官方幕后访谈 00:19–00:42"
+        ],
+        "observations": [
+          "制作团队在公开字幕中解释登山段的缓慢、受困感如何适配从生成图像发展出的动画风格。",
+          "制作方文字明确第一章手工动画处理生成图像，故分析将环境稳定、大形保持与局部受力作为可迁移方向，不宣称图像模型直接完成这些动作。"
+        ],
+        "sourceUrls": [
+          "https://www.youtube.com/watch?v=p31COxNbTWs",
+          "https://waymark.com/post/the-frost-part-two-trailer-reveal"
+        ],
+        "boundary": "并非全片逐镜头研究；剧照与制作资料支持材质及运动方向分析，不构成新提示词的生成验证。"
+      },
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-creature-mock-documentary",
+      "reference": {
+        "title": "CRITTERZ · 2023 原版动画短片",
+        "creator": "Chad Nelson / Native Foreign, in collaboration with OpenAI",
+        "url": "https://www.critterz.tv/",
+        "type": "hybrid",
+        "note": "官方站与原片发布说明明确：DALL·E 生成背景和角色等视觉图像，随后交由动画师与设计团队制作运动与立体环境。因此标为 AI 美术与传统动画结合，不称为文本直接生成整部视频。本站观察原版公开视频的两个连续片段并取两帧，母提示词为原创分析，未模型实测。",
+        "recognition": "制作方公开记录其 Annecy、Tribeca 展映及 PGA Innovation Award 提名；依据可核实的项目影响力选材，不宣称热度排名。"
+      },
+      "sources": [
+        {
+          "title": "CRITTERZ 官方作品与制作说明",
+          "url": "https://www.critterz.tv/",
+          "note": "解释 DALL·E 生成角色和背景、动画团队将二维环境转为立体世界。"
+        },
+        {
+          "title": "CRITTERZ 官方原片",
+          "url": "https://www.youtube.com/watch?v=-qdx6VBJHBU",
+          "note": "官方站嵌入；The Critterz 发布说明记载 Native Foreign 与 OpenAI 合作，以及 AI 图像交给动画师制作。"
+        },
+        {
+          "title": "制作方合作方的项目记录",
+          "url": "https://federationstudios.com/vertigo-native-foreign-announce-ai-animated-film-with-paddington-in-peru-writers/",
+          "note": "记载原版短片的 Annecy、Tribeca 展映与 PGA Innovation Award 提名；本站引用原版，不把后续长片计划当成已上映事实。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-creature-mock-documentary/01.jpg",
+          "time": "00:27.00",
+          "seconds": 27,
+          "caption": "体量很小的灰色生物坐在长满苔藓的环境中，前景蕨类、斜向光束与雾层共同建立栖息地尺度；角色是环境中的观察对象。",
+          "credit": "© Chad Nelson / Native Foreign · CRITTERZ",
+          "mediaUrl": "https://www.youtube.com/watch?v=-qdx6VBJHBU",
+          "captureKind": "video-frame",
+          "sha256": "13a405b639a8f8a98eb8ae9d52c93db50279e4bae7b0fc35705af2ec203d6a89",
+          "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
+        },
+        {
+          "src": "assets/img/video/video-creature-mock-documentary/02.jpg",
+          "time": "01:23.00",
+          "seconds": 83,
+          "caption": "悬挂角色的肢体与树枝保持连接，面部朝向镜头；斜向树干和远处雾层把夸张表情放在可信的空间里。",
+          "credit": "© Chad Nelson / Native Foreign · CRITTERZ",
+          "mediaUrl": "https://www.youtube.com/watch?v=-qdx6VBJHBU",
+          "captureKind": "video-frame",
+          "sha256": "feeb02e09edd059469141cb3fa208314c6002493d26919db7d6ef8eb1bf5e951",
+          "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "少量真实截帧用于具体画面评论与来源介绍；没有声明原作者授予开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "仅保留每部两张缩小参考帧，不随仓库分发完整影片。",
+        "promptAuthorship": "母提示词由本站原创撰写，不是作者原提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "公开原片完整低频概览用于选段；所列连续片段按每0.5秒顺序抽帧检查。没有声称完整实时观影，未评价音轨。",
+        "sourceUrl": "https://www.youtube.com/watch?v=-qdx6VBJHBU",
+        "reviewedRanges": [
+          "00:24–00:36",
+          "01:13–01:25"
+        ],
+        "observed": "前一段以固定或轻微变化的机位观察数种生物；后一段的悬挂角色持续维持抓握关系，眼神、嘴形和身体有克制变化，机位逐渐靠近。",
+        "limits": "抽帧可核对姿态、空间和转场变化，不能代替逐帧质量验收或听觉分析。母提示词为风格迁移建议，不代表原作制作指令。"
+      },
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-memory-dream-transitions",
+      "reference": {
+        "title": "Washed Out — The Hardest Part",
+        "creator": "Paul Trillo / Washed Out / Sub Pop",
+        "url": "https://vimeo.com/941713443",
+        "type": "ai",
+        "note": "Paul Trillo 编写、导演并剪辑的官方音乐录像，使用 OpenAI Sora 生成视觉素材。作者及 Ars Electronica 制作说明描述其将多个生成片段选取、拼接，形成穿梭记忆的连续感；不是一次生成整部影片。本站分析5–17秒及87–99秒两段，母提示词原创且未模型实测。",
+        "recognition": "Ars Electronica 2024「AI in ART」Golden Nica；奖项由主办方页面核实。"
+      },
+      "sources": [
+        {
+          "title": "Paul Trillo 官方 Vimeo 原片",
+          "url": "https://vimeo.com/941713443",
+          "note": "公开播放器确认为作者 Paul Trillo 发布，标题 Washed Out The Hardest Part，约4分2秒。"
+        },
+        {
+          "title": "Ars Electronica 2024 获奖公告",
+          "url": "https://ars.electronica.art/mediaservice/en/2024/06/17/prix-winners-2024/",
+          "note": "主办方 AI in ART Golden Nica 获奖记录。"
+        },
+        {
+          "title": "Ars Electronica 官方展览制作说明",
+          "url": "https://ars.electronica.art/mediaservice/files/2024/08/pressetext-en-prix-ars-electronica-ausstellung.pdf",
+          "note": "官方说明 Sora 生成视频、记忆主题，以及 Written, directed, edited: Paul Trillo。"
+        },
+        {
+          "title": "Ars Electronica 作品与评审说明",
+          "url": "https://starts-prize-call.aec.at/2024/winners/14198/",
+          "note": "主办方说明约700个生成片段中选取55个拼接的创作过程；这是人工导演与剪辑的成片。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-memory-dream-transitions/01.jpg",
+          "time": "00:05.50",
+          "seconds": 5.5,
+          "caption": "青蓝座椅、反复的窗框与顶灯构成强透视轴线；靠近中心的人物让熟悉车厢具有可以穿入记忆的空间感。",
+          "credit": "© Paul Trillo / Washed Out / Sub Pop · The Hardest Part",
+          "mediaUrl": "https://vimeo.com/941713443",
+          "captureKind": "video-frame",
+          "sha256": "5e8e61e945957dd1a8bab8b66581f645cb35c8cd9dec896e9ad28e7fdbc97138",
+          "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
+        },
+        {
+          "src": "assets/img/video/video-memory-dream-transitions/02.jpg",
+          "time": "01:33.00",
+          "seconds": 93,
+          "caption": "成排洗衣机、顶灯与左侧镜面构成深远通道，人物作为记忆锚点；重复设备与反射把日常洗衣空间变成不断延伸的心理空间。",
+          "credit": "© Paul Trillo / Washed Out / Sub Pop · The Hardest Part",
+          "mediaUrl": "https://vimeo.com/941713443",
+          "captureKind": "video-frame",
+          "sha256": "3c61ba89ef6573d7bcdc51c2022200f04702b9ebb4a4919c504fa6615fa5c2d5",
+          "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "少量真实截帧用于具体画面评论与来源介绍；没有声明原作者授予开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "仅保留每部两张缩小参考帧，不随仓库分发完整影片。",
+        "promptAuthorship": "母提示词由本站原创撰写，不是作者原提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "公开原片完整低频概览用于选段；所列连续片段按每0.5秒顺序抽帧检查。没有声称完整实时观影，未评价音轨。",
+        "sourceUrl": "https://vimeo.com/941713443",
+        "reviewedRanges": [
+          "00:05–00:17",
+          "01:27–01:39"
+        ],
+        "observed": "连续片段呈现人物与观看视点穿过多个生活空间，门洞、近身遮挡和镜面构图承担衔接；速度有变化，人物在画面中的位置和重复空间结构维持记忆般的关联。",
+        "limits": "抽帧可核对姿态、空间和转场变化，不能代替逐帧质量验收或听觉分析。母提示词为风格迁移建议，不代表原作制作指令。"
+      },
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-retro-archive-surrealism",
+      "reference": {
+        "title": "Total Pixel Space",
+        "creator": "Jacob Adler",
+        "url": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+        "type": "ai",
+        "note": "作者官网 AI Films 栏目链接的生成式 AI 影像作品，Runway 官方放映室记录其获奖。影片以多种图像与图形讨论图像空间；本站取190–202秒及280–292秒的摄影与超现实段落分析，不把全片归为单一复古画风，也不因其参赛就推断具体生成模型。母提示词为本站原创，未模型实测。",
+        "recognition": "Runway AI Film Festival 2025 Grand Prix；作者官网与主办方放映室均可核实。"
+      },
+      "sources": [
+        {
+          "title": "Jacob Adler 官方 AI 影片页",
+          "url": "https://www.jacobadler.us/ai-photography",
+          "note": "作者将本片置于 AI Films 栏目并链接自己的公开视频，注明2025 Runway Grand Prix。"
+        },
+        {
+          "title": "Jacob Adler 官方原片",
+          "url": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+          "note": "作者频道公开发布，标题 Total Pixel Space。"
+        },
+        {
+          "title": "Runway 官方历届放映室",
+          "url": "https://aif.runwayml.com/screening-room",
+          "note": "AIFF 2025 栏目标注 Total Pixel Space / Jacob Adler / Grand Prix。"
+        },
+        {
+          "title": "作者履历",
+          "url": "https://www.jacobadler.us/bio",
+          "note": "作者介绍其影像论文与2025 Runway AI Film Festival Grand Prix。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-retro-archive-surrealism/01.jpg",
+          "time": "03:18.50",
+          "seconds": 198.5,
+          "caption": "大量不同时代的显示器包围一个工作位置，复古设备、重复矩形和屏幕中的杂多图像把抽象的图像集合变成可感知空间。",
+          "credit": "© Jacob Adler · Total Pixel Space",
+          "mediaUrl": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+          "captureKind": "video-frame",
+          "sha256": "7199c8d06d07afc6726bdc3353f73af0f67b450fc5150352f76d41e9979e0fda",
+          "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
+        },
+        {
+          "src": "assets/img/video/video-retro-archive-surrealism/02.jpg",
+          "time": "04:43.00",
+          "seconds": 283,
+          "caption": "青绿与橙色的复古街景中，车辆悬停而人物继续活动；一个明确异常与日常摄影细节并置，比满屏奇观更有张力。",
+          "credit": "© Jacob Adler · Total Pixel Space",
+          "mediaUrl": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+          "captureKind": "video-frame",
+          "sha256": "de206b3b18f7665c324a43081191eabace6b57fa7482226829ca41e5d04a3c9f",
+          "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "少量真实截帧用于具体画面评论与来源介绍；没有声明原作者授予开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "仅保留每部两张缩小参考帧，不随仓库分发完整影片。",
+        "promptAuthorship": "母提示词由本站原创撰写，不是作者原提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "known-ai-films-20261011",
+      "motionEvidence": {
+        "method": "公开原片完整低频概览用于选段；所列连续片段按每0.5秒顺序抽帧检查。没有声称完整实时观影，未评价音轨。",
+        "sourceUrl": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+        "reviewedRanges": [
+          "03:10–03:22",
+          "04:40–04:52"
+        ],
+        "observed": "第一段由镜片景观切至显示器工作区，观看位置较克制、屏幕内容变化；第二段以剪辑并置悬浮车辆、空中人物与泳池景象，人体、水泡等仍有局部运动。异常与普通环境共存，段落间主要靠观念联系而非连续地理空间。",
+        "limits": "抽帧可核对姿态、空间和转场变化，不能代替逐帧质量验收或听觉分析。母提示词为风格迁移建议，不代表原作制作指令。"
+      },
+      "checkedAt": "2026-10-11"
+    },
     {
       "id": "video-jewel-painterly-cinema",
       "reference": {

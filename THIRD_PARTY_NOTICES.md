@@ -145,9 +145,9 @@ Examples are source results, not site-run model tests. Only the matching dinner 
 
 ## Video style references — copyright retained
 
-The 28 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.
+The 46 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.
 
-The [reference manifest](tools/curate/sources/video-style-references.json) records official sources, creators, capture type, time where applicable, and SHA-256 checksums. Some frames are resized and the Mars and Siv demonstration border is cropped; original work attribution is retained. Official stills are labeled as such, without invented video timestamps.
+The [reference manifest](tools/curate/sources/video-style-references.json) records official sources, creators, capture type, time where applicable, and SHA-256 checksums. Frames are resized; the Mars and Siv demonstration border and one ANCESTRA breakdown frame are cropped to their result areas with crop details recorded; original work attribution is retained. Official stills are labeled as such, without invented video timestamps.
 
 | Visual study | Reference work / official source | Attribution |
 |---|---|---|
@@ -158,12 +158,22 @@ The [reference manifest](tools/curate/sources/video-style-references.json) recor
 | 纸偶黑色科幻 | [Mars and Siv — No Vacancy](https://runway.com/customers/the-making-of-mars-and-siv) | Jeremy Higgins, Britton Korbel / Runway Studios, Studio Snap |
 | 手绘异星生态 / 液态光学片头 | [ONE — environment / Portal Test](https://ricardovillavicencio.com/type/animation/one/) | Ricardo Villavicencio / CHAPTR & The Culture DAO |
 | 水族梦境写实 | [Flow — Cinematic quality](https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/) | Google / Google DeepMind |
-
 | 纪念碑几何动画 | [Zima Blue ·《齐马蓝》](https://www.passion-animation.com/project/love-death-robots-zima-blue/) | Robert Valley / PASSION PICTURES / Netflix |
 | 清线迷幻漫画 | [The Very Pulse of the Machine](https://nexusstudios.com/work/love-death-and-robots/) | Emily Dean / Polygon Pictures / Blur Studio / Netflix |
 | 流光墨线幻境 | [Fish Night ·《鱼之夜》](https://platige.com/project/commercial-branded-content/fish-night/) | Damian Nenow / Platige Image / Netflix |
 | 手作黏土定格 | [Camping (Stop Motion)](https://deepmind.google/models/veo/) | Google DeepMind / Veo |
 | 长绒玩偶动画 | [Keep your characters consistent · a cute monster walking towards the camera](https://deepmind.google/models/veo/) | Google DeepMind / Veo |
 | 套色木刻版画 | [Woodcut style, red coat in a rainy street](https://www.ono-trading.com/en) | Ono Trading Co., Ltd. |
+| 宣纸水墨诗境 | [When AI Meets Ancient Chinese Poetry ·《墨梅》](https://news.cgtn.com/news/2024-02-06/A-fresh-take-on-Mume-Blossoms-Painted-in-Ink--1qYDwOk3lCg/p.html) | CGTN / 中央广播电视总台 |
+| 淡彩勾线国风 | [《千秋诗颂》· 黄鹤楼送孟浩然之广陵](https://tv.cctv.com/2024/02/28/VIDEkEjz4lr9QX8ZkoQFJNiK240228.shtml) | 中央广播电视总台 / CCTV-1 |
+| 东方神话电影 | [《中国神话》第一集 ·《补天》](https://5gai.cctv.com/2024/04/30/VIDEMFg2fMYhgfIbT5AXqKKM240430.shtml) | 央视频 / 总台人工智能工作室 / 清华大学新闻与传播学院元宇宙文化实验室 |
+| 超现实日常纪录 | [Air Head](https://www.shy-kids.com/film) | shy kids（Walter Woodman / Sidney Leeder / Patrick Cederberg） |
+| 有机微观电影 | [ANCESTRA · 有机微观视觉与制作拆解](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/) | Eliza McNitt / Primordial Soup / Google DeepMind |
+| 冷峻档案科幻 | [The Frost · 第一章](https://www.thefrost.ai/) | Josh Rubin / Waymark Creative Labs / Latent Cinema |
+| 奇幻生物拟纪录 | [CRITTERZ · 2023 原版动画短片](https://www.critterz.tv/) | Chad Nelson / Native Foreign, in collaboration with OpenAI |
+| 记忆穿梭梦境 | [Washed Out — The Hardest Part](https://vimeo.com/941713443) | Paul Trillo / Washed Out / Sub Pop |
+| 复古档案超现实 | [Total Pixel Space](https://www.youtube.com/watch?v=zpAeygE4d1A) | Jacob Adler |
 
 The Chinese video prompts and visual analysis are original educational exercises written for this site. They are not the filmmakers' original prompts or production settings. Reference frames are not proof of results obtained with these prompts; no model-output testing is claimed. The seven Love, Death + Robots episodes are labeled as animation references, not AI films. ONE and Mars and Siv use mixed production methods; the Portal Test is not claimed to be a separate AI-generated or award-winning film.
+
+The 2026-10-11 selection adds nine AI or hybrid filmmaking references from broadcasters, creator showcases and established festivals. AI involvement differs by work and is documented per entry; editorial selection does not imply a measured popularity ranking or that the entire production was generated in one model call.
