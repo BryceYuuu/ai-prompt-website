@@ -24,12 +24,11 @@
   }
   function prepared(item) {
     var values = drafts[item.id] || {};
-    return item.promptTemplate.replace(/\{(主体|场景|动作)\}/g, function (token, key) {
-      return values[key] && values[key].trim() ? values[key].trim() : token;
-    });
+    var content = slots.filter(function (key) { return values[key] && values[key].trim(); }).map(function (key) { return key + '：' + values[key].trim(); });
+    return (content.length ? '【我的内容】\n' + content.join('\n') + '\n\n' : '') + item.promptTemplate;
   }
   function output(item) {
-    return prepared(item) + (item.negativePrompt ? '\n\n避免：\n' + item.negativePrompt : '');
+    return prepared(item);
   }
   function matches(item, query) {
     var hay = [item.name, item.latin || '', item.summary, (item.tags || []).join(' '), (item.keywords || []).join(' '), item.reference.title, item.reference.creator, item.bestFor || ''].join(' ').toLowerCase();
@@ -76,11 +75,14 @@
       '<p class="video-credit" data-video-credit>' + esc(frame.credit) + '</p></section>' +
       '<section class="video-notes"><p class="video-eyebrow">THE VISUAL LANGUAGE</p><h2>这个风格，怎么成立？</h2><div>' + item.styleNotes.map(function (note, index) { return '<section class="video-note"><span>0' + (index + 1) + '</span><div><h3>' + esc(note.label) + '</h3><p>' + esc(note.text) + '</p></div></section>'; }).join('') + '</div>' +
       (item.bestFor ? '<p class="video-best"><b>适合做</b>' + esc(item.bestFor) + '</p>' : '') + '</section></div>' +
-      '<section class="video-compose" aria-labelledby="video-compose-title"><div class="video-compose__top"><p class="video-eyebrow">MAKE IT YOURS</p><span>本站原创模板</span></div><h2 id="video-compose-title">写进你的故事</h2><p class="video-compose__hint">填写三个要素，下面的提示词会同步更新。内容仅保留在当前浏览会话。</p>' +
+      '<section class="video-compose" aria-labelledby="video-compose-title"><div class="video-compose__top"><p class="video-eyebrow">THE STYLE PROMPT</p><span>本站原创</span></div><h2 id="video-compose-title">把这种风格，带进你的视频。</h2><p class="video-compose__hint">画风、材质、动态与镜头语言，整理成一套完整提示词。直接复制，或加入你自己的内容。</p>' +
+      '<details class="video-customize"' + (slots.some(function (slot) { return values[slot] && values[slot].trim(); }) ? ' open' : '') + '><summary>加入我的内容 <span>选填</span></summary><p>只填写你需要的部分。内容仅保留在当前浏览会话。</p>' +
       '<div class="video-fields">' + slots.map(function (slot, index) { var hints = ['一位背着帆布包的年轻旅行者', '雨后的山间车站，傍晚', '缓缓抬头，向远处驶来的列车挥手']; return '<label for="video-slot-' + index + '"><span>' + esc(slot) + '</span><textarea id="video-slot-' + index + '" data-video-slot="' + slot + '" maxlength="800" rows="2" placeholder="例如：' + esc(item.examples && item.examples[slot] || hints[index]) + '">' + esc(values[slot] || '') + '</textarea></label>'; }).join('') + '</div>' +
-      '<div class="video-prompt-label"><h3>你的拍摄提示词</h3><button type="button" data-video-action="reset">清空填写</button></div><pre class="video-prompt" data-video-prompt tabindex="0">' + esc(output(item)) + '</pre>' +
+      '<button type="button" class="video-text-button" data-video-action="reset">清空填写</button></details>' +
       '<div class="video-compose__actions"><button type="button" class="btn btn--primary" data-video-action="copy">复制提示词 ' + arrow + '</button><button type="button" class="btn btn--ghost" data-video-action="download">下载 TXT</button></div>' +
-      '<p class="video-usage">先做一个短镜头，再迭代人物一致性与动作。把文字粘贴到支持视频生成的工具；时长、比例请在工具中设置。排除词可合并到主提示词，或填入工具支持的负面提示词栏。</p>' +
+      '<div class="video-prompt-label"><h3>完整风格提示词</h3><button type="button" data-video-action="expand-prompt" aria-expanded="false" aria-controls="video-prompt-text">展开全文</button></div><pre id="video-prompt-text" class="video-prompt" data-video-prompt tabindex="0">' + esc(output(item)) + '</pre>' +
+      (item.negativePrompt ? '<details class="video-avoid"><summary>风格避坑 <span>可选排除词</span></summary><p>' + esc(item.negativePrompt) + '</p><button type="button" class="video-text-button" data-video-action="copy-negative">复制排除词</button><small>仅用于支持负面提示词的工具；不会混入上面的主提示词。</small></details>' : '') +
+      '<p class="video-usage">时长、画幅和故事由你决定。将这套风格与自己的内容搭配使用；图生视频时，可按工具要求另配首帧。不同模型的理解、输入长度和控制能力不同，请按实际结果调整。</p>' +
       (item.caveat ? '<p class="video-caveat">' + esc(item.caveat) + '</p>' : '') + '</section></div>' +
       '<section class="video-provenance"><div><p class="video-eyebrow">REFERENCE / 参考作品</p><h2>' + esc(item.reference.title) + '</h2><p>' + esc(item.reference.creator) + ' <span>· ' + esc(types[item.reference.type] || '视频参考') + '</span></p></div><div><p>' + esc(item.reference.note) + '</p>' + (item.reference.recognition ? '<p class="video-provenance__recognition">收录依据：' + esc(item.reference.recognition) + '</p>' : '') + '<p class="video-rights">仅以少量参考画面分析视觉语言，图片版权归原权利人，不随本站代码按 MIT 授权。提示词为本站原创风格练习，并非作者制作参数或原始提示词，也未由本站逐条生成验证。</p><a href="' + esc(sourceUrl(item.reference.url)) + '" target="_blank" rel="noopener noreferrer">查看原始来源 ↗</a></div></section></article>';
   }
@@ -183,6 +185,13 @@
       if (action === 'prev') choose(index - 1);
       if (action === 'next') choose(index + 1);
       if (action === 'copy') helpers.copyText(output(item), '视频提示词');
+      if (action === 'copy-negative') helpers.copyText(item.negativePrompt, '排除词');
+      if (action === 'expand-prompt') {
+        var expanded = button.getAttribute('aria-expanded') !== 'true';
+        button.setAttribute('aria-expanded', String(expanded));
+        button.textContent = expanded ? '收起全文' : '展开全文';
+        page.querySelector('[data-video-prompt]').classList.toggle('is-expanded', expanded);
+      }
       if (action === 'download') helpers.downloadText(item.id + '-video-prompt.txt', item.name + '\n本站原创视频风格模板\n\n' + output(item) + '\n\n风格参考：' + item.reference.title + '\n' + sourceUrl(item.reference.url) + '\n参考画面并非本站生成结果。');
       if (action === 'reset') {
         delete drafts[item.id];

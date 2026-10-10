@@ -7,6 +7,15 @@ const fs = require('fs'), path = require('path'), assert = require('assert');
 const crypto = require('crypto');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const mutations = {
+  shortPrompt: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].promptTemplate = "美丽的电影风格";' },
+  fixedDuration: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].promptTemplate += "生成六秒视频。";' },
+  fixedAspect: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].promptTemplate += "采用16:9画幅。";' },
+  fixedResolution: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].promptTemplate += "4K分辨率。";' },
+  fixedFps: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].promptTemplate += "24 FPS输出。";' },
+  pureStyle: { group: 'ready-to-copy-style-and-optional-content', file: 'video.js', anchor: 'return prepared(item);', replacement: 'return "请先填写主体" + prepared(item);' },
+  negativeMixed: { group: 'ready-to-copy-style-and-optional-content', file: 'video.js', anchor: 'return prepared(item);', replacement: 'return prepared(item) + item.negativePrompt;' },
+  negativeCopy: { group: 'separate-negative-and-expandable-prompt', file: 'video.js', anchor: "helpers.copyText(item.negativePrompt, '排除词')", replacement: "helpers.copyText(output(item), '排除词')" },
+  expandPrompt: { group: 'separate-negative-and-expandable-prompt', file: 'video.js', anchor: ".classList.toggle('is-expanded', expanded)", replacement: ".classList.toggle('is-expanded', false)" },
   catalog: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES.pop();' },
   evidence: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].frames[0].src = "assets/img/video/missing.jpg";' },
   route: { group: 'independent-routes-and-navigation', file: 'app.js', anchor: "html = window.HFVideo.render(route);", replacement: "html = homeView();" },
@@ -14,8 +23,8 @@ const mutations = {
   searchAnd: { group: 'search-tag-and-return-context', file: 'video.js', anchor: '.split(/\\s+/).every(', replacement: '.split(/\\s+/).some(' },
   keywords: { group: 'search-tag-and-return-context', file: 'video.js', anchor: "(item.keywords || []).join(' ')", replacement: "''" },
   tags: { group: 'search-tag-and-return-context', file: 'video.js', anchor: '(!tag || item.tags.indexOf(tag) >= 0)', replacement: 'true' },
-  copy: { group: 'all-eight-prepared-copy-and-txt', file: 'video.js', anchor: "helpers.copyText(output(item), '视频提示词')", replacement: "helpers.copyText(item.promptTemplate, '视频提示词')" },
-  download: { group: 'all-eight-prepared-copy-and-txt', file: 'video.js', anchor: "+ output(item) + '\\n\\n风格参考：'", replacement: "+ item.promptTemplate + '\\n\\n风格参考：'" },
+  copy: { group: 'prepared-copy-and-txt', file: 'video.js', anchor: "helpers.copyText(output(item), '视频提示词')", replacement: "helpers.copyText(item.promptTemplate, '视频提示词')" },
+  download: { group: 'prepared-copy-and-txt', file: 'video.js', anchor: "+ output(item) + '\\n\\n风格参考：'", replacement: "+ item.promptTemplate + '\\n\\n风格参考：'" },
   escaping: { group: 'input-escaping', file: 'video.js', anchor: 'pre.textContent = output(item)', replacement: 'pre.innerHTML = output(item)' },
   privacy: { group: 'memory-only-private-drafts', file: 'video.js', anchor: 'drafts[item.id][slot] = event.target.value;', replacement: 'drafts[item.id][slot] = event.target.value; localStorage.setItem("video-input-leak", event.target.value);' },
   drafts: { group: 'memory-only-private-drafts', file: 'video.js', anchor: 'function cleanup() { detach();', replacement: 'function cleanup() { drafts = Object.create(null); detach();' },
@@ -117,17 +126,19 @@ async function run(root, mutant, onlyGroup) {
   const groups = {};
   groups['catalog-evidence-and-assets'] = async s => {
     const entries = s.w.HF_VIDEO_STYLES;
-    assert.strictEqual(entries.length, 8, 'Eight reviewed video styles are shipped');
-    assert.strictEqual(new Set(entries.map(i => i.id)).size, 8);
-    assert.strictEqual(manifest.entries.length, 8);
+    assert.strictEqual(entries.length, 14, 'Fourteen reviewed video styles are shipped');
+    assert.strictEqual(new Set(entries.map(i => i.id)).size, 14);
+    assert.strictEqual(manifest.entries.length, 14);
     assert(/^\d{4}-\d{2}-\d{2}$/.test(manifest.checkedAt));
     for (const item of entries) {
       assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id));
       assert(item.name && item.summary && item.negativePrompt);
-      assert.strictEqual(item.styleNotes.length, 3);
+      assert(item.styleNotes.length >= 3 && item.styleNotes.length <= 4, 'Concise visual and motion analysis');
       assert(item.styleNotes.every(n => n.label && n.text));
       assert(item.tags.length >= 1 && Object.hasOwn(types, item.reference.type));
-      for (const slot of slots) assert(item.promptTemplate.includes('{' + slot + '}'), item.id + ' missing ' + slot);
+      assert(item.promptTemplate.length >= 600, item.id + ' needs a developed style prompt');
+      assert(!/\{(?:主体|场景|动作)\}/.test(item.promptTemplate), item.id + ' has unresolved required content');
+      assert(!/\d+(?:\.\d+)?\s*(?:秒|seconds?|fps|帧每秒|[kＫ]|p分辨率)|\d+\s*[:：×x]\s*\d+|[一二两三四五六七八九十]+\s*秒/i.test(item.promptTemplate), item.id + ' fixes duration, frame rate or aspect ratio');
       const record = manifest.entries.find(r => r.id === item.id);
       assert(record, item.id + ' missing source evidence');
       assert.strictEqual(record.rights.status, 'copyright-retained-editorial-reference');
@@ -151,7 +162,7 @@ async function run(root, mutant, onlyGroup) {
     }
   };
   groups['independent-routes-and-navigation'] = async s => {
-    assert.strictEqual(s.all('.video-card').length, 8);
+    assert.strictEqual(s.all('.video-card').length, 14);
     assert.strictEqual(s.q('.nav__link.is-active').textContent, '视频风格');
     const videoIds = s.w.HF_VIDEO_STYLES.map(i => i.id);
     const oldIds = s.w.eval('STYLES.map(function (item) { return item.id; })');
@@ -164,7 +175,7 @@ async function run(root, mutant, onlyGroup) {
     }
     await s.nav('#/'); assert(!s.q('[data-video-page]'));
     await s.nav('#/library?track=text'); assert(!s.q('[data-video-page]'));
-    await s.nav('#/video'); assert.strictEqual(s.all('.video-card').length, 8);
+    await s.nav('#/video'); assert.strictEqual(s.all('.video-card').length, 14);
   };
   groups['search-tag-and-return-context'] = async s => {
     const data = s.w.HF_VIDEO_STYLES;
@@ -195,13 +206,14 @@ async function run(root, mutant, onlyGroup) {
     await s.nav(route(item)); assert.strictEqual(s.q('.video-back').hash, listHash);
     s.q('.video-back').click(); await wait(12); assert.strictEqual(s.w.location.hash, listHash);
   };
-  groups['all-eight-prepared-copy-and-txt'] = async s => {
+  groups['prepared-copy-and-txt'] = async s => {
     for (const item of s.w.HF_VIDEO_STYLES) {
       await s.nav(route(item)); setSlots(s, item.id);
       const visible = s.q('[data-video-prompt]').textContent;
       assert(!/\{(?:主体|场景|动作)\}/.test(visible));
       for (const slot of slots) assert(visible.includes(s.q('[data-video-slot="' + slot + '"]').value));
-      assert(visible.includes(item.negativePrompt));
+      assert(!visible.includes(item.negativePrompt));
+      assert(visible.includes(item.promptTemplate));
       s.q('[data-video-action="copy"]').click(); await wait(1);
       assert.strictEqual(s.copied, visible, item.id + ' copy must match prepared preview');
       s.q('[data-video-action="download"]').click();
@@ -210,6 +222,45 @@ async function run(root, mutant, onlyGroup) {
       assert(download.text.includes(visible), item.id + ' TXT must contain prepared prompt');
       assert(download.text.includes(item.reference.url)); assert(download.text.includes('本站原创'));
       assert(!download.text.includes('data:image/'), 'Reference images are not exported');
+    }
+  };
+  groups['ready-to-copy-style-and-optional-content'] = async s => {
+    for (const item of s.w.HF_VIDEO_STYLES) {
+      await s.nav(route(item));
+      assert.strictEqual(s.q('[data-video-prompt]').textContent, item.promptTemplate);
+      assert(!s.q('.video-customize').open, 'Content fields start optional and collapsed');
+      s.q('[data-video-action="copy"]').click(); await wait(1);
+      assert.strictEqual(s.copied, item.promptTemplate, 'Style is usable without filling fields');
+      s.q('[data-video-action="download"]').click();
+      assert(s.downloads.at(-1).text.includes(item.promptTemplate));
+      assert(!s.downloads.at(-1).text.includes(item.negativePrompt));
+      s.fill('[data-video-slot="主体"]', '  我的陶瓷飞船  ');
+      const partial = s.q('[data-video-prompt]').textContent;
+      assert(partial.startsWith('【我的内容】\n主体：我的陶瓷飞船\n\n'));
+      assert(partial.endsWith(item.promptTemplate));
+      assert(!/场景：|动作：/.test(partial.split('\n\n')[0]), 'Unused content fields are omitted');
+      await s.nav('#/video'); await s.nav(route(item));
+      assert(s.q('.video-customize').open, 'Existing draft stays visible on return');
+    }
+  };
+  groups['separate-negative-and-expandable-prompt'] = async s => {
+    for (const item of s.w.HF_VIDEO_STYLES) {
+      await s.nav(route(item));
+      const prompt = s.q('[data-video-prompt]'), expand = s.q('[data-video-action="expand-prompt"]');
+      assert.strictEqual(expand.getAttribute('aria-controls'), prompt.id);
+      assert.strictEqual(expand.getAttribute('aria-expanded'), 'false');
+      assert(!prompt.classList.contains('is-expanded'));
+      expand.click();
+      assert.strictEqual(expand.getAttribute('aria-expanded'), 'true');
+      assert(prompt.classList.contains('is-expanded'));
+      expand.click();
+      assert.strictEqual(expand.getAttribute('aria-expanded'), 'false');
+      assert(!prompt.classList.contains('is-expanded'));
+      assert(s.q('.video-avoid').textContent.includes(item.negativePrompt));
+      s.q('[data-video-action="copy-negative"]').click(); await wait(1);
+      assert.strictEqual(s.copied, item.negativePrompt);
+      s.q('[data-video-action="copy"]').click(); await wait(1);
+      assert.strictEqual(s.copied, item.promptTemplate, 'Negative copy never changes main prompt');
     }
   };
   groups['input-escaping'] = async s => {
@@ -244,7 +295,7 @@ async function run(root, mutant, onlyGroup) {
     setSlots(s, '-other');
     await s.nav(route(first)); s.q('[data-video-action="reset"]').click();
     assert(slots.every(slot => s.q('[data-video-slot="' + slot + '"]').value === ''));
-    assert(slots.every(slot => s.q('[data-video-prompt]').textContent.includes('{' + slot + '}')));
+    assert.strictEqual(s.q('[data-video-prompt]').textContent, first.promptTemplate);
     await s.nav(route(second)); assert(s.q('[data-video-slot="主体"]').value.endsWith('-other'));
     await s.nav(route(first)); assert.strictEqual(s.q('[data-video-slot="主体"]').value, '');
   };

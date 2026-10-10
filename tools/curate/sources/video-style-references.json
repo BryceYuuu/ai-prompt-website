@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-10-10",
-  "scope": "8 original video-style exercises; 16 limited official reference images, not a popularity ranking",
+  "checkedAt": "2026-10-11",
+  "scope": "14 original reusable video-style prompts; 28 limited source reference images, not a popularity ranking",
   "entries": [
     {
       "id": "video-jewel-painterly-cinema",
@@ -402,6 +402,329 @@
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
       }
+    },
+    {
+      "id": "video-monumental-graphic-minimalism",
+      "reference": {
+        "title": "Zima Blue ·《齐马蓝》",
+        "creator": "Robert Valley / PASSION PICTURES / Netflix",
+        "url": "https://www.passion-animation.com/project/love-death-robots-zima-blue/",
+        "type": "animation",
+        "note": "PASSION 官方作品页署名 Robert Valley，并公开 Zima Blue Trailer。参考为动画制作，不是生成式 AI 视频；本条依据预告中的图形、尺度与动作处理提炼原创风格规则。",
+        "recognition": "《爱，死亡和机器人》中的鲜明图形动画参考；按视觉差异选入，不作为热度排名。"
+      },
+      "sources": [
+        {
+          "title": "PASSION 官方作品与公开预告",
+          "url": "https://www.passion-animation.com/project/love-death-robots-zima-blue/"
+        },
+        {
+          "title": "Zima Blue Trailer 官方嵌入播放器",
+          "url": "https://strangebeast.slateapp.com/embed/clip/1586"
+        },
+        {
+          "title": "PASSION 官方导演介绍：线条、阴影与有限色板",
+          "url": "https://www.passion-animation.com/director/robert-valley/"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-monumental-graphic-minimalism/01.jpg",
+          "time": "00:21.3",
+          "caption": "星体与城市灯火提供尺度参照，单一青蓝几何面突破正常比例；周围深蓝负空间让大形先于细节被读到。",
+          "credit": "© Robert Valley / PASSION PICTURES / Netflix",
+          "mediaUrl": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/0d603a58-f11e-4fe1-91c0-96792e7c4a7f-1920x1080.5000.mp4",
+          "captureKind": "video-frame",
+          "sha256": "f29748a48ca2520722bf94e69dcbdc3a906c92c8e4205226fb425e3df9dea340",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "seconds": 21.3
+        },
+        {
+          "src": "assets/img/video/video-monumental-graphic-minimalism/02.jpg",
+          "time": "00:23.3",
+          "caption": "同一青蓝色面进入城市构图，红色天幕与黑色建筑剪影形成三层主次；巨大的垂直形压住密集细节。",
+          "credit": "© Robert Valley / PASSION PICTURES / Netflix",
+          "mediaUrl": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/0d603a58-f11e-4fe1-91c0-96792e7c4a7f-1920x1080.5000.mp4",
+          "captureKind": "video-frame",
+          "sha256": "cab086dff73688bb149b430d31c1a7d9a49ae51e5532434b70466f079189862b",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "seconds": 23.3
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保存两张小尺寸参考图用于逐图视觉评论；原视频不分发，图片版权归原权利人且不纳入本站 MIT。风格分析与提示词为本站原创练习，非作者制作参数或原始提示词，尚未逐条生成验证。"
+      },
+      "motionEvidence": "观看官方公开预告并按连续帧观察：开场艇的位移与波浪、角色保留姿态、21–24 秒跨越天体与城市尺度的几何形变化。提示词为泛化创作方法，不声称全片仅有慢运动。",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-ligne-claire-psychedelia",
+      "reference": {
+        "title": "The Very Pulse of the Machine",
+        "creator": "Emily Dean / Polygon Pictures / Blur Studio / Netflix",
+        "url": "https://nexusstudios.com/work/love-death-and-robots/",
+        "type": "animation",
+        "note": "Nexus 导演作品页明确列为 3D 动画，说明与 Blur Studio、Polygon Pictures 合作，清线漫画影响及水下般的感知。两张图来自该页公开嵌入的第三辑预告中本集片段；不是 AI 生成案例。",
+        "recognition": "《爱，死亡和机器人》清线漫画与三维动画融合的视觉参考；依据官方制作说明选择。"
+      },
+      "sources": [
+        {
+          "title": "Nexus / Emily Dean 官方作品及美术说明",
+          "url": "https://nexusstudios.com/work/love-death-and-robots/"
+        },
+        {
+          "title": "Nexus 页面公开嵌入的第三辑预告（含本集片段）",
+          "url": "https://player.vimeo.com/video/827630944?h=ae05eb7e6a"
+        },
+        {
+          "title": "Netflix 官方制作特辑",
+          "url": "https://www.youtube.com/watch?v=943NIBTvRVg"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-ligne-claire-psychedelia/01.jpg",
+          "time": "00:33.5",
+          "caption": "黄橙色晶体地貌、细深色轮廓与分层阴影构成立体漫画空间；人物服装和地面保持同一线描密度。",
+          "credit": "© Emily Dean / Polygon Pictures / Blur Studio / Netflix",
+          "mediaUrl": "https://player.vimeo.com/video/827630944?h=ae05eb7e6a",
+          "captureKind": "video-frame",
+          "sha256": "392aecdc83469f2bc5dffb9662391e6ba1bb098df61bb0632aac50d75e276ecf",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "seconds": 33.5,
+          "sourceContext": "Nexus 页面嵌入的 Love, Death + Robots 第三辑公开预告；时间为该预告时间轴，不是付费正片时间轴。"
+        },
+        {
+          "src": "assets/img/video/video-ligne-claire-psychedelia/02.jpg",
+          "time": "00:36.5",
+          "caption": "切换到青蓝近景后，面部线条和有限阴影仍然稳定；透明面罩、皮肤与服装靠不同边缘和高光形状区分。",
+          "credit": "© Emily Dean / Polygon Pictures / Blur Studio / Netflix",
+          "mediaUrl": "https://player.vimeo.com/video/827630944?h=ae05eb7e6a",
+          "captureKind": "video-frame",
+          "sha256": "749fbdff99a07902704912e0402acd23f1a8e189ba571aac245bb97e62ac1076",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "seconds": 36.5,
+          "sourceContext": "Nexus 页面嵌入的 Love, Death + Robots 第三辑公开预告；时间为该预告时间轴，不是付费正片时间轴。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保存两张小尺寸参考图用于逐图视觉评论；原视频不分发，图片版权归原权利人且不纳入本站 MIT。风格分析与提示词为本站原创练习，非作者制作参数或原始提示词，尚未逐条生成验证。"
+      },
+      "motionEvidence": "实际查看 Nexus 嵌入的公开预告与 Netflix 制作特辑；预告33–37秒出现本集负重行走、随后冷色近景。导演官网制作文字提供 underwater feeling 的动态气氛依据，未把静帧解释为固定运镜。",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-luminous-ink-fantasy",
+      "reference": {
+        "title": "Fish Night ·《鱼之夜》",
+        "creator": "Damian Nenow / Platige Image / Netflix",
+        "url": "https://platige.com/project/commercial-branded-content/fish-night/",
+        "type": "animation",
+        "note": "Platige 官方项目页提供剧照及美术、Look Development 和 Digital Ink 团队制作说明；明确讲到移动鱼群照明、逐场景色板与漫画线条处理。为动画制作参考，不是 AI 视频。",
+        "recognition": "《爱，死亡和机器人》中数字墨线、透明材质和移动色光的代表性案例；不按播放量排名。"
+      },
+      "sources": [
+        {
+          "title": "Platige 官方作品、剧照与制作团队说明",
+          "url": "https://platige.com/project/commercial-branded-content/fish-night/"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-luminous-ink-fantasy/01.jpg",
+          "time": "官方剧照",
+          "caption": "橙金外缘包住半透明蓝色内部纹理，光鱼在不透明车门前形成层次；人物脸部和车体接住同色暖光。",
+          "credit": "© Damian Nenow / Platige Image / Netflix",
+          "mediaUrl": "https://platige.com/wp-content/uploads/2019/03/FISH_NIGHT_STILLS-10-1-1800x1074.jpg",
+          "captureKind": "official-still",
+          "sha256": "411a90a38f6d520592d912bb94c695a5c6606deebf3824a4000b268745088137",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        },
+        {
+          "src": "assets/img/video/video-luminous-ink-fantasy/02.jpg",
+          "time": "官方剧照",
+          "caption": "青绿色光体从人物前方穿过，衬衫和面部出现同向局部亮面；透明纹理、实体墨线与暗色背景仍各自清楚。",
+          "credit": "© Damian Nenow / Platige Image / Netflix",
+          "mediaUrl": "https://platige.com/wp-content/uploads/2019/03/FISH_NIGHT_STILLS-12-1-1800x1074.jpg",
+          "captureKind": "official-still",
+          "sha256": "c15b3d37c52e962bd85267e98dd8a53414f5034870aec5bddabb73958528cd7f",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保存两张小尺寸参考图用于逐图视觉评论；原视频不分发，图片版权归原权利人且不纳入本站 MIT。风格分析与提示词为本站原创练习，非作者制作参数或原始提示词，尚未逐条生成验证。"
+      },
+      "motionEvidence": "未以静帧伪称整片观看。运动分析依据 Platige 官方 Lead Look Development 对 moving source of light 的说明；流动弧线、相位差与镜头气质为本站原创生成建议，不声称作者原始参数。",
+      "checkedAt": "2026-10-11"
+    },
+    {
+      "id": "video-handmade-clay",
+      "reference": {
+        "title": "Camping (Stop Motion)",
+        "creator": "Google DeepMind / Veo",
+        "url": "https://deepmind.google/models/veo/",
+        "type": "ai",
+        "note": "Google DeepMind Veo 官方展示页中的生成视频演示，栏目标题为 Camping (Stop Motion)。这是 AI 制作的手工模型视觉，不是已证实的实物黏土定格制作。依据公开8秒片段的完整时间序列分析，本站仅保留两帧用于风格评论；下列提示词为本站原创，未使用模型实测。",
+        "recognition": "选自 Google DeepMind 官方模型展示，依据清楚的捏塑材质与角色表演选材；未按热度或播放量排名。"
+      },
+      "sources": [
+        {
+          "title": "Google DeepMind Veo 官方展示页",
+          "url": "https://deepmind.google/models/veo/",
+          "note": "Camping (Stop Motion) 标题及公开生成视频展示。"
+        },
+        {
+          "title": "Camping (Stop Motion) 官方媒体",
+          "url": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__veo-3__camper.webm",
+          "note": "完整参考片段约8秒；本地分析时按时间顺序检查运动，只发布00:00.75和00:06.75两帧，不随网站分发整片。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-handmade-clay/01.jpg",
+          "time": "00:00.75",
+          "seconds": 0.75,
+          "caption": "张臂姿态让袖口的指压凹痕、背心拼接与圆润手部清楚可见；树木模型和较平的天空背景构成微缩舞台。",
+          "credit": "© Google DeepMind / Veo · Camping (Stop Motion)",
+          "mediaUrl": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__veo-3__camper.webm",
+          "captureKind": "video-frame",
+          "sha256": "22e22b2ada77417e04adade48410ef0044aeb18915e80b83da4f7fc91c66caac",
+          "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
+        },
+        {
+          "src": "assets/img/video/video-handmade-clay/02.jpg",
+          "time": "00:06.75",
+          "seconds": 6.75,
+          "caption": "稍后角色已放下手臂，旁边角色抬起前爪；刻槽毛发与平滑面部形成材料区别，脚底、树木和地面关系保持稳定。",
+          "credit": "© Google DeepMind / Veo · Camping (Stop Motion)",
+          "mediaUrl": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__veo-3__camper.webm",
+          "captureKind": "video-frame",
+          "sha256": "0a1e1489014b1f20332605581568c2afe07d685957dac78d873dc4a8cf37499e",
+          "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于具体风格评论，保留原权利人版权，不随代码按 MIT 授权；不分发原视频。本站原创提示词并非作者原词，未经模型输出实测。"
+      }
+    },
+    {
+      "id": "video-plush-character",
+      "reference": {
+        "title": "Keep your characters consistent · a cute monster walking towards the camera",
+        "creator": "Google DeepMind / Veo",
+        "url": "https://deepmind.google/models/veo/",
+        "type": "ai",
+        "note": "Google DeepMind Veo 官方角色一致性展示中的公开生成视频，页面给出 a cute monster walking towards the camera。本站分析的是完整8秒演示的绒毛材质与步态，并非实拍玩偶工艺。参考只保留两帧用于评论；本站母提示词是原创概括，未做模型实测。",
+        "recognition": "选自官方角色一致性展示，因长绒材质和完整步态区别于现有画风而收录；未声称热门排名或获奖。"
+      },
+      "sources": [
+        {
+          "title": "Google DeepMind Veo 角色一致性展示",
+          "url": "https://deepmind.google/models/veo/",
+          "note": "Keep your characters consistent 栏目与公开角色生成演示。"
+        },
+        {
+          "title": "角色一致性演示官方媒体",
+          "url": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__controls__character-consistency__output-1.webm",
+          "note": "完整参考片段约8秒；按时间序列分析毛束、重心与视差，仅发布00:01.00和00:05.25两帧，不分发整片。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-plush-character/01.jpg",
+          "time": "00:01.00",
+          "seconds": 1,
+          "caption": "抬起的脚与反向摆动的手臂使步态可读；腹部毛束、脸部较短绒毛和柔软轮廓建立表面层次。",
+          "credit": "© Google DeepMind / Veo · Character consistency demo",
+          "mediaUrl": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__controls__character-consistency__output-1.webm",
+          "captureKind": "video-frame",
+          "sha256": "a71a77de9ac88d09d124738ae022e8e6a3277bba2688c1f4f2423c0e4c110f4d",
+          "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
+        },
+        {
+          "src": "assets/img/video/video-plush-character/02.jpg",
+          "time": "00:05.25",
+          "seconds": 5.25,
+          "caption": "行进后的视线与支撑姿态有所变化，主体的大色块仍在相同身体部位；走廊结构的位移提供运动深度。",
+          "credit": "© Google DeepMind / Veo · Character consistency demo",
+          "mediaUrl": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__controls__character-consistency__output-1.webm",
+          "captureKind": "video-frame",
+          "sha256": "437e618de891376bce33767d162cff5d6e0563ad4f818d4cec2a1ac746ad03f3",
+          "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于具体风格评论，保留原权利人版权，不随代码按 MIT 授权；不分发原视频。本站原创提示词并非作者原词，未经模型输出实测。"
+      }
+    },
+    {
+      "id": "video-layered-woodcut",
+      "reference": {
+        "title": "Woodcut style, red coat in a rainy street",
+        "creator": "Ono Trading Co., Ltd.",
+        "url": "https://www.ono-trading.com/en",
+        "type": "ai",
+        "note": "制作方官网 CLIPS 栏目明确称这些是使用生成式 AI 制作的样片，未披露本条的具体模型。完整约5秒视频在写实、木刻、线稿和彩窗之间转换；本站只用约2.00与2.50秒的木刻中段作少量画面分析。本站原创母提示词要求新作品从头到尾维持套色木刻，不复刻参考片的媒介转换、红衣人物或街道剧情；提示词未模型实测。",
+        "recognition": "依据制作方公开 AI 样片与可核实的木刻中段选材，用来补充图形化印刷方向；没有热度或奖项依据。"
+      },
+      "sources": [
+        {
+          "title": "Ono Trading 官方生成式 AI 样片集",
+          "url": "https://www.ono-trading.com/en",
+          "note": "CLIPS 栏目写明 A few samples produced with generative AI；视频标识为 Woodcut style, red coat in a rainy street。"
+        },
+        {
+          "title": "Woodcut style 官方公开媒体",
+          "url": "https://www.ono-trading.com/videos/clip-07.mp4",
+          "note": "完整片段约5.04秒，包含多种媒介转换；仅截取00:02.00与00:02.50的木刻中段，不分发整片。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-layered-woodcut/01.jpg",
+          "time": "00:02.00",
+          "seconds": 2,
+          "caption": "木刻中段以粗黑轮廓和细排线重组街道，红、青与赭色成为分明色版；深度主要由汇聚透视和遮挡保持。",
+          "credit": "© Ono Trading Co., Ltd. · Woodcut style demo",
+          "mediaUrl": "https://www.ono-trading.com/videos/clip-07.mp4",
+          "captureKind": "video-frame",
+          "sha256": "366fe4add49ae4626bd946a67c12d38d8d67b28275349680247ebb9d05cf1977",
+          "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
+        },
+        {
+          "src": "assets/img/video/video-layered-woodcut/02.jpg",
+          "time": "00:02.50",
+          "seconds": 2.5,
+          "caption": "同一行走主体稍后的木刻画面，纸色与灰黑占比增加；雨以浅色直线出现，衣摆和地面阴影成为明确图形。",
+          "credit": "© Ono Trading Co., Ltd. · Woodcut style demo",
+          "mediaUrl": "https://www.ono-trading.com/videos/clip-07.mp4",
+          "captureKind": "video-frame",
+          "sha256": "c8dd22aaf71d653a93d11d975affac087bc11d347922c53a92d3917155c47195",
+          "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于具体风格评论，保留原权利人版权，不随代码按 MIT 授权；不分发原视频。本站原创提示词并非作者原词，未经模型输出实测。"
+      }
     }
-  ]
+  ],
+  "promptRevision": "2026-10-11: reusable appearance, material, motion, camera and continuity rules; no fixed duration, aspect ratio, plot or shot list"
 }

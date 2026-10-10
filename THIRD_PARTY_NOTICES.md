@@ -145,7 +145,7 @@ Examples are source results, not site-run model tests. Only the matching dinner 
 
 ## Video style references — copyright retained
 
-The 16 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.
+The 28 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.
 
 The [reference manifest](tools/curate/sources/video-style-references.json) records official sources, creators, capture type, time where applicable, and SHA-256 checksums. Some frames are resized and the Mars and Siv demonstration border is cropped; original work attribution is retained. Official stills are labeled as such, without invented video timestamps.
 
@@ -159,4 +159,11 @@ The [reference manifest](tools/curate/sources/video-style-references.json) recor
 | 手绘异星生态 / 液态光学片头 | [ONE — environment / Portal Test](https://ricardovillavicencio.com/type/animation/one/) | Ricardo Villavicencio / CHAPTR & The Culture DAO |
 | 水族梦境写实 | [Flow — Cinematic quality](https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/) | Google / Google DeepMind |
 
-The Chinese video prompts and visual analysis are original educational exercises written for this site. They are not the filmmakers' original prompts or production settings. Reference frames are not proof of results obtained with these prompts; no model-output testing is claimed. The four Love, Death + Robots episodes are labeled as animation references, not AI films. ONE and Mars and Siv use mixed production methods; the Portal Test is not claimed to be a separate AI-generated or award-winning film.
+| 纪念碑几何动画 | [Zima Blue ·《齐马蓝》](https://www.passion-animation.com/project/love-death-robots-zima-blue/) | Robert Valley / PASSION PICTURES / Netflix |
+| 清线迷幻漫画 | [The Very Pulse of the Machine](https://nexusstudios.com/work/love-death-and-robots/) | Emily Dean / Polygon Pictures / Blur Studio / Netflix |
+| 流光墨线幻境 | [Fish Night ·《鱼之夜》](https://platige.com/project/commercial-branded-content/fish-night/) | Damian Nenow / Platige Image / Netflix |
+| 手作黏土定格 | [Camping (Stop Motion)](https://deepmind.google/models/veo/) | Google DeepMind / Veo |
+| 长绒玩偶动画 | [Keep your characters consistent · a cute monster walking towards the camera](https://deepmind.google/models/veo/) | Google DeepMind / Veo |
+| 套色木刻版画 | [Woodcut style, red coat in a rainy street](https://www.ono-trading.com/en) | Ono Trading Co., Ltd. |
+
+The Chinese video prompts and visual analysis are original educational exercises written for this site. They are not the filmmakers' original prompts or production settings. Reference frames are not proof of results obtained with these prompts; no model-output testing is claimed. The seven Love, Death + Robots episodes are labeled as animation references, not AI films. ONE and Mars and Siv use mixed production methods; the Portal Test is not claimed to be a separate AI-generated or award-winning film.
