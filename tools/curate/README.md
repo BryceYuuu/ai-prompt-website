@@ -1,6 +1,6 @@
 # 内容维护
 
-本目录离线生成当前 103 条内容（55 条图片、48 条文字，其中 37 条图片来自 Threads）。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-*.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
+本目录离线生成当前 113 条内容（65 条图片、48 条文字，其中 47 条图片来自 Threads）。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-*.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
 
 来源快照、SHA256、原始署名和授权位于 sources/。audit.json 记录对旧 108 条目录的退役/替换处理；previous-catalog.json 仅保留旧目录的 id、名称和分类，用于复现审查记录。GitHub stars 以 sources/repository-stars.json 的逐仓库日期为准；当前采用的两个来源已于 2026-09-26 重新核验，是仓库级快照，不代表单条模板热度。
 
@@ -23,3 +23,7 @@ keywords.json 维护每条模板的中英文搜索别名；添加后重新运行
 ## 新来源的导入审核
 
 新增公开 Threads 来源先进入 [intake 待审区](intake/README.md)，用 `review_threads.py` 对照现有目录和同批候选检查出处、重复与素材完整性。机器相似度不能替代核心任务的人工对比；换文案、换图或换账号不算新增条目。未知授权、原文/原图不完整的条目不进入生成器。构建额外拒绝重复 ID、帖子身份和归一化后完全相同的 Threads 核心提示词，避免后读账号静默覆盖前一个账号。
+
+2026-10-10 按维护者要求精选 @smartaitools6 的 10 条图片提示词及 16 张对应案例图，不做全量归档。6 条图生图、4 条文生图；原文来自作者帖文、作者回复或作者末页文字图。`sources/threads-smartaitools6.json` 记录逐项图片选择、原文校验和、去重依据与本账号单独确认的授权。只收与所选原文一致的案例，排除输入原照和其他场景变体。
+
+Threads 清单的 `track` 默认为 `edit`；只有直接按文字生成图片时填写 `create`，同时必须给出准确 `input`、`output`。生成器会为文生图使用生成能力检查，不添加上传原图或主体保真约束；作者原文保持不变。对应的构建夹具测试、前端回归和三个变异用于防止两类工作流混淆。

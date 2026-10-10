@@ -115,9 +115,10 @@
       "enum": [
         "both",
         "text",
-        "edit"
+        "edit",
+        "create"
       ],
-      "description": "图片风格固定为 both（必须有本地与云端两条轨道）；其余分类固定为 text。由 allOf 强制校验。"
+      "description": "图片提示词使用 edit（上传原图）或 create（文生图）；兼容历史 both 双轨。其他分类固定为 text。"
     },
     "version": {
       "type": "string",
@@ -354,7 +355,7 @@
   },
   "allOf": [
     {
-      "description": "图片风格：两条轨道缺一不可，且顶层不放 prompt（提示词的唯一出处是轨道）",
+      "description": "图片 edit/create 使用完整顶层提示词；历史 both 双轨各自提供提示词。",
       "if": {
         "properties": {
           "category": {
@@ -369,7 +370,10 @@
         "if": {
           "properties": {
             "track": {
-              "const": "edit"
+              "enum": [
+                "edit",
+                "create"
+              ]
             }
           }
         },

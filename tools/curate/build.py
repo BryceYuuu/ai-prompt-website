@@ -106,6 +106,10 @@ def normalized_core(text):
 for threads in thread_collections:
  for item in threads['cases']:
   id=item['id']
+  track=item.get('track','edit')
+  require(track in {'edit','create'}, f'Invalid Threads image track: {id}')
+  if track=='create':
+   require(bool(item.get('input')) and bool(item.get('output')), f'Threads create input/output missing: {id}')
   require(id not in curated and id not in thread_cards, f'Duplicate catalog ID: {id}')
   for url in {item['postUrl'],item['promptUrl']}:
    key=thread_post_key(url)
@@ -120,10 +124,13 @@ for threads in thread_collections:
   core=normalized_core(original)
   require(core and core not in thread_prompt_owners, f'Duplicate Threads core prompt: {id} / {thread_prompt_owners.get(core)}')
   thread_prompt_owners[core]=id
-  prompt='【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n'+original+'\n\n【保持不变】'+item.get('preserve','按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。')+'\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。'
+  if track=='create':
+   prompt='【使用前确认】按下方文字要求生成图片。若不具备图像生成能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n'+original+'\n\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。'
+  else:
+   prompt='【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\n'+original+'\n\n【保持不变】'+item.get('preserve','按上方作者要求保留原照片主体的身份、主要轮廓、姿态与关键配色。')+'\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。'
   cover={k:v for k,v in item['images'][0].items() if k!='sha256'}
   cover.update({'title':item['name']+' · 作者案例','creator':threads['creator'],'license':'经授权收录','licenseUrl':'https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#'+threads.get('noticeAnchor','threads--chloe_lai'),'sourceUrl':item['postUrl'],'provider':'threads'})
-  thread_cards[id]={'id':id,'name':item['name'],'latin':item['latin'],'tagline':item['tagline'],'category':'image','uses':['海报','社交封面'],'moods':item['moods'],'track':'edit','version':'1.0','author':threads['creator'],'license':'CUSTOM','licenseNote':threads['licenseNote'],'licenseText':threads['licenseNote'],'createdAt':date,'updated':date,'art':{'g':'soft','p':['#F8F8F3','#DDD9CB','#374D46','#4541C4'],'seed':100+len(thread_cards)},'prompt':prompt,'slots':['补充要求，可留空'],'cover':cover,'local':None,'cloud':None,'source':{'provider':'threads','repo':'Threads · @'+threads['profileUrl'].rsplit('@',1)[1],'url':item['postUrl'],'promptUrl':item['promptUrl'],'act':item['name'],'contributor':threads['creator'],'license':'经授权收录；原作者保留权利','checkedAt':date,'mode':'保留作者原文，仅补充上传检查及可选需求；排版换行整理','sha256':item['promptSha256'],'snapshot':item['promptFile']},'curation':{'input':item['input'],'output':item.get('output','一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果'),'status':'source-example-not-site-tested','method':'作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测','reviewedAt':date}}
+  thread_cards[id]={'id':id,'name':item['name'],'latin':item['latin'],'tagline':item['tagline'],'category':'image','uses':['海报','社交封面'],'moods':item['moods'],'track':track,'version':'1.0','author':threads['creator'],'license':'CUSTOM','licenseNote':threads['licenseNote'],'licenseText':threads['licenseNote'],'createdAt':date,'updated':date,'art':{'g':'soft','p':['#F8F8F3','#DDD9CB','#374D46','#4541C4'],'seed':100+len(thread_cards)},'prompt':prompt,'slots':['补充要求，可留空'],'cover':cover,'local':None,'cloud':None,'source':{'provider':'threads','repo':'Threads · @'+threads['profileUrl'].rsplit('@',1)[1],'url':item['postUrl'],'promptUrl':item['promptUrl'],'act':item['name'],'contributor':threads['creator'],'license':'经授权收录；原作者保留权利','checkedAt':date,'mode':('保留作者原文，仅补充图像生成能力检查及可选需求；排版换行整理' if track=='create' else '保留作者原文，仅补充上传检查及可选需求；排版换行整理'),'sha256':item['promptSha256'],'snapshot':item['promptFile']},'curation':{'input':item['input'],'output':item.get('output','一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果'),'status':'source-example-not-site-tested','method':'作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测','reviewedAt':date}}
   if item.get('promptUrls'):
    thread_cards[id]['source']['promptUrls']=item['promptUrls']
 # Newly reviewed styles lead the image-only homepage; existing IDs remain stable.
@@ -142,10 +149,10 @@ for c in curated.values():
    c['guide'].append({'t':'p','v':'来源图中的红色光剑与角色装束仅属于该案例。本站模板参考磨砂玻璃的虚实效果，默认生成黑白剪影并沿用你上传的主体，不要求添加来源图中的角色或道具。如需彩色效果，可将提示词中的“黑白剪影”改为“保留原图色彩的剪影”。'})
   cov=c['cover']
   if c['source'].get('provider')=='threads':
-   c['guide'][4]['v']=['在支持图像编辑的工具中上传自己的原照片。','作者原文已保留；按需填写补充要求，再复制整段提示词。','检查上下对照布局和主体一致性；示例仅展示作者原帖效果。']
+   c['guide'][4]['v']=(['在支持文生图的 AI 工具中准备主题、场景或文字要求。','作者原文已保留；按需填写补充要求，再复制整段提示词。','检查主题、构图与文字是否符合要求；示例仅展示作者原帖效果。'] if c['track']=='create' else ['在支持图像编辑的工具中上传自己的原照片。','作者原文已保留；按需填写补充要求，再复制整段提示词。','检查上下对照布局和主体一致性；示例仅展示作者原帖效果。'])
    c['guide'][-1]['v']='图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。'
    item=thread_items[c['id']]
-   c['guide'][4]['v'][2]=item.get('guideCheck','按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。')
+   c['guide'][4]['v'][2]=item.get('guideCheck',('按本条交付说明检查主题、构图、文字与画幅；示例仅展示作者原帖效果。' if c['track']=='create' else '按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。'))
    if item.get('usageNote'):
     c['guide'].append({'t':'warn','v':item['usageNote']})
    for i,picture in enumerate(item['images'],1):

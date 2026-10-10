@@ -420,7 +420,7 @@
     var values = drafts[s.id] || {};
     return '<section class="builder" aria-labelledby="builder-title"><div class="builder__head"><div><span class="step-label">01 / PERSONALIZE</span><h2 id="builder-title">填入你的需求</h2></div>' +
       '<button type="button" class="text-button" data-action="reset-slots" data-id="' + esc(s.id) + '">重置</button></div>' +
-      (s.category === 'image' ? '<p class="builder__hint">原图请上传到支持图像编辑的 AI 工具。这里先准备好提示词。</p>' : '<p class="builder__hint">填入材料后，下方提示词会实时更新。也可以直接复制空白模板。</p>') +
+      (s.category === 'image' ? '<p class="builder__hint">' + (s.track === 'create' ? '填写主题与画面要求，再到支持文生图的 AI 工具中生成。' : '原图请上传到支持图像编辑的 AI 工具。这里先准备好提示词。') + '</p>' : '<p class="builder__hint">填入材料后，下方提示词会实时更新。也可以直接复制空白模板。</p>') +
       '<div class="builder__fields">' + (s.slots || []).map(function (slot, i) {
         return '<label class="builder__field" for="slot-' + i + '"><span>' + esc(slot.split('，')[0]) + '</span>' +
           '<textarea id="slot-' + i + '" rows="' + (s.category === 'image' ? 2 : 3) + '" maxlength="20000" data-action="slot-input" data-id="' + esc(s.id) + '" data-slot="' + esc(slot) + '" placeholder="' +
@@ -526,6 +526,7 @@
   function trackTags(s) {
     var out = '';
     if (s.track === 'edit') out += '<span class="tag tag--outline">上传原图</span>';
+    if (s.track === 'create') out += '<span class="tag tag--outline">文生图</span>';
     if (s.local) out += '<span class="tag tag--local">本地</span>';
     if (s.cloud) out += '<span class="tag tag--cloud">云端</span>';
     if (s.category !== 'image') out += '<span class="tag tag--outline">任务模板</span>';
@@ -949,7 +950,7 @@
             '</div>' +
             '<span class="filters__label filters__label--end">类型</span>' +
             '<div class="seg" role="group" aria-label="按内容类型筛选">' +
-              [['all', '全部'], ['both', '图片转换'], ['text', '文字任务']].map(function (tr) {
+              [['all', '全部'], ['both', '图片创作'], ['text', '文字任务']].map(function (tr) {
                 var on = f.track === tr[0];
                 return '<a class="seg__item' + (on ? ' is-on' : '') +
                   '" href="' + esc(filterHref('track', tr[0])) + '"' +
@@ -1168,10 +1169,10 @@
     var zonehead = '<div class="zonehead"><h2>提示词</h2><span class="line"></span>' +
       '<span class="eyebrow">复制即用</span></div>';
 
-    if (!isImage || s.track === 'edit') {
+    if (!isImage || s.track === 'edit' || s.track === 'create') {
       return '<div class="promptzone">' + builderHTML(s) +
         '<div class="prepared-heading"><span class="step-label">02 / READY TO GO</span><h2>你的专属提示词</h2></div>' +
-        promptBlock(s.track === 'edit' ? '先上传原图，再粘贴提示词' : '填入材料，获得可核对的交付结果', preparedPrompt(s), s.id + ':text') +
+        promptBlock(s.track === 'edit' ? '先上传原图，再粘贴提示词' : (s.track === 'create' ? '填写主题，再到 AI 工具生成图片' : '填入材料，获得可核对的交付结果'), preparedPrompt(s), s.id + ':text') +
         '<p class="prepared-note">未填写的项目会保留花括号。复制后，在 AI 工具中补充也可以。</p>' +
         '<button type="button" class="text-button prepared-download" data-action="download-prepared" data-id="' + esc(s.id) + '">' + ICON.download + '下载填写后的提示词</button></div>';
     }
@@ -1417,7 +1418,7 @@
             '<div class="gh__actions">' + saveButton(s) +
               /* 详情页是唯一的复制入口 —— 进来先看到生成效果和使用说明，再复制。 */
               '<button class="btn btn--primary btn--lg" data-action="copy-prompt" data-id="' +
-                esc(s.category === 'image' && s.track !== 'edit' ? s.id + ':' + state.detailTrack : s.id + ':text') + '">' +
+                esc(s.category === 'image' && s.track === 'both' ? s.id + ':' + state.detailTrack : s.id + ':text') + '">' +
                 ICON.copy + '复制提示词</button>' +
             '</div>' +
           '</header>' +
@@ -1427,7 +1428,7 @@
               '<div class="detail-workspace' + (s.category === 'image' ? ' detail-workspace--image' : '') + '">' +
                 promptZoneHTML(s) +
                 (s.category === 'image'
-                  ? '<div class="detail-preview prose">' + notesHTML(s, true) + '<button type="button" class="preview-zoom" data-action="image-expand" data-id="' + esc(s.id) + '">查看完整大图 ↗</button>' + exampleGalleryHTML(s) + '<div class="preview-brief"><span class="step-label">你的创作起点</span><h2>' + esc(s.curation.input) + '</h2><p>上传原图 → 填写偏好 → 复制使用</p><span>支持图像编辑的 AI 工具适用</span></div></div>'
+                  ? '<div class="detail-preview prose">' + notesHTML(s, true) + '<button type="button" class="preview-zoom" data-action="image-expand" data-id="' + esc(s.id) + '">查看完整大图 ↗</button>' + exampleGalleryHTML(s) + '<div class="preview-brief"><span class="step-label">你的创作起点</span><h2>' + esc(s.curation.input) + '</h2><p>' + (s.track === 'create' ? '填写主题 → 复制提示词 → 生成图片' : '上传原图 → 填写偏好 → 复制使用') + '</p><span>' + (s.track === 'create' ? '支持文生图的 AI 工具适用' : '支持图像编辑的 AI 工具适用') + '</span></div></div>'
                   : '<div class="detail-start detail-start--' + esc(s.category) + '"><span class="detail-kicker">THE DELIVERABLE / 你将得到</span><h2>让每一次提问，<br>都有明确的产出。</h2><ol>' + s.curation.output.split('；').map(function (x, i) { return '<li><b>' + pad2(i + 1) + '</b><span>' + esc(x) + '</span></li>'; }).join('') + '</ol><p>根据 Fabric 开源方法整理。AI 输出请结合交付清单核对。</p></div>') +
               '</div>' +
               takeawayHTML(s) +
@@ -1457,10 +1458,10 @@
   /* ============================================================= about == */
 
   function aboutView() {
-    return '<section class="about-studio wrap"><div class="about-studio__intro"><span class="eyebrow">LESS GUESSWORK. MORE MAKING.</span><h1>好提示词，<br>解决具体问题。</h1><p>' + imageStyles().length + ' 个照片转换模板，' + (STYLES.length - imageStyles().length) + ' 个实用任务。<br>把模糊的想法，变成有输入、有步骤、有交付的任务。</p></div>' +
-      '<div class="about-steps"><article><span>01 / DISCOVER</span><h2>找到你的起点</h2><p>图片首页选画风，场景提示词选任务。可以按分类浏览，也可以搜索「会议纪要」「像素画」这样的日常说法。</p></article><article><span>02 / PERSONALIZE</span><h2>填入真实需求</h2><p>详情页填写自己的材料，提示词实时更新。用右侧交付清单检查任务是否清楚，未填写的项目会保留花括号。</p></article><article><span>03 / MAKE IT YOURS</span><h2>带到 AI 工具使用</h2><p>复制完整提示词，粘贴到你常用的 AI 工具。图片任务还需要上传原图；逐项核对结果，再小步调整。</p></article></div>' +
+    return '<section class="about-studio wrap"><div class="about-studio__intro"><span class="eyebrow">LESS GUESSWORK. MORE MAKING.</span><h1>好提示词，<br>解决具体问题。</h1><p>' + imageStyles().length + ' 个图片创作模板，' + (STYLES.length - imageStyles().length) + ' 个实用任务。<br>把模糊的想法，变成有输入、有步骤、有交付的任务。</p></div>' +
+      '<div class="about-steps"><article><span>01 / DISCOVER</span><h2>找到你的起点</h2><p>图片首页选画风，场景提示词选任务。可以按分类浏览，也可以搜索「会议纪要」「像素画」这样的日常说法。</p></article><article><span>02 / PERSONALIZE</span><h2>填入真实需求</h2><p>详情页填写自己的材料，提示词实时更新。用右侧交付清单检查任务是否清楚，未填写的项目会保留花括号。</p></article><article><span>03 / MAKE IT YOURS</span><h2>带到 AI 工具使用</h2><p>复制完整提示词，粘贴到你常用的 AI 工具。图生图任务需要上传原图，文生图任务填写画面要求；逐项核对结果，再小步调整。</p></article></div>' +
       '<div class="about-facts"><article><span class="eyebrow">YOUR OWN SPACE</span><h2>轻装开始，无需登录。</h2><p>点击书签，把模板放进「我的收藏」。收藏只保存在当前浏览器，清理浏览器数据会清空；填写的材料只在页面内存中使用，刷新即清空。本站提供提示词，不直接生成图片，也不把填写的材料发送到服务器。</p></article>' +
-      '<article><span class="eyebrow">OPEN SOURCES, CLEAR EXPECTATIONS</span><h2>出处透明，效果如实说明。</h2><p>文字任务依据 <a href="https://github.com/danielmiessler/fabric" target="_blank" rel="noopener noreferrer">Fabric ↗</a>（MIT）的方法中文整理；风格案例来自 <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank" rel="noopener noreferrer">awesome-gpt4o-images ↗</a>，所选案例逐项保留 CC BY 4.0 署名。另收录 <a href="https://www.threads.com/@lch1776244" target="_blank" rel="noopener noreferrer">Chloe_Lai 的 Threads 案例 ↗</a> 与 <a href="https://www.threads.com/@inkacalinka" target="_blank" rel="noopener noreferrer">michelle 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@blissful_nala" target="_blank" rel="noopener noreferrer">Lykke 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@emersonigpost" target="_blank" rel="noopener noreferrer">Emerson 的 Threads 案例 ↗</a>，按维护者分别确认的转载授权展示，原作者保留权利。仓库星数只作为选材参考，不代表每条模板效果。</p><p>这些模板经过编辑筛选和结构整理，尚未由本站逐条运行验证。案例图是来源项目展示的效果，中文改编版不承诺复现同样结果。首页材质专题是原创视觉示意。</p></article></div>' +
+      '<article><span class="eyebrow">OPEN SOURCES, CLEAR EXPECTATIONS</span><h2>出处透明，效果如实说明。</h2><p>文字任务依据 <a href="https://github.com/danielmiessler/fabric" target="_blank" rel="noopener noreferrer">Fabric ↗</a>（MIT）的方法中文整理；风格案例来自 <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank" rel="noopener noreferrer">awesome-gpt4o-images ↗</a>，所选案例逐项保留 CC BY 4.0 署名。另收录 <a href="https://www.threads.com/@lch1776244" target="_blank" rel="noopener noreferrer">Chloe_Lai 的 Threads 案例 ↗</a> 与 <a href="https://www.threads.com/@inkacalinka" target="_blank" rel="noopener noreferrer">michelle 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@blissful_nala" target="_blank" rel="noopener noreferrer">Lykke 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@emersonigpost" target="_blank" rel="noopener noreferrer">Emerson 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@smartaitools6" target="_blank" rel="noopener noreferrer">smartaitools 的 Threads 案例 ↗</a>，按维护者分别确认的转载授权展示，原作者保留权利。仓库星数只作为选材参考，不代表每条模板效果。</p><p>这些模板经过编辑筛选和结构整理，尚未由本站逐条运行验证。案例图是来源项目展示的效果，中文改编版不承诺复现同样结果。首页材质专题是原创视觉示意。</p></article></div>' +
       '<div class="about-studio__end"><p>一个好想法，就值得开始。</p><a class="btn btn--primary" href="#/">发现图片风格 ' + ICON.arrowRight + '</a><a class="btn btn--ghost" href="#/library?track=text">选择实用任务 ' + ICON.arrowRight + '</a></div></section>';
   }
 

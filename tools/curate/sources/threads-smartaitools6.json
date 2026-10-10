@@ -1,0 +1,499 @@
+{
+  "creator": "smartaitools (@smartaitools6)",
+  "profileUrl": "https://www.threads.com/@smartaitools6",
+  "collectedAt": "2026-10-10",
+  "noticeAnchor": "threads--smartaitools6",
+  "scope": "Exactly 10 distinct image prompts and 16 matching author example images selected at the maintainer’s request. A curated snapshot of publicly readable posts, not a complete account archive. Other variants, unmatched images, standalone input photos and other commenters’ material are not imported.",
+  "license": "CUSTOM",
+  "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+  "cases": [
+    {
+      "id": "threads-smartai-split-name-portrait",
+      "name": "人像转半脸字母海报",
+      "latin": "Split Name Portrait",
+      "tagline": "以姓名字母拼合半脸肖像，形成干净的现代排版",
+      "input": "一张清晰人像；在补充要求中填写名字、背景和灯光",
+      "output": "一张半脸肖像与竖排姓名字母无缝对齐的海报",
+      "track": "edit",
+      "moods": [
+        "极简",
+        "秩序"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/DeS6C09juFi",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DeS6C09juFi",
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post or author reply; social introduction, promotional link and interface text excluded",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "825270090_17908906713550844_2497642802452474817_n.jpg",
+          "829406803_17908906737550844_1435678749607770119_n.jpg"
+        ]
+      },
+      "preserve": "保留人物身份和五官特征；按作者原文对齐左侧半脸与右侧字母。",
+      "usageNote": "在补充要求中填写 NAME（名字）、BACKGROUND（背景）、LIGHTING（灯光），并核对生成文字是否正确。",
+      "dedupe": {
+        "comparedCatalogCommit": "fab7b8c2f144c90f76f3432ddcff2de5b9a27725",
+        "rationale": "通过姓名字母填入半张脸并无缝对齐，属摄影与字体排版；与现有双重曝光融合场景不同。",
+        "reviewedAt": "2026-10-10",
+        "comparedTo": [
+          "double-exposure"
+        ]
+      },
+      "promptFile": "threads-smartai-split-name-portrait.txt",
+      "promptSha256": "5991290b5d996877edea48f03e5e8b3c6edb5323bd9637f18bf372be2ca2467d",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-split-name-portrait/1.jpg",
+          "w": 1536,
+          "h": 2048,
+          "sha256": "6befdec44b417b32f8658b612e648a764802d88faa693073e7594b9dc38b05cb"
+        },
+        {
+          "src": "assets/img/threads/threads-smartai-split-name-portrait/2.jpg",
+          "w": 1536,
+          "h": 2048,
+          "sha256": "923796c9cc753b2512b529ce5190660807a5f4edd4c0ef46ff9f18f9a929514f"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-virtual-outfit-tryon",
+      "name": "人物照片虚拟换装",
+      "latin": "Reference Outfit Virtual Try-On",
+      "tagline": "保留人物和场景光影，把服装参考图自然穿到身上",
+      "input": "一张人物全身照，加一张需要试穿的服装或搭配参考图",
+      "output": "一张保留人物姿态与环境、替换服装和配饰的写实照片",
+      "track": "edit",
+      "moods": [
+        "严谨",
+        "秩序"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/DVnh7NTAasX",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DVnh7NTAasX",
+      "preserve": "保留人物面部、身形、姿态、表情以及原场景背景、光线、阴影；只替换指定服装及配饰，服装细节按参考图保持。",
+      "usageNote": "同时上传人物照片和服装参考图，并说明各自用途。该结果展示搭配效果，不能据此判断真实尺码、面料手感或穿着合身程度。",
+      "dedupe": {
+        "comparedTo": [
+          "https://www.threads.com/@smartaitools6/post/DcjC8ARG_zJ",
+          "https://www.threads.com/@smartaitools6/post/DVkT2nfknZv",
+          "https://www.threads.com/@smartaitools6/post/DViYTd5gfL2",
+          "https://www.threads.com/@smartaitools6/post/DVgIHcIgdxD"
+        ],
+        "rationale": "现有103条库没有两图服装转移操作。较新多套时装拼贴重新生成造型，本条锁定原人、姿态和环境，只按服装图换装，核心编辑任务不同。中段三条旧试穿帖不重复新建卡。"
+      },
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Prompt manually transcribed and checked against author final carousel text image",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "643608560_17873377749550844_1809962546405938930_n.jpg",
+          "641305074_17873377767550844_3750834024697226062_n.jpg"
+        ]
+      },
+      "promptFile": "threads-smartai-virtual-outfit-tryon.txt",
+      "promptSha256": "e18c7beefcf8e6d637cae261232cd5c0a7267e53344b74e6736a99b112cb0e4e",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-virtual-outfit-tryon/1.jpg",
+          "w": 1440,
+          "h": 1787,
+          "sha256": "07a7745ba613aedccac46f7d0ccc2ff5b2b27865906d62f94d2f6572c7aadf14"
+        },
+        {
+          "src": "assets/img/threads/threads-smartai-virtual-outfit-tryon/2.jpg",
+          "w": 1440,
+          "h": 1787,
+          "sha256": "1f820fe43f8a9925784511a2c52652d01ebe1b732a98b1923044e88075fb7d6c"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-torn-paper-product",
+      "name": "商品转撕纸广告",
+      "latin": "Torn Paper Product Ad",
+      "tagline": "保留商品设计，用撕纸、手势和配色突出产品",
+      "input": "一张轮廓与标签清晰的商品照片",
+      "output": "一张手从彩纸中伸出、握住主打商品的棚拍广告",
+      "track": "edit",
+      "moods": [
+        "治愈",
+        "荒诞"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/DdKOGlXDAJe",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DdKOGlXDAJe",
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post or author reply; social introduction, promotional link and interface text excluded",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "805218509_17906106747550844_7201122959681043195_n.jpg",
+          "804647251_17906106762550844_8419227763950247792_n.jpg"
+        ]
+      },
+      "preserve": "保留商品外观、配色、比例与可辨识标签；按原文更换背景和拍摄场景。",
+      "dedupe": {
+        "comparedCatalogCommit": "fab7b8c2f144c90f76f3432ddcff2de5b9a27725",
+        "rationale": "严格保持原产品并让真实手从破纸后握持，生成商业主图；无材质转换，也不是已有物件风格卡。",
+        "reviewedAt": "2026-10-10",
+        "comparedTo": [
+          "glass-morphism"
+        ]
+      },
+      "promptFile": "threads-smartai-torn-paper-product.txt",
+      "promptSha256": "630d675422def84b354508ebb38576d6215e017e896a32d3389838ed346a6603",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-torn-paper-product/1.jpg",
+          "w": 1536,
+          "h": 2048,
+          "sha256": "68105a39f2ba0920355bfc596054db3db23baf65845ed1eb46e0a983550d5a29"
+        },
+        {
+          "src": "assets/img/threads/threads-smartai-torn-paper-product/2.jpg",
+          "w": 1536,
+          "h": 2048,
+          "sha256": "e9d10506a4db7346e73d65eae2f43fe422cc53bc2a6aafe76c3acf311c2fce14"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-profession-blueprint",
+      "name": "职业蓝图信息海报",
+      "latin": "Profession Blueprint Poster",
+      "tagline": "以蓝色墨线绘制职业人物、工具和技术注释",
+      "input": "填写职业名称，如画家、建筑师或摄影师",
+      "output": "一张蓝墨线稿风的方形职业信息图",
+      "track": "create",
+      "moods": [
+        "极简",
+        "秩序"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/DbnTzgVG_wH",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DbnT0JUm2YT",
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post or author reply; social introduction, promotional link and interface text excluded",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "763226079_17899830876550844_1858107579114714504_n.jpg"
+        ]
+      },
+      "usageNote": "在补充要求中指定 profession（职业）；原文要求方形构图。图中文字和技术注释需要自行核对。",
+      "dedupe": {
+        "comparedCatalogCommit": "fab7b8c2f144c90f76f3432ddcff2de5b9a27725",
+        "rationale": "按职业生成蓝墨工具与知识图解，不以原图上下对照；单色方形技术手册版式与现有复古场景图解不同。",
+        "reviewedAt": "2026-10-10",
+        "comparedTo": [
+          "threads-retro-diagram"
+        ]
+      },
+      "promptFile": "threads-smartai-profession-blueprint.txt",
+      "promptSha256": "6cb245f77fed890d5c9be4487e91831d1789b2529681b034a5cbb06ad3d5682b",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-profession-blueprint/1.jpg",
+          "w": 1024,
+          "h": 1024,
+          "sha256": "5b06c75b02d4f7cfaada3feaa11a6d90e45614b4b665862a7a2a89312b4c64ce"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-country-floating-island",
+      "name": "云端国家浮岛海报",
+      "latin": "Country Floating Island",
+      "tagline": "用国家轮廓承载立体地标、自然景观与云层光影",
+      "input": "填写国家名称、地标、自然景观与代表性动物",
+      "output": "一张以国家地图为轮廓的云端微缩岛屿旅游海报",
+      "track": "create",
+      "moods": [
+        "荒诞",
+        "治愈"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/DU5Lkc1EYcQ",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DU5Lkc1EYcQ",
+      "preserve": "保持所填国家轮廓与地标的可辨识特征，按原文构建云端悬浮微景；这是一幅创作海报。",
+      "usageNote": "将方括号中的国家、地标、景观和动物替换为自己的选择。生成后的地标与地图轮廓请自行核对。",
+      "dedupe": {
+        "comparedTo": [
+          "threads-isometric-poster",
+          "miniature-diorama",
+          "https://www.threads.com/@smartaitools6/post/DZ4XtaiiJMM",
+          "https://www.threads.com/@smartaitools6/post/DVdEQkDDrLr"
+        ],
+        "rationale": "现有库以原照建筑或场景转微缩为主；本条从国家轮廓和多个地标构造云上地图浮岛。较新的3月同模板为缩写，6月为纸雕旅游地图近似变体；仅保留本条置顶完整模板，不另收同功能换皮。"
+      },
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post text",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "629164013_17870191974550844_2851037450327537620_n.jpg",
+          "629785497_17870191965550844_4749665594395191313_n.jpg"
+        ]
+      },
+      "promptFile": "threads-smartai-country-floating-island.txt",
+      "promptSha256": "f5b510d24fe89860f138f4ecae2f0d2122da584d5ae2fdd490af02c725363ff0",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-country-floating-island/1.jpg",
+          "w": 1440,
+          "h": 1787,
+          "sha256": "b3ea00a3346111e61232592b9a9ca2f3421a802c43c3390a2c65ec3f3f8a7d72"
+        },
+        {
+          "src": "assets/img/threads/threads-smartai-country-floating-island/2.jpg",
+          "w": 1440,
+          "h": 1787,
+          "sha256": "316740e12f0cb3b0b7141983e3fa27267504a027934307da35a239bae411e56f"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-handheld-art-card",
+      "name": "旅行照转手持插画卡",
+      "latin": "Handheld Illustration Card",
+      "tagline": "让彩铅插画卡与真实风景对齐，形成景深错位",
+      "input": "一张旅行、建筑或自然风景照片",
+      "output": "一张手持彩铅插画卡与真实背景对齐的视觉错位照片",
+      "track": "edit",
+      "moods": [
+        "治愈",
+        "荒诞"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/DdoXijuDNOT",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DdoXijuDNOT",
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post or author reply; social introduction, promotional link and interface text excluded",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "812166475_17906853912550844_4359066354180423409_n.jpg",
+          "795253426_17906853960550844_303487474417076544_n.jpg"
+        ]
+      },
+      "preserve": "保留原图主体和关键细节，让插画卡与原场景对应。",
+      "dedupe": {
+        "comparedCatalogCommit": "fab7b8c2f144c90f76f3432ddcff2de5b9a27725",
+        "rationale": "要求手持插画卡与实景精准透视对齐，输出真实手持卡片光学错觉；不同于平面票券或直接整图插画。",
+        "reviewedAt": "2026-10-10",
+        "comparedTo": [
+          "threads-emerson-travel-keepsake-ticket",
+          "threads-inka-flat-editorial"
+        ]
+      },
+      "promptFile": "threads-smartai-handheld-art-card.txt",
+      "promptSha256": "61d321401a07ee099f006666fec6bdcadc3bdcf2f65ad7d2c50eb36a54d85525",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-handheld-art-card/1.jpg",
+          "w": 2048,
+          "h": 2560,
+          "sha256": "c7fc2735f7210dc58fbf994ec2810e4c71ffe406a2f775e83bfaa8fb66c21244"
+        },
+        {
+          "src": "assets/img/threads/threads-smartai-handheld-art-card/2.jpg",
+          "w": 1440,
+          "h": 1800,
+          "sha256": "31a5e65412986388806bf53ef00336a679e7a0080ba36b45910ccdb83637d108"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-food-type-poster",
+      "name": "意面穿插字母海报",
+      "latin": "Pasta Typography Poster",
+      "tagline": "让食物穿过标题，用排版和质感呈现菜品",
+      "input": "可直接使用意面案例，或在补充要求中指定菜品、品牌和标题",
+      "output": "一张9:16意面与大字母穿插的餐饮海报",
+      "track": "create",
+      "moods": [
+        "极简",
+        "秩序"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/DeEleBjk43E",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DeEleBjk43E",
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post or author reply; social introduction, promotional link and interface text excluded",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "830938581_17908904994550844_8467747710504345875_n.jpg"
+        ]
+      },
+      "usageNote": "作者原文为 BELLA TABLE 松露意面案例。更换菜品时，在补充要求中同时指定品牌、标题和食材；展示图只对应原文意面案例。作者示例图为4:5，提示词原文指定9:16，使用时可自行统一比例。",
+      "dedupe": {
+        "comparedCatalogCommit": "fab7b8c2f144c90f76f3432ddcff2de5b9a27725",
+        "rationale": "食物穿插巨大标题字母，用于餐饮广告；与照片重组便当包装的输入、排版和用途均不同。",
+        "reviewedAt": "2026-10-10",
+        "comparedTo": [
+          "threads-emerson-konbini-bento"
+        ]
+      },
+      "promptFile": "threads-smartai-food-type-poster.txt",
+      "promptSha256": "3a64666e24e0116af4f45b34d0f78f2a9be52a099bc0ff1cb61bee21dc9c3148",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-food-type-poster/1.jpg",
+          "w": 2048,
+          "h": 2560,
+          "sha256": "77bed88ced1667690afd49e713b4db709ddbfcfff82dd50c4bc38e216db86455"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-cartoon-alter-ego",
+      "name": "人物照片加入卡通分身",
+      "latin": "Oversized Cartoon Alter Ego",
+      "tagline": "在真实人物身后加入平面卡通分身与白色轮廓",
+      "input": "一张主体清晰、人物完整的照片",
+      "output": "一张真人与身后两至三倍大卡通分身同框的3:4照片",
+      "track": "edit",
+      "moods": [
+        "极简",
+        "秩序"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o",
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post or author reply; social introduction, promotional link and interface text excluded",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "814393587_17907802527550844_2752576637557873519_n.jpg"
+        ]
+      },
+      "preserve": "原人物保持摄影质感与身份、姿态、表情、发型、服装；只新增卡通分身及少量涂鸦。",
+      "dedupe": {
+        "comparedCatalogCommit": "fab7b8c2f144c90f76f3432ddcff2de5b9a27725",
+        "rationale": "真人摄影前景不变，身后加入两三倍的平面卡通自我，要求身份与动作精确对应；并非单独人偶或贴纸。",
+        "reviewedAt": "2026-10-10",
+        "comparedTo": [
+          "bobblehead",
+          "chibi-sticker-pack"
+        ]
+      },
+      "promptFile": "threads-smartai-cartoon-alter-ego.txt",
+      "promptSha256": "10a98464130c7e010b1effe86bf1aabf3163efcd8b65b53ef6a6b00af4a2e7ca",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-cartoon-alter-ego/1.jpg",
+          "w": 1536,
+          "h": 2048,
+          "sha256": "42e7720e5642abde5aabd331e9c0bae463a2f9ea1a9d363601e68552218427be"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-inside-drink-fisheye",
+      "name": "饮料杯内鱼眼广告",
+      "latin": "Inside the Drink Fisheye Ad",
+      "tagline": "把镜头放进饮料里，用冰块、气泡和透视制造冲击",
+      "input": "指定饮料种类，按需补充杯身文字和夏日配色",
+      "output": "一张从杯内仰拍人物的鱼眼视角饮料广告",
+      "track": "create",
+      "moods": [
+        "治愈",
+        "荒诞"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD",
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post or author reply; social introduction, promotional link and interface text excluded",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "791721116_17904714711550844_308317356422479833_n.jpg",
+          "791890868_17904714744550844_651477945941822075_n.jpg"
+        ]
+      },
+      "usageNote": "在补充要求中指定 DRINK（饮料）；品牌杯身属于作者案例，可改成自己的产品名称。",
+      "dedupe": {
+        "comparedCatalogCommit": "fab7b8c2f144c90f76f3432ddcff2de5b9a27725",
+        "rationale": "饮品杯内部机位、冰块微距和吸管视线构成广告摄影，和已有图像转换条目均无功能重复。",
+        "reviewedAt": "2026-10-10",
+        "comparedTo": [
+          "cyber-night-market"
+        ]
+      },
+      "promptFile": "threads-smartai-inside-drink-fisheye.txt",
+      "promptSha256": "e5766956702dda4145a2d733b835b492ddec3b1efc969f766ece4e785f1b4eb1",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-inside-drink-fisheye/1.jpg",
+          "w": 1440,
+          "h": 1800,
+          "sha256": "edbf1b46a7c2e59477ec14308299df7f12ea572e2f45fb93908e2cbc104a6d31"
+        },
+        {
+          "src": "assets/img/threads/threads-smartai-inside-drink-fisheye/2.jpg",
+          "w": 2048,
+          "h": 2560,
+          "sha256": "6377e1b67ac16083418dc0c1b67f10e3b42ebe99dcfabd5af2545e4f7657b7a3"
+        }
+      ]
+    },
+    {
+      "id": "threads-smartai-cat-dinner-portrait",
+      "name": "宠物照片转晚宴主角",
+      "latin": "Fancy Cat Dinner Portrait",
+      "tagline": "用彩色派对光影，把猫咪变成晚宴里的趣味主角",
+      "input": "一张猫咪正脸清晰的照片",
+      "output": "一张保留猫咪特征、坐在精致晚宴餐桌前的趣味照片",
+      "track": "edit",
+      "moods": [
+        "治愈",
+        "荒诞"
+      ],
+      "postUrl": "https://www.threads.com/@smartaitools6/post/DePviJ3grUH",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DePviJ3grUH",
+      "sourceExtraction": {
+        "language": "en",
+        "mode": "Verbatim author post or author reply; social introduction, promotional link and interface text excluded",
+        "verifiedAt": "2026-10-10",
+        "selectedImageFiles": [
+          "825320918_17908906626550844_559576625242695381_n.jpg"
+        ]
+      },
+      "preserve": "保留原猫咪的可辨识特征；按作者原文更换场景、表情与灯光。",
+      "dedupe": {
+        "comparedCatalogCommit": "fab7b8c2f144c90f76f3432ddcff2de5b9a27725",
+        "rationale": "保留猫咪照片特征，将其放入真实餐桌与派对灯光，输出摄影场景；并非宠物涂鸦换皮。",
+        "reviewedAt": "2026-10-10",
+        "comparedTo": [
+          "threads-pet-doodle"
+        ]
+      },
+      "promptFile": "threads-smartai-cat-dinner-portrait.txt",
+      "promptSha256": "29d38ababf13849e07c79e4f171e452f1ce61d74e3b8ae960b1644a21f9f90a4",
+      "images": [
+        {
+          "src": "assets/img/threads/threads-smartai-cat-dinner-portrait/1.jpg",
+          "w": 2048,
+          "h": 2560,
+          "sha256": "fbdd1f11532140b046a6b1d124e5e6161a8e983edeca1d48bdf3f66bc5b87207"
+        }
+      ]
+    }
+  ],
+  "rights": {
+    "status": "authorized",
+    "license": "CUSTOM",
+    "evidence": "维护者在本会话 2026-10-10 对 @smartaitools6 单独确认：是我的账号，或已获得转载授权；问题明确包含图片、完整提示词、公开网站和 GitHub 仓库。",
+    "scope": [
+      "prompt",
+      "images",
+      "public-site",
+      "public-repository"
+    ]
+  },
+  "review": {
+    "sourceVerified": true,
+    "rightsVerified": true,
+    "coreDedupeApproved": true,
+    "reviewer": "Codex source and visual review for site maintainer",
+    "reviewedAt": "2026-10-10",
+    "contentSha256": "752b3f6f935879f6f48fe17b904e160ce3e19f52717f9b481eaf64e67d01a566"
+  }
+}

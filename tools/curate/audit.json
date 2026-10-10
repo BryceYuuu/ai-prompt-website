@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-05",
+  "date": "2026-10-10",
   "previousCount": 108,
-  "activeCount": 103,
-  "images": 55,
+  "activeCount": 113,
+  "images": 65,
   "text": 48,
   "review": [
     {
@@ -692,6 +692,16 @@
     "threads-pet-doodle",
     "threads-isometric-poster",
     "threads-watercolor-mosaic",
+    "threads-smartai-split-name-portrait",
+    "threads-smartai-virtual-outfit-tryon",
+    "threads-smartai-torn-paper-product",
+    "threads-smartai-profession-blueprint",
+    "threads-smartai-country-floating-island",
+    "threads-smartai-handheld-art-card",
+    "threads-smartai-food-type-poster",
+    "threads-smartai-cartoon-alter-ego",
+    "threads-smartai-inside-drink-fisheye",
+    "threads-smartai-cat-dinner-portrait",
     "anime-figurine",
     "bobblehead",
     "chibi-keychain",

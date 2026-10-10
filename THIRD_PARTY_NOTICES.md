@@ -120,3 +120,25 @@ Downloaded original image bytes are preserved. English and Traditional Chinese p
 | 照片转双专色孔版印刷 | [Post](https://www.threads.com/@emersonigpost/post/DdlhHsyiR9K) | [Prompt](https://www.threads.com/@emersonigpost/post/DdlhIm2Cb4G) | 繁體中文 |
 | 旅行照转复古纪念票券 | [Post](https://www.threads.com/@emersonigpost/post/DdbUOANienr) | [Prompt](https://www.threads.com/@emersonigpost/post/DdbUOtXCTO8) | 繁體中文 |
 | 照片转越界色场海报 | [Post](https://www.threads.com/@emersonigpost/post/DdQDAsBCT0H) | [Prompt](https://www.threads.com/@emersonigpost/post/DdQhaYoieDi) | 繁體中文 |
+
+
+## Threads — smartaitools6
+
+On October 10, 2026, the site maintainer separately confirmed ownership of or permission to republish images and complete prompts from [smartaitools (@smartaitools6)](https://www.threads.com/@smartaitools6) on this public website and GitHub repository. These materials use **CUSTOM / 经授权收录**. The author retains their rights; the root MIT license does not cover these images or prompts and no downstream redistribution license is granted here.
+
+At the maintainer’s request, this update selects exactly **10 distinct image prompts and 16 matching author example images**. It is a curated snapshot, not a complete account archive. Six prompts edit uploaded photos; four generate images from text. Author wording and downloaded image bytes are retained, with image and prompt SHA256 hashes in [the source manifest](tools/curate/sources/threads-smartaitools6.json). Social introductions, promotional links, interface text, unmatched variants and other commenters’ material are excluded. The virtual try-on prompt was manually transcribed from the author’s final carousel text image. Site instructions and optional requirements are clearly separated from the author text.
+
+Examples are source results, not site-run model tests. Only the matching dinner image is used for the cat prompt, the TWIST pasta example for the food poster, and the square ARTIST example for the blueprint. Cartoon examples show the edited output; try-on examples retain the author’s clothing-reference inset. Any visible product marks belong to their respective owners and do not imply endorsement.
+
+| Template | Author post | Prompt source |
+|---|---|---|
+| 人像转半脸字母海报 | [Post](https://www.threads.com/@smartaitools6/post/DeS6C09juFi) | [Prompt](https://www.threads.com/@smartaitools6/post/DeS6C09juFi) |
+| 人物照片虚拟换装 | [Post](https://www.threads.com/@smartaitools6/post/DVnh7NTAasX) | [Prompt](https://www.threads.com/@smartaitools6/post/DVnh7NTAasX) |
+| 商品转撕纸广告 | [Post](https://www.threads.com/@smartaitools6/post/DdKOGlXDAJe) | [Prompt](https://www.threads.com/@smartaitools6/post/DdKOGlXDAJe) |
+| 职业蓝图信息海报 | [Post](https://www.threads.com/@smartaitools6/post/DbnTzgVG_wH) | [Prompt](https://www.threads.com/@smartaitools6/post/DbnT0JUm2YT) |
+| 云端国家浮岛海报 | [Post](https://www.threads.com/@smartaitools6/post/DU5Lkc1EYcQ) | [Prompt](https://www.threads.com/@smartaitools6/post/DU5Lkc1EYcQ) |
+| 旅行照转手持插画卡 | [Post](https://www.threads.com/@smartaitools6/post/DdoXijuDNOT) | [Prompt](https://www.threads.com/@smartaitools6/post/DdoXijuDNOT) |
+| 意面穿插字母海报 | [Post](https://www.threads.com/@smartaitools6/post/DeEleBjk43E) | [Prompt](https://www.threads.com/@smartaitools6/post/DeEleBjk43E) |
+| 人物照片加入卡通分身 | [Post](https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o) | [Prompt](https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o) |
+| 饮料杯内鱼眼广告 | [Post](https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD) | [Prompt](https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD) |
+| 宠物照片转晚宴主角 | [Post](https://www.threads.com/@smartaitools6/post/DePviJ3grUH) | [Prompt](https://www.threads.com/@smartaitools6/post/DePviJ3grUH) |

@@ -1,0 +1,5 @@
+Use the uploaded person image as the model reference and the uploaded outfit image as the clothing reference. Generate a realistic virtual try-on where the model wears the exact outfit and accessories from the reference image. The person’s face, body, pose, and expression must remain exactly the same — no changes, no repositioning, no alterations. The environment, background, lighting, and shadows must remain exactly as in the original person image. Only the clothes and accessories should be applied.
+
+Preserve all garment details: colors, patterns, stitching, textures, logos, and layers. Adjust the clothing naturally to the model’s body with realistic draping, folds, and sleeve/hem alignment. No distortion, no floating fabric, no warped prints.
+
+Maintain a cinematic, editorial fashion look while keeping the original scene intact. High-resolution, realistic scale and proportions, professional fashion photography aesthetic.

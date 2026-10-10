@@ -2,7 +2,7 @@
 const TAXONOMY = {
   /* 顶层分类 —— 首页与库页的分类条就按这个顺序排 */
   categories: [
-    { key: 'image',    name: '图片转换', latin: 'Image',    desc: '上传原图，转换画风并保留主体' },
+    { key: 'image',    name: '图片创作', latin: 'Image',    desc: '照片风格转换、文字生图与创意海报' },
     { key: 'write',    name: '写作文案', latin: 'Writing',  desc: '改写、纠错、翻译、邮件与摘要' },
     { key: 'code',     name: '编程开发', latin: 'Code',     desc: '代码审查、Diff、日志诊断与技术方案' },
     { key: 'analyze',  name: '分析推理', latin: 'Analysis', desc: '证据核查、论文分析、风险与方案对照' },
@@ -15,10 +15,10 @@ const TAXONOMY = {
   imageGroups: [
     { key: 'objects', name: '创意物件', desc: '手办、玩偶、包装与随身小物', ids: ['anime-figurine', 'plush-toy', 'bobblehead', 'chibi-keychain', 'voxel-object', 'threads-emerson-konbini-bento'] },
     { key: 'craft', name: '材质工艺', desc: '纸艺、玻璃、绒毛与手工质感', ids: ['glass-morphism', 'hard-edge-minimal', 'fluffy-icon', 'tufted-rug', 'steampunk-creature', 'threads-inka-needle-felt', 'threads-inka-travel-magnet', 'threads-nala-shell-mosaic', 'threads-nala-layered-paper', 'threads-emerson-stitched-patchwork', 'threads-emerson-perler-bead'] },
-    { key: 'drawing', name: '插画绘画', desc: '线稿、蜡笔、水彩与油画', ids: ['line-art-sketch', 'threads-inka-minimal-paper', 'threads-inka-charcoal-doodle', 'threads-inka-pastel-crayon', 'threads-inka-flat-editorial', 'threads-inka-impasto-world', 'threads-pet-doodle', 'threads-nala-character-turnaround', 'threads-nala-marker-doodle', 'threads-nala-impressionist-scene', 'threads-nala-impasto-ribbon', 'threads-emerson-minimal-emotion-line', 'threads-emerson-artifact-ink-rubbing'] },
-    { key: 'graphic', name: '平面拼贴', desc: '海报、像素、贴纸与图卡', ids: ['vector-poster', 'pixel-quest', 'chibi-sticker-pack', 'threads-inka-abstract-memory', 'threads-inka-second-world', 'threads-inka-paper-scrapbook', 'threads-retro-diagram', 'threads-watercolor-mosaic', 'threads-nala-clay-stickers', 'threads-emerson-geometric-story', 'threads-emerson-atmospheric-pixel', 'threads-emerson-mixed-media-paper', 'threads-emerson-two-ink-risograph', 'threads-emerson-travel-keepsake-ticket', 'threads-emerson-break-frame-color-field'] },
-    { key: 'miniature', name: '微缩场景', desc: '建筑、等距模型与小世界', ids: ['cyber-night-market', 'miniature-diorama', 'threads-isometric-poster', 'threads-nala-vintage-stamp', 'threads-emerson-white-concept-model'] },
-    { key: 'photo', name: '摄影光影', desc: '曝光、剪影与摄影氛围', ids: ['double-exposure', 'frosted-silhouette', 'threads-nala-dreamcore', 'threads-nala-surreal-color', 'threads-emerson-soft-light-memory'] },
+    { key: 'drawing', name: '插画绘画', desc: '线稿、蜡笔、水彩与油画', ids: ['threads-smartai-handheld-art-card', 'line-art-sketch', 'threads-inka-minimal-paper', 'threads-inka-charcoal-doodle', 'threads-inka-pastel-crayon', 'threads-inka-flat-editorial', 'threads-inka-impasto-world', 'threads-pet-doodle', 'threads-nala-character-turnaround', 'threads-nala-marker-doodle', 'threads-nala-impressionist-scene', 'threads-nala-impasto-ribbon', 'threads-emerson-minimal-emotion-line', 'threads-emerson-artifact-ink-rubbing'] },
+    { key: 'graphic', name: '平面拼贴', desc: '海报、像素、贴纸与图卡', ids: ['threads-smartai-split-name-portrait', 'threads-smartai-profession-blueprint', 'threads-smartai-food-type-poster', 'threads-smartai-cartoon-alter-ego', 'vector-poster', 'pixel-quest', 'chibi-sticker-pack', 'threads-inka-abstract-memory', 'threads-inka-second-world', 'threads-inka-paper-scrapbook', 'threads-retro-diagram', 'threads-watercolor-mosaic', 'threads-nala-clay-stickers', 'threads-emerson-geometric-story', 'threads-emerson-atmospheric-pixel', 'threads-emerson-mixed-media-paper', 'threads-emerson-two-ink-risograph', 'threads-emerson-travel-keepsake-ticket', 'threads-emerson-break-frame-color-field'] },
+    { key: 'miniature', name: '微缩场景', desc: '建筑、等距模型与小世界', ids: ['threads-smartai-country-floating-island', 'cyber-night-market', 'miniature-diorama', 'threads-isometric-poster', 'threads-nala-vintage-stamp', 'threads-emerson-white-concept-model'] },
+    { key: 'photo', name: '摄影光影', desc: '曝光、剪影与摄影氛围', ids: ['threads-smartai-virtual-outfit-tryon', 'threads-smartai-torn-paper-product', 'threads-smartai-inside-drink-fisheye', 'threads-smartai-cat-dinner-portrait', 'double-exposure', 'frosted-silhouette', 'threads-nala-dreamcore', 'threads-nala-surreal-color', 'threads-emerson-soft-light-memory'] },
     { key: 'other', name: '其他风格', desc: '更多图片创作方向', ids: [] }
   ],
   uses: [

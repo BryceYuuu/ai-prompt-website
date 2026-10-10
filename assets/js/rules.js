@@ -5,8 +5,8 @@
    两者的一致性由 hf-test.js 断言保证。
 
    两种卡：
-     image  图片风格 —— 必须有本地与云端**两条**轨道，track 固定为 'both'，
-                        提示词只写在轨道里，顶层不放 prompt
+     image  图片提示词 —— edit（图生图）或 create（文生图）使用顶层 prompt；
+                        历史 both 保留本地和云端两条轨道
      其余   文本提示词 —— 必须有 prompt 原文，track 固定为 'text'，
                         不许有轨道
    ========================================================================== */
@@ -177,7 +177,7 @@ var HFRules = (function () {
 
     /* --- 轨道：由数据推导，不许手填 --- */
     var hasLocal = !!card.local, hasCloud = !!card.cloud;
-    if (isImage && card.track === 'edit') {
+    if (isImage && (card.track === 'edit' || card.track === 'create')) {
       if (!filled(card.prompt) || card.prompt.length < LIMITS.prompt.min) E('prompt', '图片转换必须提供完整提示词');
       else if (card.prompt.length > LIMITS.prompt.max) E('prompt', '图片转换提示词过长');
       if (hasLocal || hasCloud) E('track', '图片转换不应包含未经验证的模型参数');

@@ -6488,6 +6488,1386 @@ const HF_CURATED = {
       }
     ]
   },
+  "threads-smartai-split-name-portrait": {
+    "id": "threads-smartai-split-name-portrait",
+    "name": "人像转半脸字母海报",
+    "latin": "Split Name Portrait",
+    "tagline": "以姓名字母拼合半脸肖像，形成干净的现代排版",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "极简",
+      "秩序"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 137
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nTransform the uploaded image into a modern studio portrait. Preserve the subject’s identity and features. Show half the face on the left; stack [NAME] vertically on the right, with each letter filled by matching details from the hidden half. Seamless alignment, [BACKGROUND] backdrop, [LIGHTING], modern typography.\n\n【保持不变】保留人物身份和五官特征；按作者原文对齐左侧半脸与右侧字母。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-split-name-portrait/1.jpg",
+      "w": 1536,
+      "h": 2048,
+      "title": "人像转半脸字母海报 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/DeS6C09juFi",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/DeS6C09juFi",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DeS6C09juFi",
+      "act": "人像转半脸字母海报",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "5991290b5d996877edea48f03e5e8b3c6edb5323bd9637f18bf372be2ca2467d",
+      "snapshot": "threads-smartai-split-name-portrait.txt"
+    },
+    "curation": {
+      "input": "一张清晰人像；在补充要求中填写名字、背景和灯光",
+      "output": "一张半脸肖像与竖排姓名字母无缝对齐的海报",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "人像转半脸字母海报",
+      "Split Name Portrait",
+      "split name portrait",
+      "smartaitools6",
+      "smartaitools",
+      "Threads",
+      "字母人像",
+      "姓名海报",
+      "字体填充",
+      "half face",
+      "typography",
+      "Smart AI Tools"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：人像转半脸字母海报。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张清晰人像；在补充要求中填写名字、背景和灯光"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张半脸肖像与竖排姓名字母无缝对齐的海报"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "在补充要求中填写 NAME（名字）、BACKGROUND（背景）、LIGHTING（灯光），并核对生成文字是否正确。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-split-name-portrait/1.jpg",
+          "cap": "作者示例 1 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-split-name-portrait/2.jpg",
+          "cap": "作者示例 2 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-virtual-outfit-tryon": {
+    "id": "threads-smartai-virtual-outfit-tryon",
+    "name": "人物照片虚拟换装",
+    "latin": "Reference Outfit Virtual Try-On",
+    "tagline": "保留人物和场景光影，把服装参考图自然穿到身上",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "严谨",
+      "秩序"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 138
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nUse the uploaded person image as the model reference and the uploaded outfit image as the clothing reference. Generate a realistic virtual try-on where the model wears the exact outfit and accessories from the reference image. The person’s face, body, pose, and expression must remain exactly the same — no changes, no repositioning, no alterations. The environment, background, lighting, and shadows must remain exactly as in the original person image. Only the clothes and accessories should be applied.\n\nPreserve all garment details: colors, patterns, stitching, textures, logos, and layers. Adjust the clothing naturally to the model’s body with realistic draping, folds, and sleeve/hem alignment. No distortion, no floating fabric, no warped prints.\n\nMaintain a cinematic, editorial fashion look while keeping the original scene intact. High-resolution, realistic scale and proportions, professional fashion photography aesthetic.\n\n【保持不变】保留人物面部、身形、姿态、表情以及原场景背景、光线、阴影；只替换指定服装及配饰，服装细节按参考图保持。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-virtual-outfit-tryon/1.jpg",
+      "w": 1440,
+      "h": 1787,
+      "title": "人物照片虚拟换装 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/DVnh7NTAasX",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/DVnh7NTAasX",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DVnh7NTAasX",
+      "act": "人物照片虚拟换装",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "e18c7beefcf8e6d637cae261232cd5c0a7267e53344b74e6736a99b112cb0e4e",
+      "snapshot": "threads-smartai-virtual-outfit-tryon.txt"
+    },
+    "curation": {
+      "input": "一张人物全身照，加一张需要试穿的服装或搭配参考图",
+      "output": "一张保留人物姿态与环境、替换服装和配饰的写实照片",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "虚拟试穿",
+      "换装",
+      "服装搭配",
+      "电商服装",
+      "双图编辑",
+      "virtual try-on",
+      "outfit transfer",
+      "smartaitools6",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：人物照片虚拟换装。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张人物全身照，加一张需要试穿的服装或搭配参考图"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张保留人物姿态与环境、替换服装和配饰的写实照片"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "同时上传人物照片和服装参考图，并说明各自用途。该结果展示搭配效果，不能据此判断真实尺码、面料手感或穿着合身程度。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-virtual-outfit-tryon/1.jpg",
+          "cap": "作者示例 1 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-virtual-outfit-tryon/2.jpg",
+          "cap": "作者示例 2 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-torn-paper-product": {
+    "id": "threads-smartai-torn-paper-product",
+    "name": "商品转撕纸广告",
+    "latin": "Torn Paper Product Ad",
+    "tagline": "保留商品设计，用撕纸、手势和配色突出产品",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "治愈",
+      "荒诞"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 139
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nUse the uploaded product exactly as provided. Create a premium ad photo of a realistic hand emerging through torn colored paper, naturally gripping the product. Keep the hand proportionate, but make the product noticeably larger and the clear hero. Keep all branding visible and unchanged. Clean complementary background, realistic paper texture, professional studio lighting, soft shadows, photorealistic luxury advertising style.\n\n【保持不变】保留商品外观、配色、比例与可辨识标签；按原文更换背景和拍摄场景。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-torn-paper-product/1.jpg",
+      "w": 1536,
+      "h": 2048,
+      "title": "商品转撕纸广告 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/DdKOGlXDAJe",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/DdKOGlXDAJe",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DdKOGlXDAJe",
+      "act": "商品转撕纸广告",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "630d675422def84b354508ebb38576d6215e017e896a32d3389838ed346a6603",
+      "snapshot": "threads-smartai-torn-paper-product.txt"
+    },
+    "curation": {
+      "input": "一张轮廓与标签清晰的商品照片",
+      "output": "一张手从彩纸中伸出、握住主打商品的棚拍广告",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "商品转撕纸广告",
+      "Torn Paper Product Ad",
+      "torn paper product",
+      "smartaitools6",
+      "smartaitools",
+      "Threads",
+      "破纸广告",
+      "产品主图",
+      "手持广告",
+      "torn paper",
+      "product hero",
+      "Smart AI Tools"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：商品转撕纸广告。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张轮廓与标签清晰的商品照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张手从彩纸中伸出、握住主打商品的棚拍广告"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-torn-paper-product/1.jpg",
+          "cap": "作者示例 1 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-torn-paper-product/2.jpg",
+          "cap": "作者示例 2 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-profession-blueprint": {
+    "id": "threads-smartai-profession-blueprint",
+    "name": "职业蓝图信息海报",
+    "latin": "Profession Blueprint Poster",
+    "tagline": "以蓝色墨线绘制职业人物、工具和技术注释",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "极简",
+      "秩序"
+    ],
+    "track": "create",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 140
+    },
+    "prompt": "【使用前确认】按下方文字要求生成图片。若不具备图像生成能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate a detailed monochrome blue ink blueprint-style poster on white paper featuring a central [profession] character surrounded by profession-related tools, objects, mini sketches, diagrams, notes, labels, and technical annotations. Use a hand-drawn pen-and-ink infographic style with grid lines, measurement marks, crosshatching, bold title, section headers, and a clean editorial square composition. Make it look like a vintage technical sketchbook page mixed with an educational illustrated infographic.\n\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-profession-blueprint/1.jpg",
+      "w": 1024,
+      "h": 1024,
+      "title": "职业蓝图信息海报 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/DbnTzgVG_wH",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/DbnTzgVG_wH",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DbnT0JUm2YT",
+      "act": "职业蓝图信息海报",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充图像生成能力检查及可选需求；排版换行整理",
+      "sha256": "6cb245f77fed890d5c9be4487e91831d1789b2529681b034a5cbb06ad3d5682b",
+      "snapshot": "threads-smartai-profession-blueprint.txt"
+    },
+    "curation": {
+      "input": "填写职业名称，如画家、建筑师或摄影师",
+      "output": "一张蓝墨线稿风的方形职业信息图",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "职业蓝图信息海报",
+      "Profession Blueprint Poster",
+      "profession blueprint",
+      "smartaitools6",
+      "smartaitools",
+      "Threads",
+      "职业蓝图",
+      "工具图解",
+      "技术笔记",
+      "ink infographic",
+      "Smart AI Tools"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：职业蓝图信息海报。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "填写职业名称，如画家、建筑师或摄影师"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持文生图的 AI 工具中准备主题、场景或文字要求。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查主题、构图、文字与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张蓝墨线稿风的方形职业信息图"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "在补充要求中指定 profession（职业）；原文要求方形构图。图中文字和技术注释需要自行核对。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-profession-blueprint/1.jpg",
+          "cap": "作者示例 1 / 1",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-country-floating-island": {
+    "id": "threads-smartai-country-floating-island",
+    "name": "云端国家浮岛海报",
+    "latin": "Country Floating Island",
+    "tagline": "用国家轮廓承载立体地标、自然景观与云层光影",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "荒诞",
+      "治愈"
+    ],
+    "track": "create",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 141
+    },
+    "prompt": "【使用前确认】按下方文字要求生成图片。若不具备图像生成能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate an ultra-HD, hyper-realistic digital poster of a floating miniature island shaped like [Country], resting on white clouds in the sky. Blend iconic landmarks, natural landscapes (like [landmark 1], [landscape 2], or [landscape 3]), and cultural elements unique to [Country]. Carve \"[Country]\" into the terrain using large white 3D letters. Add artistic details like [wildlife], cinematic lighting, vivid colors, aerial perspective, and sun reflections to enhance realism\n\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-country-floating-island/1.jpg",
+      "w": 1440,
+      "h": 1787,
+      "title": "云端国家浮岛海报 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/DU5Lkc1EYcQ",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/DU5Lkc1EYcQ",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DU5Lkc1EYcQ",
+      "act": "云端国家浮岛海报",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充图像生成能力检查及可选需求；排版换行整理",
+      "sha256": "f5b510d24fe89860f138f4ecae2f0d2122da584d5ae2fdd490af02c725363ff0",
+      "snapshot": "threads-smartai-country-floating-island.txt"
+    },
+    "curation": {
+      "input": "填写国家名称、地标、自然景观与代表性动物",
+      "output": "一张以国家地图为轮廓的云端微缩岛屿旅游海报",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "国家浮岛",
+      "地图微缩",
+      "旅行海报",
+      "地标",
+      "云端岛屿",
+      "floating island",
+      "country map",
+      "smartaitools6",
+      "Threads"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：云端国家浮岛海报。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "填写国家名称、地标、自然景观与代表性动物"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持文生图的 AI 工具中准备主题、场景或文字要求。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查主题、构图、文字与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张以国家地图为轮廓的云端微缩岛屿旅游海报"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "将方括号中的国家、地标、景观和动物替换为自己的选择。生成后的地标与地图轮廓请自行核对。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-country-floating-island/1.jpg",
+          "cap": "作者示例 1 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-country-floating-island/2.jpg",
+          "cap": "作者示例 2 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-handheld-art-card": {
+    "id": "threads-smartai-handheld-art-card",
+    "name": "旅行照转手持插画卡",
+    "latin": "Handheld Illustration Card",
+    "tagline": "让彩铅插画卡与真实风景对齐，形成景深错位",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "治愈",
+      "荒诞"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 142
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nPOV hand holding a rounded-square art card with a thin white border, seamlessly aligned with the real background. Transform the uploaded image into a soft colored-pencil storybook illustration while preserving its key details. Match the background to the original with soft bokeh for a seamless optical illusion. Realistic daylight, shallow depth of field.\n\n【保持不变】保留原图主体和关键细节，让插画卡与原场景对应。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-handheld-art-card/1.jpg",
+      "w": 2048,
+      "h": 2560,
+      "title": "旅行照转手持插画卡 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/DdoXijuDNOT",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/DdoXijuDNOT",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DdoXijuDNOT",
+      "act": "旅行照转手持插画卡",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "61d321401a07ee099f006666fec6bdcadc3bdcf2f65ad7d2c50eb36a54d85525",
+      "snapshot": "threads-smartai-handheld-art-card.txt"
+    },
+    "curation": {
+      "input": "一张旅行、建筑或自然风景照片",
+      "output": "一张手持彩铅插画卡与真实背景对齐的视觉错位照片",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "旅行照转手持插画卡",
+      "Handheld Illustration Card",
+      "handheld art card",
+      "smartaitools6",
+      "smartaitools",
+      "Threads",
+      "卡片对景",
+      "彩铅旅行",
+      "手持照片",
+      "pencil art card",
+      "optical alignment",
+      "Smart AI Tools"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：旅行照转手持插画卡。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张旅行、建筑或自然风景照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张手持彩铅插画卡与真实背景对齐的视觉错位照片"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-handheld-art-card/1.jpg",
+          "cap": "作者示例 1 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-handheld-art-card/2.jpg",
+          "cap": "作者示例 2 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-food-type-poster": {
+    "id": "threads-smartai-food-type-poster",
+    "name": "意面穿插字母海报",
+    "latin": "Pasta Typography Poster",
+    "tagline": "让食物穿过标题，用排版和质感呈现菜品",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "极简",
+      "秩序"
+    ],
+    "track": "create",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 143
+    },
+    "prompt": "【使用前确认】按下方文字要求生成图片。若不具备图像生成能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nCreate a 9:16 editorial food poster for BELLA TABLE featuring Truffle Tagliatelle with TWIST in sage green. Make pasta strands twist through the oversized letters. Use a warm cream background, clean typography, small ingredient callouts, and bottom text: TRUFFLE TAGLIATELLE, parmesan, black truffle, butter. Photorealistic, natural texture and shadows, no CGI.\n\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-food-type-poster/1.jpg",
+      "w": 2048,
+      "h": 2560,
+      "title": "意面穿插字母海报 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/DeEleBjk43E",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/DeEleBjk43E",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DeEleBjk43E",
+      "act": "意面穿插字母海报",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充图像生成能力检查及可选需求；排版换行整理",
+      "sha256": "3a64666e24e0116af4f45b34d0f78f2a9be52a099bc0ff1cb61bee21dc9c3148",
+      "snapshot": "threads-smartai-food-type-poster.txt"
+    },
+    "curation": {
+      "input": "可直接使用意面案例，或在补充要求中指定菜品、品牌和标题",
+      "output": "一张9:16意面与大字母穿插的餐饮海报",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "意面穿插字母海报",
+      "Pasta Typography Poster",
+      "food type poster",
+      "smartaitools6",
+      "smartaitools",
+      "Threads",
+      "餐饮海报",
+      "食物字体",
+      "意面广告",
+      "food typography",
+      "pasta poster",
+      "Smart AI Tools"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：意面穿插字母海报。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "可直接使用意面案例，或在补充要求中指定菜品、品牌和标题"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持文生图的 AI 工具中准备主题、场景或文字要求。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查主题、构图、文字与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张9:16意面与大字母穿插的餐饮海报"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "作者原文为 BELLA TABLE 松露意面案例。更换菜品时，在补充要求中同时指定品牌、标题和食材；展示图只对应原文意面案例。作者示例图为4:5，提示词原文指定9:16，使用时可自行统一比例。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-food-type-poster/1.jpg",
+          "cap": "作者示例 1 / 1",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-cartoon-alter-ego": {
+    "id": "threads-smartai-cartoon-alter-ego",
+    "name": "人物照片加入卡通分身",
+    "latin": "Oversized Cartoon Alter Ego",
+    "tagline": "在真实人物身后加入平面卡通分身与白色轮廓",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "极简",
+      "秩序"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 144
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nUse the uploaded photo as the only reference. Keep the real person photographic and unchanged. Add a 2–3× larger flat cartoon alter ego behind them, matching their identity, facial expression, pose, hairstyle, and outfit exactly. Use a playful editorial/vector style, flat colors, minimal shading, and white sticker outline, NOT anime or 3D. Add minimal yellow doodles. 3:4 portrait, both faces visible.\n\n【保持不变】原人物保持摄影质感与身份、姿态、表情、发型、服装；只新增卡通分身及少量涂鸦。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-cartoon-alter-ego/1.jpg",
+      "w": 1536,
+      "h": 2048,
+      "title": "人物照片加入卡通分身 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o",
+      "act": "人物照片加入卡通分身",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "10a98464130c7e010b1effe86bf1aabf3163efcd8b65b53ef6a6b00af4a2e7ca",
+      "snapshot": "threads-smartai-cartoon-alter-ego.txt"
+    },
+    "curation": {
+      "input": "一张主体清晰、人物完整的照片",
+      "output": "一张真人与身后两至三倍大卡通分身同框的3:4照片",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "人物照片加入卡通分身",
+      "Oversized Cartoon Alter Ego",
+      "cartoon alter ego",
+      "smartaitools6",
+      "smartaitools",
+      "Threads",
+      "卡通分身",
+      "巨物合影",
+      "照片合成",
+      "giant double",
+      "Smart AI Tools"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：人物照片加入卡通分身。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张主体清晰、人物完整的照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张真人与身后两至三倍大卡通分身同框的3:4照片"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-cartoon-alter-ego/1.jpg",
+          "cap": "作者示例 1 / 1",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-inside-drink-fisheye": {
+    "id": "threads-smartai-inside-drink-fisheye",
+    "name": "饮料杯内鱼眼广告",
+    "latin": "Inside the Drink Fisheye Ad",
+    "tagline": "把镜头放进饮料里，用冰块、气泡和透视制造冲击",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "治愈",
+      "荒诞"
+    ],
+    "track": "create",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 145
+    },
+    "prompt": "【使用前确认】按下方文字要求生成图片。若不具备图像生成能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nExtreme fisheye view from inside a [DRINK] cup, looking up. Crushed ice and drink in sparkling macro detail, with a straw leading to the person’s excited lips as they peer down. Branded cup, clear blue sky, punchy colors, hyper-real commercial photography, bright summer light.\n\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-inside-drink-fisheye/1.jpg",
+      "w": 1440,
+      "h": 1800,
+      "title": "饮料杯内鱼眼广告 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD",
+      "act": "饮料杯内鱼眼广告",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充图像生成能力检查及可选需求；排版换行整理",
+      "sha256": "e5766956702dda4145a2d733b835b492ddec3b1efc969f766ece4e785f1b4eb1",
+      "snapshot": "threads-smartai-inside-drink-fisheye.txt"
+    },
+    "curation": {
+      "input": "指定饮料种类，按需补充杯身文字和夏日配色",
+      "output": "一张从杯内仰拍人物的鱼眼视角饮料广告",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "饮料杯内鱼眼广告",
+      "Inside the Drink Fisheye Ad",
+      "inside drink fisheye",
+      "smartaitools6",
+      "smartaitools",
+      "Threads",
+      "杯内视角",
+      "饮品广告",
+      "鱼眼镜头",
+      "inside cup",
+      "fisheye drink",
+      "Smart AI Tools"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：饮料杯内鱼眼广告。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "指定饮料种类，按需补充杯身文字和夏日配色"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持文生图的 AI 工具中准备主题、场景或文字要求。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查主题、构图、文字与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张从杯内仰拍人物的鱼眼视角饮料广告"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "warn",
+        "v": "在补充要求中指定 DRINK（饮料）；品牌杯身属于作者案例，可改成自己的产品名称。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-inside-drink-fisheye/1.jpg",
+          "cap": "作者示例 1 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-inside-drink-fisheye/2.jpg",
+          "cap": "作者示例 2 / 2",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
+  "threads-smartai-cat-dinner-portrait": {
+    "id": "threads-smartai-cat-dinner-portrait",
+    "name": "宠物照片转晚宴主角",
+    "latin": "Fancy Cat Dinner Portrait",
+    "tagline": "用彩色派对光影，把猫咪变成晚宴里的趣味主角",
+    "category": "image",
+    "uses": [
+      "海报",
+      "社交封面"
+    ],
+    "moods": [
+      "治愈",
+      "荒诞"
+    ],
+    "track": "edit",
+    "version": "1.0",
+    "author": "smartaitools (@smartaitools6)",
+    "license": "CUSTOM",
+    "licenseNote": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "licenseText": "网站维护者于 2026-10-10 确认拥有 @smartaitools6 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+    "createdAt": "2026-10-10",
+    "updated": "2026-10-10",
+    "art": {
+      "g": "soft",
+      "p": [
+        "#F8F8F3",
+        "#DDD9CB",
+        "#374D46",
+        "#4541C4"
+      ],
+      "seed": 146
+    },
+    "prompt": "【使用前确认】请先读取我上传图片；若未收到原图，先要求上传。若不具备图像编辑能力，请明确说明，不要用文字冒充图片。\n【作者原始提示词】\nKeep the attached cat’s characteristics, seated at a fancy dinner table with a cheeky, half-closed-eye expression. Place a tall glass of red wine and elegant tableware in front of it. Add colorful purple, green, red, and blue party-light reflections on the wall, fur, and table. High-resolution, sharp, balanced, humorous, surreal photography.\n\n【保持不变】保留原猫咪的可辨识特征；按作者原文更换场景、表情与灯光。\n【我的补充要求】{补充要求，可留空}。未填写时完整沿用作者原始要求。",
+    "slots": [
+      "补充要求，可留空"
+    ],
+    "cover": {
+      "src": "assets/img/threads/threads-smartai-cat-dinner-portrait/1.jpg",
+      "w": 2048,
+      "h": 2560,
+      "title": "宠物照片转晚宴主角 · 作者案例",
+      "creator": "smartaitools (@smartaitools6)",
+      "license": "经授权收录",
+      "licenseUrl": "https://github.com/BryceYuuu/ai-prompt-website/blob/main/THIRD_PARTY_NOTICES.md#threads--smartaitools6",
+      "sourceUrl": "https://www.threads.com/@smartaitools6/post/DePviJ3grUH",
+      "provider": "threads"
+    },
+    "local": null,
+    "cloud": null,
+    "source": {
+      "provider": "threads",
+      "repo": "Threads · @smartaitools6",
+      "url": "https://www.threads.com/@smartaitools6/post/DePviJ3grUH",
+      "promptUrl": "https://www.threads.com/@smartaitools6/post/DePviJ3grUH",
+      "act": "宠物照片转晚宴主角",
+      "contributor": "smartaitools (@smartaitools6)",
+      "license": "经授权收录；原作者保留权利",
+      "checkedAt": "2026-10-10",
+      "mode": "保留作者原文，仅补充上传检查及可选需求；排版换行整理",
+      "sha256": "29d38ababf13849e07c79e4f171e452f1ce61d74e3b8ae960b1644a21f9f90a4",
+      "snapshot": "threads-smartai-cat-dinner-portrait.txt"
+    },
+    "curation": {
+      "input": "一张猫咪正脸清晰的照片",
+      "output": "一张保留猫咪特征、坐在精致晚宴餐桌前的趣味照片",
+      "status": "source-example-not-site-tested",
+      "method": "作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测",
+      "reviewedAt": "2026-10-10"
+    },
+    "keywords": [
+      "宠物照片转晚宴主角",
+      "Fancy Cat Dinner Portrait",
+      "cat dinner portrait",
+      "smartaitools6",
+      "smartaitools",
+      "Threads",
+      "宠物晚餐",
+      "猫咪摄影",
+      "派对灯光",
+      "cat dinner",
+      "pet portrait",
+      "Smart AI Tools"
+    ],
+    "guide": [
+      {
+        "t": "p",
+        "v": "这条模板解决：宠物照片转晚宴主角。"
+      },
+      {
+        "t": "h",
+        "v": "需要准备什么"
+      },
+      {
+        "t": "p",
+        "v": "一张猫咪正脸清晰的照片"
+      },
+      {
+        "t": "h",
+        "v": "怎么用"
+      },
+      {
+        "t": "list",
+        "v": [
+          "在支持图像编辑的工具中上传自己的原照片。",
+          "作者原文已保留；按需填写补充要求，再复制整段提示词。",
+          "按本条交付说明检查布局、主体一致性与画幅；示例仅展示作者原帖效果。"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "完成后检查"
+      },
+      {
+        "t": "p",
+        "v": "一张保留猫咪特征、坐在精致晚宴餐桌前的趣味照片"
+      },
+      {
+        "t": "warn",
+        "v": "图片来自作者公开帖子，已保留作者署名和原帖链接。本站未逐条运行验证，不承诺复现完全相同的结果。"
+      },
+      {
+        "t": "img",
+        "v": {
+          "src": "assets/img/threads/threads-smartai-cat-dinner-portrait/1.jpg",
+          "cap": "作者示例 1 / 1",
+          "credit": "smartaitools (@smartaitools6)",
+          "license": "经授权收录"
+        }
+      }
+    ]
+  },
   "cyber-night-market": {
     "id": "cyber-night-market",
     "name": "照片转赛博微缩",

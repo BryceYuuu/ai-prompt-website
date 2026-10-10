@@ -1,6 +1,6 @@
 # 提示词网站 · AI Prompt Website
 
-书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 103 条可填写、复制与导出的提示词模板：55 种图片风格转换，以及 48 个写作、编程、分析、学习、商业与生活任务。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
+书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 113 条可填写、复制与导出的提示词模板：65 种图片创作模板，以及 48 个写作、编程、分析、学习、商业与生活任务。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
 
 ## 在线预览
 
@@ -22,11 +22,13 @@
 
 新增 [@blissful_nala](https://www.threads.com/@blissful_nala) 的 **10 组提示词与 27 张原始示例图**：角色三视图、马克笔生活涂鸦、复古邮票、印象派场景、色带厚涂微景、贝壳像素、梦核、层叠纸雕、超现实撞色和黏土贴纸。搜索 `blissful_nala`、`Lykke` 或对应中文风格即可找到。作者的长文附件和纸雕两段评论均已保存；毛毡帖子配错厚涂提示词的一组暂不收录。纸雕末句在原帖中未写完，页面已说明；梦核等关键词以参考照片的用法整理；透明贴纸的 JPEG 示例不代表具备透明通道。详见 [本次素材及筛选记录](tools/curate/sources/threads-blissful_nala.json)。首页轮播仍是 8 种精选效果，全量图片风格在分页列表中浏览。
 
+新增 [@smartaitools6](https://www.threads.com/@smartaitools6) 的 **10 条精选图片提示词、16 张对应案例图**：半脸字母肖像、虚拟换装、撕纸产品广告、职业蓝图、国家浮岛、手持插画卡、意面字母海报、卡通分身、杯内鱼眼广告与猫咪晚宴。包含 6 条图生图、4 条文生图，按任务显示正确的准备材料和使用方式。只收本次精选内容，不做账号全量归档；作者英文原文、来源与授权记录均保留。搜索 `smartaitools6`，或[直接浏览本批](https://bryceyuuu.github.io/ai-prompt-website/#/library?cat=image&source=threads%3Asmartaitools6)。详见[素材与筛选记录](tools/curate/sources/threads-smartaitools6.json)。
+
 新增 [@emersonigpost](https://www.threads.com/@emersonigpost) 的 **13 组提示词、118 张原尺寸案例图**：极细线条情绪海报、几何故事、氛围像素、拼布手缝、古器物拓印、日式便当、混合媒材拼贴、白色概念模型、拼豆色卡、柔焦光影、双专色孔版印刷、复古旅行票券与越界色场。搜索 `emersonigpost`、`Emerson` 或具体风格即可找到。本次核对公开显示的 2026-09-11 至 2026-10-05 帖子，从 21 份作者原文中去重筛选 13 组；另有 2 组未找到完整公开提示词，暂不收录。英文与繁体中文原文保留，作者互动引言与实际提示词分开；本次授权由维护者单独确认。详见 [素材、原文及筛选记录](tools/curate/sources/threads-emersonigpost.json)。这是本次公开内容快照，不是账号完整历史归档。
 
 ## 当前内容
 
-- **55 个图片转换模板**：18 种原有图片转换，以及 4 个 Threads 来源账号的 37 组经授权案例。涵盖创意物件、材质工艺、插画绘画、平面拼贴、微缩场景与摄影光影，包括拼豆、刺绣、拓印、旅行票券等具体创作方向。
+- **65 个图片创作模板**：18 种原有图片转换，以及 5 个 Threads 来源账号的 47 组经授权案例。涵盖创意物件、材质工艺、插画绘画、平面拼贴、微缩场景与摄影光影，包括虚拟换装、产品广告、字母肖像、职业蓝图、拼豆、刺绣、拓印等具体创作方向。
 - **48 个文字任务**：写作、编程、分析、学习、商业、生活各 8 条。提供输入项、处理步骤、交付格式和信息不足时的处理方式。
 - 图片可按六个风格方向浏览，再组合用途、气质与内容来源筛选；卡片展示子分类、案例数/输入项和来源。支持空格分隔的多词搜索，当前条件可逐项移除。
 - 多图案例支持左右箭头、手势滑动、横向缩略图及大图连续浏览，图片序号与署名同步更新。
@@ -63,7 +65,7 @@
 
 ### English overview
 
-Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 103 curated **prompt templates**: 55 **image-to-image style transfer** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
+Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 113 curated **prompt templates**: 65 **image-to-image and text-to-image** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
 ## 本地预览
 
@@ -101,7 +103,7 @@ npm run test:browser
 index.html                     页面入口
 assets/js/app.js               路由、交互和渲染
 assets/js/data.js              分类与数据组装
-assets/js/data-curated.js      生成的 103 条内容
+assets/js/data-curated.js      生成的 113 条内容
 assets/css/                   页面样式
 assets/img/curated/            来源案例图
 schema/                       数据规范与校验
