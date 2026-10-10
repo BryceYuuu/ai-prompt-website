@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>提示词网站 · 开源中文 AI 提示词库 | 书桐 SHUTONG</title>
-<meta name="description" content="提示词网站：免登录的开源中文 AI 提示词库，提供 113 条可填写模板，含 65 种图片创作模板与 48 个写作、编程等任务。探索字母肖像、国家浮岛、职业蓝图、产品广告，支持搜索、收藏、复制和导出，可自行部署。">
+<meta name="description" content="提示词网站：免登录的开源中文 AI 提示词库，提供 121 条模板，含 65 种图片创作、48 个实用任务与 8 种视频风格。参考画面、风格和运镜拆解、可填写的视频提示词，支持搜索、复制和导出，可自行部署。">
 <meta name="theme-color" content="#f8f8f3">
 <meta property="og:title" content="提示词网站 · 开源中文 AI 提示词库 | 书桐 SHUTONG">
-<meta property="og:description" content="提示词网站：免登录的开源中文 AI 提示词库，提供 113 条可填写模板，含 65 种图片创作模板与 48 个写作、编程等任务。探索字母肖像、国家浮岛、职业蓝图、产品广告，支持搜索、收藏、复制和导出，可自行部署。">
+<meta property="og:description" content="提示词网站：免登录的开源中文 AI 提示词库，提供 121 条模板，含 65 种图片创作、48 个实用任务与 8 种视频风格。参考画面、风格和运镜拆解、可填写的视频提示词，支持搜索、复制和导出，可自行部署。">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://bryceyuuu.github.io/ai-prompt-website/assets/img/studio/studio-cover.png">
 <meta property="og:image:alt" content="书桐提示词网站的原创材质展示图">
@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/views.css">
 <link rel="stylesheet" href="assets/css/studio.css?v=smartai-20261010">
+<link rel="stylesheet" href="assets/css/video.css?v=video-20261010">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,7 +32,7 @@
     "书桐 SHUTONG"
   ],
   "url": "https://bryceyuuu.github.io/ai-prompt-website/",
-  "description": "提示词网站：免登录的开源中文 AI 提示词库，提供 113 条可填写模板，含 65 种图片创作模板与 48 个写作、编程等任务。探索字母肖像、国家浮岛、职业蓝图、产品广告，支持搜索、收藏、复制和导出，可自行部署。",
+  "description": "提示词网站：免登录的开源中文 AI 提示词库，提供 121 条模板，含 65 种图片创作、48 个实用任务与 8 种视频风格。参考画面、风格和运镜拆解、可填写的视频提示词，支持搜索、复制和导出，可自行部署。",
   "inLanguage": "zh-CN",
   "sameAs": "https://github.com/BryceYuuu/ai-prompt-website"
 }
@@ -45,6 +46,7 @@
 
 <div class="mobilenav" id="mobilenav">
   <a href="#/">图片风格</a>
+  <a href="#/video">视频风格</a>
   <a href="#/library?track=text">场景提示词</a>
   <a href="#/library?saved=1">我的收藏</a>
   <a href="#/about">使用说明</a>
@@ -68,7 +70,7 @@
           </div>
         </div>
         <p class="muted" style="font-size:13px;margin-top:20px;max-width:330px;line-height:1.7">
-          图片创作与六类实用任务。上传照片或描述画面，提供材料完成工作；
+          图片创作、视频风格与六类实用任务。描述画面与动作，提供材料完成工作；
           每条保留来源、使用步骤与交付清单。
         </p>
       </div>
@@ -102,7 +104,7 @@
 <noscript>
   <div class="wrap" style="padding:60px 0;text-align:center">
     <h2>开源中文 AI 提示词网站</h2>
-    <p class="muted" style="margin-top:12px">书桐收录 65 种图片创作模板与 48 个实用任务模板，涵盖写作、编程、分析、学习、商业与生活。开启 JavaScript 后即可搜索、填写需求、收藏和复制提示词。</p>
+    <p class="muted" style="margin-top:12px">书桐收录 65 种图片创作模板、8 种视频风格与 48 个实用任务模板，涵盖写作、编程、分析、学习、商业与生活。开启 JavaScript 后即可搜索、填写需求、收藏和复制提示词。</p>
     <p style="margin-top:12px"><a href="https://github.com/BryceYuuu/ai-prompt-website">查看开源仓库与模板使用说明</a></p>
   </div>
 </noscript>
@@ -111,7 +113,9 @@
 <script src="assets/js/data.js?v=smartai-20261010"></script>
 <script src="assets/js/rules.js?v=smartai-20261010"></script>
 <script src="assets/js/art.js"></script>
-<script src="assets/js/app.js?v=smartai-20261010"></script>
+<script src="assets/js/data-video.js?v=video-20261010"></script>
+<script src="assets/js/video.js?v=video-20261010"></script>
+<script src="assets/js/app.js?v=video-20261010"></script>
 
 </body>
 </html>

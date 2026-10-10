@@ -1,0 +1,407 @@
+{
+  "checkedAt": "2026-10-10",
+  "scope": "8 original video-style exercises; 16 limited official reference images, not a popularity ranking",
+  "entries": [
+    {
+      "id": "video-jewel-painterly-cinema",
+      "reference": {
+        "title": "Jibaro ·《吉巴罗》",
+        "creator": "Alberto Mielgo / pinkman.tv / Netflix",
+        "url": "https://www.youtube.com/watch?v=JeUuk-g_Qws",
+        "type": "animation",
+        "note": "Netflix 官方说明为手工二维绘画与三维建模，并参考真实森林、与编舞合作。它是动画制作案例，不是 AI 视频。镜头、色彩词与下列提示词是本站分析及创作建议。",
+        "recognition": "《爱，死亡和机器人》代表性动画画风；依据制作方资料选择，不按播放量排名"
+      },
+      "sources": [
+        {
+          "title": "Netflix 官方制作特辑",
+          "url": "https://www.youtube.com/watch?v=JeUuk-g_Qws"
+        },
+        {
+          "title": "Netflix Tudum 第三辑制作资料",
+          "url": "https://www.netflix.com/tudum/articles/love-death-robots-season-3-episode-guide-directors-writers"
+        },
+        {
+          "title": "导演官方作品集",
+          "url": "https://www.albertomielgo.com/jibaro"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-jewel-painterly-cinema/01.jpg",
+          "time": "官方剧照",
+          "caption": "金色珠饰在深绿水面与灰绿森林前产生密集高光，人物舒展的动作让饰物形成长线条；写实环境与夸张装饰同时存在。",
+          "credit": "© Netflix / Alberto Mielgo / pinkman.tv",
+          "mediaUrl": "https://images.squarespace-cdn.com/content/v1/54125aa2e4b0a0cf735e83ca/1714952587279-TVCF1ELX7HN9J5AFTC94/JIB2.jpg",
+          "captureKind": "official-still",
+          "sha256": "739563eced754ee7cf0d2443138f01d0e0bd50d4f285db39169e4be93462883d",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        },
+        {
+          "src": "assets/img/video/video-jewel-painterly-cinema/02.jpg",
+          "time": "官方剧照",
+          "caption": "把视线压在水线附近，面部装饰清楚而背景柔化；倒影、皮肤和金属细节共同建立湿润而不均匀的材质层次。",
+          "credit": "© Netflix / Alberto Mielgo / pinkman.tv",
+          "mediaUrl": "https://images.squarespace-cdn.com/content/v1/54125aa2e4b0a0cf735e83ca/1714952588899-BYA0UQQX44IS2X1UBOMO/JIB3.jpg",
+          "captureKind": "official-still",
+          "sha256": "f7becd4455a4ea534babb9fdb42b4df98c4072d51711255ee352d5c4aee3cd02",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      }
+    },
+    {
+      "id": "video-painted-alien-world",
+      "reference": {
+        "title": "ONE",
+        "creator": "Ricardo Villavicencio / CHAPTR & The Culture DAO",
+        "url": "https://ricardovillavicencio.com/type/animation/one/",
+        "type": "hybrid",
+        "note": "作者页面标注Technique: 2d Animation & AI，并解释结合传统技法、实验视频与AI。",
+        "recognition": "Runway AIFF 2025 Silver"
+      },
+      "sources": [
+        {
+          "title": "官方制作资料",
+          "url": "https://ricardovillavicencio.com/type/animation/one/"
+        },
+        {
+          "title": "Runway AIFF 2025",
+          "url": "https://aiff.runwayml.com/"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-painted-alien-world/01.jpg",
+          "time": "00:01.5",
+          "seconds": 1.5,
+          "caption": "矿物色板与奇异植物：赭黄岩层、鼠尾草绿草丛和灰蓝远景让异星生态仍有自然秩序。",
+          "credit": "Ricardo Villavicencio / CHAPTR & The Culture DAO · ONE",
+          "mediaUrl": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/sh220_bg_wip_prores.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "4cf624d05c1a38933757906337c11fa11be5a9553a4cbe66832d9535f7ab6a38"
+        },
+        {
+          "src": "assets/img/video/video-painted-alien-world/02.jpg",
+          "time": "00:04.5",
+          "seconds": 4.5,
+          "caption": "同一环境镜头稍后的画面：构图稳定，只让溪水和小生物微动，保持手绘笔触。",
+          "credit": "Ricardo Villavicencio / CHAPTR & The Culture DAO · ONE",
+          "mediaUrl": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/sh220_bg_wip_prores.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "a6b70862637d5c47605fb91f851a95cb81d0013719d025d5b391512529ff4c05"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      }
+    },
+    {
+      "id": "video-angular-cel-animation",
+      "reference": {
+        "title": "ICE ·《冰》",
+        "creator": "Robert Valley / PASSION Pictures / Netflix",
+        "url": "https://www.passion-animation.com/project/love-death-robots-ice/",
+        "type": "animation",
+        "note": "制作方官网核实 ICE 由 Robert Valley 执导；导演官方介绍强调倾斜线条、锐利阴影和精选色板。冰蓝配色、分层横移及镜头安排是为原创模板提出的建议。",
+        "recognition": "《爱，死亡和机器人》代表性动画画风；依据制作方资料选择，不按播放量排名"
+      },
+      "sources": [
+        {
+          "title": "PASSION · ICE 项目与制作名单",
+          "url": "https://www.passion-animation.com/project/love-death-robots-ice/"
+        },
+        {
+          "title": "PASSION · Robert Valley 官方介绍",
+          "url": "https://www.passion-animation.com/director/robert-valley/"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-angular-cel-animation/01.jpg",
+          "time": "00:10",
+          "caption": "侧面奔跑的长形剪影在蓝绿色冰原前保持清楚轮廓，人物尖角造型与横向运动线一起强调速度。",
+          "credit": "© Netflix / Robert Valley / PASSION Pictures",
+          "mediaUrl": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/462e26b5-6d94-4b4e-8511-8aa908836280-1920x1080.5000.mp4?1791646770737",
+          "captureKind": "video-frame",
+          "sha256": "bd017bb8e3ca2c3f464e3b72464edbab9b36ae645fd341b4b99dc621d77a8ef5",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        },
+        {
+          "src": "assets/img/video/video-angular-cel-animation/02.jpg",
+          "time": "00:05",
+          "caption": "面部通过几块硬边阴影建立体积，头发和衣领简化成明确尖角；背景暖色只承担轮廓分离。",
+          "credit": "© Netflix / Robert Valley / PASSION Pictures",
+          "mediaUrl": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/462e26b5-6d94-4b4e-8511-8aa908836280-1920x1080.5000.mp4?1791646770737",
+          "captureKind": "video-frame",
+          "sha256": "028d2c4a3bc4823f10cb443f7829b32f1f0e6b9939d2864270884db6ddd11924",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      }
+    },
+    {
+      "id": "video-cutout-noir",
+      "reference": {
+        "title": "Mars and Siv — No Vacancy",
+        "creator": "Jeremy Higgins、Britton Korbel / Runway Studios、Studio Snap",
+        "url": "https://runway.com/customers/the-making-of-mars-and-siv",
+        "type": "hybrid",
+        "note": "官方幕后访谈明确说明：人工插画、3D布景与实体模型先行，Runway生成动画，再选帧重组与后期合成。不是一条提示词直出整部短片。",
+        "recognition": "Runway Studios 官方制作案例，不宣称热度排行"
+      },
+      "sources": [
+        {
+          "title": "官方制作资料",
+          "url": "https://runway.com/customers/the-making-of-mars-and-siv"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-cutout-noir/01.jpg",
+          "time": "00:29.0",
+          "seconds": 29,
+          "caption": "门缝的酸绿硬光切开深色空间；二维角色与立体布景对照。截自官方幕后片的最终合成阶段，裁去演示外边框。",
+          "credit": "Jeremy Higgins、Britton Korbel / Runway Studios、Studio Snap · Mars and Siv — No Vacancy",
+          "mediaUrl": "https://d3phaj0sisr2ct.cloudfront.net/site/images/no-vacancy/No+Vacancy+BTS+Sh+62.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "8cb3cf0fdc001ce7e0dbaab1539d56cc3fa9e3b2925318934a6d4f9508733d23"
+        },
+        {
+          "src": "assets/img/video/video-cutout-noir/02.jpg",
+          "time": "00:44.0",
+          "seconds": 44,
+          "caption": "角色轮廓采用平涂，绿色环境与少量粉黄形成局部对比。截自官方幕后片最终结果，裁去演示外边框。",
+          "credit": "Jeremy Higgins、Britton Korbel / Runway Studios、Studio Snap · Mars and Siv — No Vacancy",
+          "mediaUrl": "https://d3phaj0sisr2ct.cloudfront.net/site/images/no-vacancy/No+Vacancy+BTS+Sh+81.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "3b8a5019ebb145347074030b69b078b18299261e8121753645587054076c698d"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      }
+    },
+    {
+      "id": "video-neon-painted-noir",
+      "reference": {
+        "title": "The Witness ·《证人》",
+        "creator": "Alberto Mielgo / Netflix",
+        "url": "https://www.youtube.com/watch?v=IqhXDb69wl4",
+        "type": "animation",
+        "note": "导演接受 Chaos 采访时说明将简单二维表达与高级布料技术结合；Netflix 官方视频将其介绍为科幻超现实主义。色彩、镜头与动作词为本站分析和创作建议。",
+        "recognition": "《爱，死亡和机器人》代表性动画画风；依据制作方资料选择，不按播放量排名"
+      },
+      "sources": [
+        {
+          "title": "Netflix 官方制作特辑",
+          "url": "https://www.youtube.com/watch?v=IqhXDb69wl4"
+        },
+        {
+          "title": "导演访谈 · Chaos CG Garage",
+          "url": "https://www.chaos.com/cg-garage/alberto-mielgo-director-ldrs-the-witness"
+        },
+        {
+          "title": "导演官方作品集",
+          "url": "https://www.albertomielgo.com/the-witness"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-neon-painted-noir/01.jpg",
+          "time": "官方剧照",
+          "caption": "狭窄小店里的青绿框架、洋红光斑与丝质衣褶互相分层；背景保留绘画式大色块，人物仍有明确体积。",
+          "credit": "© Netflix / Alberto Mielgo",
+          "mediaUrl": "https://images.squarespace-cdn.com/content/v1/54125aa2e4b0a0cf735e83ca/1614926204523-V0OK69IRNOCYRJBOHP9Y/The+witness+2.jpg",
+          "captureKind": "official-still",
+          "sha256": "d20aae94b113a9038014a90ee2e90481bb79f9eed04193deb21b3d1a66e11a43",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        },
+        {
+          "src": "assets/img/video/video-neon-painted-noir/02.jpg",
+          "time": "官方剧照",
+          "caption": "车内的强透视与倾斜构图把座椅、窗框和人物挤进近距离空间，丝绸反光与粗粝笔触形成反差。",
+          "credit": "© Netflix / Alberto Mielgo",
+          "mediaUrl": "https://images.squarespace-cdn.com/content/v1/54125aa2e4b0a0cf735e83ca/1616539862157-U6DMZM5VC9T16LXA9K18/The+witness+1.jpg",
+          "captureKind": "official-still",
+          "sha256": "ed4046d6ac53d50dd529fd4187fe991f90527f11ad6777d393c07392b7c3adb7",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      }
+    },
+    {
+      "id": "video-aquarium-dream",
+      "reference": {
+        "title": "Flow — Cinematic quality 官方示例",
+        "creator": "Google / Google DeepMind",
+        "url": "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/",
+        "type": "ai",
+        "note": "官方Flow发布页在Cinematic quality项下提供此MP4，页面介绍其Veo生成流程。",
+        "recognition": "Google Flow官方示例，非电影节获奖作品，未核查播放量，不标“最火”"
+      },
+      "sources": [
+        {
+          "title": "官方制作资料",
+          "url": "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-aquarium-dream/01.jpg",
+          "time": "00:04.4",
+          "seconds": 4.4,
+          "caption": "冷青色光落在真实皮肤上，透明水母与面部产生近远景交叠；保留官方演示原生说明。",
+          "credit": "Google / Google DeepMind · Flow — Cinematic quality 官方示例",
+          "mediaUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/08_VEO_Cinematic_Edit01_16x9_250516e.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "376c864b5aa089ae3909766a9713e4eaefea8633717d6c59a9317c9c0e8e81f7"
+        },
+        {
+          "src": "assets/img/video/video-aquarium-dream/02.jpg",
+          "time": "00:07.9",
+          "seconds": 7.9,
+          "caption": "前景水母缓慢改变位置，焦点仍落在眼睛与皮肤；这种风格依靠焦点和遮挡，而非剧烈变形。",
+          "credit": "Google / Google DeepMind · Flow — Cinematic quality 官方示例",
+          "mediaUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/08_VEO_Cinematic_Edit01_16x9_250516e.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "bd97dded1a5c5b1b908e61984358fb93036b0fba5491c4ada7d3871713f46794"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      }
+    },
+    {
+      "id": "video-tilt-shift-mini-world",
+      "reference": {
+        "title": "Night of the Mini Dead ·《迷你亡灵之夜》",
+        "creator": "Robert Bisi + Andy Lyon / BUCK / Rodeo FX / Netflix",
+        "url": "https://buck.co/work/love-death-robots",
+        "type": "animation",
+        "note": "BUCK 官方制作说明明确采用 CG 与实拍摄影结合，再施加移轴效果，并强调用概括性的动作维持复杂画面的可读性。本站模板借用通用摄影与运动方法，改为日常城市场景。",
+        "recognition": "《爱，死亡和机器人》代表性动画画风；依据制作方资料选择，不按播放量排名"
+      },
+      "sources": [
+        {
+          "title": "BUCK 官方制作解析与公开短片",
+          "url": "https://buck.co/work/love-death-robots"
+        },
+        {
+          "title": "联合导演 Andy Lyon 官方作品页",
+          "url": "https://andylyon.com/ldr-mini-dead"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-tilt-shift-mini-world/01.jpg",
+          "time": "官方封面",
+          "caption": "山顶寺院处在狭窄清晰带内，前后山体快速虚化；真实岩石纹理配合浅景深，把大尺度山景变成桌面模型。",
+          "credit": "© Netflix / Robert Bisi + Andy Lyon / BUCK / Rodeo FX",
+          "mediaUrl": "https://image.mux.com/OUifwtvz00Flhhyl7DhTP3T2evYD86yylXn8wAY6zBOE/thumbnail.jpg?time=0",
+          "captureKind": "official-still",
+          "sha256": "c8dda77084887a5f93ee65da83c16882f89ec3b023dcdd7c776bb6b31d70b4cd",
+          "sourceKind": "official-player-poster",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        },
+        {
+          "src": "assets/img/video/video-tilt-shift-mini-world/02.jpg",
+          "time": "官方剧照",
+          "caption": "铁塔脚下的桥面与人群在中心清晰、两侧渐虚；高机位与小尺度人物让城市地标产生模型感。",
+          "credit": "© Netflix / Robert Bisi + Andy Lyon / BUCK / Rodeo FX",
+          "mediaUrl": "https://cdn.sanity.io/images/uk7b627p/production/b3d9f305883de066044c85c9f55c2a670247a49e-1986x999.jpg?w=600&q=75&auto=format&dpr=2",
+          "captureKind": "official-still",
+          "sha256": "9165d4ce0d870a3c4359fcb6af15bb5dee2bf82d6fa321b4604dd5d954094557",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      }
+    },
+    {
+      "id": "video-liquid-optics",
+      "reference": {
+        "title": "ONE — Portal Test",
+        "creator": "Ricardo Villavicencio / CHAPTR & The Culture DAO",
+        "url": "https://ricardovillavicencio.com/type/animation/one/",
+        "type": "hybrid",
+        "note": "作者《ONE》制作页公开的Portal Test视频；整部作品为传统技法、实验视频与AI混合，页面未单独声明该测试片每一帧都由AI生成。",
+        "recognition": "参考作品ONE获Runway AIFF 2025 Silver；此条是该片的另一种视觉方向，不是另一部获奖片"
+      },
+      "sources": [
+        {
+          "title": "官方制作资料",
+          "url": "https://ricardovillavicencio.com/type/animation/one/"
+        },
+        {
+          "title": "Runway AIFF 2025",
+          "url": "https://aiff.runwayml.com/"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-liquid-optics/01.jpg",
+          "time": "00:00.5",
+          "seconds": 0.5,
+          "caption": "中央暗洞与乳白色环带构成稳定骨架，红黄圆点提供色彩重心。",
+          "credit": "Ricardo Villavicencio / CHAPTR & The Culture DAO · ONE — Portal Test",
+          "mediaUrl": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/One_PortalTest.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "458a4795f145bde76d7f3bb57a8ead74957fa8d445ff20082169696cac3d31da"
+        },
+        {
+          "src": "assets/img/video/video-liquid-optics/02.jpg",
+          "time": "00:02.0",
+          "seconds": 2,
+          "caption": "半透明色膜的折射、变形和遮挡让抽象画面产生空间感。",
+          "credit": "Ricardo Villavicencio / CHAPTR & The Culture DAO · ONE — Portal Test",
+          "mediaUrl": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/One_PortalTest.mp4",
+          "captureKind": "video-frame",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可",
+          "sha256": "e087d320cca3eaace60013e8cff1b26ae482171b3ac86fa89f63eb3626451aa9"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      }
+    }
+  ]
+}

@@ -866,7 +866,7 @@ function rec(label, pass, detail) {
 }
 
 /* 抽屉里必须有的主栏目。少一个就有人点不到那一整页。 */
-var SECTIONS = { '#/': '图片风格', '#/library?track=text': '场景提示词', '#/about': '使用说明', '#/library?saved=1': '我的收藏' };
+var SECTIONS = { '#/': '图片风格', '#/video': '视频风格', '#/library?track=text': '场景提示词', '#/about': '使用说明', '#/library?saved=1': '我的收藏' };
 
 (async function run() {
   if (document.readyState === 'loading') await new Promise(function (resolve) { document.addEventListener('DOMContentLoaded', resolve, { once: true }); });
@@ -884,12 +884,12 @@ var SECTIONS = { '#/': '图片风格', '#/library?track=text': '场景提示词'
     var got = [].map.call(nav.querySelectorAll('a[href]'), function (a) { return a.getAttribute('href'); });
     var missing = Object.keys(SECTIONS).filter(function (h) { return got.indexOf(h) < 0; });
     var extra = got.filter(function (h) { return !(h in SECTIONS); });
-    rec('900px：抽屉里是主栏目，且四个都在',
+    rec('900px：抽屉里是主栏目，且五个都在',
         missing.length === 0 && extra.length === 0,
         '缺=' + (missing.map(function (h) { return SECTIONS[h] + '(' + h + ')'; }).join('、') || '无') +
         ' 多=' + (extra.join('、') || '无'));
   } else {
-    rec('900px：抽屉里是主栏目，且四个都在', false, '没有 #mobilenav');
+    rec('900px：抽屉里是主栏目，且五个都在', false, '没有 #mobilenav');
   }
 
   /* 点开 */

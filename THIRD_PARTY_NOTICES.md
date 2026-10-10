@@ -142,3 +142,21 @@ Examples are source results, not site-run model tests. Only the matching dinner 
 | 人物照片加入卡通分身 | [Post](https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o) | [Prompt](https://www.threads.com/@smartaitools6/post/Ddq8TL_ih9o) |
 | 饮料杯内鱼眼广告 | [Post](https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD) | [Prompt](https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD) |
 | 宠物照片转晚宴主角 | [Post](https://www.threads.com/@smartaitools6/post/DePviJ3grUH) | [Prompt](https://www.threads.com/@smartaitools6/post/DePviJ3grUH) |
+
+## Video style references — copyright retained
+
+The 16 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.
+
+The [reference manifest](tools/curate/sources/video-style-references.json) records official sources, creators, capture type, time where applicable, and SHA-256 checksums. Some frames are resized and the Mars and Siv demonstration border is cropped; original work attribution is retained. Official stills are labeled as such, without invented video timestamps.
+
+| Visual study | Reference work / official source | Attribution |
+|---|---|---|
+| 珠光写实绘画 | [Jibaro](https://www.youtube.com/watch?v=JeUuk-g_Qws) | Alberto Mielgo / pinkman.tv / Netflix |
+| 霓虹绘画黑色电影 | [The Witness](https://www.youtube.com/watch?v=IqhXDb69wl4) | Alberto Mielgo / Netflix |
+| 冷色几何赛璐璐 | [ICE](https://www.passion-animation.com/project/love-death-robots-ice/) | Robert Valley / PASSION Pictures / Netflix |
+| 移轴微缩世界 | [Night of the Mini Dead](https://buck.co/work/love-death-robots) | Robert Bisi + Andy Lyon / BUCK / Rodeo FX / Netflix |
+| 纸偶黑色科幻 | [Mars and Siv — No Vacancy](https://runway.com/customers/the-making-of-mars-and-siv) | Jeremy Higgins, Britton Korbel / Runway Studios, Studio Snap |
+| 手绘异星生态 / 液态光学片头 | [ONE — environment / Portal Test](https://ricardovillavicencio.com/type/animation/one/) | Ricardo Villavicencio / CHAPTR & The Culture DAO |
+| 水族梦境写实 | [Flow — Cinematic quality](https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/) | Google / Google DeepMind |
+
+The Chinese video prompts and visual analysis are original educational exercises written for this site. They are not the filmmakers' original prompts or production settings. Reference frames are not proof of results obtained with these prompts; no model-output testing is claimed. The four Love, Death + Robots episodes are labeled as animation references, not AI films. ONE and Mars and Siv use mixed production methods; the Portal Test is not claimed to be a separate AI-generated or award-winning film.

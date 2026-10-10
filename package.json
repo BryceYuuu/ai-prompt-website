@@ -2,7 +2,7 @@
   "name": "shutong",
   "version": "1.0.0",
   "private": true,
-  "description": "书桐：图片转换与实用任务提示词库",
+  "description": "书桐：图片创作、视频风格与实用任务提示词库",
   "license": "MIT",
   "engines": {
     "node": "^22.22.2 || ^24.15.0 || >=26.0.0"
@@ -10,7 +10,7 @@
   "scripts": {
     "build:catalog": "python3 tools/curate/build.py",
     "validate": "node schema/validate.mjs",
-    "test": "npm run validate && node tools/hf-test.js .",
+    "test": "npm run validate && node tools/hf-test.js . && node tools/video-test.js",
     "test:mutations": "node tools/mutate.js",
     "test:browser": "node tools/usability.js . && node tools/hostile.js . && node tools/links.js . && node tools/overflow.js .",
     "test:intake": "python3 -m unittest discover -s tools/curate -p 'test_*.py' -v"

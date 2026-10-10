@@ -455,6 +455,7 @@
         '</a>' +
         '<nav class="nav__links">' +
           link('/', '图片风格', p === '/' || (p === '/library' && imageLibrary && route.params.saved !== '1')) +
+          link('/video', '视频风格', p === '/video' || p.indexOf('/video/') === 0) +
           link('/library?track=text', '场景提示词', p === '/library' && !imageLibrary && route.params.saved !== '1') +
           link('/library?saved=1', '我的收藏', p === '/library' && route.params.saved === '1') +
           link('/about', '使用说明', p === '/about') +
@@ -1458,10 +1459,10 @@
   /* ============================================================= about == */
 
   function aboutView() {
-    return '<section class="about-studio wrap"><div class="about-studio__intro"><span class="eyebrow">LESS GUESSWORK. MORE MAKING.</span><h1>好提示词，<br>解决具体问题。</h1><p>' + imageStyles().length + ' 个图片创作模板，' + (STYLES.length - imageStyles().length) + ' 个实用任务。<br>把模糊的想法，变成有输入、有步骤、有交付的任务。</p></div>' +
-      '<div class="about-steps"><article><span>01 / DISCOVER</span><h2>找到你的起点</h2><p>图片首页选画风，场景提示词选任务。可以按分类浏览，也可以搜索「会议纪要」「像素画」这样的日常说法。</p></article><article><span>02 / PERSONALIZE</span><h2>填入真实需求</h2><p>详情页填写自己的材料，提示词实时更新。用右侧交付清单检查任务是否清楚，未填写的项目会保留花括号。</p></article><article><span>03 / MAKE IT YOURS</span><h2>带到 AI 工具使用</h2><p>复制完整提示词，粘贴到你常用的 AI 工具。图生图任务需要上传原图，文生图任务填写画面要求；逐项核对结果，再小步调整。</p></article></div>' +
-      '<div class="about-facts"><article><span class="eyebrow">YOUR OWN SPACE</span><h2>轻装开始，无需登录。</h2><p>点击书签，把模板放进「我的收藏」。收藏只保存在当前浏览器，清理浏览器数据会清空；填写的材料只在页面内存中使用，刷新即清空。本站提供提示词，不直接生成图片，也不把填写的材料发送到服务器。</p></article>' +
-      '<article><span class="eyebrow">OPEN SOURCES, CLEAR EXPECTATIONS</span><h2>出处透明，效果如实说明。</h2><p>文字任务依据 <a href="https://github.com/danielmiessler/fabric" target="_blank" rel="noopener noreferrer">Fabric ↗</a>（MIT）的方法中文整理；风格案例来自 <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank" rel="noopener noreferrer">awesome-gpt4o-images ↗</a>，所选案例逐项保留 CC BY 4.0 署名。另收录 <a href="https://www.threads.com/@lch1776244" target="_blank" rel="noopener noreferrer">Chloe_Lai 的 Threads 案例 ↗</a> 与 <a href="https://www.threads.com/@inkacalinka" target="_blank" rel="noopener noreferrer">michelle 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@blissful_nala" target="_blank" rel="noopener noreferrer">Lykke 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@emersonigpost" target="_blank" rel="noopener noreferrer">Emerson 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@smartaitools6" target="_blank" rel="noopener noreferrer">smartaitools 的 Threads 案例 ↗</a>，按维护者分别确认的转载授权展示，原作者保留权利。仓库星数只作为选材参考，不代表每条模板效果。</p><p>这些模板经过编辑筛选和结构整理，尚未由本站逐条运行验证。案例图是来源项目展示的效果，中文改编版不承诺复现同样结果。首页材质专题是原创视觉示意。</p></article></div>' +
+    return '<section class="about-studio wrap"><div class="about-studio__intro"><span class="eyebrow">LESS GUESSWORK. MORE MAKING.</span><h1>好提示词，<br>解决具体问题。</h1><p>' + imageStyles().length + ' 个图片创作模板，' + (STYLES.length - imageStyles().length) + ' 个实用任务，' + (window.HF_VIDEO_STYLES || []).length + ' 种视频风格。<br>把模糊的想法，变成有输入、有步骤、有交付的任务。</p></div>' +
+      '<div class="about-steps"><article><span>01 / DISCOVER</span><h2>找到你的起点</h2><p>图片首页选画风，视频风格学运镜，场景提示词选任务。可以按分类浏览，也可以搜索「会议纪要」「像素画」这样的日常说法。</p></article><article><span>02 / PERSONALIZE</span><h2>填入真实需求</h2><p>详情页填写自己的材料，提示词实时更新。用右侧交付清单检查任务是否清楚，未填写的项目会保留花括号。</p></article><article><span>03 / MAKE IT YOURS</span><h2>带到 AI 工具使用</h2><p>复制完整提示词，粘贴到你常用的 AI 工具。图生图任务需要上传原图，文生图任务填写画面要求；逐项核对结果，再小步调整。</p></article></div>' +
+      '<div class="about-facts"><article><span class="eyebrow">YOUR OWN SPACE</span><h2>轻装开始，无需登录。</h2><p>点击书签，把模板放进「我的收藏」。收藏只保存在当前浏览器，清理浏览器数据会清空；填写的材料只在页面内存中使用，刷新即清空。本站提供提示词，不直接生成图片或视频，也不把填写的材料发送到服务器。</p></article>' +
+      '<article><span class="eyebrow">OPEN SOURCES, CLEAR EXPECTATIONS</span><h2>出处透明，效果如实说明。</h2><p>文字任务依据 <a href="https://github.com/danielmiessler/fabric" target="_blank" rel="noopener noreferrer">Fabric ↗</a>（MIT）的方法中文整理；风格案例来自 <a href="https://github.com/jamez-bondos/awesome-gpt4o-images" target="_blank" rel="noopener noreferrer">awesome-gpt4o-images ↗</a>，所选案例逐项保留 CC BY 4.0 署名。另收录 <a href="https://www.threads.com/@lch1776244" target="_blank" rel="noopener noreferrer">Chloe_Lai 的 Threads 案例 ↗</a> 与 <a href="https://www.threads.com/@inkacalinka" target="_blank" rel="noopener noreferrer">michelle 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@blissful_nala" target="_blank" rel="noopener noreferrer">Lykke 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@emersonigpost" target="_blank" rel="noopener noreferrer">Emerson 的 Threads 案例 ↗</a>、<a href="https://www.threads.com/@smartaitools6" target="_blank" rel="noopener noreferrer">smartaitools 的 Threads 案例 ↗</a>，按维护者分别确认的转载授权展示，原作者保留权利。仓库星数只作为选材参考，不代表每条模板效果。</p><p>这些模板经过编辑筛选和结构整理，尚未由本站逐条运行验证。案例图是来源项目展示的效果，中文改编版不承诺复现同样结果。首页材质专题是原创视觉示意。</p><p>视频风格收录少量官方参考画面，逐帧分析画面、镜头与运动；AI、混合制作和传统动画分别标注。视频练习提示词为本站原创，参考图片版权归原权利人，不适用 MIT，也不是提示词实测结果。</p></article></div>' +
       '<div class="about-studio__end"><p>一个好想法，就值得开始。</p><a class="btn btn--primary" href="#/">发现图片风格 ' + ICON.arrowRight + '</a><a class="btn btn--ghost" href="#/library?track=text">选择实用任务 ' + ICON.arrowRight + '</a></div></section>';
   }
 
@@ -1499,6 +1500,9 @@
       return matchesQuery(s, q);
     }).slice(0, 7);
 
+    if (q && window.HFVideo) base = base.concat(window.HFVideo.search(q).slice(0, 4).map(function (item) {
+      return { id: item.id, name: item.name, tagline: item.summary, video: true, cover: item.frames[0] };
+    }));
     paletteResults = base;
     if (paletteCursor >= base.length) paletteCursor = 0;
 
@@ -1517,16 +1521,17 @@
             '<span class="palette__meta"><span class="palette__name">' + esc(c.name) + '</span>' +
             '<span class="palette__sub">' + esc(c.desc) + '</span></span></a>';
         }).join('') +
+        '<a class="palette__item" href="#/video"><span class="palette__thumb" style="display:grid;place-items:center;background:var(--paper-2)">' + ICON.arrowRight + '</span><span class="palette__meta"><span class="palette__name">视频风格</span><span class="palette__sub">参考画面、运镜拆解与原创视频提示词</span></span></a>' +
         '<div class="palette__group">提示词</div>';
     }
 
     var rows = base.map(function (s, i) {
       return '<a class="palette__item' + (i === paletteCursor ? ' is-cursor' : '') +
-        '" href="#/style/' + esc(s.id) + '" data-action="palette-go">' +
-        '<span class="palette__thumb">' + coverHTML(s, { credit: false }) + '</span>' +
+        '" href="#/' + (s.video ? 'video/' : 'style/') + esc(s.id) + '" data-action="palette-go">' +
+        '<span class="palette__thumb">' + (s.video ? '<img src="' + esc(s.cover.src) + '" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover">' : coverHTML(s, { credit: false })) + '</span>' +
         '<span class="palette__meta"><span class="palette__name">' + esc(s.name) + '</span>' +
         '<span class="palette__sub">' + esc(s.tagline) + '</span></span>' +
-        '<span class="num">' + esc(catOf(s.category).name) + '</span></a>';
+        '<span class="num">' + esc(s.video ? '视频风格' : catOf(s.category).name) + '</span></a>';
     }).join('');
 
     list.innerHTML = quick + (rows || '<div class="palette__empty">没有找到相关提示词</div>');
@@ -1548,6 +1553,7 @@
     // A pending typed search must never pull the reader back after newer navigation.
     clearTimeout(onInput._timer);
     var route = parseHash();
+    if (window.HFVideo) window.HFVideo.cleanup();
     var previousPage = state.page;
     var viewer = $('.image-viewer');
     if (viewer) { viewer.remove(); document.body.style.overflow = ''; }
@@ -1600,6 +1606,7 @@
     if (route.path === '/') html = homeView();
     else if (route.path === '/library') html = libraryView();
     else if (route.path === '/creators' || route.path === '/submit') html = retiredView();
+    else if ((route.path === '/video' || route.path.indexOf('/video/') === 0) && window.HFVideo) html = window.HFVideo.render(route);
     else if (route.path === '/about') html = aboutView();
     else if (route.path.indexOf('/style/') === 0) html = detailView(route.path.slice(7));
     else html = '<section class="section"><div class="wrap empty">' + glassHTML('empty__glass') +
@@ -1609,11 +1616,12 @@
 
     $('#nav').innerHTML = navHTML(route);
     $('#view').innerHTML = html;
+    if (window.HFVideo) window.HFVideo.mount($('#view'), { navigate: navigate, copyText: copyText, downloadText: downloadText });
     var heading = $('#view h1');
     document.title = (route.path !== '/' && heading ? heading.textContent.trim() + ' · ' : '') + '提示词网站 · 书桐 SHUTONG';
 
     $$('.mobilenav a').forEach(function (a) {
-      var activeHref = route.path === '/library' ? (state.filters.saved === '1' ? '#/library?saved=1' : ((state.filters.cat === 'image' || state.filters.track === 'both' || state.filters.group) ? '#/' : '#/library?track=text')) : '#' + route.path;
+      var activeHref = route.path === '/library' ? (state.filters.saved === '1' ? '#/library?saved=1' : ((state.filters.cat === 'image' || state.filters.track === 'both' || state.filters.group) ? '#/' : '#/library?track=text')) : (route.path.indexOf('/video/') === 0 ? '#/video' : '#' + route.path);
       a.classList.toggle('is-active', a.getAttribute('href') === activeHref);
     });
     $('#mobilenav').classList.remove('is-open');
@@ -2193,7 +2201,7 @@
         e.preventDefault();
         var s = paletteResults[paletteCursor];
         paletteClose();
-        go('/style/' + s.id);
+        go((s.video ? '/video/' : '/style/') + s.id);
       }
       return;
     }
@@ -2261,6 +2269,7 @@
         return '<a class="footer__link" href="#/library?cat=' + encodeURIComponent(c.key) + '">' +
           esc(c.name) + '</a>';
       }).join('') +
+      '<a class="footer__link" href="#/video">视频风格</a>' +
       '<a class="footer__link" href="#/library">全部提示词</a>';
   }
 

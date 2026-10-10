@@ -1,6 +1,6 @@
 # 提示词网站 · AI Prompt Website
 
-书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 113 条可填写、复制与导出的提示词模板：65 种图片创作模板，以及 48 个写作、编程、分析、学习、商业与生活任务。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
+书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 121 条可填写、复制与导出的提示词模板：65 种图片创作、48 个写作等实用任务，以及 8 种独立的视频风格。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
 
 ## 在线预览
 
@@ -11,6 +11,16 @@
 点击首页截图即可在线体验。截图中的案例图署名与许可见 [第三方内容说明](THIRD_PARTY_NOTICES.md)。
 
 通过 GitHub Pages 从 `main` 分支发布，仓库更新后会自动部署。
+
+## 视频风格 · Motion Studies
+
+[浏览 8 种视频风格](https://bryceyuuu.github.io/ai-prompt-website/#/video)：珠光写实绘画、手绘异星生态、冷色几何赛璐璐、纸偶黑色科幻、霓虹绘画黑色电影、水族梦境写实、移轴微缩世界和液态光学片头。
+
+每条包含两张官方来源参考画面、逐帧点评、画面 / 运镜 / 动作拆解，以及本站原创的可填写视频练习提示词。支持独立搜索与标签、全局搜索、参考图翻页与放大、填写后复制或下载 TXT。主体、场景、动作只存在页面内存中。
+
+参考涵盖《爱，死亡和机器人》4 集、Runway 的《Mars and Siv》《ONE》，以及 Google Flow 官方示例。《ONE》的环境动画与光学测试作为两个不同视觉方向分析。**这是编辑精选，不是热度排行榜**；AI 生成、混合制作、传统动画分别标注。实际视频截帧显示时间，官方剧照单独标注，不冒充本站生成效果。参考画面为少量风格评论用图，原权利人保留版权，不随代码按 MIT 授权；不分发原视频。原创提示词尚未做模型输出实测，也不是原片作者的制作提示词。
+
+官方来源、每张图的素材类型、时间和校验值见[视频素材清单](tools/curate/sources/video-style-references.json)。
 
 ## Threads 公开图片提示词
 
@@ -29,6 +39,7 @@
 ## 当前内容
 
 - **65 个图片创作模板**：18 种原有图片转换，以及 5 个 Threads 来源账号的 47 组经授权案例。涵盖创意物件、材质工艺、插画绘画、平面拼贴、微缩场景与摄影光影，包括虚拟换装、产品广告、字母肖像、职业蓝图、拼豆、刺绣、拓印等具体创作方向。
+- **8 个视频风格**：独立画风研究分类，少量官方参考画面、运镜解析与原创练习提示词。
 - **48 个文字任务**：写作、编程、分析、学习、商业、生活各 8 条。提供输入项、处理步骤、交付格式和信息不足时的处理方式。
 - 图片可按六个风格方向浏览，再组合用途、气质与内容来源筛选；卡片展示子分类、案例数/输入项和来源。支持空格分隔的多词搜索，当前条件可逐项移除。
 - 多图案例支持左右箭头、手势滑动、横向缩略图及大图连续浏览，图片序号与署名同步更新。
@@ -42,7 +53,7 @@
 
 ## 从发现到使用
 
-1. 首页看图片风格，或进入「场景提示词」选具体任务。
+1. 首页看图片风格，进入「视频风格」选画风与镜头，或在「场景提示词」选具体任务。
 2. 打开模板，在「填入你的需求」中填写材料，提示词实时组装。
 3. 复制或下载填写后的提示词，到你的 AI 工具中运行；图片任务还要上传原图。
 4. 点击书签保存在「我的收藏」。仅收藏 ID 存入本地浏览器；材料只在页面内存中，刷新即清空，不发送到服务器。禁用存储时收藏降级为当前会话。
@@ -56,6 +67,7 @@
 | 场景 | 常用搜索词 |
 |---|---|
 | 图片风格转换 / Image-to-image | 照片转手办、拼豆、刺绣、拓印、复古旅行票券、微缩模型、style transfer、pixel art、Perler Bead、Risograph |
+| 视频画风 / Video styles | 爱死机、赛璐璐、移轴微缩、纸偶、液态光学、AI video、Love Death Robots、cinematic、motion |
 | 写作与翻译 / Writing & translation | 文案润色、商务邮件、中英翻译、语法纠错、长文总结、proofreading、email reply |
 | 编程开发 / Coding | 代码审查、找 bug、日志分析、命令行、Git 提交说明、code review、debugging、system design |
 | 分析与决策 / Analysis | 事实核查、论文精读、方案对比、数据提取、fact checking、decision matrix、text to CSV |
@@ -65,7 +77,7 @@
 
 ### English overview
 
-Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 113 curated **prompt templates**: 65 **image-to-image and text-to-image** prompts and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
+Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 121 curated **prompt templates**: 65 **image-to-image and text-to-image** prompts, 8 original **video-style exercises**, and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
 ## 本地预览
 
@@ -102,7 +114,10 @@ npm run test:browser
 ```text
 index.html                     页面入口
 assets/js/app.js               路由、交互和渲染
-assets/js/data.js              分类与数据组装
+assets/js/data.js              图片与任务分类、数据组装
+assets/js/data-video.js        手工编辑的 8 种视频风格
+assets/js/video.js             视频风格列表、分析、提示词和大图交互
+assets/img/video/              16 张风格评论用参考画面（版权保留）
 assets/js/data-curated.js      生成的 113 条内容
 assets/css/                   页面样式
 assets/img/curated/            来源案例图
@@ -128,6 +143,7 @@ npm test
 
 项目原创代码使用 [MIT License](LICENSE)。**该许可证不覆盖第三方内容**：
 
+- 视频参考画面用于少量视觉评论，保留原权利人版权，不纳入 MIT；不分发原视频，提示词为本站原创练习。
 - 文字任务改编自 [danielmiessler/fabric](https://github.com/danielmiessler/fabric)，遵守上游 MIT，保留完整版权声明。
 - Threads 图片与提示词按维护者确认的转载授权收录，保留作者与原帖链接；不授予第三方自由转载权。
 - 原有图片与图片模板的来源是 [jamez-bondos/awesome-gpt4o-images](https://github.com/jamez-bondos/awesome-gpt4o-images)。所选案例按各自署名文件标注为 CC BY 4.0；中文模板经过改编，案例图片保持原文件。

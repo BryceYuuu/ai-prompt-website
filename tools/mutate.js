@@ -34,3 +34,9 @@ const expected = {
 let missed=0;
 for(const name of selected){const p=spawnSync(process.execPath,[path.join(__dirname,'curate/regression.js'),path.resolve(__dirname,'..'),name],{encoding:'utf8',env:process.env});const caught=p.status!==0&&p.stdout.split('\n').some(line=>line.startsWith('FAIL '+expected[name]+':'));console.log((caught?'CAUGHT ':'MISSED ')+name);if(!caught){missed++;console.log(p.stdout,p.stderr);}}
 console.log(`${selected.length-missed}/${selected.length} mutations caught`);if(!missed)console.log('变异测试通过');process.exitCode=missed?1:0;
+
+// Keep the unified mutation entrypoint covering the independent video module too.
+if (!process.argv[2] && !missed) {
+  const video = spawnSync(process.execPath, [path.join(__dirname, 'video-mutate.js')], { stdio: 'inherit', env: process.env });
+  if (video.status !== 0) process.exitCode = 1;
+}
