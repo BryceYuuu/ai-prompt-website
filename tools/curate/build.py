@@ -133,8 +133,9 @@ for threads in thread_collections:
   thread_cards[id]={'id':id,'name':item['name'],'latin':item['latin'],'tagline':item['tagline'],'category':'image','uses':['海报','社交封面'],'moods':item['moods'],'track':track,'version':'1.0','author':threads['creator'],'license':'CUSTOM','licenseNote':threads['licenseNote'],'licenseText':threads['licenseNote'],'createdAt':date,'updated':date,'art':{'g':'soft','p':['#F8F8F3','#DDD9CB','#374D46','#4541C4'],'seed':100+len(thread_cards)},'prompt':prompt,'slots':['补充要求，可留空'],'cover':cover,'local':None,'cloud':None,'source':{'provider':'threads','repo':'Threads · @'+threads['profileUrl'].rsplit('@',1)[1],'url':item['postUrl'],'promptUrl':item['promptUrl'],'act':item['name'],'contributor':threads['creator'],'license':'经授权收录；原作者保留权利','checkedAt':date,'mode':('保留作者原文，仅补充图像生成能力检查及可选需求；排版换行整理' if track=='create' else '保留作者原文，仅补充上传检查及可选需求；排版换行整理'),'sha256':item['promptSha256'],'snapshot':item['promptFile']},'curation':{'input':item['input'],'output':item.get('output','一张3:4竖版海报，上方保留原照片，下方呈现风格转换结果'),'status':'source-example-not-site-tested','method':'作者公开帖子与作者回复逐组配对；保留原始示例，非本站实测','reviewedAt':date}}
   if item.get('promptUrls'):
    thread_cards[id]['source']['promptUrls']=item['promptUrls']
-# Newly reviewed styles lead the image-only homepage; existing IDs remain stable.
-curated={**thread_cards,**curated}
+# The maintainer's requested homepage feature leads; other cards keep their order.
+homepage_first=['threads-jennifer-handdrawn-greeting']
+curated={**{id:thread_cards[id] for id in homepage_first},**thread_cards,**curated}
 keywords=json.loads((BASE/'keywords.json').read_text())
 require(set(keywords) == set(curated), 'Keywords must cover exactly the active catalog')
 for c in curated.values():

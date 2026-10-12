@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-10",
+  "date": "2026-10-12",
   "previousCount": 108,
-  "activeCount": 113,
-  "images": 65,
+  "activeCount": 114,
+  "images": 66,
   "text": 48,
   "review": [
     {
@@ -655,6 +655,7 @@
     }
   ],
   "newIds": [
+    "threads-jennifer-handdrawn-greeting",
     "threads-nala-character-turnaround",
     "threads-nala-marker-doodle",
     "threads-nala-vintage-stamp",

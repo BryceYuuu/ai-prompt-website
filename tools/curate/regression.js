@@ -100,7 +100,7 @@ async function nav(hash){w.location.hash=hash;w.dispatchEvent(new w.Event('hashc
 const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
 (async()=>{
  await wait(120);const cards=w.eval('STYLES'),images=cards.filter(s=>s.category==='image');
- await check('catalog-count-and-classification',()=>{assert.equal(cards.length,113);assert.equal(images.length,65);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,113);});
+ await check('catalog-count-and-classification',()=>{assert.equal(cards.length,114);assert.equal(images.length,66);for(const cat of ['write','code','analyze','learn','business','life'])assert.equal(cards.filter(s=>s.category===cat).length,8);assert.equal(new Set(cards.map(s=>s.id)).size,114);});
  await check('source-evidence-and-license',()=>{for(const s of cards){if(s.source.provider==='threads'){
  const {manifest,item}=threadRecords.get(s.id);
  assert.equal(s.source.url,item.postUrl);assert.equal(s.cover.sourceUrl,item.postUrl);assert.equal(s.source.promptUrl,item.promptUrl);
@@ -146,7 +146,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  });
  await check('scene-and-category-filters',async()=>{
    await nav('#/library?track=text');assert.equal(Number(q('.lib-count b').textContent),48);assert.equal(all('.gallery .card').length,12);
-   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat);assert.equal(Number(q('.lib-count b').textContent),cat==='image'?65:8);assert.equal(all('.gallery .card').length,cat==='image'?12:8);}
+   for(const cat of ['image','write','code','analyze','learn','business','life']){await nav('#/library?cat='+cat);assert.equal(Number(q('.lib-count b').textContent),cat==='image'?66:8);assert.equal(all('.gallery .card').length,cat==='image'?12:8);}
    const social=cards.filter(s=>s.uses.includes('社交封面'));await nav('#/library?use='+encodeURIComponent('社交封面'));
    assert.equal(Number(q('.lib-count b').textContent),social.length);assert.equal(all('.gallery .card').length,Math.min(12,social.length));
    assert(all('.gallery .card__link').every(a=>social.some(s=>a.hash==='#/style/'+s.id)));
@@ -157,7 +157,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
  });
  await check('pagination-pages-context-and-boundaries',async()=>{
    const ids=()=>all('.gallery .card__link').map(a=>a.hash);
-   for(const [base,total] of [['#/',65],['#/library',113],['#/library?track=text',48]]) {
+   for(const [base,total] of [['#/',66],['#/library',114],['#/library?track=text',48]]) {
      const seen=[];await nav(base);
      assert(q('.pagination [aria-disabled="true"]'));assert(!q('.pagination [rel="prev"]'));
      for(let page=1;page<=Math.ceil(total/12);page++) {
@@ -428,7 +428,7 @@ const q=s=>d.querySelector(s),all=s=>Array.from(d.querySelectorAll(s));
    clickImage(surface,0);assertOpenAndClose(surface,pictures[3].v.src);
  });
  await check('threads-gallery-source-and-search',async()=>{
-   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,47);
+   const imported=cards.filter(s=>s.source.provider==='threads');assert.equal(imported.length,48);
    for(const [term,count] of [['Chloe_Lai',4],['inkacalinka',10],['blissful_nala',10],['emersonigpost',13],['smartaitools6',10]]){await nav('#/library?cat=image&q='+term);assert.equal(Number(q('.lib-count b').textContent),count);assert.equal(all('.gallery .card').length,Math.min(12,count));}
    for(const s of imported){
      await nav('#/style/'+s.id);const pictures=s.guide.filter(b=>b.t==='img');

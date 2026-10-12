@@ -143,6 +143,16 @@ Examples are source results, not site-run model tests. Only the matching dinner 
 | 饮料杯内鱼眼广告 | [Post](https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD) | [Prompt](https://www.threads.com/@smartaitools6/post/Dc_K31qgsoD) |
 | 宠物照片转晚宴主角 | [Post](https://www.threads.com/@smartaitools6/post/DePviJ3grUH) | [Prompt](https://www.threads.com/@smartaitools6/post/DePviJ3grUH) |
 
+## Threads — jenniferzhao08
+
+On October 12, 2026, the site maintainer separately confirmed account ownership or permission to republish the images and complete prompt from [@jenniferzhao08](https://www.threads.com/@jenniferzhao08) on this public website and GitHub repository. These materials use **CUSTOM / 经授权收录**, based on that confirmation, not a publicly verified open license. The author retains their rights; the root MIT license does not cover this prompt or these images, and no downstream redistribution license is granted here.
+
+This single-post addition contains the complete author-authored prompt and four matching 768 × 1024 example images. The source post and prompt reply are linked separately, with prompt and image SHA256 hashes recorded in [the source manifest](tools/curate/sources/threads-jenniferzhao08.json). Author wording is retained; site-added upload checks and optional requirements are separately labeled. These examples are author-provided results, not site-run model tests. This addition does not represent an account archive.
+
+| Template | Author post | Prompt reply | Images |
+|---|---|---|---|
+| 照片转韩式手绘问候海报 | [Post](https://www.threads.com/@jenniferzhao08/post/DeYRXkrFFi_) | [Prompt](https://www.threads.com/@jenniferzhao08/post/DeYRYGulLho) | 4 |
+
 ## Video style references — copyright retained
 
 The 42 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.

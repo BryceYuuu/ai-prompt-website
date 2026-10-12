@@ -1,0 +1,98 @@
+{
+  "creator": "@jenniferzhao08",
+  "profileUrl": "https://www.threads.com/@jenniferzhao08",
+  "collectedAt": "2026-10-12",
+  "noticeAnchor": "threads--jenniferzhao08",
+  "scope": "One specifically requested public post, its author-authored prompt reply/text attachment, and all 4 matching original example images. Not an account archive; unrelated posts and other commenters’ material are excluded.",
+  "license": "CUSTOM",
+  "licenseNote": "网站维护者于 2026-10-12 确认拥有 @jenniferzhao08 账号或已取得图片及完整提示词在本站和公开 GitHub 仓库的转载授权。原作者保留权利；该确认不等同于 MIT、CC 或向第三方授予自由转载许可。",
+  "cases": [
+    {
+      "id": "threads-jennifer-handdrawn-greeting",
+      "name": "照片转韩式手绘问候海报",
+      "latin": "Hand-Drawn Greeting Poster",
+      "tagline": "用稚拙手绘重画照片，搭配明快色板和一句贴合画面的英文问候",
+      "input": "一张人物、宠物或风景照片；主体与场景清晰可辨",
+      "output": "一张包含左上角原照片小窗、右下方彩色底板、手绘场景、三色卡与英文问候语的完整海报",
+      "track": "edit",
+      "moods": [
+        "治愈",
+        "亲和"
+      ],
+      "postUrl": "https://www.threads.com/@jenniferzhao08/post/DeYRXkrFFi_",
+      "promptUrl": "https://www.threads.com/@jenniferzhao08/post/DeYRYGulLho",
+      "promptFile": "threads-jennifer-handdrawn-greeting.txt",
+      "promptSha256": "97c89f3a0d04f413041b8025ff370331fcd18cdc5f108273973a68206407c795",
+      "sourceExtraction": {
+        "language": "zh",
+        "mode": "Verbatim full author text attachment; interface and social introduction excluded",
+        "textAttachmentUrl": "https://www.threads.com/@jenniferzhao08/post/DeYRYGulLho/media",
+        "verifiedAt": "2026-10-12",
+        "selectedImageFiles": [
+          "843533726_18103875674185637_8865117617881891238_n.jpg",
+          "844437849_18103875692185637_1393977004613520344_n.jpg",
+          "845553541_18103875734185637_5808856430185680761_n.jpg",
+          "844997840_18103875950185637_4525761867502456991_n.jpg"
+        ]
+      },
+      "preserve": "保留原照片中的主要物体、动作、场景布局、相对比例和遮挡关系；小窗保持摄影原貌，插画区域按作者要求简化造型并重新配色。",
+      "guideCheck": "核对原照片小窗、彩色底板与手绘场景的层级关系，并检查英文问候语和底部两行文案的拼写。",
+      "usageNote": "作者原文包含完整海报版式、3:4 画幅及英文排版要求。先上传原照片，再复制整段提示词；如需改变文案或版式，可在补充要求中说明。",
+      "dedupe": {
+        "comparedCatalogCommit": "ba7d8f6418bef9fad65ba090944b357f5bb40e7c",
+        "comparedTo": [
+          "threads-inka-flat-editorial",
+          "threads-smartai-handheld-art-card",
+          "threads-retro-diagram"
+        ],
+        "rationale": "保留原照片小窗与三色卡，叠放完整韩式稚拙场景插画，并用固定问候标题和按照片原创的回应文案组成海报。区别于上下等分的编辑插画、手持画卡和复古图解；不是同一原文或重复来源。",
+        "reviewedAt": "2026-10-12"
+      },
+      "images": [
+        {
+          "src": "assets/img/threads/threads-jennifer-handdrawn-greeting/1.jpg",
+          "w": 768,
+          "h": 1024,
+          "sha256": "bf8448e0c8dc1b70edef0efc9628985ff59da77f0d2a17d29d311f0c61723017"
+        },
+        {
+          "src": "assets/img/threads/threads-jennifer-handdrawn-greeting/2.jpg",
+          "w": 768,
+          "h": 1024,
+          "sha256": "36a6303fe4d0e80a31191c98b66a9541aac18ac664cd894e530d57e638ab35b0"
+        },
+        {
+          "src": "assets/img/threads/threads-jennifer-handdrawn-greeting/3.jpg",
+          "w": 768,
+          "h": 1024,
+          "sha256": "eabceb2d24bc7e314e4b5da399c0d3d876b45b554031f001006ab9a939762150"
+        },
+        {
+          "src": "assets/img/threads/threads-jennifer-handdrawn-greeting/4.jpg",
+          "w": 768,
+          "h": 1024,
+          "sha256": "5b9aa3772b0a3bea797b99e831554bd0d77e2b27549f5ce28637b256f94d8cc5"
+        }
+      ]
+    }
+  ],
+  "rights": {
+    "status": "authorized",
+    "license": "CUSTOM",
+    "evidence": "2026-10-12，本会话中维护者在明确询问 @jenniferzhao08 的完整提示词和 4 张案例图是否允许转载到公开网站及 GitHub 后，回答“是我的账号，或已获得转载授权”。",
+    "scope": [
+      "prompt",
+      "images",
+      "public-site",
+      "public-repository"
+    ]
+  },
+  "review": {
+    "sourceVerified": true,
+    "rightsVerified": true,
+    "coreDedupeApproved": true,
+    "reviewer": "Codex source and visual review for site maintainer",
+    "reviewedAt": "2026-10-12",
+    "contentSha256": "1b70d6993ed574d9f0dc90c05fe622874eba472b3ef202e1fabbce2b7595e8d2"
+  }
+}

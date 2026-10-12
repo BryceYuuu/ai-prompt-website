@@ -1,6 +1,6 @@
 # 内容维护
 
-本目录离线生成当前 113 条内容（65 条图片、48 条文字，其中 47 条图片来自 Threads）。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-*.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
+本目录离线生成当前 114 条内容（66 条图片、48 条文字，其中 48 条图片来自 Threads）。编辑 text-specs.json（文字）或 build.py 的 image_specs（原有图片），或 sources/threads-*.json 及其 .txt 快照（Threads），执行 `python3 tools/curate/build.py`，再执行 `npm test`。
 
 来源快照、SHA256、原始署名和授权位于 sources/。audit.json 记录对旧 108 条目录的退役/替换处理；previous-catalog.json 仅保留旧目录的 id、名称和分类，用于复现审查记录。GitHub stars 以 sources/repository-stars.json 的逐仓库日期为准；当前采用的两个来源已于 2026-09-26 重新核验，是仓库级快照，不代表单条模板热度。
 
@@ -27,3 +27,5 @@ keywords.json 维护每条模板的中英文搜索别名；添加后重新运行
 2026-10-10 按维护者要求精选 @smartaitools6 的 10 条图片提示词及 16 张对应案例图，不做全量归档。6 条图生图、4 条文生图；原文来自作者帖文、作者回复或作者末页文字图。`sources/threads-smartaitools6.json` 记录逐项图片选择、原文校验和、去重依据与本账号单独确认的授权。只收与所选原文一致的案例，排除输入原照和其他场景变体。
 
 Threads 清单的 `track` 默认为 `edit`；只有直接按文字生成图片时填写 `create`，同时必须给出准确 `input`、`output`。生成器会为文生图使用生成能力检查，不添加上传原图或主体保真约束；作者原文保持不变。对应的构建夹具测试、前端回归和三个变异用于防止两类工作流混淆。
+
+2026-10-12 按维护者指定单篇收录 @jenniferzhao08 的「照片转韩式手绘问候海报」：1 条作者完整提示词、4 张 768 × 1024 案例图。原帖、作者提示词回复、逐文件 SHA256 和本次分别确认的 CUSTOM 转载授权记录在 `sources/threads-jenniferzhao08.json`。新卡在首页图片列表优先展示，归入插画绘画；原文、案例图与本站补充使用说明分别保留，案例不代表本站模型实测。
