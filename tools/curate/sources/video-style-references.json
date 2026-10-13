@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-13",
-  "scope": "41 original reusable video-style prompts; 82 limited source reference images; includes 20 newly reviewed AI or hybrid animation works with primary creator or festival evidence; editorial selection, not a popularity ranking",
+  "scope": "40 original reusable video-style prompts; 80 limited source reference images; includes 20 newly reviewed AI or hybrid animation works with primary creator or festival evidence; editorial selection, not a popularity ranking",
   "entries": [
     {
       "id": "video-postman-animation",
@@ -103,7 +103,36 @@
         ],
         "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "oESR5L9W2kc",
+        "start": 64,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=oESR5L9W2kc"
+      },
+      "playbackEvidence": {
+        "id": "video-postman-animation",
+        "url": "https://2026.jciaff.net/jp/film/detail/cat02-02.html",
+        "start": 64,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "oESR5L9W2kc",
+        "canonicalUrl": "https://www.youtube.com/watch?v=oESR5L9W2kc",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/oESR5L9W2kc",
+        "title": "『POSTMAN』YUUUKI｜ベストAIアニメ賞  審査員特別賞 WAIFF 2026 in KYOTO",
+        "uploader": "WAIFF_Japan",
+        "duration": 420,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-luminous-cloud-fable",
@@ -179,6 +208,35 @@
           117
         ],
         "observations": "工坊段角色视线转向桶内，手部握持提梁并改变姿势；绘画段抬臂、转头、收眼及笔端星光依次变化，形体和圆眼镜在动作中连续。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "6vlQNn54ZIg",
+        "start": 77,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=6vlQNn54ZIg"
+      },
+      "playbackEvidence": {
+        "id": "video-luminous-cloud-fable",
+        "url": "https://nikitafilipchenko.artstation.com/projects/q0L6qz",
+        "start": 77,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "6vlQNn54ZIg",
+        "canonicalUrl": "https://www.youtube.com/watch?v=6vlQNn54ZIg",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/6vlQNn54ZIg",
+        "title": "Cloudling (2026) | AI Animated Short Film",
+        "uploader": "Nixel",
+        "duration": 183,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
       }
     },
     {
@@ -250,7 +308,36 @@
         "observed": "粉红绒鸟扑动翅膀，角色伸手抱起，鸟挣脱后角色的手在胸前落下；随后角色背对镜头走入森林，前景纸叶经过画面，群体造型保持各自材质。",
         "limits": "剧照不附伪造时间；运动判断来自官方公开影片的顺序抽帧，未评价音轨或声称逐帧看完所有段落。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "wZKS5JKJNjA",
+        "start": 0,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=wZKS5JKJNjA"
+      },
+      "playbackEvidence": {
+        "id": "video-papier-mache-theatre",
+        "url": "https://www.lucaslevitan.com/littlemes/",
+        "start": 0,
+        "checkedAt": "2026-10-13",
+        "evidence": "Creator official page https://www.lucaslevitan.com/littlemes/ embeds https://www.youtube.com/embed/wZKS5JKJNjA?feature=oembed.",
+        "provider": "youtube",
+        "videoId": "wZKS5JKJNjA",
+        "canonicalUrl": "https://www.youtube.com/watch?v=wZKS5JKJNjA",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/wZKS5JKJNjA",
+        "title": "LITTLE MES",
+        "uploader": "Lucas Levitan",
+        "duration": 258,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-miniature-fantasy",
@@ -324,7 +411,28 @@
         "observed": "蓝色卧室中角色连续运球、转身与抬腿，绿色卧室以对应构图重演球类活动；随后幻想角色跑过草地、蹲下与绿色绒毛动物互动，家具位置与主色域保持稳定。",
         "limits": "依据顺序抽帧分析视觉动作，不评价音轨，也不声称实物定格拍摄或确定其未公布的模型版本。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "native",
+        "src": "https://capcut.creaite26.com/assets/works/full/01-Closet-wm.mp4",
+        "start": 28,
+        "label": "原片预览",
+        "url": "https://capcut.creaite26.com/"
+      },
+      "playbackEvidence": {
+        "id": "video-miniature-fantasy",
+        "url": "https://capcut.creaite26.com/",
+        "start": 28,
+        "checkedAt": "2026-10-13",
+        "provider": "native",
+        "src": "https://capcut.creaite26.com/assets/works/full/01-Closet-wm.mp4",
+        "canonicalUrl": "https://capcut.creaite26.com/",
+        "embedVerified": true,
+        "label": "原片预览",
+        "previewKind": "full-film",
+        "evidence": "Official CapCut festival public MP4 URL already used for frame capture. HEAD on 2026-10-13 with this site Referer returned 200, Content-Type video/mp4, Accept-Ranges bytes, Content-Disposition inline; no expiring query parameters.",
+        "notes": "External source is 117967688 bytes. Use preload=none/metadata and only create video after click; never eagerly download it into a grid. Keep source link fallback."
+      }
     },
     {
       "id": "video-expressionist-emotion",
@@ -397,7 +505,36 @@
         "observed": "角色在床上从放松到张臂微笑，完成阶段延续原表演；另一段从静态惊讶进入拉伸和弯曲，强色块沿撞击与位移展开，输入的二维动作和最终画面的姿势对应。",
         "limits": "以顺序抽帧检查姿态与颜色变化，不声称完整观看未公开的整部影片，也未评价音轨。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "eCk5VFKKz08",
+        "start": 0,
+        "label": "官方预告",
+        "url": "https://www.youtube.com/watch?v=eCk5VFKKz08"
+      },
+      "playbackEvidence": {
+        "id": "video-expressionist-emotion",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/dear-upstairs-neighbors/",
+        "start": 0,
+        "checkedAt": "2026-10-13",
+        "evidence": "Google official article embeds eCk5VFKKz08. YouTube title explicitly says Trailer and length is 37 seconds. Use as official trailer preview, not claim full short film.",
+        "label": "官方预告",
+        "previewKind": "trailer",
+        "provider": "youtube",
+        "videoId": "eCk5VFKKz08",
+        "canonicalUrl": "https://www.youtube.com/watch?v=eCk5VFKKz08",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/eCk5VFKKz08",
+        "title": "“Dear Upstairs Neighbors” (Trailer)",
+        "uploader": "Google DeepMind",
+        "duration": 37,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback."
+      }
     },
     {
       "id": "video-round-hero-adventure",
@@ -471,7 +608,36 @@
         "observed": "街道场景中角色随事件抬眼并改变嘴形；森林里短肢角色躲避与转身，随后小船受浪推动，角色抓握、划桨并改变重心。材质和圆形身体在多个环境中延续。",
         "limits": "参考为 AI 预告，不将抽样检查等同全片动画验收；动作段落仍可能包含模型局部生成误差，提示词未生成实测。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "4bEZ09nh3XA",
+        "start": 21,
+        "label": "官方预告",
+        "url": "https://www.youtube.com/watch?v=4bEZ09nh3XA"
+      },
+      "playbackEvidence": {
+        "id": "video-round-hero-adventure",
+        "url": "https://www.youtube.com/watch?v=4bEZ09nh3XA",
+        "start": 21,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true. Title and official WAIFF description identify the award category as Best Synopsis + AI Teaser; label as trailer, not full film.",
+        "provider": "youtube",
+        "videoId": "4bEZ09nh3XA",
+        "canonicalUrl": "https://www.youtube.com/watch?v=4bEZ09nh3XA",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/4bEZ09nh3XA",
+        "title": "『Samurai Egg』中谷 学｜ベストシノプシス+AIティザー賞 受賞 WAIFF 2026 in KYOTO",
+        "uploader": "WAIFF_Japan",
+        "duration": 167,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "官方预告",
+        "previewKind": "trailer"
+      }
     },
     {
       "id": "video-moss-stone-puppet-fable",
@@ -563,6 +729,35 @@
           91
         ],
         "observations": "石偶眼部和头部姿态缓慢改变，石指沿琥珀表面连续移动；植物角色伸出手掌触碰、眨眼及转头，后续萎蔫段眼睑收拢。运动克制但有独立表演，不是整张静图平移。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "mi-1OPsj-_o",
+        "start": 19,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=mi-1OPsj-_o"
+      },
+      "playbackEvidence": {
+        "id": "video-moss-stone-puppet-fable",
+        "url": "https://www.juliewieland.com/",
+        "start": 19,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "mi-1OPsj-_o",
+        "canonicalUrl": "https://www.youtube.com/watch?v=mi-1OPsj-_o",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/mi-1OPsj-_o",
+        "title": "UNTIL WE MEET AGAIN – AI Short Film",
+        "uploader": "Julie Wieland",
+        "duration": 119,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
       }
     },
     {
@@ -644,6 +839,35 @@
           55
         ],
         "observations": "厨房角色的眼球、口型和毛根手臂分别变化，硬壳比例与位置保持；训练段快速切入下蹲/起伏与用力表情，动作有预备、发力和回收。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "dhI4djOVEmI",
+        "start": 13,
+        "label": "官方短片",
+        "url": "https://www.youtube.com/watch?v=dhI4djOVEmI"
+      },
+      "playbackEvidence": {
+        "id": "video-cardboard-puppet-comedy",
+        "url": "https://nexusstudios.com/work/google-io-2026-tpu/",
+        "start": 13,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "dhI4djOVEmI",
+        "canonicalUrl": "https://www.youtube.com/watch?v=dhI4djOVEmI",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/dhI4djOVEmI",
+        "title": "TPU Training Day for  I/O  ‘26",
+        "uploader": "Google",
+        "duration": 87,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "官方短片",
+        "previewKind": "official-short"
       }
     },
     {
@@ -718,7 +942,36 @@
         "observed": "室内角色嘴型、目光与脸部姿态随对话改变，光线保持一致；幻想角色先展示道具再以手势交谈，镜头切回主角反应，空间色调从柔粉过渡到深红青蓝而造型线条仍一致。",
         "limits": "以顺序抽帧核对姿势、构图与连续性，未以音轨核实精确口型同步；不声称全片无生成瑕疵。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "zunXh_L_9Zw",
+        "start": 41,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=zunXh_L_9Zw"
+      },
+      "playbackEvidence": {
+        "id": "video-luminous-anime",
+        "url": "https://www.youtube.com/watch?v=zunXh_L_9Zw",
+        "start": 41,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "zunXh_L_9Zw",
+        "canonicalUrl": "https://www.youtube.com/watch?v=zunXh_L_9Zw",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/zunXh_L_9Zw",
+        "title": "『This is Me』平田 茉莉花｜Japan Best AI Film/ベストAIアニメ賞受賞 WAIFF 2026 in KYOTO",
+        "uploader": "WAIFF_Japan",
+        "duration": 600,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-pounamu-animation",
@@ -792,7 +1045,36 @@
         ],
         "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "PbZ8L5EDq9U",
+        "start": 97,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=PbZ8L5EDq9U"
+      },
+      "playbackEvidence": {
+        "id": "video-pounamu-animation",
+        "url": "https://watch.runwayml.com/pounamu",
+        "start": 97,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "PbZ8L5EDq9U",
+        "canonicalUrl": "https://www.youtube.com/watch?v=PbZ8L5EDq9U",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/PbZ8L5EDq9U",
+        "title": "Pounamu — Samuel Schrag",
+        "uploader": "Runway",
+        "duration": 289,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-tree-animation",
@@ -866,7 +1148,36 @@
         ],
         "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "lZW3CgMlHa0",
+        "start": 17,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=lZW3CgMlHa0"
+      },
+      "playbackEvidence": {
+        "id": "video-tree-animation",
+        "url": "https://watch.runwayml.com/a-tree-once-grew-here",
+        "start": 17,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "lZW3CgMlHa0",
+        "canonicalUrl": "https://www.youtube.com/watch?v=lZW3CgMlHa0",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/lZW3CgMlHa0",
+        "title": "A Tree Once Grew Here — John Semerad",
+        "uploader": "Runway",
+        "duration": 420,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-why-animation",
@@ -945,7 +1256,36 @@
         ],
         "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "AT8drSbCG0I",
+        "start": 17,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=AT8drSbCG0I"
+      },
+      "playbackEvidence": {
+        "id": "video-why-animation",
+        "url": "https://www.hilarioabad.net/ai-video",
+        "start": 17,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "AT8drSbCG0I",
+        "canonicalUrl": "https://www.youtube.com/watch?v=AT8drSbCG0I",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/AT8drSbCG0I",
+        "title": "🎥 WHY — Un cortometraje claymation hecho con IA en solo 14 horas",
+        "uploader": "Hilario Abad",
+        "duration": 219,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-myth-animation",
@@ -1024,7 +1364,36 @@
         ],
         "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "oUKSKZDB9uc",
+        "start": 52,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=oUKSKZDB9uc"
+      },
+      "playbackEvidence": {
+        "id": "video-myth-animation",
+        "url": "https://watch.runwayml.com/the-myth",
+        "start": 52,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "oUKSKZDB9uc",
+        "canonicalUrl": "https://www.youtube.com/watch?v=oUKSKZDB9uc",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/oUKSKZDB9uc",
+        "title": "The Myth - GEN:48 Silver",
+        "uploader": "Runway",
+        "duration": 120,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-chromatic-dance-metamorphosis",
@@ -1105,6 +1474,35 @@
           58
         ],
         "observations": "悬浮形体的伸展姿态经过材质变化与动作匹配连接到落地肢体；粉蓝舞者由张开手臂进入扭转和侧向重心转换，随后切到移动交通工具。不是仅凭两张静帧推测运动。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "SX4Bqmm-pYI",
+        "start": 12,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=SX4Bqmm-pYI"
+      },
+      "playbackEvidence": {
+        "id": "video-chromatic-dance-metamorphosis",
+        "url": "https://valleeduhamel.com/portfolio-item/afterlight/",
+        "start": 12,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "SX4Bqmm-pYI",
+        "canonicalUrl": "https://www.youtube.com/watch?v=SX4Bqmm-pYI",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/SX4Bqmm-pYI",
+        "title": "After Light — Vallée Duhamel",
+        "uploader": "Runway",
+        "duration": 88,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
       }
     },
     {
@@ -1179,7 +1577,36 @@
         "observed": "白衣角色把小生物放回草中，步行至方形舱室后坐下操作控制台；后续涉水观察、抬起摄影器材。粉红生物与幼体在多处生态环境中移动，环境纹理与角色线条分别保持自身密度。",
         "limits": "以顺序抽帧检查动作和画面，不评价音轨，也不把较稀疏的全片概览等同逐帧动画质量审计。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "A5-PLKYOEaw",
+        "start": 17,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=A5-PLKYOEaw"
+      },
+      "playbackEvidence": {
+        "id": "video-cel-alien-ecology",
+        "url": "https://runway.com/customers/behind-the-scenes-of-migration-with-director-jeremy-higgins",
+        "start": 17,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "A5-PLKYOEaw",
+        "canonicalUrl": "https://www.youtube.com/watch?v=A5-PLKYOEaw",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/A5-PLKYOEaw",
+        "title": "Migration — Jeremy Higgins | Runway Studios",
+        "uploader": "Runway",
+        "duration": 110,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-ausencia-animation",
@@ -1258,7 +1685,36 @@
         ],
         "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
       },
-      "checkedAt": "2026-10-13"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "zj_KFNmce7c",
+        "start": 112,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=zj_KFNmce7c"
+      },
+      "playbackEvidence": {
+        "id": "video-ausencia-animation",
+        "url": "https://www.contanimation.com/originals/",
+        "start": 112,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "zj_KFNmce7c",
+        "canonicalUrl": "https://www.youtube.com/watch?v=zj_KFNmce7c",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/zj_KFNmce7c",
+        "title": "AUSENCIA — ANNIVERSARY REMASTER | AI Short Film by Contanimation",
+        "uploader": "Contanimation Films",
+        "duration": 302,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
+      }
     },
     {
       "id": "video-liquid-museum-animation",
@@ -1334,6 +1790,35 @@
           220
         ],
         "observations": "古典面孔保持裂纹位置，眼部与泪滴连续变化后切镜；对称馆厅内的悬浮液滴和地面颜料具有独立流动，透视保持稳定。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "BwZkIEQDj10",
+        "start": 152,
+        "label": "官方 MV",
+        "url": "https://www.youtube.com/watch?v=BwZkIEQDj10"
+      },
+      "playbackEvidence": {
+        "id": "video-liquid-museum-animation",
+        "url": "https://www.thecvf-art.com/project.php?artist=paul-trillo&year=2024",
+        "start": 152,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "BwZkIEQDj10",
+        "canonicalUrl": "https://www.youtube.com/watch?v=BwZkIEQDj10",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/BwZkIEQDj10",
+        "title": "Jacques - Absolve",
+        "uploader": "Jacques",
+        "duration": 283,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "官方 MV",
+        "previewKind": "music-video"
       }
     },
     {
@@ -1410,6 +1895,35 @@
           227
         ],
         "observations": "近景维持角色眼部与刻痕身份，红色长形生物的低头姿势后接高速陨落段落；全片接触表还显示林间侧向行进和分层遮挡。停顿与突发动作形成节奏差。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "VdMgPgicvK4",
+        "start": 82,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=VdMgPgicvK4"
+      },
+      "playbackEvidence": {
+        "id": "video-cutout-posthuman",
+        "url": "https://ricardovillavicencio.com/type/animation/do-the-evolution/",
+        "start": 82,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "VdMgPgicvK4",
+        "canonicalUrl": "https://www.youtube.com/watch?v=VdMgPgicvK4",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/VdMgPgicvK4",
+        "title": "Do The Evolution — Ricardo Villavicencio | Runway Studios",
+        "uploader": "Runway",
+        "duration": 342,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
       }
     },
     {
@@ -1491,6 +2005,35 @@
           71
         ],
         "observations": "荧光拼贴头部的眼口细微变化后转为红底符号脸；侧面跑动连续显示摆臂、屈膝、落脚和丝线摆动。全片结构包含平面与体积段落交替。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "zD7pc2nnKj4",
+        "start": 9,
+        "label": "原片预览",
+        "url": "https://www.youtube.com/watch?v=zD7pc2nnKj4"
+      },
+      "playbackEvidence": {
+        "id": "video-neon-comic-collage",
+        "url": "https://www.hyacinth.im/works/movie",
+        "start": 9,
+        "checkedAt": "2026-10-13",
+        "evidence": "Same official public player used for the existing timestamped frame capture; provenance is retained in source manifest. Current YouTube watch player metadata confirms playableInEmbed=true.",
+        "provider": "youtube",
+        "videoId": "zD7pc2nnKj4",
+        "canonicalUrl": "https://www.youtube.com/watch?v=zD7pc2nnKj4",
+        "embedUrl": "https://www.youtube-nocookie.com/embed/zD7pc2nnKj4",
+        "title": "To Eat or Not To Eat — Ruby Nian & Ring Hyacinth",
+        "uploader": "Runway",
+        "duration": 97,
+        "embedVerified": true,
+        "verification": {
+          "status": "OK",
+          "playableInEmbed": true
+        },
+        "notes": "Official player is allowed to embed at check time; browser/network/region restrictions may still affect playback. Keep original-source fallback.",
+        "label": "原片预览",
+        "previewKind": "full-film"
       }
     },
     {
@@ -1586,78 +2129,39 @@
         ],
         "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
       },
-      "checkedAt": "2026-10-13"
-    },
-    {
-      "id": "video-eastern-myth-cinema",
-      "reference": {
-        "title": "《中国神话》第一集 ·《补天》",
-        "creator": "央视频 / 总台人工智能工作室 / 清华大学新闻与传播学院元宇宙文化实验室",
-        "url": "https://5gai.cctv.com/2024/04/30/VIDEMFg2fMYhgfIbT5AXqKKM240430.shtml",
-        "type": "ai",
-        "note": "央视 2024 年 3 月 22 日发布说明明确列出该系列美术、分镜、视频、配音和配乐的 AI 参与。这里仅参考《补天》的神话视觉段落，不把后续现实议题段落概括为同一画风。",
-        "recognition": "总台央视频 AI 频道启动时推出的《中国神话》系列；作为官方公开 AIGC 代表作品收录，不声称获奖或排名。"
+      "checkedAt": "2026-10-13",
+      "preview": {
+        "provider": "vimeo",
+        "videoId": "1195915021",
+        "src": "https://player.vimeo.com/video/1195915021?h=e678b5374d",
+        "hash": "e678b5374d",
+        "start": 37,
+        "label": "原片预览",
+        "url": "https://vimeo.com/1195915021/e678b5374d"
       },
-      "sources": [
-        {
-          "title": "央视对应节目页",
-          "url": "https://5gai.cctv.com/2024/04/30/VIDEMFg2fMYhgfIbT5AXqKKM240430.shtml"
+      "playbackEvidence": {
+        "id": "video-well-animation",
+        "url": "https://www.whatif.film/",
+        "start": 37,
+        "checkedAt": "2026-10-13",
+        "provider": "vimeo",
+        "videoId": "1195915021",
+        "hash": "e678b5374d",
+        "src": "https://player.vimeo.com/video/1195915021?h=e678b5374d",
+        "canonicalUrl": "https://vimeo.com/1195915021/e678b5374d",
+        "embedUrl": "https://player.vimeo.com/video/1195915021?h=e678b5374d",
+        "embedVerified": true,
+        "label": "原片预览",
+        "previewKind": "full-film",
+        "title": "The Well",
+        "duration": 329,
+        "evidence": "Creator studio official homepage has data-vimeo=\"1195915021/e678b5374d\" next to The Well. Official player requested with Referer https://bryceyuuu.github.io/ returned 200, title The Well, duration 329, privacy unlisted and embed_permission public.",
+        "verification": {
+          "status": 200,
+          "embed_permission": "public"
         },
-        {
-          "title": "央视发布与 AI 全流程制作说明",
-          "url": "https://www.cctv.com/2024/03/22/ARTImxwnEZa0LYYPusv8E57A240322.shtml"
-        },
-        {
-          "title": "华语动漫公开节目视频",
-          "url": "https://www.youtube.com/watch?v=3V1dmLDRyuo"
-        }
-      ],
-      "frames": [
-        {
-          "src": "assets/img/video/video-eastern-myth-cinema/01.jpg",
-          "time": "01:16.0",
-          "caption": "薄纱有叠层透光，细发丝与金色粒子处于青灰环境光中；轻材质的边缘响应为这一风格提供触感。",
-          "credit": "央视频 /《中国神话·补天》",
-          "mediaUrl": "https://www.youtube.com/watch?v=3V1dmLDRyuo",
-          "captureKind": "video-frame",
-          "seconds": 76.019659,
-          "sha256": "30768b195526e40f45cf5c4ad5b1790df85d97db97e4e6401563701188cdabd1",
-          "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
-          "captureMethod": "浏览器公开播放器暂停截帧；截取完整视频矩形并等比例缩小，保留原片字幕。"
-        },
-        {
-          "src": "assets/img/video/video-eastern-myth-cinema/02.jpg",
-          "time": "01:23.2",
-          "caption": "橙红发光区域在青蓝环境中形成体积与反射，云火、岩面和水面具有不同边缘；用来说明能量需要影响周围空间。",
-          "credit": "央视频 /《中国神话·补天》",
-          "mediaUrl": "https://www.youtube.com/watch?v=3V1dmLDRyuo",
-          "captureKind": "video-frame",
-          "seconds": 83.201215,
-          "sha256": "c244d4d39fa0ef4b172b10e687a5e698229de06e3772df7d3c0f654a6a83e400",
-          "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
-          "captureMethod": "浏览器公开播放器暂停截帧；截取完整视频矩形并等比例缩小。"
-        }
-      ],
-      "rights": {
-        "status": "copyright-retained-editorial-reference",
-        "openLicenseFound": false,
-        "permissionClaim": false,
-        "note": "仅保存每部作品两张小尺寸参考截帧，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站 MIT。分析及提示词为本站原创风格练习，非作者原始提示词或制作参数，尚未逐条生成验证。"
-      },
-      "selectionBatch": "known-ai-films-20261011",
-      "motionEvidence": {
-        "method": "浏览器观看并比较公开节目中的局部连续片段，截帧位置由 HTML 视频元素 currentTime 读取。",
-        "ranges": [
-          "00:55–01:16",
-          "01:15–01:39"
-        ],
-        "observations": [
-          "神话段落可见火光或粒子沿空间运动，衣料和发丝有细部漂动。",
-          "近景人物与较大尺度火云场景相继出现，材质轻重、环境光色和景别有明显变化。"
-        ],
-        "limits": "未声称观看整集；重量、气流传播和连续性规则为原创生成建议，不声称知道作者内部模型参数。"
-      },
-      "checkedAt": "2026-10-11"
+        "notes": "Keep required unlisted hash h=e678b5374d in iframe URL. This hash is published on creator homepage. Do not use signed CDN media URLs."
+      }
     },
     {
       "id": "video-surreal-everyday-cinema",
@@ -1740,7 +2244,28 @@
         ],
         "boundary": "对运动与摄影的描述为本站观察和创作建议，不等于作者原始提示词或模型能力保证。"
       },
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "G4wJ4WeJrz4",
+        "label": "官方完整短片",
+        "url": "https://www.youtube.com/watch?v=G4wJ4WeJrz4",
+        "note": ""
+      },
+      "playbackEvidence": {
+        "id": "video-surreal-everyday-cinema",
+        "name": "超现实日常纪录",
+        "provider": "youtube",
+        "label": "官方完整短片",
+        "kind": "film",
+        "title": "Air Head",
+        "url": "https://www.youtube.com/watch?v=G4wJ4WeJrz4",
+        "sourceUrl": "https://www.shy-kids.com/film",
+        "note": "",
+        "evidence": "YouTube oEmbed 返回 air head 🎈 a sora short，作者 shy kids，与现有截帧媒体完全相同。",
+        "checkedAt": "2026-10-13",
+        "videoId": "G4wJ4WeJrz4"
+      }
     },
     {
       "id": "video-organic-macro-cinema",
@@ -1831,7 +2356,28 @@
         ],
         "boundary": "观察对象为官方制作拆解；未把它冒充独立 AI 电影或作者原始提示词。"
       },
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "native",
+        "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM__COMBINED_Output_v_003.mp4",
+        "label": "官方运动匹配拆解",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/",
+        "note": "来自 ANCESTRA 官方制作文章的有机微观运动匹配演示，非整部影片。"
+      },
+      "playbackEvidence": {
+        "id": "video-organic-macro-cinema",
+        "name": "有机微观电影",
+        "provider": "native",
+        "label": "官方运动匹配拆解",
+        "kind": "clip",
+        "title": "ANCESTRA · 有机微观视觉与制作拆解",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/",
+        "note": "来自 ANCESTRA 官方制作文章的有机微观运动匹配演示，非整部影片。",
+        "evidence": "Google 官方 ANCESTRA behind-the-scenes 文章 HTML 直接嵌入此 MP4；与现有第 1 张参考帧一致。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM__COMBINED_Output_v_003.mp4"
+      }
     },
     {
       "id": "video-frosted-archive-scifi",
@@ -1909,7 +2455,28 @@
         ],
         "boundary": "并非全片逐镜头研究；剧照与制作资料支持材质及运动方向分析，不构成新提示词的生成验证。"
       },
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "DNyxZi9Gp_4",
+        "label": "官方第一、二章合集",
+        "url": "https://www.youtube.com/watch?v=DNyxZi9Gp_4",
+        "note": "官方视频收录第一、二章；本站画风分析以开头的第一章为依据。"
+      },
+      "playbackEvidence": {
+        "id": "video-frosted-archive-scifi",
+        "name": "冷峻档案科幻",
+        "provider": "youtube",
+        "label": "官方第一、二章合集",
+        "kind": "film",
+        "title": "The Frost · 第一章",
+        "url": "https://www.youtube.com/watch?v=DNyxZi9Gp_4",
+        "sourceUrl": "https://www.thefrost.ai/",
+        "note": "官方视频收录第一、二章；本站画风分析以开头的第一章为依据。",
+        "evidence": "thefrost.ai 主页首个播放器明确嵌入 DNyxZi9Gp_4；YouTube oEmbed 返回 The Frost: Part 1 (2023) and Part 2 (2024)，作者 Waymark。",
+        "checkedAt": "2026-10-13",
+        "videoId": "DNyxZi9Gp_4"
+      }
     },
     {
       "id": "video-creature-mock-documentary",
@@ -1980,7 +2547,28 @@
         "observed": "前一段以固定或轻微变化的机位观察数种生物；后一段的悬挂角色持续维持抓握关系，眼神、嘴形和身体有克制变化，机位逐渐靠近。",
         "limits": "抽帧可核对姿态、空间和转场变化，不能代替逐帧质量验收或听觉分析。母提示词为风格迁移建议，不代表原作制作指令。"
       },
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "-qdx6VBJHBU",
+        "label": "官方完整短片",
+        "url": "https://www.youtube.com/watch?v=-qdx6VBJHBU",
+        "note": ""
+      },
+      "playbackEvidence": {
+        "id": "video-creature-mock-documentary",
+        "name": "奇幻生物拟纪录",
+        "provider": "youtube",
+        "label": "官方完整短片",
+        "kind": "film",
+        "title": "CRITTERZ · 2023 原版动画短片",
+        "url": "https://www.youtube.com/watch?v=-qdx6VBJHBU",
+        "sourceUrl": "https://www.critterz.tv/",
+        "note": "",
+        "evidence": "critterz.tv WATCH THE ORIGINAL 对应 YouTube embed -qdx6VBJHBU；oEmbed 作者 The Critterz。",
+        "checkedAt": "2026-10-13",
+        "videoId": "-qdx6VBJHBU"
+      }
     },
     {
       "id": "video-memory-dream-transitions",
@@ -2056,7 +2644,28 @@
         "observed": "连续片段呈现人物与观看视点穿过多个生活空间，门洞、近身遮挡和镜面构图承担衔接；速度有变化，人物在画面中的位置和重复空间结构维持记忆般的关联。",
         "limits": "抽帧可核对姿态、空间和转场变化，不能代替逐帧质量验收或听觉分析。母提示词为风格迁移建议，不代表原作制作指令。"
       },
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "vimeo",
+        "videoId": "941713443",
+        "label": "官方音乐录像",
+        "url": "https://vimeo.com/941713443",
+        "note": ""
+      },
+      "playbackEvidence": {
+        "id": "video-memory-dream-transitions",
+        "name": "记忆穿梭梦境",
+        "provider": "vimeo",
+        "label": "官方音乐录像",
+        "kind": "film",
+        "title": "Washed Out — The Hardest Part",
+        "url": "https://vimeo.com/941713443",
+        "sourceUrl": "https://vimeo.com/941713443",
+        "note": "",
+        "evidence": "Vimeo oEmbed 返回 Washed Out \"The Hardest Part\"、作者 Paul Trillo、时长 242 秒，并返回允许嵌入的 iframe。",
+        "checkedAt": "2026-10-13",
+        "videoId": "941713443"
+      }
     },
     {
       "id": "video-retro-archive-surrealism",
@@ -2132,7 +2741,30 @@
         "observed": "第一段由镜片景观切至显示器工作区，观看位置较克制、屏幕内容变化；第二段以剪辑并置悬浮车辆、空中人物与泳池景象，人体、水泡等仍有局部运动。异常与普通环境共存，段落间主要靠观念联系而非连续地理空间。",
         "limits": "抽帧可核对姿态、空间和转场变化，不能代替逐帧质量验收或听觉分析。母提示词为风格迁移建议，不代表原作制作指令。"
       },
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "zpAeygE4d1A",
+        "start": 190,
+        "label": "官方完整短片",
+        "url": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+        "note": "从与本站画风分析相关的复古摄影段落开始，可自由拖动查看整片。"
+      },
+      "playbackEvidence": {
+        "id": "video-retro-archive-surrealism",
+        "name": "复古档案超现实",
+        "provider": "youtube",
+        "label": "官方完整短片",
+        "kind": "film",
+        "title": "Total Pixel Space",
+        "url": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+        "sourceUrl": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+        "note": "从与本站画风分析相关的复古摄影段落开始，可自由拖动查看整片。",
+        "evidence": "与现有原作链接及两个截帧视频 ID 完全一致；YouTube oEmbed 作者 Jacob Adler、片名 Total Pixel Space。",
+        "checkedAt": "2026-10-13",
+        "videoId": "zpAeygE4d1A",
+        "start": 190
+      }
     },
     {
       "id": "video-jewel-painterly-cinema",
@@ -2185,6 +2817,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "JeUuk-g_Qws",
+        "label": "官方幕后 · 含动画片段",
+        "url": "https://www.youtube.com/watch?v=JeUuk-g_Qws",
+        "note": "Netflix 官方 Jibaro 制作解析，包含成片画面；并非正片全集。"
+      },
+      "playbackEvidence": {
+        "id": "video-jewel-painterly-cinema",
+        "name": "珠光写实绘画",
+        "provider": "youtube",
+        "label": "官方幕后 · 含动画片段",
+        "kind": "making-of",
+        "title": "Jibaro ·《吉巴罗》",
+        "url": "https://www.youtube.com/watch?v=JeUuk-g_Qws",
+        "sourceUrl": "https://www.youtube.com/watch?v=JeUuk-g_Qws",
+        "note": "Netflix 官方 Jibaro 制作解析，包含成片画面；并非正片全集。",
+        "evidence": "YouTube oEmbed title: Love, Death + Robots | Inside the Animation: Jibaro | Netflix；作者 Netflix。",
+        "checkedAt": "2026-10-13",
+        "videoId": "JeUuk-g_Qws"
       }
     },
     {
@@ -2236,6 +2889,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/sh220_bg_wip_prores.mp4",
+        "label": "作者公开动画片段",
+        "url": "https://ricardovillavicencio.com/type/animation/one/",
+        "note": "ONE 作者制作页的连续场景演示，非完整短片。"
+      },
+      "playbackEvidence": {
+        "id": "video-painted-alien-world",
+        "name": "手绘异星生态",
+        "provider": "native",
+        "label": "作者公开动画片段",
+        "kind": "clip",
+        "title": "ONE",
+        "url": "https://ricardovillavicencio.com/type/animation/one/",
+        "sourceUrl": "https://ricardovillavicencio.com/type/animation/one/",
+        "note": "ONE 作者制作页的连续场景演示，非完整短片。",
+        "evidence": "Ricardo Villavicencio 的 ONE 制作页 HTML 直接嵌入本 MP4；与本条两张参考帧一致。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/sh220_bg_wip_prores.mp4"
       }
     },
     {
@@ -2285,6 +2959,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/462e26b5-6d94-4b4e-8511-8aa908836280-1920x1080.5000.mp4",
+        "label": "官方预告",
+        "url": "https://www.passion-animation.com/project/love-death-robots-ice/",
+        "note": "ICE 制作方公开预告，非正片全集。"
+      },
+      "playbackEvidence": {
+        "id": "video-angular-cel-animation",
+        "name": "冷色几何赛璐璐",
+        "provider": "native",
+        "label": "官方预告",
+        "kind": "clip",
+        "title": "ICE ·《冰》",
+        "url": "https://www.passion-animation.com/project/love-death-robots-ice/",
+        "sourceUrl": "https://www.passion-animation.com/project/love-death-robots-ice/",
+        "note": "ICE 制作方公开预告，非正片全集。",
+        "evidence": "PASSION 项目页嵌入 passion.slateapp.com/embed/clip/10388，其页面 title 为 Love Death & Robots - ICE Trailer，媒体文件名匹配此稳定 CDN MP4。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/462e26b5-6d94-4b4e-8511-8aa908836280-1920x1080.5000.mp4"
       }
     },
     {
@@ -2332,6 +3027,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://d3phaj0sisr2ct.cloudfront.net/site/images/no-vacancy/No+Vacancy+BTS+Sh+62.mp4",
+        "label": "官方镜头制作拆解",
+        "url": "https://runway.com/customers/the-making-of-mars-and-siv",
+        "note": "No Vacancy 的官方镜头 62 制作对照，包含从分层美术到最终动画的过程，非整部影片。"
+      },
+      "playbackEvidence": {
+        "id": "video-cutout-noir",
+        "name": "纸偶黑色科幻",
+        "provider": "native",
+        "label": "官方镜头制作拆解",
+        "kind": "clip",
+        "title": "Mars and Siv — No Vacancy",
+        "url": "https://runway.com/customers/the-making-of-mars-and-siv",
+        "sourceUrl": "https://runway.com/customers/the-making-of-mars-and-siv",
+        "note": "No Vacancy 的官方镜头 62 制作对照，包含从分层美术到最终动画的过程，非整部影片。",
+        "evidence": "Runway 官方 The Making of Mars and Siv 页面直接嵌入此 MP4。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://d3phaj0sisr2ct.cloudfront.net/site/images/no-vacancy/No+Vacancy+BTS+Sh+62.mp4"
       }
     },
     {
@@ -2385,6 +3101,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      },
+      "preview": {
+        "provider": "youtube",
+        "videoId": "IqhXDb69wl4",
+        "label": "官方幕后 · 含动画片段",
+        "url": "https://www.youtube.com/watch?v=IqhXDb69wl4",
+        "note": "Netflix 官方 The Witness 制作解析，包含成片画面；并非正片全集。"
+      },
+      "playbackEvidence": {
+        "id": "video-neon-painted-noir",
+        "name": "霓虹绘画黑色电影",
+        "provider": "youtube",
+        "label": "官方幕后 · 含动画片段",
+        "kind": "making-of",
+        "title": "The Witness ·《证人》",
+        "url": "https://www.youtube.com/watch?v=IqhXDb69wl4",
+        "sourceUrl": "https://www.youtube.com/watch?v=IqhXDb69wl4",
+        "note": "Netflix 官方 The Witness 制作解析，包含成片画面；并非正片全集。",
+        "evidence": "YouTube oEmbed title: LOVE DEATH + ROBOTS | Inside the Animation: The Witness | Netflix；作者 Netflix。",
+        "checkedAt": "2026-10-13",
+        "videoId": "IqhXDb69wl4"
       }
     },
     {
@@ -2432,6 +3169,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/08_VEO_Cinematic_Edit01_16x9_250516e.mp4",
+        "label": "官方生成视频演示",
+        "url": "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/",
+        "note": "Google Flow Cinematic quality 官方演示。"
+      },
+      "playbackEvidence": {
+        "id": "video-aquarium-dream",
+        "name": "水族梦境写实",
+        "provider": "native",
+        "label": "官方生成视频演示",
+        "kind": "clip",
+        "title": "Flow — Cinematic quality 官方示例",
+        "url": "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/",
+        "sourceUrl": "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/",
+        "note": "Google Flow Cinematic quality 官方演示。",
+        "evidence": "Google Flow 官方发布文章在 Cinematic quality 栏目直接嵌入此 MP4。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/08_VEO_Cinematic_Edit01_16x9_250516e.mp4"
       }
     },
     {
@@ -2482,6 +3240,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://stream.mux.com/OUifwtvz00Flhhyl7DhTP3T2evYD86yylXn8wAY6zBOE/high.mp4",
+        "label": "制作方公开片段",
+        "url": "https://buck.co/work/love-death-robots",
+        "note": "BUCK 官方作品页中的 8.29 秒片段，非正片全集。"
+      },
+      "playbackEvidence": {
+        "id": "video-tilt-shift-mini-world",
+        "name": "移轴微缩世界",
+        "provider": "native",
+        "label": "制作方公开片段",
+        "kind": "clip",
+        "title": "Night of the Mini Dead ·《迷你亡灵之夜》",
+        "url": "https://buck.co/work/love-death-robots",
+        "sourceUrl": "https://buck.co/work/love-death-robots",
+        "note": "BUCK 官方作品页中的 8.29 秒片段，非正片全集。",
+        "evidence": "BUCK 原作项目页的 __NEXT_DATA__ 明确列出此 Mux playback_id、public policy、mp4_support standard、duration 8.291667；与本条首张官方封面 Mux ID 一致。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://stream.mux.com/OUifwtvz00Flhhyl7DhTP3T2evYD86yylXn8wAY6zBOE/high.mp4"
       }
     },
     {
@@ -2533,6 +3312,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于逐帧风格评论，原视频不分发；原权利人保留版权，图片不纳入 MIT。本站原创分析与练习提示词非作者原始提示词，未模型实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/One_PortalTest.mp4",
+        "label": "作者公开视觉测试",
+        "url": "https://ricardovillavicencio.com/type/animation/one/",
+        "note": "ONE — Portal Test；这是视觉测试，非整部影片。"
+      },
+      "playbackEvidence": {
+        "id": "video-liquid-optics",
+        "name": "液态光学片头",
+        "provider": "native",
+        "label": "作者公开视觉测试",
+        "kind": "clip",
+        "title": "ONE — Portal Test",
+        "url": "https://ricardovillavicencio.com/type/animation/one/",
+        "sourceUrl": "https://ricardovillavicencio.com/type/animation/one/",
+        "note": "ONE — Portal Test；这是视觉测试，非整部影片。",
+        "evidence": "作者 ONE 制作页 HTML 直接嵌入 One_PortalTest.mp4，与两张参考帧一致。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/One_PortalTest.mp4"
       }
     },
     {
@@ -2590,7 +3390,28 @@
         "note": "仅保存两张小尺寸参考图用于逐图视觉评论；原视频不分发，图片版权归原权利人且不纳入本站 MIT。风格分析与提示词为本站原创练习，非作者制作参数或原始提示词，尚未逐条生成验证。"
       },
       "motionEvidence": "观看官方公开预告并按连续帧观察：开场艇的位移与波浪、角色保留姿态、21–24 秒跨越天体与城市尺度的几何形变化。提示词为泛化创作方法，不声称全片仅有慢运动。",
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "native",
+        "src": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/0d603a58-f11e-4fe1-91c0-96792e7c4a7f-1920x1080.5000.mp4",
+        "label": "官方预告",
+        "url": "https://www.passion-animation.com/project/love-death-robots-zima-blue/",
+        "note": "Zima Blue 制作方公开预告，非正片全集。"
+      },
+      "playbackEvidence": {
+        "id": "video-monumental-graphic-minimalism",
+        "name": "纪念碑几何动画",
+        "provider": "native",
+        "label": "官方预告",
+        "kind": "clip",
+        "title": "Zima Blue ·《齐马蓝》",
+        "url": "https://www.passion-animation.com/project/love-death-robots-zima-blue/",
+        "sourceUrl": "https://www.passion-animation.com/project/love-death-robots-zima-blue/",
+        "note": "Zima Blue 制作方公开预告，非正片全集。",
+        "evidence": "PASSION 项目页嵌入 strangebeast.slateapp.com/embed/clip/1586，其页面 title 为 Zima Blue Trailer，公开媒体 remote_address 与此 CDN MP4 完全一致。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/0d603a58-f11e-4fe1-91c0-96792e7c4a7f-1920x1080.5000.mp4"
+      }
     },
     {
       "id": "video-ligne-claire-psychedelia",
@@ -2649,7 +3470,28 @@
         "note": "仅保存两张小尺寸参考图用于逐图视觉评论；原视频不分发，图片版权归原权利人且不纳入本站 MIT。风格分析与提示词为本站原创练习，非作者制作参数或原始提示词，尚未逐条生成验证。"
       },
       "motionEvidence": "实际查看 Nexus 嵌入的公开预告与 Netflix 制作特辑；预告33–37秒出现本集负重行走、随后冷色近景。导演官网制作文字提供 underwater feeling 的动态气氛依据，未把静帧解释为固定运镜。",
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "native",
+        "src": "https://cdn.nexusstudios.com/uploads/2023/05/NexusStudios_LoveDeathRobots_EmilyDean_Clip_5.mp4",
+        "label": "制作方公开动画片段",
+        "url": "https://nexusstudios.com/work/love-death-and-robots/",
+        "note": "The Very Pulse of the Machine 的制作方作品页片段。"
+      },
+      "playbackEvidence": {
+        "id": "video-ligne-claire-psychedelia",
+        "name": "清线迷幻漫画",
+        "provider": "native",
+        "label": "制作方公开动画片段",
+        "kind": "clip",
+        "title": "The Very Pulse of the Machine",
+        "url": "https://nexusstudios.com/work/love-death-and-robots/",
+        "sourceUrl": "https://nexusstudios.com/work/love-death-and-robots/",
+        "note": "The Very Pulse of the Machine 的制作方作品页片段。",
+        "evidence": "Nexus Emily Dean 的 Love Death + Robots 项目页面直接嵌入此特定动画片段，位置紧邻导演对该片感知与视觉的论述。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://cdn.nexusstudios.com/uploads/2023/05/NexusStudios_LoveDeathRobots_EmilyDean_Clip_5.mp4"
+      }
     },
     {
       "id": "video-luminous-ink-fantasy",
@@ -2696,7 +3538,28 @@
         "note": "仅保存两张小尺寸参考图用于逐图视觉评论；原视频不分发，图片版权归原权利人且不纳入本站 MIT。风格分析与提示词为本站原创练习，非作者制作参数或原始提示词，尚未逐条生成验证。"
       },
       "motionEvidence": "未以静帧伪称整片观看。运动分析依据 Platige 官方 Lead Look Development 对 moving source of light 的说明；流动弧线、相位差与镜头气质为本站原创生成建议，不声称作者原始参数。",
-      "checkedAt": "2026-10-11"
+      "checkedAt": "2026-10-11",
+      "preview": {
+        "provider": "youtube",
+        "videoId": "XbFiQJOD2Pg",
+        "label": "官方幕后 · 含动画片段",
+        "url": "https://www.youtube.com/watch?v=XbFiQJOD2Pg",
+        "note": "Netflix 官方 Fish Night 制作解析，包含本集动画片段；并非正片全集。"
+      },
+      "playbackEvidence": {
+        "id": "video-luminous-ink-fantasy",
+        "name": "流光墨线幻境",
+        "provider": "youtube",
+        "label": "官方幕后 · 含动画片段",
+        "kind": "making-of",
+        "title": "Fish Night ·《鱼之夜》",
+        "url": "https://www.youtube.com/watch?v=XbFiQJOD2Pg",
+        "sourceUrl": "https://platige.com/project/commercial-branded-content/fish-night/",
+        "note": "Netflix 官方 Fish Night 制作解析，包含本集动画片段；并非正片全集。",
+        "evidence": "原作背景美术师 Maciej Rebisz 项目页 https://mac.artstation.com/projects/mq9yLv 嵌入 youtube-nocookie.com/embed/XbFiQJOD2Pg；YouTube oEmbed 返回 LOVE DEATH + ROBOTS | Inside the Animation: Fish Night | Netflix、作者 Netflix。",
+        "checkedAt": "2026-10-13",
+        "videoId": "XbFiQJOD2Pg"
+      }
     },
     {
       "id": "video-handmade-clay",
@@ -2749,6 +3612,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于具体风格评论，保留原权利人版权，不随代码按 MIT 授权；不分发原视频。本站原创提示词并非作者原词，未经模型输出实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__veo-3__camper.webm",
+        "label": "官方生成视频演示",
+        "url": "https://deepmind.google/models/veo/",
+        "note": "Google DeepMind 的 8 秒 Camping (Stop Motion) 模型演示。"
+      },
+      "playbackEvidence": {
+        "id": "video-handmade-clay",
+        "name": "手作黏土定格",
+        "provider": "native",
+        "label": "官方生成视频演示",
+        "kind": "clip",
+        "title": "Camping (Stop Motion)",
+        "url": "https://deepmind.google/models/veo/",
+        "sourceUrl": "https://deepmind.google/models/veo/",
+        "note": "Google DeepMind 的 8 秒 Camping (Stop Motion) 模型演示。",
+        "evidence": "现有采集来源记录为 Veo 官方展示页及此原始媒体；Google 官方域名上的稳定 WebM 仍可访问。当前官网已更换展示内容，旧素材仍存活。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__veo-3__camper.webm"
       }
     },
     {
@@ -2802,6 +3686,27 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于具体风格评论，保留原权利人版权，不随代码按 MIT 授权；不分发原视频。本站原创提示词并非作者原词，未经模型输出实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__controls__character-consistency__output-1.webm",
+        "label": "官方生成视频演示",
+        "url": "https://deepmind.google/models/veo/",
+        "note": "Google DeepMind 的 8 秒角色一致性模型演示。"
+      },
+      "playbackEvidence": {
+        "id": "video-plush-character",
+        "name": "长绒玩偶动画",
+        "provider": "native",
+        "label": "官方生成视频演示",
+        "kind": "clip",
+        "title": "Keep your characters consistent · a cute monster walking towards the camera",
+        "url": "https://deepmind.google/models/veo/",
+        "sourceUrl": "https://deepmind.google/models/veo/",
+        "note": "Google DeepMind 的 8 秒角色一致性模型演示。",
+        "evidence": "现有采集来源记录为 Veo 官方展示页及此原始媒体；Google 官方域名上的稳定 WebM 仍可访问。当前官网已更换展示内容，旧素材仍存活。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__controls__character-consistency__output-1.webm"
       }
     },
     {
@@ -2855,8 +3760,32 @@
         "openLicenseFound": false,
         "permissionClaim": false,
         "note": "少量参考画面用于具体风格评论，保留原权利人版权，不随代码按 MIT 授权；不分发原视频。本站原创提示词并非作者原词，未经模型输出实测。"
+      },
+      "preview": {
+        "provider": "native",
+        "src": "https://www.ono-trading.com/videos/clip-07.mp4",
+        "start": 1.75,
+        "label": "官方视觉转换演示",
+        "url": "https://www.ono-trading.com/en",
+        "note": "全段约 5 秒；约 1.75–2.75 秒为本站分析的木刻画风，其余段落会转换媒介。"
+      },
+      "playbackEvidence": {
+        "id": "video-layered-woodcut",
+        "name": "套色木刻版画",
+        "provider": "native",
+        "label": "官方视觉转换演示",
+        "kind": "clip",
+        "title": "Woodcut style, red coat in a rainy street",
+        "url": "https://www.ono-trading.com/en",
+        "sourceUrl": "https://www.ono-trading.com/en",
+        "note": "全段约 5 秒；约 1.75–2.75 秒为本站分析的木刻画风，其余段落会转换媒介。",
+        "evidence": "Ono Trading 英文官网 CLIPS 中直接嵌入 /videos/clip-07.mp4，aria-label 和图注均为 Woodcut style, red coat in a rainy street。 媒体 URL HEAD 返回 HTTP 200、video Content-Type、Accept-Ranges: bytes。",
+        "checkedAt": "2026-10-13",
+        "src": "https://www.ono-trading.com/videos/clip-07.mp4",
+        "start": 1.75
       }
     }
   ],
-  "promptRevision": "2026-10-11: reusable appearance, material, motion, camera and continuity rules; no fixed duration, aspect ratio, plot or shot list"
+  "promptRevision": "2026-10-11: reusable appearance, material, motion, camera and continuity rules; no fixed duration, aspect ratio, plot or shot list",
+  "playbackRevision": "2026-10-13: official on-demand previews for all 40 retained styles; no original media redistributed; mythology entry removed by maintainer request"
 }

@@ -92,7 +92,14 @@ window.HF_VIDEO_STYLES = [
           "sourceHeight": 720
         }
       }
-    ]
+    ],
+    "preview": {
+      "provider": "youtube",
+      "videoId": "oESR5L9W2kc",
+      "start": 64,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=oESR5L9W2kc"
+    }
   },
   {
     "id": "video-luminous-cloud-fable",
@@ -172,7 +179,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
       }
     ],
-    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。"
+    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "6vlQNn54ZIg",
+      "start": 77,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=6vlQNn54ZIg"
+    }
   },
   {
     "id": "video-papier-mache-theatre",
@@ -251,7 +265,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "作者项目页公开剧照等比例缩至 960 像素宽；原图未标时间，不虚构成片秒数。"
       }
     ],
-    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。"
+    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "wZKS5JKJNjA",
+      "start": 0,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=wZKS5JKJNjA"
+    }
   },
   {
     "id": "video-miniature-fantasy",
@@ -332,7 +353,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。"
       }
     ],
-    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。"
+    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。",
+    "preview": {
+      "provider": "native",
+      "src": "https://capcut.creaite26.com/assets/works/full/01-Closet-wm.mp4",
+      "start": 28,
+      "label": "原片预览",
+      "url": "https://capcut.creaite26.com/"
+    }
   },
   {
     "id": "video-expressionist-emotion",
@@ -424,7 +452,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "官方公开制作拆解 MP4 抽帧，裁出右侧 Final look 画面后等比例缩至 960 像素宽；左侧为概念画，未作为成片引用。"
       }
     ],
-    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。"
+    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "eCk5VFKKz08",
+      "start": 0,
+      "label": "官方预告",
+      "url": "https://www.youtube.com/watch?v=eCk5VFKKz08"
+    }
   },
   {
     "id": "video-round-hero-adventure",
@@ -505,7 +540,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "WAIFF Japan 官方公开预告抽帧，完整画面等比例缩至 960 像素宽。"
       }
     ],
-    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。"
+    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "4bEZ09nh3XA",
+      "start": 21,
+      "label": "官方预告",
+      "url": "https://www.youtube.com/watch?v=4bEZ09nh3XA"
+    }
   },
   {
     "id": "video-moss-stone-puppet-fable",
@@ -584,7 +626,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
       }
     ],
-    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。"
+    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "mi-1OPsj-_o",
+      "start": 19,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=mi-1OPsj-_o"
+    }
   },
   {
     "id": "video-cardboard-puppet-comedy",
@@ -664,7 +713,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
       }
     ],
-    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。"
+    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "dhI4djOVEmI",
+      "start": 13,
+      "label": "官方短片",
+      "url": "https://www.youtube.com/watch?v=dhI4djOVEmI"
+    }
   },
   {
     "id": "video-luminous-anime",
@@ -744,7 +800,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "WAIFF Japan 官方公开视频抽帧，保留原生黑边与字幕，完整画面等比例缩至 960 像素宽。"
       }
     ],
-    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。"
+    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "zunXh_L_9Zw",
+      "start": 41,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=zunXh_L_9Zw"
+    }
   },
   {
     "id": "video-pounamu-animation",
@@ -821,7 +884,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
         "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
       }
-    ]
+    ],
+    "preview": {
+      "provider": "youtube",
+      "videoId": "PbZ8L5EDq9U",
+      "start": 97,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=PbZ8L5EDq9U"
+    }
   },
   {
     "id": "video-tree-animation",
@@ -898,7 +968,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
         "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
       }
-    ]
+    ],
+    "preview": {
+      "provider": "youtube",
+      "videoId": "lZW3CgMlHa0",
+      "start": 17,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=lZW3CgMlHa0"
+    }
   },
   {
     "id": "video-why-animation",
@@ -975,7 +1052,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
         "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
       }
-    ]
+    ],
+    "preview": {
+      "provider": "youtube",
+      "videoId": "AT8drSbCG0I",
+      "start": 17,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=AT8drSbCG0I"
+    }
   },
   {
     "id": "video-myth-animation",
@@ -1053,7 +1137,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
         "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
       }
-    ]
+    ],
+    "preview": {
+      "provider": "youtube",
+      "videoId": "oUKSKZDB9uc",
+      "start": 52,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=oUKSKZDB9uc"
+    }
   },
   {
     "id": "video-chromatic-dance-metamorphosis",
@@ -1132,7 +1223,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
       }
     ],
-    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。"
+    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "SX4Bqmm-pYI",
+      "start": 12,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=SX4Bqmm-pYI"
+    }
   },
   {
     "id": "video-cel-alien-ecology",
@@ -1212,7 +1310,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "Runway Studios 官网链接的公开 YouTube 成片抽帧，完整画面等比例缩至 960 像素宽。"
       }
     ],
-    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。"
+    "caveat": "原作品与参考画面版权归原权利人。本条是对公开作品的视觉评论与本站原创风格提示词，不是原作者提示词，未做模型生成实测；复杂动作与跨镜头一致性仍可能需要参考图、动画预演和人工后期。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "A5-PLKYOEaw",
+      "start": 17,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=A5-PLKYOEaw"
+    }
   },
   {
     "id": "video-ausencia-animation",
@@ -1290,7 +1395,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
         "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
       }
-    ]
+    ],
+    "preview": {
+      "provider": "youtube",
+      "videoId": "zj_KFNmce7c",
+      "start": 112,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=zj_KFNmce7c"
+    }
   },
   {
     "id": "video-liquid-museum-animation",
@@ -1369,7 +1481,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
       }
     ],
-    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。"
+    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "BwZkIEQDj10",
+      "start": 152,
+      "label": "官方 MV",
+      "url": "https://www.youtube.com/watch?v=BwZkIEQDj10"
+    }
   },
   {
     "id": "video-cutout-posthuman",
@@ -1448,7 +1567,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
       }
     ],
-    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。"
+    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "VdMgPgicvK4",
+      "start": 82,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=VdMgPgicvK4"
+    }
   },
   {
     "id": "video-neon-comic-collage",
@@ -1528,7 +1654,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
       }
     ],
-    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。"
+    "caveat": "本站依据公开作品进行视觉评论并原创归纳提示词，并非作者原始提示词或制作参数，尚未用生成模型逐条实测。参考画面不代表本站生成结果；原作与截图版权归原权利人。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "zD7pc2nnKj4",
+      "start": 9,
+      "label": "原片预览",
+      "url": "https://www.youtube.com/watch?v=zD7pc2nnKj4"
+    }
   },
   {
     "id": "video-well-animation",
@@ -1621,90 +1754,16 @@ window.HF_VIDEO_STYLES = [
           "sourceHeight": 720
         }
       }
-    ]
-  },
-  {
-    "id": "video-eastern-myth-cinema",
-    "name": "东方神话电影",
-    "latin": "EASTERN MYTHIC CINEMA",
-    "summary": "绢纱、流光与有体积的奇观环境相互回应，用电影光色建立东方神话的真实触感。",
-    "tags": [
-      "电影感",
-      "东方奇幻",
-      "绢纱流光"
     ],
-    "keywords": [
-      "中国神话",
-      "补天",
-      "央视频",
-      "总台人工智能工作室",
-      "AI微短剧",
-      "东方神话",
-      "东方奇幻",
-      "仙侠",
-      "电影画风",
-      "绢纱",
-      "流光",
-      "体积光",
-      "奇幻写实"
-    ],
-    "styleNotes": [
-      {
-        "label": "材质与光",
-        "text": "参考段落让薄纱、发丝和微小金色粒子处于同一气流环境；另外一帧以青蓝暗部承托橙红火光，强调光对空间和材质的实际影响。"
-      },
-      {
-        "label": "动态的尺度",
-        "text": "公开片段中的细丝飘动、粒子流动与较大体量的云火变化有不同速度。提示词把这种差异归纳为重量、气流和能量传播，避免全画面统一慢动作。"
-      },
-      {
-        "label": "不是固定神话脚本",
-        "text": "不要求生成女娲、补天或某一种服装。参考的是柔硬材质对照、东方流线造型和有动机的光色，内容仍由你决定。"
-      }
-    ],
-    "bestFor": "东方奇幻短片、角色概念片、游戏世界观、时装与材质广告",
-    "examples": {
-      "主体": "人物、动物、产品、建筑或抽象形体都可使用",
-      "场景": "保留你的真实或幻想环境，不必设置神话地点",
-      "动作": "填写故事行为或展示需求，无需复制补天剧情"
-    },
-    "promptTemplate": "把所提供的内容统一塑造成具有东方审美的奇幻电影画面。整体保有可信的体积、触感和摄影关系，再用含蓄而有力量的曲线、轻重对比与空间层次建立超现实气质。题材、角色、道具和事件由内容决定，不指定神话人物或服饰，也不把任何故事自动改成修仙剧情。每个镜头都应像发生在同一个可感知的世界里，而不是堆叠漂亮素材的概念图。\n\n形体轮廓兼顾清晰结构与流动势能。坚硬形体具有稳定的重量、支撑和转折，柔软形体形成舒展但不凌乱的线势；装饰顺着结构生长，不随意增加龙纹、盔甲或繁复首饰。人物的面部和身体比例自然，表情有细微肌肉变化；产品、动物或建筑同样保持可识别的特征。幻想夸张集中在尺度、光色和形态节奏，不牺牲结构可信度。\n\n区分材质的光学和运动响应。薄织物可以透过环境光，褶皱边缘有柔软亮带，叠层处逐渐变厚变暗；发丝或细线状结构保有分束和附着点，不能像液体混在一起。石、木、金属等硬材质按照其粗糙度呈现不同高光，肌肤或其他有机表面保留细微纹理和柔和过渡。发光物体有清楚的实体边界与亮度衰减，亮处仍能读到形状，不把所有材质都变成透明水晶。\n\n色彩建立克制的冷暖系统。以青灰、墨青或低饱和蓝色容纳空气和暗部，用象牙白、暖金或内容需要的暖色引导注意；奇观段落可以提高局部色彩强度，但主体与环境仍有主次。光源拥有可解释的方向和范围，靠近能量或火光的表面产生相应反射和透光，远处迅速减弱。少量漂浮粒子可以显示光路与尺度，不能均匀铺满画面，更不能把亮点当成高级感的唯一来源。\n\n空间具有前景遮挡、可读的中景行动与延伸的远景。雾、云或尘只在环境需要时出现，其密度随距离和局部光照变化，保留清晰区域与空气间隙。构图允许舒展曲线与稳定轴线互相制衡，人物或物体在画面中有足够呼吸空间。不同尺度的形体通过透视、重复和光照统一，不用随意放大的装饰制造宏大感。\n\n动态以惯性和传播关系建立魔幻的可信度。主要动作先从重心或受力点启动，再传递到肢体与附属结构；薄纱、发丝、烟气等轻质元素延迟回应，并沿一致但有局部变化的气流运动。坚硬或巨大的物体移动更沉稳，细碎粒子可以更轻快，速度不能全部统一。若内容包含能量、火焰或变化，先形成局部强度，再向周边传播，带动附近材质与照明产生连续反应；没有这种事件就不强行添加爆发。\n\n摄影根据情绪和动作选择观察距离，保持自然的透视和适度景深，不强制绕主体旋转。镜头的加减速与场内动势配合，静处允许停留，强动作也保有方向与落点。剪辑延续主要光源、视觉重心和动作因果，不靠无目的闪光、甩镜维持节奏。跨帧固定脸部特征、物体结构、纹样位置及服装层次，细丝不凭空增生或穿透身体；光色变化连续，远景不熔化，整段维持一致的材质粗糙度、粒子尺度与电影曝光。",
-    "negativePrompt": "避免所有物体透明水晶化、面部磨皮蜡像感、浮光遮挡结构、粒子全屏均匀撒落、丝带穿体、发丝凭空增生、重物失重摆动、整幅匀速慢放、无因光源跳变、光晕过曝、背景熔化、镜头无目的盘旋、纹样逐帧改变。",
-    "reference": {
-      "title": "《中国神话》第一集 ·《补天》",
-      "creator": "央视频 / 总台人工智能工作室 / 清华大学新闻与传播学院元宇宙文化实验室",
-      "url": "https://5gai.cctv.com/2024/04/30/VIDEMFg2fMYhgfIbT5AXqKKM240430.shtml",
-      "type": "ai",
-      "note": "央视 2024 年 3 月 22 日发布说明明确列出该系列美术、分镜、视频、配音和配乐的 AI 参与。这里仅参考《补天》的神话视觉段落，不把后续现实议题段落概括为同一画风。",
-      "recognition": "总台央视频 AI 频道启动时推出的《中国神话》系列；作为官方公开 AIGC 代表作品收录，不声称获奖或排名。"
-    },
-    "caveat": "这是对公开 AI 作品的视觉评论与原创风格提示词。参考图不是本站实测，亦不代表能够稳定复刻原作品；参考内容与版权均归原权利人。",
-    "frames": [
-      {
-        "src": "assets/img/video/video-eastern-myth-cinema/01.jpg",
-        "time": "01:16.0",
-        "caption": "薄纱有叠层透光，细发丝与金色粒子处于青灰环境光中；轻材质的边缘响应为这一风格提供触感。",
-        "credit": "央视频 /《中国神话·补天》",
-        "mediaUrl": "https://www.youtube.com/watch?v=3V1dmLDRyuo",
-        "captureKind": "video-frame",
-        "seconds": 76.019659,
-        "sha256": "30768b195526e40f45cf5c4ad5b1790df85d97db97e4e6401563701188cdabd1",
-        "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
-        "captureMethod": "浏览器公开播放器暂停截帧；截取完整视频矩形并等比例缩小，保留原片字幕。"
-      },
-      {
-        "src": "assets/img/video/video-eastern-myth-cinema/02.jpg",
-        "time": "01:23.2",
-        "caption": "橙红发光区域在青蓝环境中形成体积与反射，云火、岩面和水面具有不同边缘；用来说明能量需要影响周围空间。",
-        "credit": "央视频 /《中国神话·补天》",
-        "mediaUrl": "https://www.youtube.com/watch?v=3V1dmLDRyuo",
-        "captureKind": "video-frame",
-        "seconds": 83.201215,
-        "sha256": "c244d4d39fa0ef4b172b10e687a5e698229de06e3772df7d3c0f654a6a83e400",
-        "copyright": "原作品及截帧版权归原权利人；本图不纳入 MIT 许可。",
-        "captureMethod": "浏览器公开播放器暂停截帧；截取完整视频矩形并等比例缩小。"
-      }
-    ]
+    "preview": {
+      "provider": "vimeo",
+      "videoId": "1195915021",
+      "src": "https://player.vimeo.com/video/1195915021?h=e678b5374d",
+      "hash": "e678b5374d",
+      "start": 37,
+      "label": "原片预览",
+      "url": "https://vimeo.com/1195915021/e678b5374d"
+    }
   },
   {
     "id": "video-surreal-everyday-cinema",
@@ -1785,7 +1844,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "作者公开视频暂停帧，按视频区域截图后缩至 960 像素宽；保留片内作者角标。"
       }
     ],
-    "caveat": "原作需要人工筛选、修补、调色和速度调整。纯文本不能保证角色跨镜头一致；本母提示词未进行模型生成实测。"
+    "caveat": "原作需要人工筛选、修补、调色和速度调整。纯文本不能保证角色跨镜头一致；本母提示词未进行模型生成实测。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "G4wJ4WeJrz4",
+      "label": "官方完整短片",
+      "url": "https://www.youtube.com/watch?v=G4wJ4WeJrz4",
+      "note": ""
+    }
   },
   {
     "id": "video-organic-macro-cinema",
@@ -1878,7 +1944,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "官方公开 MP4 于 00:09.5 抽帧，保留完整效果区域并缩至 960 像素宽。"
       }
     ],
-    "caveat": "官方流程使用运动参考、三维预演及传统合成。此处母提示词只描述可迁移的视觉与运动原则，未验证纯文本可完成相同控制；不是科学或医学模拟。"
+    "caveat": "官方流程使用运动参考、三维预演及传统合成。此处母提示词只描述可迁移的视觉与运动原则，未验证纯文本可完成相同控制；不是科学或医学模拟。",
+    "preview": {
+      "provider": "native",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM__COMBINED_Output_v_003.mp4",
+      "label": "官方运动匹配拆解",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/",
+      "note": "来自 ANCESTRA 官方制作文章的有机微观运动匹配演示，非整部影片。"
+    }
   },
   {
     "id": "video-frosted-archive-scifi",
@@ -1961,7 +2034,14 @@ window.HF_VIDEO_STYLES = [
         "captureMethod": "制作方网站 Press Stills 第一章图片，缩至 960 像素宽，无内容重绘。"
       }
     ],
-    "caveat": "原作第一章从静态生成图像经人工动画形成运动，不能由剧照推断所有动作能力。这里提供的风格规则未进行模型生成实测，也不复刻原片剧情。"
+    "caveat": "原作第一章从静态生成图像经人工动画形成运动，不能由剧照推断所有动作能力。这里提供的风格规则未进行模型生成实测，也不复刻原片剧情。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "DNyxZi9Gp_4",
+      "label": "官方第一、二章合集",
+      "url": "https://www.youtube.com/watch?v=DNyxZi9Gp_4",
+      "note": "官方视频收录第一、二章；本站画风分析以开头的第一章为依据。"
+    }
   },
   {
     "id": "video-creature-mock-documentary",
@@ -2036,7 +2116,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
       }
     ],
-    "caveat": "本片运动来自动画制作团队，不能据此断言单条提示词可直接生成同等表演。此条提炼奇幻生物的观察与反应语法，母提示词未实测。"
+    "caveat": "本片运动来自动画制作团队，不能据此断言单条提示词可直接生成同等表演。此条提炼奇幻生物的观察与反应语法，母提示词未实测。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "-qdx6VBJHBU",
+      "label": "官方完整短片",
+      "url": "https://www.youtube.com/watch?v=-qdx6VBJHBU",
+      "note": ""
+    }
   },
   {
     "id": "video-memory-dream-transitions",
@@ -2111,7 +2198,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
       }
     ],
-    "caveat": "参考中的形变与不稳定被用于梦境表达，但并不代表应保留任意生成错误。本站母提示词强调有锚点的转换及主体连续性，未做模型实测。"
+    "caveat": "参考中的形变与不稳定被用于梦境表达，但并不代表应保留任意生成错误。本站母提示词强调有锚点的转换及主体连续性，未做模型实测。",
+    "preview": {
+      "provider": "vimeo",
+      "videoId": "941713443",
+      "label": "官方音乐录像",
+      "url": "https://vimeo.com/941713443",
+      "note": ""
+    }
   },
   {
     "id": "video-retro-archive-surrealism",
@@ -2186,7 +2280,15 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考截帧版权归原权利人；少量画面评论用途，不适用本站 MIT 许可。"
       }
     ],
-    "caveat": "本条是从原作部分摄影段落提取的风格方向，原片同时包含抽象图形与说明性段落。具体生成模型未据一手制作资料确认，因此不写某型号；母提示词未模型实测。"
+    "caveat": "本条是从原作部分摄影段落提取的风格方向，原片同时包含抽象图形与说明性段落。具体生成模型未据一手制作资料确认，因此不写某型号；母提示词未模型实测。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "zpAeygE4d1A",
+      "start": 190,
+      "label": "官方完整短片",
+      "url": "https://www.youtube.com/watch?v=zpAeygE4d1A",
+      "note": "从与本站画风分析相关的复古摄影段落开始，可自由拖动查看整片。"
+    }
   },
   {
     "id": "video-jewel-painterly-cinema",
@@ -2258,7 +2360,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
       }
     ],
-    "caveat": "检查高光是否跟随材质角度、饰物是否有重量，而非整片随机闪烁。原作属于传统动画制作。"
+    "caveat": "检查高光是否跟随材质角度、饰物是否有重量，而非整片随机闪烁。原作属于传统动画制作。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "JeUuk-g_Qws",
+      "label": "官方幕后 · 含动画片段",
+      "url": "https://www.youtube.com/watch?v=JeUuk-g_Qws",
+      "note": "Netflix 官方 Jibaro 制作解析，包含成片画面；并非正片全集。"
+    }
   },
   {
     "id": "video-painted-alien-world",
@@ -2340,7 +2449,14 @@ window.HF_VIDEO_STYLES = [
         "sha256": "a6b70862637d5c47605fb91f851a95cb81d0013719d025d5b391512529ff4c05"
       }
     ],
-    "caveat": "检查笔触是否附着于物面、各部位是否按不同质量响应。参考原作结合二维动画与 AI，不代表一次生成。"
+    "caveat": "检查笔触是否附着于物面、各部位是否按不同质量响应。参考原作结合二维动画与 AI，不代表一次生成。",
+    "preview": {
+      "provider": "native",
+      "src": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/sh220_bg_wip_prores.mp4",
+      "label": "作者公开动画片段",
+      "url": "https://ricardovillavicencio.com/type/animation/one/",
+      "note": "ONE 作者制作页的连续场景演示，非完整短片。"
+    }
   },
   {
     "id": "video-angular-cel-animation",
@@ -2412,7 +2528,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
       }
     ],
-    "caveat": "检查关键姿态、落脚位置和阴影色块是否稳定，避免把有限动画误做成画面卡顿。原作属于传统动画制作。"
+    "caveat": "检查关键姿态、落脚位置和阴影色块是否稳定，避免把有限动画误做成画面卡顿。原作属于传统动画制作。",
+    "preview": {
+      "provider": "native",
+      "src": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/462e26b5-6d94-4b4e-8511-8aa908836280-1920x1080.5000.mp4",
+      "label": "官方预告",
+      "url": "https://www.passion-animation.com/project/love-death-robots-ice/",
+      "note": "ICE 制作方公开预告，非正片全集。"
+    }
   },
   {
     "id": "video-cutout-noir",
@@ -2494,7 +2617,14 @@ window.HF_VIDEO_STYLES = [
         "sha256": "3b8a5019ebb145347074030b69b078b18299261e8121753645587054076c698d"
       }
     ],
-    "caveat": "检查纸片刚性、关节支点与接触投影。参考作品经过插画、布景和后期等混合制作，并非一次生成。"
+    "caveat": "检查纸片刚性、关节支点与接触投影。参考作品经过插画、布景和后期等混合制作，并非一次生成。",
+    "preview": {
+      "provider": "native",
+      "src": "https://d3phaj0sisr2ct.cloudfront.net/site/images/no-vacancy/No+Vacancy+BTS+Sh+62.mp4",
+      "label": "官方镜头制作拆解",
+      "url": "https://runway.com/customers/the-making-of-mars-and-siv",
+      "note": "No Vacancy 的官方镜头 62 制作对照，包含从分层美术到最终动画的过程，非整部影片。"
+    }
   },
   {
     "id": "video-neon-painted-noir",
@@ -2566,7 +2696,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
       }
     ],
-    "caveat": "检查衣发惯性、局部彩光来源与移动中的人物身份。原作属于传统动画制作。"
+    "caveat": "检查衣发惯性、局部彩光来源与移动中的人物身份。原作属于传统动画制作。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "IqhXDb69wl4",
+      "label": "官方幕后 · 含动画片段",
+      "url": "https://www.youtube.com/watch?v=IqhXDb69wl4",
+      "note": "Netflix 官方 The Witness 制作解析，包含成片画面；并非正片全集。"
+    }
   },
   {
     "id": "video-aquarium-dream",
@@ -2648,7 +2785,14 @@ window.HF_VIDEO_STYLES = [
         "sha256": "bd97dded1a5c5b1b908e61984358fb93036b0fba5491c4ada7d3871713f46794"
       }
     ],
-    "caveat": "检查透明边界、反射对象和介质阻力是否连贯；光学层次不能靠随机光斑代替。"
+    "caveat": "检查透明边界、反射对象和介质阻力是否连贯；光学层次不能靠随机光斑代替。",
+    "preview": {
+      "provider": "native",
+      "src": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/08_VEO_Cinematic_Edit01_16x9_250516e.mp4",
+      "label": "官方生成视频演示",
+      "url": "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/",
+      "note": "Google Flow Cinematic quality 官方演示。"
+    }
   },
   {
     "id": "video-tilt-shift-mini-world",
@@ -2721,7 +2865,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
       }
     ],
-    "caveat": "检查相对尺度和接地点；清晰区域应跟随场景空间，而非屏幕上的模糊横条。参考采用 CG 与实拍合成。"
+    "caveat": "检查相对尺度和接地点；清晰区域应跟随场景空间，而非屏幕上的模糊横条。参考采用 CG 与实拍合成。",
+    "preview": {
+      "provider": "native",
+      "src": "https://stream.mux.com/OUifwtvz00Flhhyl7DhTP3T2evYD86yylXn8wAY6zBOE/high.mp4",
+      "label": "制作方公开片段",
+      "url": "https://buck.co/work/love-death-robots",
+      "note": "BUCK 官方作品页中的 8.29 秒片段，非正片全集。"
+    }
   },
   {
     "id": "video-liquid-optics",
@@ -2803,7 +2954,14 @@ window.HF_VIDEO_STYLES = [
         "sha256": "e087d320cca3eaace60013e8cff1b26ae482171b3ac86fa89f63eb3626451aa9"
       }
     ],
-    "caveat": "检查厚薄差异、形变路径和折射对象是否连续。参考是《ONE》的光学测试，未单独声明全部由 AI 生成。"
+    "caveat": "检查厚薄差异、形变路径和折射对象是否连续。参考是《ONE》的光学测试，未单独声明全部由 AI 生成。",
+    "preview": {
+      "provider": "native",
+      "src": "https://ricardovillavicencio.com/wp-content/uploads/2024/03/One_PortalTest.mp4",
+      "label": "作者公开视觉测试",
+      "url": "https://ricardovillavicencio.com/type/animation/one/",
+      "note": "ONE — Portal Test；这是视觉测试，非整部影片。"
+    }
   },
   {
     "id": "video-monumental-graphic-minimalism",
@@ -2885,7 +3043,14 @@ window.HF_VIDEO_STYLES = [
         "seconds": 23.3
       }
     ],
-    "caveat": "巨大纯色区域容易生成渐变噪声，复杂场景也容易回到写实渲染；应优先检查大形、色面与停顿是否贯穿全片。"
+    "caveat": "巨大纯色区域容易生成渐变噪声，复杂场景也容易回到写实渲染；应优先检查大形、色面与停顿是否贯穿全片。",
+    "preview": {
+      "provider": "native",
+      "src": "https://d1ko11x0ybxl0h.cloudfront.net/strangebeast/production/clips/0d603a58-f11e-4fe1-91c0-96792e7c4a7f-1920x1080.5000.mp4",
+      "label": "官方预告",
+      "url": "https://www.passion-animation.com/project/love-death-robots-zima-blue/",
+      "note": "Zima Blue 制作方公开预告，非正片全集。"
+    }
   },
   {
     "id": "video-ligne-claire-psychedelia",
@@ -2970,7 +3135,14 @@ window.HF_VIDEO_STYLES = [
         "sourceContext": "Nexus 页面嵌入的 Love, Death + Robots 第三辑公开预告；时间为该预告时间轴，不是付费正片时间轴。"
       }
     ],
-    "caveat": "细线与高饱和色面容易在运动中闪烁。生成时应检查人物表情、轮廓与材质连续性，而不是只追求单帧的迷幻颜色。"
+    "caveat": "细线与高饱和色面容易在运动中闪烁。生成时应检查人物表情、轮廓与材质连续性，而不是只追求单帧的迷幻颜色。",
+    "preview": {
+      "provider": "native",
+      "src": "https://cdn.nexusstudios.com/uploads/2023/05/NexusStudios_LoveDeathRobots_EmilyDean_Clip_5.mp4",
+      "label": "制作方公开动画片段",
+      "url": "https://nexusstudios.com/work/love-death-and-robots/",
+      "note": "The Very Pulse of the Machine 的制作方作品页片段。"
+    }
   },
   {
     "id": "video-luminous-ink-fantasy",
@@ -3051,7 +3223,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可"
       }
     ],
-    "caveat": "本条使用官方剧照解释美术，并以工作室制作说明支撑移动光源分析。流光、透明层和实体遮挡需同时稳定；粒子越多不代表风格越接近。"
+    "caveat": "本条使用官方剧照解释美术，并以工作室制作说明支撑移动光源分析。流光、透明层和实体遮挡需同时稳定；粒子越多不代表风格越接近。",
+    "preview": {
+      "provider": "youtube",
+      "videoId": "XbFiQJOD2Pg",
+      "label": "官方幕后 · 含动画片段",
+      "url": "https://www.youtube.com/watch?v=XbFiQJOD2Pg",
+      "note": "Netflix 官方 Fish Night 制作解析，包含本集动画片段；并非正片全集。"
+    }
   },
   {
     "id": "video-handmade-clay",
@@ -3130,7 +3309,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
       }
     ],
-    "caveat": "本站原创的是可复用风格母提示词，不是官方演示的原提示词，也未做模型输出验证。参考虽名为 Stop Motion，实际运动较连续；定格节奏需在生成时另行检查。"
+    "caveat": "本站原创的是可复用风格母提示词，不是官方演示的原提示词，也未做模型输出验证。参考虽名为 Stop Motion，实际运动较连续；定格节奏需在生成时另行检查。",
+    "preview": {
+      "provider": "native",
+      "src": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__veo-3__camper.webm",
+      "label": "官方生成视频演示",
+      "url": "https://deepmind.google/models/veo/",
+      "note": "Google DeepMind 的 8 秒 Camping (Stop Motion) 模型演示。"
+    }
   },
   {
     "id": "video-plush-character",
@@ -3209,7 +3395,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
       }
     ],
-    "caveat": "该参考是生成视频的长绒角色，不代表实拍布偶、针织或羊毛毡制作。原创母提示词未模型实测；毛束闪烁、脚底接触和色块漂移是需要重点验收的部分。"
+    "caveat": "该参考是生成视频的长绒角色，不代表实拍布偶、针织或羊毛毡制作。原创母提示词未模型实测；毛束闪烁、脚底接触和色块漂移是需要重点验收的部分。",
+    "preview": {
+      "provider": "native",
+      "src": "https://storage.googleapis.com/gdm-deepmind-com-prod-public/media/media/veo__controls__character-consistency__output-1.webm",
+      "label": "官方生成视频演示",
+      "url": "https://deepmind.google/models/veo/",
+      "note": "Google DeepMind 的 8 秒角色一致性模型演示。"
+    }
   },
   {
     "id": "video-layered-woodcut",
@@ -3288,6 +3481,14 @@ window.HF_VIDEO_STYLES = [
         "copyright": "参考截帧版权归原权利人；仅用于少量画面分析，不适用本站 MIT 许可，未声称获得开放转载授权"
       }
     ],
-    "caveat": "原样片只有中段使用版画视觉，其他段落会转成不同媒介；本站建议统一木刻，是原创扩展而非对原片全程的描述。生成模型未公开，母提示词未实测。"
+    "caveat": "原样片只有中段使用版画视觉，其他段落会转成不同媒介；本站建议统一木刻，是原创扩展而非对原片全程的描述。生成模型未公开，母提示词未实测。",
+    "preview": {
+      "provider": "native",
+      "src": "https://www.ono-trading.com/videos/clip-07.mp4",
+      "start": 1.75,
+      "label": "官方视觉转换演示",
+      "url": "https://www.ono-trading.com/en",
+      "note": "全段约 5 秒；约 1.75–2.75 秒为本站分析的木刻画风，其余段落会转换媒介。"
+    }
   }
 ];

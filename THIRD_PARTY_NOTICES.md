@@ -155,7 +155,7 @@ This single-post addition contains the complete author-authored prompt and four 
 
 ## Video style references — copyright retained
 
-The 82 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.
+The 80 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. On-demand previews load the rights holders’ official YouTube/Vimeo players or public media from their own hosts; player type, source URL and verification evidence are recorded in the manifest. Official trailers, behind-the-scenes clips and generated demonstrations are labeled separately. This notice does not grant downstream redistribution rights.
 
 The [reference manifest](tools/curate/sources/video-style-references.json) records official sources, creators, capture type, time where applicable, and SHA-256 checksums. Frames are resized; the Mars and Siv demonstration border and one ANCESTRA breakdown frame are cropped to their result areas with crop details recorded; original work attribution is retained. Official stills are labeled as such, without invented video timestamps.
 
@@ -174,7 +174,6 @@ The [reference manifest](tools/curate/sources/video-style-references.json) recor
 | 手作黏土定格 | [Camping (Stop Motion)](https://deepmind.google/models/veo/) | Google DeepMind / Veo |
 | 长绒玩偶动画 | [Keep your characters consistent · a cute monster walking towards the camera](https://deepmind.google/models/veo/) | Google DeepMind / Veo |
 | 套色木刻版画 | [Woodcut style, red coat in a rainy street](https://www.ono-trading.com/en) | Ono Trading Co., Ltd. |
-| 东方神话电影 | [《中国神话》第一集 ·《补天》](https://5gai.cctv.com/2024/04/30/VIDEMFg2fMYhgfIbT5AXqKKM240430.shtml) | 央视频 / 总台人工智能工作室 / 清华大学新闻与传播学院元宇宙文化实验室 |
 | 超现实日常纪录 | [Air Head](https://www.shy-kids.com/film) | shy kids（Walter Woodman / Sidney Leeder / Patrick Cederberg） |
 | 有机微观电影 | [ANCESTRA · 有机微观视觉与制作拆解](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/) | Eliza McNitt / Primordial Soup / Google DeepMind |
 | 冷峻档案科幻 | [The Frost · 第一章](https://www.thefrost.ai/) | Josh Rubin / Waymark Creative Labs / Latent Cinema |
@@ -211,4 +210,4 @@ Twenty additional works contribute two limited reference images each. Primary cr
 
 The Chinese video prompts and visual analysis are original educational exercises written for this site. They are not the filmmakers' original prompts or production settings. Reference frames are not proof of results obtained with these prompts; no model-output testing is claimed. The seven Love, Death + Robots episodes are labeled as animation references, not AI films. ONE and Mars and Siv use mixed production methods; the Portal Test is not claimed to be a separate AI-generated or award-winning film.
 
-The 2026-10-11 selection includes seven AI or hybrid filmmaking references from broadcasters, creator showcases and established festivals. AI involvement differs by work and is documented per entry; editorial selection does not imply a measured popularity ranking or that the entire production was generated in one model call.
+The 2026-10-11 selection retains six AI or hybrid filmmaking references after the removal of the mythology entry from broadcasters, creator showcases and established festivals. AI involvement differs by work and is documented per entry; editorial selection does not imply a measured popularity ranking or that the entire production was generated in one model call.

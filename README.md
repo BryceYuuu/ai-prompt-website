@@ -1,6 +1,6 @@
 # 提示词网站 · AI Prompt Website
 
-书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 155 条可填写、复制与导出的提示词模板：66 种图片创作、48 个写作等实用任务，以及 41 种独立的视频风格。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
+书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 154 条可填写、复制与导出的提示词模板：66 种图片创作、48 个写作等实用任务，以及 40 种独立的视频风格。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
 
 ## 在线预览
 
@@ -14,7 +14,9 @@
 
 ## 视频风格 · Motion Studies
 
-[浏览 41 种视频风格](https://bryceyuuu.github.io/ai-prompt-website/#/video)：从东方神话，到电影摄影、记忆梦境、定格动画、手绘与液态光学。
+[浏览 40 种视频风格](https://bryceyuuu.github.io/ai-prompt-website/#/video)：从三维动画，到电影摄影、记忆梦境、定格动画、手绘与液态光学。
+
+视频详情支持官方视频预览：点击卡片进入并静音播放，或在详情点击播放。原片、预告、幕后与演示分别标注；支持播放器音量、全屏和重试。未点击前不加载第三方播放器。播放依赖来源平台的网络和嵌入权限，始终保留原作链接。
 
 2026-10-13 新增 **20 部 AI / 混合制作动画参考、40 张画面**，集中在绘本、纸浆人偶、手捏黏土、二维科幻、油画与角色动画。逐部核对动态片段与制作来源，按材质、角色表演、运镜和时间连续性拆解风格；新内容排在视频分类最前面。
 
@@ -45,11 +47,10 @@
 
 参考涵盖《爱，死亡和机器人》7 集、Runway 的《Mars and Siv》《ONE》、Google Flow / Veo 官方示例，以及 Ono Trading 的生成式 AI 制作演示。《ONE》的环境动画与光学测试作为两个不同视觉方向分析。**这是编辑精选，不是热度排行榜**；AI 生成、混合制作、传统动画分别标注。实际视频截帧显示时间，官方剧照单独标注，不冒充本站生成效果。参考画面为少量风格评论用图，原权利人保留版权，不随代码按 MIT 授权；不分发原视频。原创提示词尚未做模型输出实测，也不是原片作者的制作提示词。
 
-此前精选的 AI / 混合制作参考涵盖东方神话、电影摄影、奇幻生物与实验影像。每条保留作者、制作方式和可核实的入选依据，提示词不固定时长、画幅或剧情。
+此前精选的 AI / 混合制作参考涵盖动画短片、电影摄影、奇幻生物与实验影像。每条保留作者、制作方式和可核实的入选依据，提示词不固定时长、画幅或剧情。
 
 | 风格 | 参考作品 |
 |---|---|
-| 东方神话电影 | [《中国神话》第一集 ·《补天》](https://5gai.cctv.com/2024/04/30/VIDEMFg2fMYhgfIbT5AXqKKM240430.shtml) |
 | 超现实日常纪录 | [Air Head](https://www.shy-kids.com/film) |
 | 有机微观电影 | [ANCESTRA · 有机微观视觉与制作拆解](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/ancestra-behind-the-scenes/) |
 | 冷峻档案科幻 | [The Frost · 第一章](https://www.thefrost.ai/) |
@@ -78,7 +79,7 @@
 ## 当前内容
 
 - **66 个图片创作模板**：18 种原有图片转换，以及 6 个 Threads 来源账号的 48 组经授权案例。涵盖创意物件、材质工艺、插画绘画、平面拼贴、微缩场景与摄影光影，包括虚拟换装、产品广告、字母肖像、职业蓝图、拼豆、刺绣、拓印等具体创作方向。
-- **41 个视频风格**：独立画风研究分类，82 张来源参考画面、动态风格解析与完整原创风格提示词。
+- **40 个视频风格**：独立画风研究分类，点击卡片直接预览官方视频，附80张来源参考画面、动态风格解析与完整原创风格提示词。
 - **48 个文字任务**：写作、编程、分析、学习、商业、生活各 8 条。提供输入项、处理步骤、交付格式和信息不足时的处理方式。
 - 图片可按六个风格方向浏览，再组合用途、气质与内容来源筛选；卡片展示子分类、案例数/输入项和来源。支持空格分隔的多词搜索，当前条件可逐项移除。
 - 多图案例支持左右箭头、手势滑动、横向缩略图及大图连续浏览，图片序号与署名同步更新。
@@ -116,7 +117,7 @@
 
 ### English overview
 
-Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 155 curated **prompt templates**: 66 **image-to-image and text-to-image** prompts, 41 original **video-style prompts**, and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
+Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 154 curated **prompt templates**: 66 **image-to-image and text-to-image** prompts, 40 original **video-style prompts**, and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
 ## 本地预览
 
@@ -154,9 +155,9 @@ npm run test:browser
 index.html                     页面入口
 assets/js/app.js               路由、交互和渲染
 assets/js/data.js              图片与任务分类、数据组装
-assets/js/data-video.js        手工编辑的 41 种视频风格
-assets/js/video.js             视频风格列表、分析、提示词和大图交互
-assets/img/video/              82 张风格评论用参考画面（版权保留）
+assets/js/data-video.js        手工编辑的 40 种视频风格
+assets/js/video.js             视频风格列表、站内播放、分析、提示词和大图交互
+assets/img/video/              80 张风格评论用参考画面（版权保留）
 assets/js/data-curated.js      生成的 114 条内容
 assets/css/                   页面样式
 assets/img/curated/            来源案例图

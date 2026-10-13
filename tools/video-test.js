@@ -7,6 +7,15 @@ const fs = require('fs'), path = require('path'), assert = require('assert');
 const crypto = require('crypto');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const mutations = {
+  previewMissing: { group: 'preview-source-evidence', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].preview = null;' },
+  previewEager: { group: 'preview-lazy-load-and-provider-controls', file: 'video.js', anchor: "if (page.getAttribute('data-video-play-intent') === 'true')", replacement: 'if (item)' },
+  previewReferrer: { group: 'preview-lazy-load-and-provider-controls', file: 'video.js', anchor: "current.referrerPolicy = 'strict-origin-when-cross-origin';", replacement: "current.referrerPolicy = 'no-referrer';" },
+  previewControls: { group: 'preview-lazy-load-and-provider-controls', file: 'video.js', anchor: 'current.controls = true;', replacement: 'current.controls = false;' },
+  previewIntent: { group: 'preview-card-gesture-and-private-input', file: 'video.js', anchor: "if (page.getAttribute('data-video-play-intent') === 'true')", replacement: 'if (false)' },
+  previewCleanup: { group: 'preview-retry-stop-and-cleanup', file: 'video.js', anchor: 'clearTimeout(suppressTimer);\n      releasePlayer();', replacement: 'clearTimeout(suppressTimer);' },
+  previewFailure: { group: 'preview-retry-stop-and-cleanup', file: 'video.js', anchor: 'current.onerror = failed;', replacement: 'current.onerror = function () {};' },
+  previewPageHide: { group: 'preview-retry-stop-and-cleanup', file: 'video.js', anchor: "window.addEventListener('pagehide', pageHide);", replacement: 'void 0;' },
+  previewUnsafe: { group: 'preview-invalid-source-fallback', file: 'video.js', anchor: "url.protocol === 'https:' && !url.username && !url.password", replacement: 'true' },
   shortPrompt: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].promptTemplate = "美丽的电影风格";' },
   fixedDuration: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].promptTemplate += "生成六秒视频。";' },
   fixedAspect: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[0].promptTemplate += "采用16:9画幅。";' },
@@ -77,6 +86,12 @@ async function run(root, mutant, onlyGroup) {
         w.HTMLElement.prototype.scrollIntoView = () => {};
         w.matchMedia = () => ({ matches: true, addEventListener() {}, removeEventListener() {} });
         w.IntersectionObserver = class { observe() {} unobserve() {} disconnect() {} };
+        out.mediaCalls = [];
+        // Network/codec playback is verified in a real browser; here observe the
+        // media lifecycle without JSDOM's unimplemented play/pause warnings.
+        w.HTMLMediaElement.prototype.play = function () { out.mediaCalls.push(['play', this]); return Promise.resolve(); };
+        w.HTMLMediaElement.prototype.pause = function () { out.mediaCalls.push(['pause', this]); };
+        w.HTMLMediaElement.prototype.load = function () { out.mediaCalls.push(['load', this]); };
         w.navigator.clipboard = { writeText: async text => { out.copied = text; } };
         w.Blob = class { constructor(parts) { this.parts = parts; } };
         w.URL.createObjectURL = blob => { const url = 'blob:test-' + blobs.size; blobs.set(url, blob.parts.join('')); return url; };
@@ -112,7 +127,7 @@ async function run(root, mutant, onlyGroup) {
   const slots = ['主体', '场景', '动作'];
   const types = { ai: 'AI 视频', hybrid: 'AI 混合制作', animation: '动画参考' };
   const captureLabels = { 'official-still': '官方剧照', 'video-frame': '视频截帧' };
-  const ids = s => s.all('.video-card').map(a => decodeURIComponent(a.hash.slice(8))).sort();
+  const ids = s => s.all('.video-card').map(a => decodeURIComponent(a.hash.slice(8).split('?')[0])).sort();
   const route = item => '#/video/' + encodeURIComponent(item.id);
   const setSlots = (s, suffix = '') => slots.forEach((slot, i) => s.fill('[data-video-slot="' + slot + '"]', ['一只紫色纸鹤', '月光下的玻璃温室', '抬头后缓慢展开翅膀'][i] + suffix));
   const checkFrame = (s, item, index) => {
@@ -124,11 +139,113 @@ async function run(root, mutant, onlyGroup) {
     assert.strictEqual(s.q('[data-video-frame="' + index + '"]').getAttribute('aria-pressed'), 'true');
   };
   const groups = {};
+  groups['preview-source-evidence'] = async s => {
+    assert(!s.w.HF_VIDEO_STYLES.some(item => item.id === 'video-eastern-myth-cinema'));
+    for (const item of s.w.HF_VIDEO_STYLES) {
+      const p = item.preview, record = manifest.entries.find(r => r.id === item.id);
+      assert(p && ['youtube', 'vimeo', 'native'].includes(p.provider), item.id + ' needs a playable source');
+      assert(/^https:\/\//.test(p.url) && p.label);
+      assert.deepStrictEqual(JSON.parse(JSON.stringify(p)), record.preview);
+      assert(record.playbackEvidence.evidence && record.playbackEvidence.checkedAt);
+      if (p.provider === 'youtube') assert(/^[\w-]{11}$/.test(p.videoId));
+      if (p.provider === 'vimeo') assert(/^\d{6,12}$/.test(p.videoId));
+      if (p.provider === 'native') assert(/^https:\/\/.+\.(?:mp4|webm)(?:[?#]|$)/i.test(p.src));
+    }
+    await s.nav('#/video?q=' + encodeURIComponent('东方神话电影'));
+    assert.strictEqual(s.all('.video-card').length, 0);
+    await s.nav('#/video/video-eastern-myth-cinema');
+    assert(s.q('#view h1').textContent.includes('没有找到'));
+  };
+  groups['preview-lazy-load-and-provider-controls'] = async s => {
+    assert.strictEqual(s.all('iframe, video').length, 0, 'List does not preload forty players');
+    for (const item of s.w.HF_VIDEO_STYLES) {
+      await s.nav(route(item) + '?play=1');
+      assert.strictEqual(s.all('iframe, video').length, 0, 'Pasted link waits for user gesture');
+      const trigger = s.q('[data-video-action="play"]'); assert(trigger && trigger.tagName === 'BUTTON');
+      assert(s.q('.video-player__links a').href === item.preview.url);
+      trigger.click();
+      const media = s.q('[data-video-media]'); assert(media, item.id + ' starts player');
+      const src = new URL(media.src);
+      if (item.preview.provider === 'native') {
+        assert.strictEqual(media.tagName, 'VIDEO'); assert(media.controls && media.muted && media.playsInline);
+        assert.strictEqual(media.preload, 'none');
+        assert(media.src.startsWith(item.preview.src));
+        if (item.preview.start) assert.strictEqual(src.hash, '#t=' + item.preview.start);
+      } else {
+        assert.strictEqual(media.tagName, 'IFRAME'); assert(media.title.includes(item.name));
+        assert(media.allow.includes('autoplay') && media.hasAttribute('allowfullscreen'));
+        assert.strictEqual(media.referrerPolicy, 'strict-origin-when-cross-origin');
+        assert.strictEqual(src.searchParams.get('autoplay'), '1');
+        assert.strictEqual(src.hostname, item.preview.provider === 'youtube' ? 'www.youtube-nocookie.com' : 'player.vimeo.com');
+        assert(src.pathname.endsWith('/' + item.preview.videoId));
+        if (item.preview.hash) assert.strictEqual(src.searchParams.get('h'), item.preview.hash);
+      }
+      s.q('[data-video-action="stop-play"]').click();
+      assert(!s.q('[data-video-media]'));
+    }
+  };
+  groups['preview-card-gesture-and-private-input'] = async s => {
+    const item = s.w.HF_VIDEO_STYLES[0];
+    s.q('.video-card').click(); await wait(15);
+    assert.strictEqual(s.q('[data-video-id]').getAttribute('data-video-id'), item.id);
+    const media = s.q('[data-video-media]'); assert(media, 'One card click opens and starts playback');
+    const src = media.src;
+    s.fill('[data-video-slot="主体"]', 'PRIVATE-PLAYER-DRAFT-3752');
+    assert.strictEqual(media.src, src, 'Draft never becomes a player URL parameter');
+    assert(!src.includes('PRIVATE-PLAYER-DRAFT-3752'));
+    assert.strictEqual(s.network.length, 0, 'No composer requests');
+    await s.nav('#/video'); await s.nav(route(item) + '?play=1');
+    assert(!s.q('[data-video-media]'), 'Used playback intent does not survive navigation');
+  };
+  groups['preview-retry-stop-and-cleanup'] = async s => {
+    const sample = ['youtube', 'vimeo', 'native'].map(provider => s.w.HF_VIDEO_STYLES.find(i => i.preview.provider === provider));
+    for (const item of sample) {
+      await s.nav(route(item)); s.q('[data-video-action="play"]').click();
+      let media = s.q('[data-video-media]');
+      media.dispatchEvent(new s.w.Event('error'));
+      assert(s.q('[data-video-player-status]').textContent.includes('无法加载'));
+      assert(s.q('.video-player__links a[href]'), 'Source fallback stays accessible');
+      s.q('[data-video-action="retry-play"]').click();
+      assert(!media.isConnected); assert.notStrictEqual(s.q('[data-video-media]'), media);
+      media = s.q('[data-video-media]');
+      s.q('[data-video-action="stop-play"]').click();
+      assert(!media.isConnected); assert.strictEqual(s.d.activeElement, s.q('[data-video-action="play"]'));
+      s.q('[data-video-action="play"]').click(); media = s.q('[data-video-media]');
+      await s.nav('#/video');
+      assert(!media.isConnected); assert(!s.q('[data-video-media]'));
+      if (item.preview.provider === 'native') {
+        assert(!media.getAttribute('src'), 'Detached native video releases its network source');
+        assert(s.mediaCalls.some(call => call[0] === 'pause' && call[1] === media));
+      }
+      await s.nav(route(item)); s.q('[data-video-action="play"]').click();
+      media = s.q('[data-video-media]');
+      s.w.dispatchEvent(new s.w.Event('pagehide'));
+      assert(!s.q('[data-video-media]') && !media.isConnected, 'Browser page exit releases media');
+      assert(s.q('[data-video-action="play"]'), 'Back-forward cache can offer a fresh play action');
+    }
+  };
+  groups['preview-invalid-source-fallback'] = async s => {
+    const item = s.w.HF_VIDEO_STYLES[0];
+    for (const preview of [
+      {provider: 'native', src: 'javascript:alert(1)', url: 'javascript:alert(2)'},
+      {provider: 'native', src: 'http://unsafe.test/movie.mp4', url: 'data:text/html,bad'},
+      {provider: 'native', src: 'https://user:password@example.test/movie.mp4'},
+      {provider: 'youtube', videoId: '../bad?x=1'},
+      {provider: 'vimeo', videoId: '1195915021', hash: 'x&autoplay=0'},
+      {provider: 'untrusted', src: 'https://example.test/player'}
+    ]) {
+      item.preview = preview; await s.nav(route(item));
+      assert(!s.q('[data-video-action="play"]'), 'Unsafe preview becomes a source link');
+      assert(!s.q('iframe, video'));
+      assert.strictEqual(s.q('.video-player__poster').tagName, 'A');
+      assert.strictEqual(s.q('.video-player__poster').href, item.reference.url);
+    }
+  };
   groups['catalog-evidence-and-assets'] = async s => {
     const entries = s.w.HF_VIDEO_STYLES;
-    assert.strictEqual(entries.length, 41, 'Forty-one reviewed video styles are shipped');
-    assert.strictEqual(new Set(entries.map(i => i.id)).size, 41);
-    assert.strictEqual(manifest.entries.length, 41);
+    assert.strictEqual(entries.length, 40, 'Forty reviewed video styles are shipped');
+    assert.strictEqual(new Set(entries.map(i => i.id)).size, 40);
+    assert.strictEqual(manifest.entries.length, 40);
     assert(/^\d{4}-\d{2}-\d{2}$/.test(manifest.checkedAt));
     for (const item of entries) {
       assert(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id));
@@ -162,7 +279,7 @@ async function run(root, mutant, onlyGroup) {
     }
   };
   groups['independent-routes-and-navigation'] = async s => {
-    assert.strictEqual(s.all('.video-card').length, 41);
+    assert.strictEqual(s.all('.video-card').length, 40);
     assert.strictEqual(s.q('.nav__link.is-active').textContent, '视频风格');
     const videoIds = s.w.HF_VIDEO_STYLES.map(i => i.id);
     const oldIds = s.w.eval('STYLES.map(function (item) { return item.id; })');
@@ -175,7 +292,7 @@ async function run(root, mutant, onlyGroup) {
     }
     await s.nav('#/'); assert(!s.q('[data-video-page]'));
     await s.nav('#/library?track=text'); assert(!s.q('[data-video-page]'));
-    await s.nav('#/video'); assert.strictEqual(s.all('.video-card').length, 41);
+    await s.nav('#/video'); assert.strictEqual(s.all('.video-card').length, 40);
   };
   groups['search-tag-and-return-context'] = async s => {
     const data = s.w.HF_VIDEO_STYLES;
