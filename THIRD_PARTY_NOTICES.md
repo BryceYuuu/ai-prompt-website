@@ -155,7 +155,7 @@ This single-post addition contains the complete author-authored prompt and four 
 
 ## Video style references — copyright retained
 
-The 42 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.
+The 82 small reference images under `assets/img/video/` are limited excerpts used with specific visual commentary. They are taken from publicly available official behind-the-scenes clips, trailers, examples, or promotional stills. **They are not released under this repository's MIT license, and no open license or separate republication permission is claimed.** Copyright remains with the original rights holders. Original video files are not distributed. This notice does not grant downstream redistribution rights.
 
 The [reference manifest](tools/curate/sources/video-style-references.json) records official sources, creators, capture type, time where applicable, and SHA-256 checksums. Frames are resized; the Mars and Siv demonstration border and one ANCESTRA breakdown frame are cropped to their result areas with crop details recorded; original work attribution is retained. Official stills are labeled as such, without invented video timestamps.
 
@@ -181,6 +181,33 @@ The [reference manifest](tools/curate/sources/video-style-references.json) recor
 | 奇幻生物拟纪录 | [CRITTERZ · 2023 原版动画短片](https://www.critterz.tv/) | Chad Nelson / Native Foreign, in collaboration with OpenAI |
 | 记忆穿梭梦境 | [Washed Out — The Hardest Part](https://vimeo.com/941713443) | Paul Trillo / Washed Out / Sub Pop |
 | 复古档案超现实 | [Total Pixel Space](https://www.youtube.com/watch?v=zpAeygE4d1A) | Jacob Adler |
+
+### 2026-10-13 AI animation additions
+
+Twenty additional works contribute two limited reference images each. Primary creator, studio and festival sources document AI involvement individually. The source manifest records which public dynamic materials were reviewed; screenshots from videos and official stills remain separately labeled. Original prompts describe animation behavior without prescribing duration, canvas format or a fixed story.
+
+| Visual study | Reference work / official source | Attribution |
+|---|---|---|
+| 复古机器绘本 | [POSTMAN](https://2026.jciaff.net/jp/film/detail/cat02-02.html) | YUUUKI / PYRAMID FILM |
+| 柔光云境童话 | [Cloudling (2026) \| AI Animated Short Film](https://nikitafilipchenko.artstation.com/projects/q0L6qz) | Nikita Filipchenko（Nixel） |
+| 纸塑木偶小剧场 | [Little Mes](https://www.lucaslevitan.com/littlemes/) | Lucas Levitan & Fabián Jiménez / SALAD Collective |
+| 微缩童话奇境 | [CLOSET](https://capcut.creaite26.com/) | Marcelo Pinto Coelho |
+| 表现主义情绪动画 | [Dear Upstairs Neighbors · 官方制作拆解](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/dear-upstairs-neighbors/) | Connie He / Google DeepMind；美术设计 Yingzong Xin |
+| 圆形英雄冒险 | [Samurai Egg · AI 项目预告](https://www.youtube.com/watch?v=4bEZ09nh3XA) | Gaku Nakatani（中谷学）/ G3 Pictures |
+| 苔石偶动画 | [Until We Meet Again](https://www.juliewieland.com/) | Julie Wieland / Google Flow Sessions |
+| 纸板木偶喜剧 | [TPU Training Day for I/O ’26（Timmy TPU）](https://nexusstudios.com/work/google-io-2026-tpu/) | Laurie Rowan / Nexus Studios / Google |
+| 细绘幻彩漫画 | [This is Me](https://www.youtube.com/watch?v=zunXh_L_9Zw) | Marika Hirata（平田茉莉花）/ METREA |
+| 午夜绘本漫游 | [Pounamu](https://watch.runwayml.com/pounamu) | Samuel Schrag |
+| 木雕荒原寓言 | [A Tree Once Grew Here](https://watch.runwayml.com/a-tree-once-grew-here) | John Semerad / Dara Semerad |
+| 黏土霓光梦游 | [WHY](https://www.hilarioabad.net/ai-video) | Hilario Abad |
+| 复古外星木偶 | [The Myth](https://watch.runwayml.com/the-myth) | Hilario Abad / Javi Lería / Esteban Diba |
+| 色域舞蹈变形 | [After Light](https://valleeduhamel.com/portfolio-item/afterlight/) | Vallée Duhamel（Julien Vallée / Eve Duhamel） |
+| 线描异星生态 | [Migration](https://runway.com/customers/behind-the-scenes-of-migration-with-director-jeremy-higgins) | Jeremy Higgins / Runway Studios；编剧与 AI 动画 Evan Johnson |
+| 哥特室内角色剧 | [Ausencia](https://www.contanimation.com/originals/) | Javier de la Chica / Guillermo Miranda · Contanimation |
+| 油画液态雕塑 | [Jacques — Absolve](https://www.thecvf-art.com/project.php?artist=paul-trillo&year=2024) | Paul Trillo / Jacques / Voir Pictures |
+| 拼贴科幻寓言 | [Do The Evolution](https://ricardovillavicencio.com/type/animation/do-the-evolution/) | Ricardo Villavicencio / Runway Studios |
+| 荧光漫画拼贴 | [To Eat or Not To Eat](https://www.hyacinth.im/works/movie) | Ruby Nian / Ring Hyacinth（海辛） |
+| 冷雾动物黑色电影 | [THE WELL](https://www.whatif.film/) | Dorian & Daniel（Dorian Lebherz / Daniel Titz） |
 
 The Chinese video prompts and visual analysis are original educational exercises written for this site. They are not the filmmakers' original prompts or production settings. Reference frames are not proof of results obtained with these prompts; no model-output testing is claimed. The seven Love, Death + Robots episodes are labeled as animation references, not AI films. ONE and Mars and Siv use mixed production methods; the Portal Test is not claimed to be a separate AI-generated or award-winning film.
 

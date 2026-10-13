@@ -1,7 +1,1593 @@
 {
-  "checkedAt": "2026-10-11",
-  "scope": "21 original reusable video-style prompts; 42 limited source reference images; recognized AI works selected by official broadcast, creator showcase or festival evidence, not a popularity ranking",
+  "checkedAt": "2026-10-13",
+  "scope": "41 original reusable video-style prompts; 82 limited source reference images; includes 20 newly reviewed AI or hybrid animation works with primary creator or festival evidence; editorial selection, not a popularity ranking",
   "entries": [
+    {
+      "id": "video-postman-animation",
+      "reference": {
+        "title": "POSTMAN",
+        "creator": "YUUUKI / PYRAMID FILM",
+        "url": "https://2026.jciaff.net/jp/film/detail/cat02-02.html",
+        "type": "ai",
+        "note": "日中国际动画电影节官方说明为AI短篇动画；PYRAMID FILM制作公司新闻将YUUUKI署名为编剧、剪辑、导演、AI生成。本条描述手绘视觉风格，并不声称使用了传统逐张手绘生产流程。",
+        "recognition": "Runway AIF 2026 Merit；WORLD AI FILM FESTIVAL 2026 in KYOTO的Best AI Anime部门评审特别奖；以两项赛事和制作公司官方页面核对。"
+      },
+      "sources": [
+        {
+          "title": "日中国际动画电影节官方作品与主创页",
+          "url": "https://2026.jciaff.net/jp/film/detail/cat02-02.html",
+          "note": "明确标为AI短篇动画，列出导演、AI生成、制片及声音制作署名。"
+        },
+        {
+          "title": "Runway AIF 2026 官方获奖页",
+          "url": "https://aif.runwayml.com/",
+          "note": "POSTMAN列为Merit，作者YUUUKI。"
+        },
+        {
+          "title": "WAIFF京都官方获奖页与播放入口",
+          "url": "https://worldaifilmfestival.jp/award-winners/",
+          "note": "官方POSTMAN条目与PLAY链接指向本次公开视频。"
+        },
+        {
+          "title": "PYRAMID FILM 官方制作及奖项新闻",
+          "url": "https://www.pyramidfilm.co.jp/news/pyramid_film/news_2284.php",
+          "note": "2026-03-16新闻明确奖项与YUUUKI的AI生成署名。"
+        },
+        {
+          "title": "官方获奖页链接的公开视频",
+          "url": "https://www.youtube.com/watch?v=oESR5L9W2kc",
+          "note": "参考图均取自此完整公开视频，不是官方宣传静帧的虚构时间点。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-postman-animation/01.jpg",
+          "time": "01:07.000",
+          "caption": "青蓝旧漆外壳、细长机械手与简洁屏幕眼睛形成清楚轮廓，暖黄发光物照亮脸框；硬材质的边界和手绘阴影仍被保留。",
+          "credit": "© YUUUKI / PYRAMID FILM · POSTMAN",
+          "mediaUrl": "https://www.youtube.com/watch?v=oESR5L9W2kc",
+          "captureKind": "video-frame",
+          "seconds": 67,
+          "sha256": "4105b4937edfc5140561cd2ba5c3ce71e933f7377ae6c9547efbf94cb8f93e8a",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。仅裁去原视频上下黑边，保留完整有效画面。",
+          "crop": {
+            "x": 0,
+            "y": 90,
+            "width": 1280,
+            "height": 540,
+            "sourceWidth": 1280,
+            "sourceHeight": 720
+          }
+        },
+        {
+          "src": "assets/img/video/video-postman-animation/02.jpg",
+          "time": "06:15.000",
+          "caption": "机器人站在深蓝夜色中的木屋前，暖窗、路面和树木分成前后层；广景通过小主体与真实生活尺度营造温暖，而不是依靠密集科幻装饰。",
+          "credit": "© YUUUKI / PYRAMID FILM · POSTMAN",
+          "mediaUrl": "https://www.youtube.com/watch?v=oESR5L9W2kc",
+          "captureKind": "video-frame",
+          "seconds": 375,
+          "sha256": "b633f8da4bfd2759100764c4e1b078d2b863fca2c590cd1e0f5641d677b17c1e",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。仅裁去原视频上下黑边，保留完整有效画面。",
+          "crop": {
+            "x": 0,
+            "y": 90,
+            "width": 1280,
+            "height": 540,
+            "sourceWidth": 1280,
+            "sourceHeight": 720
+          }
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "每部作品仅保留两张有限尺寸参考画面，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站MIT许可。分析及提示词为本站原创，非作者原始提示词或制作参数，未逐条生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "从官方公开媒体提取分散样本及相邻时间点接触表，逐图比较；未声称完整观看全片。",
+        "ranges": [
+          "01:00–01:03",
+          "01:05–01:07",
+          "06:10–06:16",
+          "06:37–06:40"
+        ],
+        "observations": [
+          "角色观察手中发光物并改变视线，屏幕眼睛与外壳比例固定，机械手与物件保持连接。",
+          "后段夜间木屋外景有角色走近与姿态变化，暖窗和冷色环境保持统一空间。",
+          "门口角色的眼睛转为笑意图形，身体与手中物件保持稳定，情绪通过简单图形表情表达。"
+        ],
+        "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-luminous-cloud-fable",
+      "reference": {
+        "title": "Cloudling (2026) | AI Animated Short Film",
+        "creator": "Nikita Filipchenko（Nixel）",
+        "url": "https://nikitafilipchenko.artstation.com/projects/q0L6qz",
+        "type": "hybrid",
+        "note": "作者官方 ArtStation 项目页列出 ComfyUI、WAN 2.1/2.2、Flux、GPT Image 等，并说明以 Maya 布局、Photoshop 修正及 After Effects/Premiere 合成剪辑辅助制作；同时公开概念稿与早期测试。",
+        "recognition": "作者 2026 年公开的完整独立动画短片，附创作过程；不把投稿标签写成入选或奖项。"
+      },
+      "sources": [
+        {
+          "title": "作者官方项目与制作过程",
+          "url": "https://nikitafilipchenko.artstation.com/projects/q0L6qz",
+          "note": "说明AI模型与传统美术流程，并嵌入Nixel发布的完整短片与早期测试。"
+        },
+        {
+          "title": "作者官方完整动画",
+          "url": "https://www.youtube.com/watch?v=6vlQNn54ZIg",
+          "note": "由作者ArtStation直接嵌入，YouTube描述列出同一制作工具链；截帧来源为该完整版本。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-luminous-cloud-fable/01.jpg",
+          "seconds": 80.8,
+          "time": "01:20.800",
+          "sha256": "4b054fda444a3bf977b5be3e71548f6b8483f6607e4c8c5ace2d0c03119da2c0",
+          "caption": "工坊中冷蓝颜料向金属桶边缘溢出，照亮角色眼镜和面部；卷曲发型、布料与硬质容器的材质差异清晰。",
+          "credit": "© Nikita Filipchenko（Nixel） · Cloudling (2026) | AI Animated Short Film",
+          "mediaUrl": "https://www.youtube.com/watch?v=6vlQNn54ZIg",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        },
+        {
+          "src": "assets/img/video/video-luminous-cloud-fable/02.jpg",
+          "seconds": 115,
+          "time": "01:55.000",
+          "sha256": "4d8e558f99fe15070283ddc8f120619d81c9f2c5d95c8db135b38974eb92b88c",
+          "caption": "角色举起画笔时，身体、视线和张开的口型形成明确的兴奋表演；背景云层依靠紫蓝层次托住动作，没有淹没轮廓。",
+          "credit": "© Nikita Filipchenko（Nixel） · Cloudling (2026) | AI Animated Short Film",
+          "mediaUrl": "https://www.youtube.com/watch?v=6vlQNn54ZIg",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保留两张用于具体视觉评论的参考截帧；版权归原权利人，不随本站代码按 MIT 授权，不分发原视频。提示词为本站原创分析，未模型实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "checkedAt": "2026-10-13",
+      "motionEvidence": {
+        "method": "全片均匀取样后，逐段复核工具操作与挥笔表演的相邻帧。",
+        "mediaUrl": "https://www.youtube.com/watch?v=6vlQNn54ZIg",
+        "sampledSeconds": [
+          80,
+          80.4,
+          80.8,
+          81.2,
+          81.6,
+          82,
+          115,
+          115.4,
+          115.8,
+          116.2,
+          116.6,
+          117
+        ],
+        "observations": "工坊段角色视线转向桶内，手部握持提梁并改变姿势；绘画段抬臂、转头、收眼及笔端星光依次变化，形体和圆眼镜在动作中连续。"
+      }
+    },
+    {
+      "id": "video-papier-mache-theatre",
+      "reference": {
+        "title": "Little Mes",
+        "creator": "Lucas Levitan & Fabián Jiménez / SALAD Collective",
+        "url": "https://www.lucaslevitan.com/littlemes/",
+        "type": "ai",
+        "note": "作者官网列出导演、美术设计与 AI Execution；官方成片片尾注明 Created with Artificial Intelligence。此处讨论的是 AI 形成的纸塑木偶外观，不把它误写成实物逐格拍摄。",
+        "recognition": "Runway AI Festival 2026 Merit；依据官方影展片目核对。"
+      },
+      "sources": [
+        {
+          "title": "Little Mes · 作者正式项目页",
+          "url": "https://www.lucaslevitan.com/littlemes/",
+          "note": "核对导演、创作与 AI 执行署名，来源为作者公布的剧照。"
+        },
+        {
+          "title": "Runway AI Festival 2026 官方片目",
+          "url": "https://aif.runwayml.com/",
+          "note": "核对 Little Mes、Lucas Levitan & Fabián Jiménez、Merit 与官方播放链接。"
+        },
+        {
+          "title": "Little Mes · Runway AI Festival 官方成片",
+          "url": "https://www.youtube.com/watch?v=L6ma6WSJ-t4",
+          "note": "官方影展页面对应的公开版本；片尾列出生成导演与 AI 制作声明，用于连续动作核查。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-papier-mache-theatre/01.jpg",
+          "time": "作者官方剧照 · 木屋角色",
+          "caption": "角色的纸塑脸面、线状头发和粗针织毛衣，与青绿木板的纵向纹路形成细密层次；暖吊灯只照亮上半身，保留小剧场的暗边。",
+          "credit": "© Lucas Levitan / Fabián Jiménez · Little Mes",
+          "mediaUrl": "https://images.squarespace-cdn.com/content/v1/5857eeba9de4bb486e1ba151/1780872962371-A9PEN3ZYQTMQRKFVWE2L/LITTLE_MES_FINAL_HD_Grading_Sound_May15_264426+copy.jpg",
+          "captureKind": "official-still",
+          "sha256": "7581fb1e599b26026f978ea1ce875be95797602ac5c130d53e0a42fe06cc3867",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "作者项目页公开剧照等比例缩至 960 像素宽；原图未标时间，不虚构成片秒数。"
+        },
+        {
+          "src": "assets/img/video/video-papier-mache-theatre/02.jpg",
+          "time": "作者官方剧照 · 层叠森林",
+          "caption": "折片叶子、卷曲枝蔓和树干形成错落景深，彩色怪物分别呈现纸片、绒毛与捏塑般外观；角色在森林中仍沿用细长鼻部、圆眼镜和朴素服装。",
+          "credit": "© Lucas Levitan / Fabián Jiménez · Little Mes",
+          "mediaUrl": "https://images.squarespace-cdn.com/content/v1/5857eeba9de4bb486e1ba151/1780872957475-BJ0BH3FJ0LNYTKND1C6M/LITTLE_MES_FINAL_HD_Grading_Sound_May15_263160+copy.jpg",
+          "captureKind": "official-still",
+          "sha256": "73a6092a1d839104d8e6de1b2538cb74aa1a434581dfba6df2c65983635f0cda",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "作者项目页公开剧照等比例缩至 960 像素宽；原图未标时间，不虚构成片秒数。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "每部仅保留两张缩小参考画面，用于具体美术、动作和制作方法评论；没有声明获得开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "不随仓库分发完整影片。",
+        "promptAuthorship": "中文母提示词为本站原创风格归纳，不是原作者提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "检查官方成片全段概览接触表，并密集观察小鸟与角色互动、森林走入与前景叶片遮挡。",
+        "sourceUrl": "https://www.youtube.com/watch?v=L6ma6WSJ-t4",
+        "reviewedRanges": [
+          "00:00–04:16 概览抽样",
+          "01:57–02:12 连续顺序帧"
+        ],
+        "observed": "粉红绒鸟扑动翅膀，角色伸手抱起，鸟挣脱后角色的手在胸前落下；随后角色背对镜头走入森林，前景纸叶经过画面，群体造型保持各自材质。",
+        "limits": "剧照不附伪造时间；运动判断来自官方公开影片的顺序抽帧，未评价音轨或声称逐帧看完所有段落。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-miniature-fantasy",
+      "reference": {
+        "title": "CLOSET",
+        "creator": "Marcelo Pinto Coelho",
+        "url": "https://capcut.creaite26.com/",
+        "type": "ai",
+        "note": "CapCut 官方将该片列为 AI Festival 获奖作品并明确描述其定格动画外观；参赛规则要求 AI 处于创作核心，CapCut Video Studio 在最终作品中发挥主要作用。未公开的逐镜模型和实际木偶拍摄流程不作推断。",
+        "recognition": "CapCut CRE[AI]TE 2026 Grand Prix；2026 年 9 月公布，依据官方获奖页面。"
+      },
+      "sources": [
+        {
+          "title": "CapCut CRE[AI]TE 2026 官方获奖片目",
+          "url": "https://capcut.creaite26.com/",
+          "note": "核对 CLOSET、Marcelo Pinto Coelho、Grand Prix、2026 年 9 月公布与定格风动画描述；页面提供本次抽帧的公开 MP4。"
+        },
+        {
+          "title": "CRE[AI]TE 2026 官方参赛与制作规则",
+          "url": "https://capcut.creaite26.com/guidelines",
+          "note": "明确作品须由 AI 生成或辅助、AI 发挥核心作用，CapCut Video Studio 发挥主要作用；允许披露使用其他 AI 工具，创作者保留版权。"
+        },
+        {
+          "title": "CLOSET · 官方公开影片",
+          "url": "https://capcut.creaite26.com/assets/works/full/01-Closet-wm.mp4",
+          "note": "从获奖页 Watch the film 的公开媒体地址读取，用于动作核查与两张保留原水印的有限参考帧。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-miniature-fantasy/01.jpg",
+          "time": "00:31.850",
+          "seconds": 31.85,
+          "caption": "纸箱控制台的切边、旋钮与小灯构成可信的自制玩具，人物发束和布料格纹与纸板纹路各有精度；箱内暖光把角色与深蓝卧室分离。",
+          "credit": "© Marcelo Pinto Coelho · CLOSET；来源 CapCut CRE[AI]TE",
+          "mediaUrl": "https://capcut.creaite26.com/assets/works/full/01-Closet-wm.mp4",
+          "captureKind": "video-frame",
+          "sha256": "53ded7030fc437e544ab7968ba97cc741c186c8bae0938854d6ca43fd170cda7",
+          "captureMethod": "从官方影展页面公开 MP4 抽帧，完整画面等比例缩至 960 像素宽，保留原有 CapCut CRE[AI]TE 水印。",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。"
+        },
+        {
+          "src": "assets/img/video/video-miniature-fantasy/02.jpg",
+          "time": "04:32.600",
+          "seconds": 272.6,
+          "caption": "绿色房间沿用卧室的床、门、桌子与收纳功能，再改写为卷曲紫床、角状望远镜和眼睛灯；角色与绒毛伙伴互动，把怪趣设计落在可读的小动作上。",
+          "credit": "© Marcelo Pinto Coelho · CLOSET；来源 CapCut CRE[AI]TE",
+          "mediaUrl": "https://capcut.creaite26.com/assets/works/full/01-Closet-wm.mp4",
+          "captureKind": "video-frame",
+          "sha256": "ce5a494ec1188d1a1b8f7c9925e7334288ab2be89d49b049ad3504324246bf0a",
+          "captureMethod": "从官方影展页面公开 MP4 抽帧，完整画面等比例缩至 960 像素宽，保留原有 CapCut CRE[AI]TE 水印。",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "每部仅保留两张缩小参考画面，用于具体美术、动作和制作方法评论；没有声明获得开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "不随仓库分发完整影片。",
+        "promptAuthorship": "中文母提示词为本站原创风格归纳，不是原作者提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "先检查官方影片全段概览，再密集检查蓝色卧室、绿色卧室与角色宠物互动段落，核对空间对应和动作连续性。",
+        "sourceUrl": "https://capcut.creaite26.com/assets/works/full/01-Closet-wm.mp4",
+        "reviewedRanges": [
+          "00:00–07:10 概览抽样",
+          "02:30–02:45 连续顺序帧",
+          "04:02–04:32 连续顺序帧"
+        ],
+        "observed": "蓝色卧室中角色连续运球、转身与抬腿，绿色卧室以对应构图重演球类活动；随后幻想角色跑过草地、蹲下与绿色绒毛动物互动，家具位置与主色域保持稳定。",
+        "limits": "依据顺序抽帧分析视觉动作，不评价音轨，也不声称实物定格拍摄或确定其未公布的模型版本。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-expressionist-emotion",
+      "reference": {
+        "title": "Dear Upstairs Neighbors · 官方制作拆解",
+        "creator": "Connie He / Google DeepMind；美术设计 Yingzong Xin",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/dear-upstairs-neighbors/",
+        "type": "hybrid",
+        "note": "Google 官方说明：团队将手绘设计、二维与三维预演，通过定制微调的 Veo 和 Imagen 以及视频转换流程完成绘画外观。不是仅靠文字一次生成，参考图为官方拆解中的完成画面。",
+        "recognition": "2026 年在 Sundance Institute 的 Story Forum 展示预览；依据 Google 官方说明，不将其写成圣丹斯竞赛获奖。"
+      },
+      "sources": [
+        {
+          "title": "Google DeepMind 官方制作说明与分解视频",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/dear-upstairs-neighbors/",
+          "note": "核对导演、美术设计、Sundance Story Forum 预览、Veo/Imagen 微调、人工二维与三维动作基础及局部修正流程。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-expressionist-emotion/01.jpg",
+          "time": "00:05.000 · 官方表演转换拆解",
+          "caption": "闭眼张臂的姿势仍沿用动画表演，头发和床铺由粗笔触与干擦色层塑形；冷蓝的综合色让室内空间保持平静。",
+          "credit": "© Google DeepMind · Dear Upstairs Neighbors",
+          "mediaUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM_Figure11_HappyAda_Montage.mp4",
+          "captureKind": "video-frame",
+          "sha256": "02db0fdbe759922ca17aedf9e2398797d54a2bcfac17f7370a905349a9529179",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "seconds": 5,
+          "sourceKind": "official-production-breakdown",
+          "captureMethod": "官方公开制作拆解 MP4 抽帧，完整画面等比例缩至 960 像素宽，保留片内完成阶段说明。"
+        },
+        {
+          "src": "assets/img/video/video-expressionist-emotion/02.jpg",
+          "time": "00:08.500 · 官方风格转换拆解",
+          "caption": "青色扬声器与洋红橙黄放射笔触包围被声波挤压的角色，夸张弯曲是人工二维动画设定的表现效果；截取官方拆解右侧完成画面。",
+          "credit": "© Google DeepMind · Dear Upstairs Neighbors",
+          "mediaUrl": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/WM_Figure12_ChaosMontage_Short.mp4",
+          "captureKind": "video-frame",
+          "sha256": "a2e30c724d8f632464f2a465af86a1acb5a07dc3e78b4ccceeb8a72394503623",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "seconds": 8.5,
+          "sourceKind": "official-production-breakdown",
+          "crop": {
+            "x": 548,
+            "y": 150,
+            "width": 1346,
+            "height": 756,
+            "sourceWidth": 1920,
+            "sourceHeight": 1080
+          },
+          "captureMethod": "官方公开制作拆解 MP4 抽帧，裁出右侧 Final look 画面后等比例缩至 960 像素宽；左侧为概念画，未作为成片引用。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "每部仅保留两张缩小参考画面，用于具体美术、动作和制作方法评论；没有声明获得开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "不随仓库分发完整影片。",
+        "promptAuthorship": "中文母提示词为本站原创风格归纳，不是原作者提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "检查官方 HappyAda 与 ChaosMontage 两个拆解视频的顺序接触表，区分输入动画、概念图及最终风格阶段。",
+        "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/dear-upstairs-neighbors/",
+        "reviewedRanges": [
+          "HappyAda 00:00–00:06.5",
+          "ChaosMontage 00:00–00:13"
+        ],
+        "observed": "角色在床上从放松到张臂微笑，完成阶段延续原表演；另一段从静态惊讶进入拉伸和弯曲，强色块沿撞击与位移展开，输入的二维动作和最终画面的姿势对应。",
+        "limits": "以顺序抽帧检查姿态与颜色变化，不声称完整观看未公开的整部影片，也未评价音轨。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-round-hero-adventure",
+      "reference": {
+        "title": "Samurai Egg · AI 项目预告",
+        "creator": "Gaku Nakatani（中谷学）/ G3 Pictures",
+        "url": "https://www.youtube.com/watch?v=4bEZ09nh3XA",
+        "type": "ai",
+        "note": "WAIFF 官方说明由中谷学领导的 G3 Pictures 使用 Midjourney、Kling AI、ElevenLabs 等制作；作者工作室也将该项目列为 AI Animation Sample。这里引用公开预告的三维动画外观，不表示采用传统逐帧 CG 管线。",
+        "recognition": "WORLD AI FILM FESTIVAL 2026 in KYOTO：Best Synopsis + AI Teaser；准确标明为项目提案与预告奖项。"
+      },
+      "sources": [
+        {
+          "title": "WAIFF Japan 官方预告与制作简介",
+          "url": "https://www.youtube.com/watch?v=4bEZ09nh3XA",
+          "note": "说明 G3 Pictures、中谷学与 Midjourney / Kling AI / ElevenLabs 等工具；提供实际影片。"
+        },
+        {
+          "title": "WAIFF 2026 in KYOTO 官方获奖名单",
+          "url": "https://worldaifilmfestival.jp/award-winners/",
+          "note": "核对 Samurai Egg、Gaku Nakatani 与 Best Synopsis + AI Teaser，不误写成最佳完整长片。"
+        },
+        {
+          "title": "Magic Cape · AI Animation Samples",
+          "url": "https://www.magiccape.com/aianimationsample",
+          "note": "作者工作室将 Samurai Egg 列为 AI VIDEO 测试项目，署名 Gaku Nakatani，2025-06-26。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-round-hero-adventure/01.jpg",
+          "time": "00:24.200",
+          "caption": "圆体角色用粗眉、黑眼与小嘴完成明确的警觉表情，浅色表面保持干净；深色织物、护肩和斜向暖光提供重量与体积，背景街道逐步虚化。",
+          "credit": "© Gaku Nakatani / G3 Pictures · Samurai Egg",
+          "mediaUrl": "https://www.youtube.com/watch?v=4bEZ09nh3XA",
+          "captureKind": "video-frame",
+          "sha256": "e2c1c34508532e1f1a773561f66dc9ed8b051d5bfb8c1a628bddf830b44861bd",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "seconds": 24.2,
+          "captureMethod": "WAIFF Japan 官方公开预告抽帧，完整画面等比例缩至 960 像素宽。"
+        },
+        {
+          "src": "assets/img/video/video-round-hero-adventure/02.jpg",
+          "time": "02:05.100",
+          "caption": "小船上的圆形角色以倾斜身体和抓握动作应对急流，布帆、竹木结构与白色浪花有不同材质；大尺度瀑布衬托角色的小体积，动作保持清楚的行进方向。",
+          "credit": "© Gaku Nakatani / G3 Pictures · Samurai Egg",
+          "mediaUrl": "https://www.youtube.com/watch?v=4bEZ09nh3XA",
+          "captureKind": "video-frame",
+          "sha256": "fe97d8f643c192dbda01858970c1900522d8919a50cc15fcf9028de871ec48cf",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "seconds": 125.1,
+          "captureMethod": "WAIFF Japan 官方公开预告抽帧，完整画面等比例缩至 960 像素宽。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "每部仅保留两张缩小参考画面，用于具体美术、动作和制作方法评论；没有声明获得开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "不随仓库分发完整影片。",
+        "promptAuthorship": "中文母提示词为本站原创风格归纳，不是原作者提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "检查官方预告概览接触表，并逐秒观察街道表情变化、林间动作及急流行船。",
+        "sourceUrl": "https://www.youtube.com/watch?v=4bEZ09nh3XA",
+        "reviewedRanges": [
+          "00:00–02:47 概览抽样",
+          "00:16–00:31 连续顺序帧",
+          "01:56–02:13 连续顺序帧"
+        ],
+        "observed": "街道场景中角色随事件抬眼并改变嘴形；森林里短肢角色躲避与转身，随后小船受浪推动，角色抓握、划桨并改变重心。材质和圆形身体在多个环境中延续。",
+        "limits": "参考为 AI 预告，不将抽样检查等同全片动画验收；动作段落仍可能包含模型局部生成误差，提示词未生成实测。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-moss-stone-puppet-fable",
+      "reference": {
+        "title": "Until We Meet Again",
+        "creator": "Julie Wieland / Google Flow Sessions",
+        "url": "https://www.juliewieland.com/",
+        "type": "ai",
+        "note": "作者官网、官方视频说明及 Google Flow Sessions 专题相互确认本作为 Flow 创作短片。Google 说明作者另用 AI Studio 制作降低帧率的工具，以获得手工定格观感；这里描述视觉效果，不声称实体逐格拍摄。",
+        "recognition": "Google Flow Sessions 第三期作品；作者官网注明在 Tribeca Festival 2026 展示并参加对谈，未称竞赛获奖。"
+      },
+      "sources": [
+        {
+          "title": "作者官方网站",
+          "url": "https://www.juliewieland.com/",
+          "note": "展示该短片与Flow Sessions背景，介绍作者及2026 Tribeca展示/对谈经历。"
+        },
+        {
+          "title": "Google 官方 Flow Sessions 创作专题",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/flow-sessions-artists-lessons/",
+          "note": "第一节明确片名、Julie Wieland、Flow与AIStudio调整帧率以获得定格质感的方法，并嵌入作者完整影片。"
+        },
+        {
+          "title": "作者官方完整短片",
+          "url": "https://www.youtube.com/watch?v=mi-1OPsj-_o",
+          "note": "Julie Wieland频道发布，与Google官方专题直接嵌入版本一致；作为截帧和运动核对来源。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-moss-stone-puppet-fable/01.jpg",
+          "seconds": 22,
+          "time": "00:22.000",
+          "sha256": "1def9715e718157afdcffb3dbc38dfcef00ac6804990d8f390c6ceb013681256",
+          "caption": "石偶的眉眼嵌在分块岩面中，树皮、裂缝与湿苔保持尺度差；前景花朵建立视线关系，人物表情从自然材料内部产生。",
+          "credit": "© Julie Wieland / Google Flow Sessions · Until We Meet Again",
+          "mediaUrl": "https://www.youtube.com/watch?v=mi-1OPsj-_o",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        },
+        {
+          "src": "assets/img/video/video-moss-stone-puppet-fable/02.jpg",
+          "seconds": 84,
+          "time": "01:24.000",
+          "sha256": "d80c12e176b8f8afc5bb2f83a35e10bdda320eff7ca12fcf481870aa74c22f1c",
+          "caption": "轻盈植物角色抬手触碰暖色琥珀，冠毛、叶片和厚石壳形成精细触感对照；光源同时照亮手掌与面孔，让情绪动作可读。",
+          "credit": "© Julie Wieland / Google Flow Sessions · Until We Meet Again",
+          "mediaUrl": "https://www.youtube.com/watch?v=mi-1OPsj-_o",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保留两张用于具体视觉评论的参考截帧；版权归原权利人，不随本站代码按 MIT 授权，不分发原视频。提示词为本站原创分析，未模型实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "checkedAt": "2026-10-13",
+      "motionEvidence": {
+        "method": "全片均匀采样检查故事与材料变化，再在面部、触摸和情绪段落连续取样。",
+        "mediaUrl": "https://www.youtube.com/watch?v=mi-1OPsj-_o",
+        "sampledSeconds": [
+          22,
+          22.4,
+          22.8,
+          23.2,
+          23.6,
+          24,
+          79,
+          79.4,
+          79.8,
+          80.2,
+          80.6,
+          81,
+          84,
+          84.5,
+          85,
+          85.5,
+          86,
+          86.5,
+          89,
+          89.5,
+          90,
+          90.5,
+          91
+        ],
+        "observations": "石偶眼部和头部姿态缓慢改变，石指沿琥珀表面连续移动；植物角色伸出手掌触碰、眨眼及转头，后续萎蔫段眼睑收拢。运动克制但有独立表演，不是整张静图平移。"
+      }
+    },
+    {
+      "id": "video-cardboard-puppet-comedy",
+      "reference": {
+        "title": "TPU Training Day for I/O ’26（Timmy TPU）",
+        "creator": "Laurie Rowan / Nexus Studios / Google",
+        "url": "https://nexusstudios.com/work/google-io-2026-tpu/",
+        "type": "hybrid",
+        "note": "Nexus 与 Google 官方均明确说明：手工角色、实物操偶与 CGI 动画提供表演和镜头基础，生成式 AI 作为最后渲染层；Google 列出 Nano Banana、AI Studio、Gemini Omni 及实验模型。",
+        "recognition": "Google I/O 2026 开幕主题演讲公开放映的委托短片；官方完整作品和幕后制作可核对，不写成电影节获奖。"
+      },
+      "sources": [
+        {
+          "title": "Nexus 官方制作项目与团队",
+          "url": "https://nexusstudios.com/work/google-io-2026-tpu/",
+          "note": "明确导演Laurie Rowan，手工造型、实物操偶、CGI与AI最终渲染层的混合流程，附完整制作名单。"
+        },
+        {
+          "title": "Google 官方制作解析",
+          "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/",
+          "note": "AI x Film小节披露木偶/3D表演、NanoBanana首帧、AIStudio一致性工具和GeminiOmni等模型。"
+        },
+        {
+          "title": "Google 官方完整短片",
+          "url": "https://www.youtube.com/watch?v=dhI4djOVEmI",
+          "note": "Google频道完整发行版本，为本次两张截帧与运动核对的动态源。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-cardboard-puppet-comedy/01.jpg",
+          "seconds": 16,
+          "time": "00:16.000",
+          "sha256": "12c24151a27f0e9dd9a2a2f6e0fd2d50ac0e5f18b8623fd7b7d9ae8ce31ddfd7",
+          "caption": "微缩厨房里，纸板硬壳、毛根四肢与独立眼睛形成清楚材质分工；木色环境和侧向柔光承托角色的交谈动作。",
+          "credit": "© Laurie Rowan / Nexus Studios / Google · TPU Training Day for I/O ’26（Timmy TPU）",
+          "mediaUrl": "https://www.youtube.com/watch?v=dhI4djOVEmI",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        },
+        {
+          "src": "assets/img/video/video-cardboard-puppet-comedy/02.jpg",
+          "seconds": 53.4,
+          "time": "00:53.400",
+          "sha256": "710afee45e5998755185f58b88e08486240fbea55771c0035bc500f4b60b99f6",
+          "caption": "训练中的方形角色压低重心，眉眼、嘴部和弯曲四肢共同表达用力；纸板主体保持硬度，背景细节也维持手工布景的尺度。",
+          "credit": "© Laurie Rowan / Nexus Studios / Google · TPU Training Day for I/O ’26（Timmy TPU）",
+          "mediaUrl": "https://www.youtube.com/watch?v=dhI4djOVEmI",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保留两张用于具体视觉评论的参考截帧；版权归原权利人，不随本站代码按 MIT 授权，不分发原视频。提示词为本站原创分析，未模型实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "checkedAt": "2026-10-13",
+      "motionEvidence": {
+        "method": "全片均匀采样，再复核厨房交谈与训练动作的相邻帧。",
+        "mediaUrl": "https://www.youtube.com/watch?v=dhI4djOVEmI",
+        "sampledSeconds": [
+          16,
+          16.4,
+          16.8,
+          17.2,
+          17.6,
+          18,
+          53,
+          53.4,
+          53.8,
+          54.2,
+          54.6,
+          55
+        ],
+        "observations": "厨房角色的眼球、口型和毛根手臂分别变化，硬壳比例与位置保持；训练段快速切入下蹲/起伏与用力表情，动作有预备、发力和回收。"
+      }
+    },
+    {
+      "id": "video-luminous-anime",
+      "reference": {
+        "title": "This is Me",
+        "creator": "Marika Hirata（平田茉莉花）/ METREA",
+        "url": "https://www.youtube.com/watch?v=zunXh_L_9Zw",
+        "type": "ai",
+        "note": "制作方公开使用 Stable Diffusion、ComfyUI、FluxGym LoRA、Midjourney 等图像工具，以及 Wan、Seedance、Kling 等视频模型；同时有专业声优和人工制作、剪辑。AI 分类指生成影像，不表示剧本、配音与后期由 AI 全包。",
+        "recognition": "WORLD AI FILM FESTIVAL 2026 in KYOTO：Grand Prix / Japan Best AI Film 与 Best AI Anime，按官方获奖页核对。"
+      },
+      "sources": [
+        {
+          "title": "METREA 制作方新闻稿",
+          "url": "https://prtimes.jp/main/html/rd/p/000000005.000169761.html",
+          "note": "2026-03-23 发布，核对导演、声优、制作人员和图像/LoRA/视频模型及后期工具。"
+        },
+        {
+          "title": "WAIFF 2026 in KYOTO 官方获奖名单",
+          "url": "https://worldaifilmfestival.jp/award-winners/",
+          "note": "核对 This Is Me、Marika Hirata、Grand Prix / Japan Best AI Film 与 Best AI Anime；页面链接官方成片。"
+        },
+        {
+          "title": "WAIFF Japan 官方成片",
+          "url": "https://www.youtube.com/watch?v=zunXh_L_9Zw",
+          "note": "两张影片参考帧与连续动作核查来源。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-luminous-anime/01.jpg",
+          "time": "00:44.500",
+          "caption": "纤细的面部线条、清楚的睫毛和虹膜细节，被粉紫窗光与大块柔色托住；头发和耳机仍保持概括形体，眼神与微张的嘴承担对话情绪。",
+          "credit": "© METREA · This is Me",
+          "mediaUrl": "https://www.youtube.com/watch?v=zunXh_L_9Zw",
+          "captureKind": "video-frame",
+          "sha256": "6fe1bdddab5e4e921784392dabbe959bf3a524188c50535fa780e99e2c146d0f",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "seconds": 44.5,
+          "captureMethod": "WAIFF Japan 官方公开视频抽帧，保留原生黑边，完整画面等比例缩至 960 像素宽。"
+        },
+        {
+          "src": "assets/img/video/video-luminous-anime/02.jpg",
+          "time": "07:43.500",
+          "caption": "红紫幻想角色的菱格面部、卷曲轮廓与爱心状尾端都维持精确图形边线；青蓝工业空间与红色侧光形成冷暖对立，展示同一漫画体系中的强烈场景变化。",
+          "credit": "© METREA · This is Me",
+          "mediaUrl": "https://www.youtube.com/watch?v=zunXh_L_9Zw",
+          "captureKind": "video-frame",
+          "sha256": "64870b3b8759e552795465fa7214098da1fa2df4fd144122adff2e9d038d9227",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "seconds": 463.5,
+          "captureMethod": "WAIFF Japan 官方公开视频抽帧，保留原生黑边与字幕，完整画面等比例缩至 960 像素宽。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "每部仅保留两张缩小参考画面，用于具体美术、动作和制作方法评论；没有声明获得开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "不随仓库分发完整影片。",
+        "promptAuthorship": "中文母提示词为本站原创风格归纳，不是原作者提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "检查官方成片概览并连续抽取日常室内表演及后段红紫幻想场景，比较人物线条和色彩连续性。",
+        "sourceUrl": "https://www.youtube.com/watch?v=zunXh_L_9Zw",
+        "reviewedRanges": [
+          "00:00–10:00 概览抽样",
+          "00:35–00:50 连续顺序帧",
+          "07:42–07:57 连续顺序帧"
+        ],
+        "observed": "室内角色嘴型、目光与脸部姿态随对话改变，光线保持一致；幻想角色先展示道具再以手势交谈，镜头切回主角反应，空间色调从柔粉过渡到深红青蓝而造型线条仍一致。",
+        "limits": "以顺序抽帧核对姿势、构图与连续性，未以音轨核实精确口型同步；不声称全片无生成瑕疵。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-pounamu-animation",
+      "reference": {
+        "title": "Pounamu",
+        "creator": "Samuel Schrag",
+        "url": "https://watch.runwayml.com/pounamu",
+        "type": "hybrid",
+        "note": "影片片尾明确列出 Art and Design: Samuel Schrag & SDXL 1.0，并由 Samuel Schrag 编剧、导演、制作动画。此处参考绘本式动画画面，不声称全片由单一视频模型生成。",
+        "recognition": "Runway AIFF 2024 Gold 获奖作品；奖项及作者以官方历届名单和官方公开影片为依据。"
+      },
+      "sources": [
+        {
+          "title": "Runway AIFF 2024 官方记录",
+          "url": "https://aif.runwayml.com/2024",
+          "note": "官方列出作品、作者与获奖片单。"
+        },
+        {
+          "title": "Runway Watch · Pounamu",
+          "url": "https://watch.runwayml.com/pounamu",
+          "note": "官方作品入口及公开视频。"
+        },
+        {
+          "title": "官方影片与片尾制作署名",
+          "url": "https://www.youtube.com/watch?v=PbZ8L5EDq9U",
+          "note": "04:26作者署名；04:30美术设计署名Samuel Schrag & SDXL 1.0。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-pounamu-animation/01.jpg",
+          "time": "01:40.000",
+          "caption": "深色洞口围住海岸与极光，棕色小鸟在辽阔蓝绿背景中仍清楚可辨；大色块、远近尺度和粉质边缘共同形成绘本空间。",
+          "credit": "© Samuel Schrag · Pounamu",
+          "mediaUrl": "https://www.youtube.com/watch?v=PbZ8L5EDq9U",
+          "captureKind": "video-frame",
+          "seconds": 100,
+          "sha256": "638246b74c772dc64210259393211956ee8bbe086ac71f7fe09f36252807a3b5",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        },
+        {
+          "src": "assets/img/video/video-pounamu-animation/02.jpg",
+          "time": "02:55.000",
+          "caption": "近景羽毛被概括成沿身体弯曲的细短笔触，眼睛与喙保持简洁；暖棕主体被深蓝背景托起，细节增加却没有切换成照片质感。",
+          "credit": "© Samuel Schrag · Pounamu",
+          "mediaUrl": "https://www.youtube.com/watch?v=PbZ8L5EDq9U",
+          "captureKind": "video-frame",
+          "seconds": 175,
+          "sha256": "9a5518a745df74fecc86484c4ce1d798d2ce27606df70a435760fd8a13ddd22a",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "每部作品仅保留两张有限尺寸参考画面，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站MIT许可。分析及提示词为本站原创，非作者原始提示词或制作参数，未逐条生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "从官方公开媒体提取分散样本及相邻时间点接触表，逐图比较；未声称完整观看全片。",
+        "ranges": [
+          "01:38–01:41",
+          "02:52–02:55"
+        ],
+        "observations": [
+          "海岸镜头由角色近景切到洞口远景，鸟的姿态细微变化，天空与水面保留独立的环境节奏。",
+          "海中鲸鱼推进后切至鸟的面部，头和喙发生小幅转动；大小生物的运动节奏不同。"
+        ],
+        "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-tree-animation",
+      "reference": {
+        "title": "A Tree Once Grew Here",
+        "creator": "John Semerad / Dara Semerad",
+        "url": "https://watch.runwayml.com/a-tree-once-grew-here",
+        "type": "hybrid",
+        "note": "AIFF官方收录的混合动画作品；导演公开发布将Poser、Autodesk与Midjourney列入相关制作标签。本站仅归纳可见材质、尺度与运动，不推断各镜头的具体生成流程。",
+        "recognition": "Runway AIFF 2024 Merit；Runway官方采访发布明确说明该奖项。"
+      },
+      "sources": [
+        {
+          "title": "Runway 官方作品页",
+          "url": "https://watch.runwayml.com/a-tree-once-grew-here",
+          "note": "官方播放入口与作者信息。"
+        },
+        {
+          "title": "Runway 官方获奖采访发布",
+          "url": "https://www.linkedin.com/posts/runwayml_filmmaking-duo-dara-and-john-semerad-were-activity-7305207617071566848-VqB_",
+          "note": "主办方明确说明AIFF Merit。"
+        },
+        {
+          "title": "导演关于作品与制作工具的公开发布",
+          "url": "https://www.linkedin.com/posts/john-semerad-934b431_animation-environmental-environment-activity-7124552507699142656-ybnz",
+          "note": "导演将作品标注AI animation，并列出Poser、Autodesk与Midjourney。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-tree-animation/01.jpg",
+          "time": "00:20.000",
+          "caption": "低角度将瘦长角色和横向柴束压在灰绿云层前；粗糙体块、细枝与负重姿态比面部细节更能说明其手工寓言气质。",
+          "credit": "© John Semerad / Dara Semerad · A Tree Once Grew Here",
+          "mediaUrl": "https://www.youtube.com/watch?v=lZW3CgMlHa0",
+          "captureKind": "video-frame",
+          "seconds": 20,
+          "sha256": "3242f68a7597d9d38175dedb7498de7e54234982e4b3cf374fd3206f9fd73124",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        },
+        {
+          "src": "assets/img/video/video-tree-animation/02.jpg",
+          "time": "05:20.000",
+          "caption": "猫头鹰停在苔藓树枝上，小型透光角色与橙黄叶片分布在不同深度；暖金侧光和景深使微型森林具有可触摸的层次。",
+          "credit": "© John Semerad / Dara Semerad · A Tree Once Grew Here",
+          "mediaUrl": "https://www.youtube.com/watch?v=lZW3CgMlHa0",
+          "captureKind": "video-frame",
+          "seconds": 320,
+          "sha256": "4ca43051682d0515556877b1960ca40e28562bd5931f2a0719d6269e0f6a77a7",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "每部作品仅保留两张有限尺寸参考画面，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站MIT许可。分析及提示词为本站原创，非作者原始提示词或制作参数，未逐条生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "从官方公开媒体提取分散样本及相邻时间点接触表，逐图比较；未声称完整观看全片。",
+        "ranges": [
+          "00:19–00:22",
+          "05:18–05:21"
+        ],
+        "observations": [
+          "前景行走者经过并遮挡负重角色，身体有步行支撑和明显的前后视差。",
+          "微型森林段落在小角色与猫头鹰间切换，猫头鹰转头，局部亮点和叶片运动，前后景保持较稳定。"
+        ],
+        "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-why-animation",
+      "reference": {
+        "title": "WHY",
+        "creator": "Hilario Abad",
+        "url": "https://www.hilarioabad.net/ai-video",
+        "type": "ai",
+        "note": "作者作品页明确称其为AI制作的claymation风格短片；作者公开介绍说明GPT-4o参与构思、角色设计及视觉生成。此条属于AI模拟黏土动画，不声称存在实体定格拍摄。",
+        "recognition": "作者经纪公司官方履历记录：入选Promise AI与Curious Refuge的World First AI Animation Contest。此处不声称赢得该赛事。"
+      },
+      "sources": [
+        {
+          "title": "Hilario Abad 官方AI作品页",
+          "url": "https://www.hilarioabad.net/ai-video",
+          "note": "WHY条目写明AI claymation风格，并嵌入作者公开视频。"
+        },
+        {
+          "title": "作者关于WHY的公开制作介绍",
+          "url": "https://es.linkedin.com/in/hilario-abad-48711351",
+          "note": "作者介绍黏土美学、GPT-4o参与和20部入围作品。"
+        },
+        {
+          "title": "经纪公司官方履历",
+          "url": "https://ruthfranco.com/wp-content/uploads/2025/05/Hilario-Abad-CV-EN.pdf",
+          "note": "履历记录WHY入选Promise AI与Curious Refuge的AI动画赛事。"
+        },
+        {
+          "title": "作者公开影片",
+          "url": "https://www.youtube.com/watch?v=AT8drSbCG0I",
+          "note": "作者官网嵌入的视频；连续帧核对眉眼表演与游乐场道具运动。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-why-animation/01.jpg",
+          "time": "00:20.000",
+          "caption": "粗眉、蓝色发束与哑光鼻部呈现分块塑形感，眼睑和嘴角的小变化能传达情绪；柔和侧光没有把黏土皮肤变成亮塑料。",
+          "credit": "© Hilario Abad · WHY",
+          "mediaUrl": "https://www.youtube.com/watch?v=AT8drSbCG0I",
+          "captureKind": "video-frame",
+          "seconds": 20,
+          "sha256": "6710d43336221e31e20e4f192cc45aae8362f92ed198d07e53deaa5438faa663",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        },
+        {
+          "src": "assets/img/video/video-why-animation/02.jpg",
+          "time": "01:00.000",
+          "caption": "暖色灯泡、木质支架与造型火车构成可进入的微型游乐场，深夜背景提供留白；片内文字与字幕属于原作内容，本站提示词不要求复制。",
+          "credit": "© Hilario Abad · WHY",
+          "mediaUrl": "https://www.youtube.com/watch?v=AT8drSbCG0I",
+          "captureKind": "video-frame",
+          "seconds": 60,
+          "sha256": "aa0e273599f889323ab74e43c564e15f9c2fd82e5b8cba9c395acf265c1bb693",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "每部作品仅保留两张有限尺寸参考画面，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站MIT许可。分析及提示词为本站原创，非作者原始提示词或制作参数，未逐条生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "从官方公开媒体提取分散样本及相邻时间点接触表，逐图比较；未声称完整观看全片。",
+        "ranges": [
+          "00:18–00:21",
+          "00:58–01:01"
+        ],
+        "observations": [
+          "角色的视线与嘴角轻微改变，随后切至敲击键盘的双手，表演与行为相连接。",
+          "角色进入夜间游乐场后，列车沿轨道向前下行，烟气与实体道具具有不同运动速度。"
+        ],
+        "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-myth-animation",
+      "reference": {
+        "title": "The Myth",
+        "creator": "Hilario Abad / Javi Lería / Esteban Diba",
+        "url": "https://watch.runwayml.com/the-myth",
+        "type": "ai",
+        "note": "作者AI作品页与Runway官方比赛页面确认本片由三位创作者制作，并获首届GEN:48银奖。本站归纳的是模拟实体木偶的角色视觉及室内表演，不声称使用真实木偶或掌握作者的原始提示词。",
+        "recognition": "Runway GEN:48 第一届 Silver，Runway官方页面列出三位创作者、片名与奖项。"
+      },
+      "sources": [
+        {
+          "title": "Runway Watch 官方作品页",
+          "url": "https://watch.runwayml.com/the-myth",
+          "note": "公开影片与三位作者署名。"
+        },
+        {
+          "title": "Runway GEN:48 官方获奖页面",
+          "url": "https://runway.com/gen48",
+          "note": "第一届The Myth列为Silver，作者Hilario Abad、Javi Lería、Esteban Diba。"
+        },
+        {
+          "title": "Hilario Abad 官方AI作品页",
+          "url": "https://www.hilarioabad.net/ai-video",
+          "note": "作者明确介绍其AI制作及The Myth银奖，并提供作品播放。"
+        },
+        {
+          "title": "官方作品页嵌入的完整视频",
+          "url": "https://www.youtube.com/watch?v=oUKSKZDB9uc",
+          "note": "截帧与连续比较均来自该官方公开媒体。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-myth-animation/01.jpg",
+          "time": "00:55.000",
+          "caption": "灰绿圆润额头与深色眼睛由柔软侧光塑形，暗红睡衣保留白滚边和衣褶；正面视线与略微偏转的头部让表情集中在眼睛和嘴部。",
+          "credit": "© Hilario Abad / Javi Lería / Esteban Diba · The Myth",
+          "mediaUrl": "https://www.youtube.com/watch?v=oUKSKZDB9uc",
+          "captureKind": "video-frame",
+          "seconds": 55,
+          "sha256": "58cb96cba08c5bcf4c3abe8f685a66192ea9571de2adea5d4e4c3d053bc7aa29",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        },
+        {
+          "src": "assets/img/video/video-myth-animation/02.jpg",
+          "time": "01:05.000",
+          "caption": "从床沿较低位置望向角色，前景被褥、木质靠背和身后局部灯光构成空间层次；灰绿皮肤与暗红衣料拥有不同反光，暗部仍可读出姿态。",
+          "credit": "© Hilario Abad / Javi Lería / Esteban Diba · The Myth",
+          "mediaUrl": "https://www.youtube.com/watch?v=oUKSKZDB9uc",
+          "captureKind": "video-frame",
+          "seconds": 65,
+          "sha256": "50a55c0428e82df8de3f3317ef9dd9ce4c9977be5b5639a1100c4875c9efee75",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "每部作品仅保留两张有限尺寸参考画面，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站MIT许可。分析及提示词为本站原创，非作者原始提示词或制作参数，未逐条生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "从官方公开媒体提取分散样本及相邻时间点接触表，逐图比较；未声称完整观看全片。",
+        "ranges": [
+          "00:32–00:35",
+          "00:53–00:56"
+        ],
+        "observations": [
+          "居室宽景维持前后角色与沙发位置，姿态和视线以较小幅度变化，场景承担生活尺度。",
+          "卧室近景中角色略微偏转头部和视线，随后切换为较高观察角度；动作集中于脸与上身，冷色室内光照延续。"
+        ],
+        "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-chromatic-dance-metamorphosis",
+      "reference": {
+        "title": "After Light",
+        "creator": "Vallée Duhamel（Julien Vallée / Eve Duhamel）",
+        "url": "https://valleeduhamel.com/portfolio-item/afterlight/",
+        "type": "hybrid",
+        "note": "作者及 Runway 官方访谈说明：以既有和新拍的舞者实拍素材为基础，结合 Runway、其他生成工具、NeRF 与传统合成反复筛选和修整。这里研究其身体与材质的动画语言，不标成纯文生视频。",
+        "recognition": "Runway 官方客户专题及 Runway Watch 公开展映作品；收录基于可核实的创作过程与完整短片，不声称获奖。"
+      },
+      "sources": [
+        {
+          "title": "作者官方作品与演职员表",
+          "url": "https://valleeduhamel.com/portfolio-item/afterlight/",
+          "note": "列出创作导演、舞者、剪辑VFX和摄影人员，确立作品与作者。"
+        },
+        {
+          "title": "Runway 官方制作访谈",
+          "url": "https://runway.com/customers/vallee-duhamel",
+          "note": "Julien Vallée说明实拍、生成内容与After Effects合成的组合及大量挑选重做。"
+        },
+        {
+          "title": "Runway 官方播放源",
+          "url": "https://www.youtube.com/watch?v=SX4Bqmm-pYI",
+          "note": "官方频道完整After Light视频；核看全片接触表及相邻动作样本。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-chromatic-dance-metamorphosis/01.jpg",
+          "seconds": 15,
+          "time": "00:15.000",
+          "sha256": "a381f2dde92497ee6d58b494b4337d1fb7992bf9aa78b406a61a311414be3d4e",
+          "caption": "饱满的身体轮廓向画面两侧伸展，青色与紫红照明把包覆形体和漂浮物分成前后层，触感介于布、雕塑和皮肤之间。",
+          "credit": "© Vallée Duhamel（Julien Vallée / Eve Duhamel） · After Light",
+          "mediaUrl": "https://www.youtube.com/watch?v=SX4Bqmm-pYI",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        },
+        {
+          "src": "assets/img/video/video-chromatic-dance-metamorphosis/02.jpg",
+          "seconds": 56,
+          "time": "00:56.000",
+          "sha256": "4fe3e5f5c5f51c59e493a76ecd1689512a82d40946d6a4686eb91255104d337e",
+          "caption": "舞者在粉红与青蓝交界处伸展，轮廓从有体积的身体逐渐进入柔软空气；抬臂与倾身仍然保留表演的方向和张力。",
+          "credit": "© Vallée Duhamel（Julien Vallée / Eve Duhamel） · After Light",
+          "mediaUrl": "https://www.youtube.com/watch?v=SX4Bqmm-pYI",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保留两张用于具体视觉评论的参考截帧；版权归原权利人，不随本站代码按 MIT 授权，不分发原视频。提示词为本站原创分析，未模型实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "checkedAt": "2026-10-13",
+      "motionEvidence": {
+        "method": "完整片均匀采样，并对两段以间隔0.4秒的连续样本检查姿态与材质变化。",
+        "mediaUrl": "https://www.youtube.com/watch?v=SX4Bqmm-pYI",
+        "sampledSeconds": [
+          15,
+          15.4,
+          15.8,
+          16.2,
+          16.6,
+          17,
+          56,
+          56.4,
+          56.8,
+          57.2,
+          57.6,
+          58
+        ],
+        "observations": "悬浮形体的伸展姿态经过材质变化与动作匹配连接到落地肢体；粉蓝舞者由张开手臂进入扭转和侧向重心转换，随后切到移动交通工具。不是仅凭两张静帧推测运动。"
+      }
+    },
+    {
+      "id": "video-cel-alien-ecology",
+      "reference": {
+        "title": "Migration",
+        "creator": "Jeremy Higgins / Runway Studios；编剧与 AI 动画 Evan Johnson",
+        "url": "https://runway.com/customers/behind-the-scenes-of-migration-with-director-jeremy-higgins",
+        "type": "hybrid",
+        "note": "Runway 官方明确记录传统 cel 角色动画、生成背景、Gen-3 Alpha 背景动画及人工接触阴影合成；最终没有采用纸面打印再扫描方案。参考画面改用官方公开成片，呈现两种制作方法融合后的效果。",
+        "recognition": "Runway Hundred Film Fund 首个公开发布项目，2024 年由 Runway Studios 展示；不声称获得动画奖项。"
+      },
+      "sources": [
+        {
+          "title": "Runway 官方 Migration 制作拆解",
+          "url": "https://runway.com/customers/behind-the-scenes-of-migration-with-director-jeremy-higgins",
+          "note": "核实人工角色动画、生成环境与 Gen-3 Alpha、接触阴影合成、弃用纸面扫描的决定及公开示例媒体。"
+        },
+        {
+          "title": "Runway Studios 官方片目",
+          "url": "https://runway.com/studios",
+          "note": "列明 Migration、导演 Jeremy Higgins、年份 2024 及 Hundred Film Fund 分类。"
+        },
+        {
+          "title": "Migration · 官方公开成片",
+          "url": "https://www.youtube.com/watch?v=A5-PLKYOEaw",
+          "note": "Runway Studios 官网链接的影片；用于本条两张参考帧与动作核查。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-cel-alien-ecology/01.jpg",
+          "time": "00:20.200",
+          "caption": "浅色防护服的轮廓、点状眼睛和大片平涂，与粉红草束的细密纤维形成反差；手里的青色小生物、手部接触和角色投影，使简洁图形进入丰富的异星空间。",
+          "credit": "© Jeremy Higgins / Runway Studios · Migration",
+          "mediaUrl": "https://www.youtube.com/watch?v=A5-PLKYOEaw",
+          "captureKind": "video-frame",
+          "sha256": "29e08d3b6b848099d31cc74e613f694c223380e56e1013112e55426340f4d51a",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "seconds": 20.2,
+          "captureMethod": "Runway Studios 官网链接的公开 YouTube 成片抽帧，完整画面等比例缩至 960 像素宽。"
+        },
+        {
+          "src": "assets/img/video/video-cel-alien-ecology/02.jpg",
+          "time": "00:53.900",
+          "caption": "粉红线描生物带着幼体停在岩石与花丛之间，天空飘落的白色颗粒划分景深；黄色花面、蓝灰草叶和灰色岩面各有密度，角色仍维持平涂的清晰轮廓。",
+          "credit": "© Jeremy Higgins / Runway Studios · Migration",
+          "mediaUrl": "https://www.youtube.com/watch?v=A5-PLKYOEaw",
+          "captureKind": "video-frame",
+          "sha256": "5ec7b08bb02ea49ff41daa6ee87fe11e4a0724d9e590c9a14aa9e7049bb6a39e",
+          "copyright": "原作品及参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "seconds": 53.9,
+          "captureMethod": "Runway Studios 官网链接的公开 YouTube 成片抽帧，完整画面等比例缩至 960 像素宽。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "basis": "每部仅保留两张缩小参考画面，用于具体美术、动作和制作方法评论；没有声明获得开放许可。",
+        "imageLicense": "参考画面版权归原权利人，不适用本站 MIT 许可。",
+        "distribution": "不随仓库分发完整影片。",
+        "promptAuthorship": "中文母提示词为本站原创风格归纳，不是原作者提示词，未做模型生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "检查官方成片概览接触表，并以连续顺序帧核查角色操作、步行和生物场景；另对照官方动画合成拆解。",
+        "sourceUrl": "https://www.youtube.com/watch?v=A5-PLKYOEaw",
+        "reviewedRanges": [
+          "00:17–00:32",
+          "00:45–01:00",
+          "全片 00:00–01:50 概览抽样"
+        ],
+        "observed": "白衣角色把小生物放回草中，步行至方形舱室后坐下操作控制台；后续涉水观察、抬起摄影器材。粉红生物与幼体在多处生态环境中移动，环境纹理与角色线条分别保持自身密度。",
+        "limits": "以顺序抽帧检查动作和画面，不评价音轨，也不把较稀疏的全片概览等同逐帧动画质量审计。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-ausencia-animation",
+      "reference": {
+        "title": "Ausencia",
+        "creator": "Javier de la Chica / Guillermo Miranda · Contanimation",
+        "url": "https://www.contanimation.com/originals/",
+        "type": "ai",
+        "note": "作者官网将Ausencia列为AI短片，并公布Runway、Act Two、Freepik、Nano Banana、ElevenLabs等参与工具；作者Devpost说明其anireal视觉将卡通比例与电影质感结合。参考的是动画造型和表演气质。",
+        "recognition": "Runway GEN:48 官方历届获奖页面将Ausencia列为People’s Choice Honoree；作者的Chroma参赛页记录Title Sponsor一等奖。"
+      },
+      "sources": [
+        {
+          "title": "Contanimation 官方作品与工具说明",
+          "url": "https://www.contanimation.com/originals/",
+          "note": "作品条目直接列出AI short film及工具表；指向本次使用的重制公开影片。"
+        },
+        {
+          "title": "作者提交的Ausencia制作说明",
+          "url": "https://devpost.com/software/ausencia",
+          "note": "作者解释anireal风格、AI表演和重制版；记录Chroma Title Sponsor第一名。"
+        },
+        {
+          "title": "Runway GEN:48 官方获奖记录",
+          "url": "https://runway.com/gen48",
+          "note": "Ausencia列为People’s Choice Honoree，作者两人署名。"
+        },
+        {
+          "title": "作者公开影片",
+          "url": "https://www.youtube.com/watch?v=zj_KFNmce7c",
+          "note": "作者官网播放入口；时间对应本版公开视频。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-ausencia-animation/01.jpg",
+          "time": "01:55.000",
+          "caption": "拉长的鼻梁和大眼窝配合细皱纹与微弱眼周红色，角色的卡通比例与成熟表情并存；柔和背景让注意力落在眼神和嘴角。",
+          "credit": "© Javier de la Chica / Guillermo Miranda · Contanimation · Ausencia",
+          "mediaUrl": "https://www.youtube.com/watch?v=zj_KFNmce7c",
+          "captureKind": "video-frame",
+          "seconds": 115,
+          "sha256": "8373bd3f1a9f639b9dc33cc1bde8e078cb77678ca3bcde589ddb8d7591f92750",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        },
+        {
+          "src": "assets/img/video/video-ausencia-animation/02.jpg",
+          "time": "03:15.000",
+          "caption": "红色侧光掠过墙面线脚与地板，蓝门位于透视尽头，门缝亮边明确了光源位置；这是让色彩参与空间叙事的例子。",
+          "credit": "© Javier de la Chica / Guillermo Miranda · Contanimation · Ausencia",
+          "mediaUrl": "https://www.youtube.com/watch?v=zj_KFNmce7c",
+          "captureKind": "video-frame",
+          "seconds": 195,
+          "sha256": "e3625a48dfdaa1456cbf4b71395835f71224c28a161ee5b9f0db98e3a8af02fc",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。保留完整视频矩形及片内字幕（若有），没有播放器UI。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "每部作品仅保留两张有限尺寸参考画面，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站MIT许可。分析及提示词为本站原创，非作者原始提示词或制作参数，未逐条生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "从官方公开媒体提取分散样本及相邻时间点接触表，逐图比较；未声称完整观看全片。",
+        "ranges": [
+          "01:53–01:56",
+          "03:12–03:15"
+        ],
+        "observations": [
+          "肖像画切至对话人物，面部有可辨认的口形和情绪变化，固定的长鼻及眼部比例保持延续。",
+          "红蓝光下的人物转向后切至走廊，门的空间关系与光源方向承担情绪连接。"
+        ],
+        "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
+      },
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "id": "video-liquid-museum-animation",
+      "reference": {
+        "title": "Jacques — Absolve",
+        "creator": "Paul Trillo / Jacques / Voir Pictures",
+        "url": "https://www.thecvf-art.com/project.php?artist=paul-trillo&year=2024",
+        "type": "hybrid",
+        "note": "CVPR 2024 Art Gallery 的作者项目说明明确介绍传统 VFX 与 AI 的混合流程，并嵌入 Jacques 官方完整 MV；作品以卢浮宫实景、绘画与生成变化结合，不标成纯 AI 制作。",
+        "recognition": "CVPR 2024 Art Gallery 展示作品；Jacques 官方发行音乐影像。展览入选与制作公司其他获奖记录不混写。"
+      },
+      "sources": [
+        {
+          "title": "CVPR Art Gallery 作者作品与创作说明",
+          "url": "https://www.thecvf-art.com/project.php?artist=paul-trillo&year=2024",
+          "note": "作者说明明确写明traditional VFX与AI techniques混合；展览页附完整作品。"
+        },
+        {
+          "title": "Jacques 官方完整音乐影像",
+          "url": "https://www.youtube.com/watch?v=BwZkIEQDj10",
+          "note": "音乐人官方频道发布；导演Paul Trillo、制作Voir Pictures等字幕与描述可核对。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-liquid-museum-animation/01.jpg",
+          "seconds": 155,
+          "time": "02:35.000",
+          "sha256": "411d1b48b083fa92c1a10da159d3fd76c1155d9f5eefeb7002475c477e85061f",
+          "caption": "古典绘画面孔的龟裂和明暗层次被保留，透明泪滴沿下眼睑产生可读体积；重点是从绘画结构内部引出运动。",
+          "credit": "© Paul Trillo / Jacques / Voir Pictures · Jacques — Absolve",
+          "mediaUrl": "https://www.youtube.com/watch?v=BwZkIEQDj10",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        },
+        {
+          "src": "assets/img/video/video-liquid-museum-animation/02.jpg",
+          "seconds": 218,
+          "time": "03:38.000",
+          "sha256": "8b70d674a11f410d1ca76de8e6f1f6331879d7d210d3c4d9fa152309a6a3c17a",
+          "caption": "馆厅中巨大的半透明液滴与地面颜料形成上下呼应；走廊透视和画框维持秩序，使液体呈现具有尺度与重量的空间雕塑。",
+          "credit": "© Paul Trillo / Jacques / Voir Pictures · Jacques — Absolve",
+          "mediaUrl": "https://www.youtube.com/watch?v=BwZkIEQDj10",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保留两张用于具体视觉评论的参考截帧；版权归原权利人，不随本站代码按 MIT 授权，不分发原视频。提示词为本站原创分析，未模型实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "checkedAt": "2026-10-13",
+      "motionEvidence": {
+        "method": "先均匀采样完整音乐影像，再按相邻时间样本检查绘画局部与空间流体段落。",
+        "mediaUrl": "https://www.youtube.com/watch?v=BwZkIEQDj10",
+        "sampledSeconds": [
+          155,
+          155.4,
+          155.8,
+          156.2,
+          156.6,
+          157,
+          218,
+          218.4,
+          218.8,
+          219.2,
+          219.6,
+          220
+        ],
+        "observations": "古典面孔保持裂纹位置，眼部与泪滴连续变化后切镜；对称馆厅内的悬浮液滴和地面颜料具有独立流动，透视保持稳定。"
+      }
+    },
+    {
+      "id": "video-cutout-posthuman",
+      "reference": {
+        "title": "Do The Evolution",
+        "creator": "Ricardo Villavicencio / Runway Studios",
+        "url": "https://ricardovillavicencio.com/type/animation/do-the-evolution/",
+        "type": "hybrid",
+        "note": "作者官方项目页标注 2D Animation, AI，并分别列出 AI Illustration、AI Animation、角色动画与合成职责；据此按传统动画与 AI 混合制作收录。并非同名 Pearl Jam 动画 MV。",
+        "recognition": "Runway Studios 委托并公开发行的 2023 年动画短片，收录于 Runway Watch Animation Worldwide；不声称获得电影节奖项。"
+      },
+      "sources": [
+        {
+          "title": "作者官方项目页",
+          "url": "https://ricardovillavicencio.com/type/animation/do-the-evolution/",
+          "note": "明确列出AI插画、AI动画及传统角色动画和合成团队；正文说明Runway提供制作资助。"
+        },
+        {
+          "title": "Runway Studios 官方完整短片",
+          "url": "https://www.youtube.com/watch?v=VdMgPgicvK4",
+          "note": "Runway频道发布，标题及简介确认作者与AI参与；本次解码核看全片接触表与所选段落。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-cutout-posthuman/01.jpg",
+          "seconds": 85,
+          "time": "01:25.000",
+          "sha256": "7bed1acda30e4f0dd6fd09d0a77c4dd16404d7ddc595e5d28eb01115135de487",
+          "caption": "暖黄色角色的大眼与不规则刻痕被压在稳定的胸廓和关节轮廓内，蓝色背景留出大面积低细节区域，显出印刷拼贴的质感。",
+          "credit": "© Ricardo Villavicencio / Runway Studios · Do The Evolution",
+          "mediaUrl": "https://www.youtube.com/watch?v=VdMgPgicvK4",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        },
+        {
+          "src": "assets/img/video/video-cutout-posthuman/02.jpg",
+          "seconds": 225,
+          "time": "03:45.000",
+          "sha256": "8697765c50323173e08029fee0526c0e24916ef4611d6b827262490516fe140b",
+          "caption": "红色弧形生物从平面森林和灰岩前弯下头部，微小人形提供尺度；强烈红绿对照与层叠遮挡使奇境仍有明确行动空间。",
+          "credit": "© Ricardo Villavicencio / Runway Studios · Do The Evolution",
+          "mediaUrl": "https://www.youtube.com/watch?v=VdMgPgicvK4",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保留两张用于具体视觉评论的参考截帧；版权归原权利人，不随本站代码按 MIT 授权，不分发原视频。提示词为本站原创分析，未模型实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "checkedAt": "2026-10-13",
+      "motionEvidence": {
+        "method": "官方完整视频按全片均匀采样筛选，再以相邻时间样本复核动作；分析接触表仅存临时目录。",
+        "mediaUrl": "https://www.youtube.com/watch?v=VdMgPgicvK4",
+        "sampledSeconds": [
+          85,
+          85.4,
+          85.8,
+          86.2,
+          86.6,
+          87,
+          225,
+          225.4,
+          225.8,
+          226.2,
+          226.6,
+          227
+        ],
+        "observations": "近景维持角色眼部与刻痕身份，红色长形生物的低头姿势后接高速陨落段落；全片接触表还显示林间侧向行进和分层遮挡。停顿与突发动作形成节奏差。"
+      }
+    },
+    {
+      "id": "video-neon-comic-collage",
+      "reference": {
+        "title": "To Eat or Not To Eat",
+        "creator": "Ruby Nian / Ring Hyacinth（海辛）",
+        "url": "https://www.hyacinth.im/works/movie",
+        "type": "ai",
+        "note": "联合作者官方页面明确称本作为 Gen48 创作的实验动画，全部 footage 由 AI 生成；页面列出 Runway、ComfyUI，并说明入选 Runway TV 动画单元。人工组织、剪辑与声音不因此被排除。",
+        "recognition": "Runway Watch Animation Worldwide 收录；作者页面确认参加 Gen48。没有将参赛或收录写成获奖。"
+      },
+      "sources": [
+        {
+          "title": "联合作者官方实验短片项目页",
+          "url": "https://www.hyacinth.im/works/movie",
+          "note": "明确记述To Eat or Not To Eat全部footage由AI生成，以及Gen48和Runway TV动画单元背景。"
+        },
+        {
+          "title": "Runway 官方完整视频",
+          "url": "https://www.youtube.com/watch?v=zD7pc2nnKj4",
+          "note": "片名及作者由Runway官方频道列明；用于逐帧核对与两张有限截帧。"
+        },
+        {
+          "title": "RubyNian 官方经历",
+          "url": "https://rubynian.cargo.site/about",
+          "note": "列出本片2023 Runway TV Animation WorldWide收录，与联合作者页互证。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-neon-comic-collage/01.jpg",
+          "seconds": 12,
+          "time": "00:12.000",
+          "sha256": "b58da81d19de1af2878e430063ba8fd8fcdbdc1917f0d50ee2375591e3de00cf",
+          "caption": "亮黄脸、黑色面具块、立体眼球与三角鼻形成鲜明图形层级；饼干的真实纹理与平涂头部对撞，画面边缘保留原作的胶片式刻度。",
+          "credit": "© Ruby Nian / Ring Hyacinth（海辛） · To Eat or Not To Eat",
+          "mediaUrl": "https://www.youtube.com/watch?v=zD7pc2nnKj4",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        },
+        {
+          "src": "assets/img/video/video-neon-comic-collage/02.jpg",
+          "seconds": 69,
+          "time": "01:09.000",
+          "sha256": "2282751133597b8cc7388fd4427ab0abee8cc608165a96b8e673c684bde678a2",
+          "caption": "细长荧光角色侧向奔跑，黑色留白让弯曲膝部、脚底接触和飘动丝线更易读；轮廓夸张仍需要稳定的身体节奏。",
+          "credit": "© Ruby Nian / Ring Hyacinth（海辛） · To Eat or Not To Eat",
+          "mediaUrl": "https://www.youtube.com/watch?v=zD7pc2nnKj4",
+          "captureKind": "video-frame",
+          "copyright": "原作与参考截帧版权归原权利人；仅供少量画面评论，不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放源定位到所记时间，用 FFmpeg 解码单帧；保留完整源画面及片内文字，等比例缩至 960 像素宽，无重绘或补帧。"
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "仅保留两张用于具体视觉评论的参考截帧；版权归原权利人，不随本站代码按 MIT 授权，不分发原视频。提示词为本站原创分析，未模型实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "checkedAt": "2026-10-13",
+      "motionEvidence": {
+        "method": "全片均匀采样后，按相邻时间点复核拼贴表情与奔跑段落。",
+        "mediaUrl": "https://www.youtube.com/watch?v=zD7pc2nnKj4",
+        "sampledSeconds": [
+          12,
+          12.4,
+          12.8,
+          13.2,
+          13.6,
+          14,
+          69,
+          69.4,
+          69.8,
+          70.2,
+          70.6,
+          71
+        ],
+        "observations": "荧光拼贴头部的眼口细微变化后转为红底符号脸；侧面跑动连续显示摆臂、屈膝、落脚和丝线摆动。全片结构包含平面与体积段落交替。"
+      }
+    },
+    {
+      "id": "video-well-animation",
+      "reference": {
+        "title": "THE WELL",
+        "creator": "Dorian & Daniel（Dorian Lebherz / Daniel Titz）",
+        "url": "https://www.whatif.film/",
+        "type": "ai",
+        "note": "导演合作工作室WHAT IF的公开作品页以AI制作为定位并提供THE WELL官方播放器；Runway AIF与GIFF官方将其列为AI叙事短片。此条参考的是拟人动物角色电影，不宣称掌握逐镜头模型参数。",
+        "recognition": "Runway AIF 2026 Gold；GIFF 2026官方特别展映资料另列导演、编剧和制作署名。"
+      },
+      "sources": [
+        {
+          "title": "Runway AIF 2026 官方获奖页",
+          "url": "https://aif.runwayml.com/",
+          "note": "THE WELL列为Gold，导演Dorian & Daniel。"
+        },
+        {
+          "title": "WHAT IF 官方工作室作品页",
+          "url": "https://www.whatif.film/",
+          "note": "AI film production工作室，直接列THE WELL及官方Vimeo播放器。"
+        },
+        {
+          "title": "GIFF 2026 官方展映与制作资料",
+          "url": "https://giff.mx/epicentro-2026/",
+          "note": "将影片列为AI generative narrative，确认导演与编剧署名。"
+        },
+        {
+          "title": "工作室嵌入的官方公开视频",
+          "url": "https://player.vimeo.com/video/1195915021?h=e678b5374d",
+          "note": "从WHAT IF作品页直接观察到的播放器地址，用于取两帧和连续画面比较。"
+        }
+      ],
+      "frames": [
+        {
+          "src": "assets/img/video/video-well-animation/01.jpg",
+          "time": "00:40.000",
+          "caption": "长耳角色与后方猫科角色处在同一灰蓝空气中，服装和毛流具有不同粗糙度，局部红光沿面部掠过；物种特征与成熟电影表演同时成立。",
+          "credit": "© Dorian & Daniel（Dorian Lebherz / Daniel Titz） · THE WELL",
+          "mediaUrl": "https://player.vimeo.com/video/1195915021?h=e678b5374d",
+          "captureKind": "video-frame",
+          "seconds": 40,
+          "sha256": "f289f66e14f3cfb7b460a8f2c788e7fd93213924b32ff4c0a4257a646c51f0a9",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。仅裁去原视频上下黑边，保留完整有效画面。",
+          "crop": {
+            "x": 0,
+            "y": 90,
+            "width": 1280,
+            "height": 540,
+            "sourceWidth": 1280,
+            "sourceHeight": 720
+          }
+        },
+        {
+          "src": "assets/img/video/video-well-animation/02.jpg",
+          "time": "02:20.000",
+          "caption": "两位动物角色分处办公室桌前，灰绿墙面、相片与暖台灯建立生活尺度；环境宽景把冷色气氛落实到具体空间关系。",
+          "credit": "© Dorian & Daniel（Dorian Lebherz / Daniel Titz） · THE WELL",
+          "mediaUrl": "https://player.vimeo.com/video/1195915021?h=e678b5374d",
+          "captureKind": "video-frame",
+          "seconds": 140,
+          "sha256": "41f3cec61114c572ae362333f155b9596fc5247f6274d2aec51e7f6abc0fa3b4",
+          "copyright": "参考画面版权归原权利人；不适用本站 MIT 许可。",
+          "captureMethod": "从官方公开播放器对应媒体按指定秒数用ffmpeg提取单帧，等比例缩至960像素宽。仅裁去原视频上下黑边，保留完整有效画面。",
+          "crop": {
+            "x": 0,
+            "y": 90,
+            "width": 1280,
+            "height": 540,
+            "sourceWidth": 1280,
+            "sourceHeight": 720
+          }
+        }
+      ],
+      "rights": {
+        "status": "copyright-retained-editorial-reference",
+        "openLicenseFound": false,
+        "permissionClaim": false,
+        "note": "每部作品仅保留两张有限尺寸参考画面，用于逐图、有针对性的视觉评论；原片不进入仓库。图片版权保留，不纳入本站MIT许可。分析及提示词为本站原创，非作者原始提示词或制作参数，未逐条生成实测。"
+      },
+      "selectionBatch": "ai-animation-20261013",
+      "motionEvidence": {
+        "method": "从官方公开媒体提取分散样本及相邻时间点接触表，逐图比较；未声称完整观看全片。",
+        "ranges": [
+          "00:38–00:41",
+          "02:18–02:21"
+        ],
+        "observations": [
+          "外景从居民反应切至动物角色近景再到环境俯视，光色和服装保持连续，视线方向清楚。",
+          "办公室宽景中角色有细微姿态变化，随后进入面部近景；动作节制，耳部和口吻保持物种结构。"
+        ],
+        "limits": "只核对列出的片段和相邻帧；连续性、动作物理和摄影规则为本站原创生成建议，不声称了解作者未公开的内部参数。"
+      },
+      "checkedAt": "2026-10-13"
+    },
     {
       "id": "video-eastern-myth-cinema",
       "reference": {
