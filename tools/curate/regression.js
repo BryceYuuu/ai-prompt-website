@@ -69,7 +69,7 @@ const mutations={
 };
 let applied=false;
 function code(src){src=src.split('?')[0];let s=fs.readFileSync(path.join(root,src),'utf8');if(mutant&&mutations[mutant][0]===path.basename(src)){let [,a,b]=mutations[mutant];assert(s.includes(a),'missing mutation anchor '+mutant);s=s.replace(a,b);applied=true;}return s;}
-const html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/<script src="(assets\/js\/[^\"]+)"><\/script>/g,(_,src)=>'<script>'+code(src)+'</script>');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8').replace(/<meta name="hf-video-data" content="(assets\/js\/data-video\.js[^"]*)"[^>]*>/,(_,src)=>'<script>'+code(src)+'</script>').replace(/<script src="(assets\/js\/[^\"]+)"><\/script>/g,(_,src)=>'<script>'+code(src)+'</script>');
 // Each session owns its storage, clipboard and errors: reload tests must not pass
 // by accidentally keeping the previous page's in-memory collection or drafts.
 function session(options={}) {

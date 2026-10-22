@@ -711,15 +711,20 @@
   function heroHTML() {
     var list = heroStyles();
     var plate = list.find(function (s) { return s.id === state.heroPlateId; }) || list[0];
+    var taskCount = STYLES.filter(function (s) { return s.category !== 'image'; }).length;
     return '<section class="hero"><div class="wrap hero__grid">' +
-      '<div class="hero__intro"><p class="hero__eyebrow"><i></i> A SMALL STUDIO FOR BIG IDEAS</p>' +
+      '<div class="hero__intro"><p class="hero__eyebrow"><i></i>书桐 · 中文 AI 提示词工作室</p>' +
       '<h1 class="hero__title">好想法，<br>换个<span>新模样。</span></h1>' +
-      '<p class="hero__sub">把照片变成手办，把日常变成灵感。<br>挑一种风格，带着提示词开始创作。</p>' +
+      '<p class="hero__sub">图片、视频与日常任务，都从一个好风格开始。<br>每一条保留来源，可填写、可复制、可收藏。</p>' +
       '<form class="hero__search" data-action="search-submit"><div class="searchbox">' + ICON.search +
         '<input type="search" name="q" placeholder="想把照片变成什么？" aria-label="搜索图片风格"><button class="btn btn--primary" type="submit">寻找灵感' + ICON.arrowRight + '</button></div></form>' +
       '<div class="hero__quick"><span>试试看</span>' + ['手办','针织','像素','海报'].map(function(q){return '<a href="#/library?cat=image&q=' + encodeURIComponent(q) + '">' + q + '</a>';}).join('') + '</div>' +
-      '<div class="hero__caption"><span><b>' + imageStyles().length + '</b> 种图片风格</span><span>免登录 · 可填写 · 可收藏</span></div></div>' +
-      '<div class="hero__visual"><div class="hero__visual-label"><span>STYLE SPOTLIGHT / ' + list.length + '款精选</span><span>拖动探索 ↔</span></div>' +
+      '<div class="hero__stats">' +
+        '<a href="#/library?cat=image"><b>' + imageStyles().length + '</b><span>图片风格</span></a>' +
+        '<a href="#/video"><b>' + videoCount() + '</b><span>视频风格</span></a>' +
+        '<a href="#/library?track=text"><b>' + taskCount + '</b><span>场景任务</span></a>' +
+      '</div></div>' +
+      '<div class="hero__visual"><div class="hero__visual-label"><span>编辑精选 · ' + list.length + ' 款图片风格</span><span>拖动探索 ↔</span></div>' +
       '<a class="hero__plate" href="#/style/' + esc(plate.id) + '">' + heroPlateInner(plate) + '</a>' +
       '<div class="hero__playbar">' + heroIndexHTML(plate) + '<div class="hero__controls"><button type="button" class="hero__arrow" data-action="hero-prev" aria-label="上一张风格">' + ICON.arrowLeft + '</button>' +
       '<button type="button" class="hero__autoplay" data-action="hero-autoplay">暂停轮播</button><button type="button" class="hero__arrow" data-action="hero-next" aria-label="下一张风格">' + ICON.arrowRight + '</button></div></div></div></div></section>';
@@ -749,8 +754,64 @@
     '</section>';
   }
 
+  /* 视频数据按需加载：加载前从 index.html 的 meta 提示读数量，首页数字不必等 110 KB 的目录。 */
+  function videoCount() {
+    if (window.HFVideo && window.HFVideo.ready()) return window.HF_VIDEO_STYLES.length;
+    var hint = document.querySelector('meta[data-video-data]');
+    return Number(hint && hint.getAttribute('data-count')) || 0;
+  }
+
+  function motionRailHTML() {
+    var cards = window.HFVideo ? window.HFVideo.teaser() : '';
+    return cards || new Array(7).join('<span class="home-motion__card home-motion__card--ghost" aria-hidden="true"><span class="home-motion__image"></span><span class="home-motion__meta"></span><strong></strong></span>');
+  }
+
+  function motionHTML() {
+    return '<section class="home-motion" aria-labelledby="home-motion-title"><div class="wrap">' +
+      '<div class="home-motion__head reveal"><div><span class="eyebrow">MOTION STUDIES · 视频风格</span><h2 id="home-motion-title">让画面，<br>有自己的运动方式。</h2></div>' +
+        '<div class="home-motion__side"><p>从 AI 短片与动画作品里，拆解材质、运镜和动作规律。<br>每种风格都有完整版和精简版提示词，可直接复制。</p>' +
+        '<a class="btn btn--lime btn--sm" href="#/video">浏览全部 ' + videoCount() + ' 种 ' + ICON.arrowRight + '</a></div></div>' +
+      '<div class="home-motion__rail" id="home-motion-rail" aria-busy="' + (window.HFVideo && window.HFVideo.ready() ? 'false' : 'true') + '">' + motionRailHTML() + '</div>' +
+    '</div></section>';
+  }
+
+  function tasksHTML() {
+    var cats = CATS.filter(function (c) { return c.key !== 'image'; });
+    return '<section class="home-tasks wrap" aria-labelledby="home-tasks-title">' +
+      '<div class="home-tasks__head reveal"><div><span class="eyebrow">SCENE PROMPTS · 场景提示词</span><h2 id="home-tasks-title">日常的活儿，<br>也有好用的起点。</h2></div>' +
+        '<a class="btn btn--ghost btn--sm" href="#/library?track=text">全部 ' + STYLES.filter(function (s) { return s.category !== 'image'; }).length + ' 个任务 ' + ICON.arrowRight + '</a></div>' +
+      '<div class="home-tasks__grid">' + cats.map(function (c, i) {
+        var items = STYLES.filter(function (s) { return s.category === c.key; });
+        return '<a class="home-task home-task--' + esc(c.key) + ' reveal" href="#/library?cat=' + encodeURIComponent(c.key) + '">' +
+          '<span class="home-task__top"><span class="home-task__no">' + pad2(i + 1) + '</span><span class="home-task__n">' + items.length + ' 个任务</span></span>' +
+          '<strong>' + esc(c.name) + '</strong><span class="home-task__desc">' + esc(c.desc) + '</span>' +
+          '<span class="home-task__list">' + items.slice(0, 3).map(function (s) { return '<span>' + esc(s.name) + '</span>'; }).join('') + '</span>' +
+          '<span class="home-task__go">' + ICON.arrowRight + '</span></a>';
+      }).join('') + '</div></section>';
+  }
+
+  function fillMotionRail() {
+    var rail = $('#home-motion-rail');
+    if (!rail || !window.HFVideo) return;
+    if (!window.HFVideo.ready()) {
+      rail.innerHTML = '<p class="home-motion__fallback">视频预览暂时没有加载出来。<a href="#/video">进入视频风格 →</a></p>';
+      rail.setAttribute('aria-busy', 'false');
+      return;
+    }
+    rail.innerHTML = window.HFVideo.teaser();
+    rail.setAttribute('aria-busy', 'false');
+  }
+
+  /* 首页在空闲时再取视频目录：首屏只等图片数据，下方视频带随后补齐。 */
+  function idleLoadVideo() {
+    if (!window.HFVideo || window.HFVideo.ready()) return;
+    var start = function () { window.HFVideo.load(); };
+    if (typeof window.requestIdleCallback === 'function') window.requestIdleCallback(start, { timeout: 2500 });
+    else setTimeout(start, 900);
+  }
+
   function homeView() {
-    return heroHTML() + catalogueHTML() + studioBannerHTML();
+    return heroHTML() + catalogueHTML() + motionHTML() + tasksHTML() + studioBannerHTML();
   }
 
   /* =========================================================== library == */
@@ -1539,6 +1600,7 @@
 
   function paletteOpen() {
     $('#palette').classList.add('is-open');
+    if (window.HFVideo) window.HFVideo.load();
     var input = $('#palette-input');
     input.value = '';
     paletteCursor = 0;
@@ -1618,7 +1680,8 @@
     $('#view').innerHTML = html;
     if (window.HFVideo) window.HFVideo.mount($('#view'), { navigate: navigate, copyText: copyText, downloadText: downloadText });
     var heading = $('#view h1');
-    document.title = (route.path !== '/' && heading ? heading.textContent.trim() + ' · ' : '') + '提示词网站 · 书桐 SHUTONG';
+    document.title = route.path !== '/' && heading ? heading.textContent.trim() + ' · 书桐 SHUTONG' : '书桐 SHUTONG · 中文 AI 提示词网站';
+    if (route.path === '/') idleLoadVideo();
 
     $$('.mobilenav a').forEach(function (a) {
       var activeHref = route.path === '/library' ? (state.filters.saved === '1' ? '#/library?saved=1' : ((state.filters.cat === 'image' || state.filters.track === 'both' || state.filters.group) ? '#/' : '#/library?track=text')) : (route.path.indexOf('/video/') === 0 ? '#/video' : '#' + route.path);
@@ -2261,16 +2324,28 @@
 
      手写的另一个后果是静默落后：加一个分类，头图和分类条会跟着变（它们读 CATS），
      页脚不会。`index.html` 里那三行留着当无 JS 兜底，这里整块覆盖。 */
+  /* 视频目录到达后只更新受影响的部分：首页补齐视频带，视频路由整页重绘，搜索面板刷新结果。 */
+  function onVideoReady() {
+    var route = parseHash();
+    if (route.path === '/') fillMotionRail();
+    else if (route.path === '/video' || route.path.indexOf('/video/') === 0) render();
+    var palette = $('#palette');
+    if (palette && palette.classList.contains('is-open')) paletteRender($('#palette-input').value);
+  }
+
   function renderFooterCats() {
     var box = document.getElementById('foot-cats');
     if (!box) return;
-    box.innerHTML = '<div class="footer__col-title">分类</div>' +
-      CATS.map(function (c) {
-        return '<a class="footer__link" href="#/library?cat=' + encodeURIComponent(c.key) + '">' +
-          esc(c.name) + '</a>';
-      }).join('') +
-      '<a class="footer__link" href="#/video">视频风格</a>' +
-      '<a class="footer__link" href="#/library">全部提示词</a>';
+    var col = function (title, links) {
+      return '<div><div class="footer__col-title">' + esc(title) + '</div>' + links.map(function (l) {
+        return '<a class="footer__link" href="' + esc(l[0]) + '"' + (l[2] ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' + esc(l[1]) + '</a>';
+      }).join('') + '</div>';
+    };
+    box.innerHTML =
+      col('图片风格', TAXONOMY.imageGroups.map(function (g) { return ['#/library?cat=image&group=' + encodeURIComponent(g.key), g.name]; }).concat([['#/library?cat=image', '全部图片风格']])) +
+      col('视频风格', [['#/video?type=ai', 'AI 视频'], ['#/video?type=hybrid', 'AI 混合制作'], ['#/video?type=animation', '动画参考'], ['#/video', '全部视频风格']]) +
+      col('场景任务', CATS.filter(function (c) { return c.key !== 'image'; }).map(function (c) { return ['#/library?cat=' + encodeURIComponent(c.key), c.name]; }).concat([['#/library?track=text', '全部场景任务']])) +
+      col('关于书桐', [['#/about', '使用说明与素材来源'], ['#/library?saved=1', '我的收藏'], ['https://github.com/BryceYuuu/ai-prompt-website', 'GitHub 开源仓库', true]]);
   }
 
   function boot() {
@@ -2292,6 +2367,8 @@
       function () { document.addEventListener('change', onChange); },
       function () { document.addEventListener('keydown', onKey); },
       function () { window.addEventListener('hashchange', onHashChange); },
+      function () { window.addEventListener('hf:video-ready', onVideoReady); },
+      function () { window.addEventListener('hf:video-error', onVideoReady); },
       function () { window.addEventListener('scroll', onScroll, { passive: true }); },
       /* 兜底单独挂一个滚动监听，而不是塞进 onScroll：
          boot 会手动调一次 onScroll()，那样首屏元素会在同一帧就被点亮，

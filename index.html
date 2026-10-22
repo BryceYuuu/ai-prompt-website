@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>提示词网站 · 开源中文 AI 提示词库 | 书桐 SHUTONG</title>
+<title>书桐 SHUTONG · 中文 AI 提示词网站</title>
 <meta name="description" content="提示词网站：免登录的开源中文 AI 提示词库，提供 154 条模板，含 66 种图片创作、48 个实用任务与 40 种视频风格。参考画面、风格和运镜拆解、可直接复制的视频风格提示词，支持搜索、复制和导出，可自行部署。">
 <meta name="theme-color" content="#f8f8f3">
-<meta property="og:title" content="提示词网站 · 开源中文 AI 提示词库 | 书桐 SHUTONG">
+<meta property="og:title" content="书桐 SHUTONG · 中文 AI 提示词网站">
 <meta property="og:description" content="提示词网站：免登录的开源中文 AI 提示词库，提供 154 条模板，含 66 种图片创作、48 个实用任务与 40 种视频风格。参考画面、风格和运镜拆解、可直接复制的视频风格提示词，支持搜索、复制和导出，可自行部署。">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://bryceyuuu.github.io/ai-prompt-website/assets/img/studio/studio-cover.png">
@@ -21,7 +21,9 @@
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/views.css">
 <link rel="stylesheet" href="assets/css/studio.css?v=smartai-20261010">
-<link rel="stylesheet" href="assets/css/video.css?v=video-play-20261013">
+<link rel="stylesheet" href="assets/css/video.css?v=studio-20261022">
+<link rel="stylesheet" href="assets/css/home.css?v=studio-20261022">
+<meta name="hf-video-data" content="assets/js/data-video.js?v=studio-20261022" data-video-data data-count="40">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -74,22 +76,13 @@
           每条保留来源、使用步骤与交付清单。
         </p>
       </div>
-      <!-- 分类栏由 app.js 从 CATS 生成（`renderFooterCats`）—— 这里的三行只是
-           无 JS 时的兜底。原先这里**手写**了三个分类，而同一段文字写着「七类提示词」、
-           头图快捷入口与分类条都是全 7 个：同一个页面上三种口径。
-           手写的另一个后果是加分类时它会静默落后。 -->
-      <div id="foot-cats">
-        <div class="footer__col-title">分类</div>
-        <a class="footer__link" href="#/library?cat=image">生成图片</a>
-        <a class="footer__link" href="#/library?cat=write">写作文案</a>
-        <a class="footer__link" href="#/library?cat=code">编程开发</a>
-        <a class="footer__link" href="#/library">全部提示词</a>
-      </div>
-      <div>
-        <div class="footer__col-title">使用书桐</div>
-        <a class="footer__link" href="#/library">全部提示词</a>
-        <a class="footer__link" href="#/library?cat=image">浏览图片风格</a>
-        <a class="footer__link" href="#/about">使用说明与素材来源</a>
+      <!-- 四栏导航由 app.js 从 CATS / TAXONOMY / 视频类型生成（`renderFooterCats`），
+           这里只是无 JS 时的兜底，避免手写清单与真实分类静默脱节。 -->
+      <div class="footer__cols" id="foot-cats">
+        <div><div class="footer__col-title">图片风格</div><a class="footer__link" href="#/library?cat=image">全部图片风格</a></div>
+        <div><div class="footer__col-title">视频风格</div><a class="footer__link" href="#/video">全部视频风格</a></div>
+        <div><div class="footer__col-title">场景任务</div><a class="footer__link" href="#/library?track=text">全部场景任务</a></div>
+        <div><div class="footer__col-title">关于书桐</div><a class="footer__link" href="#/about">使用说明与素材来源</a></div>
       </div>
     </div>
     <div class="footer__bottom">
@@ -113,9 +106,8 @@
 <script src="assets/js/data.js?v=jennifer-20261012"></script>
 <script src="assets/js/rules.js?v=jennifer-20261012"></script>
 <script src="assets/js/art.js"></script>
-<script src="assets/js/data-video.js?v=video-play-20261013"></script>
-<script src="assets/js/video.js?v=video-play-20261013"></script>
-<script src="assets/js/app.js?v=jennifer-20261012"></script>
+<script src="assets/js/video.js?v=studio-20261022"></script>
+<script src="assets/js/app.js?v=studio-20261022"></script>
 
 </body>
 </html>
