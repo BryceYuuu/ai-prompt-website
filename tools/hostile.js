@@ -37,6 +37,7 @@ const fs = require('fs');
 const path = require('path');
 const http = require('http');
 const { spawn } = require('child_process');
+const chromeProfile = require('./chrome-profile');
 
 const ROOT = process.argv[2] ? path.resolve(process.argv[2]) : path.resolve(__dirname, '..');
 const CH = process.env.CHROME_BIN || (process.platform === 'darwin' ? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' : 'google-chrome');
@@ -655,11 +656,13 @@ function startServer() {
 
 function chrome(url) {
   return new Promise(function (resolve) {
+    const profile = chromeProfile.create();
     const args = [
-      '--headless=new', '--disable-gpu', '--no-sandbox', '--hide-scrollbars',
+      '--headless=new', '--user-data-dir=' + profile, '--disable-gpu', '--no-sandbox', '--hide-scrollbars',
       '--window-size=1440,900', '--virtual-time-budget=12000', '--dump-dom', url
     ];
-    const p = spawn(CH, args, { stdio: ['ignore', 'pipe', 'ignore'] });
+    /* 独立进程组：超时时整组结束，渲染等子进程不会成为孤儿；配置目录在进程关闭后删除。 */
+    const p = chromeProfile.track(spawn(CH, args, { stdio: ['ignore', 'pipe', 'ignore'], detached: true }));
     let out = '';
     let done = false;
     /* 硬超时。--virtual-time-budget 的语义是「虚拟时间烧完就退出」，
@@ -670,11 +673,11 @@ function chrome(url) {
     const timer = setTimeout(function () {
       if (done) return;
       done = true;
-      try { p.kill('SIGKILL'); } catch (e) { /* noop */ }
+      chromeProfile.kill(p);
       resolve(out + '\n<!-- CHROME_TIMEOUT -->');
     }, TIMEOUT_MS);
     p.stdout.on('data', function (d) { out += d; });
-    p.on('close', function () { if (done) return; done = true; clearTimeout(timer); resolve(out); });
+    p.on('close', function () { chromeProfile.untrack(p); chromeProfile.remove(profile); if (done) return; done = true; clearTimeout(timer); resolve(out); });
   });
 }
 
