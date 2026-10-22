@@ -132,6 +132,22 @@ function run() {
         });
         return;
       }
+      /* 视频风格：目录按需加载，已加载时核对 id，未加载时只认合法的 slug */
+      if (h === '#/video' || h.indexOf('#/video?') === 0) {
+        var vq = h.indexOf('?') >= 0 ? h.slice(h.indexOf('?') + 1) : '';
+        vq.split('&').forEach(function (pair) {
+          if (!pair) return;
+          var k = decodeURIComponent(pair.split('=')[0]), v = decodeURIComponent(pair.split('=')[1] || '');
+          if (['q', 'tag', 'type'].indexOf(k) < 0) L.bad.push(where + ' → 视频页参数名不认识：' + k + '（' + h + '）');
+          if (k === 'type' && ['ai', 'hybrid', 'animation'].indexOf(v) < 0) L.bad.push(where + ' → 视频制作方式不认识：' + v);
+        });
+        return;
+      }
+      if (h.indexOf('#/video/') === 0) {
+        var vid = decodeURIComponent(h.slice(8).split('?')[0]);
+        if (Array.isArray(window.HF_VIDEO_STYLES) ? !window.HF_VIDEO_STYLES.some(function (x) { return x.id === vid; }) : !/^video-[a-z0-9-]+$/.test(vid)) L.bad.push(where + ' → 指向不存在的视频风格：' + h);
+        return;
+      }
       if (h.indexOf('#/?page=') === 0 && /^[1-9][0-9]*$/.test(h.slice(8))) return;
       if (KNOWN.indexOf(h) >= 0) return;
       L.bad.push(where + ' → 未知站内路由：' + h);

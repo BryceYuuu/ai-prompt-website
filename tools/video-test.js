@@ -52,6 +52,15 @@ const mutations = {
   paletteSearch: { group: 'global-palette-click-and-enter', file: 'app.js', anchor: 'if (q && window.HFVideo) base = base.concat', replacement: 'if (false) base = base.concat' },
   paletteEnter: { group: 'global-palette-click-and-enter', file: 'app.js', anchor: "go((s.video ? '/video/' : '/style/') + s.id);", replacement: "go('/style/' + s.id);" },
   missing: { group: 'missing-id-and-malformed-route', file: 'video.js', anchor: 'var item = get(id);', replacement: 'var item = data()[0];' },
+  shortMode: { group: 'prompt-version-toggle', file: 'video.js', anchor: "return mode(item) === 'short' ? item.shortPrompt : item.promptTemplate;", replacement: 'return item.promptTemplate;' },
+  shortMissing: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[1].shortPrompt = "";' },
+  shortFixed: { group: 'catalog-evidence-and-assets', file: 'data-video.js', anchor: 'window.HF_VIDEO_STYLES', append: '\nwindow.HF_VIDEO_STYLES[2].shortPrompt += "生成十秒视频。";' },
+  typeFilter: { group: 'facets-and-type-filter', file: 'video.js', anchor: 'return !type || item.reference.type === type;', replacement: 'return true;' },
+  facetHidden: { group: 'facets-and-type-filter', file: 'video.js', anchor: "if (rest.length) groups.push({ name: '其他', tags: rest });", replacement: 'void 0;' },
+  relatedSelf: { group: 'related-and-step-navigation', file: 'video.js', anchor: 'return all.filter(function (other) { return other !== item; })', replacement: 'return all.filter(function (other) { return true; })' },
+  stepWrap: { group: 'related-and-step-navigation', file: 'video.js', anchor: 'next = all[(at + 1) % all.length]', replacement: 'next = all[at + 1] || item' },
+  testsUnsafe: { group: 'site-tests-section', file: 'video.js', anchor: "/^assets\\/[a-z0-9\\/._-]+\\.(?:mp4|webm|jpg|jpeg|png|webp)$/i.test(t.media || '')", replacement: 'true' },
+  homeTeaser: { group: 'home-motion-teaser', file: 'app.js', anchor: 'rail.innerHTML = window.HFVideo.teaser();', replacement: "rail.innerHTML = '';" },
   runtime: { group: 'no-video-runtime-errors', file: 'video.js', anchor: "'use strict';", replacement: "'use strict'; window.addEventListener('hashchange', function () { throw new Error('video mutation runtime'); });" }
 };
 
@@ -70,7 +79,10 @@ async function run(root, mutant, onlyGroup) {
     }
     return code;
   };
-  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8').replace(/<script src="(assets\/js\/[^\"]+)"><\/script>/g, (_, src) => '<script>' + readScript(src) + '</script>');
+  // The video catalogue is fetched on demand in browsers; JSDOM has no loader, so inline it in place of its meta hint.
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8')
+    .replace(/<meta name="hf-video-data" content="(assets\/js\/data-video\.js[^"]*)"[^>]*>/, (_, src) => '<script>' + readScript(src) + '</script>')
+    .replace(/<script src="(assets\/js\/[^\"]+)"><\/script>/g, (_, src) => '<script>' + readScript(src) + '</script>');
   if (mutant) assert(applied, 'Mutation script was not loaded: ' + mutant);
   const manifest = JSON.parse(fs.readFileSync(path.join(root, 'tools/curate/sources/video-style-references.json'), 'utf8'));
   const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -244,6 +256,7 @@ async function run(root, mutant, onlyGroup) {
   groups['catalog-evidence-and-assets'] = async s => {
     const entries = s.w.HF_VIDEO_STYLES;
     assert.strictEqual(entries.length, 40, 'Forty reviewed video styles are shipped');
+    assert.strictEqual(Number(fs.readFileSync(path.join(root, 'index.html'), 'utf8').match(/data-video-data data-count="(\d+)"/)[1]), entries.length, 'Data hint count matches the catalogue');
     assert.strictEqual(new Set(entries.map(i => i.id)).size, 40);
     assert.strictEqual(manifest.entries.length, 40);
     assert(/^\d{4}-\d{2}-\d{2}$/.test(manifest.checkedAt));
@@ -254,6 +267,9 @@ async function run(root, mutant, onlyGroup) {
       assert(item.styleNotes.every(n => n.label && n.text));
       assert(item.tags.length >= 1 && Object.hasOwn(types, item.reference.type));
       assert(item.promptTemplate.length >= 600, item.id + ' needs a developed style prompt');
+      assert(item.shortPrompt && item.shortPrompt.length >= 120 && item.shortPrompt.length <= 400, item.id + ' needs a concise prompt for length-limited tools');
+      assert(!/\{(?:主体|场景|动作)\}/.test(item.shortPrompt));
+      assert(!/\d+(?:\.\d+)?\s*(?:秒|seconds?|fps|帧每秒|[kＫ]|p分辨率)|\d+\s*[:：×x]\s*\d+|[一二两三四五六七八九十]+\s*秒/i.test(item.shortPrompt), item.id + ' short prompt fixes duration, frame rate or aspect ratio');
       assert(!/\{(?:主体|场景|动作)\}/.test(item.promptTemplate), item.id + ' has unresolved required content');
       assert(!/\d+(?:\.\d+)?\s*(?:秒|seconds?|fps|帧每秒|[kＫ]|p分辨率)|\d+\s*[:：×x]\s*\d+|[一二两三四五六七八九十]+\s*秒/i.test(item.promptTemplate), item.id + ' fixes duration, frame rate or aspect ratio');
       const record = manifest.entries.find(r => r.id === item.id);
@@ -501,6 +517,79 @@ async function run(root, mutant, onlyGroup) {
       await wait(15); assert.strictEqual(s.q('[data-video-id]').getAttribute('data-video-id'), item.id);
       assert(!s.q('#palette').classList.contains('is-open'));
     }
+  };
+  groups['prompt-version-toggle'] = async s => {
+    for (const item of s.w.HF_VIDEO_STYLES) {
+      await s.nav(route(item));
+      const short = s.q('[data-video-mode="short"]'), full = s.q('[data-video-mode="full"]');
+      assert(short && full && full.getAttribute('aria-checked') === 'true', item.id + ' starts on the complete prompt');
+      short.click();
+      assert.strictEqual(short.getAttribute('aria-checked'), 'true');
+      assert.strictEqual(s.q('[data-video-prompt]').textContent, item.shortPrompt);
+      s.q('[data-video-action="copy"]').click(); await wait(1);
+      assert.strictEqual(s.copied, item.shortPrompt, item.id + ' copies the concise version');
+      s.fill('[data-video-slot="主体"]', '一盏旧台灯');
+      assert.strictEqual(s.q('[data-video-prompt]').textContent, '【我的内容】\n主体：一盏旧台灯\n\n' + item.shortPrompt);
+      s.q('[data-video-action="download"]').click();
+      assert(s.downloads.at(-1).text.includes('精简版') && s.downloads.at(-1).text.includes(item.shortPrompt));
+      await s.nav('#/video'); await s.nav(route(item));
+      assert.strictEqual(s.q('[data-video-mode="short"]').getAttribute('aria-checked'), 'true', 'Version choice survives in-page navigation');
+      s.q('[data-video-mode="full"]').click(); s.q('[data-video-action="reset"]').click();
+      assert.strictEqual(s.q('[data-video-prompt]').textContent, item.promptTemplate);
+    }
+  };
+  groups['facets-and-type-filter'] = async s => {
+    const data = s.w.HF_VIDEO_STYLES;
+    data[0].tags.push('未归组新标签');
+    await s.nav('#/'); await s.nav('#/video');
+    const chips = s.all('.video-facets a').map(a => new URLSearchParams(a.hash.split('?')[1] || '').get('tag')).filter(Boolean);
+    for (const tag of new Set(data.flatMap(i => i.tags))) assert(chips.includes(tag), 'Every tag stays reachable: ' + tag);
+    for (const type of Object.keys(types)) {
+      await s.nav('#/video?type=' + type);
+      assert.deepStrictEqual(ids(s), Array.from(data.filter(i => i.reference.type === type), i => i.id).sort(), type + ' filter');
+      const tag = data.find(i => i.reference.type === type).tags[0];
+      await s.nav('#/video?type=' + type + '&tag=' + encodeURIComponent(tag));
+      assert.deepStrictEqual(ids(s), Array.from(data.filter(i => i.reference.type === type && i.tags.includes(tag)), i => i.id).sort());
+      assert(s.q('.video-search input[name="type"]').value === type, 'Search keeps the type filter');
+    }
+    await s.nav('#/video?type=not-a-type'); assert.strictEqual(s.all('.video-card').length, data.length);
+  };
+  groups['related-and-step-navigation'] = async s => {
+    const data = s.w.HF_VIDEO_STYLES;
+    for (const [index, item] of Array.from(data).entries()) {
+      await s.nav(route(item));
+      const cards = s.all('.video-related__card').map(a => decodeURIComponent(a.hash.slice(8)));
+      assert.strictEqual(cards.length, 4); assert(!cards.includes(item.id)); assert.strictEqual(new Set(cards).size, 4);
+      assert(cards.every(id => data.some(i => i.id === id)));
+      const prev = data[(index - 1 + data.length) % data.length], next = data[(index + 1) % data.length];
+      assert.strictEqual(s.q('.video-related__step [rel="prev"]').hash, route(prev));
+      assert.strictEqual(s.q('.video-related__step [rel="next"]').hash, route(next));
+    }
+  };
+  groups['site-tests-section'] = async s => {
+    const item = s.w.HF_VIDEO_STYLES[0];
+    await s.nav(route(item));
+    assert(s.q('.video-tests--empty'), 'Untested styles say so plainly');
+    assert(s.q('.video-tests--empty a').href.startsWith('https://github.com/BryceYuuu/ai-prompt-website/issues/new'));
+    item.tests = [
+      { model: '测试模型', date: '2026-10-22', version: 'short', media: 'assets/video-tests/demo.mp4' },
+      { model: '外链', date: '2026-10-22', media: 'https://example.test/x.mp4' },
+      { model: '脚本', date: '2026-10-22', media: 'javascript:alert(1)' }
+    ];
+    await s.nav('#/video'); await s.nav(route(item));
+    assert.strictEqual(s.all('.video-test').length, 1, 'Only local test media is rendered');
+    assert(s.q('.video-test video').getAttribute('src') === 'assets/video-tests/demo.mp4');
+    assert(s.q('.video-test').textContent.includes('精简版'));
+    delete item.tests;
+  };
+  groups['home-motion-teaser'] = async s => {
+    await s.nav('#/');
+    const cards = s.all('.home-motion__card:not(.home-motion__card--ghost)');
+    assert.strictEqual(cards.length, 6, 'Homepage shows six video styles');
+    assert(cards.every(a => s.w.HF_VIDEO_STYLES.some(i => a.hash === route(i))));
+    assert(!s.q('[data-video-page]'));
+    s.w.dispatchEvent(new s.w.Event('hf:video-ready')); await wait(5);
+    assert.strictEqual(s.all('.home-motion__card:not(.home-motion__card--ghost)').length, 6, 'Ready event refills the rail');
   };
   groups['missing-id-and-malformed-route'] = async s => {
     for (const hash of ['#/video/not-a-video-style', '#/video/%E0%A4%A']) {

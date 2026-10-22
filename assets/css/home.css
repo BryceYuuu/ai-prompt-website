@@ -1,0 +1,134 @@
+/* 书桐 · 首页与全站排版的编辑式升级层（2026-10-22）。
+   叠在 studio.css 之后：只用系统字体，宋体类衬线只用于大标题，正文仍是无衬线。 */
+:root {
+  --font-serif: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", "Noto Serif CJK SC", serif;
+  --night: #151713; --night-2: #1f221c; --night-ink: #f3f3ec; --night-mute: #a3a899;
+}
+
+/* ---------------------------------------------------------------- hero -- */
+.hero__grid { padding:72px 0 64px; gap:64px; }
+.hero__eyebrow { font-size:11px; letter-spacing:.2em; color:var(--ink-2); margin-bottom:34px; }
+.hero__title { font:700 clamp(48px,5.4vw,80px)/1.12 var(--font-serif); letter-spacing:-.03em; isolation:isolate; }
+.hero__title > span { position:relative; white-space:nowrap; }
+.hero__title > span::after { content:''; position:absolute; left:.04em; right:.5em; bottom:.06em; height:.16em; border-radius:99px; background:var(--studio-lime); z-index:-1; }
+.hero__sub { font-size:16px; line-height:1.95; margin:30px 0 34px; max-width:30em; }
+.hero__search .searchbox { box-shadow:0 18px 40px -28px #22251f66; }
+.hero__stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin-top:40px; max-width:490px; border-top:1px solid var(--rule-2); }
+.hero__stats a { display:flex; flex-direction:column; gap:4px; padding:18px 0 0; transition:color .2s; }
+.hero__stats a + a { padding-left:22px; border-left:1px solid var(--rule); }
+.hero__stats b { font:700 34px/1 var(--font-serif); color:var(--ink); letter-spacing:-.02em; }
+.hero__stats span { font-size:12px; color:var(--ink-3); }
+.hero__stats a:hover b, .hero__stats a:focus-visible b { color:var(--accent); }
+.hero__visual-label { font-size:11px; letter-spacing:.04em; }
+.hero__plate { height:500px; border-radius:32px; clip-path:inset(0 round 32px); }
+.hero__visual { position:relative; }
+.hero__visual::before { content:''; position:absolute; inset:48px 0 -18px 48px; border-radius:36px; background:linear-gradient(140deg,#e7e6f6,#eef4d6); z-index:-1; }
+.hero__plate-cap { font:700 32px/1.25 var(--font-serif); letter-spacing:-.01em; }
+
+/* ----------------------------------------------------- section headings -- */
+.catalogue { padding:64px 0 72px; }
+.catalogue__title h2, .home-motion__head h2, .home-tasks__head h2, .studio-banner__copy h2 {
+  font:700 clamp(30px,3.3vw,46px)/1.25 var(--font-serif); letter-spacing:-.02em;
+}
+.catalogue__title .eyebrow, .home-tasks__head .eyebrow { color:var(--accent); letter-spacing:.16em; }
+
+/* --------------------------------------------------------- motion band -- */
+.home-motion { background:radial-gradient(1100px 520px at 85% -10%, #3a3a7a55, transparent 60%), radial-gradient(900px 500px at -10% 110%, #5d6b2a40, transparent 60%), var(--night); color:var(--night-ink); padding:88px 0 96px; margin-top:8px; }
+.home-motion__head { display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:44px; }
+.home-motion__head .eyebrow { color:var(--studio-lime); letter-spacing:.16em; }
+.home-motion__head h2 { color:var(--night-ink); margin-top:12px; }
+.home-motion__side { display:flex; flex-direction:column; align-items:flex-start; gap:20px; max-width:400px; }
+.home-motion__side p { color:var(--night-mute); font-size:13px; line-height:1.9; }
+.btn--lime { background:var(--studio-lime); color:var(--ink); border-color:var(--studio-lime); }
+.btn--lime:hover { background:#e6faa6; border-color:#e6faa6; }
+.btn--lime svg { width:15px; height:15px; }
+.home-motion__rail { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:34px 26px; }
+.home-motion__card { display:flex; flex-direction:column; gap:9px; min-width:0; color:inherit; }
+.home-motion__image { position:relative; display:block; aspect-ratio:16/10; border-radius:20px; overflow:hidden; background:var(--night-2); }
+.home-motion__image img { width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.2,.7,.2,1), filter .4s; filter:saturate(.95); }
+.home-motion__card:hover .home-motion__image img, .home-motion__card:focus-visible .home-motion__image img { transform:scale(1.045); filter:saturate(1.08); }
+.home-motion__type { position:absolute; left:14px; top:14px; padding:5px 9px; border-radius:999px; background:#151713c7; color:#fff; font-size:10px; backdrop-filter:blur(8px); }
+.home-motion__play { position:absolute; right:14px; bottom:14px; display:grid; place-items:center; width:40px; height:40px; border-radius:50%; background:var(--studio-lime); color:var(--ink); transform:scale(.9); opacity:.92; transition:transform .25s, opacity .25s; }
+.home-motion__play svg { width:15px; height:15px; margin-left:2px; }
+.home-motion__card:hover .home-motion__play { transform:scale(1); opacity:1; }
+.home-motion__meta { display:flex; gap:10px; margin-top:8px; font-size:11px; letter-spacing:.06em; color:var(--night-mute); }
+.home-motion__meta span { color:var(--studio-lime); }
+.home-motion__card strong { font:700 23px/1.35 var(--font-serif); color:var(--night-ink); }
+.home-motion__ref { font-size:12px; color:var(--night-mute); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.home-motion__card--ghost .home-motion__image { animation:home-ghost 1.6s ease-in-out infinite alternate; }
+.home-motion__card--ghost .home-motion__meta, .home-motion__card--ghost strong { height:14px; width:60%; border-radius:6px; background:var(--night-2); }
+.home-motion__card--ghost strong { height:22px; width:80%; }
+.home-motion__fallback { grid-column:1/-1; color:var(--night-mute); font-size:13px; }
+.home-motion__fallback a { color:var(--studio-lime); margin-left:6px; }
+@keyframes home-ghost { from { opacity:.55; } to { opacity:1; } }
+
+/* ------------------------------------------------------------ tasks ---- */
+.home-tasks { padding:96px 0 40px; }
+.home-tasks__head { display:flex; justify-content:space-between; align-items:end; gap:32px; margin-bottom:38px; }
+.home-tasks__head h2 { margin-top:12px; }
+.home-tasks__grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.home-task { position:relative; display:flex; flex-direction:column; gap:10px; min-height:260px; padding:26px 26px 24px; border-radius:26px; background:var(--task-tint,#efefe7); border:1px solid #22251f0d; transition:transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s; }
+.home-task:hover, .home-task:focus-visible { transform:translateY(-4px); box-shadow:0 22px 40px -28px #22251f59; }
+.home-task--write { --task-tint:#f3eee3; } .home-task--code { --task-tint:#e7ecf5; } .home-task--analyze { --task-tint:#ece8f4; }
+.home-task--learn { --task-tint:#e8f1e6; } .home-task--business { --task-tint:#f4e9e4; } .home-task--life { --task-tint:#f1f1df; }
+.home-task__top { display:flex; justify-content:space-between; font-size:11px; letter-spacing:.08em; color:var(--ink-3); }
+.home-task__no { font:700 13px/1 var(--font-serif); color:var(--ink-2); }
+.home-task strong { font:700 26px/1.3 var(--font-serif); margin-top:18px; letter-spacing:-.01em; }
+.home-task__desc { font-size:13px; line-height:1.8; color:var(--ink-3); }
+.home-task__list { display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:14px; padding-right:48px; }
+.home-task__list span { padding:5px 10px; border-radius:999px; background:#ffffffb3; font-size:11px; color:var(--ink-2); }
+.home-task__go { position:absolute; right:22px; bottom:22px; display:grid; place-items:center; width:38px; height:38px; border-radius:50%; background:var(--ink); color:#fff; transition:transform .25s; }
+.home-task__go svg { width:15px; height:15px; }
+.home-task:hover .home-task__go { transform:translateX(3px); }
+
+/* ----------------------------------------------------- banner + footer -- */
+.studio-banner { margin:56px auto 96px; border-radius:32px; }
+.studio-banner__copy h2 { font-size:clamp(28px,2.8vw,38px); }
+.footer { padding-top:64px; }
+.footer__grid { grid-template-columns:minmax(0,1.15fr) minmax(0,3fr); gap:48px; }
+.footer__cols { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:28px; }
+.footer__cols > div { display:flex; flex-direction:column; gap:2px; min-width:0; }
+
+/* ---------------------------------------------------------- responsive -- */
+@media (max-width:1100px) {
+  .hero__grid { gap:40px; }
+  .hero__plate { height:440px; }
+  .home-motion__rail { gap:28px 20px; }
+  .footer__grid { grid-template-columns:minmax(0,1fr); gap:36px; }
+}
+@media (max-width:900px) {
+  .hero__visual::before { display:none; }
+  .home-motion__head, .home-tasks__head { flex-direction:column; align-items:flex-start; gap:20px; }
+  .home-motion__rail { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .home-tasks__grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:720px) {
+  .hero__grid { padding:36px 0 40px; gap:34px; }
+  .hero__eyebrow { margin-bottom:22px; font-size:10px; }
+  .hero__title { font-size:44px; }
+  .hero__sub { font-size:14px; margin:20px 0 24px; }
+  .hero__stats { margin-top:28px; }
+  .hero__stats b { font-size:28px; }
+  .hero__stats a + a { padding-left:14px; }
+  /* 首屏底部有悬浮导航：主图高度随视口收紧，卡片里的“探索这个风格”不被导航压住。 */
+  .hero__plate { height:clamp(320px, calc(100svh - 230px), 400px); }
+  .catalogue { padding:44px 0 52px; }
+  .home-motion { padding:60px 0 64px; }
+  .home-motion__rail { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; margin:0 calc(var(--gutter) * -1); padding:0 var(--gutter) 6px; scrollbar-width:none; }
+  .home-motion__rail::-webkit-scrollbar { display:none; }
+  .home-motion__card { flex:0 0 78%; scroll-snap-align:start; }
+  .home-motion__card strong { font-size:20px; }
+  .home-tasks { padding:64px 0 24px; }
+  .home-tasks__grid { grid-template-columns:minmax(0,1fr); gap:12px; }
+  .home-task { min-height:0; padding:22px; }
+  .home-task strong { margin-top:8px; font-size:23px; }
+  .studio-banner { margin:40px auto 64px; border-radius:24px; }
+  .footer__cols { grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px 18px; }
+  /* 悬浮导航之上留出空间：页面最后一行内容与锚点滚动都不会被遮住。 */
+  html { scroll-padding-bottom:96px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .home-motion__image img, .home-task, .home-motion__play, .home-task__go { transition:none; }
+  .home-motion__card:hover .home-motion__image img, .home-task:hover { transform:none; }
+  .home-motion__card--ghost .home-motion__image { animation:none; }
+}
