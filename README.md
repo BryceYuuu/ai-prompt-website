@@ -260,20 +260,20 @@ npm run test:browser
 ## 内容维护 · Maintaining content
 
 ```text
-index.html                     页面入口
-assets/js/app.js               路由、交互和渲染
-assets/js/data.js              图片与任务分类、数据组装
-assets/js/data-video.js        手工编辑的 40 种视频风格
-assets/js/video.js             视频风格列表、站内播放、分析、提示词和大图交互
-assets/img/video/              80 张风格评论用参考画面（版权保留）
-assets/js/data-curated.js      生成的 114 条内容
-assets/css/                   页面样式
-assets/img/curated/            来源案例图
-schema/                       数据规范与校验
-tools/curate/text-specs.json  文字任务编辑清单
-tools/curate/keywords.json    每条模板的中英文搜索别名
-tools/curate/build.py         图片模板与离线生成器
-tools/curate/sources/         来源快照、署名与许可证
+index.html                     页面入口 · entry page
+assets/js/app.js               路由、交互和渲染 · routing, interaction, rendering
+assets/js/data.js              图片与任务分类、数据组装 · categories and data assembly
+assets/js/data-video.js        手工编辑的 40 种视频风格 · 40 hand-edited video styles
+assets/js/video.js             视频风格页面与交互 · video style pages and interaction
+assets/img/video/              80 张评论用参考画面（版权保留） · 80 reference frames, rights reserved
+assets/js/data-curated.js      生成的 114 条内容 · 114 generated entries
+assets/css/                   页面样式 · stylesheets
+assets/img/curated/            来源案例图 · source example images
+schema/                       数据规范与校验 · data schema and validation
+tools/curate/text-specs.json  文字任务编辑清单 · text task specs
+tools/curate/keywords.json    中英文搜索别名 · search aliases
+tools/curate/build.py         图片模板与离线生成器 · image list and offline builder
+tools/curate/sources/         来源快照、署名与许可证 · source snapshots, credits, licenses
 ```
 
 修改 `text-specs.json` 或 `build.py` 中的图片清单，然后执行：
