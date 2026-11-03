@@ -11,6 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const chromeProfile = require('./chrome-profile');
 
 const ROOT = process.argv[2] ? path.resolve(process.argv[2]) : '';
 if (!ROOT) { console.error('usage: node overflow.js <shutong dir>'); process.exit(1); }
@@ -83,12 +84,12 @@ try {
     for (const [name, hash] of HASHES) {
       let dom = '';
       try {
-        dom = execFileSync(CH, [
-          '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-software-rasterizer',
+        dom = chromeProfile.withProfile(profile => execFileSync(CH, [
+          '--headless=new', profile, '--no-sandbox', '--disable-gpu', '--disable-software-rasterizer',
           '--disable-dev-shm-usage', '--hide-scrollbars', '--virtual-time-budget=3000',
           '--window-size=' + w + ',1200', '--dump-dom',
           'file://' + TMP + hash
-        ], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
+        ], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] }));
       } catch (e) { console.log('  !! chrome failed', w, name); unjudged++; continue; }
 
       const m = dom.match(/<div id="OVF">([\s\S]*?)<\/div>/);

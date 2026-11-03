@@ -47,6 +47,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const chromeProfile = require('./chrome-profile');
 
 /* 四档的名字。写在这里是因为解析命令行参数时就要用。 */
 const ALL_MODES = ['normal', 'no-hashchange', 'narrow', 'tablet'];
@@ -943,11 +944,11 @@ function run(mode) {
 
   let dom = '';
   try {
-    dom = execFileSync(CH, [
-      '--headless=new', '--no-sandbox', '--disable-gpu', '--disable-software-rasterizer',
+    dom = chromeProfile.withProfile(profile => execFileSync(CH, [
+      '--headless=new', profile, '--no-sandbox', '--disable-gpu', '--disable-software-rasterizer',
       '--disable-dev-shm-usage', '--hide-scrollbars', '--virtual-time-budget=20000',
       '--window-size=' + MODE[mode].w + ',' + MODE[mode].h, '--dump-dom', 'file://' + TMP
-    ], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
+    ], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] }));
   } finally {
     /* 删除失败不能把整轮验收带走 —— 有些环境会拦截批量删除。
        但**不能把「删不掉」报成「没东西可删」**：沙箱的批量删除护栏
