@@ -1,20 +1,24 @@
 # 书桐 SHUTONG · 中文 AI 提示词网站
 
-> **写在最前面**
+书桐是一个免登录、纯静态的中文 AI 提示词网站：66 种图片风格、40 种视频风格、48 个日常场景任务，每一条都标明出处，填一填、点一下复制，就能带去你常用的 AI 工具里开始创作。
+
+> **写在前面**
 >
-> 我一直希望有人能做出这样一个网站：把好用的图片、视频和日常任务提示词整理清楚，标明出处，打开就能用。
+> 我一直想要这样一个地方：打开它，就能找到真正好用的提示词；看到一张图，就知道它出自谁的手；复制过去，马上可以开始创作。
 >
-> 这个仓库是我自己动手做的一次尝试。但说实话，我的精力有限，也没有能力长期运营它：持续收集素材、核对授权、实测效果、回应反馈，都需要比我更多的时间和更专业的能力。
+> 找了很久没有找到，于是我自己动手，一点一点搭起了这个网站。
 >
-> 所以我把它完整开源出来。**如果你也想做这件事，欢迎直接 fork、随意修改，做成你自己的网站。希望你能做得比我更好。**
+> 可越往下做，我越明白：一个好的提示词网站，靠的从来不是这几行代码。它靠的是成百上千位创作者的心血，是那些被反复打磨的提示词，是那些一帧一帧做出来的作品。它们属于各自的作者，不属于我。我没有办法为每一件作品取得授权，也没有足够的精力和能力，把这个网站长久地运营下去。
+>
+> 所以我决定停在这里，把全部代码和整理思路留给愿意接着走下去的人。
+>
+> 如果你也曾想过做这样一个网站，希望它能成为你的起点。请带着对每一位创作者的尊重，去做一个比我好得多的版本。**我很期待看到它。**
 
 [![书桐首页：衬线大标题、图片风格轮播与三类入口](docs/images/homepage.png)](https://bryceyuuu.github.io/ai-prompt-website/)
 
 <p align="center"><a href="https://bryceyuuu.github.io/ai-prompt-website/"><b>在线预览</b></a> · <a href="#如果你想接手">如果你想接手</a> · <a href="#本地预览">本地运行</a> · <a href="THIRD_PARTY_NOTICES.md">素材来源与许可</a></p>
 
-## 这是什么
-
-书桐是一个**免登录、纯静态**的中文 AI 提示词网站，收录 154 条可填写、可复制、可导出的模板：
+## 收录了什么
 
 | 分类 | 数量 | 内容 |
 |---|---|---|
@@ -154,7 +158,7 @@
 
 ### English overview
 
-> **A note from the author:** I have always wished someone would build a site like this. This repository is my own attempt, but I don't have the time or the skills to keep running it. It is fully open source so that someone else can take it further. Fork it, change anything, and please make it better than I could. (Code is MIT; third-party images and prompts are not, see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).)
+> **A note from the author:** I always wanted a place where good prompts are easy to find, every image is credited to the person who made it, and you can copy a prompt and start creating right away. I couldn't find one, so I built this. But a great prompt site isn't really about the code. It rests on the work of countless creators, and that work belongs to them, not to me. I can't obtain rights to all of it, and I don't have the time or the ability to keep running the site. So I'm leaving the code and the curation approach here for whoever wants to carry it on. If you have ever wanted to build something like this, I hope it becomes your starting point. Please treat every creator with respect, and make something far better than mine. (Code is MIT; third-party images and prompts are not, see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).)
 
 Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 154 curated **prompt templates**: 66 **image-to-image and text-to-image** prompts, 40 original **video-style prompts**, and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
