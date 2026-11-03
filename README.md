@@ -1,21 +1,59 @@
-# 提示词网站 · AI Prompt Website
+# 书桐 SHUTONG · 中文 AI 提示词网站
 
-书桐 SHUTONG 是一个免登录的开源中文 AI 提示词网站，收录 154 条可填写、复制与导出的提示词模板：66 种图片创作、48 个写作等实用任务，以及 40 种独立的视频风格。支持中英文搜索和本机收藏，可直接使用，也可自行部署。纯静态 HTML / CSS / JavaScript，无需后端或构建。
+> **写在前面**
+>
+> 我一直想要这样一个地方：打开它，就能找到真正好用的提示词；看到一张图，就知道它出自谁的手；复制过去，马上可以开始创作。
+>
+> 找了很久没有找到，于是我自己动手，一点一点搭起了这个网站。
+>
+> 可越往下做，我越明白：一个好的提示词网站，靠的从来不是这几行代码。它靠的是成百上千位创作者的心血，是那些被反复打磨的提示词，是那些一帧一帧做出来的作品。它们属于各自的作者，不属于我。我没有办法为每一件作品取得授权，也没有足够的精力和能力，把这个网站长久地运营下去。
+>
+> 所以我决定停在这里，把全部代码和整理思路留给愿意接着走下去的人。
+>
+> 如果你也曾想过做这样一个网站，希望它能成为你的起点。请带着对每一位创作者的尊重，去做一个比我好得多的版本。**我很期待看到它。**
 
-## 在线预览
+书桐是一个免登录、纯静态的中文 AI 提示词网站：66 种图片风格、40 种视频风格、48 个日常场景任务，每一条都标明出处，填一填、点一下复制，就能带去你常用的 AI 工具里开始创作。
 
-[打开提示词网站 · 书桐 SHUTONG](https://bryceyuuu.github.io/ai-prompt-website/)
+[![书桐首页：衬线大标题、图片风格轮播与三类入口](docs/images/homepage.png)](https://bryceyuuu.github.io/ai-prompt-website/)
 
-[![提示词网站首页：图片风格轮播、搜索与风格卡片](docs/images/homepage.png)](https://bryceyuuu.github.io/ai-prompt-website/)
+<p align="center"><a href="https://bryceyuuu.github.io/ai-prompt-website/"><b>在线预览</b></a> · <a href="#如果你想接手">如果你想接手</a> · <a href="#本地预览">本地运行</a> · <a href="THIRD_PARTY_NOTICES.md">素材来源与许可</a></p>
 
-点击首页截图即可在线体验。截图中的案例图署名与许可见 [第三方内容说明](THIRD_PARTY_NOTICES.md)。
+## 收录了什么
 
-通过 GitHub Pages 从 `main` 分支发布，仓库更新后会自动部署。
+| 分类 | 数量 | 内容 |
+|---|---|---|
+| 图片风格 | 66 种 | 照片转手办、针织、拼豆、拓印、手绘海报等，每条附来源案例图与作者署名 |
+| 视频风格 | 40 种 | 从 AI 短片与动画作品中拆解材质、运镜和动作规律，附官方视频预览与参考画面 |
+| 场景任务 | 48 个 | 写作、编程、分析、学习、商业、生活各 8 条，说明输入什么、交付什么 |
 
-## 视频风格 · Motion Studies
+整站只有 HTML / CSS / JavaScript，不需要后端、账号、API Key 或构建步骤，下载后直接打开 `index.html` 就能用，也可以部署到任何静态托管服务。
 
-2026-10-22 起：视频列表按「制作方式 / 画面媒介 / 题材气质 / 节奏动态」分组筛选；详情页新增精简版提示词、相近风格与上一个 / 下一个、「实测效果」区。实测区目前如实显示「尚未实测」，有了实测片段后会与原作并排展示并注明模型、日期和所用版本（数据格式见 `assets/js/data-video.js` 中可选的 `tests` 字段）。视频目录改为进入视频页或首页空闲时才加载，图片与场景页不再预先下载约 110 KB（gzip）的视频数据。
+### 亮点
 
+- **来源可追溯**：每条模板保留作者、原帖或仓库链接、许可和核验状态；参考图与本站实测严格区分，不冒充生成效果。
+- **视频风格两档提示词**：约 1000 字的完整版覆盖造型、材质、光照、动作和镜头连续性；约 200 字的精简版适合有字数上限的工具，一键切换。
+- **好找**：中英文搜索与别名、⌘K 全局搜索、按风格方向 / 用途 / 气质 / 来源组合筛选，视频按制作方式、画面媒介、题材气质、节奏动态分组。
+- **好用**：实时填写变量并预览，复制或导出 TXT / Markdown / JSON；收藏只存在本机浏览器，填写内容只在页面内存中，不上传。
+- **认真对待细节**：移动端布局、键盘操作、减少动态效果、加载失败兜底，配有回归测试、变异测试和真实浏览器走查。
+
+[![视频风格详情：官方视频预览、参考画面拆解与完整版 / 精简版提示词](docs/images/video-detail.png)](https://bryceyuuu.github.io/ai-prompt-website/#/video/video-postman-animation)
+
+## 如果你想接手
+
+这些事我想做但没做完，也许正适合你：
+
+- **实测效果**：视频详情页已经留好了「实测效果」区，目前每条都如实写着「尚未实测」。用真实模型跑一遍提示词、把结果和原作并排放上去，是让这个网站真正有用的关键一步（数据格式见 `assets/js/data-video.js` 中可选的 `tests` 字段）。
+- **更多内容**：更多图片 / 视频风格和场景任务。`tools/curate/` 里有收录流水线和来源记录格式，新内容先核对来源与授权再上线。
+- **清理旧样式**：`assets/css/base.css`、`components.css`、`views.css` 是早期视觉层，仍有兼容代码，可以在视觉回归保护下精简。
+- **英文界面、社区投稿、真正的运营**：这些我都没有能力做，但很希望有人做。
+
+**fork 之前请注意素材授权**：代码按 MIT 开源，随便用；但第三方内容**不随代码授权**。Threads 作者的图片和提示词是作者单独授权本站转载的，视频参考画面是少量评论用图，版权归原作者。你在自己的网站上使用这些内容前，需要重新取得授权，或者替换成你自己的内容。详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+如果你做出了更好的版本，欢迎开个 Issue 告诉我，我很乐意在这里放上你的链接。
+
+## 内容与来源
+
+### 视频风格 · Motion Studies
 
 [浏览 40 种视频风格](https://bryceyuuu.github.io/ai-prompt-website/#/video)：从三维动画，到电影摄影、记忆梦境、定格动画、手绘与液态光学。
 
@@ -63,7 +101,7 @@
 
 官方来源、每张图的素材类型、时间和校验值见[视频素材清单](tools/curate/sources/video-style-references.json)。
 
-## Threads 公开图片提示词
+### Threads 公开图片提示词
 
 收录 [@lch1776244](https://www.threads.com/@lch1776244) 的 4 组公开帖子、作者回复中的提示词和 18 张示例图。每组一张风格卡，详情页可逐张放大。搜索 `Chloe_Lai`、`Threads` 或 `lch1776244` 即可找到。原帖与作者回复分开链接，未收录登录后才能访问的历史内容；本次不是全量账号归档。
 
@@ -79,7 +117,7 @@
 
 新增 [@jenniferzhao08](https://www.threads.com/@jenniferzhao08) 的 **「照片转韩式手绘问候海报」1 条提示词与 4 张案例图**，位于首页图片列表首条。保留[作者回复中的完整提示词](https://www.threads.com/@jenniferzhao08/post/DeYRYGulLho)与[原帖](https://www.threads.com/@jenniferzhao08/post/DeYRXkrFFi_)，图片为作者示例，非本站模型实测。搜索 `jenniferzhao08` 或「韩式手绘」即可找到。维护者于 2026-10-12 单独确认该账号的图片、完整提示词、公开网站与 GitHub 转载授权；详见[素材清单](tools/curate/sources/threads-jenniferzhao08.json)及[第三方说明](THIRD_PARTY_NOTICES.md#threads--jenniferzhao08)。
 
-## 当前内容
+### 当前内容
 
 - **66 个图片创作模板**：18 种原有图片转换，以及 6 个 Threads 来源账号的 48 组经授权案例。涵盖创意物件、材质工艺、插画绘画、平面拼贴、微缩场景与摄影光影，包括虚拟换装、产品广告、字母肖像、职业蓝图、拼豆、刺绣、拓印等具体创作方向。
 - **40 个视频风格**：独立画风研究分类，点击卡片直接预览官方视频，附80张来源参考画面、动态风格解析与完整原创风格提示词。
@@ -119,6 +157,8 @@
 | 生活日常 / Everyday tasks | 菜谱整理、服务条款、年度总结、购物对比、recipe extraction、buying guide |
 
 ### English overview
+
+> **A note from the author:** I always wanted a place where good prompts are easy to find, every image is credited to the person who made it, and you can copy a prompt and start creating right away. I couldn't find one, so I built this. But a great prompt site isn't really about the code. It rests on the work of countless creators, and that work belongs to them, not to me. I can't obtain rights to all of it, and I don't have the time or the ability to keep running the site. So I'm leaving the code and the curation approach here for whoever wants to carry it on. If you have ever wanted to build something like this, I hope it becomes your starting point. Please treat every creator with respect, and make something far better than mine. (Code is MIT; third-party images and prompts are not, see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).)
 
 Shutong is an open-source **AI prompt website** and **Chinese AI prompt library** with 154 curated **prompt templates**: 66 **image-to-image and text-to-image** prompts, 40 original **video-style prompts**, and 48 practical **LLM task prompts** for writing, coding, research, learning, business and everyday productivity. Browse by category, search Chinese or English aliases, fill template variables with a live preview, save favorites locally, and copy or export prompts. The static website requires no account, API key, backend or build step. It distributes prompts; it does not call AI models or provide a hosted image generator.
 
